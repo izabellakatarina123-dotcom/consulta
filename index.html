@@ -74,7 +74,6 @@ h1 {
     border:1px solid rgba(255,255,255,0.1);
 }
 
-/* 🔥 AQUI ESTÁ A CORRIGIDA */
 .combo h3 {
     color:#ffffff;
     font-weight:700;
@@ -97,6 +96,13 @@ h1 {
     padding:4px 8px;
     border-radius:6px;
     font-size:12px;
+}
+
+.combo-btn {
+    background:#00ffae;
+    color:black;
+    font-weight:bold;
+    margin-top:15px;
 }
 
 .price {
@@ -159,7 +165,6 @@ padding:10px 15px;
 border-radius:10px;
 font-size:13px;
 display:none;
-box-shadow:0 0 10px rgba(0,0,0,0.5);
 }
 
 .footer {
@@ -175,7 +180,7 @@ box-shadow:0 0 10px rgba(0,0,0,0.5);
 
 function copiarPix(){
 navigator.clipboard.writeText("11967024809");
-alert("PIX copiado! Agora finalize o pagamento");
+alert("PIX copiado!");
 }
 
 let vagas = 7;
@@ -214,66 +219,73 @@ Existe algo que precisa ser revelado pra você AGORA
 </p>
 
 <div class="box glow">
-💔 <b>Essa não é uma leitura comum</b><br><br>
-
-✔ 3 perguntas diferentes<br>
-✔ 5 cartas para CADA pergunta<br><br>
-
-👉 Total: <b>15 cartas na sua leitura</b><br><br>
-
-✔ interpretação intuitiva real<br>
-✔ resposta direta (sem enrolação)<br>
-✔ envio das fotos reais das cartas<br><br>
-
-👉 Você recebe <b>3 fotos (1 para cada pergunta)</b><br><br>
-
-<span class="highlight">Você vê, sente e entende sua leitura</span>
+💔 <b>3 perguntas + 5 cartas para cada uma</b><br><br>
+👉 Total: 15 cartas + fotos reais + interpretação profunda
 </div>
 
+<!-- COMBO 1 -->
 <div class="box combo">
-<div class="badge">COMBO MAIS ESCOLHIDO</div>
+<div class="badge">MAIS ESCOLHIDO</div>
 <h3>💔 Amor & Saudade</h3>
-✔ Se essa pessoa ainda pensa em você<br>
+✔ Essa pessoa ainda pensa em você<br>
 ✔ O que ela sente de verdade<br>
-✔ Se existe chance real de voltar
+✔ Chance de voltar<br>
+
+<button class="combo-btn" onclick="window.location.href='https://wa.me/5511967024809?text=Quero%20o%20COMBO%201%20-%20Amor%20e%20Saudade'">
+ESCOLHER ESSE COMBO
+</button>
 </div>
 
+<!-- COMBO 2 -->
 <div class="box combo">
-<div class="badge">COMBO DIREÇÃO</div>
+<div class="badge">DIREÇÃO</div>
 <h3>🔀 Caminhos & Decisão</h3>
-✔ Se você está no caminho certo<br>
+✔ Você está no caminho certo<br>
 ✔ O que está travando sua vida<br>
-✔ Qual decisão muda tudo
+✔ Qual decisão tomar<br>
+
+<button class="combo-btn" onclick="window.location.href='https://wa.me/5511967024809?text=Quero%20o%20COMBO%202%20-%20Caminhos%20e%20Decisao'">
+ESCOLHER ESSE COMBO
+</button>
 </div>
 
+<!-- COMBO 3 -->
 <div class="box combo">
-<div class="badge">COMBO MENTAL</div>
+<div class="badge">MENTAL</div>
 <h3>🧠 Energia da Pessoa</h3>
 ✔ O que ela pensa de você<br>
-✔ Se existe outra pessoa<br>
-✔ Se vai te procurar
+✔ Se tem outra pessoa<br>
+✔ Se vai te procurar<br>
+
+<button class="combo-btn" onclick="window.location.href='https://wa.me/5511967024809?text=Quero%20o%20COMBO%203'">
+ESCOLHER ESSE COMBO
+</button>
 </div>
 
+<!-- COMBO 4 -->
 <div class="box combo">
-<div class="badge">COMBO FUTURO</div>
+<div class="badge">FUTURO</div>
 <h3>⏳ Futuro Próximo</h3>
-✔ O que está chegando<br>
-✔ Se vai receber mensagem<br>
-✔ Mudanças no amor
+✔ O que está vindo<br>
+✔ Se vai ter mensagem<br>
+✔ Mudanças no amor<br>
+
+<button class="combo-btn" onclick="window.location.href='https://wa.me/5511967024809?text=Quero%20o%20COMBO%204'">
+ESCOLHER ESSE COMBO
+</button>
 </div>
 
+<!-- COMBO 5 -->
 <div class="box combo">
-<div class="badge">COMBO ENERGIA</div>
+<div class="badge">ENERGIA</div>
 <h3>⚡ Limpeza & Desbloqueio</h3>
-✔ Se existe energia negativa<br>
-✔ Se essa fase vai passar<br>
-✔ O que fazer pra melhorar
-</div>
+✔ Existe energia negativa<br>
+✔ Essa fase vai passar<br>
+✔ O que fazer<br>
 
-<div class="box">
-<div class="testimonial">⭐ “Ela falou coisas que ninguém sabia…”</div>
-<div class="testimonial">⭐ “Foi assustador de tão real”</div>
-<div class="testimonial">⭐ “Mudou completamente minha visão”</div>
+<button class="combo-btn" onclick="window.location.href='https://wa.me/5511967024809?text=Quero%20o%20COMBO%205'">
+ESCOLHER ESSE COMBO
+</button>
 </div>
 
 <div id="vagas" style="text-align:center; margin:15px; color:#ff4d6d;">
@@ -289,23 +301,18 @@ Existe algo que precisa ser revelado pra você AGORA
 💰 PIX: 11967024809
 </div>
 
-<button class="copy" onclick="copiarPix()">COPIAR PIX AGORA</button>
+<button class="copy" onclick="copiarPix()">COPIAR PIX</button>
 
-<p style="text-align:center;">
-⚠️ Após pagar, envie o comprovante imediatamente  
-(vagas encerram rápido)
-</p>
-
-<button class="whats pulse-btn" onclick="window.location.href='https://wa.me/5511967024809?text=Acabei%20de%20pagar%20minha%20leitura%20🔮%20Segue%20comprovante'">
-🔥 ENVIAR COMPROVANTE AGORA
+<button class="whats pulse-btn" onclick="window.location.href='https://wa.me/5511967024809?text=Acabei%20de%20pagar%20minha%20leitura'">
+🔥 ENVIAR COMPROVANTE
 </button>
 
 <div id="popup">
-🔮 Alguém acabou de garantir uma leitura
+🔮 Alguém acabou de comprar
 </div>
 
 <div class="footer">
-🔒 Atendimento sigiloso • Resposta profunda • Não ignore esse chamado
+🔒 Atendimento sigiloso • resposta profunda
 </div>
 
 </div>
