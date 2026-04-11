@@ -1,265 +1,94 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Leitura Espiritual</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
+<!-- ANIMAÇÕES DIFERENTES -->
 <style>
+@keyframes glow1 { from { box-shadow:0 0 5px #ff4d6d;} to {box-shadow:0 0 20px #ff4d6d;} }
+@keyframes glow2 { from { box-shadow:0 0 5px #60a5fa;} to {box-shadow:0 0 20px #60a5fa;} }
+@keyframes glow3 { from { box-shadow:0 0 5px #c084fc;} to {box-shadow:0 0 20px #c084fc;} }
+@keyframes glow4 { from { box-shadow:0 0 5px #facc15;} to {box-shadow:0 0 20px #facc15;} }
+@keyframes glow5 { from { box-shadow:0 0 5px #34d399;} to {box-shadow:0 0 20px #34d399;} }
 
-body {
-    margin:0;
-    font-family:'Poppins',sans-serif;
-    background: radial-gradient(circle at top, #2a0050, #0a001a);
-    color:white;
-}
-
-.container {
-    max-width:520px;
-    margin:auto;
-    padding:20px;
-}
-
-h1 {
-    font-family:'Playfair Display',serif;
-    text-align:center;
-    color:#e9d5ff;
-}
-
-.subtitle {
-    text-align:center;
-    margin-bottom:20px;
-}
-
-/* brilho suave */
-@keyframes glow {
-  from { box-shadow: 0 0 5px #a855f7; }
-  to { box-shadow: 0 0 20px #a855f7; }
-}
-
-.glow {
-  animation: glow 2s infinite alternate;
-}
-
-/* combos */
-.combo {
-    background:rgba(255,255,255,0.05);
-    border-radius:15px;
-    padding:20px;
-    margin-bottom:18px;
-    border:1px solid rgba(255,255,255,0.1);
-    animation: glow 2s infinite alternate;
-}
-
-.badge {
-    background:#7c3aed;
-    padding:5px 10px;
-    border-radius:20px;
-    font-size:12px;
-}
-
-.info {
-    background:rgba(0,0,0,0.4);
-    padding:8px;
-    border-radius:8px;
-    margin:10px 0;
-    font-size:13px;
-}
-
-.highlight {
-    background:#00ffae;
-    color:black;
-    padding:4px 8px;
-    border-radius:6px;
-    font-size:12px;
-}
-
-.price {
-    text-align:center;
-}
-
-.old {
-    text-decoration:line-through;
-}
-
-.new {
-    font-size:30px;
-    color:#00ffae;
-}
-
-.pix {
-    background:#111;
-    padding:15px;
-    border-radius:10px;
-    text-align:center;
-}
-
-/* botão pulsando */
-@keyframes pulse {
-  from { transform: scale(1); }
-  to { transform: scale(1.05); }
-}
-
-.pulse {
-  animation: pulse 1s infinite alternate;
-}
-
-button {
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:10px;
-    margin-top:10px;
-    font-size:16px;
-    cursor:pointer;
-}
-
-.copy {
-    background:#00ffae;
-    color:black;
-}
-
-.whats {
-    background:#7c3aed;
-    color:white;
-}
-
-/* popup */
-#popup {
-position:fixed;
-bottom:20px;
-left:20px;
-background:#111;
-padding:10px;
-border-radius:10px;
-display:none;
-font-size:13px;
-}
-
+.combo1 { animation: glow1 1.5s infinite alternate; }
+.combo2 { animation: glow2 1.5s infinite alternate; }
+.combo3 { animation: glow3 1.5s infinite alternate; }
+.combo4 { animation: glow4 1.5s infinite alternate; }
+.combo5 { animation: glow5 1.5s infinite alternate; }
 </style>
 
-<script>
-function copiarPix() {
-navigator.clipboard.writeText("11967024809");
-alert("PIX copiado!");
-}
-
-// vagas diminuindo
-let vagas = 7;
-setInterval(()=>{
-if(vagas>2){
-vagas--;
-document.getElementById("vagas").innerText="⚠️ Restam apenas "+vagas+" vagas hoje";
-}
-},8000);
-
-// popup compra
-setInterval(()=>{
-let p = document.getElementById("popup");
-p.style.display="block";
-setTimeout(()=>{p.style.display="none";},4000);
-},12000);
-</script>
-
-</head>
-
-<body>
-
-<div class="container">
-
-<h1 class="glow">🔮 Leitura Espiritual Profunda</h1>
-
-<p class="subtitle">
-Você não chegou aqui por acaso… algo precisa ser revelado HOJE
-</p>
-
-<div class="combo">
-🔮 <b>Como funciona:</b><br><br>
-✔ 3 perguntas diferentes<br>
-✔ 5 cartas para cada pergunta<br><br>
-👉 Total: <b>15 cartas na sua leitura</b><br><br>
-<span class="highlight">Leitura profunda e personalizada</span>
-</div>
-
-<!-- COMBOS -->
-
-<div class="combo">
+<!-- COMBO 1 -->
+<div class="combo combo1">
 <div class="badge">COMBO 1</div>
-<h3>💔 Amor & Saudade</h3>
-<div class="info">3 perguntas + 5 cartas cada</div>
-✔ Ainda pensa em você?<br>
-✔ O que sente?<br>
-✔ Vai voltar?
-</div>
+<h3 style="color:#ff4d6d;">💔 Amor & Saudade</h3>
 
-<div class="combo">
-<div class="badge">COMBO 2</div>
-<h3>🔀 Caminhos</h3>
-<div class="info">3 perguntas + 5 cartas cada</div>
-✔ Está no caminho certo?<br>
-✔ O que trava você?<br>
-✔ O que decidir?
-</div>
+<p><b>Indicado se:</b> você sente que ainda existe algo</p>
 
-<div class="combo">
-<div class="badge">COMBO 3</div>
-<h3>🧠 Energia da Pessoa</h3>
-<div class="info">3 perguntas + 5 cartas cada</div>
-✔ O que pensa?<br>
-✔ Tem outra pessoa?<br>
-✔ Vai te procurar?
-</div>
-
-<div class="combo">
-<div class="badge">COMBO 4</div>
-<h3>⏳ Futuro</h3>
-<div class="info">3 perguntas + 5 cartas cada</div>
-✔ O que vem?<br>
-✔ Vai ter mensagem?<br>
-✔ Mudança no amor?
-</div>
-
-<div class="combo">
-<div class="badge">COMBO 5</div>
-<h3>⚡ Energia</h3>
-<div class="info">3 perguntas + 5 cartas cada</div>
-✔ Tem energia negativa?<br>
-✔ Vai passar?<br>
-✔ O que fazer?
-</div>
-
-<!-- vagas -->
-<div id="vagas" style="text-align:center; margin:15px; color:#ff4d6d;">
-⚠️ Restam apenas 7 vagas hoje
-</div>
-
-<div class="price">
-<p class="old">De R$47</p>
-<p class="new">R$30 HOJE</p>
-</div>
-
-<div class="pix">
-💰 PIX: 11967024809
-</div>
-
-<button class="copy" onclick="copiarPix()">COPIAR PIX</button>
-
-<p style="text-align:center;">
-⚠️ Após pagar, envie o comprovante
+<p>
+✔ Descobre se a pessoa ainda pensa em você<br>
+✔ Entende o sentimento REAL dela<br>
+✔ Revela se existe chance de volta
 </p>
 
-<button class="whats pulse" onclick="window.location.href='https://wa.me/5511967024809?text=Acabei%20de%20pagar%20minha%20leitura'">
-ENVIAR COMPROVANTE
-</button>
-
-<div id="popup">
-🔮 Alguém acabou de comprar uma leitura
+<p><span class="highlight">Você sai sabendo a verdade</span></p>
 </div>
 
+<!-- COMBO 2 -->
+<div class="combo combo2">
+<div class="badge">COMBO 2</div>
+<h3 style="color:#60a5fa;">🔀 Caminhos & Decisão</h3>
+
+<p><b>Indicado se:</b> você está perdida</p>
+
+<p>
+✔ Mostra se você está no caminho certo<br>
+✔ Revela bloqueios invisíveis<br>
+✔ Te direciona pra decisão certa
+</p>
+
+<p><span class="highlight">Você sai com direção clara</span></p>
 </div>
 
-</body>
-</html>
+<!-- COMBO 3 -->
+<div class="combo combo3">
+<div class="badge">COMBO 3</div>
+<h3 style="color:#c084fc;">🧠 Energia da Pessoa</h3>
+
+<p><b>Indicado se:</b> você quer saber o que ela esconde</p>
+
+<p>
+✔ O que ela pensa de você HOJE<br>
+✔ Se existe outra pessoa<br>
+✔ Se vai te procurar
+</p>
+
+<p><span class="highlight">Você descobre o que não é dito</span></p>
+</div>
+
+<!-- COMBO 4 -->
+<div class="combo combo4">
+<div class="badge">COMBO 4</div>
+<h3 style="color:#facc15;">⏳ Futuro Próximo</h3>
+
+<p><b>Indicado se:</b> você quer previsões</p>
+
+<p>
+✔ O que está vindo pra sua vida<br>
+✔ Se vai ter mensagem ou contato<br>
+✔ Mudanças no amor
+</p>
+
+<p><span class="highlight">Você vê o que está chegando</span></p>
+</div>
+
+<!-- COMBO 5 -->
+<div class="combo combo5">
+<div class="badge">COMBO 5</div>
+<h3 style="color:#34d399;">⚡ Limpeza & Desbloqueio</h3>
+
+<p><b>Indicado se:</b> você sente energia pesada</p>
+
+<p>
+✔ Identifica bloqueios energéticos<br>
+✔ Mostra se essa fase vai passar<br>
+✔ Orienta o que fazer
+</p>
+
+<p><span class="highlight">Você sai mais leve</span></p>
+</div>
