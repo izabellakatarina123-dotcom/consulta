@@ -6,148 +6,160 @@
 
 <title>Leitura Espiritual</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Cinzel:wght@600&display=swap" rel="stylesheet">
 
 <style>
 
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(180deg, #1a0033, #0a001a);
-    color: white;
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background: radial-gradient(circle, #2a0050, #000);
+    color:white;
 }
 
 .container {
-    max-width: 520px;
-    margin: auto;
-    padding: 20px;
+    max-width:520px;
+    margin:auto;
+    padding:20px;
 }
 
-/* HEADLINE */
 h1 {
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    font-size: 28px;
-    color: #d8b4fe;
+    font-family:'Cinzel',serif;
+    text-align:center;
+    font-size:30px;
+    color:#e9d5ff;
 }
 
 .subtitle {
-    text-align: center;
-    opacity: 0.9;
-    margin-bottom: 25px;
+    text-align:center;
+    opacity:0.9;
+    margin-bottom:20px;
 }
 
-/* BLOCO */
+/* alerta topo */
+.top-alert {
+    background:#ff004c;
+    padding:10px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+/* efeito brilho */
+.glow {
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 5px #a855f7; }
+    to { box-shadow: 0 0 25px #a855f7; }
+}
+
+/* bloco */
 .box {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 14px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(168,85,247,0.2);
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:15px;
 }
 
-/* COMBOS */
+/* combo */
 .combo {
-    border: 1px solid rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.1);
 }
 
 .combo h3 {
-    margin: 0;
-    color: #c084fc;
-    font-size: 18px;
+    color:#c084fc;
 }
 
-.combo span {
-    display: block;
-    font-size: 13px;
-    opacity: 0.7;
-    margin-bottom: 10px;
-}
-
-.combo p {
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-/* BADGE */
 .badge {
-    background: #7c3aed;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    display: inline-block;
-    margin-bottom: 10px;
+    background:#7c3aed;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+    display:inline-block;
+    margin-bottom:8px;
 }
 
-/* PREÇO */
+/* destaque */
+.highlight {
+    background:#00ffae;
+    color:black;
+    padding:4px 8px;
+    border-radius:6px;
+    font-size:12px;
+}
+
+/* preço */
 .price {
-    text-align: center;
-    margin: 25px 0;
+    text-align:center;
+    margin:20px 0;
 }
 
 .old {
-    text-decoration: line-through;
-    color: gray;
+    text-decoration:line-through;
+    color:gray;
 }
 
 .new {
-    font-size: 32px;
-    color: #00ffae;
-    font-weight: bold;
+    font-size:36px;
+    color:#00ffae;
+    font-weight:bold;
 }
 
-/* PIX */
+/* pix */
 .pix {
-    background: #111;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 14px;
+    background:#111;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
 }
 
-/* BOTÕES */
+/* botão */
 button {
-    width: 100%;
-    padding: 15px;
-    border-radius: 10px;
-    border: none;
-    margin-top: 10px;
-    font-size: 16px;
-    cursor: pointer;
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:10px;
+    margin-top:10px;
+    font-size:16px;
+    cursor:pointer;
 }
 
 .copy {
-    background: #00ffae;
-    color: black;
-    font-weight: bold;
+    background:#00ffae;
+    color:black;
+    font-weight:bold;
 }
 
 .whats {
-    background: #7c3aed;
-    color: white;
-    font-weight: bold;
+    background:#7c3aed;
+    color:white;
+    font-weight:bold;
 }
 
-/* DEPOIMENTOS */
+/* prova social */
 .testimonial {
-    font-size: 13px;
-    opacity: 0.9;
-    margin-bottom: 10px;
+    font-size:13px;
+    margin-bottom:8px;
+    opacity:0.9;
 }
 
+/* rodapé */
 .footer {
-    text-align: center;
-    font-size: 12px;
-    opacity: 0.6;
-    margin-top: 20px;
+    text-align:center;
+    font-size:12px;
+    opacity:0.6;
+    margin-top:20px;
 }
 
 </style>
 
 <script>
-function copiarPix() {
-    navigator.clipboard.writeText("11967024809");
-    alert("PIX copiado!");
+function copiarPix(){
+navigator.clipboard.writeText("11967024809");
+alert("PIX copiado! Agora finalize o pagamento");
 }
 </script>
 
@@ -157,107 +169,128 @@ function copiarPix() {
 
 <div class="container">
 
-<h1>💔 Você sente… mas não tem resposta?</h1>
+<div class="top-alert glow">
+⚠️ ATENDIMENTO LIMITADO — HOJE RESTAM POUCAS VAGAS
+</div>
+
+<h1>🔮 Leitura Espiritual Profunda</h1>
 
 <p class="subtitle">
-Essa leitura vai revelar o que está oculto  
-e te dar a clareza que você precisa HOJE
+Você não chegou aqui por acaso…  
+Existe algo que precisa ser revelado pra você AGORA
 </p>
 
-<div class="box">
-🔮 Leitura com <b>5 cartas profundas</b><br><br>
-Você não sai igual depois dessa consulta…  
-Você sai com respostas.
+<div class="box glow">
+💔 <b>Essa não é uma leitura comum</b><br><br>
+
+✔ 5 cartas profundas<br>
+✔ interpretação intuitiva real<br>
+✔ resposta direta (sem enrolação)<br><br>
+
+<span class="highlight">Você sai dessa leitura com clareza</span>
 </div>
 
-<!-- COMBOS -->
-
+<!-- COMBO 1 -->
 <div class="box combo">
-<div class="badge">COMBO 1</div>
+<div class="badge">COMBO MAIS ESCOLHIDO</div>
 <h3>💔 Amor & Saudade</h3>
-<span>Para quem sente que ainda existe algo</span>
+
 <p>
-• Essa pessoa ainda pensa em você?<br>
-• O que ela sente de verdade?<br>
-• Existe chance real de voltar?
+✔ Se essa pessoa ainda pensa em você<br>
+✔ O que ela sente de verdade<br>
+✔ Se existe chance real de voltar
 </p>
+
+<p><span class="highlight">Ideal pra quem não consegue esquecer</span></p>
 </div>
 
+<!-- COMBO 2 -->
 <div class="box combo">
-<div class="badge">COMBO 2</div>
-<h3>🔀 Decisão & Caminhos</h3>
-<span>Para quem precisa de direção</span>
+<div class="badge">COMBO DIREÇÃO</div>
+<h3>🔀 Caminhos & Decisão</h3>
+
 <p>
-• Você está no caminho certo?<br>
-• O que está te bloqueando?<br>
-• Qual decisão muda tudo?
+✔ Se você está no caminho certo<br>
+✔ O que está travando sua vida<br>
+✔ Qual decisão muda tudo
 </p>
+
+<p><span class="highlight">Ideal pra quem está perdida</span></p>
 </div>
 
+<!-- COMBO 3 -->
 <div class="box combo">
-<div class="badge">COMBO 3</div>
+<div class="badge">COMBO MENTAL</div>
 <h3>🧠 Energia da Pessoa</h3>
-<span>Descubra o que ela não fala</span>
+
 <p>
-• O que ela pensa de você?<br>
-• Existe outra pessoa?<br>
-• Vai te procurar?
+✔ O que ela pensa de você<br>
+✔ Se existe outra pessoa<br>
+✔ Se vai te procurar
 </p>
+
+<p><span class="highlight">Você descobre o que ela não fala</span></p>
 </div>
 
+<!-- COMBO 4 -->
 <div class="box combo">
-<div class="badge">COMBO 4</div>
+<div class="badge">COMBO FUTURO</div>
 <h3>⏳ Futuro Próximo</h3>
-<span>Veja o que está vindo</span>
+
 <p>
-• O que vai acontecer?<br>
-• Vai receber mensagem?<br>
-• Algo vai mudar?
+✔ O que está chegando<br>
+✔ Se vai receber mensagem<br>
+✔ Mudanças no amor
 </p>
+
+<p><span class="highlight">Veja o que está por vir</span></p>
 </div>
 
+<!-- COMBO 5 -->
 <div class="box combo">
-<div class="badge">COMBO 5</div>
+<div class="badge">COMBO ENERGIA</div>
 <h3>⚡ Limpeza & Desbloqueio</h3>
-<span>Para quem sente energia pesada</span>
+
 <p>
-• Existe algo travando você?<br>
-• Essa fase vai passar?<br>
-• O que fazer pra melhorar?
+✔ Se existe energia negativa<br>
+✔ Se essa fase vai passar<br>
+✔ O que fazer pra melhorar
 </p>
+
+<p><span class="highlight">Você sai mais leve</span></p>
 </div>
 
-<!-- PROVA SOCIAL -->
-
+<!-- prova -->
 <div class="box">
 <div class="testimonial">⭐ “Ela falou coisas que ninguém sabia…”</div>
-<div class="testimonial">⭐ “Eu me arrepiei inteira, foi muito real”</div>
-<div class="testimonial">⭐ “Me trouxe uma paz absurda depois”</div>
+<div class="testimonial">⭐ “Foi assustador de tão real”</div>
+<div class="testimonial">⭐ “Mudou completamente minha visão”</div>
 </div>
 
-<!-- PREÇO -->
-
+<!-- preço -->
 <div class="price">
 <p class="old">De R$47</p>
 <p class="new">R$30 HOJE</p>
 </div>
 
-<!-- PIX -->
-
+<!-- pix -->
 <div class="pix">
 💰 PIX: 11967024809
 </div>
 
-<button class="copy" onclick="copiarPix()">COPIAR PIX</button>
+<button class="copy" onclick="copiarPix()">COPIAR PIX AGORA</button>
 
-<p style="text-align:center;">Após pagar, envie o comprovante 👇</p>
+<p style="text-align:center;">
+⚠️ Após pagar, envie o comprovante imediatamente  
+(vagas encerram rápido)
+</p>
 
-<button class="whats" onclick="window.location.href='https://wa.me/5511967024809?text=Oi%2C%20acabei%20de%20pagar%20a%20leitura%20%F0%9F%94%AE%20Segue%20meu%20comprovante'">
+<button class="whats" onclick="window.location.href='https://wa.me/5511967024809?text=Acabei%20de%20pagar%20minha%20leitura%20🔮%20Segue%20comprovante'">
 ENVIAR COMPROVANTE
 </button>
 
 <div class="footer">
-🔒 Atendimento sigiloso • Resposta direta • Você vai sair diferente dessa leitura
+🔒 Atendimento sigiloso • Resposta profunda • Não ignore esse chamado
 </div>
 
 </div>
