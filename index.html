@@ -36,7 +36,6 @@ h1 {
     margin-bottom:20px;
 }
 
-/* alerta topo */
 .top-alert {
     background:#ff004c;
     padding:10px;
@@ -46,7 +45,6 @@ h1 {
     margin-bottom:15px;
 }
 
-/* brilho */
 @keyframes glow {
     from { box-shadow: 0 0 5px #a855f7; }
     to { box-shadow: 0 0 25px #a855f7; }
@@ -56,7 +54,6 @@ h1 {
     animation: glow 1.5s infinite alternate;
 }
 
-/* botão pulsando */
 @keyframes pulseBtn {
   0% { transform: scale(1); }
   100% { transform: scale(1.05); }
@@ -66,7 +63,6 @@ h1 {
   animation: pulseBtn 1s infinite alternate;
 }
 
-/* bloco */
 .box {
     background:rgba(255,255,255,0.05);
     padding:20px;
@@ -74,13 +70,16 @@ h1 {
     margin-bottom:15px;
 }
 
-/* combo */
 .combo {
     border:1px solid rgba(255,255,255,0.1);
 }
 
+/* 🔥 AQUI ESTÁ A CORRIGIDA */
 .combo h3 {
-    color:#c084fc;
+    color:#ffffff;
+    font-weight:700;
+    font-size:20px;
+    text-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7;
 }
 
 .badge {
@@ -92,7 +91,6 @@ h1 {
     margin-bottom:8px;
 }
 
-/* destaque */
 .highlight {
     background:#00ffae;
     color:black;
@@ -101,7 +99,6 @@ h1 {
     font-size:12px;
 }
 
-/* preço */
 .price {
     text-align:center;
     margin:20px 0;
@@ -118,7 +115,6 @@ h1 {
     font-weight:bold;
 }
 
-/* pix */
 .pix {
     background:#111;
     padding:15px;
@@ -126,7 +122,6 @@ h1 {
     text-align:center;
 }
 
-/* botão */
 button {
     width:100%;
     padding:16px;
@@ -149,14 +144,12 @@ button {
     font-weight:bold;
 }
 
-/* prova social */
 .testimonial {
     font-size:13px;
     margin-bottom:8px;
     opacity:0.9;
 }
 
-/* popup */
 #popup {
 position:fixed;
 bottom:20px;
@@ -169,7 +162,6 @@ display:none;
 box-shadow:0 0 10px rgba(0,0,0,0.5);
 }
 
-/* rodapé */
 .footer {
     text-align:center;
     font-size:12px;
@@ -186,7 +178,6 @@ navigator.clipboard.writeText("11967024809");
 alert("PIX copiado! Agora finalize o pagamento");
 }
 
-/* vagas */
 let vagas = 7;
 setInterval(() => {
   if (vagas > 2) {
@@ -195,7 +186,6 @@ setInterval(() => {
   }
 }, 8000);
 
-/* popup */
 setInterval(() => {
   let popup = document.getElementById("popup");
   popup.style.display = "block";
@@ -233,14 +223,12 @@ Existe algo que precisa ser revelado pra você AGORA
 
 ✔ interpretação intuitiva real<br>
 ✔ resposta direta (sem enrolação)<br>
-✔ envio das fotos reais das cartas da sua leitura<br><br>
+✔ envio das fotos reais das cartas<br><br>
 
 👉 Você recebe <b>3 fotos (1 para cada pergunta)</b><br><br>
 
 <span class="highlight">Você vê, sente e entende sua leitura</span>
 </div>
-
-<!-- COMBOS -->
 
 <div class="box combo">
 <div class="badge">COMBO MAIS ESCOLHIDO</div>
@@ -282,25 +270,21 @@ Existe algo que precisa ser revelado pra você AGORA
 ✔ O que fazer pra melhorar
 </div>
 
-<!-- prova -->
 <div class="box">
 <div class="testimonial">⭐ “Ela falou coisas que ninguém sabia…”</div>
 <div class="testimonial">⭐ “Foi assustador de tão real”</div>
 <div class="testimonial">⭐ “Mudou completamente minha visão”</div>
 </div>
 
-<!-- vagas -->
 <div id="vagas" style="text-align:center; margin:15px; color:#ff4d6d;">
 ⚠️ Restam apenas 7 vagas hoje
 </div>
 
-<!-- preço -->
 <div class="price">
 <p class="old">De R$47</p>
 <p class="new">R$30 HOJE</p>
 </div>
 
-<!-- pix -->
 <div class="pix">
 💰 PIX: 11967024809
 </div>
