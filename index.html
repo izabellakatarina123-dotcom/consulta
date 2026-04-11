@@ -1,32 +1,59 @@
-<!-- ANIMAÇÕES DIFERENTES -->
 <style>
-@keyframes glow1 { from { box-shadow:0 0 5px #ff4d6d;} to {box-shadow:0 0 20px #ff4d6d;} }
-@keyframes glow2 { from { box-shadow:0 0 5px #60a5fa;} to {box-shadow:0 0 20px #60a5fa;} }
-@keyframes glow3 { from { box-shadow:0 0 5px #c084fc;} to {box-shadow:0 0 20px #c084fc;} }
-@keyframes glow4 { from { box-shadow:0 0 5px #facc15;} to {box-shadow:0 0 20px #facc15;} }
-@keyframes glow5 { from { box-shadow:0 0 5px #34d399;} to {box-shadow:0 0 20px #34d399;} }
 
-.combo1 { animation: glow1 1.5s infinite alternate; }
-.combo2 { animation: glow2 1.5s infinite alternate; }
-.combo3 { animation: glow3 1.5s infinite alternate; }
-.combo4 { animation: glow4 1.5s infinite alternate; }
-.combo5 { animation: glow5 1.5s infinite alternate; }
+/* PISCAR SUAVE (PROFISSIONAL) */
+@keyframes pulseSoft {
+  0% { box-shadow: 0 0 0px rgba(255,255,255,0.1); }
+  100% { box-shadow: 0 0 18px rgba(168,85,247,0.6); }
+}
+
+/* CORES AJUSTADAS (LEVE E LEGÍVEL) */
+.combo1 { animation: pulseSoft 2s infinite alternate; border-left: 4px solid #fb7185; }
+.combo2 { animation: pulseSoft 2s infinite alternate; border-left: 4px solid #60a5fa; }
+.combo3 { animation: pulseSoft 2s infinite alternate; border-left: 4px solid #c084fc; }
+.combo4 { animation: pulseSoft 2s infinite alternate; border-left: 4px solid #facc15; }
+.combo5 { animation: pulseSoft 2s infinite alternate; border-left: 4px solid #34d399; }
+
+/* destaque info */
+.info-box {
+  background: rgba(0,0,0,0.4);
+  padding:10px;
+  border-radius:8px;
+  font-size:13px;
+  margin-bottom:10px;
+  border:1px solid rgba(255,255,255,0.1);
+}
+
 </style>
+
+<!-- AVISO IMPORTANTE -->
+<div class="combo glow">
+🔮 <b>Como funciona a leitura:</b><br><br>
+
+✔ Você escolhe 1 combo<br>
+✔ São <b>3 perguntas diferentes</b><br>
+✔ Cada pergunta é analisada com <b>5 cartas</b><br><br>
+
+👉 Ou seja: <b>15 cartas no total</b><br><br>
+
+<span class="highlight">Leitura profunda, direta e personalizada</span>
+</div>
 
 <!-- COMBO 1 -->
 <div class="combo combo1">
 <div class="badge">COMBO 1</div>
-<h3 style="color:#ff4d6d;">💔 Amor & Saudade</h3>
+<h3 style="color:#fb7185;">💔 Amor & Saudade</h3>
 
-<p><b>Indicado se:</b> você sente que ainda existe algo</p>
+<div class="info-box">
+3 perguntas + 5 cartas para cada pergunta
+</div>
 
 <p>
-✔ Descobre se a pessoa ainda pensa em você<br>
-✔ Entende o sentimento REAL dela<br>
-✔ Revela se existe chance de volta
+✔ Essa pessoa ainda pensa em você?<br>
+✔ O que ela sente de verdade?<br>
+✔ Existe chance real de voltar?
 </p>
 
-<p><span class="highlight">Você sai sabendo a verdade</span></p>
+<p><span class="highlight">Você sai com a verdade emocional</span></p>
 </div>
 
 <!-- COMBO 2 -->
@@ -34,12 +61,14 @@
 <div class="badge">COMBO 2</div>
 <h3 style="color:#60a5fa;">🔀 Caminhos & Decisão</h3>
 
-<p><b>Indicado se:</b> você está perdida</p>
+<div class="info-box">
+3 perguntas + 5 cartas para cada pergunta
+</div>
 
 <p>
-✔ Mostra se você está no caminho certo<br>
-✔ Revela bloqueios invisíveis<br>
-✔ Te direciona pra decisão certa
+✔ Você está no caminho certo?<br>
+✔ O que está te bloqueando?<br>
+✔ Qual decisão muda tudo?
 </p>
 
 <p><span class="highlight">Você sai com direção clara</span></p>
@@ -50,15 +79,17 @@
 <div class="badge">COMBO 3</div>
 <h3 style="color:#c084fc;">🧠 Energia da Pessoa</h3>
 
-<p><b>Indicado se:</b> você quer saber o que ela esconde</p>
+<div class="info-box">
+3 perguntas + 5 cartas para cada pergunta
+</div>
 
 <p>
-✔ O que ela pensa de você HOJE<br>
-✔ Se existe outra pessoa<br>
-✔ Se vai te procurar
+✔ O que ela pensa de você hoje?<br>
+✔ Existe outra pessoa?<br>
+✔ Vai te procurar?
 </p>
 
-<p><span class="highlight">Você descobre o que não é dito</span></p>
+<p><span class="highlight">Você descobre o oculto</span></p>
 </div>
 
 <!-- COMBO 4 -->
@@ -66,12 +97,14 @@
 <div class="badge">COMBO 4</div>
 <h3 style="color:#facc15;">⏳ Futuro Próximo</h3>
 
-<p><b>Indicado se:</b> você quer previsões</p>
+<div class="info-box">
+3 perguntas + 5 cartas para cada pergunta
+</div>
 
 <p>
-✔ O que está vindo pra sua vida<br>
-✔ Se vai ter mensagem ou contato<br>
-✔ Mudanças no amor
+✔ O que está vindo pra você?<br>
+✔ Vai ter mensagem ou surpresa?<br>
+✔ Algo vai mudar no amor?
 </p>
 
 <p><span class="highlight">Você vê o que está chegando</span></p>
@@ -82,12 +115,14 @@
 <div class="badge">COMBO 5</div>
 <h3 style="color:#34d399;">⚡ Limpeza & Desbloqueio</h3>
 
-<p><b>Indicado se:</b> você sente energia pesada</p>
+<div class="info-box">
+3 perguntas + 5 cartas para cada pergunta
+</div>
 
 <p>
-✔ Identifica bloqueios energéticos<br>
-✔ Mostra se essa fase vai passar<br>
-✔ Orienta o que fazer
+✔ Existe energia negativa?<br>
+✔ Essa fase vai passar?<br>
+✔ O que fazer pra melhorar?
 </p>
 
 <p><span class="highlight">Você sai mais leve</span></p>
