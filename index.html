@@ -8,8 +8,8 @@
 <style>
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(180deg, #0d0d0d, #1a1a1a);
+    font-family: Arial;
+    background: linear-gradient(180deg, #1a0033, #0d0d0d);
     color: #fff;
 }
 
@@ -20,89 +20,82 @@ body {
 }
 
 h1 {
-    color: #ff4d6d;
     text-align: center;
-    font-size: 26px;
+    color: #c084fc;
 }
 
 .subtitle {
     text-align: center;
-    font-size: 16px;
-    opacity: 0.8;
     margin-bottom: 20px;
+    opacity: 0.9;
 }
 
-.alert {
-    background: #ff4d6d;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.combo {
-    background: #1f1f1f;
+.box {
+    background: rgba(255,255,255,0.05);
     padding: 18px;
     border-radius: 12px;
     margin-bottom: 15px;
-    box-shadow: 0 0 10px rgba(255,77,109,0.2);
+    box-shadow: 0 0 15px rgba(192,132,252,0.3);
 }
 
 .combo h3 {
-    margin-top: 0;
-    color: #ff4d6d;
+    color: #c084fc;
 }
 
-.combo p {
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.price-box {
+.price {
     text-align: center;
     margin: 20px 0;
 }
 
-.old {
+.price .old {
     text-decoration: line-through;
     color: gray;
 }
 
-.new {
-    font-size: 28px;
+.price .new {
+    font-size: 30px;
     color: #00ffae;
     font-weight: bold;
 }
 
 .pix {
-    background: #262626;
+    background: #111;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    word-break: break-all;
 }
 
 button {
     width: 100%;
     padding: 15px;
-    border: none;
     border-radius: 10px;
-    background: #25D366;
+    border: none;
+    background: #7c3aed;
     color: white;
     font-size: 16px;
-    margin-top: 15px;
+    margin-top: 10px;
     cursor: pointer;
-    font-weight: bold;
+}
+
+.copy-btn {
+    background: #00ffae;
+    color: black;
 }
 
 .footer {
     text-align: center;
     font-size: 12px;
-    opacity: 0.6;
+    opacity: 0.7;
     margin-top: 20px;
 }
 </style>
+
+<script>
+function copiarPix() {
+    navigator.clipboard.writeText("11967024809");
+    alert("PIX copiado!");
+}
+</script>
 
 </head>
 
@@ -110,81 +103,105 @@ button {
 
 <div class="container">
 
-<h1>💔 Você sente… mas não tem resposta?</h1>
+<h1>🔮 Leitura Espiritual Profunda</h1>
 
 <p class="subtitle">
-Escolha seu combo e descubra a verdade que está escondida AGORA
+Você não chegou aqui por acaso…  
+Existe algo que você precisa descobrir HOJE.
 </p>
 
-<div class="alert">
-⚠️ Atendimento limitado — respondo apenas algumas pessoas por dia
+<div class="box">
+💔 Essa leitura vai te trazer:
+<br><br>
+• Clareza sobre o que você sente  
+• Verdades que estão escondidas  
+• Direcionamento real pra sua vida  
+• Alívio emocional imediato  
+<br><br>
+🔮 Feita com 5 cartas profundas + interpretação intuitiva
 </div>
 
-<div class="combo">
-<h3>🔮 Amor & Saudade</h3>
+<!-- COMBOS -->
+
+<div class="box combo">
+<h3>💔 Amor & Saudade</h3>
 <p>
 • Essa pessoa ainda pensa em você?<br>
 • O que ela sente de verdade?<br>
-• Existe chance real de voltar?
+• Existe chance de voltar?
 </p>
 </div>
 
-<div class="combo">
-<h3>🔮 Decisão & Caminhos</h3>
+<div class="box combo">
+<h3>🔀 Decisão & Caminhos</h3>
 <p>
 • Você está no caminho certo?<br>
-• O que está travando sua vida?<br>
+• O que está te bloqueando?<br>
 • Qual decisão muda tudo?
 </p>
 </div>
 
-<div class="combo">
-<h3>🔮 Energia da Pessoa</h3>
+<div class="box combo">
+<h3>🧠 Energia da Pessoa</h3>
 <p>
-• O que ela pensa de você hoje?<br>
-• Existe outra pessoa envolvida?<br>
-• Ela vai te procurar?
+• O que ela pensa de você?<br>
+• Existe outra pessoa?<br>
+• Vai te procurar?
 </p>
 </div>
 
-<div class="combo">
-<h3>🔮 Futuro Próximo</h3>
+<div class="box combo">
+<h3>⏳ Futuro Próximo</h3>
 <p>
-• O que está prestes a acontecer?<br>
-• Vai receber mensagem ou sinal?<br>
-• Algo vai mudar no amor?
+• O que vai acontecer?<br>
+• Vai receber mensagem?<br>
+• Algo vai mudar?
 </p>
 </div>
 
-<div class="combo">
-<h3>🔮 Limpeza & Desbloqueio</h3>
+<div class="box combo">
+<h3>⚡ Limpeza & Desbloqueio</h3>
 <p>
-• Existe energia travando sua vida?<br>
-• Essa fase ruim vai passar?<br>
+• Tem energia negativa?<br>
+• Essa fase vai passar?<br>
 • O que fazer pra melhorar?
 </p>
 </div>
 
-<div class="price-box">
+<!-- DEPOIMENTOS -->
+
+<div class="box">
+⭐ “Eu não esperava… ela falou exatamente o que eu estava vivendo.”  
+<br><br>
+⭐ “Depois da leitura, tudo fez sentido pra mim.”  
+<br><br>
+⭐ “Me trouxe uma paz que eu não sentia há muito tempo.”
+</div>
+
+<!-- PREÇO -->
+
+<div class="price">
 <p class="old">De R$47</p>
 <p class="new">R$30 HOJE</p>
 </div>
 
+<!-- PIX -->
+
 <div class="pix">
-💰 <strong>Pague via PIX:</strong><br><br>
+💰 <strong>PIX:</strong><br><br>
 11967024809
 </div>
 
-<p style="text-align:center; margin-top:10px;">
-Após pagar, clique abaixo e envie o comprovante 👇
-</p>
+<button class="copy-btn" onclick="copiarPix()">COPIAR PIX</button>
 
-<button onclick="window.location.href='https://wa.me/5511967024809?text=Oi%2C%20acabei%20de%20pagar%20a%20leitura%20%F0%9F%94%AE%20Segue%20meu%20comprovante%20e%20quero%20escolher%20meu%20combo'">
+<p style="text-align:center;">Após pagar, envie o comprovante 👇</p>
+
+<button onclick="window.location.href='https://wa.me/5511967024809?text=Oi%2C%20acabei%20de%20pagar%20a%20leitura%20%F0%9F%94%AE%20Segue%20meu%20comprovante'">
 ENVIAR COMPROVANTE NO WHATSAPP
 </button>
 
 <div class="footer">
-🔒 Atendimento confidencial • Resposta direta • Sem julgamentos
+🔒 Atendimento sigiloso • Resposta profunda • Você vai sair diferente dessa leitura
 </div>
 
 </div>
