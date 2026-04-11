@@ -78,7 +78,7 @@ h1 {
     color:#ffffff;
     font-weight:700;
     font-size:20px;
-    text-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7;
+    text-shadow: 0 0 10px #a855f7;
 }
 
 .badge {
@@ -119,17 +119,7 @@ h1 {
     padding:15px;
     border-radius:10px;
     text-align:center;
-}
-
-textarea {
-    width:100%;
-    height:80px;
-    border-radius:8px;
-    border:none;
-    padding:10px;
-    font-size:12px;
-    background:#000;
-    color:#00ffae;
+    word-break: break-all;
 }
 
 button {
@@ -184,9 +174,8 @@ box-shadow:0 0 10px rgba(0,0,0,0.5);
 <script>
 
 function copiarPix(){
-let pix = document.getElementById("pixCode").value;
-navigator.clipboard.writeText(pix);
-alert("PIX copiado com valor de R$30! Agora é só colar no seu banco e pagar");
+navigator.clipboard.writeText("00020126360014br.gov.bcb.pix0114+5511967024809520400005303986540530.005802BR5917Izabella Katarina6009Sao Paulo62240520daqr1613381951131526630499ED");
+alert("PIX copiado! Agora finalize o pagamento");
 }
 
 let vagas = 7;
@@ -225,16 +214,6 @@ Existe algo que precisa ser revelado pra você AGORA
 </p>
 
 <div class="box glow">
-💔 <b>Se você está:</b><br><br>
-
-💭 Pensando em alguém<br>
-😔 Sem resposta<br>
-🔄 Presa na dúvida<br><br>
-
-👉 Essa leitura é pra você
-</div>
-
-<div class="box">
 💔 <b>Essa não é uma leitura comum</b><br><br>
 
 ✔ 3 perguntas diferentes<br>
@@ -248,8 +227,7 @@ Existe algo que precisa ser revelado pra você AGORA
 
 👉 Você recebe <b>3 fotos (1 para cada pergunta)</b><br><br>
 
-⚠️ Cada leitura é feita na sua energia  
-não é genérica, não é pronta<br><br>
+💬 <b>Você escolhe o tema do seu combo antes da leitura</b><br><br>
 
 <span class="highlight">Você vê, sente e entende sua leitura</span>
 </div>
@@ -300,13 +278,16 @@ não é genérica, não é pronta<br><br>
 <div class="testimonial">⭐ “Mudou completamente minha visão”</div>
 </div>
 
-<div id="vagas" style="text-align:center; margin:15px; color:#ff4d6d;">
-⚠️ Restam apenas 7 vagas hoje
+<div class="box" style="text-align:center;">
+🔒 <b>Garantia de atendimento real</b><br><br>
+✔ Leitura feita por mim, sem robô<br>
+✔ Resposta personalizada<br>
+✔ Total sigilo<br><br>
+<span class="highlight">Você não vai receber algo genérico</span>
 </div>
 
-<div class="box" style="text-align:center;">
-⚠️ Se você ignorar isso…  
-pode continuar sem resposta e com essa dúvida te consumindo
+<div id="vagas" style="text-align:center; margin:15px; color:#ff4d6d;">
+⚠️ Restam apenas 7 vagas hoje
 </div>
 
 <div class="price">
@@ -315,23 +296,15 @@ pode continuar sem resposta e com essa dúvida te consumindo
 </div>
 
 <div class="pix">
-💰 <b>Pague via PIX (já com valor de R$30)</b><br><br>
-
-<textarea id="pixCode" readonly>
+💰 PIX (copia e cola):<br><br>
 00020126360014br.gov.bcb.pix0114+5511967024809520400005303986540530.005802BR5917Izabella Katarina6009Sao Paulo62240520daqr1613381951131526630499ED
-</textarea>
 </div>
 
 <button class="copy" onclick="copiarPix()">COPIAR PIX AGORA</button>
 
-<p style="text-align:center;">
-✔ Se não fizer sentido, você pode ignorar<br>
-✔ Mas quem faz… dificilmente se arrepende
-</p>
-
-<div class="box" style="text-align:center;">
-💥 Você pode sair daqui sem saber…  
-ou descobrir a verdade agora
+<div style="text-align:center; margin-top:15px; font-size:14px; color:#ff4d6d;">
+⚠️ Se você sentiu algo lendo isso… não ignora.  
+Essa leitura pode te dar a resposta que você está esperando há dias.
 </div>
 
 <button class="whats pulse-btn" onclick="window.location.href='https://wa.me/5511967024809?text=Acabei%20de%20pagar%20minha%20leitura%20🔮%20Segue%20comprovante'">
