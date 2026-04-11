@@ -3,91 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Leitura Espiritual</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
 <style>
+
 body {
     margin: 0;
-    font-family: Arial;
-    background: linear-gradient(180deg, #1a0033, #0d0d0d);
-    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #1a0033, #0a001a);
+    color: white;
 }
 
 .container {
-    max-width: 500px;
+    max-width: 520px;
     margin: auto;
     padding: 20px;
 }
 
+/* HEADLINE */
 h1 {
+    font-family: 'Playfair Display', serif;
     text-align: center;
-    color: #c084fc;
+    font-size: 28px;
+    color: #d8b4fe;
 }
 
 .subtitle {
     text-align: center;
-    margin-bottom: 20px;
     opacity: 0.9;
+    margin-bottom: 25px;
 }
 
+/* BLOCO */
 .box {
     background: rgba(255,255,255,0.05);
-    padding: 18px;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    box-shadow: 0 0 15px rgba(192,132,252,0.3);
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(168,85,247,0.2);
+}
+
+/* COMBOS */
+.combo {
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .combo h3 {
+    margin: 0;
     color: #c084fc;
+    font-size: 18px;
 }
 
+.combo span {
+    display: block;
+    font-size: 13px;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+.combo p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* BADGE */
+.badge {
+    background: #7c3aed;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* PREÇO */
 .price {
     text-align: center;
-    margin: 20px 0;
+    margin: 25px 0;
 }
 
-.price .old {
+.old {
     text-decoration: line-through;
     color: gray;
 }
 
-.price .new {
-    font-size: 30px;
+.new {
+    font-size: 32px;
     color: #00ffae;
     font-weight: bold;
 }
 
+/* PIX */
 .pix {
     background: #111;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
+    font-size: 14px;
 }
 
+/* BOTÕES */
 button {
     width: 100%;
     padding: 15px;
     border-radius: 10px;
     border: none;
-    background: #7c3aed;
-    color: white;
-    font-size: 16px;
     margin-top: 10px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-.copy-btn {
+.copy {
     background: #00ffae;
     color: black;
+    font-weight: bold;
+}
+
+.whats {
+    background: #7c3aed;
+    color: white;
+    font-weight: bold;
+}
+
+/* DEPOIMENTOS */
+.testimonial {
+    font-size: 13px;
+    opacity: 0.9;
+    margin-bottom: 10px;
 }
 
 .footer {
     text-align: center;
     font-size: 12px;
-    opacity: 0.7;
+    opacity: 0.6;
     margin-top: 20px;
 }
+
 </style>
 
 <script>
@@ -103,37 +157,36 @@ function copiarPix() {
 
 <div class="container">
 
-<h1>🔮 Leitura Espiritual Profunda</h1>
+<h1>💔 Você sente… mas não tem resposta?</h1>
 
 <p class="subtitle">
-Você não chegou aqui por acaso…  
-Existe algo que você precisa descobrir HOJE.
+Essa leitura vai revelar o que está oculto  
+e te dar a clareza que você precisa HOJE
 </p>
 
 <div class="box">
-💔 Essa leitura vai te trazer:
-<br><br>
-• Clareza sobre o que você sente  
-• Verdades que estão escondidas  
-• Direcionamento real pra sua vida  
-• Alívio emocional imediato  
-<br><br>
-🔮 Feita com 5 cartas profundas + interpretação intuitiva
+🔮 Leitura com <b>5 cartas profundas</b><br><br>
+Você não sai igual depois dessa consulta…  
+Você sai com respostas.
 </div>
 
 <!-- COMBOS -->
 
 <div class="box combo">
+<div class="badge">COMBO 1</div>
 <h3>💔 Amor & Saudade</h3>
+<span>Para quem sente que ainda existe algo</span>
 <p>
 • Essa pessoa ainda pensa em você?<br>
 • O que ela sente de verdade?<br>
-• Existe chance de voltar?
+• Existe chance real de voltar?
 </p>
 </div>
 
 <div class="box combo">
+<div class="badge">COMBO 2</div>
 <h3>🔀 Decisão & Caminhos</h3>
+<span>Para quem precisa de direção</span>
 <p>
 • Você está no caminho certo?<br>
 • O que está te bloqueando?<br>
@@ -142,7 +195,9 @@ Existe algo que você precisa descobrir HOJE.
 </div>
 
 <div class="box combo">
+<div class="badge">COMBO 3</div>
 <h3>🧠 Energia da Pessoa</h3>
+<span>Descubra o que ela não fala</span>
 <p>
 • O que ela pensa de você?<br>
 • Existe outra pessoa?<br>
@@ -151,7 +206,9 @@ Existe algo que você precisa descobrir HOJE.
 </div>
 
 <div class="box combo">
+<div class="badge">COMBO 4</div>
 <h3>⏳ Futuro Próximo</h3>
+<span>Veja o que está vindo</span>
 <p>
 • O que vai acontecer?<br>
 • Vai receber mensagem?<br>
@@ -160,22 +217,22 @@ Existe algo que você precisa descobrir HOJE.
 </div>
 
 <div class="box combo">
+<div class="badge">COMBO 5</div>
 <h3>⚡ Limpeza & Desbloqueio</h3>
+<span>Para quem sente energia pesada</span>
 <p>
-• Tem energia negativa?<br>
+• Existe algo travando você?<br>
 • Essa fase vai passar?<br>
 • O que fazer pra melhorar?
 </p>
 </div>
 
-<!-- DEPOIMENTOS -->
+<!-- PROVA SOCIAL -->
 
 <div class="box">
-⭐ “Eu não esperava… ela falou exatamente o que eu estava vivendo.”  
-<br><br>
-⭐ “Depois da leitura, tudo fez sentido pra mim.”  
-<br><br>
-⭐ “Me trouxe uma paz que eu não sentia há muito tempo.”
+<div class="testimonial">⭐ “Ela falou coisas que ninguém sabia…”</div>
+<div class="testimonial">⭐ “Eu me arrepiei inteira, foi muito real”</div>
+<div class="testimonial">⭐ “Me trouxe uma paz absurda depois”</div>
 </div>
 
 <!-- PREÇO -->
@@ -188,20 +245,19 @@ Existe algo que você precisa descobrir HOJE.
 <!-- PIX -->
 
 <div class="pix">
-💰 <strong>PIX:</strong><br><br>
-11967024809
+💰 PIX: 11967024809
 </div>
 
-<button class="copy-btn" onclick="copiarPix()">COPIAR PIX</button>
+<button class="copy" onclick="copiarPix()">COPIAR PIX</button>
 
 <p style="text-align:center;">Após pagar, envie o comprovante 👇</p>
 
-<button onclick="window.location.href='https://wa.me/5511967024809?text=Oi%2C%20acabei%20de%20pagar%20a%20leitura%20%F0%9F%94%AE%20Segue%20meu%20comprovante'">
-ENVIAR COMPROVANTE NO WHATSAPP
+<button class="whats" onclick="window.location.href='https://wa.me/5511967024809?text=Oi%2C%20acabei%20de%20pagar%20a%20leitura%20%F0%9F%94%AE%20Segue%20meu%20comprovante'">
+ENVIAR COMPROVANTE
 </button>
 
 <div class="footer">
-🔒 Atendimento sigiloso • Resposta profunda • Você vai sair diferente dessa leitura
+🔒 Atendimento sigiloso • Resposta direta • Você vai sair diferente dessa leitura
 </div>
 
 </div>
