@@ -1,94 +1,327 @@
-<!-- ANIMAÇÕES DIFERENTES -->
-<style>
-@keyframes glow1 { from { box-shadow:0 0 5px #ff4d6d;} to {box-shadow:0 0 20px #ff4d6d;} }
-@keyframes glow2 { from { box-shadow:0 0 5px #60a5fa;} to {box-shadow:0 0 20px #60a5fa;} }
-@keyframes glow3 { from { box-shadow:0 0 5px #c084fc;} to {box-shadow:0 0 20px #c084fc;} }
-@keyframes glow4 { from { box-shadow:0 0 5px #facc15;} to {box-shadow:0 0 20px #facc15;} }
-@keyframes glow5 { from { box-shadow:0 0 5px #34d399;} to {box-shadow:0 0 20px #34d399;} }
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.combo1 { animation: glow1 1.5s infinite alternate; }
-.combo2 { animation: glow2 1.5s infinite alternate; }
-.combo3 { animation: glow3 1.5s infinite alternate; }
-.combo4 { animation: glow4 1.5s infinite alternate; }
-.combo5 { animation: glow5 1.5s infinite alternate; }
+<title>Leitura Espiritual</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Cinzel:wght@600&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background: radial-gradient(circle, #2a0050, #000);
+    color:white;
+}
+
+.container {
+    max-width:520px;
+    margin:auto;
+    padding:20px;
+}
+
+h1 {
+    font-family:'Cinzel',serif;
+    text-align:center;
+    font-size:30px;
+    color:#e9d5ff;
+}
+
+.subtitle {
+    text-align:center;
+    opacity:0.9;
+    margin-bottom:20px;
+}
+
+/* alerta topo */
+.top-alert {
+    background:#ff004c;
+    padding:10px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+/* brilho */
+@keyframes glow {
+    from { box-shadow: 0 0 5px #a855f7; }
+    to { box-shadow: 0 0 25px #a855f7; }
+}
+
+.glow {
+    animation: glow 1.5s infinite alternate;
+}
+
+/* botão pulsando */
+@keyframes pulseBtn {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+.pulse-btn {
+  animation: pulseBtn 1s infinite alternate;
+}
+
+/* bloco */
+.box {
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+/* combo */
+.combo {
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.combo h3 {
+    color:#c084fc;
+}
+
+.badge {
+    background:#7c3aed;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+    display:inline-block;
+    margin-bottom:8px;
+}
+
+/* destaque */
+.highlight {
+    background:#00ffae;
+    color:black;
+    padding:4px 8px;
+    border-radius:6px;
+    font-size:12px;
+}
+
+/* preço */
+.price {
+    text-align:center;
+    margin:20px 0;
+}
+
+.old {
+    text-decoration:line-through;
+    color:gray;
+}
+
+.new {
+    font-size:36px;
+    color:#00ffae;
+    font-weight:bold;
+}
+
+/* pix */
+.pix {
+    background:#111;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+}
+
+/* botão */
+button {
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:10px;
+    margin-top:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.copy {
+    background:#00ffae;
+    color:black;
+    font-weight:bold;
+}
+
+.whats {
+    background:#7c3aed;
+    color:white;
+    font-weight:bold;
+}
+
+/* prova social */
+.testimonial {
+    font-size:13px;
+    margin-bottom:8px;
+    opacity:0.9;
+}
+
+/* popup */
+#popup {
+position:fixed;
+bottom:20px;
+left:20px;
+background:#111;
+padding:10px 15px;
+border-radius:10px;
+font-size:13px;
+display:none;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+/* rodapé */
+.footer {
+    text-align:center;
+    font-size:12px;
+    opacity:0.6;
+    margin-top:20px;
+}
+
 </style>
 
-<!-- COMBO 1 -->
-<div class="combo combo1">
-<div class="badge">COMBO 1</div>
-<h3 style="color:#ff4d6d;">💔 Amor & Saudade</h3>
+<script>
 
-<p><b>Indicado se:</b> você sente que ainda existe algo</p>
+function copiarPix(){
+navigator.clipboard.writeText("11967024809");
+alert("PIX copiado! Agora finalize o pagamento");
+}
 
-<p>
-✔ Descobre se a pessoa ainda pensa em você<br>
-✔ Entende o sentimento REAL dela<br>
-✔ Revela se existe chance de volta
-</p>
+/* vagas */
+let vagas = 7;
+setInterval(() => {
+  if (vagas > 2) {
+    vagas--;
+    document.getElementById("vagas").innerText = "⚠️ Restam apenas " + vagas + " vagas hoje";
+  }
+}, 8000);
 
-<p><span class="highlight">Você sai sabendo a verdade</span></p>
+/* popup */
+setInterval(() => {
+  let popup = document.getElementById("popup");
+  popup.style.display = "block";
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 4000);
+}, 12000);
+
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="top-alert glow">
+⚠️ ATENDIMENTO LIMITADO — HOJE RESTAM POUCAS VAGAS
 </div>
 
-<!-- COMBO 2 -->
-<div class="combo combo2">
-<div class="badge">COMBO 2</div>
-<h3 style="color:#60a5fa;">🔀 Caminhos & Decisão</h3>
+<h1>🔮 Leitura Espiritual Profunda</h1>
 
-<p><b>Indicado se:</b> você está perdida</p>
-
-<p>
-✔ Mostra se você está no caminho certo<br>
-✔ Revela bloqueios invisíveis<br>
-✔ Te direciona pra decisão certa
+<p class="subtitle">
+Você não chegou aqui por acaso…  
+Existe algo que precisa ser revelado pra você AGORA
 </p>
 
-<p><span class="highlight">Você sai com direção clara</span></p>
+<div class="box glow">
+💔 <b>Essa não é uma leitura comum</b><br><br>
+
+✔ 3 perguntas diferentes<br>
+✔ 5 cartas para CADA pergunta<br><br>
+
+👉 Total: <b>15 cartas na sua leitura</b><br><br>
+
+✔ interpretação intuitiva real<br>
+✔ resposta direta (sem enrolação)<br><br>
+
+<span class="highlight">Você sai dessa leitura com clareza real</span>
 </div>
 
-<!-- COMBO 3 -->
-<div class="combo combo3">
-<div class="badge">COMBO 3</div>
-<h3 style="color:#c084fc;">🧠 Energia da Pessoa</h3>
+<!-- COMBOS -->
 
-<p><b>Indicado se:</b> você quer saber o que ela esconde</p>
+<div class="box combo">
+<div class="badge">COMBO MAIS ESCOLHIDO</div>
+<h3>💔 Amor & Saudade</h3>
+✔ Se essa pessoa ainda pensa em você<br>
+✔ O que ela sente de verdade<br>
+✔ Se existe chance real de voltar
+</div>
 
-<p>
-✔ O que ela pensa de você HOJE<br>
+<div class="box combo">
+<div class="badge">COMBO DIREÇÃO</div>
+<h3>🔀 Caminhos & Decisão</h3>
+✔ Se você está no caminho certo<br>
+✔ O que está travando sua vida<br>
+✔ Qual decisão muda tudo
+</div>
+
+<div class="box combo">
+<div class="badge">COMBO MENTAL</div>
+<h3>🧠 Energia da Pessoa</h3>
+✔ O que ela pensa de você<br>
 ✔ Se existe outra pessoa<br>
 ✔ Se vai te procurar
-</p>
-
-<p><span class="highlight">Você descobre o que não é dito</span></p>
 </div>
 
-<!-- COMBO 4 -->
-<div class="combo combo4">
-<div class="badge">COMBO 4</div>
-<h3 style="color:#facc15;">⏳ Futuro Próximo</h3>
-
-<p><b>Indicado se:</b> você quer previsões</p>
-
-<p>
-✔ O que está vindo pra sua vida<br>
-✔ Se vai ter mensagem ou contato<br>
+<div class="box combo">
+<div class="badge">COMBO FUTURO</div>
+<h3>⏳ Futuro Próximo</h3>
+✔ O que está chegando<br>
+✔ Se vai receber mensagem<br>
 ✔ Mudanças no amor
-</p>
-
-<p><span class="highlight">Você vê o que está chegando</span></p>
 </div>
 
-<!-- COMBO 5 -->
-<div class="combo combo5">
-<div class="badge">COMBO 5</div>
-<h3 style="color:#34d399;">⚡ Limpeza & Desbloqueio</h3>
+<div class="box combo">
+<div class="badge">COMBO ENERGIA</div>
+<h3>⚡ Limpeza & Desbloqueio</h3>
+✔ Se existe energia negativa<br>
+✔ Se essa fase vai passar<br>
+✔ O que fazer pra melhorar
+</div>
 
-<p><b>Indicado se:</b> você sente energia pesada</p>
+<!-- prova -->
+<div class="box">
+<div class="testimonial">⭐ “Ela falou coisas que ninguém sabia…”</div>
+<div class="testimonial">⭐ “Foi assustador de tão real”</div>
+<div class="testimonial">⭐ “Mudou completamente minha visão”</div>
+</div>
 
-<p>
-✔ Identifica bloqueios energéticos<br>
-✔ Mostra se essa fase vai passar<br>
-✔ Orienta o que fazer
+<!-- vagas -->
+<div id="vagas" style="text-align:center; margin:15px; color:#ff4d6d;">
+⚠️ Restam apenas 7 vagas hoje
+</div>
+
+<!-- preço -->
+<div class="price">
+<p class="old">De R$47</p>
+<p class="new">R$30 HOJE</p>
+</div>
+
+<!-- pix -->
+<div class="pix">
+💰 PIX: 11967024809
+</div>
+
+<button class="copy" onclick="copiarPix()">COPIAR PIX AGORA</button>
+
+<p style="text-align:center;">
+⚠️ Após pagar, envie o comprovante imediatamente  
+(vagas encerram rápido)
 </p>
 
-<p><span class="highlight">Você sai mais leve</span></p>
+<button class="whats pulse-btn" onclick="window.location.href='https://wa.me/5511967024809?text=Acabei%20de%20pagar%20minha%20leitura%20🔮%20Segue%20comprovante'">
+🔥 ENVIAR COMPROVANTE AGORA
+</button>
+
+<div id="popup">
+🔮 Alguém acabou de garantir uma leitura
 </div>
+
+<div class="footer">
+🔒 Atendimento sigiloso • Resposta profunda • Não ignore esse chamado
+</div>
+
+</div>
+
+</body>
+</html>
