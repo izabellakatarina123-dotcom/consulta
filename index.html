@@ -4,149 +4,96 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Studio Elegance | Beleza & Estética</title>
+<title>Barbearia Elite | Agendamento Online</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #ffffff;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f5f6fa;
     color: #222;
 }
 
-/* NAVBAR */
-nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: white;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    z-index: 999;
-}
-
-nav a {
-    text-decoration: none;
-    color: #555;
-    margin-left: 20px;
-    font-size: 14px;
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
 }
 
 /* HERO */
 .hero {
-    padding: 140px 20px 80px;
+    background: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70') center/cover;
+    color: white;
+    padding: 80px 20px;
     text-align: center;
-    background: linear-gradient(120deg, #fdfbfb, #ebedee);
 }
 
 .hero h1 {
-    font-size: 40px;
-    max-width: 700px;
-    margin: auto;
+    font-size: 32px;
 }
 
 .hero p {
-    margin-top: 15px;
-    color: #666;
+    margin-top: 10px;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 25px;
-    padding: 14px 35px;
-    background: #ff4d6d;
+    margin-top: 20px;
+    padding: 14px 30px;
+    background: #25D366;
     color: white;
-    border-radius: 30px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
-.btn:hover {
-    transform: scale(1.05);
+/* PROVA */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    margin-top: -30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.stats div {
+    text-align: center;
 }
 
 /* SECTIONS */
 .section {
-    padding: 80px 20px;
-    max-width: 1100px;
-    margin: auto;
+    margin-top: 40px;
 }
 
-.section h2 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-/* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    gap: 20px;
 }
 
-/* CARDS */
 .card {
-    background: #fff;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* IMAGE */
-.image img {
-    width: 100%;
-    border-radius: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 /* TESTIMONIAL */
 .testimonial {
-    background: #f9f9f9;
+    background: #fff;
     padding: 20px;
-    border-radius: 15px;
+    border-left: 4px solid #25D366;
 }
 
 /* CTA */
 .cta {
-    background: linear-gradient(120deg, #ff4d6d, #ff758c);
+    background: #25D366;
     color: white;
     text-align: center;
-    padding: 70px 20px;
-    border-radius: 20px;
-    margin-top: 50px;
-}
-
-/* ANIMAÇÃO */
-.hidden {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    font-size: 13px;
-    color: #777;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
 }
 </style>
 
@@ -154,89 +101,76 @@ footer {
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-    <div><strong>Studio Elegance</strong></div>
-    <div>
-        <a href="#servicos">Serviços</a>
-        <a href="#clientes">Clientes</a>
-        <a href="#contato">Contato</a>
-    </div>
-</nav>
-
 <!-- HERO -->
-<section class="hero">
-    <h1>Realce sua beleza com um atendimento profissional e sofisticado</h1>
-    <p>Agende em segundos e tenha um resultado impecável</p>
-    <a class="btn" href="https://wa.me/SEUNUMERO">Agendar no WhatsApp</a>
-</section>
+<div class="hero">
+    <h1>Corte de cabelo profissional que valoriza seu estilo</h1>
+    <p>Agende em segundos direto pelo WhatsApp</p>
 
-<!-- IMAGEM -->
-<section class="section image hidden">
-    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371">
-</section>
+    <a class="btn" href="https://wa.me/SEUNUMERO">AGENDAR AGORA</a>
+</div>
+
+<!-- PROVA REAL -->
+<div class="container">
+<div class="stats">
+    <div>
+        <h2>+300</h2>
+        <p>Clientes atendidos</p>
+    </div>
+
+    <div>
+        <h2>5⭐</h2>
+        <p>Avaliação média</p>
+    </div>
+
+    <div>
+        <h2>+50</h2>
+        <p>Clientes por semana</p>
+    </div>
+</div>
 
 <!-- SERVIÇOS -->
-<section id="servicos" class="section hidden">
-    <h2>Serviços Premium</h2>
+<div class="section">
+    <h2>Serviços</h2>
 
     <div class="grid">
-        <div class="card">Manicure completa com acabamento impecável</div>
-        <div class="card">Alongamento em gel natural</div>
-        <div class="card">Design personalizado exclusivo</div>
+        <div class="card">Corte masculino moderno</div>
+        <div class="card">Barba completa</div>
+        <div class="card">Degradê profissional</div>
     </div>
-</section>
+</div>
 
 <!-- COMO FUNCIONA -->
-<section class="section hidden">
+<div class="section">
     <h2>Como funciona</h2>
 
     <div class="grid">
-        <div class="card">1. Clique no botão</div>
-        <div class="card">2. Fale no WhatsApp</div>
-        <div class="card">3. Agende seu horário</div>
-        <div class="card">4. Tenha resultado incrível</div>
+        <div class="card">📲 Clique no botão</div>
+        <div class="card">💬 Fale no WhatsApp</div>
+        <div class="card">📅 Agende seu horário</div>
+        <div class="card">🔥 Saia com visual renovado</div>
     </div>
-</section>
+</div>
 
 <!-- PROVA SOCIAL -->
-<section id="clientes" class="section hidden">
-    <h2>Clientes satisfeitas</h2>
+<div class="section">
+    <h2>O que os clientes dizem</h2>
 
     <div class="grid">
-        <div class="testimonial">⭐⭐⭐⭐⭐ Atendimento impecável</div>
-        <div class="testimonial">⭐⭐⭐⭐⭐ Resultado perfeito</div>
-        <div class="testimonial">⭐⭐⭐⭐⭐ Melhor experiência</div>
+        <div class="testimonial">⭐⭐⭐⭐⭐ Melhor corte que já fiz</div>
+        <div class="testimonial">⭐⭐⭐⭐⭐ Atendimento top demais</div>
+        <div class="testimonial">⭐⭐⭐⭐⭐ Virei cliente fixo</div>
     </div>
-</section>
+</div>
 
 <!-- CTA -->
-<section id="contato" class="section">
-    <div class="cta">
-        <h2>Agenda quase cheia essa semana</h2>
-        <p>Garanta seu horário agora</p>
-        <a class="btn" href="https://wa.me/SEUNUMERO">Agendar agora</a>
-    </div>
-</section>
+<div class="cta">
+    <h2>Agenda quase cheia essa semana</h2>
+    <p>Garanta seu horário agora</p>
 
-<footer>
-    Studio Elegance • Atendimento profissional
-</footer>
+    <a class="btn" href="https://wa.me/SEUNUMERO">AGENDAR AGORA</a>
+</div>
 
-<script>
-const elements = document.querySelectorAll('.hidden');
-
-window.addEventListener('scroll', () => {
-    elements.forEach(el => {
-        const position = el.getBoundingClientRect().top;
-        const screen = window.innerHeight;
-
-        if(position < screen - 100){
-            el.classList.add('show');
-        }
-    });
-});
-</script>
+</div>
 
 </body>
 </html>
