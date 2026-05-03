@@ -3,60 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agendamento de Manicure</title>
+<title>Agende Seu Atendimento</title>
 
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f7f7f7;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
     color: #333;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     padding: 20px;
 }
 
-h1, h2 {
+.hero {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
     text-align: center;
+    padding: 60px 20px;
 }
 
-.hero {
-    background: #ff4d6d;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
+.hero h1 {
+    font-size: 28px;
 }
 
 .btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 15px 25px;
+    padding: 15px 30px;
     background: #25D366;
     color: white;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 10px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1);}
 }
 
 .section {
     background: white;
     margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.services li {
-    margin: 10px 0;
+.arrow {
+    font-size: 20px;
+    color: #ff416c;
+    font-weight: bold;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
 }
 
 .testimonial {
-    background: #eee;
+    background: #f1f1f1;
     padding: 15px;
     margin: 10px 0;
-    border-radius: 8px;
+    border-radius: 10px;
+}
+
+.highlight {
+    color: #ff416c;
+    font-weight: bold;
 }
 
 .footer {
@@ -69,80 +90,94 @@ h1, h2 {
 
 <body>
 
-<!-- CABEÇALHO -->
+<!-- HERO -->
 <div class="hero">
-    <h1>💅 Tenha unhas perfeitas com atendimento profissional</h1>
-    <p>Agende agora pelo WhatsApp e garanta um resultado impecável</p>
-    <a class="btn" href="https://wa.me/SEUNUMERO">AGENDAR AGORA</a>
+    <h1>💅 Tenha unhas PERFEITAS e atraia olhares por onde passar</h1>
+    <p>🔥 Atendimento profissional + resultado impecável + agendamento rápido</p>
+
+    <p class="arrow">⬇️ CLIQUE AQUI E AGENDE AGORA ⬇️</p>
+
+    <a class="btn" href="https://wa.me/SEUNUMERO">AGENDAR NO WHATSAPP</a>
 </div>
 
 <div class="container">
 
+<!-- IMAGEM -->
+<div class="section">
+    <h2>✨ Resultados que encantam</h2>
+    <p>Veja o nível de acabamento que você vai receber 👇</p>
+
+    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371" alt="Unhas bonitas">
+</div>
+
 <!-- EXPLICAÇÃO -->
 <div class="section">
-    <h2>Como funciona?</h2>
-    <p>
-        Atendimento profissional de manicure com foco em qualidade e durabilidade.
-        Você agenda pelo WhatsApp, escolhe seu estilo e sai com unhas incríveis.
-    </p>
+    <h2>🚀 Como funciona?</h2>
+
+    <p class="arrow">➡️ Você chama no WhatsApp</p>
+    <p class="arrow">➡️ Escolhe seu estilo</p>
+    <p class="arrow">➡️ Agenda seu horário</p>
+    <p class="arrow">➡️ Sai com unhas incríveis</p>
+
     <a class="btn" href="https://wa.me/SEUNUMERO">QUERO AGENDAR</a>
 </div>
 
 <!-- SERVIÇOS -->
 <div class="section">
-    <h2>Serviços</h2>
-    <ul class="services">
-        <li>✔ Manicure completa</li>
-        <li>✔ Alongamento em gel</li>
-        <li>✔ Esmaltação em gel</li>
-        <li>✔ Nail art personalizada</li>
-    </ul>
+    <h2>💎 Serviços disponíveis</h2>
+
+    <p class="arrow">✔ Manicure completa</p>
+    <p class="arrow">✔ Alongamento em gel</p>
+    <p class="arrow">✔ Esmaltação premium</p>
+    <p class="arrow">✔ Nail art personalizada</p>
 </div>
 
 <!-- PROVA SOCIAL -->
 <div class="section">
-    <h2>O que minhas clientes dizem</h2>
+    <h2>🔥 Clientes apaixonadas</h2>
 
     <div class="testimonial">
-        ⭐⭐⭐⭐⭐<br>
-        “Perfeito! Nunca minhas unhas duraram tanto.”
+        ⭐⭐⭐⭐⭐ <br>
+        “Simplesmente perfeita! <span class="highlight">Melhor manicure que já fui!</span>”
     </div>
 
     <div class="testimonial">
-        ⭐⭐⭐⭐⭐<br>
-        “Atendimento maravilhoso e super profissional.”
+        ⭐⭐⭐⭐⭐ <br>
+        “Durou MUITO! Vale cada centavo 😍”
     </div>
 
     <div class="testimonial">
-        ⭐⭐⭐⭐⭐<br>
-        “Agora só faço com ela!”
+        ⭐⭐⭐⭐⭐ <br>
+        “Agora só faço aqui! Atendimento incrível”
     </div>
 </div>
 
 <!-- DIFERENCIAL -->
 <div class="section">
-    <h2>Por que escolher meu atendimento?</h2>
-    <ul>
-        <li>✔ Atendimento individual</li>
-        <li>✔ Produtos de alta qualidade</li>
-        <li>✔ Ambiente confortável</li>
-        <li>✔ Resultado duradouro</li>
-    </ul>
+    <h2>⚡ Por que escolher meu atendimento?</h2>
+
+    <p class="arrow">🔥 Atendimento individual (sem pressa)</p>
+    <p class="arrow">🔥 Produtos de alta qualidade</p>
+    <p class="arrow">🔥 Resultado duradouro</p>
+    <p class="arrow">🔥 Ambiente confortável</p>
 </div>
 
 <!-- URGÊNCIA -->
 <div class="section">
-    <h2>⚠️ Agenda quase cheia</h2>
-    <p>Garanta seu horário antes que acabe!</p>
+    <h2>⚠️ ATENÇÃO</h2>
+
+    <p class="highlight">Agenda quase lotada essa semana</p>
+    <p>Garanta seu horário antes que acabe 👇</p>
+
     <a class="btn" href="https://wa.me/SEUNUMERO">AGENDAR AGORA</a>
 </div>
 
 </div>
 
-<!-- RODAPÉ -->
+<!-- FOOTER -->
 <div class="footer">
     <p>Atendimento por: Seu Nome</p>
-    <p>📲 Clique no botão acima para falar direto no WhatsApp</p>
+    <p>📲 Clique no botão acima e fale direto no WhatsApp</p>
 </div>
 
 </body>
