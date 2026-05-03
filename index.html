@@ -4,185 +4,233 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Criação de Sites que Geram Clientes</title>
+<title>Criação de Sites Profissionais</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #f8f9fc;
-    color: #222;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f8fc;
+    color: #1f1f1f;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 /* HERO */
 .hero {
-    background: linear-gradient(120deg, #4facfe, #00f2fe);
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 80px 40px;
+    gap: 40px;
 }
 
 .hero h1 {
-    font-size: 34px;
-    max-width: 700px;
-    margin: auto;
+    font-size: 38px;
 }
 
 .hero p {
     margin-top: 15px;
-    font-size: 18px;
+    color: #555;
 }
 
-/* BOTÃO */
 .btn {
     display: inline-block;
     margin-top: 25px;
-    padding: 15px 30px;
+    padding: 14px 30px;
     background: #25D366;
     color: white;
-    border-radius: 10px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-/* CONTAINER */
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
+.hero img {
+    width: 100%;
+    border-radius: 15px;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
-    margin-top: 50px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
 }
 
-/* CARDS */
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
 .card {
     background: white;
     padding: 25px;
-    border-radius: 12px;
-    margin-top: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.3s;
 }
 
-/* PROVA */
-.stats {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    background: white;
-    margin-top: -30px;
-    padding: 20px;
-    border-radius: 12px;
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* PORTFOLIO */
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 /* CTA */
 .cta {
-    background: #111;
-    color: white;
     text-align: center;
-    padding: 60px 20px;
-    border-radius: 12px;
-    margin-top: 50px;
+    padding: 80px 20px;
+    background: linear-gradient(120deg, #4facfe, #00f2fe);
+    color: white;
+}
+
+.cta h2 {
+    margin-bottom: 15px;
+}
+
+/* ANIMAÇÃO */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVO */
+@media(max-width: 768px){
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 }
 </style>
-
 </head>
 
 <body>
 
+<!-- NAV -->
+<nav>
+    <strong>Seu Nome • Web Designer</strong>
+    <div>Sites Profissionais</div>
+</nav>
+
 <!-- HERO -->
-<div class="hero">
-    <h1>Tenha um site profissional que faz clientes te chamarem todos os dias no WhatsApp</h1>
-    <p>Mais visibilidade • Mais confiança • Mais vendas</p>
-
-    <a class="btn" href="https://wa.me/SEUNUMERO">
-        QUERO UM SITE ASSIM
-    </a>
-</div>
-
-<div class="container">
-
-<!-- PROVA -->
-<div class="stats">
+<section class="hero">
     <div>
-        <h2>+50</h2>
-        <p>Sites criados</p>
+        <h1>Sites que fazem seu negócio parecer profissional e atrair mais clientes</h1>
+        <p>Criação de páginas modernas, organizadas e focadas em resultado</p>
+        <a class="btn" href="https://wa.me/SEUNUMERO">Solicitar meu site</a>
     </div>
 
-    <div>
-        <h2>+300%</h2>
-        <p>Mais contatos</p>
-    </div>
-
-    <div>
-        <h2>5⭐</h2>
-        <p>Satisfação</p>
-    </div>
-</div>
-
-<!-- PROBLEMA -->
-<div class="section">
-    <div class="card">
-        <h2>Seu negócio está perdendo clientes sem perceber</h2>
-        <p>
-        Hoje, a maioria das pessoas procura serviços pelo celular.
-        Se você não tem um site simples e profissional, você perde oportunidades
-        todos os dias para quem já está online.
-        </p>
-    </div>
-</div>
-
-<!-- SOLUÇÃO -->
-<div class="section">
-    <div class="card">
-        <h2>Um site simples pode mudar isso</h2>
-        <p>
-        Eu crio páginas estratégicas que mostram seu serviço, passam confiança
-        e levam o cliente direto para o seu WhatsApp pronto para fechar.
-        </p>
-    </div>
-</div>
+    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+</section>
 
 <!-- BENEFÍCIOS -->
-<div class="section">
-    <div class="card">
-        <h2>O que muda quando você tem um site assim?</h2>
+<section class="section hidden">
+    <h2>O que um site bem feito muda no seu negócio</h2>
 
-        <p>✔ Mais clientes entrando em contato</p>
-        <p>✔ Seu negócio parece mais profissional</p>
-        <p>✔ Mais confiança pra quem vê</p>
-        <p>✔ Mais chances de fechar vendas</p>
+    <div class="grid">
+        <div class="card">Mais clientes entrando em contato todos os dias</div>
+        <div class="card">Seu negócio passa mais confiança</div>
+        <div class="card">Mais organização das informações</div>
+        <div class="card">Mais chances de fechar vendas</div>
     </div>
-</div>
+</section>
 
-<!-- PROVA SOCIAL -->
-<div class="section">
-    <div class="card">
-        <p>“Depois do site, comecei a receber muito mais mensagens todos os dias.”</p>
-    </div>
+<!-- PORTFÓLIO -->
+<section class="section hidden">
+    <h2>Projetos que posso criar para você</h2>
 
-    <div class="card">
-        <p>“Agora meu negócio parece profissional e os clientes chegam prontos pra comprar.”</p>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371">
+            <h3>Beleza & Estética</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70">
+            <h3>Barbearia</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+            <h3>Loja / Produtos</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+            <h3>Serviços em geral</h3>
+        </div>
     </div>
-</div>
+</section>
+
+<!-- DIFERENCIAL -->
+<section class="section hidden">
+    <h2>O que você recebe</h2>
+
+    <div class="grid">
+        <div class="card">Design profissional e moderno</div>
+        <div class="card">Site rápido e adaptado para celular</div>
+        <div class="card">Botão direto para WhatsApp</div>
+        <div class="card">Estrutura feita para atrair clientes</div>
+    </div>
+</section>
 
 <!-- CTA -->
-<div class="cta">
-    <h2>Eu posso criar um site assim para o seu negócio</h2>
-    <p>Personalizado, simples e focado em trazer clientes</p>
+<section class="cta">
+    <h2>Quer um site assim para o seu negócio?</h2>
+    <p>Eu posso criar um totalmente personalizado para você</p>
+    <a class="btn" href="https://wa.me/SEUNUMERO">Falar no WhatsApp</a>
+</section>
 
-    <a class="btn" href="https://wa.me/SEUNUMERO">
-        QUERO MEU SITE
-    </a>
+<script>
+const elements = document.querySelectorAll('.hidden');
 
-    <p>⚠️ Vagas limitadas essa semana</p>
-</div>
+window.addEventListener('scroll', () => {
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        const screen = window.innerHeight;
 
-</div>
+        if(position < screen - 100){
+            el.classList.add('show');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
