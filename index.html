@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Barbearia Elite | Agendamento Online</title>
+<title>Studio Prime | Atendimento Profissional</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -12,7 +12,7 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #f5f6fa;
+    background: #f7f7f7;
     color: #222;
 }
 
@@ -24,23 +24,40 @@ body {
 
 /* HERO */
 .hero {
-    background: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70') center/cover;
+    background: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover;
     color: white;
-    padding: 80px 20px;
+    padding: 100px 20px;
     text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
-    font-size: 32px;
+    font-size: 34px;
 }
 
 .hero p {
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 18px;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 25px;
     padding: 14px 30px;
     background: #25D366;
     color: white;
@@ -54,46 +71,42 @@ body {
     display: flex;
     justify-content: space-around;
     background: white;
-    margin-top: -30px;
+    margin-top: -40px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.stats div {
-    text-align: center;
+.stats h2 {
+    margin: 0;
 }
 
 /* SECTIONS */
 .section {
-    margin-top: 40px;
-}
-
-.grid {
-    display: grid;
-    gap: 20px;
+    margin-top: 50px;
 }
 
 .card {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 /* TESTIMONIAL */
 .testimonial {
-    background: #fff;
-    padding: 20px;
     border-left: 4px solid #25D366;
 }
 
 /* CTA */
 .cta {
-    background: #25D366;
+    background: #111;
     color: white;
     text-align: center;
-    padding: 40px;
-    border-radius: 10px;
-    margin-top: 40px;
+    padding: 50px 20px;
+    border-radius: 12px;
+    margin-top: 50px;
 }
 </style>
 
@@ -103,17 +116,22 @@ body {
 
 <!-- HERO -->
 <div class="hero">
-    <h1>Corte de cabelo profissional que valoriza seu estilo</h1>
-    <p>Agende em segundos direto pelo WhatsApp</p>
+    <div class="hero-content">
+        <h1>Atendimento profissional que valoriza sua imagem e atrai mais clientes</h1>
+        <p>Mais do que um serviço — uma experiência que faz o cliente voltar</p>
 
-    <a class="btn" href="https://wa.me/SEUNUMERO">AGENDAR AGORA</a>
+        <a class="btn" href="https://wa.me/SEUNUMERO">
+            Agendar atendimento
+        </a>
+    </div>
 </div>
 
-<!-- PROVA REAL -->
 <div class="container">
+
+<!-- PROVA REAL -->
 <div class="stats">
     <div>
-        <h2>+300</h2>
+        <h2>+500</h2>
         <p>Clientes atendidos</p>
     </div>
 
@@ -123,51 +141,55 @@ body {
     </div>
 
     <div>
-        <h2>+50</h2>
-        <p>Clientes por semana</p>
+        <h2>Alta</h2>
+        <p>Taxa de retorno</p>
+    </div>
+</div>
+
+<!-- POSICIONAMENTO -->
+<div class="section">
+    <div class="card">
+        <h2>Qualidade que se percebe nos detalhes</h2>
+        <p>
+        Cada atendimento é pensado para entregar resultado, conforto e satisfação.
+        Aqui você não encontra apenas um serviço comum, mas um padrão que fideliza clientes
+        e transforma cada visita em uma experiência.
+        </p>
     </div>
 </div>
 
 <!-- SERVIÇOS -->
 <div class="section">
-    <h2>Serviços</h2>
+    <div class="card">
+        <h2>Serviços realizados com padrão profissional</h2>
 
-    <div class="grid">
-        <div class="card">Corte masculino moderno</div>
-        <div class="card">Barba completa</div>
-        <div class="card">Degradê profissional</div>
-    </div>
-</div>
-
-<!-- COMO FUNCIONA -->
-<div class="section">
-    <h2>Como funciona</h2>
-
-    <div class="grid">
-        <div class="card">📲 Clique no botão</div>
-        <div class="card">💬 Fale no WhatsApp</div>
-        <div class="card">📅 Agende seu horário</div>
-        <div class="card">🔥 Saia com visual renovado</div>
+        <p>✔ Atendimento personalizado</p>
+        <p>✔ Técnicas atualizadas</p>
+        <p>✔ Acabamento de alto nível</p>
+        <p>✔ Foco total na satisfação do cliente</p>
     </div>
 </div>
 
 <!-- PROVA SOCIAL -->
 <div class="section">
-    <h2>O que os clientes dizem</h2>
+    <div class="card testimonial">
+        “Desde que comecei a atender aqui, minha experiência mudou completamente.
+        Atendimento diferenciado e resultado impecável.”
+    </div>
 
-    <div class="grid">
-        <div class="testimonial">⭐⭐⭐⭐⭐ Melhor corte que já fiz</div>
-        <div class="testimonial">⭐⭐⭐⭐⭐ Atendimento top demais</div>
-        <div class="testimonial">⭐⭐⭐⭐⭐ Virei cliente fixo</div>
+    <div class="card testimonial">
+        “Agora só faço aqui. Dá pra ver o cuidado e a qualidade em tudo.”
     </div>
 </div>
 
 <!-- CTA -->
 <div class="cta">
-    <h2>Agenda quase cheia essa semana</h2>
-    <p>Garanta seu horário agora</p>
+    <h2>Agenda com horários limitados</h2>
+    <p>Garanta seu atendimento e tenha uma experiência de qualidade</p>
 
-    <a class="btn" href="https://wa.me/SEUNUMERO">AGENDAR AGORA</a>
+    <a class="btn" href="https://wa.me/SEUNUMERO">
+        Falar no WhatsApp
+    </a>
 </div>
 
 </div>
