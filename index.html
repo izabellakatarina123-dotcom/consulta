@@ -21,7 +21,6 @@ body {
     color: #1f1f1f;
 }
 
-/* NAVBAR */
 nav {
     display: flex;
     justify-content: space-between;
@@ -33,7 +32,6 @@ nav {
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* HERO */
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -53,9 +51,9 @@ nav {
 
 .btn {
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 20px;
     padding: 14px 30px;
-    background: #25D366;
+    background: #E1306C; /* cor do Instagram */
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -67,7 +65,6 @@ nav {
     border-radius: 15px;
 }
 
-/* SECTION */
 .section {
     max-width: 1100px;
     margin: auto;
@@ -79,14 +76,12 @@ nav {
     margin-bottom: 40px;
 }
 
-/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
 
-/* CARD */
 .card {
     background: white;
     padding: 25px;
@@ -99,18 +94,16 @@ nav {
     transform: translateY(-5px);
 }
 
-/* PORTFOLIO */
 .card img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
-/* CTA */
 .cta {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(120deg, #4facfe, #00f2fe);
+    background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
     color: white;
 }
 
@@ -118,7 +111,6 @@ nav {
     margin-bottom: 15px;
 }
 
-/* ANIMAÇÃO */
 .hidden {
     opacity: 0;
     transform: translateY(30px);
@@ -130,7 +122,6 @@ nav {
     transform: translateY(0);
 }
 
-/* RESPONSIVO */
 @media(max-width: 768px){
     .hero {
         grid-template-columns: 1fr;
@@ -142,24 +133,29 @@ nav {
 
 <body>
 
-<!-- NAV -->
 <nav>
-    <strong>Seu Nome • Web Designer</strong>
-    <div>Sites Profissionais</div>
+    <strong>Web Designer • Sites Profissionais</strong>
+    <div>Atendimento pelo Instagram</div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
     <div>
-        <h1>Sites que fazem seu negócio parecer profissional e atrair mais clientes</h1>
-        <p>Criação de páginas modernas, organizadas e focadas em resultado</p>
-        <a class="btn" href="https://wa.me/SEUNUMERO">Solicitar meu site</a>
+        <h1>Sites que fazem seu negócio parecer profissional e atrair clientes todos os dias</h1>
+        
+        <p>Criação de páginas modernas, organizadas e feitas para vender</p>
+
+        <p style="margin-top:10px; font-weight:600;">
+        Atendimento rápido direto no Instagram
+        </p>
+
+        <a class="btn" href="https://www.instagram.com/direct/t/clientewebdigital" target="_blank">
+        Quero meu site agora
+        </a>
     </div>
 
     <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
 </section>
 
-<!-- BENEFÍCIOS -->
 <section class="section hidden">
     <h2>O que um site bem feito muda no seu negócio</h2>
 
@@ -171,7 +167,6 @@ nav {
     </div>
 </section>
 
-<!-- PORTFÓLIO -->
 <section class="section hidden">
     <h2>Projetos que posso criar para você</h2>
 
@@ -198,23 +193,24 @@ nav {
     </div>
 </section>
 
-<!-- DIFERENCIAL -->
 <section class="section hidden">
     <h2>O que você recebe</h2>
 
     <div class="grid">
         <div class="card">Design profissional e moderno</div>
         <div class="card">Site rápido e adaptado para celular</div>
-        <div class="card">Botão direto para WhatsApp</div>
+        <div class="card">Botão direto para Instagram</div>
         <div class="card">Estrutura feita para atrair clientes</div>
     </div>
 </section>
 
-<!-- CTA -->
 <section class="cta">
     <h2>Quer um site assim para o seu negócio?</h2>
     <p>Eu posso criar um totalmente personalizado para você</p>
-    <a class="btn" href="https://wa.me/SEUNUMERO">Falar no WhatsApp</a>
+
+    <a class="btn" href="https://www.instagram.com/direct/t/clientewebdigital" target="_blank">
+    Falar no Instagram
+    </a>
 </section>
 
 <script>
