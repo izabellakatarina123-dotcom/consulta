@@ -41,7 +41,7 @@ nav {
 }
 
 .hero h1 {
-    font-size: 38px;
+    font-size: 36px;
 }
 
 .hero p {
@@ -53,7 +53,7 @@ nav {
     display: inline-block;
     margin-top: 20px;
     padding: 14px 30px;
-    background: #E1306C; /* cor do Instagram */
+    background: #E1306C;
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -87,17 +87,6 @@ nav {
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
 }
 
 .cta {
@@ -105,21 +94,6 @@ nav {
     padding: 80px 20px;
     background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
     color: white;
-}
-
-.cta h2 {
-    margin-bottom: 15px;
-}
-
-.hidden {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 @media(max-width: 768px){
@@ -134,99 +108,46 @@ nav {
 <body>
 
 <nav>
-    <strong>Web Designer • Sites Profissionais</strong>
-    <div>Atendimento pelo Instagram</div>
+<strong>Web Designer • Sites Profissionais</strong>
+<div>Atendimento pelo Instagram</div>
 </nav>
 
 <section class="hero">
-    <div>
-        <h1>Sites que fazem seu negócio parecer profissional e atrair clientes todos os dias</h1>
-        
-        <p>Criação de páginas modernas, organizadas e feitas para vender</p>
+<div>
+<h1>Sites que fazem seu negócio parecer profissional e atrair clientes todos os dias</h1>
 
-        <p style="margin-top:10px; font-weight:600;">
-        Atendimento rápido direto no Instagram
-        </p>
+<p>Criação de páginas modernas, organizadas e feitas para vender</p>
 
-        <a class="btn" href="https://www.instagram.com/direct/t/clientewebdigital" target="_blank">
-        Quero meu site agora
-        </a>
-    </div>
+<p style="margin-top:10px; font-weight:600;">
+Clique e me chame no Instagram 👇
+</p>
 
-    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+<a class="btn" href="https://ig.me/m/clientewebdigital" target="_blank">
+Quero saber mais sobre meu site
+</a>
+</div>
+
+<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
 </section>
 
-<section class="section hidden">
-    <h2>O que um site bem feito muda no seu negócio</h2>
+<section class="section">
+<h2>O que um site bem feito muda no seu negócio</h2>
 
-    <div class="grid">
-        <div class="card">Mais clientes entrando em contato todos os dias</div>
-        <div class="card">Seu negócio passa mais confiança</div>
-        <div class="card">Mais organização das informações</div>
-        <div class="card">Mais chances de fechar vendas</div>
-    </div>
-</section>
-
-<section class="section hidden">
-    <h2>Projetos que posso criar para você</h2>
-
-    <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371">
-            <h3>Beleza & Estética</h3>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70">
-            <h3>Barbearia</h3>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-            <h3>Loja / Produtos</h3>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-            <h3>Serviços em geral</h3>
-        </div>
-    </div>
-</section>
-
-<section class="section hidden">
-    <h2>O que você recebe</h2>
-
-    <div class="grid">
-        <div class="card">Design profissional e moderno</div>
-        <div class="card">Site rápido e adaptado para celular</div>
-        <div class="card">Botão direto para Instagram</div>
-        <div class="card">Estrutura feita para atrair clientes</div>
-    </div>
+<div class="grid">
+<div class="card">Mais clientes entrando em contato todos os dias</div>
+<div class="card">Seu negócio passa mais confiança</div>
+<div class="card">Mais chances de fechar vendas</div>
+</div>
 </section>
 
 <section class="cta">
-    <h2>Quer um site assim para o seu negócio?</h2>
-    <p>Eu posso criar um totalmente personalizado para você</p>
+<h2>Quer um site profissional?</h2>
+<p>Clique abaixo e me chama no Instagram agora</p>
 
-    <a class="btn" href="https://www.instagram.com/direct/t/clientewebdigital" target="_blank">
-    Falar no Instagram
-    </a>
+<a class="btn" href="https://ig.me/m/clientewebdigital" target="_blank">
+Falar no Instagram
+</a>
 </section>
-
-<script>
-const elements = document.querySelectorAll('.hidden');
-
-window.addEventListener('scroll', () => {
-    elements.forEach(el => {
-        const position = el.getBoundingClientRect().top;
-        const screen = window.innerHeight;
-
-        if(position < screen - 100){
-            el.classList.add('show');
-        }
-    });
-});
-</script>
 
 </body>
 </html>
