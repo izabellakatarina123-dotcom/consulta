@@ -21,7 +21,6 @@ body {
     color: #1f1f1f;
 }
 
-/* NAVBAR */
 nav {
     display: flex;
     justify-content: space-between;
@@ -33,7 +32,6 @@ nav {
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* HERO */
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -43,7 +41,8 @@ nav {
 }
 
 .hero h1 {
-    font-size: 38px;
+    font-size: 40px;
+    line-height: 1.2;
 }
 
 .hero p {
@@ -54,12 +53,18 @@ nav {
 .btn {
     display: inline-block;
     margin-top: 25px;
-    padding: 14px 30px;
+    padding: 16px 32px;
     background: #E1306C;
     color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
+    box-shadow: 0 10px 20px rgba(225,48,108,0.3);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
 }
 
 .hero img {
@@ -67,7 +72,6 @@ nav {
     border-radius: 15px;
 }
 
-/* SECTION */
 .section {
     max-width: 1100px;
     margin: auto;
@@ -79,14 +83,12 @@ nav {
     margin-bottom: 40px;
 }
 
-/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
 
-/* CARD */
 .card {
     background: white;
     padding: 25px;
@@ -99,14 +101,12 @@ nav {
     transform: translateY(-5px);
 }
 
-/* PORTFOLIO */
 .card img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
-/* CTA */
 .cta {
     text-align: center;
     padding: 80px 20px;
@@ -114,11 +114,6 @@ nav {
     color: white;
 }
 
-.cta h2 {
-    margin-bottom: 15px;
-}
-
-/* ANIMAÇÃO */
 .hidden {
     opacity: 0;
     transform: translateY(30px);
@@ -130,7 +125,13 @@ nav {
     transform: translateY(0);
 }
 
-/* RESPONSIVO */
+.urgencia {
+    text-align: center;
+    font-weight: 600;
+    color: #E1306C;
+    margin-top: 15px;
+}
+
 @media(max-width: 768px){
     .hero {
         grid-template-columns: 1fr;
@@ -142,44 +143,72 @@ nav {
 
 <body>
 
-<!-- NAV -->
 <nav>
     <strong>Seu Nome • Web Designer</strong>
-    <div>Sites Profissionais</div>
+    <div>Sites que Geram Clientes</div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
     <div>
-        <h1>Se seu negócio não tem um site profissional, você está perdendo clientes todos os dias</h1>
+        <h1>Seu Instagram pode estar te fazendo perder clientes todos os dias… e você nem percebe</h1>
 
-        <p>Criação de páginas modernas, organizadas e focadas em transformar visitantes em clientes</p>
+        <p>Eu crio sites estratégicos que transformam visitantes em clientes prontos pra comprar</p>
 
-        <p style="margin-top:10px; font-weight:600; color:#000;">
-        Clique abaixo e me chame no Instagram agora 👇
-        </p>
+        <p class="urgencia">⚠️ Atendo poucas vagas por semana</p>
 
         <a class="btn" href="https://ig.me/m/clientewebdigital" target="_blank">
-        Quero parar de perder clientes
+        Quero um site que traga clientes
         </a>
     </div>
 
     <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
 </section>
 
-<!-- BENEFÍCIOS -->
+<section class="section hidden">
+    <h2>Isso está acontecendo com você?</h2>
+
+    <div class="grid">
+        <div class="card">Você posta e ninguém chama no direct</div>
+        <div class="card">As pessoas entram no seu perfil e somem</div>
+        <div class="card">Você depende só de indicação</div>
+        <div class="card">Seu concorrente parece mais profissional que você</div>
+    </div>
+
+    <div style="text-align:center;">
+        <a class="btn" href="https://ig.me/m/clientewebdigital" target="_blank">
+        Quero resolver isso agora
+        </a>
+    </div>
+</section>
+
 <section class="section hidden">
     <h2>O que um site bem feito muda no seu negócio</h2>
 
     <div class="grid">
         <div class="card">Mais clientes entrando em contato todos os dias</div>
         <div class="card">Seu negócio passa mais confiança</div>
-        <div class="card">Mais organização das informações</div>
         <div class="card">Mais chances de fechar vendas</div>
+        <div class="card">Você vende mesmo sem estar online</div>
     </div>
 </section>
 
-<!-- PORTFÓLIO -->
+<section class="section hidden">
+    <h2>Como funciona</h2>
+
+    <div class="grid">
+        <div class="card">1. Você me chama no Instagram</div>
+        <div class="card">2. Eu entendo seu negócio</div>
+        <div class="card">3. Crio seu site estratégico</div>
+        <div class="card">4. Você começa a receber clientes</div>
+    </div>
+
+    <div style="text-align:center;">
+        <a class="btn" href="https://ig.me/m/clientewebdigital" target="_blank">
+        Quero começar agora
+        </a>
+    </div>
+</section>
+
 <section class="section hidden">
     <h2>Projetos que posso criar para você</h2>
 
@@ -206,7 +235,6 @@ nav {
     </div>
 </section>
 
-<!-- DIFERENCIAL -->
 <section class="section hidden">
     <h2>O que você recebe</h2>
 
@@ -218,10 +246,11 @@ nav {
     </div>
 </section>
 
-<!-- CTA -->
 <section class="cta">
-    <h2>Quer parar de perder clientes?</h2>
+    <h2>Enquanto você pensa… outros negócios estão ficando com os clientes que poderiam ser seus</h2>
     <p>Eu posso criar um site que faz seu negócio vender todos os dias</p>
+
+    <p class="urgencia">🔥 Últimas vagas disponíveis essa semana</p>
 
     <a class="btn" href="https://ig.me/m/clientewebdigital" target="_blank">
     Quero meu site profissional agora
