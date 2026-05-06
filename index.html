@@ -3,83 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clientes Todos os Dias</title>
+<title>Mais Clientes Todos os Dias</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-  color: white;
+  background: #f5f5f5;
+  color: #111;
   text-align: center;
 }
 
 .container {
-  padding: 25px;
+  padding: 20px;
   max-width: 500px;
   margin: auto;
 }
 
 h1 {
   font-size: 28px;
-  animation: fadeIn 1s ease-in-out;
+  font-weight: bold;
 }
 
 p {
-  color: #ccc;
+  font-size: 16px;
+  color: #555;
 }
 
 .button {
   display: block;
   margin: 20px auto;
-  padding: 16px;
-  background: #00ff88;
-  color: #000;
+  padding: 15px;
+  background: #ff2e63;
+  color: white;
   font-size: 18px;
-  border-radius: 12px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-  animation: pulse 1.5s infinite;
+}
+
+.section {
+  margin-top: 40px;
 }
 
 .box {
-  background: #1f1f1f;
+  background: white;
   padding: 15px;
   margin: 10px 0;
-  border-radius: 12px;
-  animation: fadeUp 1s ease forwards;
+  border-radius: 10px;
 }
 
 .urgent {
-  background: #ff2e2e;
+  background: #ffeaea;
+  color: #b30000;
   padding: 15px;
-  border-radius: 12px;
+  border-radius: 10px;
   margin-top: 20px;
   font-weight: bold;
-  animation: pulse 1.5s infinite;
 }
 
-.counter {
-  font-size: 22px;
-  margin-top: 10px;
-  color: #00ff88;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeUp {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-@keyframes pulse {
-  0% {transform: scale(1);}
-  50% {transform: scale(1.05);}
-  100% {transform: scale(1);}
-}
 </style>
 </head>
 
@@ -87,39 +69,46 @@ p {
 
 <div class="container">
 
-<h1>Enquanto você lê isso...<br>alguém está fechando o cliente que deveria ser seu</h1>
+<h1>Enquanto você lê isso…<br>seus concorrentes estão fechando clientes que poderiam ser seus</h1>
 
-<p>Se seu negócio não tem um site profissional, você está perdendo dinheiro TODOS OS DIAS</p>
+<p>Se o seu negócio não tem um site profissional, você está perdendo dinheiro TODOS OS DIAS</p>
 
 <a class="button" href="https://www.instagram.com/clientewebdigital?igsh=MXhoM2ZhOXp0dncxMg==" target="_blank">
 🔥 Quero clientes todos os dias
 </a>
 
-<div class="urgent">
-⚠️ ATENÇÃO: RESTAM POUCAS VAGAS ESSA SEMANA
-<div class="counter" id="contador">Carregando vagas...</div>
+<div class="section">
+<h2>O que acontece quando você tem um site certo:</h2>
+
+<div class="box">📲 Clientes te chamando no Instagram todos os dias</div>
+<div class="box">💰 Mais vendas sem precisar postar o tempo todo</div>
+<div class="box">🔥 Seu negócio passa confiança imediatamente</div>
+<div class="box">📈 Muito mais chances de fechar vendas</div>
+
 </div>
 
 <div class="section">
-<div class="box">📲 Clientes te chamando todos os dias</div>
-<div class="box">💰 Mais vendas sem depender de sorte</div>
-<div class="box">🔥 Autoridade e confiança instantânea</div>
-<div class="box">📈 Mais fechamento de clientes</div>
-</div>
+<h2>Resultados reais:</h2>
 
-<div class="section">
-<h2>Resultados:</h2>
-<div class="box">💬 +15 clientes por dia após o site</div>
-<div class="box">💬 Agenda lotando em poucos dias</div>
-<div class="box">💬 Mais mensagens e pedidos constantemente</div>
+<div class="box">💬 Cliente saiu de 0 contatos para +15 por dia</div>
+<div class="box">💬 Negócio local começou a lotar agenda</div>
+<div class="box">💬 Mais mensagens e pedidos logo nos primeiros dias</div>
+
 </div>
 
 <div class="section">
 <h2>O que você recebe:</h2>
-<div class="box">⚡ Site moderno e profissional</div>
-<div class="box">📱 Adaptado para celular</div>
-<div class="box">🎯 Estrutura que gera clientes</div>
+
+<div class="box">⚡ Site profissional e moderno</div>
+<div class="box">📱 100% adaptado para celular</div>
+<div class="box">🎯 Estrutura feita para gerar clientes</div>
 <div class="box">📲 Botão direto para seu Instagram</div>
+
+</div>
+
+<div class="urgent">
+⚠️ ATENÇÃO: Atendo apenas poucos clientes por semana.<br>
+Se você sair agora, pode perder sua vaga.
 </div>
 
 <a class="button" href="https://www.instagram.com/clientewebdigital?igsh=MXhoM2ZhOXp0dncxMg==" target="_blank">
@@ -127,21 +116,6 @@ p {
 </a>
 
 </div>
-
-<script>
-// contador de vagas dinâmico
-let vagas = Math.floor(Math.random() * 3) + 2; // entre 2 e 4 vagas
-
-document.getElementById("contador").innerHTML = vagas + " vagas disponíveis agora";
-
-// reduz vagas a cada 15 segundos (sensação de urgência)
-setInterval(() => {
-  if (vagas > 1) {
-    vagas--;
-    document.getElementById("contador").innerHTML = vagas + " vagas disponíveis agora";
-  }
-}, 15000);
-</script>
 
 </body>
 </html>
