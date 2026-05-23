@@ -1,312 +1,195 @@
-<!DOCTYPE html>  <html lang="pt-BR">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <meta name="description" content="Cliente Web Sites - Criação de sites profissionais que geram clientes e aumentam vendas. Design estratégico focado em conversão.">  
-    <meta name="keywords" content="sites profissionais, web design, landing page, conversão, clientes, vendas online">  
-    <meta name="author" content="Cliente Web Sites">  
-    <meta property="og:title" content="Cliente Web Sites - Sites que Geram Clientes">  
-    <meta property="og:description" content="Transforme seu Instagram em vendas com um site profissional que atrai clientes todos os dias.">  
-    <meta property="og:type" content="website">  
-    <title>Cliente Web Sites - Sites Profissionais que Geram Clientes</title>  
-    <script src="https://cdn.tailwindcss.com"></script>  
-    <style>  
-        .gradient-green {  
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);  
-        }  
-        .gradient-dark {  
-            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);  
-        }  
-        /* Botão Principal - Cor Laranja Chamativa para Máxima Conversão */
-        .btn-primary {  
-            @apply px-8 py-4 bg-orange-500 text-white font-black uppercase tracking-wider rounded-full hover:bg-orange-600 transition-all duration-300 transform hover:scale-110 shadow-[0_10px_20px_rgba(249,115,22,0.4)] inline-block text-center;  
-        }  
-        /* Botão Secundário - Verde WhatsApp Vibrante */
-        .btn-secondary {  
-            @apply px-8 py-4 bg-green-500 text-white font-black uppercase tracking-wider rounded-full hover:bg-green-600 transition-all duration-300 transform hover:scale-110 shadow-[0_10px_20px_rgba(34,197,94,0.4)] inline-block text-center;  
-        }  
-        .card-hover {  
-            @apply transition-all duration-300 transform hover:scale-105 hover:shadow-2xl;  
-        }  
-        .fade-in {  
-            animation: fadeIn 0.8s ease-in-out;  
-        }  
-        @keyframes fadeIn {  
-            from {  
-                opacity: 0;  
-                transform: translateY(20px);  
-            }  
-            to {  
-                opacity: 1;  
-                transform: translateY(0);  
-            }  
-        }  
-        /* Animação de pulso para o botão ser impossível de ignorar */
-        .pulse-btn {
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-    </style>  
-</head>  
-<body class="bg-gray-50">  
-    <!-- Header/Navbar -->  
-    <header class="sticky top-0 z-50 bg-white shadow-md">  
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">  
-            <div class="flex items-center space-x-2">  
-                <div class="w-10 h-10 gradient-green rounded-lg flex items-center justify-center">  
-                    <span class="text-white font-bold text-lg">CWS</span>  
-                </div>  
-                <span class="font-bold text-gray-900 text-lg">Cliente Web Sites</span>  
-            </div>  
-            <div class="hidden md:flex space-x-8">  
-                <a href="#beneficios" class="text-gray-600 hover:text-green-600 transition">Benefícios</a>  
-                <a href="#portfolio" class="text-gray-600 hover:text-green-600 transition">Portfólio</a>  
-                <a href="#depoimentos" class="text-gray-600 hover:text-green-600 transition">Depoimentos</a>  
-                <a href="#faq" class="text-gray-600 hover:text-green-600 transition">FAQ</a>  
-            </div>  
-            <a href="https://wa.me/5511962883599?text=Olá,%20vim%20do%20site%20e%20quero%20um%20site%20profissional" class="bg-orange-500 text-white px-6 py-2 rounded-full font-bold hover:bg-orange-600 transition pulse-btn">Iniciar Agora</a>  
-        </nav>  
-    </header>  
+<nav>
+    <strong style="font-size:22px;">
+        Cliente Web Sites
+    </strong>
 
-    <!-- Hero Section -->  
-    <section class="gradient-dark text-white py-20 px-4 sm:px-6 lg:px-8">  
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">  
-            <div class="fade-in">  
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">  
-                    Seu Instagram pode estar te fazendo perder clientes todos os dias  
-                </h1>  
-                <p class="text-xl text-gray-300 mb-8">  
-                    Eu crio <span class="font-bold text-green-400">sites estratégicos</span> que transformam visitantes em clientes prontos para comprar, aumentando seu faturamento e sua presença online.  
-                </p>  
-                <div class="flex flex-col sm:flex-row gap-4">  
-                    <a href="https://wa.me/5511962883599?text=Olá,%20vim%20do%20site%20e%20quero%20um%20site%20profissional" class="btn-primary pulse-btn">  
-                        Quero um Site que Traga Clientes  
-                    </a>  
-                    <a href="https://wa.me/5511962883599?text=Olá,%20quero%20saber%20mais%20sobre%20os%20sites%20profissionais" class="btn-secondary">  
-                        Falar no WhatsApp  
-                    </a>  
-                </div>  
-                <p class="text-sm text-gray-400 mt-6">⚠️ Atendo poucas vagas por semana para garantir a qualidade e o resultado de cada projeto.</p>  
-            </div>  
-            <div class="fade-in hidden md:block">  
-                <div class="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl p-8 shadow-2xl">  
-                    <svg class="w-full h-auto text-white" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">  
-                        <rect width="400" height="300" fill="rgba(255,255,255,0.1)" rx="10"/>  
-                        <rect x="50" y="40" width="300" height="200" fill="rgba(255,255,255,0.2)" rx="5"/>  
-                        <circle cx="200" cy="100" r="30" fill="rgba(255,255,255,0.3)"/>  
-                        <rect x="80" y="150" width="240" height="15" fill="rgba(255,255,255,0.2)" rx="3"/>  
-                        <rect x="80" y="175" width="200" height="10" fill="rgba(255,255,255,0.2)" rx="3"/>  
-                        <rect x="80" y="195" width="180" height="10" fill="rgba(255,255,255,0.2)" rx="3"/>  
-                    </svg>  
-                </div>  
-            </div>  
-        </div>  
-    </section>  
+    <div style="
+        background:#25D366;
+        color:white;
+        padding:8px 18px;
+        border-radius:30px;
+        font-weight:600;
+        font-size:14px;
+    ">
+        Sites Estratégicos para Negócios
+    </div>
+</nav>
 
-    <!-- Problemas Section -->  
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">  
-        <div class="max-w-7xl mx-auto">  
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">  
-                Isso está acontecendo com você?  
-            </h2>  
-            <div class="grid md:grid-cols-2 gap-8">  
-                <div class="flex items-start space-x-4 card-hover p-6 bg-gray-50 rounded-lg">  
-                    <div class="flex-shrink-0">  
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md gradient-green text-white">  
-                            ❌  
-                        </div>  
-                    </div>  
-                    <div>  
-                        <h3 class="text-lg font-bold text-gray-900">Você posta e ninguém chama no WhatsApp?</h3>  
-                        <p class="text-gray-600 mt-2">Seus posts têm bom engajamento, mas não geram contatos reais de clientes interessados.</p>  
-                    </div>  
-                </div>  
-                <div class="flex items-start space-x-4 card-hover p-6 bg-gray-50 rounded-lg">  
-                    <div class="flex-shrink-0">  
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md gradient-green text-white">  
-                            ❌  
-                        </div>  
-                    </div>  
-                    <div>  
-                        <h3 class="text-lg font-bold text-gray-900">As pessoas entram no seu perfil e somem?</h3>  
-                        <p class="text-gray-600 mt-2">Seu Instagram atrai visualizações, mas não converte visitantes em clientes.</p>  
-                    </div>  
-                </div>  
-            </div>  
-            <div class="mt-12 text-center">  
-                <a href="https://wa.me/5511962883599?text=Olá,%20vi%20os%20problemas%20no%20site%20e%20preciso%20de%20uma%20solução%20profissional" class="btn-primary pulse-btn">  
-                    Quero Resolver Isso Agora  
-                </a>  
-            </div>  
-        </div>  
-    </section>  
+<section class="hero">
+    <div>
 
-    <!-- Benefícios Section -->  
-    <section id="beneficios" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">  
-        <div class="max-w-7xl mx-auto">  
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">  
-                O que um site bem feito muda no seu negócio  
-            </h2>  
-            <div class="grid md:grid-cols-2 gap-8">  
-                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border-l-4 border-green-500">  
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">📈 Mais Clientes</h3>  
-                    <p class="text-gray-600">Clientes entrando em contato todos os dias através de um canal profissional e confiável.</p>  
-                </div>  
-                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border-l-4 border-green-500">  
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">🏆 Mais Confiança</h3>  
-                    <p class="text-gray-600">Seu negócio passa mais confiança e autoridade, diferenciando você dos concorrentes.</p>  
-                </div>  
-            </div>  
-            <div class="mt-12 text-center">  
-                <a href="https://wa.me/5511962883599?text=Olá,%20quero%20ter%20esses%20benefícios%20no%20meu%20negócio" class="btn-secondary pulse-btn">  
-                    Quero Mais Clientes e Vendas  
-                </a>  
-            </div>
-        </div>  
-    </section>  
+        <h1>
+        Seu Instagram pode estar trazendo visualizações…
+        mas não clientes prontos para comprar
+        </h1>
 
-    <!-- Portfólio Section -->  
-    <section id="portfolio" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">  
-        <div class="max-w-7xl mx-auto">  
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">  
-                Projetos que Posso Criar  
-            </h2>  
-            <div class="grid md:grid-cols-4 gap-6">  
-                <div class="card-hover bg-gradient-to-br from-pink-100 to-pink-50 rounded-xl p-8 text-center shadow-lg">  
-                    <div class="text-5xl mb-4">💄</div>  
-                    <h3 class="text-xl font-bold text-gray-900">Beleza & Estética</h3>  
-                </div>  
-                <div class="card-hover bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl p-8 text-center shadow-lg">  
-                    <div class="text-5xl mb-4">💈</div>  
-                    <h3 class="text-xl font-bold text-gray-900">Barbearia</h3>  
-                </div>  
-                <div class="card-hover bg-gradient-to-br from-purple-100 to-purple-50 rounded-xl p-8 text-center shadow-lg">  
-                    <div class="text-5xl mb-4">🛍️</div>  
-                    <h3 class="text-xl font-bold text-gray-900">Loja / Produtos</h3>  
-                </div>  
-                <div class="card-hover bg-gradient-to-br from-orange-100 to-orange-50 rounded-xl p-8 text-center shadow-lg">  
-                    <div class="text-5xl mb-4">🎯</div>  
-                    <h3 class="text-xl font-bold text-gray-900">Serviços em Geral</h3>  
-                </div>  
-            </div>  
-            <div class="mt-12 text-center">  
-                <a href="https://wa.me/5511962883599?text=Olá,%20vi%20seu%20portfólio%20e%20quero%20um%20site%20para%20meu%20nicho" class="btn-primary pulse-btn">  
-                    Quero um Site para meu Negócio  
-                </a>  
-            </div>  
-        </div>  
-    </section>  
+        <p>
+        Eu crio <strong>sites estratégicos</strong> que transformam visitantes em clientes 
+        <strong>prontos para comprar</strong>, aumentando seu faturamento e sua presença online.
+        </p>
 
-    <!-- Depoimentos Section -->  
-    <section id="depoimentos" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">  
-        <div class="max-w-7xl mx-auto">  
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">  
-                Depoimentos de Clientes  
-            </h2>  
-            <div class="grid md:grid-cols-3 gap-8">  
-                <div class="bg-white p-8 rounded-xl shadow-lg">  
-                    <p class="text-gray-700 mb-6 italic">"Meu site ficou incrível e comecei a receber contatos qualificados logo na primeira semana!"</p>  
-                    <p class="font-bold text-gray-900">Ana Paula - Esteticista</p>  
-                </div>  
-                <div class="bg-white p-8 rounded-xl shadow-lg">  
-                    <p class="text-gray-700 mb-6 italic">"Agora meu negócio parece muito mais profissional. Os clientes confiam mais em mim."</p>  
-                    <p class="font-bold text-gray-900">Carlos - Barbeiro</p>  
-                </div>  
-                <div class="bg-white p-8 rounded-xl shadow-lg">  
-                    <p class="text-gray-700 mb-6 italic">"O site mudou completamente a forma que os clientes enxergam minha marca. Recomendo!"</p>  
-                    <p class="font-bold text-gray-900">Mariana - Loja Online</p>  
-                </div>  
-            </div>  
-        </div>  
-    </section>  
+        <p class="urgencia">
+        ⚠️ Atendo poucas vagas por semana para garantir a qualidade e o resultado de cada projeto.
+        </p>
 
-    <!-- Como Funciona Section -->  
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">  
-        <div class="max-w-7xl mx-auto">  
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">  
-                Como Funciona  
-            </h2>  
-            <div class="grid md:grid-cols-4 gap-6 text-center">  
-                <div>  
-                    <div class="w-16 h-16 gradient-green rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">1</div>  
-                    <h3 class="text-lg font-bold text-gray-900">Você me chama</h3>  
-                </div>  
-                <div>  
-                    <div class="w-16 h-16 gradient-green rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">2</div>  
-                    <h3 class="text-lg font-bold text-gray-900">Entendo seu negócio</h3>  
-                </div>  
-                <div>  
-                    <div class="w-16 h-16 gradient-green rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">3</div>  
-                    <h3 class="text-lg font-bold text-gray-900">Crio seu site</h3>  
-                </div>  
-                <div>  
-                    <div class="w-16 h-16 gradient-green rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">4</div>  
-                    <h3 class="text-lg font-bold text-gray-900">Você vende!</h3>  
-                </div>  
-            </div>  
-            <div class="mt-12 text-center">  
-                <a href="https://wa.me/5511962883599?text=Olá,%20vi%20como%20funciona%20e%20quero%20começar%20meu%20projeto" class="btn-secondary pulse-btn">  
-                    Iniciar Meu Projeto Agora  
-                </a>  
-            </div>  
-        </div>  
-    </section>  
+        <a class="btn" 
+        href="https://wa.me/5511962883599?text=Olá,%20vim%20do%20site%20e%20quero%20um%20site%20profissional" 
+        target="_blank">
 
-    <!-- CTA Final Section -->  
-    <section class="gradient-dark text-white py-20 px-4 sm:px-6 lg:px-8">  
-        <div class="max-w-4xl mx-auto text-center">  
-            <h2 class="text-4xl md:text-5xl font-bold mb-8">  
-                Pare de perder clientes para a concorrência!  
-            </h2>  
-            <p class="text-xl text-gray-300 mb-10">  
-                Clique no botão abaixo e tenha um site profissional que vende por você 24 horas por dia.  
-            </p>  
-            <div class="bg-red-500 inline-block px-8 py-3 rounded-full text-white font-black text-xl mb-10 pulse-btn">  
-                🔥 ÚLTIMAS VAGAS COM DESCONTO ESTA SEMANA  
-            </div>  
-            <br>
-            <a href="https://wa.me/5511962883599?text=Olá,%20vim%20do%20final%20do%20site%20e%20quero%20garantir%20minha%20vaga" class="btn-primary text-2xl px-12 py-6 pulse-btn">  
-                QUERO MEU SITE PROFISSIONAL AGORA!  
-            </a>  
-        </div>  
-    </section>  
+        Quero um site que traga clientes
 
-    <!-- Footer -->  
-    <footer class="bg-gray-900 text-gray-400 py-12 px-4 sm:px-6 lg:px-8">  
-        <div class="max-w-7xl mx-auto text-center">  
-            <div class="flex flex-col items-center mb-8">  
-                <div class="w-12 h-12 gradient-green rounded-lg flex items-center justify-center mb-4">  
-                    <span class="text-white font-bold text-xl">CWS</span>  
-                </div>  
-                <span class="font-bold text-white text-2xl">Cliente Web Sites</span>  
-            </div>  
-            <div class="flex justify-center space-x-6 mb-8">  
-                <a href="https://wa.me/5511962883599" class="text-green-400 hover:text-green-300 font-bold text-lg">WhatsApp: (11) 96288-3599</a>  
-            </div>  
-            <div class="border-t border-gray-800 pt-8 text-sm">  
-                <p>&copy; 2026 Cliente Web Sites. Todos os direitos reservados.</p>  
-            </div>  
-        </div>  
-    </footer>  
+        </a>
 
-    <script>  
-        // Smooth scroll para links internos  
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {  
-            anchor.addEventListener('click', function (e) {  
-                e.preventDefault();  
-                const target = document.querySelector(this.getAttribute('href'));  
-                if (target) {  
-                    target.scrollIntoView({  
-                        behavior: 'smooth',  
-                        block: 'start'  
-                    });  
-                }  
-            });  
-        });  
-    </script>  
-</body>  
-</html>
+    </div>
+
+    <img 
+    src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=800&q=80" 
+    alt="Pessoa trabalhando em computador">
+</section>
+
+<section class="section hidden">
+    <h2>Isso está acontecendo com você?</h2>
+
+    <div class="grid">
+        <div class="card">Você posta e ninguém chama no WhatsApp?</div>
+
+        <div class="card">
+        As pessoas entram no seu perfil e somem sem interagir?
+        </div>
+
+        <div class="card">
+        Você depende só de indicação?
+        </div>
+
+        <div class="card">
+        Seu concorrente parece mais profissional?
+        </div>
+    </div>
+
+    <div style="text-align:center;">
+
+        <a class="btn" 
+        href="https://wa.me/5511962883599?text=Olá,%20quero%20um%20site%20profissional" 
+        target="_blank">
+
+        Quero resolver isso agora
+
+        </a>
+
+    </div>
+</section>
+
+<section class="section hidden">
+
+    <h2>O que um site bem feito muda no seu negócio</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <strong>Mais clientes</strong> entrando em contato todos os dias.
+        </div>
+
+        <div class="card">
+            Seu negócio passa <strong>mais confiança e autoridade</strong>.
+        </div>
+
+        <div class="card">
+            <strong>Mais chances de fechar vendas</strong>.
+        </div>
+
+        <div class="card">
+            Você <strong>vende mesmo sem estar online</strong>.
+        </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+
+        <a class="btn" 
+        href="https://wa.me/5511962883599?text=Olá,%20quero%20atrair%20mais%20clientes" 
+        target="_blank">
+
+        Quero atrair mais clientes
+
+        </a>
+
+    </div>
+
+</section>
+
+<section class="section hidden">
+
+    <h2>Depoimentos</h2>
+
+    <div class="grid">
+
+        <div class="testimonial-card">
+            <p>
+            "Meu site ficou incrível e comecei a receber muito mais clientes."
+            </p>
+
+            <strong>
+            Ana Paula • Esteticista
+            </strong>
+        </div>
+
+        <div class="testimonial-card">
+            <p>
+            "Agora meu negócio parece muito mais profissional."
+            </p>
+
+            <strong>
+            Carlos • Barbeiro
+            </strong>
+        </div>
+
+        <div class="testimonial-card">
+            <p>
+            "O site mudou completamente a forma que os clientes enxergam minha marca."
+            </p>
+
+            <strong>
+            Mariana • Loja Online
+            </strong>
+        </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+
+        <a class="btn" 
+        href="https://wa.me/5511962883599?text=Olá,%20vi%20os%20depoimentos%20e%20quero%20um%20site" 
+        target="_blank">
+
+        Quero um site assim
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- Botão Flutuante WhatsApp -->
+<a href="https://wa.me/5511962883599?text=Olá,%20vim%20do%20site"
+target="_blank"
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+z-index:999;
+text-decoration:none;
+font-size:32px;
+transition:0.3s;
+">
+
+💬
+
+</a>
