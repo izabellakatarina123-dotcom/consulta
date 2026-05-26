@@ -1,39 +1,161 @@
-<!-- HERO -->
-<section class="hero">
-  <div class="grid-bg"></div>
-  <div class="hero-glow-orb"></div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <div class="hero-left rv">
-    <div class="badge">
-      <span class="badge-dot"></span>
-      Design Premium · Resultado Real
-    </div>
+  <title>Cliente Web Sites</title>
 
-    <h1>
-      Seu cliente te julga<br>
-      <span class="g">antes de falar</span>
-      com você.
-    </h1>
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <p class="hero-desc">
-      Eu crio <strong>sites estratégicos</strong> que fazem seu negócio transmitir confiança, gerar autoridade e transformar visitantes em clientes prontos para comprar — sem você precisar convencer ninguém.
-    </p>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-    <div class="cta-group">
-      <a href="https://wa.me/5511962883599?text=Olá%20Izabela!%20Vim%20do%20seu%20site%20e%20quero%20um%20site%20profissional%20para%20meu%20negócio%20🚀" class="btn-main" target="_blank">
-        <span class="ico">📲</span>
-        Quero Meu Site Agora
-      </a>
+  <style>
 
-      <p class="urgency">
-        ⚠️ Apenas <span>3 vagas abertas</span> esta semana
-      </p>
-    </div>
-  </div>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-  <div class="hero-right rv2">
+    body{
+      background:#090909;
+      color:#fff;
+      font-family:'Syne',sans-serif;
+      overflow-x:hidden;
+    }
 
-    <div style="
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:80px;
+      padding:80px 8%;
+      position:relative;
+      overflow:hidden;
+      flex-wrap:wrap;
+    }
+
+    .grid-bg{
+      position:absolute;
+      inset:0;
+      background-image:
+      linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+      background-size:60px 60px;
+      z-index:0;
+    }
+
+    .hero-glow-orb{
+      width:500px;
+      height:500px;
+      background:#39ff14;
+      opacity:.08;
+      filter:blur(120px);
+
+      position:absolute;
+      top:-150px;
+      right:-100px;
+      border-radius:50%;
+      z-index:0;
+    }
+
+    .hero-left,
+    .hero-right{
+      position:relative;
+      z-index:2;
+      flex:1;
+      min-width:320px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:rgba(57,255,20,.08);
+      border:1px solid rgba(57,255,20,.18);
+      color:#39ff14;
+      padding:10px 18px;
+      border-radius:100px;
+      font-size:.85rem;
+      margin-bottom:30px;
+      font-weight:700;
+      letter-spacing:1px;
+    }
+
+    .badge-dot{
+      width:8px;
+      height:8px;
+      background:#39ff14;
+      border-radius:50%;
+      box-shadow:0 0 10px #39ff14;
+    }
+
+    h1{
+      font-size:clamp(3rem,7vw,6rem);
+      line-height:.95;
+      margin-bottom:30px;
+      font-weight:800;
+    }
+
+    .g{
+      color:#39ff14;
+      text-shadow:0 0 25px rgba(57,255,20,.35);
+    }
+
+    .hero-desc{
+      color:#b5b5b5;
+      line-height:1.8;
+      font-size:1.1rem;
+      max-width:650px;
+      margin-bottom:40px;
+    }
+
+    .hero-desc strong{
+      color:#fff;
+    }
+
+    .cta-group{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .btn-main{
+      width:fit-content;
+      text-decoration:none;
+      background:#39ff14;
+      color:#000;
+      padding:18px 28px;
+      border-radius:14px;
+      font-weight:800;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      transition:.3s;
+      box-shadow:0 0 25px rgba(57,255,20,.25);
+    }
+
+    .btn-main:hover{
+      transform:translateY(-3px);
+      box-shadow:0 0 35px rgba(57,255,20,.45);
+    }
+
+    .urgency{
+      color:#999;
+      font-size:.95rem;
+    }
+
+    .urgency span{
+      color:#fff;
+      font-weight:700;
+    }
+
+    .card{
       width:100%;
       max-width:520px;
       background:linear-gradient(145deg,#0f0f0f,#131313);
@@ -43,103 +165,182 @@
       position:relative;
       overflow:hidden;
       box-shadow:0 0 50px rgba(57,255,20,.08);
-    ">
+    }
 
-      <div style="
-        position:absolute;
-        inset:0;
-        background:radial-gradient(circle at top right,rgba(57,255,20,.12),transparent 60%);
-        pointer-events:none;
-      "></div>
+    .card-glow{
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at top right,rgba(57,255,20,.12),transparent 60%);
+      pointer-events:none;
+    }
 
-      <div style="
-        position:relative;
-        z-index:2;
-      ">
+    .card-content{
+      position:relative;
+      z-index:2;
+    }
 
-        <div style="
-          display:inline-flex;
-          align-items:center;
-          gap:10px;
-          background:rgba(57,255,20,.08);
-          border:1px solid rgba(57,255,20,.18);
-          color:#39ff14;
-          padding:10px 18px;
-          border-radius:100px;
-          font-size:.8rem;
-          font-family:'Syne',sans-serif;
-          font-weight:700;
-          letter-spacing:2px;
-          text-transform:uppercase;
-          margin-bottom:30px;
-        ">
-          🚀 Sites que convertem
-        </div>
+    .mini-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:rgba(57,255,20,.08);
+      border:1px solid rgba(57,255,20,.18);
+      color:#39ff14;
+      padding:10px 18px;
+      border-radius:100px;
+      font-size:.8rem;
+      font-weight:700;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:30px;
+    }
 
-        <h3 style="
-          font-family:'Bebas Neue',sans-serif;
-          font-size:3rem;
-          line-height:1;
-          letter-spacing:2px;
-          margin-bottom:20px;
-        ">
-          MAIS CLIENTES.<br>
-          MAIS AUTORIDADE.<br>
-          <span style="
-            color:#39ff14;
-            text-shadow:0 0 20px rgba(57,255,20,.4);
-          ">
-            MAIS VENDAS.
-          </span>
-        </h3>
+    .card h3{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:3rem;
+      line-height:1;
+      letter-spacing:2px;
+      margin-bottom:20px;
+    }
 
-        <p style="
-          color:#999;
-          line-height:1.9;
-          font-size:1.05rem;
-          margin-bottom:35px;
-        ">
-          Um site profissional faz sua empresa parecer maior,
-          transmitir confiança e transformar visitantes em clientes reais.
+    .green{
+      color:#39ff14;
+      text-shadow:0 0 20px rgba(57,255,20,.4);
+    }
+
+    .card p{
+      color:#999;
+      line-height:1.9;
+      font-size:1.05rem;
+      margin-bottom:35px;
+    }
+
+    .features{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .feature{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      color:#ccc;
+      font-size:1rem;
+    }
+
+    .check{
+      color:#39ff14;
+      font-weight:bold;
+    }
+
+    @media(max-width:900px){
+
+      .hero{
+        padding:60px 25px;
+        gap:50px;
+      }
+
+      .card{
+        padding:40px 25px;
+      }
+
+      .card h3{
+        font-size:2.3rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="grid-bg"></div>
+    <div class="hero-glow-orb"></div>
+
+    <!-- LEFT -->
+    <div class="hero-left">
+
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Design Premium · Resultado Real
+      </div>
+
+      <h1>
+        Seu cliente te julga<br>
+        <span class="g">antes de falar</span>
+        com você.
+      </h1>
+
+      <p class="hero-desc">
+        Eu crio <strong>sites estratégicos</strong> que fazem seu negócio transmitir confiança, gerar autoridade e transformar visitantes em clientes prontos para comprar — sem você precisar convencer ninguém.
+      </p>
+
+      <div class="cta-group">
+
+        <a
+          href="https://wa.me/5511962883599?text=Olá%20Izabela!%20Vim%20do%20seu%20site%20e%20quero%20um%20site%20profissional%20para%20meu%20negócio%20🚀"
+          class="btn-main"
+          target="_blank"
+        >
+          📲 Quero Meu Site Agora
+        </a>
+
+        <p class="urgency">
+          ⚠️ Apenas <span>3 vagas abertas</span> esta semana
         </p>
 
-        <div style="
-          display:flex;
-          flex-direction:column;
-          gap:18px;
-        ">
+      </div>
 
-          <div style="
-            display:flex;
-            align-items:center;
-            gap:14px;
-            color:#ccc;
-            font-size:1rem;
-          ">
-            <span style="color:#39ff14;">✓</span>
-            Design premium e moderno
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-right">
+
+      <div class="card">
+
+        <div class="card-glow"></div>
+
+        <div class="card-content">
+
+          <div class="mini-badge">
+            🚀 Sites que convertem
           </div>
 
-          <div style="
-            display:flex;
-            align-items:center;
-            gap:14px;
-            color:#ccc;
-            font-size:1rem;
-          ">
-            <span style="color:#39ff14;">✓</span>
-            Botão direto pro WhatsApp
-          </div>
+          <h3>
+            MAIS CLIENTES.<br>
+            MAIS AUTORIDADE.<br>
+            <span class="green">
+              MAIS VENDAS.
+            </span>
+          </h3>
 
-          <div style="
-            display:flex;
-            align-items:center;
-            gap:14px;
-            color:#ccc;
-            font-size:1rem;
-          ">
-            <span style="color:#39ff14;">✓</span>
-            Estrutura pensada pra vender
+          <p>
+            Um site profissional faz sua empresa parecer maior,
+            transmitir confiança e transformar visitantes em clientes reais.
+          </p>
+
+          <div class="features">
+
+            <div class="feature">
+              <span class="check">✓</span>
+              Design premium e moderno
+            </div>
+
+            <div class="feature">
+              <span class="check">✓</span>
+              Botão direto pro WhatsApp
+            </div>
+
+            <div class="feature">
+              <span class="check">✓</span>
+              Estrutura pensada pra vender
+            </div>
+
           </div>
 
         </div>
@@ -148,5 +349,7 @@
 
     </div>
 
-  </div>
-</section>
+  </section>
+
+</body>
+</html>
