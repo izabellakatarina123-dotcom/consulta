@@ -5,13 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cliente Web Sites</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -23,14 +19,10 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:'Inter',sans-serif;
 background:#050505;
 color:#fff;
+font-family:'Syne',sans-serif;
 overflow-x:hidden;
-}
-
-:root{
---green:#00ff88;
 }
 
 body::before{
@@ -38,21 +30,11 @@ content:'';
 position:fixed;
 inset:0;
 background:
-linear-gradient(rgba(0,255,136,.05) 1px, transparent 1px),
-linear-gradient(90deg, rgba(0,255,136,.05) 1px, transparent 1px);
+linear-gradient(rgba(57,255,20,.03) 1px,transparent 1px),
+linear-gradient(90deg,rgba(57,255,20,.03) 1px,transparent 1px);
 background-size:50px 50px;
-z-index:-2;
-animation:gridDrift 25s linear infinite;
-}
-
-@keyframes gridDrift{
-0%{transform:translateY(0);}
-100%{transform:translateY(50px);}
-}
-
-.container{
-width:min(1200px,90%);
-margin:auto;
+pointer-events:none;
+z-index:-1;
 }
 
 nav{
@@ -60,85 +42,398 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-z-index:999;
-background:rgba(0,0,0,.4);
-backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(255,255,255,.05);
-}
-
-.nav-wrap{
-height:85px;
+padding:20px 8%;
 display:flex;
-align-items:center;
 justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.8);
+backdrop-filter:blur(12px);
+border-bottom:1px solid #111;
+z-index:999;
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:14px;
-}
-
-.logo-box{
-width:48px;
-height:48px;
-background:var(--green);
-border-radius:6px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#000;
-font-weight:900;
-font-size:22px;
-}
-
-.logo h2{
-font-family:'Bebas Neue';
-font-size:34px;
+font-size:1.2rem;
+font-weight:800;
+color:#39ff14;
 letter-spacing:2px;
 }
 
-.btn{
-display:inline-flex;
-align-items:center;
-gap:10px;
-padding:18px 30px;
-background:var(--green);
+.nav-btn{
+background:#39ff14;
 color:#000;
-font-weight:800;
+padding:12px 25px;
 text-decoration:none;
-border-radius:14px;
+font-weight:800;
+border-radius:5px;
 transition:.3s;
-box-shadow:0 0 25px rgba(0,255,136,.3);
 }
 
-.btn:hover{
-transform:translateY(-4px);
-box-shadow:0 0 35px rgba(0,255,136,.5);
+.nav-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 25px #39ff14;
 }
 
 .hero{
 min-height:100vh;
-display:grid;
-grid-template-columns:1fr 1fr;
+display:flex;
 align-items:center;
-gap:70px;
-padding-top:120px;
-position:relative;
+justify-content:center;
+padding:120px 8% 80px;
 }
 
-.hero-orb{
-position:absolute;
-width:700px;
-height:700px;
-background:radial-gradient(circle,var(--green) 0%, transparent 70%);
-opacity:.12;
-top:-200px;
-right:-200px;
-filter:blur(60px);
+.hero-content{
+max-width:800px;
+text-align:center;
 }
 
 .badge{
 display:inline-block;
-padding:10px 18px;
-border:1px solid rgba(0,255
+padding:10px 20px;
+border:1px solid #39ff14;
+color:#39ff14;
+font-size:.8rem;
+letter-spacing:3px;
+margin-bottom:30px;
+text-transform:uppercase;
+}
+
+h1{
+font-family:'Bebas Neue',sans-serif;
+font-size:clamp(4rem,10vw,7rem);
+line-height:.9;
+letter-spacing:2px;
+margin-bottom:25px;
+}
+
+.green{
+color:#39ff14;
+text-shadow:0 0 20px #39ff14;
+}
+
+.hero p{
+font-size:1.2rem;
+line-height:1.8;
+color:#999;
+max-width:700px;
+margin:auto;
+margin-bottom:40px;
+}
+
+.main-btn{
+display:inline-block;
+padding:18px 45px;
+background:#39ff14;
+color:#000;
+text-decoration:none;
+font-weight:800;
+border-radius:6px;
+font-size:1rem;
+transition:.3s;
+}
+
+.main-btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 30px #39ff14;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:70px 8%;
+background:#0a0a0a;
+}
+
+.stat{
+background:#111;
+padding:40px;
+text-align:center;
+border:1px solid #1b1b1b;
+}
+
+.stat h2{
+font-size:3rem;
+color:#39ff14;
+font-family:'Bebas Neue',sans-serif;
+}
+
+.stat p{
+color:#777;
+margin-top:10px;
+}
+
+.section{
+padding:100px 8%;
+}
+
+.section-title{
+font-family:'Bebas Neue',sans-serif;
+font-size:4rem;
+margin-bottom:20px;
+line-height:1;
+}
+
+.section-sub{
+color:#888;
+font-size:1.1rem;
+max-width:700px;
+line-height:1.8;
+margin-bottom:60px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111;
+padding:35px;
+border:1px solid #1a1a1a;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#39ff14;
+}
+
+.card h3{
+margin:20px 0 10px;
+font-size:1.2rem;
+}
+
+.card p{
+color:#777;
+line-height:1.7;
+}
+
+.cta{
+padding:120px 8%;
+text-align:center;
+background:#080808;
+}
+
+.cta h2{
+font-family:'Bebas Neue',sans-serif;
+font-size:5rem;
+line-height:1;
+margin-bottom:25px;
+}
+
+.cta p{
+color:#888;
+max-width:700px;
+margin:auto;
+line-height:1.8;
+margin-bottom:40px;
+}
+
+footer{
+padding:40px 8%;
+border-top:1px solid #111;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+footer p{
+color:#555;
+}
+
+@media(max-width:768px){
+
+.stats{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:4rem;
+}
+
+.section-title{
+font-size:3rem;
+}
+
+.cta h2{
+font-size:3.5rem;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">CLIENTE WEB SITES</div>
+
+<a href="https://wa.me/5511962883599" class="nav-btn">
+CHAMAR NO WHATSAPP
+</a>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="badge">
+SITES QUE VENDEM
+</div>
+
+<h1>
+SEU NEGÓCIO PODE SER BOM.<br>
+<span class="green">
+MAS SUA IMAGEM AINDA AFASTA CLIENTES
+</span>
+</h1>
+
+<p>
+Eu crio sites profissionais que fazem sua empresa parecer premium, transmitir confiança e transformar visitantes em clientes prontos para comprar.
+</p>
+
+<a href="https://wa.me/5511962883599" class="main-btn">
+QUERO MEU SITE AGORA
+</a>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h2>+30</h2>
+<p>Sites Entregues</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>Clientes Satisfeitos</p>
+</div>
+
+<div class="stat">
+<h2>48H</h2>
+<p>Entrega Rápida</p>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+POR QUE VOCÊ NÃO VENDE MAIS?
+</h2>
+
+<p class="section-sub">
+Seu Instagram pode até receber visitas, mas sem um site profissional as pessoas não sentem confiança suficiente para comprar.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>❌ Perfil sem autoridade</h3>
+<p>
+Seu negócio parece amador e os clientes escolhem alguém que transmite mais confiança.
+</p>
+</div>
+
+<div class="card">
+<h3>❌ Falta de credibilidade</h3>
+<p>
+Sem site profissional, seu cliente desconfia antes mesmo de te chamar.
+</p>
+</div>
+
+<div class="card">
+<h3>❌ Poucos contatos</h3>
+<p>
+As pessoas visitam seu perfil mas vão embora sem chamar no WhatsApp.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+O QUE VOCÊ RECEBE
+</h2>
+
+<p class="section-sub">
+Tudo pensado para transformar visitantes em clientes.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>⚡ Site Premium</h3>
+<p>
+Design moderno com aparência profissional e visual de alto valor.
+</p>
+</div>
+
+<div class="card">
+<h3>📱 Responsivo</h3>
+<p>
+Funciona perfeitamente no celular, tablet e computador.
+</p>
+</div>
+
+<div class="card">
+<h3>🚀 Botão WhatsApp</h3>
+<p>
+Clientes entram em contato com um clique.
+</p>
+</div>
+
+<div class="card">
+<h3>🔥 Visual Impactante</h3>
+<p>
+Seu negócio vai parecer muito mais confiável e profissional.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>
+SEU CLIENTE DECIDE EM SEGUNDOS<br>
+<span class="green">
+SE CONFIA OU NÃO EM VOCÊ
+</span>
+</h2>
+
+<p>
+Um site profissional muda totalmente a forma como as pessoas enxergam seu negócio.
+</p>
+
+<a href="https://wa.me/5511962883599" class="main-btn">
+QUERO VENDER MAIS
+</a>
+
+</section>
+
+<footer>
+
+<div class="logo">
+CLIENTE WEB SITES
+</div>
+
+<p>
+© 2026 Todos os direitos reservados.
+</p>
+
+</footer>
+
+</body>
+</html>
