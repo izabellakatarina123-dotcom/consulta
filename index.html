@@ -1,333 +1,1291 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Cliente Web Sites</title>
+<title>Cliente Web Sites • Sites Profissionais</title>
 
-  <!-- FONTES -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
 
-  <style>
+<style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+:root{
+--neon:#39ff14;
+--neon2:#00ff88;
+--glow:0 0 20px #39ff1466,0 0 50px #39ff1422;
+--black:#040404;
+--dark:#0a0a0a;
+--card:#0f0f0f;
+--card2:#131313;
+--border:#1c1c1c;
+--white:#efefef;
+--muted:#777;
+}
 
-    body{
-      background:#090909;
-      color:#fff;
-      font-family:Arial, sans-serif;
-      overflow-x:hidden;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:60px;
-      padding:80px 5%;
-      flex-wrap:wrap;
-      position:relative;
-    }
+body{
+background:var(--black);
+color:var(--white);
+font-family:'DM Sans',sans-serif;
+overflow-x:hidden;
+position:relative;
+}
 
-    .grid-bg{
-      position:absolute;
-      inset:0;
-      background-image:
-      linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-      background-size:60px 60px;
-      z-index:0;
-    }
+body::after{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+opacity:.08;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
+}
 
-    .hero-glow-orb{
-      position:absolute;
-      width:400px;
-      height:400px;
-      background:#39ff14;
-      opacity:.08;
-      filter:blur(100px);
-      border-radius:50%;
-      top:-100px;
-      right:-100px;
-      z-index:0;
-    }
+section{
+padding:110px 70px;
+position:relative;
+}
 
-    .hero-left,
-    .hero-right{
-      flex:1;
-      min-width:320px;
-      position:relative;
-      z-index:2;
-    }
+.container{
+max-width:1280px;
+margin:auto;
+}
 
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 18px;
-      border-radius:100px;
-      background:rgba(57,255,20,.08);
-      border:1px solid rgba(57,255,20,.18);
-      color:#39ff14;
-      margin-bottom:30px;
-      font-size:14px;
-      font-weight:bold;
-    }
+.tag{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:10px 16px;
+border:1px solid #1f1f1f;
+background:#0d0d0d;
+border-radius:999px;
+font-size:.85rem;
+font-family:'Syne',sans-serif;
+color:var(--neon);
+margin-bottom:24px;
+box-shadow:var(--glow);
+}
 
-    .badge-dot{
-      width:8px;
-      height:8px;
-      background:#39ff14;
-      border-radius:50%;
-    }
+h1,h2,h3,h4{
+font-family:'Bebas Neue',sans-serif;
+letter-spacing:1px;
+}
 
-    h1{
-      font-size:70px;
-      line-height:1;
-      margin-bottom:30px;
-      font-family:'Bebas Neue', sans-serif;
-      letter-spacing:2px;
-    }
+h1{
+font-size:6rem;
+line-height:.95;
+margin-bottom:22px;
+}
 
-    .g{
-      color:#39ff14;
-    }
+h2{
+font-size:4rem;
+line-height:1;
+margin-bottom:20px;
+}
 
-    .hero-desc{
-      color:#b5b5b5;
-      line-height:1.8;
-      font-size:18px;
-      margin-bottom:40px;
-      max-width:600px;
-    }
+p{
+color:#cfcfcf;
+line-height:1.8;
+}
 
-    .cta-group{
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-    }
+.neon{
+color:var(--neon);
+text-shadow:0 0 15px #39ff1490;
+}
 
-    .btn-main{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      width:fit-content;
-      padding:18px 28px;
-      background:#39ff14;
-      color:#000;
-      text-decoration:none;
-      border-radius:14px;
-      font-weight:bold;
-      transition:.3s;
-    }
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+padding:18px 28px;
+border-radius:14px;
+background:linear-gradient(135deg,var(--neon),var(--neon2));
+color:#000;
+font-weight:800;
+text-decoration:none;
+font-family:'Syne',sans-serif;
+transition:.3s;
+box-shadow:var(--glow);
+}
 
-    .btn-main:hover{
-      transform:scale(1.03);
-    }
+.btn:hover{
+transform:translateY(-4px) scale(1.02);
+box-shadow:0 0 25px #39ff14aa;
+}
 
-    .urgency{
-      color:#999;
-    }
+.grid-bg{
+position:absolute;
+inset:0;
+background-image:
+linear-gradient(rgba(57,255,20,.07) 1px, transparent 1px),
+linear-gradient(90deg, rgba(57,255,20,.07) 1px, transparent 1px);
+background-size:64px 64px;
+animation:gridDrift 25s linear infinite;
+mask-image:linear-gradient(to bottom,transparent,black 20%,black 80%,transparent);
+}
 
-    .urgency span{
-      color:#fff;
-      font-weight:bold;
-    }
+.orb{
+position:absolute;
+width:500px;
+height:500px;
+background:radial-gradient(circle,var(--neon2) 0%,transparent 70%);
+opacity:.12;
+filter:blur(30px);
+pointer-events:none;
+}
 
-    .card{
-      width:100%;
-      max-width:520px;
-      background:#111;
-      border:1px solid #222;
-      border-radius:24px;
-      padding:50px 40px;
-      position:relative;
-      overflow:hidden;
-    }
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+backdrop-filter:blur(18px);
+background:rgba(4,4,4,.7);
+border-bottom:1px solid #111;
+}
 
-    .card-glow{
-      position:absolute;
-      inset:0;
-      background:radial-gradient(circle at top right,rgba(57,255,20,.12),transparent 60%);
-    }
+.nav-wrap{
+max-width:1280px;
+margin:auto;
+padding:18px 30px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
 
-    .card-content{
-      position:relative;
-      z-index:2;
-    }
+.logo{
+display:flex;
+align-items:center;
+gap:14px;
+}
 
-    .mini-badge{
-      display:inline-block;
-      padding:10px 18px;
-      border-radius:100px;
-      background:rgba(57,255,20,.08);
-      border:1px solid rgba(57,255,20,.18);
-      color:#39ff14;
-      margin-bottom:30px;
-      font-size:12px;
-      font-weight:bold;
-      letter-spacing:2px;
-      text-transform:uppercase;
-    }
+.logo-box{
+width:48px;
+height:48px;
+border-radius:6px;
+background:#0f0f0f;
+border:1px solid #1f1f1f;
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:'Bebas Neue';
+font-size:1.8rem;
+color:var(--neon);
+box-shadow:var(--glow);
+}
 
-    .card h3{
-      font-size:55px;
-      line-height:1;
-      margin-bottom:20px;
-      font-family:'Bebas Neue', sans-serif;
-      letter-spacing:2px;
-    }
+.nav-name{
+font-family:'Syne',sans-serif;
+font-weight:800;
+letter-spacing:1px;
+}
 
-    .green{
-      color:#39ff14;
-    }
+.hero{
+min-height:100vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:60px;
+position:relative;
+overflow:hidden;
+}
 
-    .card p{
-      color:#999;
-      line-height:1.8;
-      margin-bottom:35px;
-    }
+.hero-left{
+position:relative;
+z-index:2;
+}
 
-    .features{
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-    }
+.blink{
+animation:blink 2s infinite;
+}
 
-    .feature{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      color:#ccc;
-    }
+.hero p{
+max-width:620px;
+margin-bottom:28px;
+font-size:1.05rem;
+}
 
-    .check{
-      color:#39ff14;
-      font-weight:bold;
-    }
+.urgency{
+margin-top:18px;
+color:var(--muted);
+font-size:.95rem;
+}
 
-    @media(max-width:900px){
+.hero-right{
+display:flex;
+justify-content:center;
+position:relative;
+z-index:2;
+}
 
-      h1{
-        font-size:48px;
-      }
+.photo-wrap{
+position:relative;
+width:480px;
+height:480px;
+border-radius:50%;
+padding:10px;
+background:linear-gradient(135deg,var(--neon),transparent,var(--neon2));
+animation:rotateBorder 8s linear infinite;
+box-shadow:0 0 30px #39ff1440;
+}
 
-      .card h3{
-        font-size:40px;
-      }
+.photo{
+width:100%;
+height:100%;
+border-radius:50%;
+overflow:hidden;
+border:2px solid #1d1d1d;
+background:#111;
+}
 
-      .hero{
-        padding:60px 20px;
-      }
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
 
-    }
+.founder-tag{
+margin-top:22px;
+text-align:center;
+font-family:'Syne',sans-serif;
+font-size:1rem;
+color:#dcdcdc;
+}
 
-  </style>
+.proof-bar{
+background:#0f0f0f;
+border-top:1px solid #141414;
+border-bottom:1px solid #141414;
+}
 
+.proof-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.proof-item{
+padding:38px 20px;
+text-align:center;
+border-right:1px solid #141414;
+}
+
+.proof-item:last-child{
+border-right:none;
+}
+
+.proof-number{
+font-family:'Bebas Neue';
+font-size:3rem;
+color:var(--neon);
+text-shadow:var(--glow);
+}
+
+.dark{
+background:var(--dark);
+}
+
+.cards-2{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:24px;
+margin-top:50px;
+}
+
+.card{
+position:relative;
+background:linear-gradient(180deg,var(--card),var(--card2));
+border:1px solid var(--border);
+padding:34px;
+border-radius:24px;
+overflow:hidden;
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#2b2b2b;
+}
+
+.card::before{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:3px;
+height:100%;
+background:linear-gradient(to top,var(--neon),transparent);
+transform:scaleY(0);
+transform-origin:bottom;
+transition:.45s;
+}
+
+.card:hover::before{
+transform:scaleY(1);
+}
+
+.card h3{
+font-size:2rem;
+margin:16px 0 10px;
+}
+
+.card-icon{
+font-size:2rem;
+}
+
+.sobre-grid{
+display:grid;
+grid-template-columns:1fr 1.1fr;
+gap:60px;
+align-items:center;
+}
+
+.sobre-img-wrap{
+position:relative;
+height:560px;
+border-radius:30px;
+overflow:hidden;
+background:#111;
+border:1px solid #1c1c1c;
+}
+
+.sobre-img-wrap img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.corner{
+position:absolute;
+width:70px;
+height:70px;
+border:3px solid var(--neon);
+animation:blink 2s infinite;
+}
+
+.c-tl{
+top:16px;
+left:16px;
+border-right:none;
+border-bottom:none;
+}
+
+.c-br{
+right:16px;
+bottom:16px;
+border-left:none;
+border-top:none;
+}
+
+.checks{
+margin-top:26px;
+display:grid;
+gap:16px;
+}
+
+.check{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:1rem;
+}
+
+.check span{
+width:26px;
+height:26px;
+border-radius:50%;
+background:#112b11;
+display:flex;
+align-items:center;
+justify-content:center;
+color:var(--neon);
+box-shadow:var(--glow);
+}
+
+.cards-3{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+margin-top:50px;
+}
+
+.receive-card{
+position:relative;
+overflow:hidden;
+}
+
+.receive-card::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+height:3px;
+background:linear-gradient(90deg,var(--neon),transparent);
+transform:scaleX(0);
+transform-origin:left;
+transition:.4s;
+}
+
+.receive-card:hover::after{
+transform:scaleX(1);
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:26px;
+margin-top:60px;
+position:relative;
+}
+
+.step{
+position:relative;
+padding-top:30px;
+}
+
+.step::before{
+content:"";
+position:absolute;
+top:28px;
+left:60px;
+width:100%;
+height:1px;
+background:#1b1b1b;
+z-index:-1;
+}
+
+.step:last-child::before{
+display:none;
+}
+
+.step-num{
+width:58px;
+height:58px;
+border-radius:50%;
+border:2px solid var(--neon);
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:'Bebas Neue';
+font-size:1.7rem;
+margin-bottom:20px;
+transition:.3s;
+box-shadow:var(--glow);
+}
+
+.step:hover .step-num{
+background:var(--neon);
+color:#000;
+}
+
+.depo-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+margin-top:50px;
+}
+
+.depo{
+transition:.35s;
+}
+
+.depo:hover{
+transform:translateY(-5px);
+box-shadow:0 0 25px rgba(57,255,20,.12);
+}
+
+.quote{
+font-size:5rem;
+line-height:1;
+color:var(--neon);
+font-family:'Bebas Neue';
+}
+
+.stars{
+color:gold;
+margin-bottom:14px;
+}
+
+.depo em{
+display:block;
+margin-bottom:24px;
+color:#dadada;
+}
+
+.depo hr{
+border:none;
+height:1px;
+background:#1d1d1d;
+margin:24px 0;
+}
+
+.faq-wrap{
+margin-top:50px;
+display:grid;
+gap:18px;
+}
+
+.faq-item{
+background:#0f0f0f;
+border:1px solid #181818;
+border-radius:20px;
+overflow:hidden;
+}
+
+.faq-btn{
+width:100%;
+background:none;
+border:none;
+outline:none;
+padding:26px;
+color:#fff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:1rem;
+cursor:pointer;
+font-family:'Syne';
+font-weight:700;
+}
+
+.faq-icon{
+font-size:2rem;
+color:var(--neon);
+transition:.3s;
+}
+
+.faq-item.open .faq-icon{
+transform:rotate(45deg);
+}
+
+.faq-content{
+max-height:0;
+overflow:hidden;
+transition:max-height .4s ease;
+padding:0 26px;
+}
+
+.faq-item.open .faq-content{
+max-height:200px;
+padding-bottom:26px;
+}
+
+.cta-final{
+text-align:center;
+overflow:hidden;
+}
+
+.cta-final .orb{
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+}
+
+.pill{
+display:inline-flex;
+padding:10px 18px;
+border-radius:999px;
+background:#101010;
+border:1px solid #1c1c1c;
+font-family:'Syne';
+color:var(--neon);
+margin-bottom:26px;
+box-shadow:var(--glow);
+}
+
+.cta-final h2{
+max-width:900px;
+margin:0 auto 22px;
+}
+
+.cta-final p{
+max-width:760px;
+margin:0 auto 34px;
+}
+
+.whatsapp-float{
+position:fixed;
+right:24px;
+bottom:24px;
+width:72px;
+height:72px;
+border-radius:50%;
+background:linear-gradient(135deg,var(--neon),var(--neon2));
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:2rem;
+text-decoration:none;
+box-shadow:var(--glow);
+z-index:999;
+animation:floatBtn 3s ease-in-out infinite;
+}
+
+footer{
+border-top:1px solid #111;
+padding:34px 30px;
+background:#050505;
+}
+
+.footer-wrap{
+max-width:1280px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.footer-logo{
+font-family:'Bebas Neue';
+font-size:2rem;
+color:var(--neon);
+text-shadow:var(--glow);
+}
+
+.footer-links{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.footer-links a{
+text-decoration:none;
+color:#ccc;
+}
+
+.rv,.rv2,.rv3{
+opacity:0;
+transform:translateY(36px);
+transition:.7s;
+}
+
+.rv2{
+transition-delay:.15s;
+}
+
+.rv3{
+transition-delay:.3s;
+}
+
+.vis{
+opacity:1;
+transform:translateY(0);
+}
+
+@keyframes gridDrift{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(64px);
+}
+}
+
+@keyframes rotateBorder{
+0%{
+box-shadow:0 0 30px #39ff1440;
+}
+50%{
+box-shadow:0 0 50px #39ff1480;
+}
+100%{
+box-shadow:0 0 30px #39ff1440;
+}
+}
+
+@keyframes blink{
+0%,100%{
+opacity:1;
+}
+50%{
+opacity:.2;
+}
+}
+
+@keyframes floatBtn{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-7px);
+}
+}
+
+@media(max-width:900px){
+
+section{
+padding:70px 24px;
+}
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+padding-top:120px;
+}
+
+.nav-name{
+display:none;
+}
+
+.cards-2,
+.cards-3,
+.depo-grid,
+.proof-grid,
+.sobre-grid{
+grid-template-columns:1fr;
+}
+
+.steps{
+grid-template-columns:repeat(2,1fr);
+}
+
+.sobre-img-wrap{
+display:none;
+}
+
+h1{
+font-size:4.4rem;
+}
+
+h2{
+font-size:3rem;
+}
+
+.photo-wrap{
+width:340px;
+height:340px;
+}
+
+.step::before{
+display:none;
+}
+
+}
+
+@media(max-width:500px){
+
+h1{
+font-size:3rem;
+}
+
+.steps{
+grid-template-columns:1fr;
+}
+
+.photo-wrap{
+width:280px;
+height:280px;
+}
+
+.btn{
+width:100%;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
+<nav>
+<div class="nav-wrap">
+
+<div class="logo">
+<div class="logo-box">CW</div>
+<div class="nav-name">CLIENTE WEB SITES</div>
+</div>
+
+<a class="btn" href="https://wa.me/5511962883599?text=Olá%20Izabela!%20Vim%20do%20seu%20site%20e%20quero%20um%20site%20profissional%20para%20meu%20negócio%20🚀">
+Falar Agora
+</a>
+
+</div>
+</nav>
+
 <section class="hero">
 
-  <div class="grid-bg"></div>
-  <div class="hero-glow-orb"></div>
+<div class="grid-bg"></div>
+<div class="orb" style="top:-100px; right:-100px;"></div>
 
-  <div class="hero-left">
+<div class="container hero">
 
-    <div class="badge">
-      <span class="badge-dot"></span>
-      Design Premium · Resultado Real
-    </div>
+<div class="hero-left rv">
 
-    <h1>
-      Seu cliente te julga<br>
-      <span class="g">antes de falar</span>
-      com você.
-    </h1>
+<div class="tag blink">
+Design Premium · Resultado Real
+</div>
 
-    <p class="hero-desc">
-      Eu crio <strong>sites estratégicos</strong> que fazem seu negócio transmitir confiança, gerar autoridade e transformar visitantes em clientes prontos para comprar.
-    </p>
+<h1>
+Seu cliente te julga <span class="neon">antes de falar</span> com você
+</h1>
 
-    <div class="cta-group">
+<p>
+Seu Instagram pode até ser bonito… mas se o seu negócio não transmite profissionalismo, confiança e presença online, você perde clientes todos os dias sem perceber.
+</p>
 
-      <a
-        href="https://wa.me/5511962883599"
-        class="btn-main"
-        target="_blank"
-      >
-        📲 Quero Meu Site Agora
-      </a>
+<a class="btn" href="https://wa.me/5511962883599?text=Olá%20Izabela!%20Vim%20do%20seu%20site%20e%20quero%20um%20site%20profissional%20para%20meu%20negócio%20🚀">
+📲 Quero Meu Site Agora
+</a>
 
-      <p class="urgency">
-        ⚠️ Apenas <span>3 vagas abertas</span> esta semana
-      </p>
+<div class="urgency">
+Apenas 3 vagas abertas esta semana
+</div>
 
-    </div>
+</div>
 
-  </div>
+<div class="hero-right rv2">
 
-  <div class="hero-right">
+<div>
+<div class="photo-wrap">
+<div class="photo">
+<img src="1000177772.png" alt="Izabela">
+</div>
+</div>
 
-    <div class="card">
+<div class="founder-tag">
+Izabela · Fundadora
+</div>
+</div>
 
-      <div class="card-glow"></div>
+</div>
 
-      <div class="card-content">
+</div>
+</section>
 
-        <div class="mini-badge">
-          🚀 Sites que convertem
-        </div>
+<section class="proof-bar">
+<div class="container">
+<div class="proof-grid">
 
-        <h3>
-          MAIS CLIENTES.<br>
-          MAIS AUTORIDADE.<br>
-          <span class="green">
-            MAIS VENDAS.
-          </span>
-        </h3>
+<div class="proof-item rv">
+<div class="proof-number" data-target="30">0</div>
+<div>Sites Entregues</div>
+</div>
 
-        <p>
-          Um site profissional transmite confiança e transforma visitantes em clientes reais.
-        </p>
+<div class="proof-item rv2">
+<div class="proof-number">100%</div>
+<div>Satisfação</div>
+</div>
 
-        <div class="features">
+<div class="proof-item rv3">
+<div class="proof-number">5★</div>
+<div>Avaliação Média</div>
+</div>
 
-          <div class="feature">
-            <span class="check">✓</span>
-            Design premium e moderno
-          </div>
+<div class="proof-item rv">
+<div class="proof-number" data-target="48">0</div>
+<div>Horas de Entrega</div>
+</div>
 
-          <div class="feature">
-            <span class="check">✓</span>
-            Botão direto pro WhatsApp
-          </div>
+</div>
+</div>
+</section>
 
-          <div class="feature">
-            <span class="check">✓</span>
-            Estrutura pensada pra vender
-          </div>
+<section class="dark">
+<div class="container">
 
-        </div>
+<div class="tag">O problema</div>
 
-      </div>
+<h2>Você se identifica com isso?</h2>
 
-    </div>
+<div class="cards-2">
 
-  </div>
+<div class="card rv">
+<div class="card-icon">📱</div>
+<h3>Você posta todo dia e ninguém chama no WhatsApp</h3>
+<p>
+Seu perfil recebe visitas, mas não transmite autoridade suficiente para gerar ação.
+</p>
+</div>
+
+<div class="card rv2">
+<div class="card-icon">👀</div>
+<h3>As pessoas visitam seu perfil e somem</h3>
+<p>
+Sem um site profissional, seu negócio parece incompleto e inseguro.
+</p>
+</div>
+
+<div class="card rv3">
+<div class="card-icon">🔗</div>
+<h3>Você depende só de indicação</h3>
+<p>
+Ficar preso apenas no boca a boca limita totalmente o crescimento do seu negócio.
+</p>
+</div>
+
+<div class="card rv">
+<div class="card-icon">⚡</div>
+<h3>Seu concorrente parece maior mesmo sendo pior</h3>
+<p>
+Quem tem uma presença forte online ganha atenção, confiança e vendas primeiro.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="sobre-grid">
+
+<div class="sobre-img-wrap rv">
+<img src="1000177772.png" alt="Izabela">
+<div class="corner c-tl"></div>
+<div class="corner c-br"></div>
+</div>
+
+<div class="rv2">
+
+<div class="tag">Sobre Izabela</div>
+
+<h2>
+Seu negócio merece uma presença digital que vende.
+</h2>
+
+<p>
+A Cliente Web Sites nasceu para transformar perfis comuns em marcas profissionais que geram confiança instantânea. Cada site é pensado para destacar sua imagem, atrair clientes e aumentar suas conversões.
+</p>
+
+<div class="checks">
+
+<div class="check">
+<span>✓</span>
+Sites rápidos, modernos e responsivos
+</div>
+
+<div class="check">
+<span>✓</span>
+Design premium focado em conversão
+</div>
+
+<div class="check">
+<span>✓</span>
+Atendimento direto e suporte completo
+</div>
+
+<div class="check">
+<span>✓</span>
+Entrega rápida e personalizada
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="dark">
+<div class="container">
+
+<div class="tag">O que você recebe</div>
+
+<h2>Mais do que um site bonito.</h2>
+
+<div class="cards-3">
+
+<div class="card receive-card rv">
+<div class="card-icon">🚀</div>
+<h3>Design Profissional</h3>
+<p>
+Visual premium que valoriza sua marca e transmite autoridade.
+</p>
+</div>
+
+<div class="card receive-card rv2">
+<div class="card-icon">📲</div>
+<h3>WhatsApp Integrado</h3>
+<p>
+Clientes entram em contato com apenas um clique.
+</p>
+</div>
+
+<div class="card receive-card rv3">
+<div class="card-icon">⚡</div>
+<h3>Carregamento Rápido</h3>
+<p>
+Experiência fluida para aumentar conversões e retenção.
+</p>
+</div>
+
+<div class="card receive-card rv">
+<div class="card-icon">🌐</div>
+<h3>Site Responsivo</h3>
+<p>
+Seu site perfeito em celular, tablet e computador.
+</p>
+</div>
+
+<div class="card receive-card rv2">
+<div class="card-icon">🎯</div>
+<h3>Foco em Conversão</h3>
+<p>
+Estratégia visual feita para transformar visitas em clientes.
+</p>
+</div>
+
+<div class="card receive-card rv3">
+<div class="card-icon">🛠️</div>
+<h3>Suporte Completo</h3>
+<p>
+Ajuda contínua para você nunca ficar perdido.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="tag">Como funciona</div>
+
+<h2>Seu site pronto em poucos passos.</h2>
+
+<div class="steps">
+
+<div class="step rv">
+<div class="step-num">1</div>
+<h3>Contato</h3>
+<p>
+Você chama no WhatsApp e explica seu negócio.
+</p>
+</div>
+
+<div class="step rv2">
+<div class="step-num">2</div>
+<h3>Planejamento</h3>
+<p>
+Criamos o visual estratégico ideal para sua marca.
+</p>
+</div>
+
+<div class="step rv3">
+<div class="step-num">3</div>
+<h3>Desenvolvimento</h3>
+<p>
+Seu site é criado com foco total em conversão.
+</p>
+</div>
+
+<div class="step rv">
+<div class="step-num">4</div>
+<h3>Entrega</h3>
+<p>
+Seu site vai ao ar pronto para atrair clientes.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="dark">
+<div class="container">
+
+<div class="tag">Depoimentos</div>
+
+<h2>Quem fez, recomenda.</h2>
+
+<div class="depo-grid">
+
+<div class="card depo rv">
+<div class="quote">“</div>
+<div class="stars">★★★★★</div>
+
+<em>
+“Meu WhatsApp começou a receber muito mais mensagens depois do site.”
+</em>
+
+<hr>
+
+<strong>Mariana Souza</strong><br>
+<small>Designer de Sobrancelhas</small>
+</div>
+
+<div class="card depo rv2">
+<div class="quote">“</div>
+<div class="stars">★★★★★</div>
+
+<em>
+“Agora meu negócio parece muito mais profissional e confiável.”
+</em>
+
+<hr>
+
+<strong>Rafael Lima</strong><br>
+<small>Personal Trainer</small>
+</div>
+
+<div class="card depo rv3">
+<div class="quote">“</div>
+<div class="stars">★★★★★</div>
+
+<em>
+“Entrega rápida, atendimento incrível e um resultado surreal.”
+</em>
+
+<hr>
+
+<strong>Camila Alves</strong><br>
+<small>Loja Online</small>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="tag">FAQ</div>
+
+<h2>Perguntas frequentes</h2>
+
+<div class="faq-wrap">
+
+<div class="faq-item rv open">
+<button class="faq-btn">
+Quanto tempo demora?
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-content">
+<p>
+O prazo varia conforme o projeto, mas muitos sites ficam prontos em até 48 horas.
+</p>
+</div>
+</div>
+
+<div class="faq-item rv2">
+<button class="faq-btn">
+O site funciona no celular?
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-content">
+<p>
+Sim. Todos os sites são totalmente responsivos e adaptados para qualquer tela.
+</p>
+</div>
+</div>
+
+<div class="faq-item rv3">
+<button class="faq-btn">
+Posso alterar depois?
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-content">
+<p>
+Sim. Você pode solicitar ajustes e atualizações sempre que precisar.
+</p>
+</div>
+</div>
+
+<div class="faq-item rv">
+<button class="faq-btn">
+Preciso ter domínio?
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-content">
+<p>
+Não se preocupe. A Cliente Web Sites te orienta em todo o processo.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="cta-final">
+
+<div class="orb"></div>
+
+<div class="container rv">
+
+<div class="pill">
+Últimas vagas da semana
+</div>
+
+<h2>
+Seu negócio precisa parecer <span class="neon">grande</span> antes mesmo do primeiro contato.
+</h2>
+
+<p>
+Chegou a hora de transformar sua imagem online e fazer seu negócio atrair clientes todos os dias.
+</p>
+
+<a class="btn" href="https://wa.me/5511962883599?text=Olá%20Izabela!%20Vim%20do%20seu%20site%20e%20quero%20um%20site%20profissional%20para%20meu%20negócio%20🚀">
+📲 Falar com Izabela Agora
+</a>
+
+</div>
 
 </section>
 
-</body>
-</html>
+<footer>
+<div class="footer-wrap">
+
+<div class="footer-logo">
+CLIENTE WEB SITES
+</div>
+
+<div class="footer-links">
+<a href="#">Início</a>
+<a href="#">Serviços</a>
+<a href="#">Depoimentos</a>
+<a href="#">Contato</a>
+</div>
+
+<div>
+© 2026 Cliente Web Sites
+</div>
+
+</div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5511962883599?text=Olá%20Izabela!%20Vim%20do%20seu%20site%20e%20quero%20um%20site%20profissional%20para%20meu%20negócio%20🚀">
+💬
+</a>
+
+<script>
+
+const reveals = document.querySelectorAll('.rv, .rv2, .rv3');
+
+const revealObserver = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('vis');
+}
+});
+},{threshold:0.15});
+
+reveals.for
