@@ -1,1012 +1,1101 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cliente Web Sites — Sites Profissionais que Geram Clientes</title>
-<meta name="description" content="Criamos sites profissionais que transformam visitantes em clientes. Design premium, entrega rápida e resultado real. Fale com a Izabela agora.">
-<meta property="og:title" content="Cliente Web Sites — Sites que Fazem Seu Negócio Vender">
-<meta property="og:description" content="Seu cliente te julga antes de falar com você. Um site profissional muda isso. Fale comigo agora.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23050505'/><text y='.9em' font-size='80' x='10'>🌐</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<style>
-:root {
-  --neon: #39ff14;
-  --neon2: #00ff88;
-  --glow: 0 0 20px #39ff1466, 0 0 50px #39ff1422;
-  --black: #040404;
-  --dark: #0a0a0a;
-  --card: #0f0f0f;
-  --card2: #131313;
-  --border: #1c1c1c;
-  --white: #efefef;
-  --muted: #777;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--black);
-  color: var(--white);
-  font-family: 'DM Sans', sans-serif;
-  overflow-x: hidden;
-  font-size: 18px;
-}
-
-/* NOISE */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 9998;
-  opacity: .5;
-}
-
-/* ======== NAV ======== */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 500;
-  padding: 18px 48px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(4,4,4,.92);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-}
-.nav-brand { display: flex; align-items: center; gap: 12px; }
-.nav-logo-mark {
-  width: 36px; height: 36px;
-  background: var(--neon);
-  border-radius: 6px;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1rem;
-  color: var(--black);
-  letter-spacing: 1px;
-  box-shadow: var(--glow);
-}
-.nav-name {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  color: var(--white);
-}
-.nav-name span { color: var(--neon); }
-.nav-btn {
-  background: var(--neon);
-  color: var(--black);
-  padding: 10px 26px;
-  border-radius: 4px;
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: .8rem;
-  text-decoration: none;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  transition: all .3s;
-  white-space: nowrap;
-}
-.nav-btn:hover { box-shadow: var(--glow); transform: translateY(-2px); }
-
-/* ======== HERO ======== */
-.hero {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  padding-top: 73px;
-  position: relative;
-  overflow: hidden;
-}
-.hero-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 80px 64px 80px 80px;
-  position: relative;
-  z-index: 2;
-}
-.hero-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 80px 60px 40px;
-  position: relative;
-  z-index: 2;
-}
-
-/* GRID BG */
-.grid-bg {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(57,255,20,.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(57,255,20,.035) 1px, transparent 1px);
-  background-size: 64px 64px;
-  animation: gridDrift 25s linear infinite;
-}
-@keyframes gridDrift {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(64px); }
-}
-.hero-glow-orb {
-  position: absolute;
-  width: 700px; height: 700px;
-  background: radial-gradient(circle, rgba(57,255,20,.07) 0%, transparent 65%);
-  right: -100px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-/* BADGE */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: 1px solid rgba(57,255,20,.4);
-  color: var(--neon);
-  font-family: 'Syne', sans-serif;
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  padding: 7px 18px;
-  border-radius: 2px;
-  margin-bottom: 28px;
-  width: fit-content;
-}
-.badge-dot {
-  width: 6px; height: 6px;
-  background: var(--neon);
-  border-radius: 50%;
-  box-shadow: var(--glow);
-  animation: blink 2s infinite;
-}
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: .2; }
-}
-
-h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(3.2rem, 5.5vw, 5.8rem);
-  line-height: .93;
-  letter-spacing: 2px;
-  margin-bottom: 28px;
-}
-h1 .g {
-  color: var(--neon);
-  text-shadow: var(--glow);
-  display: block;
-}
-
-.hero-desc {
-  font-size: 1.1rem;
-  color: #999;
-  line-height: 1.85;
-  max-width: 520px;
-  margin-bottom: 44px;
-  font-weight: 300;
-}
-.hero-desc strong { color: var(--neon); font-weight: 500; }
-
-.cta-group { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
-.btn-main {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background: var(--neon);
-  color: var(--black);
-  padding: 18px 40px;
-  border-radius: 4px;
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all .3s;
-  position: relative;
-  overflow: hidden;
-  width: fit-content;
-}
-.btn-main::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: #fff;
-  transform: translateX(-100%);
-  transition: .3s;
-  opacity: .12;
-}
-.btn-main:hover::before { transform: translateX(0); }
-.btn-main:hover { box-shadow: var(--glow); transform: translateY(-3px); }
-.btn-main .ico { font-size: 1.2rem; }
-
-.urgency {
-  font-size: .95rem;
-  color: #555;
-  letter-spacing: .5px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.urgency span { color: var(--neon); }
-
-/* PHOTO */
-.photo-wrap { position: relative; width: 100%; max-width: 440px; }
-.photo-ring {
-  position: relative;
-  border-radius: 50%;
-  overflow: hidden;
-  aspect-ratio: 1;
-  border: 2px solid rgba(57,255,20,.25);
-  box-shadow: 0 0 60px rgba(57,255,20,.12), inset 0 0 40px rgba(0,0,0,.5);
-}
-.photo-ring img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-/* placeholder se não tiver foto */
-.photo-ring .photo-placeholder {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #0f1a0f, #1a2a1a);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  font-family: 'Syne', sans-serif;
-  color: var(--neon);
-  font-size: .8rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  border-radius: 50%;
-}
-.photo-placeholder span { font-size: 3rem; }
-
-.photo-glow {
-  position: absolute;
-  inset: -4px;
-  border-radius: 50%;
-  border: 1px solid rgba(57,255,20,.15);
-  animation: rotateBorder 8s linear infinite;
-}
-@keyframes rotateBorder {
-  0%   { box-shadow: 0 0 30px rgba(57,255,20,.2), 0 0 0 rgba(57,255,20,0); }
-  50%  { box-shadow: 0 0 50px rgba(57,255,20,.35), 0 0 80px rgba(57,255,20,.1); }
-  100% { box-shadow: 0 0 30px rgba(57,255,20,.2), 0 0 0 rgba(57,255,20,0); }
-}
-
-.photo-tag {
-  position: absolute;
-  bottom: -16px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--neon);
-  padding: 10px 20px;
-  border-radius: 4px;
-  white-space: nowrap;
-  font-family: 'Syne', sans-serif;
-  font-size: .75rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--neon);
-  box-shadow: 0 4px 24px rgba(0,0,0,.6);
-}
-
-/* ======== PROOF BAR ======== */
-.proof {
-  background: var(--card);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 28px 80px;
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-  flex-wrap: wrap;
-}
-.pitem { text-align: center; }
-.pnum {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2.4rem;
-  color: var(--neon);
-  text-shadow: var(--glow);
-  display: block;
-  line-height: 1;
-}
-.plabel {
-  font-size: .85rem;
-  color: var(--muted);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-top: 4px;
-  display: block;
-}
-
-/* ======== SECTIONS ======== */
-section { padding: 100px 80px; }
-.mw { max-width: 1100px; margin: 0 auto; }
-.stag {
-  font-family: 'Syne', sans-serif;
-  font-size: .65rem;
-  font-weight: 700;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--neon);
-  margin-bottom: 14px;
-  display: block;
-}
-.stitle {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.2rem, 4vw, 3.6rem);
-  letter-spacing: 1px;
-  line-height: 1;
-  margin-bottom: 16px;
-}
-.ssub {
-  color: var(--muted);
-  font-size: 1.1rem;
-  max-width: 560px;
-  line-height: 1.8;
-  font-weight: 300;
-}
-
-/* ======== DOR ======== */
-.dor-bg { background: var(--dark); }
-.dor-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
-  margin-top: 56px;
-}
-.dor-card {
-  background: var(--card);
-  padding: 36px 32px;
-  border: 1px solid var(--border);
-  position: relative;
-  overflow: hidden;
-  transition: .3s;
-  cursor: default;
-}
-.dor-card::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 3px;
-  background: var(--neon);
-  transform: scaleY(0);
-  transition: .4s;
-  transform-origin: bottom;
-}
-.dor-card:hover::before { transform: scaleY(1); }
-.dor-card:hover { background: #121212; }
-.dor-card h3 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 1.15rem;
-  margin-bottom: 12px;
-}
-.dor-card p { font-size: 1rem; color: var(--muted); line-height: 1.7; }
-.dor-icon { font-size: 2rem; margin-bottom: 18px; display: block; }
-
-/* ======== SOBRE ======== */
-.sobre-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 100px;
-  align-items: center;
-  margin-top: 60px;
-}
-.sobre-img-wrap { position: relative; }
-.sobre-img {
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  position: relative;
-  background: linear-gradient(135deg, #0f1a0f, #1a2a1a);
-  min-height: 420px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.sobre-img img { width: 100%; display: block; filter: brightness(.95) contrast(1.05); }
-.sobre-img::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(57,255,20,.04), transparent 60%);
-}
-
-/* placeholder sobre */
-.sobre-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 60px 40px;
-  color: var(--neon);
-  font-family: 'Syne', sans-serif;
-  text-align: center;
-}
-.sobre-placeholder span { font-size: 4rem; }
-.sobre-placeholder p {
-  font-size: .75rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #3a6b3a;
-  margin: 0;
-}
-
-.corner {
-  position: absolute;
-  width: 28px; height: 28px;
-  border-color: var(--neon);
-  border-style: solid;
-  box-shadow: var(--glow);
-}
-.c-tl { top: -6px; left: -6px; border-width: 2px 0 0 2px; }
-.c-br { bottom: -6px; right: -6px; border-width: 0 2px 2px 0; }
-
-.sobre-txt p {
-  color: #aaa;
-  line-height: 1.9;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  font-weight: 300;
-}
-.sobre-txt p strong { color: var(--neon); font-weight: 600; }
-.check-list {
-  list-style: none;
-  margin-top: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.check-list li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.05rem;
-  color: #ccc;
-}
-.check-list li::before {
-  content: '✓';
-  color: var(--neon);
-  font-weight: 800;
-  font-size: 1rem;
-  min-width: 20px;
-}
-
-/* ======== PROJETOS ======== */
-.recebe-bg { background: var(--dark); }
-.recebe-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  margin-top: 56px;
-  border: 1px solid var(--border);
-}
-.rec-item {
-  background: var(--card);
-  padding: 40px 32px;
-  border: 1px solid var(--border);
-  transition: .3s;
-  position: relative;
-  overflow: hidden;
-}
-.rec-item::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--neon), transparent);
-  transform: scaleX(0);
-  transition: .4s;
-  transform-origin: left;
-}
-.rec-item:hover::after { transform: scaleX(1); }
-.rec-item:hover { background: #131313; }
-.rec-item img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  border: 1px solid var(--border);
-  display: block;
-}
-
-/* placeholder de imagem de projeto */
-.rec-img-placeholder {
-  width: 100%;
-  height: 180px;
-  background: linear-gradient(135deg, #0f1a0f, #1a2a1a);
-  border-radius: 10px;
-  margin-bottom: 20px;
-  border: 1px solid rgba(57,255,20,.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-}
-
-.rec-item h3 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin-bottom: 12px;
-  color: var(--white);
-}
-.rec-item p { font-size: 1rem; color: var(--muted); line-height: 1.7; }
-
-/* ======== DEPOIMENTOS ======== */
-.dep-bg { background: var(--black); }
-.dep-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 56px;
-}
-.dep-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 36px;
-  border-radius: 6px;
-  transition: .3s;
-  display: flex;
-  flex-direction: column;
-}
-.dep-card:hover {
-  border-color: #252525;
-  transform: translateY(-5px);
-  box-shadow: 0 20px 60px rgba(0,0,0,.5);
-}
-.dep-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  border: 1px solid var(--border);
-}
-
-/* placeholder de depoimento */
-.dep-img-placeholder {
-  width: 100%;
-  height: 160px;
-  background: linear-gradient(135deg, #0f1a0f, #1a2a1a);
-  border-radius: 10px;
-  margin-bottom: 20px;
-  border: 1px solid rgba(57,255,20,.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-}
-
-.dep-q {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 4rem;
-  color: var(--neon);
-  opacity: .3;
-  line-height: .8;
-  margin-bottom: 12px;
-}
-.dep-stars {
-  color: var(--neon);
-  letter-spacing: 2px;
-  font-size: .85rem;
-  margin-bottom: 16px;
-}
-.dep-txt {
-  font-size: 1.05rem;
-  color: #bbb;
-  line-height: 1.8;
-  font-style: italic;
-  flex: 1;
-  margin-bottom: 24px;
-}
-.dep-sep { border: none; border-top: 1px solid var(--border); margin-bottom: 16px; }
-.dep-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; }
-.dep-role { font-size: .9rem; color: var(--muted); margin-top: 4px; }
-
-/* ======== CTA FINAL ======== */
-.cta-sec {
-  background: var(--black);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.cta-orb {
-  position: absolute;
-  width: 900px; height: 900px;
-  background: radial-gradient(circle, rgba(57,255,20,.07) 0%, transparent 65%);
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-.cta-inner { position: relative; z-index: 2; }
-.cta-sec h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.5rem, 5.5vw, 5rem);
-  letter-spacing: 2px;
-  line-height: 1;
-  margin-bottom: 20px;
-}
-.cta-sec h2 span { color: var(--neon); text-shadow: var(--glow); }
-.cta-sec p {
-  color: var(--muted);
-  font-size: 1.2rem;
-  line-height: 1.85;
-  max-width: 520px;
-  margin: 0 auto 44px;
-}
-.urg-pill {
-  display: inline-block;
-  background: rgba(57,255,20,.08);
-  border: 1px solid rgba(57,255,20,.25);
-  color: var(--neon);
-  font-family: 'Syne', sans-serif;
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  padding: 9px 22px;
-  border-radius: 100px;
-  margin-bottom: 40px;
-}
-
-/* ======== WA FLOAT ======== */
-.wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 400; }
-.wa-float a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--neon);
-  color: var(--black);
-  padding: 14px 24px;
-  border-radius: 50px;
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: .85rem;
-  text-decoration: none;
-  box-shadow: var(--glow);
-  text-transform: uppercase;
-  letter-spacing: .5px;
-  animation: floatBtn 3s ease-in-out infinite;
-}
-@keyframes floatBtn {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-7px); }
-}
-
-/* ======== FOOTER ======== */
-footer {
-  background: var(--card);
-  border-top: 1px solid var(--border);
-  padding: 40px 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.foot-brand {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.3rem;
-  color: var(--neon);
-  letter-spacing: 2px;
-}
-.foot-copy { font-size: .9rem; color: #333; }
-
-/* ======== SCROLL REVEAL ======== */
-.rv  { opacity: 0; transform: translateY(36px); transition: opacity .7s ease, transform .7s ease; }
-.rv2 { opacity: 0; transform: translateY(36px); transition: opacity .7s .15s ease, transform .7s .15s ease; }
-.rv3 { opacity: 0; transform: translateY(36px); transition: opacity .7s .3s ease, transform .7s .3s ease; }
-.rv.vis, .rv2.vis, .rv3.vis { opacity: 1; transform: translateY(0); }
-
-/* ======== RESPONSIVO ======== */
-@media(max-width: 900px) {
-  nav { padding: 16px 24px; }
-  .nav-name { display: none; }
-  .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-left { padding: 90px 24px 40px; }
-  .hero-right { padding: 0 24px 60px; justify-content: center; }
-  .photo-wrap { max-width: 300px; margin: 0 auto; }
-  section { padding: 70px 24px; }
-  .proof { padding: 20px 24px; gap: 28px; }
-  .dor-grid { grid-template-columns: 1fr; }
-  .sobre-grid { grid-template-columns: 1fr; gap: 40px; }
-  .sobre-img-wrap { display: none; }
-  .recebe-grid { grid-template-columns: 1fr; }
-  .dep-grid { grid-template-columns: 1fr; }
-  footer { flex-direction: column; text-align: center; padding: 32px 24px; }
-}
-@media(max-width: 500px) {
-  h1 { font-size: 3rem; }
-}
-</style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav>
-  <div class="nav-brand">
-    <div class="nav-logo-mark">CW</div>
-    <div class="nav-name">CLIENTE <span>WEB SITES</span></div>
+<!-- NAVBAR -->
+<nav class="nav">
+  <div class="nav-logo">
+    <div class="logo-box">CW</div>
+    <span>CLIENTE WEB SITES</span>
   </div>
-  <a href="https://wa.me/5511962883599?text=Olá%20Izabela!%20Vim%20do%20seu%20site%20e%20quero%20um%20site%20profissional%20para%20meu%20negócio%20🚀"
-     class="nav-btn" target="_blank">Falar Agora</a>
+
+  <a href="https://wa.me/5511962883599?text=Olá%20Izabela!%20Quero%20um%20site%20profissional%20🚀"
+  target="_blank"
+  class="nav-btn">
+    Falar Agora
+  </a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
+
   <div class="grid-bg"></div>
   <div class="hero-glow-orb"></div>
 
   <div class="hero-left rv">
-    <div class="badge"><span class="badge-dot"></span>Sites que Geram Clientes</div>
+
+    <div class="badge pulse">
+      <span class="badge-dot"></span>
+      Design Premium · Resultado Real
+    </div>
+
     <h1>
-      Seu negócio pode ser bom.<br>
-      <span class="g">Mas seu visual</span>
-      ainda afasta clientes.
+      Seu cliente te julga<br>
+      <span class="g">antes de falar</span>
+      com você
     </h1>
+
     <p class="hero-desc">
       Hoje as pessoas pesquisam sua empresa antes de comprar.
-      E em segundos elas decidem se você parece profissional... ou improvisado.<br><br>
-      Eu crio <strong>sites modernos e estratégicos</strong> que fazem sua empresa transmitir
-      confiança, autoridade e valor — antes mesmo do cliente falar com você.
+      E em segundos elas decidem se você parece profissional...
+      ou improvisado.
     </p>
+
     <div class="cta-group">
-      <a href="https://wa.me/5511962883599?text=Olá%20Izabela!%20Vim%20do%20seu%20site%20e%20quero%20um%20site%20profissional%20🚀"
-         class="btn-main" target="_blank">
-        <span class="ico">📲</span> Quero Meu Site Agora
+
+      <a href="https://wa.me/5511962883599?text=Olá%20Izabela!%20Quero%20um%20site%20profissional%20🚀"
+      class="btn-main"
+      target="_blank">
+
+        <span class="ico">📲</span>
+        Quero Meu Site Agora
+
       </a>
-      <p class="urgency">⚠️ Apenas <span>3 vagas abertas</span> esta semana</p>
+
+      <p class="urgency">
+        ⚠️ Apenas <span>3 vagas abertas</span> esta semana
+      </p>
+
     </div>
+
   </div>
 
   <div class="hero-right rv2">
+
     <div class="photo-wrap">
+
       <div class="photo-ring">
-        <!-- TROQUE src="SUA-FOTO.jpg" pela sua foto real -->
-        <!-- Se não tiver foto, o placeholder abaixo aparece -->
-        <div class="photo-placeholder">
-          <span>📸</span>
-          Sua foto aqui
-        </div>
+        <img src="SUA-FOTO.jpg" alt="Izabela">
       </div>
+
       <div class="photo-glow"></div>
-      <div class="photo-tag">✦ Izabela · Fundadora da Cliente Web Sites</div>
+
+      <div class="photo-tag">
+        Izabela · Fundadora
+      </div>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- PROOF BAR -->
-<div class="proof">
+<!-- PROOF -->
+<section class="proof">
+
   <div class="pitem">
-    <span class="pnum" data-target="20">0</span>
-    <span class="plabel">Projetos Criados</span>
+    <span class="pnum" data-target="30">0</span>
+    <span class="plabel">Sites Entregues</span>
   </div>
+
   <div class="pitem">
     <span class="pnum">100%</span>
-    <span class="plabel">Responsivos</span>
+    <span class="plabel">Satisfação</span>
   </div>
+
   <div class="pitem">
     <span class="pnum">5★</span>
     <span class="plabel">Avaliação Média</span>
   </div>
+
   <div class="pitem">
-    <span class="pnum">24h</span>
-    <span class="plabel">Suporte Real</span>
+    <span class="pnum" data-target="48">0</span>
+    <span class="plabel">Horas de Entrega</span>
   </div>
-</div>
+
+</section>
 
 <!-- DOR -->
 <section class="dor-bg">
+
   <div class="mw">
-    <span class="stag rv">A verdade</span>
-    <h2 class="stitle rv">Seu Instagram sozinho<br>não transmite confiança.</h2>
-    <p class="ssub rv">Muitas empresas perdem clientes todos os dias porque parecem amadoras na internet.</p>
+
+    <span class="stag">O problema</span>
+
+    <h2 class="stitle">
+      Você se identifica com isso?
+    </h2>
+
     <div class="dor-grid">
-      <div class="dor-card rv">
+
+      <div class="dor-card">
         <span class="dor-icon">📉</span>
-        <h3>Você parece pequeno</h3>
-        <p>Mesmo sendo bom no que faz, seu cliente pode achar sua empresa amadora — e ir embora sem dizer nada.</p>
+
+        <h3>
+          Você posta todo dia e ninguém chama no WhatsApp
+        </h3>
+
+        <p>
+          Seu perfil recebe visitas,
+          mas não gera clientes.
+        </p>
       </div>
-      <div class="dor-card rv2">
+
+      <div class="dor-card">
         <span class="dor-icon">📱</span>
-        <h3>Instagram não basta</h3>
-        <p>Hoje empresas profissionais têm site, WhatsApp e presença forte online. Sem isso, você fica para trás.</p>
+
+        <h3>
+          As pessoas visitam seu perfil e somem
+        </h3>
+
+        <p>
+          Falta autoridade visual
+          para gerar confiança.
+        </p>
       </div>
-      <div class="dor-card rv">
+
+      <div class="dor-card">
         <span class="dor-icon">💸</span>
-        <h3>Clientes desconfiam</h3>
-        <p>Sem um visual profissional, muitas pessoas nem chegam a pedir orçamento. O medo de golpe fala mais alto.</p>
+
+        <h3>
+          Você depende só de indicação
+        </h3>
+
+        <p>
+          Seu negócio precisa vender
+          também pela internet.
+        </p>
       </div>
-      <div class="dor-card rv2">
+
+      <div class="dor-card">
         <span class="dor-icon">🚀</span>
-        <h3>Seu concorrente sai na frente</h3>
-        <p>Quem parece mais profissional vende mais. Imagem é tudo na primeira impressão — e ela acontece online.</p>
+
+        <h3>
+          Seu concorrente parece maior mesmo sendo pior
+        </h3>
+
+        <p>
+          Quem parece mais profissional,
+          vende mais.
+        </p>
       </div>
+
     </div>
+
   </div>
+
 </section>
 
 <!-- SOBRE -->
-<section>
+<section class="sobre-sec">
+
   <div class="mw">
+
     <div class="sobre-grid">
-      <div class="sobre-img-wrap rv">
+
+      <div class="sobre-img-wrap">
+
         <div class="sobre-img">
-          <!-- TROQUE pelo caminho da sua foto quando tiver -->
-          <div class="sobre-placeholder">
-            <span>🌐</span>
-            <p>Izabela · Cliente Web Sites</p>
-          </div>
+          <img src="SUA-FOTO.jpg" alt="Izabela">
         </div>
+
         <div class="corner c-tl"></div>
         <div class="corner c-br"></div>
+
       </div>
-      <div class="sobre-txt rv2">
-        <span class="stag">Quem vai criar seu site?</span>
-        <h2 class="stitle">Eu ajudo empresas pequenas<br>a parecerem empresas grandes.</h2>
-        <p>Meu foco não é apenas fazer um site bonito. Eu crio sites que fazem sua empresa transmitir
-          <strong>confiança, autoridade e profissionalismo.</strong></p>
-        <p>Porque hoje o cliente te julga antes mesmo de falar com você. E eu garanto que essa primeira impressão seja perfeita.</p>
+
+      <div class="sobre-txt">
+
+        <span class="stag">Sobre mim</span>
+
+        <h2 class="stitle">
+          Eu ajudo empresas pequenas
+          a parecerem empresas grandes
+        </h2>
+
+        <p>
+          Meu foco não é apenas fazer um site bonito.
+          Eu crio sites que fazem sua empresa transmitir
+          confiança, autoridade e profissionalismo.
+        </p>
+
         <ul class="check-list">
-          <li>Design moderno e premium</li>
-          <li>Site rápido e responsivo</li>
-          <li>Botão direto para WhatsApp</li>
-          <li>Visual profissional que gera confiança</li>
-          <li>Entrega rápida, sem enrolação</li>
+
+          <li>✔ Design moderno e premium</li>
+          <li>✔ Site rápido e responsivo</li>
+          <li>✔ Botão direto para WhatsApp</li>
+          <li>✔ Visual que gera confiança</li>
+
         </ul>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- PROJETOS -->
+<!-- O QUE RECEBE -->
 <section class="recebe-bg">
+
   <div class="mw">
-    <span class="stag rv">Projetos</span>
-    <h2 class="stitle rv">Alguns sites criados por mim</h2>
-    <p class="ssub rv">Sites modernos criados para transmitir confiança e gerar mais clientes.</p>
+
+    <span class="stag">O que você recebe</span>
+
+    <h2 class="stitle">
+      Tudo que seu negócio precisa
+      para vender mais
+    </h2>
+
     <div class="recebe-grid">
 
-      <div class="rec-item rv">
-        <!-- TROQUE pelo caminho da imagem real: <img src="site-serralheria.png" alt="VNN Serralheria"> -->
-        <div class="rec-img-placeholder">🔧</div>
-        <h3>VNN Serralheria</h3>
-        <p>Site profissional criado para transmitir autoridade e facilitar contato rápido pelo WhatsApp.</p>
+      <div class="rec-item">
+        <span>⚡</span>
+        <h3>Site Rápido</h3>
+        <p>Performance otimizada.</p>
       </div>
 
-      <div class="rec-item rv2">
-        <div class="rec-img-placeholder">📄</div>
-        <h3>Landing Pages</h3>
-        <p>Páginas modernas focadas em conversão e geração de clientes para negócios locais.</p>
+      <div class="rec-item">
+        <span>📱</span>
+        <h3>Responsivo</h3>
+        <p>Funciona perfeitamente no celular.</p>
       </div>
 
-      <div class="rec-item rv3">
-        <div class="rec-img-placeholder">💼</div>
-        <h3>Sites Comerciais</h3>
-        <p>Sites responsivos para empresas, profissionais autônomos e negócios de qualquer segmento.</p>
+      <div class="rec-item">
+        <span>💬</span>
+        <h3>WhatsApp</h3>
+        <p>Contato rápido e fácil.</p>
+      </div>
+
+      <div class="rec-item">
+        <span>🎨</span>
+        <h3>Design Premium</h3>
+        <p>Visual moderno e profissional.</p>
+      </div>
+
+      <div class="rec-item">
+        <span>🚀</span>
+        <h3>Conversão</h3>
+        <p>Estrutura feita para gerar clientes.</p>
+      </div>
+
+      <div class="rec-item">
+        <span>🔒</span>
+        <h3>Confiança</h3>
+        <p>Sua empresa transmite autoridade.</p>
       </div>
 
     </div>
+
   </div>
+
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="como-sec">
+
+  <div class="mw">
+
+    <span class="stag">Como funciona</span>
+
+    <h2 class="stitle">
+      Processo simples e rápido
+    </h2>
+
+    <div class="steps-grid">
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Contato</h3>
+        <p>Você chama no WhatsApp.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Planejamento</h3>
+        <p>Definimos o visual ideal.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Criação</h3>
+        <p>Seu site é desenvolvido.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Entrega</h3>
+        <p>Seu site vai ao ar.</p>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 <!-- DEPOIMENTOS -->
 <section class="dep-bg">
+
   <div class="mw">
-    <span class="stag rv">Resultados reais</span>
-    <h2 class="stitle rv">Pessoas reais.<br>Resultados reais.</h2>
-    <p class="ssub rv">Feedbacks de quem já confiou no trabalho.</p>
+
+    <span class="stag">Depoimentos</span>
+
+    <h2 class="stitle">
+      Pessoas reais.
+      Resultados reais.
+    </h2>
+
     <div class="dep-grid">
 
-      <div class="dep-card rv">
-        <!-- TROQUE pelo caminho real: <img src="depoimento1.jpg" alt="Depoimento"> -->
-        <div class="dep-img-placeholder">💬</div>
+      <div class="dep-card">
+
+        <div class="dep-q">“</div>
+
         <div class="dep-stars">★★★★★</div>
-        <p class="dep-txt">"Está tudo dando muito certo, a pessoa já vem pedindo o Pix."</p>
-        <hr class="dep-sep">
-        <div class="dep-name">Cliente — VNN Serralheria</div>
-        <div class="dep-role">Resultado após lançar o site</div>
+
+        <p class="dep-txt">
+          “Agora os clientes chegam
+          falando que meu negócio parece profissional.”
+        </p>
+
+        <hr>
+
+        <div class="dep-name">Cliente Real</div>
+
+        <div class="dep-role">Empresário</div>
+
       </div>
 
-      <div class="dep-card rv2">
-        <!-- TROQUE pelo caminho real: <img src="depoimento2.jpg" alt="Depoimento"> -->
-        <div class="dep-img-placeholder">📩</div>
+      <div class="dep-card">
+
+        <div class="dep-q">“</div>
+
         <div class="dep-stars">★★★★★</div>
-        <p class="dep-txt">"Cliente veio direto do Instagram buscando atendimento. O site passou confiança na hora."</p>
-        <hr class="dep-sep">
-        <div class="dep-name">Cliente satisfeito</div>
-        <div class="dep-role">Negócio local</div>
+
+        <p class="dep-txt">
+          “As pessoas passaram a confiar muito mais
+          depois do site.”
+        </p>
+
+        <hr>
+
+        <div class="dep-name">Cliente Real</div>
+
+        <div class="dep-role">Negócio Local</div>
+
       </div>
 
-      <div class="dep-card rv3">
-        <div class="dep-q">"</div>
+      <div class="dep-card">
+
+        <div class="dep-q">“</div>
+
         <div class="dep-stars">★★★★★</div>
-        <p class="dep-txt">Seu cliente decide em segundos se confia ou não na sua empresa. Um site profissional muda isso completamente.</p>
-        <hr class="dep-sep">
-        <div class="dep-name">Cliente Web Sites</div>
-        <div class="dep-role">Sites profissionais que vendem</div>
+
+        <p class="dep-txt">
+          “O visual mudou completamente
+          minha imagem profissional.”
+        </p>
+
+        <hr>
+
+        <div class="dep-name">Cliente Real</div>
+
+        <div class="dep-role">Autônomo</div>
+
       </div>
 
     </div>
+
   </div>
+
+</section>
+
+<!-- FAQ -->
+<section class="faq-sec">
+
+  <div class="mw">
+
+    <span class="stag">FAQ</span>
+
+    <h2 class="stitle">
+      Dúvidas frequentes
+    </h2>
+
+    <div class="faq-item open">
+
+      <button class="faq-question">
+        Quanto tempo demora?
+        <span>+</span>
+      </button>
+
+      <div class="faq-answer">
+        O prazo varia conforme o projeto,
+        mas muitos sites ficam prontos rapidamente.
+      </div>
+
+    </div>
+
+    <div class="faq-item">
+
+      <button class="faq-question">
+        O site funciona no celular?
+        <span>+</span>
+      </button>
+
+      <div class="faq-answer">
+        Sim, todos os sites são 100% responsivos.
+      </div>
+
+    </div>
+
+    <div class="faq-item">
+
+      <button class="faq-question">
+        Tem suporte?
+        <span>+</span>
+      </button>
+
+      <div class="faq-answer">
+        Sim, você recebe suporte após a entrega.
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 <!-- CTA FINAL -->
 <section class="cta-sec">
+
   <div class="cta-orb"></div>
+
   <div class="cta-inner">
-    <div class="urg-pill">Últimas vagas disponíveis</div>
+
+    <div class="urg-pill">
+      Últimas vagas disponíveis
+    </div>
+
     <h2>
-      Seu concorrente já parece profissional.<br>
+      Seu concorrente já parece profissional.
       <span>E você?</span>
     </h2>
-    <p>Tenha um site moderno, profissional e preparado para transformar visitantes em clientes.</p>
+
+    <p>
+      Tenha um site moderno e preparado
+      para transformar visitantes em clientes.
+    </p>
+
     <a href="https://wa.me/5511962883599?text=Olá%20Izabela!%20Quero%20um%20site%20profissional%20🚀"
-       class="btn-main" target="_blank">
-      <span class="ico">📲</span> Quero Meu Site
+    class="btn-main"
+    target="_blank">
+
+      📲 Quero Meu Site
+
     </a>
+
   </div>
+
 </section>
 
-<!-- WA FLOAT -->
-<div class="wa-float">
-  <a href="https://wa.me/5511962883599?text=Olá%20Izabela!%20Vim%20do%20seu%20site%20🚀" target="_blank">
-    💬 Falar Agora
-  </a>
-</div>
+<!-- BOTÃO FLUTUANTE -->
+<a href="https://wa.me/5511962883599"
+class="float-whats"
+target="_blank">
+  💬
+</a>
 
 <!-- FOOTER -->
 <footer>
-  <div class="foot-brand">CLIENTE WEB SITES</div>
-  <div class="foot-copy">© 2026 • Todos os direitos reservados</div>
+
+  <div class="foot-brand">
+    CLIENTE WEB SITES
+  </div>
+
+  <div class="foot-copy">
+    © 2026 • Todos os direitos reservados
+  </div>
+
 </footer>
 
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050505;
+color:#fff;
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
+}
+
+.mw{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+.g{
+color:#00ff88;
+text-shadow:0 0 15px #00ff88;
+}
+
+.stitle{
+font-size:55px;
+font-family:'Bebas Neue',sans-serif;
+line-height:1;
+margin-bottom:20px;
+}
+
+.stag{
+color:#00ff88;
+letter-spacing:2px;
+text-transform:uppercase;
+font-size:14px;
+}
+
+/* NAV */
+
+.nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 7%;
+backdrop-filter:blur(14px);
+background:rgba(0,0,0,.5);
+z-index:999;
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.nav-logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-weight:700;
+}
+
+.logo-box{
+width:42px;
+height:42px;
+background:#00ff88;
+color:#000;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:6px;
+font-weight:800;
+}
+
+.nav-btn{
+background:#00ff88;
+color:#000;
+padding:14px 22px;
+border-radius:12px;
+font-weight:700;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+padding:140px 7%;
+position:relative;
+overflow:hidden;
+}
+
+.grid-bg{
+position:absolute;
+inset:0;
+background-image:
+linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+background-size:60px 60px;
+animation:gridDrift 25s linear infinite;
+}
+
+@keyframes gridDrift{
+from{transform:translateY(0);}
+to{transform:translateY(60px);}
+}
+
+.hero-glow-orb{
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#00ff8840,transparent 70%);
+right:-200px;
+top:-100px;
+}
+
+.hero h1{
+font-size:95px;
+line-height:.9;
+font-family:'Bebas Neue',sans-serif;
+margin:25px 0;
+position:relative;
+z-index:2;
+}
+
+.hero-desc{
+max-width:600px;
+line-height:1.8;
+opacity:.8;
+font-size:18px;
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:12px 18px;
+border:1px solid rgba(0,255,136,.3);
+border-radius:999px;
+background:#0c0c0c;
+}
+
+.badge-dot{
+width:10px;
+height:10px;
+background:#00ff88;
+border-radius:50%;
+}
+
+.pulse{
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+50%{transform:scale(1.03);}
+}
+
+.btn-main{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:18px 34px;
+background:#00ff88;
+color:#000;
+border-radius:14px;
+font-weight:700;
+text-decoration:none;
+margin-top:30px;
+box-shadow:0 0 25px #00ff8860;
+}
+
+.urgency{
+margin-top:15px;
+opacity:.7;
+}
+
+.photo-wrap{
+position:relative;
+width:420px;
+margin:auto;
+}
+
+.photo-ring{
+padding:8px;
+border-radius:50%;
+background:linear-gradient(45deg,#00ff88,transparent,#00ff88);
+animation:spin 8s linear infinite;
+}
+
+@keyframes spin{
+100%{transform:rotate(360deg);}
+}
+
+.photo-ring img{
+width:100%;
+border-radius:50%;
+display:block;
+}
+
+.photo-tag{
+margin-top:20px;
+text-align:center;
+padding:12px;
+background:#111;
+border-radius:14px;
+border:1px solid rgba(255,255,255,.06);
+}
+
+/* PROOF */
+
+.proof{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+background:#0f0f0f;
+padding:50px 7%;
+text-align:center;
+gap:20px;
+}
+
+.pnum{
+font-size:50px;
+font-family:'Bebas Neue',sans-serif;
+color:#00ff88;
+}
+
+.plabel{
+display:block;
+opacity:.7;
+}
+
+/* DOR */
+
+.dor-bg{
+background:#0a0a0a;
+padding:120px 0;
+}
+
+.dor-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+margin-top:50px;
+}
+
+.dor-card{
+background:#111;
+padding:35px;
+border-radius:20px;
+position:relative;
+overflow:hidden;
+}
+
+.dor-card::before{
+content:'';
+position:absolute;
+left:0;
+bottom:0;
+width:3px;
+height:100%;
+background:#00ff88;
+transform:scaleY(0);
+transform-origin:bottom;
+transition:.5s;
+}
+
+.dor-card:hover::before{
+transform:scaleY(1);
+}
+
+/* RECEBE */
+
+.recebe-bg{
+background:#0a0a0a;
+padding:120px 0;
+}
+
+.recebe-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:50px;
+}
+
+.rec-item{
+background:#111;
+padding:35px;
+border-radius:20px;
+position:relative;
+overflow:hidden;
+}
+
+.rec-item::after{
+content:'';
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+height:3px;
+background:#00ff88;
+transform:scaleX(0);
+transform-origin:left;
+transition:.5s;
+}
+
+.rec-item:hover::after{
+transform:scaleX(1);
+}
+
+/* STEPS */
+
+.como-sec{
+padding:120px 0;
+}
+
+.steps-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+margin-top:60px;
+}
+
+.step{
+background:#111;
+padding:35px;
+border-radius:20px;
+position:relative;
+}
+
+.step-num{
+width:60px;
+height:60px;
+border:2px solid #00ff88;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+font-weight:700;
+margin-bottom:20px;
+transition:.4s;
+}
+
+.step:hover .step-num{
+background:#00ff88;
+color:#000;
+}
+
+/* FAQ */
+
+.faq-sec{
+padding:120px 0;
+}
+
+.faq-item{
+background:#111;
+border-radius:18px;
+margin-top:20px;
+overflow:hidden;
+}
+
+.faq-question{
+width:100%;
+background:none;
+border:none;
+color:#fff;
+padding:25px;
+font-size:18px;
+display:flex;
+justify-content:space-between;
+cursor:pointer;
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:.4s;
+padding:0 25px;
+opacity:.7;
+}
+
+.faq-item.open .faq-answer{
+max-height:200px;
+padding-bottom:25px;
+}
+
+/* DEPOIMENTOS */
+
+.dep-bg{
+background:#0a0a0a;
+padding:120px 0;
+}
+
+.dep-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:50px;
+}
+
+.dep-card{
+background:#111;
+padding:35px;
+border-radius:20px;
+transition:.4s;
+}
+
+.dep-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 30px #00ff8830;
+}
+
+.dep-q{
+font-size:90px;
+font-family:'Bebas Neue';
+color:#00ff88;
+line-height:1;
+}
+
+.dep-stars{
+color:#00ff88;
+margin:15px 0;
+}
+
+/* CTA */
+
+.cta-sec{
+padding:130px 7%;
+position:relative;
+text-align:center;
+overflow:hidden;
+}
+
+.cta-orb{
+position:absolute;
+width:700px;
+height:700px;
+background:radial-gradient(circle,#00ff8830,transparent 70%);
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+}
+
+.cta-inner{
+position:relative;
+z-index:2;
+}
+
+.urg-pill{
+display:inline-block;
+padding:12px 18px;
+border-radius:999px;
+background:#0f0f0f;
+border:1px solid rgba(0,255,136,.3);
+margin-bottom:25px;
+}
+
+/* FLOAT */
+
+.float-whats{
+position:fixed;
+right:25px;
+bottom:25px;
+width:70px;
+height:70px;
+background:#00ff88;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:30px;
+text-decoration:none;
+color:#000;
+animation:floatBtn 3s ease-in-out infinite;
+z-index:999;
+}
+
+@keyframes floatBtn{
+50%{transform:translateY(-7px);}
+}
+
+/* FOOTER */
+
+footer{
+display:flex;
+justify-content:space-between;
+padding:40px 7%;
+border-top:1px solid rgba(255,255,255,.05);
+}
+
+.foot-brand{
+font-family:'Bebas Neue';
+font-size:28px;
+color:#00ff88;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+.hero,
+.sobre-grid,
+.steps-grid,
+.dep-grid,
+.recebe-grid,
+.proof,
+.dor-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:65px;
+}
+
+.photo-wrap{
+width:100%;
+margin-top:50px;
+}
+
+.stitle{
+font-size:42px;
+}
+
+footer{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+}
+
+</style>
+
 <script>
-// === SCROLL REVEAL ===
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('vis');
-  });
-}, { threshold: 0.15 });
-document.querySelectorAll('.rv, .rv2, .rv3').forEach(el => observer.observe(el));
 
-// === CONTADOR ANIMADO ===
-const counters = document.querySelectorAll('[data-target]');
-const countObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const target = +entry.target.getAttribute('data-target');
-      let current = 0;
-      const increment = target / 50;
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          entry.target.textContent = '+' + target;
-          clearInterval(timer);
-        } else {
-          entry.target.textContent = Math.floor(current);
-        }
-      }, 30);
-      countObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
-counters.forEach(c => countObserver.observe(c));
+/* FAQ */
+
+document.querySelectorAll('.faq-question').forEach(btn=>{
+
+btn.onclick=()=>{
+
+const item=btn.parentElement;
+
+document.querySelectorAll('.faq-item').forEach(i=>{
+if(i!==item){
+i.classList.remove('open');
+}
+});
+
+item.classList.toggle('open');
+
+};
+
+});
+
+/* COUNTER */
+
+const counters=document.querySelectorAll('[data-target]');
+
+counters.forEach(counter=>{
+
+const update=()=>{
+
+const target=+counter.getAttribute('data-target');
+const current=+counter.innerText;
+
+const inc=target/60;
+
+if(current<target){
+
+counter.innerText=Math.ceil(current+inc);
+
+setTimeout(update,30);
+
+}else{
+
+counter.innerText=target+'+';
+
+}
+
+};
+
+update();
+
+});
+
 </script>
-
-</body>
-</html>
