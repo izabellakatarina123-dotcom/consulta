@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Cliente Web Sites</title>
 
@@ -23,7 +24,7 @@
     body{
       background:#090909;
       color:#fff;
-      font-family:'Syne',sans-serif;
+      font-family:Arial, sans-serif;
       overflow-x:hidden;
     }
 
@@ -32,11 +33,10 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      gap:80px;
-      padding:80px 8%;
-      position:relative;
-      overflow:hidden;
+      gap:60px;
+      padding:80px 5%;
       flex-wrap:wrap;
+      position:relative;
     }
 
     .grid-bg{
@@ -45,46 +45,43 @@
       background-image:
       linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-
       background-size:60px 60px;
       z-index:0;
     }
 
     .hero-glow-orb{
-      width:500px;
-      height:500px;
+      position:absolute;
+      width:400px;
+      height:400px;
       background:#39ff14;
       opacity:.08;
-      filter:blur(120px);
-
-      position:absolute;
-      top:-150px;
-      right:-100px;
+      filter:blur(100px);
       border-radius:50%;
+      top:-100px;
+      right:-100px;
       z-index:0;
     }
 
     .hero-left,
     .hero-right{
-      position:relative;
-      z-index:2;
       flex:1;
       min-width:320px;
+      position:relative;
+      z-index:2;
     }
 
     .badge{
       display:inline-flex;
       align-items:center;
       gap:10px;
+      padding:10px 18px;
+      border-radius:100px;
       background:rgba(57,255,20,.08);
       border:1px solid rgba(57,255,20,.18);
       color:#39ff14;
-      padding:10px 18px;
-      border-radius:100px;
-      font-size:.85rem;
       margin-bottom:30px;
-      font-weight:700;
-      letter-spacing:1px;
+      font-size:14px;
+      font-weight:bold;
     }
 
     .badge-dot{
@@ -92,31 +89,26 @@
       height:8px;
       background:#39ff14;
       border-radius:50%;
-      box-shadow:0 0 10px #39ff14;
     }
 
     h1{
-      font-size:clamp(3rem,7vw,6rem);
-      line-height:.95;
+      font-size:70px;
+      line-height:1;
       margin-bottom:30px;
-      font-weight:800;
+      font-family:'Bebas Neue', sans-serif;
+      letter-spacing:2px;
     }
 
     .g{
       color:#39ff14;
-      text-shadow:0 0 25px rgba(57,255,20,.35);
     }
 
     .hero-desc{
       color:#b5b5b5;
       line-height:1.8;
-      font-size:1.1rem;
-      max-width:650px;
+      font-size:18px;
       margin-bottom:40px;
-    }
-
-    .hero-desc strong{
-      color:#fff;
+      max-width:600px;
     }
 
     .cta-group{
@@ -126,52 +118,47 @@
     }
 
     .btn-main{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
       width:fit-content;
-      text-decoration:none;
+      padding:18px 28px;
       background:#39ff14;
       color:#000;
-      padding:18px 28px;
+      text-decoration:none;
       border-radius:14px;
-      font-weight:800;
-      display:flex;
-      align-items:center;
-      gap:12px;
+      font-weight:bold;
       transition:.3s;
-      box-shadow:0 0 25px rgba(57,255,20,.25);
     }
 
     .btn-main:hover{
-      transform:translateY(-3px);
-      box-shadow:0 0 35px rgba(57,255,20,.45);
+      transform:scale(1.03);
     }
 
     .urgency{
       color:#999;
-      font-size:.95rem;
     }
 
     .urgency span{
       color:#fff;
-      font-weight:700;
+      font-weight:bold;
     }
 
     .card{
       width:100%;
       max-width:520px;
-      background:linear-gradient(145deg,#0f0f0f,#131313);
-      border:1px solid #1c1c1c;
+      background:#111;
+      border:1px solid #222;
       border-radius:24px;
       padding:50px 40px;
       position:relative;
       overflow:hidden;
-      box-shadow:0 0 50px rgba(57,255,20,.08);
     }
 
     .card-glow{
       position:absolute;
       inset:0;
       background:radial-gradient(circle at top right,rgba(57,255,20,.12),transparent 60%);
-      pointer-events:none;
     }
 
     .card-content{
@@ -180,38 +167,34 @@
     }
 
     .mini-badge{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:100px;
       background:rgba(57,255,20,.08);
       border:1px solid rgba(57,255,20,.18);
       color:#39ff14;
-      padding:10px 18px;
-      border-radius:100px;
-      font-size:.8rem;
-      font-weight:700;
+      margin-bottom:30px;
+      font-size:12px;
+      font-weight:bold;
       letter-spacing:2px;
       text-transform:uppercase;
-      margin-bottom:30px;
     }
 
     .card h3{
-      font-family:'Bebas Neue',sans-serif;
-      font-size:3rem;
+      font-size:55px;
       line-height:1;
-      letter-spacing:2px;
       margin-bottom:20px;
+      font-family:'Bebas Neue', sans-serif;
+      letter-spacing:2px;
     }
 
     .green{
       color:#39ff14;
-      text-shadow:0 0 20px rgba(57,255,20,.4);
     }
 
     .card p{
       color:#999;
-      line-height:1.9;
-      font-size:1.05rem;
+      line-height:1.8;
       margin-bottom:35px;
     }
 
@@ -226,7 +209,6 @@
       align-items:center;
       gap:14px;
       color:#ccc;
-      font-size:1rem;
     }
 
     .check{
@@ -236,111 +218,105 @@
 
     @media(max-width:900px){
 
-      .hero{
-        padding:60px 25px;
-        gap:50px;
-      }
-
-      .card{
-        padding:40px 25px;
+      h1{
+        font-size:48px;
       }
 
       .card h3{
-        font-size:2.3rem;
+        font-size:40px;
+      }
+
+      .hero{
+        padding:60px 20px;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
+<section class="hero">
 
-    <div class="grid-bg"></div>
-    <div class="hero-glow-orb"></div>
+  <div class="grid-bg"></div>
+  <div class="hero-glow-orb"></div>
 
-    <!-- LEFT -->
-    <div class="hero-left">
+  <div class="hero-left">
 
-      <div class="badge">
-        <span class="badge-dot"></span>
-        Design Premium · Resultado Real
-      </div>
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Design Premium · Resultado Real
+    </div>
 
-      <h1>
-        Seu cliente te julga<br>
-        <span class="g">antes de falar</span>
-        com você.
-      </h1>
+    <h1>
+      Seu cliente te julga<br>
+      <span class="g">antes de falar</span>
+      com você.
+    </h1>
 
-      <p class="hero-desc">
-        Eu crio <strong>sites estratégicos</strong> que fazem seu negócio transmitir confiança, gerar autoridade e transformar visitantes em clientes prontos para comprar — sem você precisar convencer ninguém.
+    <p class="hero-desc">
+      Eu crio <strong>sites estratégicos</strong> que fazem seu negócio transmitir confiança, gerar autoridade e transformar visitantes em clientes prontos para comprar.
+    </p>
+
+    <div class="cta-group">
+
+      <a
+        href="https://wa.me/5511962883599"
+        class="btn-main"
+        target="_blank"
+      >
+        📲 Quero Meu Site Agora
+      </a>
+
+      <p class="urgency">
+        ⚠️ Apenas <span>3 vagas abertas</span> esta semana
       </p>
-
-      <div class="cta-group">
-
-        <a
-          href="https://wa.me/5511962883599?text=Olá%20Izabela!%20Vim%20do%20seu%20site%20e%20quero%20um%20site%20profissional%20para%20meu%20negócio%20🚀"
-          class="btn-main"
-          target="_blank"
-        >
-          📲 Quero Meu Site Agora
-        </a>
-
-        <p class="urgency">
-          ⚠️ Apenas <span>3 vagas abertas</span> esta semana
-        </p>
-
-      </div>
 
     </div>
 
-    <!-- RIGHT -->
-    <div class="hero-right">
+  </div>
 
-      <div class="card">
+  <div class="hero-right">
 
-        <div class="card-glow"></div>
+    <div class="card">
 
-        <div class="card-content">
+      <div class="card-glow"></div>
 
-          <div class="mini-badge">
-            🚀 Sites que convertem
+      <div class="card-content">
+
+        <div class="mini-badge">
+          🚀 Sites que convertem
+        </div>
+
+        <h3>
+          MAIS CLIENTES.<br>
+          MAIS AUTORIDADE.<br>
+          <span class="green">
+            MAIS VENDAS.
+          </span>
+        </h3>
+
+        <p>
+          Um site profissional transmite confiança e transforma visitantes em clientes reais.
+        </p>
+
+        <div class="features">
+
+          <div class="feature">
+            <span class="check">✓</span>
+            Design premium e moderno
           </div>
 
-          <h3>
-            MAIS CLIENTES.<br>
-            MAIS AUTORIDADE.<br>
-            <span class="green">
-              MAIS VENDAS.
-            </span>
-          </h3>
+          <div class="feature">
+            <span class="check">✓</span>
+            Botão direto pro WhatsApp
+          </div>
 
-          <p>
-            Um site profissional faz sua empresa parecer maior,
-            transmitir confiança e transformar visitantes em clientes reais.
-          </p>
-
-          <div class="features">
-
-            <div class="feature">
-              <span class="check">✓</span>
-              Design premium e moderno
-            </div>
-
-            <div class="feature">
-              <span class="check">✓</span>
-              Botão direto pro WhatsApp
-            </div>
-
-            <div class="feature">
-              <span class="check">✓</span>
-              Estrutura pensada pra vender
-            </div>
-
+          <div class="feature">
+            <span class="check">✓</span>
+            Estrutura pensada pra vender
           </div>
 
         </div>
@@ -349,7 +325,9 @@
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 </body>
 </html>
