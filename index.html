@@ -1,683 +1,721 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="Sites profissionais que transformam visitantes em clientes. Design premium, estratégia digital, resultados reais. Entrega em 48h.">
-<meta name="keywords" content="site profissional, web design, criação de sites, site para empresa, presença digital, site que vende">
-<meta name="author" content="Cliente Web Sites">
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#00ff88">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente Web Sites | Transforme seu Negócio em uma Marca de Elite</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Criamos sites profissionais de alta conversão para empresas que desejam dominar o mercado. Pare de perder clientes para a concorrência.">
+    <meta name="keywords" content="criação de sites, web design, landing page, marketing digital, cliente web sites, site profissional">
+    <meta property="og:title" content="Cliente Web Sites | Sites que Vendem">
+    <meta property="og:description" content="Sua empresa merece um posicionamento de elite. Criamos sua presença digital em tempo recorde.">
+    <meta property="og:type" content="website">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<!-- Open Graph -->
-<meta property="og:title" content="CLIENTE WEB SITES — Sites que Vendem">
-<meta property="og:description" content="Sites profissionais que transformam visitantes em clientes. Design premium, estratégia digital, resultados reais.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://clientewebsites.com.br">
-<meta property="og:image" content="https://clientewebsites.com.br/og-image.jpg">
-<meta property="og:locale" content="pt_BR">
+    <style>
+        :root {
+            --neon-green: #39FF14;
+            --dark-bg: #050505;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="CLIENTE WEB SITES — Sites que Vendem">
-<meta name="twitter:description" content="Sites profissionais que transformam visitantes em clientes.">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
 
-<title>CLIENTE WEB SITES — Sites que Vendem</title>
+        body {
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
 
-<!-- Favicon inline SVG -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23030a05'/><text y='72' x='50' text-anchor='middle' font-size='60' font-family='sans-serif' fill='%2300ff88'>W</text></svg>">
-<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23030a05'/><text y='72' x='50' text-anchor='middle' font-size='60' font-family='sans-serif' fill='%2300ff88'>W</text></svg>">
+        /* Loading Screen */
+        #loader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: var(--dark-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease-out;
+        }
 
-<!-- Preconnect for performance -->
-<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        .loader-content {
+            text-align: center;
+        }
 
-<!-- Font preload for LCP -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+        .loader-bar {
+            width: 200px;
+            height: 2px;
+            background: rgba(255,255,255,0.1);
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
 
-<style>
-  /* ============================== CSS VARIABLES */
-  :root {
-    --green: #00ff88;
-    --green-dim: #00cc6a;
-    --green-dark: #003d1f;
-    --green-glow: rgba(0,255,136,0.15);
-    --black: #030a05;
-    --black2: #0a0f0c;
-    --black3: #111a14;
-    --white: #f0fff6;
-    --gray: #8a9e90;
-    --font-display: 'Bebas Neue', Impact, sans-serif;
-    --font-heading: 'Syne', system-ui, sans-serif;
-    --font-body: 'DM Sans', system-ui, sans-serif;
-    --transition: 0.3s ease;
-    --radius: 2px;
-  }
+        .loader-progress {
+            position: absolute;
+            height: 100%;
+            background: var(--neon-green);
+            width: 0%;
+            transition: width 0.5s ease;
+            box-shadow: 0 0 15px var(--neon-green);
+        }
 
-  /* ============================== RESET & BASE */
-  *, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+        /* Glassmorphism */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+        }
 
-  html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
 
-  body {
-    background: var(--black);
-    color: var(--white);
-    font-family: var(--font-body);
-    overflow-x: hidden;
-    cursor: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeSpeed;
-  }
+        .glass-card:hover {
+            border-color: var(--neon-green);
+            background: rgba(57, 255, 20, 0.05);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(57, 255, 20, 0.1);
+        }
 
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
+        /* Neon Effects */
+        .text-neon {
+            color: var(--neon-green);
+            text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+        }
 
-  a { text-decoration: none; color: inherit; }
+        .bg-neon {
+            background-color: var(--neon-green);
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.6);
+        }
 
-  /* ============================== LOADING SCREEN */
-  #loading {
-    position: fixed;
-    inset: 0;
-    background: var(--black);
-    z-index: 10000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-  }
-  #loading.hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-  .loading-logo {
-    font-family: var(--font-display);
-    font-size: 28px;
-    letter-spacing: 4px;
-    color: var(--white);
-  }
-  .loading-logo span { color: var(--green); }
-  .loading-bar-wrap {
-    width: 160px;
-    height: 2px;
-    background: rgba(0,255,136,0.15);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-  .loading-bar {
-    height: 100%;
-    background: var(--green);
-    border-radius: 2px;
-    animation: loadBar 1s ease forwards;
-  }
-  @keyframes loadBar {
-    from { width: 0; }
-    to { width: 100%; }
-  }
+        .btn-premium {
+            background: var(--neon-green);
+            color: black;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+        }
 
-  /* ============================== CUSTOM CURSOR (desktop only) */
-  .cursor {
-    width: 12px;
-    height: 12px;
-    background: var(--green);
-    border-radius: 50%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    mix-blend-mode: difference;
-    will-change: transform;
-    transition: transform 0.08s ease;
-  }
-  .cursor-trail {
-    width: 32px;
-    height: 32px;
-    border: 1px solid var(--green);
-    border-radius: 50%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    opacity: 0.4;
-    will-change: transform;
-    transition: transform 0.18s ease, opacity 0.3s;
-  }
-  .cursor.hover { transform: translate(-50%, -50%) scale(2.5); }
-  .cursor-trail.hover { opacity: 0.15; }
+        .btn-premium:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(57, 255, 20, 0.6);
+            background: #ffffff;
+        }
 
-  /* ============================== NOISE OVERLAY */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.4;
-  }
+        /* Custom Cursor Glow */
+        #cursor-glow {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(57, 255, 20, 0.08) 0%, rgba(0,0,0,0) 70%);
+            position: fixed;
+            pointer-events: none;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+        }
 
-  /* ============================== SCROLLBAR */
-  ::-webkit-scrollbar { width: 3px; }
-  ::-webkit-scrollbar-track { background: var(--black2); }
-  ::-webkit-scrollbar-thumb { background: var(--green); border-radius: 2px; }
+        /* Hero Background Animation */
+        .bg-grid {
+            background-image: linear-gradient(rgba(57, 255, 20, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(57, 255, 20, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            mask-image: radial-gradient(circle at center, black, transparent 80%);
+        }
 
-  /* ============================== SKIP LINK (accessibility) */
-  .skip-link {
-    position: absolute;
-    top: -100%;
-    left: 0;
-    background: var(--green);
-    color: var(--black);
-    padding: 8px 16px;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 14px;
-    z-index: 99999;
-    border-radius: 0 0 4px 0;
-    transition: top 0.2s;
-  }
-  .skip-link:focus { top: 0; }
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse-green 2s infinite;
+        }
 
-  /* ============================== HEADER */
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    padding: 20px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: all 0.4s ease;
-    will-change: padding, background;
-  }
-  header.scrolled {
-    background: rgba(3,10,5,0.92);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0,255,136,0.08);
-    padding: 14px 5%;
-  }
+        @keyframes pulse-green {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
 
-  .logo {
-    font-family: var(--font-display);
-    font-size: clamp(18px, 3vw, 26px);
-    letter-spacing: 3px;
-    color: var(--white);
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  .logo span { color: var(--green); }
+        /* Typing Effect */
+        .typing::after {
+            content: '|';
+            animation: blink 0.7s infinite;
+        }
 
-  .header-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--green);
-    color: var(--black);
-    text-decoration: none;
-    padding: 10px 22px;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 1px;
-    border-radius: var(--radius);
-    transition: all var(--transition);
-    white-space: nowrap;
-    border: none;
-    cursor: pointer;
-  }
-  .header-cta:hover,
-  .header-cta:focus-visible {
-    background: var(--white);
-    transform: translateY(-1px);
-    box-shadow: 0 8px 30px rgba(0,255,136,0.3);
-    outline: none;
-  }
-  .header-cta svg {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-    fill: currentColor;
-  }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
 
-  /* ============================== HERO */
-  .hero {
-    min-height: 100vh;
-    min-height: 100svh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding: 120px 5% 80px;
-    overflow: hidden;
-  }
+        /* Mockup Effects */
+        .mockup-container {
+            position: relative;
+            perspective: 1000px;
+        }
 
-  .hero-grid-bg {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(0,255,136,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,255,136,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
-    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
-    pointer-events: none;
-  }
+        .mockup-img {
+            transform: rotateY(-15deg) rotateX(5deg);
+            transition: transform 0.5s ease;
+        }
 
-  .hero-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    pointer-events: none;
-    will-change: opacity;
-  }
-  .hero-orb-1 {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(0,255,136,0.12) 0%, transparent 70%);
-    top: -100px;
-    right: -100px;
-  }
-  .hero-orb-2 {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(0,200,100,0.08) 0%, transparent 70%);
-    bottom: 0;
-    left: -100px;
-  }
+        .mockup-container:hover .mockup-img {
+            transform: rotateY(0deg) rotateX(0deg);
+        }
 
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 700px;
-  }
+        .notification-float {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px 20px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            animation: float 4s ease-in-out infinite;
+            z-index: 10;
+        }
 
-  .hero-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    border: 1px solid rgba(0,255,136,0.3);
-    background: rgba(0,255,136,0.05);
-    padding: 6px 16px;
-    border-radius: 100px;
-    font-size: 11px;
-    font-family: var(--font-heading);
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: var(--green);
-    text-transform: uppercase;
-    margin-bottom: 32px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.2s forwards;
-  }
-  .hero-tag-dot {
-    width: 6px;
-    height: 6px;
-    background: var(--green);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-    flex-shrink: 0;
-  }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
 
-  .hero-title {
-    font-family: var(--font-display);
-    font-size: clamp(44px, 9vw, 110px);
-    line-height: 0.9;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 28px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.4s forwards;
-  }
-  .hero-title .highlight {
-    color: var(--green);
-    text-shadow: 0 0 40px rgba(0,255,136,0.5), 0 0 80px rgba(0,255,136,0.2);
-  }
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--dark-bg); }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--neon-green); }
+    </style>
+</head>
+<body>
 
-  .hero-sub {
-    font-size: clamp(15px, 2vw, 18px);
-    color: var(--gray);
-    line-height: 1.7;
-    max-width: 520px;
-    margin-bottom: 44px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.6s forwards;
-  }
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <h2 class="text-2xl font-bold tracking-tighter mb-2">CLIENTE <span class="text-neon">WEB SITES</span></h2>
+            <div class="loader-bar">
+                <div class="loader-progress" id="progress"></div>
+            </div>
+        </div>
+    </div>
 
-  .hero-btns {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.8s forwards;
-  }
+    <!-- Cursor Glow -->
+    <div id="cursor-glow"></div>
 
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--green);
-    color: var(--black);
-    text-decoration: none;
-    padding: 16px 32px;
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 14px;
-    letter-spacing: 1px;
-    border-radius: var(--radius);
-    transition: all var(--transition);
-    position: relative;
-    overflow: hidden;
-    border: none;
-    cursor: pointer;
-  }
-  .btn-primary::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
-    opacity: 0;
-    transition: opacity var(--transition);
-  }
-  .btn-primary:hover,
-  .btn-primary:focus-visible {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(0,255,136,0.4);
-    outline: none;
-  }
-  .btn-primary:hover::before { opacity: 1; }
-  .btn-primary svg { width: 18px; height: 18px; flex-shrink: 0; fill: currentColor; }
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glass py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="text-xl font-extrabold tracking-tighter">
+            CLIENTE <span class="text-neon">WEB SITES</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest">
+            <a href="#pain" class="hover:text-neon transition">O Problema</a>
+            <a href="#benefits" class="hover:text-neon transition">Vantagens</a>
+            <a href="#portfolio" class="hover:text-neon transition">Projetos</a>
+            <a href="#testimonials" class="hover:text-neon transition">Depoimentos</a>
+        </div>
+        <a href="https://wa.me/5511962883599" class="btn-premium px-6 py-2 rounded-full text-xs">
+            Falar no WhatsApp
+        </a>
+    </nav>
 
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: transparent;
-    color: var(--white);
-    text-decoration: none;
-    padding: 16px 32px;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: var(--radius);
-    transition: all var(--transition);
-    cursor: pointer;
-  }
-  .btn-secondary:hover,
-  .btn-secondary:focus-visible {
-    border-color: var(--green);
-    color: var(--green);
-    transform: translateY(-2px);
-    outline: none;
-  }
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col justify-center items-center pt-24 px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-grid -z-10"></div>
+        
+        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <span class="inline-block px-4 py-1 rounded-full border border-neon-green/30 text-neon text-[10px] font-bold uppercase tracking-widest mb-6">
+                    Sua empresa merece o topo
+                </span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+                    Seu concorrente está recebendo clientes enquanto sua empresa <span class="text-neon">ainda não tem um site profissional.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-xl">
+                    Transformamos negócios comuns em <span class="typing text-white font-bold" data-words='["marcas profissionais", "autoridades digitais", "máquinas de vendas"]'></span> que atraem clientes automaticamente pelo WhatsApp.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/5511962883599" class="btn-premium px-10 py-5 rounded-xl text-center">
+                        Quero Mais Clientes
+                    </a>
+                    <a href="#portfolio" class="glass px-10 py-5 rounded-xl text-center font-bold hover:bg-white/10 transition">
+                        Ver Portfólio
+                    </a>
+                </div>
+                
+                <div class="mt-12 flex items-center gap-6">
+                    <div class="flex -space-x-4">
+                        <img src="https://i.pravatar.cc/100?u=1" class="w-12 h-12 rounded-full border-2 border-black" alt="Avatar">
+                        <img src="https://i.pravatar.cc/100?u=2" class="w-12 h-12 rounded-full border-2 border-black" alt="Avatar">
+                        <img src="https://i.pravatar.cc/100?u=3" class="w-12 h-12 rounded-full border-2 border-black" alt="Avatar">
+                    </div>
+                    <p class="text-sm text-gray-400">
+                        <span class="text-white font-bold">+500 empresas</span> já profissionalizaram seu negócio conosco.
+                    </p>
+                </div>
+            </div>
 
-  /* ============================== HERO MOCKUP */
-  .hero-mockup {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 55%;
-    max-width: 700px;
-    opacity: 0;
-    animation: fadeLeft 1s ease 1s forwards;
-    pointer-events: none;
-    will-change: opacity, transform;
-  }
+            <div class="relative mockup-container" data-aos="fade-left">
+                <!-- Mockup Visual -->
+                <div class="relative z-10">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000" class="rounded-3xl shadow-2xl mockup-img border border-white/10" alt="Website Mockup">
+                </div>
+                
+                <!-- Floating Elements -->
+                <div class="notification-float top-0 -right-4" style="animation-delay: 0s;">
+                    <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                        <i class="fab fa-whatsapp text-white"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-gray-400 uppercase font-bold">Novo Cliente</p>
+                        <p class="text-sm font-bold">"Quero contratar agora!"</p>
+                    </div>
+                </div>
 
-  .mockup-screen {
-    width: 100%;
-    background: var(--black3);
-    border: 1px solid rgba(0,255,136,0.15);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow:
-      0 0 0 1px rgba(0,255,136,0.08),
-      0 40px 100px rgba(0,0,0,0.8),
-      0 0 80px rgba(0,255,136,0.05);
-  }
-  .mockup-bar {
-    background: rgba(0,255,136,0.06);
-    padding: 12px 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border-bottom: 1px solid rgba(0,255,136,0.08);
-  }
-  .mockup-dot { width: 10px; height: 10px; border-radius: 50%; }
-  .mockup-dot:nth-child(1) { background: #ff5f57; }
-  .mockup-dot:nth-child(2) { background: #febc2e; }
-  .mockup-dot:nth-child(3) { background: #28c840; }
-  .mockup-url {
-    flex: 1;
-    background: rgba(0,0,0,0.3);
-    padding: 5px 12px;
-    border-radius: 4px;
-    font-size: 11px;
-    color: var(--gray);
-    font-family: var(--font-body);
-  }
-  .mockup-body { padding: 24px; }
-  .mockup-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 24px;
-  }
-  .mockup-logo-fake {
-    height: 8px;
-    width: 80px;
-    background: linear-gradient(90deg, var(--green), var(--green-dim));
-    border-radius: 4px;
-  }
-  .mockup-nav-links { display: flex; gap: 12px; }
-  .mockup-nav-link { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.1); }
-  .mockup-hero-area {
-    background: linear-gradient(135deg, rgba(0,255,136,0.06), rgba(0,0,0,0.3));
-    border: 1px solid rgba(0,255,136,0.1);
-    border-radius: 8px;
-    padding: 32px 24px;
-    margin-bottom: 16px;
-  }
-  .mockup-headline { height: 16px; width: 70%; background: rgba(255,255,255,0.15); border-radius: 4px; margin-bottom: 8px; }
-  .mockup-headline-2 { height: 16px; width: 50%; background: rgba(255,255,255,0.08); border-radius: 4px; margin-bottom: 20px; }
-  .mockup-cta-fake { height: 32px; width: 120px; background: var(--green); border-radius: 4px; opacity: 0.8; }
-  .mockup-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .mockup-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 6px;
-    padding: 12px;
-  }
-  .mockup-card-icon { width: 20px; height: 20px; background: rgba(0,255,136,0.2); border-radius: 4px; margin-bottom: 8px; }
-  .mockup-card-line { height: 5px; border-radius: 3px; background: rgba(255,255,255,0.08); margin-bottom: 4px; }
-  .mockup-card-line.short { width: 60%; }
+                <div class="notification-float bottom-10 -left-10" style="animation-delay: 2s;">
+                    <div class="w-10 h-10 bg-neon rounded-full flex items-center justify-center">
+                        <i class="fas fa-dollar-sign text-black"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-gray-400 uppercase font-bold">Venda Confirmada</p>
+                        <p class="text-sm font-bold">R$ 2.450,00 recebidos</p>
+                    </div>
+                </div>
 
-  /* ============================== HERO STATS */
-  .hero-stats {
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
-    margin-top: 56px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 1.2s forwards;
-  }
-  .stat { border-left: 2px solid var(--green); padding-left: 16px; }
-  .stat-num {
-    font-family: var(--font-display);
-    font-size: clamp(28px, 4vw, 40px);
-    color: var(--green);
-    line-height: 1;
-  }
-  .stat-label {
-    font-size: 12px;
-    color: var(--gray);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
+                <!-- Glow -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-neon/20 blur-[120px] -z-10"></div>
+            </div>
+        </div>
+    </section>
 
-  /* ============================== SCROLL INDICATOR */
-  .scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    opacity: 0;
-    animation: fadeIn 1s ease 2s forwards;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: var(--gray);
-    padding: 8px;
-  }
-  .scroll-indicator span {
-    font-size: 10px;
-    color: var(--gray);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-family: var(--font-body);
-  }
-  .scroll-line {
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, var(--green), transparent);
-    animation: scrollLine 2s ease-in-out infinite;
-  }
+    <!-- Pain Section -->
+    <section id="pain" class="py-24 px-6 bg-black relative">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-6">A dura realidade: <span class="text-red-500 underline">O invisível não vende.</span></h2>
+                <p class="text-gray-400 text-lg">Se sua empresa não está no Google com um visual de elite, você está apenas entregando dinheiro para o seu concorrente.</p>
+            </div>
 
-  /* ============================== SECTION BASE */
-  section { position: relative; z-index: 2; }
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-user-slash text-4xl text-neon mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Falta de Autoridade</h3>
+                    <p class="text-gray-400">Instagram sozinho não passa confiança. Clientes julgam sua empresa em segundos pelo seu site.</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-chart-line-down text-4xl text-neon mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Vendas Perdidas</h3>
+                    <p class="text-gray-400">Enquanto você dorme, seu concorrente que tem um site profissional está fechando contratos.</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-clock text-4xl text-neon mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Empresa "Offline"</h3>
+                    <p class="text-gray-400">Sem um site, sua empresa só existe quando você está online. Com um site, você vende 24h por dia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  .section-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-heading);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--green);
-    margin-bottom: 20px;
-  }
-  .section-tag::before {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 1px;
-    background: var(--green);
-    flex-shrink: 0;
-  }
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 px-6 relative">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-2xl" data-aos="fade-right">
+                    <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Por que ser <span class="text-neon">Premium?</span></h2>
+                    <p class="text-gray-400">Não fazemos apenas sites. Criamos ativos lucrativos para o seu negócio.</p>
+                </div>
+                <div class="text-right hidden md:block" data-aos="fade-left">
+                    <div class="text-5xl font-black text-neon">97%</div>
+                    <p class="text-xs uppercase tracking-widest text-gray-500">Aumento médio de credibilidade</p>
+                </div>
+            </div>
 
-  .section-title {
-    font-family: var(--font-display);
-    font-size: clamp(32px, 6vw, 72px);
-    line-height: 0.95;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-  }
-  .section-title .g { color: var(--green); }
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group" data-aos="zoom-in">
+                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black group-hover:text-neon/10 transition">01</div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-neon/10 rounded-2xl flex items-center justify-center mb-6 border border-neon/20">
+                            <i class="fas fa-users text-neon text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Mais Clientes</h3>
+                        <p class="text-gray-400 leading-relaxed">Atraia o público certo que está disposto a pagar o valor que seu serviço realmente vale.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black group-hover:text-neon/10 transition">02</div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-neon/10 rounded-2xl flex items-center justify-center mb-6 border border-neon/20">
+                            <i class="fas fa-rocket text-neon text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Mais Vendas</h3>
+                        <p class="text-gray-400 leading-relaxed">Landing pages estruturadas com gatilhos mentais para converter curiosos em compradores.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black group-hover:text-neon/10 transition">03</div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-neon/10 rounded-2xl flex items-center justify-center mb-6 border border-neon/20">
+                            <i class="fas fa-shield-alt text-neon text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Mais Autoridade</h3>
+                        <p class="text-gray-400 leading-relaxed">Posicione sua marca no mesmo nível das maiores startups do mundo com design cinematográfico.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black group-hover:text-neon/10 transition">04</div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-neon/10 rounded-2xl flex items-center justify-center mb-6 border border-neon/20">
+                            <i class="fas fa-check-circle text-neon text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Mais Confiança</h3>
+                        <p class="text-gray-400 leading-relaxed">Um site seguro e profissional elimina as objeções de compra dos seus clientes.</p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black group-hover:text-neon/10 transition">05</div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-neon/10 rounded-2xl flex items-center justify-center mb-6 border border-neon/20">
+                            <i class="fab fa-whatsapp text-neon text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">WhatsApp Lotado</h3>
+                        <p class="text-gray-400 leading-relaxed">Integração direta para que o cliente entre em contato com apenas um clique.</p>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black group-hover:text-neon/10 transition">06</div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-neon/10 rounded-2xl flex items-center justify-center mb-6 border border-neon/20">
+                            <i class="fas fa-globe text-neon text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Online 24h</h3>
+                        <p class="text-gray-400 leading-relaxed">Sua empresa nunca fecha. Receba orçamentos e contatos a qualquer hora do dia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  .section-sub {
-    font-size: 16px;
-    color: var(--gray);
-    line-height: 1.7;
-    max-width: 540px;
-  }
+    <!-- How it works -->
+    <section class="py-24 px-6 bg-white/5">
+        <div class="container mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-extrabold mb-4">Como Funciona?</h2>
+                <p class="text-gray-400">Simples, rápido e extremamente eficiente.</p>
+            </div>
 
-  /* ============================== DOR SECTION */
-  .dor-section {
-    padding: 120px 5%;
-    background: var(--black2);
-    border-top: 1px solid rgba(0,255,136,0.05);
-  }
-  .dor-header { max-width: 600px; margin-bottom: 64px; }
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-neon text-black rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-lg shadow-neon/40">1</div>
+                    <h3 class="text-xl font-bold mb-4">Você chama no WhatsApp</h3>
+                    <p class="text-gray-400">Entendemos seu negócio e suas necessidades em uma conversa rápida.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-neon text-black rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-lg shadow-neon/40">2</div>
+                    <h3 class="text-xl font-bold mb-4">Criamos seu site</h3>
+                    <p class="text-gray-400">Nossa equipe de elite desenvolve sua presença digital com design premium.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-neon text-black rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-lg shadow-neon/40">3</div>
+                    <h3 class="text-xl font-bold mb-4">Você atrai clientes</h3>
+                    <p class="text-gray-400">Seu site entra no ar e sua empresa começa a converter visitantes em vendas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  .dor-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2px;
-  }
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 px-6">
+        <div class="container mx-auto">
+            <div class="mb-16" data-aos="fade-right">
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Nosso <span class="text-neon">Portfólio</span></h2>
+                <p class="text-gray-400">Projetos que definem o novo padrão do mercado.</p>
+            </div>
 
-  .dor-card {
-    background: var(--black3);
-    border: 1px solid rgba(0,255,136,0.08);
-    padding: 40px 32px;
-    position: relative;
-    overflow: hidden;
-    transition: border-color var(--transition), transform var(--transition);
-    cursor: default;
-  }
-  .dor-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--green);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
-  }
-  .dor-card:hover { border-color: rgba(0,255,136,0.2); transform: translateY(-4px); }
-  .dor-card:hover::before { transform: scaleX(1); }
-  .dor-card:hover .dor-icon { filter: drop-shadow(0 0 10px rgba(0,255,136,0.5)); }
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-3xl aspect-video cursor-pointer" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Barbearia">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <p class="text-neon text-xs font-bold uppercase tracking-widest mb-2">Luxury Barber</p>
+                        <h3 class="text-2xl font-bold">Barbearia de Elite</h3>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-3xl aspect-video cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Clínica">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <p class="text-neon text-xs font-bold uppercase tracking-widest mb-2">Health & Care</p>
+                        <h3 class="text-2xl font-bold">Clínica Médica</h3>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden rounded-3xl aspect-video cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Restaurante">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <p class="text-neon text-xs font-bold uppercase tracking-widest mb-2">Gourmet Experience</p>
+                        <h3 class="text-2xl font-bold">Restaurante Premium</h3>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="group relative overflow-hidden rounded-3xl aspect-video cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Loja">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <p class="text-neon text-xs font-bold uppercase tracking-widest mb-2">Fashion Store</p>
+                        <h3 class="text-2xl font-bold">E-commerce de Moda</h3>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="group relative overflow-hidden rounded-3xl aspect-video cursor-pointer" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Estética">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <p class="text-neon text-xs font-bold uppercase tracking-widest mb-2">Beauty Center</p>
+                        <h3 class="text-2xl font-bold">Centro de Estética</h3>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="group relative overflow-hidden rounded-3xl aspect-video cursor-pointer" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Personal Trainer">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <p class="text-neon text-xs font-bold uppercase tracking-widest mb-2">High Performance</p>
+                        <h3 class="text-2xl font-bold">Personal Trainer</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  .dor-icon {
-    font-size: 36px;
-    margin-bottom: 20px;
-    transition: filter var(--transition);
-    display: block;
-    line-height: 1;
-  }
-  .dor-card-title {
-    font-family: var(--font-heading);
-    font-size: 20px;
-    font-weight: 800;
-    margin-bottom: 16px;
-  }
-  .dor-card-list { list-style: none; }
-  .dor-card-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 14px;
-    color: var(--gray);
-    padding: 6px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-    line-height: 1.5;
-  }
-  .dor-card-list li:last-child { border-bottom: none; }
-  .dor-card-list li::before {
-    flex-shrink: 0;
-    font-size: 12px;
-    font-weight: 700;
-    margin-top: 2px;
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 px-6 relative overflow-hidden">
+        <div class="container mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-extrabold mb-4">Quem Confia, <span class="text-neon">Lucra.</span></h2>
+                <p class="text-gray-400">Resultados reais de clientes que decidiram profissionalizar seu negócio.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-neon" data-aos="fade-right">
+                    <div class="flex gap-1 text-neon mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-white italic mb-6">“Depois do site comecei a receber clientes todos os dias. O investimento se pagou na primeira semana.”</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-700 rounded-full"></div>
+                        <div>
+                            <p class="font-bold">Ricardo Silva</p>
+                            <p class="text-xs text-gray-500">Dono de Barbearia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-neon" data-aos="fade-up">
+                    <div class="flex gap-1 text-neon mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-white italic mb-6">“Minha empresa ficou muito mais profissional. Agora os clientes nem questionam o meu preço.”</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-700 rounded-full"></div>
+                        <div>
+                            <p class="font-bold">Ana Oliveira</p>
+                            <p class="text-xs text-gray-500">Clínica de Estética</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-neon" data-aos="fade-left">
+                    <div class="flex gap-1 text-neon mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-white italic mb-6">“Os clientes chegam direto no WhatsApp já prontos para fechar. O site faz todo o trabalho de venda.”</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-700 rounded-full"></div>
+                        <div>
+                            <p class="font-bold">Marcos Souza</p>
+                            <p class="text-xs text-gray-500">Personal Trainer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 px-6 relative">
+        <div class="container mx-auto max-w-5xl">
+            <div class="glass p-12 md:p-20 rounded-[40px] text-center relative overflow-hidden" data-aos="zoom-in">
+                <div class="absolute top-0 left-0 w-full h-full bg-neon/5 -z-10"></div>
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-neon/20 blur-[100px] rounded-full"></div>
+                
+                <h2 class="text-3xl md:text-6xl font-extrabold mb-8">Se sua empresa não parece profissional, <span class="text-neon">você perde clientes todos os dias.</span></h2>
+                <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">Pare de ser invisível. Entre para o grupo das empresas que dominam o mercado digital.</p>
+                
+                <a href="https://wa.me/5511962883599" class="btn-premium px-12 py-6 rounded-2xl text-lg inline-block">
+                    Quero Meu Site Agora
+                </a>
+                
+                <p class="mt-8 text-sm text-gray-500 uppercase tracking-widest font-bold">
+                    <i class="fas fa-bolt text-neon mr-2"></i> Últimas 3 vagas para este mês
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/10">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <div class="text-2xl font-black tracking-tighter mb-2">
+                    CLIENTE <span class="text-neon">WEB SITES</span>
+                </div>
+                <p class="text-gray-500 max-w-xs">Sites profissionais que transformam visitantes em clientes reais.</p>
+            </div>
+            
+            <div class="flex gap-6 text-2xl">
+                <a href="#" class="hover:text-neon transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-neon transition"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-neon transition"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+            <div class="text-center md:text-right">
+                <a href="https://wa.me/5511962883599" class="text-neon font-bold block mb-2 hover:underline">
+                    <i class="fab fa-whatsapp mr-2"></i> (11) 96288-3599
+                </a>
+                <p class="text-xs text-gray-600">&copy; 2024 Cliente Web Sites. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5511962883599" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Loader
+        window.addEventListener('load', () => {
+            const progress = document.getElementById('progress');
+            let width = 0;
+            const interval = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        document.getElementById('loader').style.opacity = '0';
+                        setTimeout(() => {
+                            document.getElementById('loader').style.display = 'none';
+                        }, 500);
+                    }, 200);
+                } else {
+                    width += 5;
+                    progress.style.width = width + '%';
+                }
+            }, 50);
+        });
+
+        // Cursor Glow
+        const glow = document.getElementById('cursor-glow');
+        document.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+
+        // Typing Effect
+        const typingElement = document.querySelector('.typing');
+        const words = JSON.parse(typingElement.getAttribute('data-words'));
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                typingElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+        type();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.padding = '1rem 3rem';
+                nav.style.background = 'rgba(5, 5, 5, 0.8)';
+            } else {
+                nav.style.padding = '1.5rem 3rem';
+                nav.style.background = 'rgba(255, 255, 255, 0.03)';
+            }
+        });
+    </script>
+</body>
+</html>
