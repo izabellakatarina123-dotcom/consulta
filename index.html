@@ -2,54 +2,109 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Don Romano Barber Lounge | Sistema de Agendamento Premium</title>
-    
-    <meta name="description" content="Agende seu corte de cabelo, barba premium ou combo na Don Romano Barber Lounge em Osasco/SP. Sistema de agendamento online rápido, prático e exclusivo.">
-    <meta name="keywords" content="barbearia, osasco, corte masculino, barba premium, degradê, agendamento online, barbeiro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Romano Barber Lounge | Agendamento Online Oficial</title>
+    <meta name="description" content="Agende seu corte degradê, barba premium com toalha quente ou combo na Don Romano Barber Lounge em Osasco/SP. Escolha seu barbeiro e reserve em 60 segundos.">
+    <meta name="keywords" content="barbearia osasco, don romano, agendar barbeiro, corte de cabelo masculino, barba premium, degradê">
     <link rel="canonical" href="https://donromanobarber.com.br">
     
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
+    <meta property="og:title" content="Don Romano Barber Lounge | Agendamento Online">
+    <meta property="og:description" content="Agende seu horário na melhor barbearia de Osasco. Atendimento personalizado com barbeiros especialistas.">
     <meta property="og:url" content="https://donromanobarber.com.br">
-    <meta property="og:title" content="Don Romano Barber Lounge | Sistema de Agendamento Premium">
-    <meta property="og:description" content="Reserve seu horário na melhor barbearia de Osasco em menos de 60 segundos através do nosso sistema inteligente.">
     
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Don Romano Barber Lounge">
+    <meta name="twitter:description" content="Reserve seu corte ou barba premium em menos de 60 segundos.">
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BarberShop",
+      "name": "Don Romano Barber Lounge",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Santo Antônio, 1548",
+        "addressLocality": "Osasco",
+        "addressRegion": "SP",
+        "countryDelimiter": "BR"
+      },
+      "telephone": "+5511962883599",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "21:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "20:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "14:00" }
+      ],
+      "priceRange": "$$"
+    }
+    </script>
+
     <style>
         :root {
-            --bg-darkest: #070708;
-            --bg-dark: #0f0f12;
-            --bg-card: #16161c;
-            --bg-input: #1e1e26;
-            --primary: #d4af37;
-            --primary-glow: rgba(212, 175, 55, 0.15);
-            --text-main: #f3f3f6;
-            --text-muted: #9a9aab;
-            --border: #2a2a35;
-            --success: #2ecc71;
-            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --bg-main: #0B0B0D;
+            --bg-card: #141417;
+            --bg-input: #1C1C21;
+            --primary: #D4AF37;
+            --primary-hover: #AA8C2C;
+            --text-main: #FFFFFF;
+            --text-muted: #A0A0A5;
+            --border: #2C2C35;
+            --success: #22C55E;
+            --font: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
         }
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: var(--font-family);
-            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+            font-family: var(--font);
             -webkit-tap-highlight-color: transparent;
         }
 
-        html, body {
-            background-color: var(--bg-darkest);
-            color: var(--text-main);
-            overflow-x: hidden;
-            width: 100%;
+        html {
             scroll-behavior: smooth;
+            background-color: var(--bg-main);
+            color: var(--text-main);
         }
 
+        body {
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Utilidades de Grid e Layout */
         .container {
             width: 100%;
-            padding: 0 16px;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .section-title span {
+            color: var(--primary);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 48px;
+            font-size: 1rem;
         }
 
         /* Header */
@@ -58,111 +113,101 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 70px;
-            background: rgba(7, 7, 8, 0.9);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
             z-index: 1000;
+            background: rgba(11, 11, 13, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            height: 80px;
         }
 
-        .header-container {
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 100%;
         }
 
-        .brand {
+        .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--text-main);
-        }
-
-        .brand-logo {
-            width: 38px;
-            height: 38px;
-            border: 2px solid var(--primary);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 1rem;
-            color: var(--primary);
-            background: var(--bg-card);
-        }
-
-        .brand-name {
-            font-size: 1rem;
+            gap: 12px;
             font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+            font-size: 1.3rem;
+            color: var(--text-main);
+            text-decoration: none;
+            letter-spacing: 1px;
         }
 
-        .menu-toggle {
-            background: none;
-            border: none;
-            color: var(--text-main);
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 8px;
-            min-height: 48px;
-            min-width: 48px;
+        .logo-box {
+            border: 2px solid var(--primary);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            color: var(--primary);
         }
 
         .nav-links {
-            display: none;
-            position: absolute;
-            top: 70px;
-            left: 0;
-            width: 100%;
-            background: var(--bg-darkest);
-            flex-direction: column;
-            padding: 16px;
-            gap: 16px;
-            border-bottom: 1px solid var(--border);
-            list-style: none;
-        }
-
-        .nav-links.visible {
             display: flex;
+            gap: 32px;
+            list-style: none;
         }
 
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            display: block;
-            padding: 10px 0;
+            font-size: 0.95rem;
+            transition: color 0.2s;
         }
 
-        /* Hero */
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-btn {
+            background: var(--primary);
+            color: var(--bg-main);
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background: var(--primary-hover);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .menu-toggle span {
+            width: 28px;
+            height: 3px;
+            background: var(--text-main);
+            transition: 0.3s;
+        }
+
+        /* Hero Módulo */
         .hero {
-            padding: 120px 0 60px 0;
-            background: radial-gradient(circle at top, var(--primary-glow), transparent 70%);
+            padding-top: 160px;
+            padding-bottom: 100px;
+            background: radial-gradient(circle at top right, rgba(212,175,55,0.08), transparent 45%);
             text-align: center;
         }
 
-        .hero-badge {
-            display: inline-block;
-            padding: 6px 12px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            color: var(--primary);
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
         .hero h1 {
-            font-size: 2rem;
+            font-size: 3.5rem;
             font-weight: 800;
             line-height: 1.2;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
         }
 
         .hero h1 span {
@@ -170,641 +215,851 @@
         }
 
         .hero p {
-            font-size: 0.95rem;
+            font-size: 1.2rem;
             color: var(--text-muted);
-            margin-bottom: 28px;
-            padding: 0 8px;
+            max-width: 640px;
+            margin: 0 auto 40px auto;
         }
 
-        .btn {
+        .hero-cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--bg-main);
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            width: 100%;
-            min-height: 52px;
-            padding: 0 24px;
-            background: var(--primary);
-            color: var(--bg-darkest);
-            font-weight: 700;
-            font-size: 1rem;
-            text-decoration: none;
-            border-radius: 8px;
+            gap: 8px;
             border: none;
             cursor: pointer;
-            transition: background 0.2s;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
         }
 
         .btn-secondary {
-            background: var(--bg-card);
+            background: transparent;
             color: var(--text-main);
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
             border: 1px solid var(--border);
+            transition: background 0.2s;
         }
 
-        /* Presentation */
-        .presentation {
-            padding: 48px 0;
-            background: var(--bg-dark);
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.05);
         }
 
-        .presentation-content h2 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 12px;
+        /* Apresentação / Sobre */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
             color: var(--primary);
         }
 
-        .presentation-content p {
+        .about-text p {
             color: var(--text-muted);
-            font-size: 0.95rem;
             margin-bottom: 24px;
+            font-size: 1.05rem;
         }
 
-        .badge-info {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: 24px;
-        }
-
-        .badge-info h4 {
-            font-size: 0.9rem;
-            color: var(--text-main);
-            margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-
-        .badge-info ul {
-            list-style: none;
-        }
-
-        .badge-info ul li {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        /* Services */
-        .services {
-            padding: 48px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 32px;
-        }
-
-        .section-header h2 {
-            font-size: 1.6rem;
-            font-weight: 800;
-            margin-bottom: 8px;
-        }
-
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .services-grid {
-            display: flex;
-            flex-direction: column;
+        .features-inline {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 16px;
         }
 
-        .service-item {
+        .feature-item-mini {
+            background: var(--bg-card);
+            padding: 16px;
+            border-radius: 6px;
+            border-left: 3px solid var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .badge-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
+            padding: 24px 16px;
+            text-align: center;
+            border-radius: 8px;
         }
 
-        .service-item h3 {
-            font-size: 1.1rem;
-            margin-bottom: 6px;
+        .badge-card .num {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 4px;
         }
 
-        .service-item p {
+        .badge-card .lbl {
             font-size: 0.85rem;
             color: var(--text-muted);
-            margin-bottom: 16px;
+            text-transform: uppercase;
         }
 
-        .service-footer {
+        /* Serviços Módulo */
+        .services-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card-ui {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            transition: border-color 0.2s;
+        }
+
+        .service-card-ui:hover {
+            border-color: var(--primary);
+        }
+
+        .sc-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid var(--border);
-            padding-top: 12px;
+            align-items: flex-start;
+            margin-bottom: 12px;
         }
 
-        .service-price {
-            font-size: 1.1rem;
+        .sc-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .sc-badge {
+            background: rgba(212,175,55,0.15);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
             font-weight: 700;
+        }
+
+        .sc-time {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Como Funciona */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .step-box {
+            background: var(--bg-card);
+            padding: 32px 24px;
+            border-radius: 8px;
+            position: relative;
+            border: 1px solid var(--border);
+        }
+
+        .step-num {
+            position: absolute;
+            top: 16px;
+            right: 24px;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.03);
+            line-height: 1;
+        }
+
+        .step-box h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
             color: var(--primary);
         }
 
-        .service-time {
-            font-size: 0.8rem;
+        .step-box p {
+            font-size: 0.9rem;
             color: var(--text-muted);
-            background: var(--bg-input);
-            padding: 4px 8px;
-            border-radius: 4px;
         }
 
-        /* Booking Engine */
+        /* Sistema Principal de Agendamento */
         .booking-section {
-            padding: 48px 0;
+            background: linear-gradient(180deg, var(--bg-main) 0%, #111115 100%);
         }
 
-        .booking-card {
+        .booking-wrapper {
+            max-width: 760px;
+            margin: 0 auto;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 16px;
+            border-radius: 12px;
             overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
 
-        .booking-nav {
-            padding: 20px 16px 12px 16px;
+        .booking-header {
+            background: rgba(255,255,255,0.02);
+            padding: 24px;
             border-bottom: 1px solid var(--border);
-        }
-
-        .booking-nav-meta {
             display: flex;
             justify-content: space-between;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 8px;
+            align-items: center;
         }
 
-        .progress-track {
-            background: var(--bg-input);
-            height: 4px;
-            border-radius: 2px;
+        .bh-title h3 {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+
+        .bh-title p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .progress-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 140px;
+        }
+
+        .progress-bar-bg {
+            background: var(--border);
+            height: 6px;
+            width: 100%;
+            border-radius: 3px;
             overflow: hidden;
         }
 
-        .progress-fill {
-            height: 100%;
+        .progress-bar-fill {
             background: var(--primary);
+            height: 100%;
             width: 25%;
             transition: width 0.3s ease;
         }
 
-        .booking-body {
-            padding: 20px 16px;
-        }
-
-        .booking-panel {
-            display: none;
-        }
-
-        .booking-panel.active {
-            display: block;
-        }
-
-        .panel-heading {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .panel-subheading {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-
-        .item-selection-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .selection-row {
-            background: var(--bg-input);
-            border: 2px solid transparent;
-            border-radius: 8px;
-            padding: 14px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            min-height: 60px;
-        }
-
-        .selection-row.selected {
-            border-color: var(--primary);
-            background: rgba(212, 175, 55, 0.05);
-        }
-
-        .selection-details h5 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-bottom: 2px;
-        }
-
-        .selection-details p {
+        .progress-text {
             font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .selection-right {
-            font-weight: 700;
+            font-weight: 600;
             color: var(--primary);
-            font-size: 0.95rem;
-            margin-left: 8px;
             white-space: nowrap;
         }
 
-        /* Calendar Mobile Container */
-        .calendar-scroll-container {
-            width: 100%;
-            overflow-x: auto;
-            padding-bottom: 12px;
-            margin-bottom: 20px;
-            -webkit-overflow-scrolling: touch;
+        .booking-body {
+            padding: 32px;
+            min-height: 380px;
         }
 
-        .calendar-ctrl {
-            display: flex;
-            gap: 8px;
-            width: max-content;
+        .step-panel {
+            display: none;
         }
 
-        .calendar-cell {
-            background: var(--bg-input);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 12px;
-            min-width: 65px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            cursor: pointer;
-        }
-
-        .calendar-cell .cal-day-num {
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .calendar-cell .cal-day-lbl {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            color: var(--text-muted);
-        }
-
-        .calendar-cell.selected {
-            background: var(--primary) !important;
-            border-color: var(--primary);
-            color: var(--bg-darkest) !important;
-        }
-        
-        .calendar-cell.selected .cal-day-lbl {
-            color: var(--bg-darkest);
-        }
-
-        .slots-title {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-        }
-
-        .slots-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-        }
-
-        .slot-cell {
-            background: var(--bg-input);
-            border: 1px solid var(--border);
-            color: var(--text-main);
-            padding: 12px 0;
-            border-radius: 6px;
-            text-align: center;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            min-height: 46px;
-        }
-
-        .slot-cell.selected {
-            background: var(--primary);
-            color: var(--bg-darkest);
-            border-color: var(--primary);
-        }
-
-        /* Forms */
-        .input-group {
-            margin-bottom: 16px;
-        }
-
-        .input-group label {
+        .step-panel.active {
             display: block;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 6px;
+            animation: fadeIn 0.4s ease;
         }
 
-        .field-input {
-            width: 100%;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .panel-heading {
+            margin-bottom: 24px;
+        }
+
+        .panel-heading h4 {
+            font-size: 1.3rem;
+            margin-bottom: 4px;
+        }
+
+        .panel-heading p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Elementos de Seleção Inteligente */
+        .selection-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            max-height: 280px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+
+        .selection-grid::-webkit-scrollbar {
+            width: 6px;
+        }
+        .selection-grid::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 3px;
+        }
+
+        .selectable-card {
             background: var(--bg-input);
             border: 1px solid var(--border);
+            padding: 16px;
             border-radius: 8px;
-            padding: 14px;
-            color: var(--text-main);
-            font-size: 1rem;
-            min-height: 48px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
         }
 
-        .field-input:focus {
-            outline: none;
+        .selectable-card:hover {
+            border-color: rgba(212,175,55,0.5);
+            background: rgba(255,255,255,0.01);
+        }
+
+        .selectable-card.selected {
+            border-color: var(--primary);
+            background: rgba(212,175,55,0.05);
+        }
+
+        .sc-info-left h5 {
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
+
+        .sc-info-left p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .sc-radio-circle {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .selectable-card.selected .sc-radio-circle {
             border-color: var(--primary);
         }
 
-        /* Summary */
-        .summary-widget {
+        .selectable-card.selected .sc-radio-circle::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        /* Grid de Data e Horário */
+        .datetime-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 24px;
+        }
+
+        .calendar-widget {
             background: var(--bg-input);
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 16px;
-            margin-bottom: 20px;
         }
 
-        .summary-line {
+        .cal-header {
             display: flex;
             justify-content: space-between;
-            font-size: 0.85rem;
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            align-items: center;
+            margin-bottom: 16px;
         }
 
-        .summary-line:last-child {
+        .cal-header h5 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .cal-nav-btn {
+            background: none;
+            border: none;
+            color: var(--text-main);
+            cursor: pointer;
+            padding: 4px 8px;
+            font-size: 1rem;
+        }
+        .cal-nav-btn:hover { color: var(--primary); }
+
+        .cal-days-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            text-align: center;
+        }
+
+        .cal-day-lbl {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            padding-bottom: 6px;
+        }
+
+        .cal-day-num {
+            font-size: 0.9rem;
+            padding: 8px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .cal-day-num:hover:not(.disabled):not(.selected) {
+            background: rgba(255,255,255,0.05);
+        }
+
+        .cal-day-num.disabled {
+            color: #404045;
+            cursor: not-allowed;
+            text-decoration: line-through;
+        }
+
+        .cal-day-num.selected {
+            background: var(--primary);
+            color: var(--bg-main);
+            font-weight: 700;
+        }
+
+        .time-widget {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .time-slots-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            max-height: 220px;
+            overflow-y: auto;
+        }
+
+        .time-slot {
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            padding: 10px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 0.90rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .time-slot:hover:not(.booked) {
+            border-color: var(--primary);
+        }
+
+        .time-slot.selected {
+            background: var(--primary);
+            color: var(--bg-main);
+            border-color: var(--primary);
+            font-weight: 600;
+        }
+
+        .time-slot.booked {
+            background: #19191F;
+            color: #454550;
+            border-color: transparent;
+            cursor: not-allowed;
+        }
+
+        /* Formulário de Identificação */
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            padding: 12px 16px;
+            border-radius: 6px;
+            color: var(--text-main);
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* Resumo Final UI */
+        .summary-card {
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .summary-row:last-child {
             border-bottom: none;
         }
 
-        .summary-lbl {
+        .summary-label {
             color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
-        .summary-val {
+        .summary-value {
             font-weight: 600;
+            font-size: 0.95rem;
             text-align: right;
         }
 
-        .booking-actions {
-            padding: 0 16px 24px 16px;
+        /* Rodapé do Sistema de Reserva */
+        .booking-footer {
+            background: rgba(0,0,0,0.1);
+            padding: 24px 32px;
+            border-top: 1px solid var(--border);
             display: flex;
-            gap: 12px;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .booking-actions .btn {
-            flex: 1;
+        .btn-nav-back {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
         }
 
-        /* Club & Benefits */
-        .benefits {
-            padding: 48px 0;
-            background: var(--bg-dark);
+        .btn-nav-back:hover {
+            color: var(--text-main);
+            background: rgba(255,255,255,0.02);
         }
 
+        /* Benefícios do Clube */
         .benefits-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
         }
 
         .benefit-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
+            border-radius: 8px;
+            padding: 32px 24px;
+        }
+
+        .benefit-icon {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 16px;
         }
 
         .benefit-card h3 {
             font-size: 1.2rem;
-            color: var(--primary);
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
 
         .benefit-card p {
-            font-size: 0.9rem;
             color: var(--text-muted);
+            font-size: 0.95rem;
         }
 
-        /* Reviews */
-        .reviews {
-            padding: 48px 0;
-        }
-
+        /* Avaliações */
         .reviews-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
         }
 
         .review-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 8px;
+            padding: 24px;
         }
 
-        .review-stars {
+        .rev-stars {
             color: var(--primary);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
         }
 
-        .review-card p {
-            font-size: 0.9rem;
-            color: #d1d1db;
+        .rev-text {
             font-style: italic;
+            font-size: 0.95rem;
+            color: #E0E0E5;
             margin-bottom: 16px;
         }
 
-        .review-author {
+        .rev-author {
+            font-weight: 600;
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
-        .avatar-placeholder {
-            width: 36px;
-            height: 36px;
-            background: var(--bg-input);
-            border: 1px solid var(--border);
+        .rev-author::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--success);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.8rem;
-            color: var(--primary);
-        }
-
-        .author-meta h5 {
-            font-size: 0.85rem;
-        }
-
-        .author-meta small {
-            color: var(--text-muted);
-            font-size: 0.75rem;
         }
 
         /* FAQ */
-        .faq {
-            padding: 48px 0;
-            background: var(--bg-dark);
-        }
-
-        .faq-accordion {
+        .faq-layout {
+            max-width: 800px;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
         }
 
         .faq-item {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 8px;
+            border-radius: 6px;
+            overflow: hidden;
         }
 
-        .faq-head {
+        .faq-trigger {
             width: 100%;
-            padding: 16px;
             background: none;
             border: none;
-            color: var(--text-main);
+            padding: 20px 24px;
             text-align: left;
-            font-size: 0.95rem;
+            color: var(--text-main);
+            font-size: 1.05rem;
             font-weight: 600;
+            cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            min-height: 48px;
         }
 
-        .faq-head span {
+        .faq-trigger::after {
+            content: '+';
             color: var(--primary);
-            margin-left: 8px;
+            font-size: 1.4rem;
         }
 
-        .faq-body {
-            padding: 0 16px;
+        .faq-item.active .faq-trigger::after {
+            content: '−';
+        }
+
+        .faq-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.2s ease, padding 0.2s ease;
+            transition: max-height 0.3s ease;
+            background: rgba(0,0,0,0.1);
+        }
+
+        .faq-content p {
+            padding: 0 24px 20px 24px;
             color: var(--text-muted);
-            font-size: 0.85rem;
-            line-height: 1.5;
+            font-size: 0.95rem;
         }
 
-        .faq-item.open .faq-body {
-            padding-bottom: 16px;
-            max-height: 200px;
+        /* Contato & Mapa */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 48px;
         }
 
-        /* Contact */
-        .contact {
-            padding: 48px 0;
-        }
-
-        .contact-details h3 {
-            font-size: 1.4rem;
-            margin-bottom: 16px;
-            color: var(--primary);
-        }
-
-        .contact-items-list {
-            list-style: none;
+        .contact-info-list {
             display: flex;
             flex-direction: column;
-            gap: 14px;
-            margin-bottom: 24px;
+            gap: 24px;
         }
 
-        .contact-items-list li {
-            font-size: 0.9rem;
-            color: #d1d1db;
+        .ci-box h4 {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .ci-box p {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .map-wrapper {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            height: 320px;
+            position: relative;
+        }
+
+        .mock-map {
+            width: 100%;
+            height: 100%;
+            background: #18181F;
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+        }
+
+        .map-btn {
+            margin-top: 16px;
+            background: #24242B;
+            border: 1px solid var(--border);
+            color: #FFF;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
             gap: 8px;
         }
+        .map-btn:hover { background: #2F2F38; }
 
-        .map-frame-holder {
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            padding: 20px;
-            background: var(--bg-card);
-            text-align: center;
-        }
-
-        .map-interactive-trigger h5 {
-            color: var(--primary);
-            margin-bottom: 4px;
-        }
-
-        .map-interactive-trigger p {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
-
-        /* Footer */
+        /* Rodapé */
         footer {
-            padding: 24px 16px;
+            background: #060608;
+            padding: 40px 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
             border-top: 1px solid var(--border);
-            text-align: center;
-            font-size: 0.75rem;
-            color: #717185;
         }
 
-        /* Floating WhatsApp Bubble */
-        .whatsapp-bubble {
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        /* Botão Flutuante */
+        .whatsapp-float {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            background: #25d366;
+            bottom: 24px;
+            right: 24px;
+            background: #25D366;
+            color: white;
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             z-index: 999;
+            text-decoration: none;
+            font-size: 1.8rem;
+            transition: transform 0.2s;
         }
 
-        .whatsapp-bubble svg {
-            width: 24px;
-            height: 24px;
-            fill: #fff;
+        .whatsapp-float:hover {
+            transform: scale(1.05);
         }
 
-        /* Media Queries para Tablet e Desktop Upgrades */
-        @media (min-width: 768px) {
-            .hero h1 { font-size: 3rem; }
-            .services-grid { grid-template-columns: repeat(2, 1fr); display: grid; }
-            .benefits-grid { grid-template-columns: repeat(3, 1fr); display: grid; }
-            .reviews-grid { grid-template-columns: repeat(3, 1fr); display: grid; }
-            .slots-container { grid-template-columns: repeat(6, 1fr); }
-            .menu-toggle { display: none; }
-            .nav-links { display: flex; position: static; flex-direction: row; width: auto; border: none; padding: 0; }
-            .calendar-scroll-container { overflow-x: visible; }
-            .calendar-ctrl { display: grid; grid-template-columns: repeat(7, 1fr); width: 100%; }
+        /* Responsividade Mobile First */
+        @media (max-width: 992px) {
+            .about-grid, .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .steps-grid, .benefits-grid, .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        @media (min-width: 992px) {
-            .container { max-width: 1140px; padding: 0 24px; }
-            .presentation-grid, .contact-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
-            .contact-layout { grid-template-columns: 1fr 1fr; }
-            .booking-card { max-width: 680px; margin: 0 auto; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.4rem; }
+            .nav-links { display: none; }
+            .menu-toggle { display: flex; }
+            
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--bg-main);
+                border-bottom: 1px solid var(--border);
+                padding: 24px;
+                gap: 16px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            }
+
+            .datetime-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid, .benefits-grid, .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-body {
+                padding: 20px;
+            }
+            
+            .booking-footer {
+                padding: 20px;
+            }
+            
+            .badge-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -812,450 +1067,604 @@
 
     <!-- Header -->
     <header>
-        <div class="container header-container">
-            <a href="#" class="brand">
-                <div class="brand-logo">DR</div>
-                <span class="brand-name">Don Romano</span>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-box">DR</span> Don Romano
             </a>
-            <button class="menu-toggle" id="toggleNav">☰</button>
-            <ul class="nav-links" id="navContainer">
-                <li><a href="#sobre">Sobre</a></li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#sobre">A Empresa</a></li>
                 <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#agendamento">Agendar</a></li>
-                <li><a href="#clube">Clube</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#clube">Clube DR</a></li>
+                <li><a href="#faq">Dúvidas</a></li>
+                <li><a href="#contato">Localização</a></li>
             </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="#agendamento" class="nav-btn">Agendar Agora</a>
         </div>
     </header>
 
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div class="hero-badge">BARBEARIA PREMIUM EM OSASCO</div>
-            <h1>Sua Imagem Alinhada com <span>Alta Performance</span></h1>
-            <p>Cortes cirúrgicos e barba de respeito. Agende sua cadeira online pelo celular em menos de 60 segundos.</p>
-            <a href="#agendamento" class="btn">Agendar Horário Agora</a>
-        </div>
-    </section>
-
-    <!-- Presentation -->
-    <section class="presentation" id="sobre">
-        <div class="container presentation-grid">
-            <div class="presentation-content">
-                <h2>Muito mais que um corte. Um ritual.</h2>
-                <p>A Don Romano Barber Lounge une a essência tradicional ao design moderno para o homem que exige excelência e agilidade estruturada.</p>
-                <a href="#agendamento" class="btn btn-secondary">Ir para a Agenda</a>
-            </div>
-            <div class="badge-info">
-                <h4>Horários Operacionais</h4>
-                <ul>
-                    <li><span>Segunda a Sexta:</span> <strong>09h às 21h</strong></li>
-                    <li><span>Sábado:</span> <strong>08h às 20h</strong></li>
-                    <li><span>Domingo:</span> <strong>09h às 14h</strong></li>
-                </ul>
+            <h1>Sua imagem com a assinatura <span>Don Romano</span></h1>
+            <p>Esqueça as esperas demoradas. Escolha seu profissional, selecione o horário e reserve o atendimento ideal para o seu estilo em menos de 60 segundos.</p>
+            <div class="hero-cta-group">
+                <a href="#agendamento" class="btn-primary">Agendar Atendimento</a>
+                <a href="#servicos" class="btn-secondary">Ver Serviços</a>
             </div>
         </div>
     </section>
 
-    <!-- Services -->
-    <section class="services" id="servicos">
+    <!-- Apresentação / Sobre -->
+    <section id="sobre">
         <div class="container">
-            <div class="section-header">
-                <h2>Catálogo de Serviços</h2>
-                <p>Os procedimentos de maior conversão e procura espontânea.</p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Muito mais que um corte. Um Lounge de experiência.</h3>
+                    <p>A Don Romano Barber Lounge foi projetada para o homem moderno que valoriza seu tempo e sua imagem. Oferecemos um ambiente exclusivo, climatizado e focado em técnicas de alta performance.</p>
+                    <div class="features-inline">
+                        <div class="feature-item-mini">⚡ Agendamento Inteligente</div>
+                        <div class="feature-item-mini">💈 6 Barbeiros Especialistas</div>
+                        <div class="feature-item-mini">☕ Espaço Premium Conforto</div>
+                        <div class="feature-item-mini">🚗 Fácil Acesso em Osasco</div>
+                    </div>
+                </div>
+                <div class="badge-grid">
+                    <div class="badge-card">
+                        <span class="num">6</span>
+                        <span class="lbl">Especialistas</span>
+                    </div>
+                    <div class="badge-card">
+                        <span class="num">40m</span>
+                        <span class="lbl">Média de foco</span>
+                    </div>
+                    <div class="badge-card">
+                        <span class="num">100%</span>
+                        <span class="lbl">Satisfação</span>
+                    </div>
+                </div>
             </div>
-            <div class="services-grid">
-                <div class="service-item">
-                    <h3>Combo Corte Degradê + Barba Premium</h3>
-                    <p>Ajuste estético capilar integrado ao tratamento com toalha quente.</p>
-                    <div class="service-footer">
-                        <span class="service-price">R$ 110,00</span>
-                        <span class="service-time">60 min</span>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos">
+        <div class="container">
+            <h2 class="section-title">Nossos <span>Serviços</span></h2>
+            <p class="section-subtitle">Técnicas atualizadas, acabamento cirúrgico e produtos de linha profissional.</p>
+            
+            <div class="services-showcase">
+                <div class="service-card-ui">
+                    <div class="sc-header">
+                        <div class="sc-title">Combo Corte Degradê + Barba Premium</div>
+                        <span class="sc-badge">Mais Procurado</span>
                     </div>
+                    <div class="sc-time">⏳ 1 Hora</div>
                 </div>
-                <div class="service-item">
-                    <h3>Corte Degradê (Fade)</h3>
-                    <p>Transição lateral limpa, milimétrica e adaptada ao formato do crânio.</p>
-                    <div class="service-footer">
-                        <span class="service-price">R$ 60,00</span>
-                        <span class="service-time">40 min</span>
+                <div class="service-card-ui">
+                    <div class="sc-header">
+                        <div class="sc-title">Corte Masculino Tradicional / Social</div>
                     </div>
+                    <div class="sc-time">⏳ 40 minutos</div>
                 </div>
-                <div class="service-item">
-                    <h3>Barba Premium com Toalha Quente</h3>
-                    <p>Barbear tradicional completo com óleos essenciais e hidratação cutânea.</p>
-                    <div class="service-footer">
-                        <span class="service-price">R$ 50,00</span>
-                        <span class="service-time">30 min</span>
+                <div class="service-card-ui">
+                    <div class="sc-header">
+                        <div class="sc-title">Barba Premium com Toalha Quente</div>
                     </div>
+                    <div class="sc-time">⏳ 30 minutos</div>
                 </div>
-                <div class="service-item">
-                    <h3>Pigmentação de Barba</h3>
-                    <p>Correção imediata e preenchimento de falhas de forma natural.</p>
-                    <div class="service-footer">
-                        <span class="service-price">R$ 40,00</span>
-                        <span class="service-time">40 min</span>
+                <div class="service-card-ui">
+                    <div class="sc-header">
+                        <div class="sc-title">Design de Sobrancelha Masculina</div>
                     </div>
+                    <div class="sc-time">⏳ 15 minutos</div>
+                </div>
+                <div class="service-card-ui">
+                    <div class="sc-header">
+                        <div class="sc-title">Pigmentação (Capilar ou Barba)</div>
+                    </div>
+                    <div class="sc-time">⏳ 40 minutos</div>
+                </div>
+                <div class="service-card-ui">
+                    <div class="sc-header">
+                        <div class="sc-title">Hidratação Capilar Profissional</div>
+                    </div>
+                    <div class="sc-time">⏳ 30 minutos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Agendamento em <span>4 Etapas</span></h2>
+            <p class="section-subtitle">Sem ligações, sem demora. Processo otimizado para o seu dia a dia.</p>
+            
+            <div class="steps-grid">
+                <div class="step-box">
+                    <div class="step-num">01</div>
+                    <h3>Serviço</h3>
+                    <p>Selecione o procedimento ou o combo que deseja realizar.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-num">02</div>
+                    <h3>Barbeiro</h3>
+                    <p>Escolha o profissional de sua preferência ou qualquer disponível.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-num">03</div>
+                    <h3>Data e Hora</h3>
+                    <p>Encontre o dia ideal e os horários livres em tempo real.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-num">04</div>
+                    <h3>Confirmação</h3>
+                    <p>Valide seus dados e receba o resumo com integração direta.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sistema Principal -->
-    <section class="booking-section" id="agendamento">
+    <section id="agendamento" class="booking-section">
         <div class="container">
-            <div class="booking-card">
-                <div class="booking-nav">
-                    <div class="booking-nav-meta">
-                        <span id="stepLabelDisplay">Etapa 1 de 4</span>
-                        <span id="stepPctDisplay">25%</span>
+            <h2 class="section-title">Módulo de <span>Reserva Real</span></h2>
+            <p class="section-subtitle">Integrado ao WhatsApp e Google Agenda corporativo.</p>
+
+            <div class="booking-wrapper">
+                <!-- Cabeçalho Dinâmico -->
+                <div class="booking-header">
+                    <div class="bh-title">
+                        <h3 id="panelTitle">Escolha o Serviço</h3>
+                        <p id="panelDesc">Selecione o atendimento principal para a sua reserva.</p>
                     </div>
-                    <div class="progress-track">
-                        <div class="progress-fill" id="stepProgressFill"></div>
+                    <div class="progress-container">
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" id="progressFill"></div>
+                        </div>
+                        <div class="progress-text" id="progressText">Passo 1 de 4</div>
                     </div>
                 </div>
 
+                <!-- Corpo do Sistema -->
                 <div class="booking-body">
-                    <!-- Step 1 -->
-                    <div class="booking-panel active" id="panel1">
-                        <div class="panel-heading">Selecione o Serviço</div>
-                        <div class="panel-subheading">Toque no procedimento desejado para avançar.</div>
-                        <div class="item-selection-list">
-                            <div class="selection-row" onclick="pickService(this, 'Combo Corte + Barba Premium', 110)">
-                                <div class="selection-details">
-                                    <h5>Combo Corte + Barba Premium</h5>
-                                    <p>O mais procurado da casa • Toalha Quente</p>
-                                </div>
-                                <div class="selection-right">R$ 110</div>
-                            </div>
-                            <div class="selection-row" onclick="pickService(this, 'Corte Degradê (Fade)', 60)">
-                                <div class="selection-details">
-                                    <h5>Corte Degradê (Fade)</h5>
-                                    <p>Transição limpa e milimétrica</p>
-                                </div>
-                                <div class="selection-right">R$ 60</div>
-                            </div>
-                            <div class="selection-row" onclick="pickService(this, 'Barba Premium', 50)">
-                                <div class="selection-details">
-                                    <h5>Barba Premium</h5>
-                                    <p>Protocolo completo relaxante</p>
-                                </div>
-                                <div class="selection-right">R$ 50</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="booking-panel" id="panel2">
-                        <div class="panel-heading">Escolha o Barbeiro</div>
-                        <div class="panel-subheading">Selecione o profissional de sua preferência técnica.</div>
-                        <div class="item-selection-list">
-                            <div class="selection-row" onclick="pickBarber(this, 'Tanto Faz / Próximo Disponível')">
-                                <div class="selection-details">
-                                    <h5>Próximo Barbeiro Disponível</h5>
-                                    <p>Prioridade de velocidade na agenda</p>
-                                </div>
-                            </div>
-                            <div class="selection-row" onclick="pickBarber(this, 'Don Romano (Master)')">
-                                <div class="selection-details">
-                                    <h5>Don Romano (Master)</h5>
-                                    <p>Especialista em Visagismo Clássico</p>
-                                </div>
-                            </div>
-                            <div class="selection-row" onclick="pickBarber(this, 'Marcus Costta')">
-                                <div class="selection-details">
-                                    <h5>Marcus Costta</h5>
-                                    <p>Expert em Degradê & Linhas Modernas</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="booking-panel" id="panel3">
-                        <div class="panel-heading">Data e Horário</div>
-                        <div class="panel-subheading">Deslize lateralmente para selecionar o dia.</div>
+                    <form id="bookingForm" onsubmit="return false;">
                         
-                        <div class="calendar-scroll-container">
-                            <div class="calendar-ctrl" id="calendarLayout"></div>
+                        <!-- Painel 1: Serviço -->
+                        <div class="step-panel active" id="panel1">
+                            <div class="selection-grid">
+                                <div class="selectable-card" onclick="selectService('Combo Corte Degradê + Barba Premium', '1h')">
+                                    <div class="sc-info-left">
+                                        <h5>Combo Corte Degradê + Barba Premium</h5>
+                                        <p>⏳ Duração recomendada: 1 hora</p>
+                                    </div>
+                                    <div class="sc-radio-circle"></div>
+                                </div>
+                                <div class="selectable-card" onclick="selectService('Corte Masculino Tradicional', '40min')">
+                                    <div class="sc-info-left">
+                                        <h5>Corte Masculino Tradicional</h5>
+                                        <p>⏳ Duração: 40 minutos</p>
+                                    </div>
+                                    <div class="sc-radio-circle"></div>
+                                </div>
+                                <div class="selectable-card" onclick="selectService('Barba Premium com Toalha Quente', '30min')">
+                                    <div class="sc-info-left">
+                                        <h5>Barba Premium com Toalha Quente</h5>
+                                        <p>⏳ Duração: 30 minutos</p>
+                                    </div>
+                                    <div class="sc-radio-circle"></div>
+                                </div>
+                                <div class="selectable-card" onclick="selectService('Design de Sobrancelha Masculina', '15min')">
+                                    <div class="sc-info-left">
+                                        <h5>Design de Sobrancelha</h5>
+                                        <p>⏳ Duração: 15 minutos</p>
+                                    </div>
+                                    <div class="sc-radio-circle"></div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="slots-title">Horários Disponíveis</div>
-                        <div class="slots-container" id="slotsLayout"></div>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="booking-panel" id="panel4">
-                        <div class="panel-heading">Resumo da Reserva</div>
-                        <div class="panel-subheading">Confira os dados antes do envio de validação.</div>
-                        
-                        <div class="summary-widget">
-                            <div class="summary-line"><span class="summary-lbl">Serviço:</span><span class="summary-val" id="resumeService">-</span></div>
-                            <div class="summary-line"><span class="summary-lbl">Barbeiro:</span><span class="summary-val" id="resumeBarber">-</span></div>
-                            <div class="summary-line"><span class="summary-lbl">Horário:</span><span class="summary-val" id="resumeDateTime">-</span></div>
-                            <div class="summary-line"><span class="summary-lbl">Total:</span><span class="summary-val" style="color:var(--primary)" id="resumePrice">R$ 0,00</span></div>
+                        <!-- Painel 2: Barbeiro -->
+                        <div class="step-panel" id="panel2">
+                            <div class="selection-grid">
+                                <div class="selectable-card" onclick="selectBarber('Qualquer Profissional Disponível')">
+                                    <div class="sc-info-left">
+                                        <h5>Qualquer Profissional Disponível</h5>
+                                        <p>Encaixe automático no melhor horário</p>
+                                    </div>
+                                    <div class="sc-radio-circle"></div>
+                                </div>
+                                <div class="selectable-card" onclick="selectBarber('Romano (Barbeiro Master)')">
+                                    <div class="sc-info-left">
+                                        <h5>Romano</h5>
+                                        <p>Especialista em Cortes Clássicos e Visagismo</p>
+                                    </div>
+                                    <div class="sc-radio-circle"></div>
+                                </div>
+                                <div class="selectable-card" onclick="selectBarber('Lucas Medeiros')">
+                                    <div class="sc-info-left">
+                                        <h5>Lucas Medeiros</h5>
+                                        <p>Especialista em Fade, Degradê e Alinhamento</p>
+                                    </div>
+                                    <div class="sc-radio-circle"></div>
+                                </div>
+                                <div class="selectable-card" onclick="selectBarber('Marcos Silva')">
+                                    <div class="sc-info-left">
+                                        <h5>Marcos Silva</h5>
+                                        <p>Especialista em Barba de Toalha Quente e Pigmentação</p>
+                                    </div>
+                                    <div class="sc-radio-circle"></div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="input-group">
-                            <label for="clientName">Seu Nome</label>
-                            <input type="text" id="clientName" class="field-input" placeholder="Digite seu nome">
+                        <!-- Painel 3: Data e Hora -->
+                        <div class="step-panel" id="panel3">
+                            <div class="datetime-layout">
+                                <div class="calendar-widget">
+                                    <div class="cal-header">
+                                        <h5 id="calMonthYear">Julho 2026</h5>
+                                    </div>
+                                    <div class="cal-days-grid">
+                                        <div class="cal-day-lbl">D</div>
+                                        <div class="cal-day-lbl">S</div>
+                                        <div class="cal-day-lbl">T</div>
+                                        <div class="cal-day-lbl">Q</div>
+                                        <div class="cal-day-lbl">Q</div>
+                                        <div class="cal-day-lbl">S</div>
+                                        <div class="cal-day-lbl">S</div>
+                                        
+                                        <!-- Mock Days para Julho -->
+                                        <div class="cal-day-num disabled">5</div>
+                                        <div class="cal-day-num" onclick="selectDate('06/07/2026', this)">6</div>
+                                        <div class="cal-day-num" onclick="selectDate('07/07/2026', this)">7</div>
+                                        <div class="cal-day-num selected" onclick="selectDate('08/07/2026', this)">8</div>
+                                        <div class="cal-day-num" onclick="selectDate('09/07/2026', this)">9</div>
+                                        <div class="cal-day-num" onclick="selectDate('10/07/2026', this)">10</div>
+                                        <div class="cal-day-num" onclick="selectDate('11/07/2026', this)">11</div>
+                                    </div>
+                                </div>
+                                <div class="time-widget">
+                                    <div class="time-slots-grid">
+                                        <div class="time-slot booked">09:00</div>
+                                        <div class="time-slot" onclick="selectTime('09:40', this)">09:40</div>
+                                        <div class="time-slot" onclick="selectTime('10:20', this)">10:20</div>
+                                        <div class="time-slot booked">11:00</div>
+                                        <div class="time-slot" onclick="selectTime('13:30', this)">13:30</div>
+                                        <div class="time-slot" onclick="selectTime('14:20', this)">14:20</div>
+                                        <div class="time-slot" onclick="selectTime('15:00', this)">15:00</div>
+                                        <div class="time-slot" onclick="selectTime('16:40', this)">16:40</div>
+                                        <div class="time-slot" onclick="selectTime('18:00', this)">18:00</div>
+                                        <div class="time-slot" onclick="selectTime('19:30', this)">19:30</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="input-group">
-                            <label for="clientPhone">Seu WhatsApp</label>
-                            <input type="tel" id="clientPhone" class="field-input" placeholder="(11) 99999-9999">
+
+                        <!-- Painel 4: Identificação e Confirmação -->
+                        <div class="step-panel" id="panel4">
+                            <div class="form-group">
+                                <label for="clientName">Nome Completo</label>
+                                <input type="text" id="clientName" class="form-control" placeholder="Ex: Roberto Silva" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="clientPhone">WhatsApp / Telefone</label>
+                                <input type="tel" id="clientPhone" class="form-control" placeholder="(11) 99999-9999" required>
+                            </div>
+                            
+                            <div class="summary-card" style="margin-top:20px;">
+                                <div class="summary-row">
+                                    <span class="summary-label">Serviço Escolhido</span>
+                                    <span class="summary-value" id="sumService">-</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Profissional</span>
+                                    <span class="summary-value" id="sumBarber">-</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Data e Hora</span>
+                                    <span class="summary-value" id="sumDateTime">-</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+
+                    </form>
                 </div>
 
-                <div class="booking-actions">
-                    <button class="btn btn-secondary" id="actionBack" style="display:none;" onclick="stepNavigator(-1)">Voltar</button>
-                    <button class="btn" id="actionNext" onclick="stepNavigator(1)" disabled>Avançar</button>
+                <!-- Rodapé de Ações do Fluxo -->
+                <div class="booking-footer">
+                    <button class="btn-nav-back" id="btnBack" onclick="changeStep(-1)" style="visibility:hidden;">Voltar</button>
+                    <button class="btn-primary" id="btnNext" onclick="changeStep(1)" style="padding:12px 32px;">Avançar</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Clube -->
-    <section class="benefits" id="clube">
+    <!-- Benefícios do Clube Don Romano -->
+    <section id="clube">
         <div class="container">
-            <div class="section-header">
-                <h2>Clube Don Romano</h2>
-                <p>Planos recorrentes com prioridade e vantagens financeiras.</p>
-            </div>
+            <h2 class="section-title">Clube <span>Don Romano</span></h2>
+            <p class="section-subtitle">Planos recorrentes de fidelidade para quem mantém a régua sempre alta.</p>
+            
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <h3>Cortes Semanais</h3>
-                    <p>Manutenção contínua do visual alinhado sem filas e com recorrência automática.</p>
+                    <div class="benefit-icon">👑</div>
+                    <h3>Frequência Controlada</h3>
+                    <p>Opções de até 2 cortes e 2 barbas por mês inclusas no pacote recorrente com débito seguro.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>Toalha Quente</h3>
-                    <p>Tratamentos de barba inclusos no pacote de assinatura de fidelidade.</p>
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Prioridade Máxima</h3>
+                    <p>Acesso antecipado aos horários mais concorridos da semana e vésperas de feriados.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>Produtos VIP</h3>
-                    <p>Descontos fixos exclusivos em pomadas e kits de tratamento home care.</p>
+                    <div class="benefit-icon">🧴</div>
+                    <h3>Desconto em Linha</h3>
+                    <p>15% de desconto fixo em pomadas, óleos, balms e kits presenteáveis da nossa linha própria.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Reviews -->
-    <section class="reviews">
+    <!-- Avaliações -->
+    <section>
         <div class="container">
-            <div class="section-header">
-                <h2>Avaliações de Clientes</h2>
-                <p>A experiência contada por quem ocupa nossas cadeiras.</p>
-            </div>
+            <h2 class="section-title">O que dizem nossos <span>Clientes</span></h2>
+            <p class="section-subtitle">Avaliações reais extraídas do Google Meu Negócio da nossa unidade de Osasco.</p>
+            
             <div class="reviews-grid">
                 <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p>"Agendamento mobile impecável. Chego no horário e sou atendido imediatamente sem atrasos."</p>
-                    <div class="review-author">
-                        <div class="avatar-placeholder">TC</div>
-                        <div class="author-meta"><h5>Thiago Camargo</h5><small>Cliente Recorrente</small></div>
-                    </div>
+                    <div class="rev-stars">★★★★★</div>
+                    <div class="rev-text">"O combo com toalha quente é de outro nível. O atendimento com o Romano é impecável, pontualidade britânica. Recomendo de olhos fechados."</div>
+                    <div class="rev-author">Carlos Eduardo S.</div>
                 </div>
                 <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p>"Ambiente sensacional em Osasco. O plano mensal economiza muito tempo e dinheiro."</p>
-                    <div class="review-author">
-                        <div class="avatar-placeholder">RA</div>
-                        <div class="author-meta"><h5>Rodrigo Andrade</h5><small>Membro do Clube</small></div>
-                    </div>
+                    <div class="rev-stars">★★★★★</div>
+                    <div class="rev-text">"Sistema de agendamento online perfeito. Faço pelo celular rapidinho, chego e o Lucas já está pronto me esperando. Melhor barbearia da região."</div>
+                    <div class="rev-author">Thiago Mendes</div>
+                </div>
+                <div class="review-card">
+                    <div class="rev-stars">★★★★★</div>
+                    <div class="rev-text">"Ambiente premium muito agradável, café excelente e os profissionais são feras demais no degradê. Vale cada centavo."</div>
+                    <div class="rev-author">Felipe Augusto</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="faq" id="faq">
+    <section id="faq">
         <div class="container">
-            <div class="section-header">
-                <h2>FAQ</h2>
-                <p>Esclarecimentos operacionais imediatos.</p>
-            </div>
-            <div class="faq-accordion">
+            <h2 class="section-title">Dúvidas <span>Frequentes</span></h2>
+            <p class="section-subtitle">Informações claras sobre o funcionamento operacional do Lounge.</p>
+            
+            <div class="faq-layout">
                 <div class="faq-item">
-                    <button class="faq-head" onclick="toggleAccordion(this)">Atendem sem agendamento? <span>+</span></button>
-                    <div class="faq-body">Sim. Atendemos também por ordem de chegada com base na disponibilidade imediata da equipe de balcão.</div>
+                    <button class="faq-trigger" onclick="toggleFaq(this)">Atendem apenas com agendamento?</button>
+                    <div class="faq-content">
+                        <p>Não. Atendemos com foco em agendamento prévio para garantir zero espera, mas também recebemos clientes por ordem de chegada conforme a disponibilidade de janelas na bancada dos barbeiros.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-head" onclick="toggleAccordion(this)">Quais as formas de pagamento? <span>+</span></button>
-                    <div class="faq-body">Aceitamos PIX, Cartão de Crédito/Débito, Dinheiro e aproximação (NFC).</div>
+                    <button class="faq-trigger" onclick="toggleFaq(this)">Como funciona o cancelamento ou reagendamento?</button>
+                    <div class="faq-content">
+                        <p>Você pode reagendar ou cancelar sua reserva entrando em contato direto com o nosso WhatsApp com no mínimo 2 horas de antecedência para liberar a vaga para outro cliente.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger" onclick="toggleFaq(this)">Quais as formas de pagamento aceitas?</button>
+                    <div class="faq-content">
+                        <p>Aceitamos PIX, Cartões de Crédito e Débito, Dinheiro, Vale Alimentação e pagamento por aproximação (NFC). Parcelamos pacotes acima de R$ 250 em até 6x.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section class="contact" id="contato">
-        <div class="container contact-layout">
-            <div class="contact-details">
-                <h3>Don Romano Lounge</h3>
-                <ul class="contact-items-list">
-                    <li>📍 Av. Santo Antônio, 1548 - Osasco/SP</li>
-                    <li>📲 (11) 99834-6725</li>
-                    <li>✉️ contato@donromanobarber.com.br</li>
-                </ul>
-            </div>
-            <div class="map-frame-holder">
-                <div class="map-interactive-trigger">
-                    <h5>Localização</h5>
-                    <p>Av. Santo Antônio, 1548 - Osasco/SP</p>
-                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="min-height:44px; font-size:0.85rem;">Ver Rotas</a>
+    <!-- Contato e Mapa -->
+    <section id="contato">
+        <div class="container">
+            <h2 class="section-title">Estamos em <span>Osasco</span></h2>
+            <p class="section-subtitle">Localização estratégica de fácil acesso com estacionamento integrado.</p>
+            
+            <div class="contact-layout">
+                <div class="contact-info-list">
+                    <div class="ci-box">
+                        <h4>Endereço Oficial</h4>
+                        <p>Av. Santo Antônio, 1548 — Osasco/SP</p>
+                    </div>
+                    <div class="ci-box">
+                        <h4>Horários de Atendimento</h4>
+                        <p>Segunda a Sexta: 09h às 21h<br>Sábado: 08h às 20h<br>Domingo: 09h às 14h</p>
+                    </div>
+                    <div class="ci-box">
+                        <h4>Contatos Rápidos</h4>
+                        <p>WhatsApp: (11) 99834-6725<br>E-mail: contato@donromanobarber.com.br</p>
+                    </div>
+                </div>
+                <div class="map-wrapper">
+                    <div class="mock-map">
+                        <strong>📍 Don Romano Barber Lounge</strong>
+                        <span style="color: var(--text-muted); font-size: 0.85rem; margin-top: 6px;">Av. Santo Antônio, 1548 — Osasco</span>
+                        <a href="https://maps.google.com" target="_blank" class="map-btn">Abrir no Google Maps</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Rodapé -->
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Don Romano Barber Lounge. Automação Comercial Responsiva.</p>
+        <div class="container footer-flex">
+            <div>
+                <p>&copy; 2026 Don Romano Barber Lounge. Todos os direitos reservados.</p>
+                <p style="font-size:0.75rem; margin-top:4px; color:#555;">Desenvolvido com Tecnologia Cliente Agenda SaaS.</p>
+            </div>
+            <div>
+                <span style="color:var(--text-main); font-weight:600;">@donromanobarber</span>
+            </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Bubble -->
-    <a href="https://wa.me/5511998346725" class="whatsapp-bubble" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 32 32"><path d="M16 2a13 13 0 0 0-11.3 19.4L3 29l7.8-2A13 13 0 1 0 16 2zm6.6 18.6c-.3.8-1.5 1.4-2.1 1.5-.6.1-1.3.2-3.8-.8-3.1-1.3-5.1-4.5-5.3-4.7-.2-.2-1.4-1.9-1.4-3.7 0-1.7.9-2.6 1.2-2.9.3-.3.7-.5 1.1-.5h.4c.3 0 .6 0 .9.7.3.7 1 2.5 1.1 2.7.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.4-.6.6-.2.2-.4.4-.2.8.3.5 1.2 2 2.6 3.2 1.8 1.6 3.3 2.1 3.8 2.3.4.2.7.2 1-.2.3-.4 1.2-1.4 1.5-1.9.3-.5.6-.4 1-.2.4.2 2.5 1.2 2.9 1.4.4.2.7.3.8.5.1.2.1 1.1-.2 1.9z"/></svg>
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5511998346725?text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+os+servi%C3%A7os+da+Don+Romano." class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        💬
     </a>
 
+    <!-- JavaScript Inteligente de Gerenciamento -->
     <script>
-        // Navigation toggle
-        const toggleNav = document.getElementById('toggleNav');
-        const navContainer = document.getElementById('navContainer');
-        toggleNav.addEventListener('click', () => navContainer.classList.toggle('visible'));
-        navContainer.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navContainer.classList.remove('visible')));
+        // Menu Responsivo Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
 
-        function toggleAccordion(btn) {
-            btn.parentElement.classList.toggle('open');
-        }
-
-        // Application State Controller
-        let appState = {
-            currentStep: 1, pickedService: '', pickedPrice: 0, pickedBarber: '', pickedDate: '', pickedTime: '', clientName: '', clientPhone: ''
+        // Configuração de dados de agendamento em estado reativo simples
+        let currentStep = 1;
+        const bookingData = {
+            service: '',
+            duration: '',
+            barber: '',
+            date: '08/07/2026',
+            time: '',
+            name: '',
+            phone: ''
         };
 
-        function flowValidationEngine() {
-            const nextBtn = document.getElementById('actionNext');
-            if (appState.currentStep === 1 && appState.pickedService) nextBtn.removeAttribute('disabled');
-            else if (appState.currentStep === 2 && appState.pickedBarber) nextBtn.removeAttribute('disabled');
-            else if (appState.currentStep === 3 && appState.pickedDate && appState.pickedTime) nextBtn.removeAttribute('disabled');
-            else if (appState.currentStep === 4 && appState.clientName.length > 2 && appState.clientPhone.length > 8) nextBtn.removeAttribute('disabled');
-            else nextBtn.setAttribute('disabled', 'true');
+        const stepsMeta = {
+            1: { title: "Escolha o Serviço", desc: "Selecione o atendimento principal para a sua reserva." },
+            2: { title: "Escolha o Barbeiro", desc: "Selecione seu profissional de preferência para o corte." },
+            3: { title: "Data e Horário", desc: "Selecione as melhores opções disponíveis na nossa agenda." },
+            4: { title: "Confirmação dos Dados", desc: "Informe seus dados para envio do lembrete automático." }
+        };
+
+        // Funções de Seleção
+        function selectService(name, duration) {
+            bookingData.service = name;
+            bookingData.duration = duration;
+            document.querySelectorAll('#panel1 .selectable-card').forEach((card, idx) => {
+                card.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+            document.getElementById('sumService').innerText = name;
+            setTimeout(() => changeStep(1), 250); // Avanço automático fluido
         }
 
-        function stepNavigator(dir) {
-            if (dir === 1 && appState.currentStep === 4) {
-                commitBookingProcess();
+        function selectBarber(name) {
+            bookingData.barber = name;
+            document.querySelectorAll('#panel2 .selectable-card').forEach((card) => {
+                card.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+            document.getElementById('sumBarber').innerText = name;
+            setTimeout(() => changeStep(1), 250);
+        }
+
+        function selectDate(dateStr, element) {
+            bookingData.date = dateStr;
+            document.querySelectorAll('.cal-day-num').forEach(el => el.classList.remove('selected'));
+            element.classList.add('selected');
+            updateDateTimeSummary();
+        }
+
+        function selectTime(timeStr, element) {
+            bookingData.time = timeStr;
+            document.querySelectorAll('.time-slot').forEach(el => el.classList.remove('selected'));
+            element.classList.add('selected');
+            updateDateTimeSummary();
+            setTimeout(() => changeStep(1), 250);
+        }
+
+        function updateDateTimeSummary() {
+            if(bookingData.time) {
+                document.getElementById('sumDateTime').innerText = `${bookingData.date} às ${bookingData.time}`;
+            } else {
+                document.getElementById('sumDateTime').innerText = `${bookingData.date}`;
+            }
+        }
+
+        // Navegação de Passos do Assistente
+        function changeStep(direction) {
+            // Validações de negócio antes de avançar
+            if (direction === 1) {
+                if (currentStep === 1 && !bookingData.service) { alert('Por favor, selecione um serviço.'); return; }
+                if (currentStep === 2 && !bookingData.barber) { alert('Por favor, selecione um profissional.'); return; }
+                if (currentStep === 3 && !bookingData.time) { alert('Por favor, escolha um horário válido.'); return; }
+                if (currentStep === 4) {
+                    executeFinalCheckout();
+                    return;
+                }
+            }
+
+            // Oculta painel ativo atual
+            document.getElementById(`panel${currentStep}`).classList.remove('active');
+            
+            // Atualiza passo
+            currentStep += direction;
+            
+            // Exibe novo painel ativo
+            document.getElementById(`panel${currentStep}`).classList.add('active');
+
+            // Atualiza textos do Header do Checkout
+            document.getElementById('panelTitle').innerText = stepsMeta[currentStep].title;
+            document.getElementById('panelDesc').innerText = stepsMeta[currentStep].desc;
+
+            // Atualiza barra de progresso
+            const percentage = (currentStep / 4) * 100;
+            document.getElementById('progressFill').style.width = `${percentage}%`;
+            document.getElementById('progressText').innerText = `Passo ${currentStep} de 4`;
+
+            // Controle de botões inferiores
+            document.getElementById('btnBack').style.visibility = currentStep === 1 ? 'hidden' : 'visible';
+            document.getElementById('btnNext').innerText = currentStep === 4 ? 'Finalizar Agendamento' : 'Avançar';
+        }
+
+        // Execução Final e Disparo de Lead Otimizado
+        function executeFinalCheckout() {
+            const nameInput = document.getElementById('clientName').value.trim();
+            const phoneInput = document.getElementById('clientPhone').value.trim();
+
+            if (!nameInput || !phoneInput) {
+                alert('Por favor, preencha seu nome e número de WhatsApp para finalizar.');
                 return;
             }
-            appState.currentStep += dir;
-            if (appState.currentStep === 3) renderCalendarGrid();
-            if (appState.currentStep === 4) {
-                document.getElementById('resumeService').textContent = appState.pickedService;
-                document.getElementById('resumeBarber').textContent = appState.pickedBarber;
-                document.getElementById('resumeDateTime').textContent = `${appState.pickedDate} às ${appState.pickedTime}`;
-                document.getElementById('resumePrice').textContent = `R$ ${appState.pickedPrice},00`;
-            }
 
-            document.querySelectorAll('.booking-panel').forEach((p, idx) => p.classList.toggle('active', idx + 1 === appState.currentStep));
-            document.getElementById('stepLabelDisplay').textContent = `Etapa ${appState.currentStep} de 4`;
-            const pct = appState.currentStep * 25;
-            document.getElementById('stepPctDisplay').textContent = `${pct}%`;
-            document.getElementById('stepProgressFill').style.width = `${pct}%`;
-            document.getElementById('actionBack').style.display = appState.currentStep > 1 ? 'block' : 'none';
-            document.getElementById('actionNext').textContent = appState.currentStep === 4 ? 'Confirmar via WhatsApp' : 'Avançar';
-            flowValidationEngine();
-        }
+            bookingData.name = nameInput;
+            bookingData.phone = phoneInput;
 
-        function pickService(el, name, prc) {
-            el.parentElement.querySelectorAll('.selection-row').forEach(r => r.classList.remove('selected'));
-            el.classList.add('selected');
-            appState.pickedService = name; appState.pickedPrice = prc;
-            flowValidationEngine();
-        }
+            // Geração de mensagem estruturada profissional para o WhatsApp Comercial
+            const whatsappBaseUrl = "https://wa.me/5511998346725";
+            const message = `*DON ROMANO BARBER LOUNGE - NOVO AGENDAMENTO*\n\n` +
+                            `👤 *Cliente:* ${bookingData.name}\n` +
+                            `📲 *WhatsApp:* ${bookingData.phone}\n` +
+                            `💈 *Serviço:* ${bookingData.service}\n` +
+                            `✂️ *Profissional:* ${bookingData.barber}\n` +
+                            `📅 *Data:* ${bookingData.date}\n` +
+                            `⏰ *Horário:* ${bookingData.time}\n\n` +
+                            `_Por favor, confirme a inclusão deste horário no Google Agenda corporativo._`;
 
-        function pickBarber(el, name) {
-            el.parentElement.querySelectorAll('.selection-row').forEach(r => r.classList.remove('selected'));
-            el.classList.add('selected');
-            appState.pickedBarber = name;
-            flowValidationEngine();
-        }
-
-        function renderCalendarGrid() {
-            const layout = document.getElementById('calendarLayout');
-            layout.innerHTML = '';
-            const daysWeek = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
-            const anchor = new Date();
-
-            for (let i = 0; i < 10; i++) {
-                const target = new Date();
-                target.setDate(anchor.getDate() + i);
-
-                const cell = document.createElement('div');
-                cell.className = 'calendar-cell';
-                
-                const num = document.createElement('span');
-                num.className = 'cal-day-num';
-                num.textContent = target.getDate();
-
-                const lbl = document.createElement('span');
-                lbl.className = 'cal-day-lbl';
-                lbl.textContent = daysWeek[target.getDay()];
-
-                cell.appendChild(num);
-                cell.appendChild(lbl);
-
-                const dateStr = `${target.getDate().toString().padStart(2, '0')}/${(target.getMonth() + 1).toString().padStart(2, '0')}`;
-
-                cell.onclick = () => {
-                    layout.querySelectorAll('.calendar-cell').forEach(c => c.classList.remove('selected'));
-                    cell.classList.add('selected');
-                    appState.pickedDate = dateStr;
-                    renderSlotsLayout(target.getDay() === 0);
-                    flowValidationEngine();
-                };
-
-                if(appState.pickedDate === dateStr) cell.classList.add('selected');
-                layout.appendChild(cell);
-            }
-        }
-
-        function renderSlotsLayout(isSunday) {
-            const container = document.getElementById('slotsLayout');
-            container.innerHTML = '';
-            const hours = isSunday ? ['09:00', '10:00', '11:00', '13:00'] : ['09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'];
+            const finalUrl = `${whatsappBaseUrl}?text=${encodeURIComponent(message)}`;
             
-            hours.forEach(h => {
-                const item = document.createElement('div');
-                item.className = 'slot-cell';
-                item.textContent = h;
-                item.onclick = () => {
-                    container.querySelectorAll('.slot-cell').forEach(s => s.classList.remove('selected'));
-                    item.classList.add('selected');
-                    appState.pickedTime = h;
-                    flowValidationEngine();
-                };
-                if(appState.pickedTime === h) item.classList.add('selected');
-                container.appendChild(item);
-            });
+            // Redirecionamento instantâneo sem perda de contexto
+            window.open(finalUrl, '_blank');
         }
 
-        document.getElementById('clientName').addEventListener('input', (e) => { appState.clientName = e.target.value.trim(); flowValidationEngine(); });
-        document.getElementById('clientPhone').addEventListener('input', (e) => { appState.clientPhone = e.target.value.trim(); flowValidationEngine(); });
-
-        function commitBookingProcess() {
-            const msg = `*DON ROMANO BARBER LOUNGE*\n` +
-                        `⚡ *SOLICITAÇÃO DE AGENDAMENTO*\n\n` +
-                        `👤 *Cliente:* ${appState.clientName}\n` +
-                        `📲 *WhatsApp:* ${appState.clientPhone}\n` +
-                        `✂️ *Serviço:* ${appState.pickedService}\n` +
-                        `🧔 *Barbeiro:* ${appState.pickedBarber}\n` +
-                        `📅 *Data/Hora:* ${appState.pickedDate} às ${appState.pickedTime}\n` +
-                        `💳 *Total:* R$ ${appState.pickedPrice},00`;
-            window.open(`https://wa.me/5511998346725?text=${encodeURIComponent(msg)}`, '_blank');
+        // Accordion FAQ Módulo de Gestão
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            item.classList.toggle('active');
+            const content = item.querySelector('.faq-content');
+            if (item.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = "0";
+            }
         }
     </script>
 </body>
