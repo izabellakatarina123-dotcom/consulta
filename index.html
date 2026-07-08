@@ -1,1365 +1,1449 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>Evolution Fitness Center | Academia em Osasco - Avaliação Física Grátis</title>
-<meta name="description" content="Academia completa em Osasco - SP. Musculação, Funcional, Spinning, Pilates e mais. Agende sua avaliação física gratuita e aula experimental em menos de 1 minuto.">
-<meta name="keywords" content="academia osasco, academia perto de mim, musculação osasco, personal trainer osasco, aula experimental gratuita, avaliação física, cross training, pilates osasco, evolution fitness center">
-<link rel="canonical" href="https://evolutionfitnesscenter.com.br/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="[https://donromanobarber.com.br](https://donromanobarber.com.br)">
+<meta property="og:title" content="Don Romano Barber Lounge | Agendamento Online Premium">
+<meta property="og:description" content="Agende seu horário em menos de 60 segundos na melhor barbearia de Osasco.">
+<meta property="og:image" content="[https://donromanobarber.com.br/og-image.jpg](https://donromanobarber.com.br/og-image.jpg)">
 
-<meta property="og:type" content="business.business">
-<meta property="og:title" content="Evolution Fitness Center | Academia em Osasco">
-<meta property="og:description" content="Estrutura premium, avaliação física gratuita e aula experimental sem custo. Agende agora pelo sistema inteligente da Evolution.">
-<meta property="og:url" content="https://evolutionfitnesscenter.com.br/">
-<meta property="og:locale" content="pt_BR">
-
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Evolution Fitness Center | Academia em Osasco">
-<meta name="twitter:description" content="Agende sua avaliação física gratuita em menos de 1 minuto.">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ExerciseGym",
-  "name": "Evolution Fitness Center",
-  "image": "",
-  "telephone": "+5511998457632",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Av. dos Autonomistas, 4120",
-    "addressLocality": "Osasco",
-    "addressRegion": "SP",
-    "addressCountry": "BR"
-  },
-  "openingHoursSpecification": [
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"05:00","closes":"23:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"18:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"08:00","closes":"13:00"}
-  ],
-  "sameAs": ["https://instagram.com/evolutionfitnesscenter"]
-}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<meta name="twitter:title" content="Don Romano Barber Lounge | Agendamento Online Premium">
+<meta name="twitter:description" content="Agende seu horário em menos de 60 segundos na melhor barbearia de Osasco.">
 
 <style>
-  /* ================= CONFIG-DRIVEN TOKENS ================= */
-  :root{
-    --ink:#0B0B0C;
-    --steel:#19191C;
-    --steel-2:#232326;
-    --white:#F5F4F0;
-    --paper:#FAFAF8;
-    --red:#E8382D;
-    --red-dark:#B82820;
-    --red-glow: rgba(232,56,45,.45);
-    --graphite:#6E6E73;
-    --graphite-light:#9A9A9F;
-    --line: rgba(245,244,240,0.10);
-    --line-dark: rgba(11,11,12,0.10);
-    --ok:#2FBE6E;
-    --font-display: 'Anton', sans-serif;
-    --font-body: 'Manrope', sans-serif;
-    --font-mono: 'Space Mono', monospace;
-    --radius: 14px;
-    --shadow-lg: 0 30px 60px -20px rgba(0,0,0,.5);
-  }
+    :root {
+        --bg-main: #0B0B0B;
+        --bg-card: #141414;
+        --bg-input: #1C1C1E;
+        --primary: #D4AF37;
+        --primary-hover: #AA8B2C;
+        --text-main: #FFFFFF;
+        --text-muted: #A0A0A5;
+        --border: #2C2C2E;
+        --success: #30D5C8;
+        --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:var(--font-body);
-    background:var(--paper);
-    color:var(--ink);
-    line-height:1.5;
-    overflow-x:hidden;
-    -webkit-font-smoothing:antialiased;
-  }
-  img,svg{display:block;max-width:100%;}
-  a{color:inherit;text-decoration:none;}
-  button{font-family:inherit;cursor:pointer;border:none;background:none;}
-  input,select,textarea{font-family:inherit;font-size:16px;}
-  ul{list-style:none;}
-  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
-  .section{padding:104px 0;}
-  .section-dark{background:var(--ink);color:var(--white);}
-  @media(max-width:768px){ .section{padding:72px 0;} }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: var(--font);
+        -webkit-font-smoothing: antialiased;
+        scroll-behavior: smooth;
+    }
 
-  .eyebrow{
-    font-family:var(--font-mono);
-    font-size:12px;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:var(--red);
-    display:flex;align-items:center;gap:10px;
-    margin-bottom:18px;
-  }
-  .eyebrow::before{content:'';width:28px;height:2px;background:var(--red);display:inline-block;}
+    body {
+        background-color: var(--bg-main);
+        color: var(--text-main);
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
 
-  h1,h2,h3,.display{
-    font-family:var(--font-display);
-    font-weight:400;
-    text-transform:uppercase;
-    line-height:1.02;
-    letter-spacing:.01em;
-  }
-  h2{font-size:clamp(32px,5vw,52px);margin-bottom:16px;}
-  .section-head{max-width:640px;margin-bottom:56px;}
-  .section-head p{color:var(--graphite);font-size:17px;}
-  .section-dark .section-head p{color:var(--graphite-light);}
+    /* Utility Components */
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
 
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;gap:10px;
-    padding:17px 32px;border-radius:100px;
-    font-weight:700;font-size:15px;letter-spacing:.02em;
-    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
-    white-space:nowrap;
-  }
-  .btn-primary{background:var(--red);color:#fff;box-shadow:0 12px 30px -8px var(--red-glow);}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 36px -8px var(--red-glow);}
-  .btn-ghost{background:transparent;color:var(--white);border:1.5px solid var(--line);}
-  .btn-ghost:hover{border-color:var(--red);color:var(--red);}
-  .btn-dark{background:var(--ink);color:#fff;}
-  .btn-dark:hover{transform:translateY(-2px);}
-  .btn-block{width:100%;}
-  .btn:disabled{opacity:.35;cursor:not-allowed;transform:none !important;}
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--primary);
+        color: #000000;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-weight: 700;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-size: 1rem;
+    }
 
-  /* ================= HEADER ================= */
-  header{
-    position:fixed;top:0;left:0;right:0;z-index:500;
-    padding:18px 0;
-    transition:background .3s ease, padding .3s ease, box-shadow .3s ease;
-  }
-  header.scrolled{background:rgba(11,11,12,.92);backdrop-filter:blur(10px);padding:12px 0;box-shadow:0 8px 30px rgba(0,0,0,.3);}
-  header .container{display:flex;align-items:center;justify-content:space-between;}
-  .logo{display:flex;align-items:center;gap:10px;}
-  .logo-mark{
-    width:38px;height:38px;border-radius:8px;
-    background:var(--red);
-    display:flex;align-items:center;justify-content:center;
-    font-family:var(--font-display);color:#fff;font-size:20px;
-    box-shadow:0 8px 20px -6px var(--red-glow);
-    flex-shrink:0;
-  }
-  .logo-text{font-family:var(--font-display);color:var(--white);font-size:19px;letter-spacing:.02em;text-transform:uppercase;}
-  .logo-text span{color:var(--red);}
-  nav.main-nav{display:flex;align-items:center;gap:36px;}
-  nav.main-nav a{color:var(--white);font-size:14px;font-weight:600;opacity:.85;transition:opacity .2s, color .2s;}
-  nav.main-nav a:hover{opacity:1;color:var(--red);}
-  .nav-actions{display:flex;align-items:center;gap:14px;}
-  .nav-cta{padding:12px 24px;font-size:13px;}
-  .burger{display:none;width:44px;height:44px;border-radius:10px;background:rgba(245,244,240,.08);align-items:center;justify-content:center;flex-direction:column;gap:5px;}
-  .burger span{width:20px;height:2px;background:var(--white);border-radius:2px;}
+    .btn:hover {
+        background: var(--primary-hover);
+        transform: translateY(-1px);
+    }
 
-  @media(max-width:920px){
-    nav.main-nav{display:none;}
-    .burger{display:flex;}
-  }
-  .mobile-menu{
-    position:fixed;inset:0;background:var(--ink);z-index:600;
-    display:none;flex-direction:column;padding:100px 32px 40px;
-    gap:28px;
-  }
-  .mobile-menu.open{display:flex;}
-  .mobile-menu a{font-family:var(--font-display);font-size:26px;color:var(--white);text-transform:uppercase;}
-  .mobile-menu .close-menu{position:absolute;top:24px;right:24px;width:44px;height:44px;background:rgba(245,244,240,.08);border-radius:10px;display:flex;align-items:center;justify-content:center;}
+    .btn-outline {
+        background: transparent;
+        color: var(--text-main);
+        border: 2px solid var(--border);
+    }
 
-  /* ================= HERO ================= */
-  .hero{
-    min-height:100vh;
-    background:
-      radial-gradient(circle at 82% 18%, rgba(232,56,45,.18), transparent 45%),
-      radial-gradient(circle at 10% 90%, rgba(232,56,45,.10), transparent 40%),
-      var(--ink);
-    display:flex;align-items:center;
-    padding-top:140px;padding-bottom:80px;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero::after{
-    content:'';position:absolute;inset:0;
-    background-image:
-      linear-gradient(rgba(245,244,240,.045) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(245,244,240,.045) 1px, transparent 1px);
-    background-size:44px 44px;
-    mask-image: radial-gradient(circle at 70% 30%, black 0%, transparent 65%);
-    pointer-events:none;
-  }
-  .hero .container{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative;z-index:2;}
-  @media(max-width:960px){ .hero .container{grid-template-columns:1fr;} }
+    .btn-outline:hover {
+        background: var(--border);
+        border-color: var(--text-muted);
+    }
 
-  .hero h1{
-    color:var(--white);
-    font-size:clamp(44px,6.4vw,84px);
-    line-height:.94;
-    margin-bottom:24px;
-  }
-  .hero h1 em{font-style:normal;color:var(--red);}
-  .hero-sub{color:var(--graphite-light);font-size:18px;max-width:480px;margin-bottom:36px;}
-  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px;}
-  .hero-badges{display:flex;gap:28px;flex-wrap:wrap;}
-  .hero-badge{display:flex;flex-direction:column;gap:2px;}
-  .hero-badge b{font-family:var(--font-mono);font-size:26px;color:var(--white);}
-  .hero-badge span{font-size:12px;color:var(--graphite-light);text-transform:uppercase;letter-spacing:.05em;}
+    /* Header */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        background: rgba(11, 11, 11, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+    }
 
-  /* Scoreboard signature element */
-  .scoreboard{
-    background:var(--steel);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:28px;
-    box-shadow:var(--shadow-lg);
-  }
-  .scoreboard-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;}
-  .scoreboard-top span{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite-light);}
-  .scoreboard-dot{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red);animation:pulse-dot 1.6s infinite;}
-  @keyframes pulse-dot{0%,100%{opacity:1;}50%{opacity:.3;}}
-  .score-display{
-    background:var(--ink);
-    border-radius:10px;
-    padding:22px 18px;
-    text-align:center;
-    margin-bottom:18px;
-  }
-  .score-number{
-    font-family:var(--font-mono);
-    font-weight:700;
-    font-size:clamp(38px,5vw,54px);
-    color:var(--red);
-    text-shadow:0 0 24px var(--red-glow);
-    line-height:1;
-    letter-spacing:.02em;
-  }
-  .score-label{font-size:11px;color:var(--graphite-light);text-transform:uppercase;letter-spacing:.12em;margin-top:8px;font-family:var(--font-mono);}
-  .score-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-  .score-mini{background:var(--ink);border-radius:8px;padding:14px;text-align:center;}
-  .score-mini b{font-family:var(--font-mono);color:var(--white);font-size:20px;display:block;}
-  .score-mini span{font-size:10px;color:var(--graphite-light);text-transform:uppercase;letter-spacing:.08em;}
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
 
-  /* ================= APRESENTAÇÃO ================= */
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
-  @media(max-width:900px){ .about-grid{grid-template-columns:1fr;gap:40px;} }
-  .about-text p{color:var(--graphite);font-size:17px;margin-bottom:24px;}
-  .about-facts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px;}
-  .fact{display:flex;gap:14px;align-items:flex-start;padding:18px;background:var(--white);border:1px solid rgba(11,11,12,.08);border-radius:10px;}
-  .fact .ico{width:38px;height:38px;flex-shrink:0;border-radius:9px;background:var(--ink);display:flex;align-items:center;justify-content:center;}
-  .fact b{display:block;font-size:15px;margin-bottom:2px;}
-  .fact span{font-size:13px;color:var(--graphite);}
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-main);
+        font-weight: 800;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
 
-  .about-panel{
-    background:var(--ink);
-    border-radius:var(--radius);
-    padding:36px 30px;
-    color:var(--white);
-    position:relative;
-    overflow:hidden;
-  }
-  .about-panel::before{
-    content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;
-    background:radial-gradient(circle, var(--red-glow), transparent 70%);
-  }
-  .about-panel h3{color:var(--white);font-size:26px;margin-bottom:6px;position:relative;}
-  .about-panel .yrs{font-family:var(--font-mono);color:var(--red);font-size:15px;margin-bottom:24px;display:block;position:relative;}
-  .plate-row{display:flex;gap:8px;margin-bottom:28px;position:relative;}
-  .plate{height:34px;border-radius:6px;background:var(--steel-2);border:1px solid var(--line);flex:1;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:11px;color:var(--graphite-light);}
-  .plate.active{background:var(--red);color:#fff;border-color:var(--red);}
-  .about-list{display:flex;flex-direction:column;gap:14px;position:relative;}
-  .about-list li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--graphite-light);}
-  .about-list li b{color:var(--white);}
-  .about-list .check{width:20px;height:20px;border-radius:50%;background:rgba(232,56,45,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #141414, #000);
+        border: 2px solid var(--primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        font-weight: 900;
+        font-size: 1rem;
+    }
 
-  /* ================= SERVIÇOS / MODALIDADES ================= */
-  .mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  @media(max-width:900px){ .mod-grid{grid-template-columns:repeat(2,1fr);} }
-  @media(max-width:560px){ .mod-grid{grid-template-columns:1fr;} }
-  .mod-card{
-    background:#fff;border:1px solid rgba(11,11,12,.08);border-radius:var(--radius);
-    padding:28px 24px;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  }
-  .mod-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px -16px rgba(0,0,0,.18);border-color:var(--red);}
-  .mod-icon{width:48px;height:48px;border-radius:12px;background:var(--ink);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
-  .mod-card h3{font-family:var(--font-body);font-weight:800;font-size:17px;text-transform:none;margin-bottom:8px;}
-  .mod-card p{font-size:14px;color:var(--graphite);}
+    .nav-menu {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+    }
 
-  /* ================= COMO FUNCIONA ================= */
-  .steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-  @media(max-width:900px){ .steps-row{grid-template-columns:1fr 1fr;} }
-  @media(max-width:560px){ .steps-row{grid-template-columns:1fr;} }
-  .step-card{position:relative;padding:28px 22px;background:var(--steel);border:1px solid var(--line);border-radius:var(--radius);}
-  .step-num{font-family:var(--font-mono);color:var(--red);font-size:13px;margin-bottom:16px;display:block;}
-  .step-card h3{color:var(--white);font-size:17px;font-family:var(--font-body);font-weight:800;text-transform:none;margin-bottom:8px;}
-  .step-card p{font-size:13.5px;color:var(--graphite-light);}
-  .steps-row .step-card:not(:last-child)::after{
-    content:'';position:absolute;top:38px;right:-24px;width:24px;height:1px;background:var(--line);
-  }
-  @media(max-width:900px){ .steps-row .step-card::after{display:none;} }
+    .nav-menu a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
 
-  /* ================= SISTEMA PRINCIPAL (WIZARD) ================= */
-  .wizard-wrap{
-    background:#fff;border-radius:20px;box-shadow:var(--shadow-lg);
-    max-width:720px;margin:0 auto;overflow:hidden;border:1px solid rgba(11,11,12,.06);
-  }
-  .wizard-head{padding:28px 32px 0;}
-  .wizard-progress-labels{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:11px;color:var(--graphite);margin-bottom:10px;}
-  .wizard-progress-track{height:6px;background:rgba(11,11,12,.08);border-radius:6px;overflow:hidden;margin-bottom:24px;}
-  .wizard-progress-fill{height:100%;background:linear-gradient(90deg,var(--red),var(--red-dark));border-radius:6px;transition:width .35s ease;width:0%;}
-  .wizard-body{padding:8px 32px 32px;min-height:340px;}
-  .wizard-step{display:none;animation:fade-in .35s ease;}
-  .wizard-step.active{display:block;}
-  @keyframes fade-in{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
-  .wizard-step h3{font-family:var(--font-body);font-weight:800;font-size:22px;text-transform:none;margin-bottom:6px;}
-  .wizard-step .wizard-desc{color:var(--graphite);font-size:14px;margin-bottom:26px;}
+    .nav-menu a:hover {
+        color: var(--primary);
+    }
 
-  .option-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  @media(max-width:480px){ .option-grid{grid-template-columns:1fr;} }
-  .option-card{
-    border:1.5px solid rgba(11,11,12,.1);border-radius:12px;padding:16px 18px;
-    display:flex;align-items:center;gap:12px;transition:all .2s ease;text-align:left;
-  }
-  .option-card:hover{border-color:var(--red);}
-  .option-card.selected{border-color:var(--red);background:rgba(232,56,45,.06);}
-  .option-card .dot{width:18px;height:18px;border-radius:50%;border:2px solid rgba(11,11,12,.2);flex-shrink:0;position:relative;}
-  .option-card.selected .dot{border-color:var(--red);}
-  .option-card.selected .dot::after{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--red);}
-  .option-card span{font-size:14.5px;font-weight:600;}
+    .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-main);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
 
-  .yn-row{display:flex;gap:14px;}
-  .yn-btn{flex:1;padding:22px;border:1.5px solid rgba(11,11,12,.1);border-radius:12px;font-weight:700;font-size:16px;transition:all .2s ease;}
-  .yn-btn:hover{border-color:var(--red);}
-  .yn-btn.selected{border-color:var(--red);background:rgba(232,56,45,.06);color:var(--red-dark);}
+    /* Hero */
+    .hero {
+        padding: 160px 0 80px 0;
+        background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.08), transparent 45%);
+        text-align: center;
+    }
 
-  .field{margin-bottom:18px;}
-  .field label{display:block;font-size:13px;font-weight:700;margin-bottom:8px;color:var(--ink);}
-  .field input, .field textarea{
-    width:100%;padding:15px 16px;border:1.5px solid rgba(11,11,12,.12);border-radius:10px;
-    font-size:15px;transition:border-color .2s ease;background:var(--paper);
-  }
-  .field input:focus, .field textarea:focus{outline:none;border-color:var(--red);}
-  .field textarea{resize:vertical;min-height:90px;}
-  .field-error{font-size:12.5px;color:var(--red);margin-top:6px;display:none;}
-  .field.invalid input, .field.invalid textarea{border-color:var(--red);}
-  .field.invalid .field-error{display:block;}
+    .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 24px;
+        letter-spacing: -1px;
+    }
 
-  .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
-  .cal-head b{font-family:var(--font-mono);font-size:14px;text-transform:capitalize;}
-  .cal-nav{width:34px;height:34px;border-radius:8px;background:var(--paper);border:1px solid rgba(11,11,12,.1);display:flex;align-items:center;justify-content:center;}
-  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;}
-  .cal-dow{text-align:center;font-size:10.5px;color:var(--graphite);font-family:var(--font-mono);padding-bottom:6px;}
-  .cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:8px;font-size:13.5px;font-weight:600;border:1.5px solid transparent;}
-  .cal-day.avail{background:var(--paper);cursor:pointer;}
-  .cal-day.avail:hover{border-color:var(--red);}
-  .cal-day.selected{background:var(--red);color:#fff;}
-  .cal-day.disabled{color:rgba(11,11,12,.2);}
-  .cal-day.empty{visibility:hidden;}
+    .hero h1 span {
+        color: var(--primary);
+        background: linear-gradient(135deg, #FFF, var(--primary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
-  .slots-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-height:280px;overflow-y:auto;padding-right:4px;}
-  @media(max-width:480px){ .slots-grid{grid-template-columns:repeat(2,1fr);} }
-  .slot{padding:13px 8px;border:1.5px solid rgba(11,11,12,.1);border-radius:10px;text-align:center;font-family:var(--font-mono);font-size:13px;font-weight:700;}
-  .slot.avail:hover{border-color:var(--red);}
-  .slot.selected{background:var(--red);color:#fff;border-color:var(--red);}
-  .slot.busy{opacity:.35;text-decoration:line-through;cursor:not-allowed;}
+    .hero p {
+        font-size: 1.2rem;
+        color: var(--text-muted);
+        max-width: 600px;
+        margin: 0 auto 40px auto;
+    }
 
-  .summary-list{display:flex;flex-direction:column;gap:0;border:1px solid rgba(11,11,12,.1);border-radius:12px;overflow:hidden;}
-  .summary-row{display:flex;justify-content:space-between;padding:14px 18px;font-size:14px;border-bottom:1px solid rgba(11,11,12,.08);}
-  .summary-row:last-child{border-bottom:none;}
-  .summary-row span:first-child{color:var(--graphite);}
-  .summary-row span:last-child{font-weight:700;text-align:right;}
+    /* Presentation & About */
+    .presentation {
+        padding: 60px 0;
+    }
 
-  .wizard-nav{display:flex;gap:12px;padding:20px 32px 30px;border-top:1px solid rgba(11,11,12,.06);}
-  .wizard-nav .btn-back{background:var(--paper);color:var(--ink);border:1.5px solid rgba(11,11,12,.1);}
-  .confirm-box{text-align:center;padding:24px 0 8px;}
-  .confirm-icon{width:76px;height:76px;border-radius:50%;background:rgba(47,190,110,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;}
-  .confirm-box h3{margin-bottom:8px;}
-  .confirm-box p{color:var(--graphite);font-size:14.5px;margin-bottom:26px;}
-  .confirm-actions{display:flex;flex-direction:column;gap:12px;}
+    .about-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+    }
 
-  /* ================= BENEFÍCIOS ================= */
-  .benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(11,11,12,.08);border-radius:var(--radius);overflow:hidden;}
-  @media(max-width:900px){ .benefits-grid{grid-template-columns:repeat(2,1fr);} }
-  @media(max-width:560px){ .benefits-grid{grid-template-columns:1fr;} }
-  .benefit{background:#fff;padding:32px 26px;}
-  .benefit .ico{width:42px;height:42px;border-radius:10px;background:var(--ink);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
-  .benefit h3{font-family:var(--font-body);font-weight:800;font-size:16px;text-transform:none;margin-bottom:6px;}
-  .benefit p{font-size:13.5px;color:var(--graphite);}
+    .about-info h2 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+        color: var(--primary);
+    }
 
-  /* ================= AVALIAÇÕES ================= */
-  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-  @media(max-width:900px){ .rev-grid{grid-template-columns:1fr;} }
-  .rev-card{background:var(--steel);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;}
-  .stars{color:var(--red);font-size:15px;letter-spacing:2px;margin-bottom:16px;}
-  .rev-card p{color:var(--graphite-light);font-size:14.5px;margin-bottom:20px;font-style:italic;}
-  .rev-author{display:flex;align-items:center;gap:12px;}
-  .rev-avatar{width:38px;height:38px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);color:#fff;font-size:15px;}
-  .rev-author b{color:var(--white);font-size:14px;display:block;}
+    .about-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 32px;
+    }
 
-  /* ================= FAQ ================= */
-  .faq-list{max-width:760px;margin:0 auto;}
-  .faq-item{border-bottom:1px solid rgba(11,11,12,.1);}
-  .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:22px 4px;text-align:left;font-weight:700;font-size:15.5px;}
-  .faq-q .plus{width:24px;height:24px;flex-shrink:0;position:relative;}
-  .faq-q .plus::before,.faq-q .plus::after{content:'';position:absolute;background:var(--ink);transition:transform .25s ease;}
-  .faq-q .plus::before{width:14px;height:2px;top:11px;left:5px;}
-  .faq-q .plus::after{width:2px;height:14px;top:5px;left:11px;}
-  .faq-item.open .plus::after{transform:rotate(90deg);opacity:0;}
-  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
-  .faq-a p{padding:0 4px 22px;color:var(--graphite);font-size:14.5px;}
+    .stat-item {
+        background: var(--bg-main);
+        padding: 16px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        text-align: center;
+    }
 
-  /* ================= CONTATO / MAPA ================= */
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
-  @media(max-width:900px){ .contact-grid{grid-template-columns:1fr;} }
-  .contact-card{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--line);}
-  .contact-card .ico{width:42px;height:42px;border-radius:10px;background:var(--steel);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-  .contact-card b{display:block;color:var(--white);font-size:15px;margin-bottom:4px;}
-  .contact-card span{color:var(--graphite-light);font-size:14px;}
-  .hours-table{width:100%;margin-top:8px;}
-  .hours-table tr td{padding:6px 0;font-size:14px;color:var(--graphite-light);}
-  .hours-table tr td:last-child{text-align:right;color:var(--white);font-family:var(--font-mono);}
-  .map-frame{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);height:100%;min-height:340px;}
-  .map-frame iframe{width:100%;height:100%;min-height:340px;border:0;filter:grayscale(.3) contrast(1.05);}
+    .stat-item .num {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--primary);
+        display: block;
+    }
 
-  /* ================= RODAPÉ ================= */
-  footer{background:#050506;color:var(--graphite-light);padding:56px 0 28px;}
-  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px;}
-  @media(max-width:768px){ .footer-grid{grid-template-columns:1fr;gap:32px;} }
-  .footer-grid h4{color:var(--white);font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px;font-family:var(--font-mono);}
-  .footer-grid ul li{margin-bottom:10px;font-size:14px;}
-  .footer-grid ul li a:hover{color:var(--red);}
-  .footer-bottom{border-top:1px solid rgba(245,244,240,.08);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;}
-  .social-row{display:flex;gap:10px;}
-  .social-row a{width:36px;height:36px;border-radius:9px;background:rgba(245,244,240,.06);display:flex;align-items:center;justify-content:center;transition:background .2s ease;}
-  .social-row a:hover{background:var(--red);}
+    .stat-item .label {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+    }
 
-  /* ================= WHATSAPP FLOAT ================= */
-  .wa-float{
-    position:fixed;bottom:26px;right:26px;z-index:400;
-    width:60px;height:60px;border-radius:50%;background:#25D366;
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 14px 30px -8px rgba(37,211,102,.55);
-    animation:wa-pulse 2.4s infinite;
-  }
-  @keyframes wa-pulse{
-    0%{box-shadow:0 0 0 0 rgba(37,211,102,.5), 0 14px 30px -8px rgba(37,211,102,.55);}
-    70%{box-shadow:0 0 0 14px rgba(37,211,102,0), 0 14px 30px -8px rgba(37,211,102,.55);}
-    100%{box-shadow:0 0 0 0 rgba(37,211,102,0), 0 14px 30px -8px rgba(37,211,102,.55);}
-  }
+    /* Services */
+    .services {
+        padding: 80px 0;
+    }
 
-  ::selection{background:var(--red);color:#fff;}
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
-  .reveal.in{opacity:1;transform:translateY(0);}
+    .section-header {
+        text-align: center;
+        margin-bottom: 48px;
+    }
 
-  @media(prefers-reduced-motion: reduce){
-    *{animation:none !important;transition:none !important;}
-  }
+    .section-header h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 12px;
+    }
+
+    .section-header p {
+        color: var(--text-muted);
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .service-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        transition: border-color 0.2s;
+    }
+
+    .service-card:hover {
+        border-color: var(--primary);
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin-bottom: 20px;
+        height: 40px;
+        overflow: hidden;
+    }
+
+    .service-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .service-price {
+        font-weight: 700;
+        color: var(--primary);
+        font-size: 1.1rem;
+    }
+
+    .service-duration {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        background: var(--bg-input);
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+
+    /* How it Works */
+    .how-it-works {
+        padding: 60px 0;
+        background: rgba(20, 20, 20, 0.4);
+    }
+
+    .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .step-item {
+        text-align: center;
+        position: relative;
+    }
+
+    .step-num {
+        width: 48px;
+        height: 48px;
+        background: var(--bg-input);
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        margin: 0 auto 20px auto;
+        font-size: 1.2rem;
+    }
+
+    /* System Principal (Booking Engine) */
+    .booking-section {
+        padding: 100px 0;
+        background: linear-gradient(180deg, var(--bg-main), #111, var(--bg-main));
+    }
+
+    .booking-wrapper {
+        max-width: 700px;
+        margin: 0 auto;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    .booking-header {
+        padding: 32px 32px 20px 32px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .progress-container {
+        margin-top: 16px;
+        background: var(--bg-input);
+        height: 6px;
+        border-radius: 3px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: var(--primary);
+        width: 25%;
+        transition: width 0.3s ease;
+    }
+
+    .booking-body {
+        padding: 32px;
+        min-height: 380px;
+    }
+
+    .step-panel {
+        display: none;
+    }
+
+    .step-panel.active {
+        display: block;
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .panel-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .panel-desc {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+    }
+
+    /* Options Lists */
+    .options-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        max-height: 300px;
+        overflow-y: auto;
+        padding-right: 4px;
+    }
+
+    .option-card {
+        background: var(--bg-input);
+        border: 2px solid transparent;
+        border-radius: 8px;
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .option-card:hover {
+        border-color: var(--border);
+        background: #242426;
+    }
+
+    .option-card.selected {
+        border-color: var(--primary);
+        background: rgba(212, 175, 55, 0.05);
+    }
+
+    .option-info h4 {
+        font-size: 1.05rem;
+        margin-bottom: 4px;
+    }
+
+    .option-info p {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+    /* Calendar Styling */
+    .calendar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 8px;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .calendar-day-label {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        font-weight: 600;
+    }
+
+    .calendar-day {
+        padding: 10px 0;
+        border-radius: 6px;
+        background: var(--bg-input);
+        font-size: 0.9rem;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.15s;
+    }
+
+    .calendar-day:hover:not(.disabled) {
+        background: var(--border);
+    }
+
+    .calendar-day.selected {
+        background: var(--primary) !important;
+        color: #000 !important;
+    }
+
+    .calendar-day.disabled {
+        opacity: 0.25;
+        cursor: not-allowed;
+    }
+
+    /* Time slots */
+    .slots-header {
+        font-weight: 600;
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+    }
+
+    .slots-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 8px;
+        max-height: 140px;
+        overflow-y: auto;
+    }
+
+    .slot-btn {
+        background: var(--bg-input);
+        border: 1px solid var(--border);
+        color: var(--text-main);
+        padding: 8px 0;
+        border-radius: 6px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+
+    .slot-btn:hover:not(.disabled) {
+        border-color: var(--primary);
+    }
+
+    .slot-btn.selected {
+        background: var(--primary);
+        color: #000;
+        border-color: var(--primary);
+    }
+
+    .slot-btn.disabled {
+        opacity: 0.3;
+        text-decoration: line-through;
+        cursor: not-allowed;
+    }
+
+    /* Form Inputs */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-muted);
+    }
+
+    .form-control {
+        width: 100%;
+        background: var(--bg-input);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 14px;
+        color: #FFF;
+        font-size: 1rem;
+        transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: var(--primary);
+    }
+
+    /* Summary Panel */
+    .summary-box {
+        background: var(--bg-input);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 24px;
+    }
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .summary-row:last-child {
+        border-bottom: none;
+    }
+
+    .summary-label {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+    }
+
+    .summary-value {
+        font-weight: 600;
+        text-align: right;
+    }
+
+    /* Booking Footer Buttons */
+    .booking-footer {
+        padding: 0 32px 32px 32px;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .booking-footer .btn {
+        flex: 1;
+    }
+
+    /* Benefits */
+    .benefits {
+        padding: 80px 0;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .benefit-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 32px;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+        color: var(--primary);
+    }
+
+    /* Reviews */
+    .reviews {
+        padding: 80px 0;
+        background: rgba(20, 20, 20, 0.4);
+    }
+
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .review-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+    }
+
+    .stars {
+        color: var(--primary);
+        margin-bottom: 12px;
+    }
+
+    .reviewer {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 16px;
+    }
+
+    .reviewer-avatar {
+        width: 36px;
+        height: 36px;
+        background: var(--border);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.85rem;
+    }
+
+    /* FAQ */
+    .faq {
+        padding: 80px 0;
+    }
+
+    .faq-wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .faq-item {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        margin-bottom: 12px;
+        overflow: hidden;
+    }
+
+    .faq-trigger {
+        width: 100%;
+        padding: 20px;
+        background: none;
+        border: none;
+        color: #FFF;
+        text-align: left;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .faq-content {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease, padding 0.2s ease;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+    }
+
+    .faq-item.active .faq-content {
+        padding: 0 20px 20px 20px;
+        max-height: 200px;
+    }
+
+    /* Contact & Map */
+    .contact {
+        padding: 80px 0;
+        background: var(--bg-card);
+        border-top: 1px solid var(--border);
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+    }
+
+    .contact-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+        color: var(--primary);
+    }
+
+    .contact-list {
+        list-style: none;
+        margin-bottom: 32px;
+    }
+
+    .contact-list li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .map-box {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        height: 300px;
+        background: var(--bg-input);
+    }
+
+    /* Footer */
+    footer {
+        background: var(--bg-main);
+        padding: 40px 0;
+        border-top: 1px solid var(--border);
+        text-align: center;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        width: 60px;
+        height: 60px;
+        background: #25D366;
+        color: #FFF;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        text-decoration: none;
+        z-index: 99;
+        font-size: 1.8rem;
+        transition: transform 0.2s;
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.05);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+        .about-card, .contact-grid {
+            grid-template-columns: 1fr;
+        }
+        .steps-grid, .benefits-grid, .reviews-grid {
+            grid-template-columns: 1fr;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background: var(--bg-main);
+            flex-direction: column;
+            padding: 24px;
+            gap: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-menu.active {
+            display: flex;
+        }
+        .nav-toggle {
+            display: block;
+        }
+    }
 </style>
-</head>
-<body>
-
-<!-- ======================================================= -->
-<!-- CONFIG: edite aqui os dados do negócio                    -->
-<!-- ======================================================= -->
-<script>
-const CONFIG = {
-  nome: "Evolution Fitness Center",
-  telefone: "5511998457632",
-  telefoneDisplay: "(11) 99845-7632",
-  instagram: "@evolutionfitnesscenter",
-  instagramUrl: "https://instagram.com/evolutionfitnesscenter",
-  endereco: "Av. dos Autonomistas, 4120 - Osasco - SP",
-  enderecoMapQuery: "Av. dos Autonomistas, 4120, Osasco, SP",
-  horarios: [
-    {dia:"Segunda a Sexta", horas:"05h às 23h"},
-    {dia:"Sábado", horas:"08h às 18h"},
-    {dia:"Domingo", horas:"08h às 13h"}
-  ],
-  anos: 11,
-  modalidades: [
-    {nome:"Musculação", desc:"Equipamentos de última geração para todos os níveis, com acompanhamento técnico."},
-    {nome:"Funcional", desc:"Treinos dinâmicos que combinam força, resistência e mobilidade."},
-    {nome:"Spinning", desc:"Aulas de ciclismo indoor com música e alta queima calórica."},
-    {nome:"HIIT", desc:"Treino intervalado de alta intensidade para resultados rápidos."},
-    {nome:"Alongamento", desc:"Sessões guiadas para flexibilidade, postura e recuperação muscular."},
-    {nome:"Cross Training", desc:"Treinamento funcional de alta performance para todos os objetivos."},
-    {nome:"Dança", desc:"Aulas ritmadas que unem queima calórica e diversão."},
-    {nome:"Pilates Solo", desc:"Fortalecimento do core, consciência corporal e equilíbrio."},
-    {nome:"Emagrecimento", desc:"Protocolo de treino focado em queima de gordura e definição."}
-  ],
-  objetivos: [
-    "Emagrecimento","Hipertrofia","Condicionamento Físico","Saúde","Reabilitação","Performance"
-  ],
-  planos: ["Mensal","Trimestral","Semestral","Anual","Família","Corporativo"],
-  depoimentos: [
-    {nome:"Lucas Ferreira", texto:"Academia completa, limpa e com excelentes professores."},
-    {nome:"Amanda Ribeiro", texto:"Os equipamentos são novos e o atendimento é sensacional."},
-    {nome:"Diego Martins", texto:"Comecei há seis meses e os resultados superaram minhas expectativas."}
-  ],
-  faq: [
-    {q:"Quais modalidades oferece?", a:"Musculação, Funcional, Spinning, HIIT, Alongamento, Cross Training, Dança, Pilates Solo e Treinamento para Emagrecimento."},
-    {q:"Tem personal trainer?", a:"Sim. Personal Trainers certificados disponíveis para acompanhamento individual."},
-    {q:"Possui aula experimental?", a:"Sim. Primeira aula totalmente gratuita mediante agendamento."},
-    {q:"Quais planos existem?", a:"Plano Mensal, Trimestral, Semestral e Anual, além de Plano Família e Plano Corporativo."},
-    {q:"Tem estacionamento?", a:"Sim. Estacionamento gratuito para alunos."},
-    {q:"Funciona aos domingos?", a:"Sim. Das 08h às 13h."},
-    {q:"Possui avaliação física?", a:"Sim. Avaliação física completa com bioimpedância, medidas corporais e plano inicial de treinamento."},
-    {q:"Qual diferencial da academia?", a:"Estrutura premium com equipamentos modernos, professores presentes em todos os horários, avaliação física gratuita, aplicativo exclusivo para acompanhamento dos treinos e planos flexíveis para todos os objetivos."}
-  ]
-};
-</script>
-
-<!-- ======================================================= -->
-<!-- HEADER -->
-<!-- ======================================================= -->
-<header id="header">
-  <div class="container">
-    <div class="logo">
-      <div class="logo-mark">E</div>
-      <div class="logo-text">EVOLUTION<span>.</span></div>
+<!-- Header -->
+<header>
+    <div class="container nav-container">
+        <a href="#" class="logo">
+            <div class="logo-icon">DR</div>
+            DON ROMANO
+        </a>
+        <button class="nav-toggle" id="navToggle">☰</button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#agendar">Agendamento</a></li>
+            <li><a href="#beneficios">Clube Romano</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
     </div>
-    <nav class="main-nav">
-      <a href="#sobre">Sobre</a>
-      <a href="#modalidades">Modalidades</a>
-      <a href="#sistema">Agendar</a>
-      <a href="#avaliacoes">Avaliações</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contato">Contato</a>
-    </nav>
-    <div class="nav-actions">
-      <a href="#sistema" class="btn btn-primary nav-cta">Avaliação Grátis</a>
-      <button class="burger" id="burgerBtn" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
 </header>
 
-<div class="mobile-menu" id="mobileMenu">
-  <button class="close-menu" id="closeMenuBtn" aria-label="Fechar menu">✕</button>
-  <a href="#sobre">Sobre</a>
-  <a href="#modalidades">Modalidades</a>
-  <a href="#sistema">Agendar</a>
-  <a href="#avaliacoes">Avaliações</a>
-  <a href="#faq">FAQ</a>
-  <a href="#contato">Contato</a>
-</div>
-
-<!-- ======================================================= -->
-<!-- HERO -->
-<!-- ======================================================= -->
-<section class="hero" id="topo">
-  <div class="container">
-    <div>
-      <div class="eyebrow">Academia em Osasco · SP</div>
-      <h1>Seu corpo tem <em>potencial</em>. Nós temos o sistema.</h1>
-      <p class="hero-sub">Estrutura premium, professores em todos os horários e avaliação física 100% gratuita. Agende sua aula experimental sem custo em menos de 1 minuto.</p>
-      <div class="hero-ctas">
-        <a href="#sistema" class="btn btn-primary">Agendar Avaliação Grátis</a>
-        <a href="#modalidades" class="btn btn-ghost">Ver Modalidades</a>
-      </div>
-      <div class="hero-badges">
-        <div class="hero-badge"><b id="badgeAnos">11</b><span>Anos de história</span></div>
-        <div class="hero-badge"><b>9</b><span>Modalidades</span></div>
-        <div class="hero-badge"><b>05–23h</b><span>Seg a Sex</span></div>
-      </div>
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <h1>Viva a Experiência da<br><span>Barbearia Clássica Premium</span></h1>
+        <p>Atendimento personalizado, degradê perfeito e toalha quente em Osasco. Agende em menos de 60 segundos.</p>
+        <a href="#agendar" class="btn">Agendar Horário Online</a>
     </div>
-
-    <div class="scoreboard">
-      <div class="scoreboard-top">
-        <span>Painel Evolution — ao vivo</span>
-        <div class="scoreboard-dot"></div>
-      </div>
-      <div class="score-display">
-        <div class="score-number" id="scoreCount">0</div>
-        <div class="score-label">Alunos transformados</div>
-      </div>
-      <div class="score-grid">
-        <div class="score-mini"><b>11</b><span>Anos</span></div>
-        <div class="score-mini"><b>+30</b><span>Aulas/semana</span></div>
-        <div class="score-mini"><b>100%</b><span>Avaliação grátis</span></div>
-        <div class="score-mini"><b>7</b><span>Dias por semana</span></div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- ======================================================= -->
-<!-- APRESENTAÇÃO -->
-<!-- ======================================================= -->
-<section class="section" id="sobre">
-  <div class="container about-grid">
-    <div class="about-text reveal">
-      <div class="eyebrow">Sobre a Evolution</div>
-      <h2>11 anos formando<br>corpos e histórias</h2>
-      <p>A Evolution Fitness Center está há mais de 11 anos ajudando pessoas a conquistarem mais saúde, força e qualidade de vida. Contamos com equipamentos de última geração, professores qualificados e uma estrutura completa para atender desde iniciantes até atletas.</p>
-      <div class="about-facts">
-        <div class="fact">
-          <div class="ico">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
-          </div>
-          <div><b>Personal Trainer</b><span>Acompanhamento certificado e individual</span></div>
-        </div>
-        <div class="fact">
-          <div class="ico">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.6 8.9 2.4 5 6 5c2 0 3.3 1 4 2 .7-1 2-2 4-2 3.6 0 5.4 3.9 3.5 7.5C19 16.65 12 21 12 21z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
-          </div>
-          <div><b>Avaliação Física</b><span>Bioimpedância + medidas corporais</span></div>
-        </div>
-        <div class="fact">
-          <div class="ico">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="2" stroke="#fff" stroke-width="1.6"/><path d="M7 7V5a2 2 0 012-2h6a2 2 0 012 2v2" stroke="#fff" stroke-width="1.6"/></svg>
-          </div>
-          <div><b>Estacionamento</b><span>Gratuito para todos os alunos</span></div>
-        </div>
-        <div class="fact">
-          <div class="ico">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="4" y="2" width="16" height="20" rx="2" stroke="#fff" stroke-width="1.6"/><path d="M9 6h6M9 18h6" stroke="#fff" stroke-width="1.6"/></svg>
-          </div>
-          <div><b>App Exclusivo</b><span>Acompanhe seus treinos pelo celular</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="about-panel reveal">
-      <span class="yrs" id="fundacaoLabel">DESDE 2015</span>
-      <h3>Progressão real,<br>resultado real.</h3>
-      <div class="plate-row">
-        <div class="plate">10kg</div>
-        <div class="plate">20kg</div>
-        <div class="plate active">45kg</div>
-        <div class="plate">20kg</div>
-        <div class="plate">10kg</div>
-      </div>
-      <ul class="about-list">
-        <li><span class="check">✓</span> <span><b>Planos flexíveis</b> — mensal ao anual e família</span></li>
-        <li><span class="check">✓</span> <span><b>Professores</b> presentes em todos os horários</span></li>
-        <li><span class="check">✓</span> <span><b>Equipamentos</b> de última geração</span></li>
-        <li><span class="check">✓</span> <span><b>Aula experimental</b> 100% gratuita</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ======================================================= -->
-<!-- MODALIDADES -->
-<!-- ======================================================= -->
-<section class="section" id="modalidades" style="background:var(--white);">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Modalidades</div>
-      <h2>Treine do seu jeito</h2>
-      <p>Nove modalidades para todos os objetivos — do primeiro treino à performance de atleta.</p>
-    </div>
-    <div class="mod-grid" id="modGrid"></div>
-  </div>
-</section>
-
-<!-- ======================================================= -->
-<!-- COMO FUNCIONA -->
-<!-- ======================================================= -->
-<section class="section section-dark">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Como funciona</div>
-      <h2>Da escolha ao treino,<br>em 4 passos</h2>
-      <p>Um fluxo pensado para você concluir em menos de 1 minuto.</p>
-    </div>
-    <div class="steps-row">
-      <div class="step-card reveal">
-        <span class="step-num">01</span>
-        <h3>Escolha seu objetivo</h3>
-        <p>Selecione a modalidade e o objetivo que fazem sentido para você agora.</p>
-      </div>
-      <div class="step-card reveal">
-        <span class="step-num">02</span>
-        <h3>Escolha data e horário</h3>
-        <p>Veja os horários disponíveis em tempo real e reserve o seu.</p>
-      </div>
-      <div class="step-card reveal">
-        <span class="step-num">03</span>
-        <h3>Confirme pelo WhatsApp</h3>
-        <p>Sua reserva é enviada automaticamente para o nosso time confirmar.</p>
-      </div>
-      <div class="step-card reveal">
-        <span class="step-num">04</span>
-        <h3>Avaliação gratuita</h3>
-        <p>Apareça na Evolution e comece com uma avaliação física sem custo.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======================================================= -->
-<!-- SISTEMA PRINCIPAL — WIZARD DE AGENDAMENTO -->
-<!-- ======================================================= -->
-<section class="section" id="sistema" style="background:var(--white);">
-  <div class="container">
-    <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
-      <div class="eyebrow" style="justify-content:center;">Agende agora</div>
-      <h2>Sua avaliação física gratuita</h2>
-      <p style="margin:0 auto;">Preencha em poucos passos e receba a confirmação direto no WhatsApp.</p>
-    </div>
-
-    <div class="wizard-wrap reveal">
-      <div class="wizard-head">
-        <div class="wizard-progress-labels">
-          <span id="stepLabel">Passo 1 de 11</span>
-          <span id="stepName">Objetivo</span>
-        </div>
-        <div class="wizard-progress-track"><div class="wizard-progress-fill" id="progressFill"></div></div>
-      </div>
-
-      <div class="wizard-body">
-
-        <!-- Etapa 1: Objetivo -->
-        <div class="wizard-step active" data-step="1">
-          <h3>Qual seu objetivo?</h3>
-          <p class="wizard-desc">Isso ajuda a montar o treino ideal para você.</p>
-          <div class="option-grid" id="objetivoGrid"></div>
-        </div>
-
-        <!-- Etapa 2: Primeira vez -->
-        <div class="wizard-step" data-step="2">
-          <h3>É sua primeira vez na Evolution?</h3>
-          <p class="wizard-desc">Assim já preparamos sua recepção.</p>
-          <div class="yn-row">
-            <button class="yn-btn" data-yn="Sim">Sim, primeira vez</button>
-            <button class="yn-btn" data-yn="Não">Não, já sou aluno(a)</button>
-          </div>
-        </div>
-
-        <!-- Etapa 3: Modalidade -->
-        <div class="wizard-step" data-step="3">
-          <h3>Qual modalidade te interessa?</h3>
-          <p class="wizard-desc">Você pode experimentar outras depois.</p>
-          <div class="option-grid" id="modalidadeGrid"></div>
-        </div>
-
-        <!-- Etapa 4: Data -->
-        <div class="wizard-step" data-step="4">
-          <h3>Escolha a data</h3>
-          <p class="wizard-desc">Mostramos apenas dias disponíveis.</p>
-          <div class="cal-head">
-            <button class="cal-nav" id="calPrev">‹</button>
-            <b id="calMonthLabel"></b>
-            <button class="cal-nav" id="calNext">›</button>
-          </div>
-          <div class="cal-grid" id="calGrid"></div>
-        </div>
-
-        <!-- Etapa 5: Horário -->
-        <div class="wizard-step" data-step="5">
-          <h3>Escolha o horário</h3>
-          <p class="wizard-desc" id="slotsDesc">Horários livres para o dia selecionado.</p>
-          <div class="slots-grid" id="slotsGrid"></div>
-        </div>
-
-        <!-- Etapa 6: Nome -->
-        <div class="wizard-step" data-step="6">
-          <h3>Como podemos te chamar?</h3>
-          <p class="wizard-desc">Só o seu nome, por enquanto.</p>
-          <div class="field" id="fieldNome">
-            <label>Nome completo</label>
-            <input type="text" id="inputNome" placeholder="Digite seu nome">
-            <div class="field-error">Digite seu nome completo.</div>
-          </div>
-        </div>
-
-        <!-- Etapa 7: WhatsApp -->
-        <div class="wizard-step" data-step="7">
-          <h3>Qual seu WhatsApp?</h3>
-          <p class="wizard-desc">Enviaremos a confirmação por lá.</p>
-          <div class="field" id="fieldTelefone">
-            <label>WhatsApp</label>
-            <input type="tel" id="inputTelefone" placeholder="(11) 90000-0000" maxlength="15">
-            <div class="field-error">Digite um número válido com DDD.</div>
-          </div>
-        </div>
-
-        <!-- Etapa 8: Email -->
-        <div class="wizard-step" data-step="8">
-          <h3>Qual seu e-mail?</h3>
-          <p class="wizard-desc">Para enviarmos lembretes e novidades.</p>
-          <div class="field" id="fieldEmail">
-            <label>E-mail</label>
-            <input type="email" id="inputEmail" placeholder="seuemail@exemplo.com">
-            <div class="field-error">Digite um e-mail válido.</div>
-          </div>
-        </div>
-
-        <!-- Etapa 9: Observações -->
-        <div class="wizard-step" data-step="9">
-          <h3>Alguma observação?</h3>
-          <p class="wizard-desc">Opcional — lesões, restrições ou dúvidas.</p>
-          <div class="field">
-            <label>Observações (opcional)</label>
-            <textarea id="inputObs" placeholder="Ex: tenho uma lesão no joelho..."></textarea>
-          </div>
-        </div>
-
-        <!-- Etapa 10: Resumo -->
-        <div class="wizard-step" data-step="10">
-          <h3>Confira seu agendamento</h3>
-          <p class="wizard-desc">Revise antes de confirmar.</p>
-          <div class="summary-list" id="summaryList"></div>
-        </div>
-
-        <!-- Etapa 11: Confirmação -->
-        <div class="wizard-step" data-step="11">
-          <div class="confirm-box">
-            <div class="confirm-icon">
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="#2FBE6E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<!-- Presentation / About -->
+<section class="presentation" id="sobre">
+    <div class="container">
+        <div class="about-card">
+            <div class="about-info">
+                <h2>Don Romano Barber Lounge</h2>
+                <p>Nascemos para oferecer muito mais do que um corte de cabelo. Criamos um ambiente moderno e confortável onde cada cliente recebe atendimento personalizado, técnicas atualizadas e um acabamento impecável. Nossa equipe conta com 6 barbeiros especialistas em cortes clássicos, modernos e tratamentos de alta performance.</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="num">6</span>
+                        <span class="label">Especialistas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="num">40min</span>
+                        <span class="label">Média do Corte</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="num">100%</span>
+                        <span class="label">Fidelidade</span>
+                    </div>
+                </div>
             </div>
-            <h3>Reserva pronta!</h3>
-            <p>Toque em confirmar para enviar sua reserva pelo WhatsApp e adicionar o lembrete na sua agenda.</p>
-            <div class="confirm-actions">
-              <a href="#" target="_blank" class="btn btn-primary btn-block" id="btnWhatsApp">Confirmar no WhatsApp</a>
-              <a href="#" target="_blank" class="btn btn-dark btn-block" id="btnCalendar">Adicionar ao Google Agenda</a>
+            <div style="background: var(--bg-input); border-radius: 12px; height: 100%; min-height: 250px; display:flex; flex-direction:column; justify-content:center; padding: 32px; border: 1px dashed var(--primary);">
+                <h4 style="color: var(--primary); margin-bottom: 12px; font-size:1.2rem;">Funcionamento Eficiente</h4>
+                <p style="font-size:0.95rem; color: var(--text-muted); margin-bottom: 8px;">• Segunda a Sexta: 09h às 21h</p>
+                <p style="font-size:0.95rem; color: var(--text-muted); margin-bottom: 8px;">• Sábado: 08h às 20h</p>
+                <p style="font-size:0.95rem; color: var(--text-muted); margin-bottom: 16px;">• Domingo: 09h às 14h</p>
+                <span style="font-size:0.85rem; color: var(--primary); background: rgba(212,175,55,0.1); padding: 6px 12px; border-radius:4px; display:inline-block; text-align:center;">Atendemos com hora marcada ou ordem de chegada</span>
             </div>
-          </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="servicos">
+    <div class="container">
+        <div class="section-header">
+            <h2>Serviços em Destaque</h2>
+            <p>Escolha a excelência visual para o seu dia a dia</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Combo Corte + Barba</h3>
+                <p>O preferido da casa. Corte degradê ou social alinhado a uma barba premium clássica.</p>
+                <div class="service-meta">
+                    <span class="service-price">R$ 110,00</span>
+                    <span class="service-duration">1 hora</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <h3>Corte Degradê (Fade)</h3>
+                <p>Técnica moderna com transição perfeita e acabamento ultra limpo.</p>
+                <div class="service-meta">
+                    <span class="service-price">R$ 60,00</span>
+                    <span class="service-duration">40 min</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <h3>Barba Premium</h3>
+                <p>Protocolo completo com toalha quente, óleo essencial e massagem facial.</p>
+                <div class="service-meta">
+                    <span class="service-price">R$ 50,00</span>
+                    <span class="service-duration">30 min</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <h3>Design Sobrancelha</h3>
+                <p>Limpeza e alinhamento anatômico express para valorizar o olhar.</p>
+                <div class="service-meta">
+                    <span class="service-price">R$ 25,00</span>
+                    <span class="service-duration">15 min</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="how-it-works">
+    <div class="container">
+        <div class="steps-grid">
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <h4>Escolha o Serviço</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem; margin-top:8px;">Selecione o corte, barba ou combo ideal.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-num">2</div>
+                <h4>Selecione o Profissional</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem; margin-top:8px;">Escolha seu barbeiro favorito da equipe.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <h4>Data e Hora</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem; margin-top:8px;">Encontre o encaixe perfeito na nossa agenda livre.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Principal Engine System (Booking Window) -->
+<section class="booking-section" id="agendar">
+    <div class="container">
+        <div class="section-header">
+            <h2>Agendamento Express</h2>
+            <p>Reserve sua cadeira sem complicações</p>
         </div>
 
-      </div>
+        <div class="booking-wrapper">
+            <div class="booking-header">
+                <div style="display:flex; justify-content:space-between; font-size:0.85rem; color:var(--text-muted);">
+                    <span id="stepIndicator">Etapa 1 de 4</span>
+                    <span id="stepPercentage">25% Concluído</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
 
-      <div class="wizard-nav">
-        <button class="btn btn-back" id="btnBack" style="display:none;">Voltar</button>
-        <button class="btn btn-primary btn-block" id="btnNext">Continuar</button>
-      </div>
+            <div class="booking-body">
+                <!-- Step 1: Services -->
+                <div class="step-panel active" id="step1">
+                    <div class="panel-title">Selecione o Serviço</div>
+                    <div class="panel-desc">Selecione o procedimento que deseja realizar hoje.</div>
+                    <div class="options-grid">
+                        <div class="option-card" onclick="selectService(this, 'Combo Corte + Barba Premium', 110, '60 min')">
+                            <div class="option-info">
+                                <h4>Combo Corte + Barba Premium</h4>
+                                <p>O mais pedido • Inclui toalha quente</p>
+                            </div>
+                            <div class="service-price">R$ 110</div>
+                        </div>
+                        <div class="option-card" onclick="selectService(this, 'Corte Degradê (Fade)', 60, '40 min')">
+                            <div class="option-info">
+                                <h4>Corte Degradê (Fade)</h4>
+                                <p>Acabamento moderno e alinhado</p>
+                            </div>
+                            <div class="service-price">R$ 60</div>
+                        </div>
+                        <div class="option-card" onclick="selectService(this, 'Barba Premium Clássica', 50, '30 min')">
+                            <div class="option-info">
+                                <h4>Barba Premium Clássica</h4>
+                                <p>Hidratação e desenho milimétrico</p>
+                            </div>
+                            <div class="service-price">R$ 50</div>
+                        </div>
+                        <div class="option-card" onclick="selectService(this, 'Design de Sobrancelha Masculina', 25, '20 min')">
+                            <div class="option-info">
+                                <h4>Sobrancelha Masculina</h4>
+                                <p>Alinhamento rápido e limpo</p>
+                            </div>
+                            <div class="service-price">R$ 25</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Barbers -->
+                <div class="step-panel" id="step2">
+                    <div class="panel-title">Escolha o Barbeiro</div>
+                    <div class="panel-desc">Temos 6 especialistas prontos para lhe atender.</div>
+                    <div class="options-grid">
+                        <div class="option-card" onclick="selectBarber(this, 'Qualquer Barbeiro (Próximo Disponível)')">
+                            <div class="option-info">
+                                <h4>Próximo Disponível</h4>
+                                <p>Encaixe mais rápido na agenda</p>
+                            </div>
+                        </div>
+                        <div class="option-card" onclick="selectBarber(this, 'Romano (Master Barber)')">
+                            <div class="option-info">
+                                <h4>Romano</h4>
+                                <p>Especialista em clássicos e tesoura</p>
+                            </div>
+                        </div>
+                        <div class="option-card" onclick="selectBarber(this, 'Marcus Costta')">
+                            <div class="option-info">
+                                <h4>Marcus Costta</h4>
+                                <p>Especialista em Degradê & Linhas Modernas</p>
+                            </div>
+                        </div>
+                        <div class="option-card" onclick="selectBarber(this, 'Alef Silva')">
+                            <div class="option-info">
+                                <h4>Alef Silva</h4>
+                                <p>Expert em Visagismo de Barba</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Date & Time -->
+                <div class="step-panel" id="step3">
+                    <div class="panel-title">Data e Horário</div>
+                    <div class="panel-desc">Escolha o melhor momento para o seu atendimento.</div>
+                    
+                    <div class="calendar-header">
+                        <span id="calendarMonth" style="font-weight:700;">Julho 2026</span>
+                    </div>
+                    <div class="calendar-grid" id="calendarGrid">
+                        <!-- JS populated -->
+                    </div>
+
+                    <div class="slots-header">Horários Disponíveis</div>
+                    <div class="slots-grid" id="slotsGrid">
+                        <!-- JS populated -->
+                    </div>
+                </div>
+
+                <!-- Step 4: Personal Info & Summary -->
+                <div class="step-panel" id="step4">
+                    <div class="panel-title">Confirme Seus Dados</div>
+                    <div class="panel-desc">Basta preencher para gerar o agendamento comercial instantâneo.</div>
+                    
+                    <div class="summary-box">
+                        <div class="summary-row">
+                            <span class="summary-label">Serviço:</span>
+                            <span class="summary-value" id="sumService">-</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Barbeiro:</span>
+                            <span class="summary-value" id="sumBarber">-</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Data/Hora:</span>
+                            <span class="summary-value" id="sumDateTime">-</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Total estimado:</span>
+                            <span class="summary-value" id="sumPrice" style="color:var(--primary);">R$ 0,00</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="uName">Nome Completo</label>
+                        <input type="text" id="uName" class="form-control" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="uPhone">WhatsApp</label>
+                        <input type="tel" id="uPhone" class="form-control" placeholder="(11) 99999-9999" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-footer">
+                <button class="btn btn-outline" id="btnPrev" style="display:none;" onclick="navigateStep(-1)">Voltar</button>
+                <button class="btn" id="btnNext" onclick="navigateStep(1)" disabled>Avançar</button>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
-<!-- ======================================================= -->
-<!-- BENEFÍCIOS -->
-<!-- ======================================================= -->
-<section class="section" style="background:var(--white);">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Benefícios</div>
-      <h2>Por que treinar na Evolution</h2>
+<!-- Benefits: Club Don Romano -->
+<section class="benefits" id="beneficios">
+    <div class="container">
+        <div class="section-header">
+            <h2>Clube Don Romano</h2>
+            <p>Nossos planos de fidelidade mensais focados no homem moderno</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Sempre Alinhado</h3>
+                <p>Até 2 cortes de cabelo mensais com preferência total de agendamento na grade semanal.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Combo Romano Vip</h3>
+                <p>Cortes e barbas ilimitados conforme regras do clube, além de descontos em toda linha de pomadas e óleos.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Cashback & Pontos</h3>
+                <p>Cada atendimento gera pontuação que pode ser trocada por serviços extras ou produtos exclusivos da loja.</p>
+            </div>
+        </div>
     </div>
-    <div class="benefits-grid">
-      <div class="benefit reveal">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.6 6.6L22 9l-5 5 1.5 7L12 17.5 5.5 21 7 14 2 9l7.4-.4L12 2z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
-        <h3>Estrutura premium</h3>
-        <p>Equipamentos modernos e ambiente pensado para o seu desempenho.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#fff" stroke-width="1.5"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6" stroke="#fff" stroke-width="1.5"/></svg></div>
-        <h3>Professores sempre presentes</h3>
-        <p>Acompanhamento em todos os horários de funcionamento.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.5"/></svg></div>
-        <h3>Avaliação física grátis</h3>
-        <p>Bioimpedância, medidas e plano inicial sem nenhum custo.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="#fff" stroke-width="1.5"/><path d="M9 6h6" stroke="#fff" stroke-width="1.5"/></svg></div>
-        <h3>Aplicativo exclusivo</h3>
-        <p>Acompanhe treinos, evolução e agenda pelo celular.</p>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- ======================================================= -->
-<!-- AVALIAÇÕES -->
-<!-- ======================================================= -->
-<section class="section section-dark" id="avaliacoes">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">Avaliações</div>
-      <h2>Quem treina, aprova</h2>
+<!-- Reviews -->
+<section class="reviews">
+    <div class="container">
+        <div class="section-header">
+            <h2>O que dizem os Cavalheiros</h2>
+            <p>Avaliações reais de clientes da Don Romano</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Melhor ambiente de Osasco. O atendimento com a toalha quente na barba é espetacular. Recomendo o barbeiro Romano."</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">TC</div>
+                    <div>
+                        <h5 style="margin:0;">Thiago Camargo</h5>
+                        <small style="color:var(--text-muted)">Cliente há 1 ano</small>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"O sistema de agendamento online poupa muito tempo. Agendo no caminho do trabalho e nunca pego fila. Nota 10."</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">RA</div>
+                    <div>
+                        <h5 style="margin:0;">Rodrigo Andrade</h5>
+                        <small style="color:var(--text-muted)">Cliente Fiel</small>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Fiz o degradê e a sobrancelha. Serviço extremamente profissional. Espaço limpo e café de primeira qualidade."</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">FM</div>
+                    <div>
+                        <h5 style="margin:0;">Felipe Melo</h5>
+                        <small style="color:var(--text-muted)">Cliente Novo</small>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="rev-grid" id="revGrid"></div>
-  </div>
 </section>
 
-<!-- ======================================================= -->
 <!-- FAQ -->
-<!-- ======================================================= -->
-<section class="section" id="faq" style="background:var(--white);">
-  <div class="container">
-    <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
-      <div class="eyebrow" style="justify-content:center;">Dúvidas frequentes</div>
-      <h2>Perguntas frequentes</h2>
-    </div>
-    <div class="faq-list reveal" id="faqList"></div>
-  </div>
-</section>
-
-<!-- ======================================================= -->
-<!-- CONTATO + MAPA -->
-<!-- ======================================================= -->
-<section class="section section-dark" id="contato">
-  <div class="container contact-grid">
-    <div class="reveal">
-      <div class="eyebrow">Contato</div>
-      <h2>Venha treinar<br>com a gente</h2>
-
-      <div class="contact-card">
-        <div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0118 0z" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="#fff" stroke-width="1.5"/></svg></div>
-        <div><b>Endereço</b><span id="contatoEndereco"></span></div>
-      </div>
-      <div class="contact-card">
-        <div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.5 2.1L8 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z" stroke="#fff" stroke-width="1.5"/></svg></div>
-        <div><b>WhatsApp</b><span id="contatoTelefone"></span></div>
-      </div>
-      <div class="contact-card">
-        <div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></div>
-        <div><b>Instagram</b><span id="contatoInsta"></span></div>
-      </div>
-      <div class="contact-card" style="border-bottom:none;">
-        <div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.5"/><path d="M12 7v5l3 2" stroke="#fff" stroke-width="1.5"/></svg></div>
-        <div>
-          <b>Horário de funcionamento</b>
-          <table class="hours-table" id="horariosTable"></table>
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-header">
+            <h2>Dúvidas Frequentes</h2>
+            <p>Esclarecimentos rápidos sobre nosso atendimento</p>
         </div>
-      </div>
+        <div class="faq-wrapper">
+            <div class="faq-item">
+                <button class="faq-trigger" onclick="toggleFaq(this)">Atendem sem agendamento prévio? <span>+</span></button>
+                <div class="faq-content">
+                    Sim! Atendemos tanto por hora marcada quanto por ordem de chegada, conforme a disponibilidade dos barbeiros no momento do seu acesso.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-trigger" onclick="toggleFaq(this)">Quais as formas de pagamento aceitas? <span>+</span></button>
+                <div class="faq-content">
+                    Aceitamos Pix, Cartão de Crédito/Débito, Dinheiro, Aproximação (NFC) e oferecemos parcelamento em até 6x para pacotes ou serviços acima de R$250,00.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-trigger" onclick="toggleFaq(this)">Como funciona o cancelamento ou reagendamento? <span>+</span></button>
+                <div class="faq-content">
+                    Você pode realizar alterações ou cancelamentos diretamente pelo nosso suporte no WhatsApp avisando com até 2 horas de antecedência.
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="map-frame reveal">
-      <iframe src="https://maps.google.com/maps?q=Av.%20dos%20Autonomistas%2C%204120%2C%20Osasco%2C%20SP&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Evolution Fitness Center"></iframe>
-    </div>
-  </div>
 </section>
 
-<!-- ======================================================= -->
-<!-- RODAPÉ -->
-<!-- ======================================================= -->
+<!-- Contact & Map -->
+<section class="contact" id="contato">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Don Romano Barber Lounge</h3>
+                <ul class="contact-list">
+                    <li>📍 Av. Santo Antônio, 1548 - Osasco/SP</li>
+                    <li>📞 (11) 4215-3487</li>
+                    <li>📲 (11) 99834-6725</li>
+                    <li>✉️ contato@donromanobarber.com.br</li>
+                    <li>📸 @donromanobarber</li>
+                </ul>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Venha nos visitar. Estacionamento conveniado no local para sua completa comodidade.</p>
+            </div>
+            <div class="map-box">
+                <div style="width: 100%; height: 100%; background: #222; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.9rem; text-align: center; padding: 20px;">
+                    <div>
+                        <p style="color: var(--primary); font-weight: 700; margin-bottom: 8px;">Mapa de Localização Integrado</p>
+                        <p>Av. Santo Antônio, 1548 - Centro, Osasco - SP</p>
+                        <a href="[https://maps.google.com](https://maps.google.com)" target="_blank" class="btn btn-outline" style="margin-top:16px; padding:8px 16px; font-size:0.8rem;">Abrir no Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="logo" style="margin-bottom:16px;">
-          <div class="logo-mark">E</div>
-          <div class="logo-text" style="color:#fff;">EVOLUTION<span>.</span></div>
-        </div>
-        <p style="font-size:14px;max-width:280px;">Estrutura premium, avaliação física gratuita e um sistema de agendamento feito para poupar seu tempo.</p>
-        <div class="social-row" style="margin-top:20px;">
-          <a href="" id="footerInsta" target="_blank" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="1.5"/></svg></a>
-          <a href="" id="footerWhats" target="_blank" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.5 2.1L8 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z" stroke="#fff" stroke-width="1.5"/></svg></a>
-        </div>
-      </div>
-      <div>
-        <h4>Navegação</h4>
-        <ul>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#modalidades">Modalidades</a></li>
-          <li><a href="#sistema">Agendar</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contato</h4>
-        <ul>
-          <li id="footerEndereco"></li>
-          <li id="footerTelefone"></li>
-        </ul>
-      </div>
+    <div class="container">
+        <p>&copy; 2026 Don Romano Barber Lounge. Todos os direitos reservados. Desenvolvido por Cliente Agenda SaaS.</p>
     </div>
-    <div class="footer-bottom">
-      <span>© <span id="anoAtual"></span> Evolution Fitness Center. Todos os direitos reservados.</span>
-      <span>Osasco · SP</span>
-    </div>
-  </div>
 </footer>
 
-<a class="wa-float" id="waFloat" href="#" target="_blank" aria-label="Falar no WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.5 2.1L8 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z" fill="#fff"/></svg>
+<!-- Floating WhatsApp -->
+<a href="[https://wa.me/5511998346725?text=Olá](https://wa.me/5511998346725?text=Olá)! Gostaria de tirar uma dúvida sobre os serviços da barbearia." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <span style="font-family:sans-serif; font-weight:bold;">WP</span>
 </a>
 
+<!-- Application Script Logic -->
 <script>
-(function(){
-  "use strict";
-
-  /* ============ HEADER / MENU ============ */
-  const header = document.getElementById('header');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 30);
-  });
-  const mobileMenu = document.getElementById('mobileMenu');
-  document.getElementById('burgerBtn').addEventListener('click', () => mobileMenu.classList.add('open'));
-  document.getElementById('closeMenuBtn').addEventListener('click', () => mobileMenu.classList.remove('open'));
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
-
-  /* ============ REVEAL ON SCROLL ============ */
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-  }, {threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  /* ============ CONFIG-DRIVEN CONTENT ============ */
-  document.getElementById('contatoEndereco').textContent = CONFIG.endereco;
-  document.getElementById('contatoTelefone').textContent = CONFIG.telefoneDisplay;
-  document.getElementById('contatoInsta').textContent = CONFIG.instagram;
-  document.getElementById('footerEndereco').textContent = CONFIG.endereco;
-  document.getElementById('footerTelefone').textContent = CONFIG.telefoneDisplay;
-  document.getElementById('anoAtual').textContent = new Date().getFullYear();
-  document.getElementById('footerInsta').href = CONFIG.instagramUrl;
-  document.getElementById('footerWhats').href = `https://wa.me/${CONFIG.telefone}`;
-  document.getElementById('waFloat').href = `https://wa.me/${CONFIG.telefone}?text=${encodeURIComponent('Olá! Quero saber mais sobre a Evolution Fitness Center.')}`;
-  document.getElementById('badgeAnos').textContent = CONFIG.anos;
-  document.getElementById('fundacaoLabel').textContent = `DESDE ${new Date().getFullYear() - CONFIG.anos}`;
-
-  const horTable = document.getElementById('horariosTable');
-  CONFIG.horarios.forEach(h => {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${h.dia}</td><td>${h.horas}</td>`;
-    horTable.appendChild(tr);
-  });
-
-  // Modalidades (services grid)
-  const modIcons = ['M4 21V9m4 12V5m4 16v-9m4 9V7m4 14v-5','M12 2v20M2 12h20','M4 6h16M4 12h16M4 18h16'];
-  const modGrid = document.getElementById('modGrid');
-  CONFIG.modalidades.forEach((m,i) => {
-    const card = document.createElement('div');
-    card.className = 'mod-card reveal';
-    card.innerHTML = `
-      <div class="mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="${modIcons[i % modIcons.length]}" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-      <h3>${m.nome}</h3>
-      <p>${m.desc}</p>`;
-    modGrid.appendChild(card);
-    io.observe(card);
-  });
-
-  // Testimonials
-  const revGrid = document.getElementById('revGrid');
-  CONFIG.depoimentos.forEach(d => {
-    const card = document.createElement('div');
-    card.className = 'rev-card reveal';
-    card.innerHTML = `
-      <div class="stars">★★★★★</div>
-      <p>"${d.texto}"</p>
-      <div class="rev-author">
-        <div class="rev-avatar">${d.nome.charAt(0)}</div>
-        <div><b>${d.nome}</b></div>
-      </div>`;
-    revGrid.appendChild(card);
-    io.observe(card);
-  });
-
-  // FAQ
-  const faqList = document.getElementById('faqList');
-  CONFIG.faq.forEach(f => {
-    const item = document.createElement('div');
-    item.className = 'faq-item';
-    item.innerHTML = `
-      <button class="faq-q"><span>${f.q}</span><span class="plus"></span></button>
-      <div class="faq-a"><p>${f.a}</p></div>`;
-    faqList.appendChild(item);
-  });
-  faqList.addEventListener('click', (e) => {
-    const btn = e.target.closest('.faq-q');
-    if (!btn) return;
-    const item = btn.parentElement;
-    const answer = item.querySelector('.faq-a');
-    const wasOpen = item.classList.contains('open');
-    faqList.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight = null; });
-    if (!wasOpen) { item.classList.add('open'); answer.style.maxHeight = answer.scrollHeight + 'px'; }
-  });
-
-  /* ============ SCOREBOARD COUNTER ============ */
-  const scoreEl = document.getElementById('scoreCount');
-  let scoreTarget = 1247, scoreCurrent = 0;
-  const scoreIO = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        const step = Math.ceil(scoreTarget / 60);
-        const tick = () => {
-          scoreCurrent = Math.min(scoreTarget, scoreCurrent + step);
-          scoreEl.textContent = scoreCurrent.toLocaleString('pt-BR');
-          if (scoreCurrent < scoreTarget) requestAnimationFrame(tick);
-        };
-        tick();
-        scoreIO.disconnect();
-      }
+    // Responsive Menu
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
     });
-  }, {threshold:.4});
-  scoreIO.observe(scoreEl);
-
-  /* ================================================================= */
-  /* WIZARD DE AGENDAMENTO                                              */
-  /* ================================================================= */
-  const TOTAL_STEPS = 11;
-  const stepNames = ['Objetivo','Primeira vez','Modalidade','Data','Horário','Nome','WhatsApp','E-mail','Observações','Resumo','Confirmação'];
-  let currentStep = 1;
-  const state = { objetivo:null, primeiraVez:null, modalidade:null, data:null, dataLabel:null, horario:null, nome:'', telefone:'', email:'', obs:'' };
-
-  const progressFill = document.getElementById('progressFill');
-  const stepLabel = document.getElementById('stepLabel');
-  const stepNameEl = document.getElementById('stepName');
-  const btnNext = document.getElementById('btnNext');
-  const btnBack = document.getElementById('btnBack');
-
-  function renderStep() {
-    document.querySelectorAll('.wizard-step').forEach(s => {
-      s.classList.toggle('active', Number(s.dataset.step) === currentStep);
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => navMenu.classList.remove('active'));
     });
-    stepLabel.textContent = `Passo ${currentStep} de ${TOTAL_STEPS}`;
-    stepNameEl.textContent = stepNames[currentStep - 1];
-    progressFill.style.width = `${(currentStep / TOTAL_STEPS) * 100}%`;
-    btnBack.style.display = currentStep === 1 ? 'none' : 'inline-flex';
-    btnNext.textContent = currentStep === TOTAL_STEPS ? 'Concluído' : (currentStep === 10 ? 'Confirmar agendamento' : 'Continuar');
-    btnNext.style.display = currentStep === TOTAL_STEPS ? 'none' : 'flex';
-    window.scrollTo({top: document.querySelector('.wizard-wrap').offsetTop - 110, behavior:'smooth'});
-  }
 
-  // Etapa 1: Objetivo
-  const objetivoGrid = document.getElementById('objetivoGrid');
-  CONFIG.objetivos.forEach(o => {
-    const card = document.createElement('button');
-    card.type = 'button';
-    card.className = 'option-card';
-    card.innerHTML = `<span class="dot"></span><span>${o}</span>`;
-    card.addEventListener('click', () => {
-      objetivoGrid.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
-      card.classList.add('selected');
-      state.objetivo = o;
-    });
-    objetivoGrid.appendChild(card);
-  });
-
-  // Etapa 2: Primeira vez
-  document.querySelectorAll('.yn-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.yn-btn').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      state.primeiraVez = btn.dataset.yn;
-    });
-  });
-
-  // Etapa 3: Modalidade
-  const modalidadeGrid = document.getElementById('modalidadeGrid');
-  CONFIG.modalidades.forEach(m => {
-    const card = document.createElement('button');
-    card.type = 'button';
-    card.className = 'option-card';
-    card.innerHTML = `<span class="dot"></span><span>${m.nome}</span>`;
-    card.addEventListener('click', () => {
-      modalidadeGrid.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
-      card.classList.add('selected');
-      state.modalidade = m.nome;
-    });
-    modalidadeGrid.appendChild(card);
-  });
-
-  // Etapa 4: Calendário
-  const calMonthLabel = document.getElementById('calMonthLabel');
-  const calGrid = document.getElementById('calGrid');
-  const dows = ['D','S','T','Q','Q','S','S'];
-  let viewDate = new Date(); viewDate.setDate(1);
-  const today = new Date(); today.setHours(0,0,0,0);
-
-  function renderCalendar() {
-    calGrid.innerHTML = '';
-    dows.forEach(d => {
-      const el = document.createElement('div');
-      el.className = 'cal-dow'; el.textContent = d;
-      calGrid.appendChild(el);
-    });
-    const monthNames = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
-    calMonthLabel.textContent = `${monthNames[viewDate.getMonth()]} ${viewDate.getFullYear()}`;
-
-    const firstDow = new Date(viewDate.getFullYear(), viewDate.getMonth(), 1).getDay();
-    const daysInMonth = new Date(viewDate.getFullYear(), viewDate.getMonth()+1, 0).getDate();
-
-    for (let i=0;i<firstDow;i++) {
-      const el = document.createElement('div'); el.className = 'cal-day empty';
-      calGrid.appendChild(el);
+    // FAQ Collapse
+    function toggleFaq(btn) {
+        const item = btn.parentElement;
+        item.classList.toggle('active');
+        const span = btn.querySelector('span');
+        span.textContent = item.classList.contains('active') ? '-' : '+';
     }
-    for (let d=1; d<=daysInMonth; d++) {
-      const thisDate = new Date(viewDate.getFullYear(), viewDate.getMonth(), d);
-      thisDate.setHours(0,0,0,0);
-      const el = document.createElement('div');
-      el.textContent = d;
-      const isPast = thisDate < today;
-      const maxFuture = new Date(today); maxFuture.setDate(today.getDate()+45);
-      const isTooFar = thisDate > maxFuture;
-      if (isPast || isTooFar) {
-        el.className = 'cal-day disabled';
-      } else {
-        el.className = 'cal-day avail';
-        const iso = thisDate.toISOString().slice(0,10);
-        if (state.data === iso) el.classList.add('selected');
-        el.addEventListener('click', () => {
-          state.data = iso;
-          state.dataLabel = thisDate.toLocaleDateString('pt-BR', {weekday:'long', day:'2-digit', month:'long'});
-          renderCalendar();
+
+    // Booking State Object
+    let bookingData = {
+        step: 1,
+        service: '',
+        price: 0,
+        duration: '',
+        barber: '',
+        date: '',
+        time: '',
+        name: '',
+        phone: ''
+    };
+
+    // UI Flow Management
+    function updateFlowUI() {
+        // Hide all panels
+        document.querySelectorAll('.step-panel').forEach((p, idx) => {
+            p.classList.toggle('active', idx + 1 === bookingData.step);
         });
-      }
-      calGrid.appendChild(el);
+
+        // Indicators
+        document.getElementById('stepIndicator').textContent = `Etapa ${bookingData.step} de 4`;
+        const pct = bookingData.step * 25;
+        document.getElementById('stepPercentage').textContent = `${pct}% Concluído`;
+        document.getElementById('progressBar').style.width = `${pct}%`;
+
+        // Navigation Buttons Control
+        document.getElementById('btnPrev').style.display = bookingData.step > 1 ? 'block' : 'none';
+        
+        const nextBtn = document.getElementById('btnNext');
+        if (bookingData.step === 4) {
+            nextBtn.textContent = 'Finalizar Agendamento';
+            validateStep4();
+        } else {
+            nextBtn.textContent = 'Avançar';
+            validateCurrentStep();
+        }
     }
-  }
-  document.getElementById('calPrev').addEventListener('click', () => { viewDate.setMonth(viewDate.getMonth()-1); renderCalendar(); });
-  document.getElementById('calNext').addEventListener('click', () => { viewDate.setMonth(viewDate.getMonth()+1); renderCalendar(); });
-  renderCalendar();
 
-  // Etapa 5: Horários (dependem do dia da semana + ocupação simulada e persistida)
-  const slotsGrid = document.getElementById('slotsGrid');
-  const slotsDesc = document.getElementById('slotsDesc');
-
-  function getSlotsForDate(iso) {
-    const d = new Date(iso + 'T00:00:00');
-    const dow = d.getDay(); // 0 domingo, 6 sábado
-    let start, end;
-    if (dow === 0) { start = 8; end = 12; }
-    else if (dow === 6) { start = 8; end = 17; }
-    else { start = 6; end = 21; }
-    const slots = [];
-    for (let h=start; h<=end; h++) slots.push(`${String(h).padStart(2,'0')}:00`);
-    return slots;
-  }
-
-  function seededBusy(iso, slot) {
-    // Pseudo-random determinístico baseado na data+horário, para simular ocupação estável
-    let str = iso + slot;
-    let hash = 0;
-    for (let i=0;i<str.length;i++) { hash = (hash * 31 + str.charCodeAt(i)) >>> 0; }
-    return (hash % 100) < 28;
-  }
-
-  function getStoredBookings() {
-    try { return JSON.parse(localStorage.getItem('evolution_bookings') || '[]'); } catch(e) { return []; }
-  }
-
-  function renderSlots() {
-    slotsGrid.innerHTML = '';
-    if (!state.data) { slotsDesc.textContent = 'Selecione uma data na etapa anterior.'; return; }
-    slotsDesc.textContent = `Horários livres para ${state.dataLabel}.`;
-    const slots = getSlotsForDate(state.data);
-    const booked = getStoredBookings().filter(b => b.data === state.data).map(b => b.horario);
-    slots.forEach(s => {
-      const busy = seededBusy(state.data, s) || booked.includes(s);
-      const el = document.createElement('button');
-      el.type = 'button';
-      el.className = 'slot ' + (busy ? 'busy' : 'avail');
-      el.textContent = s;
-      if (state.horario === s && !busy) el.classList.add('selected');
-      if (!busy) {
-        el.addEventListener('click', () => { state.horario = s; renderSlots(); });
-      } else {
-        el.disabled = true;
-      }
-      slotsGrid.appendChild(el);
-    });
-  }
-
-  // Máscaras
-  const inputTelefone = document.getElementById('inputTelefone');
-  inputTelefone.addEventListener('input', () => {
-    let v = inputTelefone.value.replace(/\D/g,'').slice(0,11);
-    if (v.length > 6) v = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
-    else if (v.length > 2) v = `(${v.slice(0,2)}) ${v.slice(2)}`;
-    inputTelefone.value = v;
-  });
-
-  function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
-
-  function showFieldError(fieldId, show) {
-    document.getElementById(fieldId).classList.toggle('invalid', show);
-  }
-
-  function validateStep(step) {
-    switch(step) {
-      case 1: return !!state.objetivo;
-      case 2: return !!state.primeiraVez;
-      case 3: return !!state.modalidade;
-      case 4: return !!state.data;
-      case 5: return !!state.horario;
-      case 6: {
-        state.nome = document.getElementById('inputNome').value.trim();
-        const ok = state.nome.length >= 3 && state.nome.includes(' ');
-        showFieldError('fieldNome', !ok);
-        return ok;
-      }
-      case 7: {
-        state.telefone = inputTelefone.value.trim();
-        const digits = state.telefone.replace(/\D/g,'');
-        const ok = digits.length === 10 || digits.length === 11;
-        showFieldError('fieldTelefone', !ok);
-        return ok;
-      }
-      case 8: {
-        state.email = document.getElementById('inputEmail').value.trim();
-        const ok = validEmail(state.email);
-        showFieldError('fieldEmail', !ok);
-        return ok;
-      }
-      case 9: state.obs = document.getElementById('inputObs').value.trim(); return true;
-      case 10: return true;
-      default: return true;
+    function validateCurrentStep() {
+        const nextBtn = document.getElementById('btnNext');
+        if (bookingData.step === 1 && bookingData.service) nextBtn.removeAttribute('disabled');
+        else if (bookingData.step === 2 && bookingData.barber) nextBtn.removeAttribute('disabled');
+        else if (bookingData.step === 3 && bookingData.date && bookingData.time) nextBtn.removeAttribute('disabled');
+        else nextBtn.setAttribute('disabled', 'true');
     }
-  }
 
-  function renderSummary() {
-    const list = document.getElementById('summaryList');
-    const rows = [
-      ['Objetivo', state.objetivo],
-      ['Primeira vez', state.primeiraVez],
-      ['Modalidade', state.modalidade],
-      ['Data', state.dataLabel],
-      ['Horário', state.horario],
-      ['Nome', state.nome],
-      ['WhatsApp', state.telefone],
-      ['E-mail', state.email],
-      ['Observações', state.obs || '—']
-    ];
-    list.innerHTML = rows.map(r => `<div class="summary-row"><span>${r[0]}</span><span>${r[1]}</span></div>`).join('');
-  }
-
-  function buildWhatsAppLink() {
-    const msg = `Olá, Evolution! 💪%0A%0AGostaria de agendar minha avaliação física gratuita:%0A%0A🎯 Objetivo: ${state.objetivo}%0A🆕 Primeira vez: ${state.primeiraVez}%0A🏋️ Modalidade: ${state.modalidade}%0A📅 Data: ${state.dataLabel}%0A⏰ Horário: ${state.horario}%0A👤 Nome: ${state.nome}%0A📧 E-mail: ${state.email}%0A📝 Observações: ${state.obs || 'Nenhuma'}`;
-    return `https://wa.me/${CONFIG.telefone}?text=${msg}`;
-  }
-
-  function buildCalendarLink() {
-    const [y,m,d] = state.data.split('-');
-    const [hh,mm] = state.horario.split(':');
-    const start = `${y}${m}${d}T${hh}${mm}00`;
-    const endHour = String(Number(hh)+1).padStart(2,'0');
-    const end = `${y}${m}${d}T${endHour}${mm}00`;
-    const details = `Avaliação física gratuita na Evolution Fitness Center. Modalidade: ${state.modalidade}. Objetivo: ${state.objetivo}.`;
-    const params = new URLSearchParams({
-      action:'TEMPLATE',
-      text:'Avaliação Física — Evolution Fitness Center',
-      dates:`${start}/${end}`,
-      details, location: CONFIG.endereco
-    });
-    return `https://calendar.google.com/calendar/render?${params.toString()}`;
-  }
-
-  function saveBooking() {
-    const bookings = getStoredBookings();
-    bookings.push({data: state.data, horario: state.horario});
-    try { localStorage.setItem('evolution_bookings', JSON.stringify(bookings)); } catch(e) {}
-  }
-
-  btnNext.addEventListener('click', () => {
-    if (!validateStep(currentStep)) return;
-
-    if (currentStep === 4) renderSlots();
-    if (currentStep === 9) renderSummary();
-    if (currentStep === 10) {
-      saveBooking();
-      document.getElementById('btnWhatsApp').href = buildWhatsAppLink();
-      document.getElementById('btnCalendar').href = buildCalendarLink();
+    function navigateStep(direction) {
+        if (direction === 1 && bookingData.step === 4) {
+            submitBooking();
+            return;
+        }
+        bookingData.step += direction;
+        if (bookingData.step === 3) {
+            buildCalendar();
+        }
+        if (bookingData.step === 4) {
+            document.getElementById('sumService').textContent = bookingData.service;
+            document.getElementById('sumBarber').textContent = bookingData.barber;
+            document.getElementById('sumDateTime').textContent = `${bookingData.date} às ${bookingData.time}`;
+            document.getElementById('sumPrice').textContent = `R$ ${bookingData.price},00`;
+        }
+        updateFlowUI();
     }
-    if (currentStep < TOTAL_STEPS) {
-      currentStep++;
-      renderStep();
+
+    // Selection Actions
+    function selectService(element, name, price, duration) {
+        element.parentElement.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+        element.classList.add('selected');
+        bookingData.service = name;
+        bookingData.price = price;
+        bookingData.duration = duration;
+        validateCurrentStep();
     }
-  });
 
-  btnBack.addEventListener('click', () => {
-    if (currentStep > 1) { currentStep--; renderStep(); }
-  });
+    function selectBarber(element, name) {
+        element.parentElement.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+        element.classList.add('selected');
+        bookingData.barber = name;
+        validateCurrentStep();
+    }
 
-  renderStep();
+    // Calendar Builder Logic
+    function buildCalendar() {
+        const grid = document.getElementById('calendarGrid');
+        grid.innerHTML = '';
+        
+        // Labels
+        const daysArr = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+        daysArr.forEach(d => {
+            const l = document.createElement('div');
+            l.className = 'calendar-day-label';
+            l.textContent = d;
+            grid.appendChild(l);
+        });
 
-})();
+        // Generate Mock 14 days schedule option framework starting today
+        const baseDate = new Date();
+        for(let i=0; i<14; i++) {
+            const current = new Date();
+            current.setDate(baseDate.getDate() + i);
+            
+            const dayBtn = document.createElement('div');
+            dayBtn.className = 'calendar-day';
+            dayBtn.textContent = current.getDate();
+            
+            const formattedDate = `${current.getDate().toString().padStart(2, '0')}/${(current.getMonth()+1).toString().padStart(2, '0')}`;
+            
+            // Click events
+            dayBtn.onclick = () => {
+                grid.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('selected'));
+                dayBtn.classList.add('selected');
+                bookingData.date = formattedDate;
+                buildSlots(current.getDay() === 0); // Sunday check flag
+                validateCurrentStep();
+            };
+
+            if (bookingData.date === formattedDate) {
+                dayBtn.classList.add('selected');
+            }
+
+            grid.appendChild(dayBtn);
+        }
+    }
+
+    function buildSlots(isSunday) {
+        const grid = document.getElementById('slotsGrid');
+        grid.innerHTML = '';
+        
+        const hours = isSunday ? ['09:00', '10:00', '11:00', '13:00'] : ['09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'];
+        
+        hours.forEach(h => {
+            const btn = document.createElement('button');
+            btn.className = 'slot-btn';
+            btn.textContent = h;
+            btn.onclick = (e) => {
+                e.preventDefault();
+                grid.querySelectorAll('.slot-btn').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                bookingData.time = h;
+                validateCurrentStep();
+            };
+            if(bookingData.time === h) {
+                btn.classList.add('selected');
+            }
+            grid.appendChild(btn);
+        });
+    }
+
+    // Real-time step 4 validation
+    function validateStep4() {
+        const name = document.getElementById('uName').value.trim();
+        const phone = document.getElementById('uPhone').value.trim();
+        const nextBtn = document.getElementById('btnNext');
+        
+        if(name.length > 2 && phone.length > 7) {
+            bookingData.name = name;
+            bookingData.phone = phone;
+            nextBtn.removeAttribute('disabled');
+        } else {
+            nextBtn.setAttribute('disabled', 'true');
+        }
+    }
+
+    document.getElementById('uName').addEventListener('input', validateStep4);
+    document.getElementById('uPhone').addEventListener('input', validateStep4);
+
+    // Core business automation communication dispatch logic
+    function submitBooking() {
+        const message = `*DON ROMANO BARBER LOUNGE* \n\n` +
+                        `📌 *Novo Agendamento Confirmado!*\n` +
+                        `-----------------------------------\n` +
+                        `👤 *Cliente:* ${bookingData.name}\n` +
+                        `📞 *WhatsApp:* ${bookingData.phone}\n` +
+                        `✂️ *Serviço:* ${bookingData.service}\n` +
+                        `🧔 *Barbeiro:* ${bookingData.barber}\n` +
+                        `📅 *Data/Hora:* ${bookingData.date} às ${bookingData.time}\n` +
+                        `💳 *Valor:* R$ ${bookingData.price},00\n` +
+                        `-----------------------------------\n` +
+                        `_Gerado automaticamente pelo Sistema de Agendamento Online Don Romano._`;
+
+        const encoded = encodeURIComponent(message);
+        window.open(`[https://wa.me/5511998346725?text=$](https://wa.me/5511998346725?text=$){encoded}`, '_blank');
+    }
 </script>
-</body>
-</html>
