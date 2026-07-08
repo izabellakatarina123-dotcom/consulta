@@ -1,721 +1,1365 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cliente Web Sites | Transforme seu Negócio em uma Marca de Elite</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Criamos sites profissionais de alta conversão para empresas que desejam dominar o mercado. Pare de perder clientes para a concorrência.">
-    <meta name="keywords" content="criação de sites, web design, landing page, marketing digital, cliente web sites, site profissional">
-    <meta property="og:title" content="Cliente Web Sites | Sites que Vendem">
-    <meta property="og:description" content="Sua empresa merece um posicionamento de elite. Criamos sua presença digital em tempo recorde.">
-    <meta property="og:type" content="website">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Evolution Fitness Center | Academia em Osasco - Avaliação Física Grátis</title>
+<meta name="description" content="Academia completa em Osasco - SP. Musculação, Funcional, Spinning, Pilates e mais. Agende sua avaliação física gratuita e aula experimental em menos de 1 minuto.">
+<meta name="keywords" content="academia osasco, academia perto de mim, musculação osasco, personal trainer osasco, aula experimental gratuita, avaliação física, cross training, pilates osasco, evolution fitness center">
+<link rel="canonical" href="https://evolutionfitnesscenter.com.br/">
 
-    <style>
-        :root {
-            --neon-green: #39FF14;
-            --dark-bg: #050505;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
-        }
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Evolution Fitness Center | Academia em Osasco">
+<meta property="og:description" content="Estrutura premium, avaliação física gratuita e aula experimental sem custo. Agende agora pelo sistema inteligente da Evolution.">
+<meta property="og:url" content="https://evolutionfitnesscenter.com.br/">
+<meta property="og:locale" content="pt_BR">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Evolution Fitness Center | Academia em Osasco">
+<meta name="twitter:description" content="Agende sua avaliação física gratuita em menos de 1 minuto.">
 
-        body {
-            background-color: var(--dark-bg);
-            color: #ffffff;
-            overflow-x: hidden;
-        }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "Evolution Fitness Center",
+  "image": "",
+  "telephone": "+5511998457632",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. dos Autonomistas, 4120",
+    "addressLocality": "Osasco",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"05:00","closes":"23:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"08:00","closes":"13:00"}
+  ],
+  "sameAs": ["https://instagram.com/evolutionfitnesscenter"]
+}
+</script>
 
-        /* Loading Screen */
-        #loader {
-            position: fixed;
-            inset: 0;
-            z-index: 9999;
-            background: var(--dark-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.5s ease-out;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-        .loader-content {
-            text-align: center;
-        }
+<style>
+  /* ================= CONFIG-DRIVEN TOKENS ================= */
+  :root{
+    --ink:#0B0B0C;
+    --steel:#19191C;
+    --steel-2:#232326;
+    --white:#F5F4F0;
+    --paper:#FAFAF8;
+    --red:#E8382D;
+    --red-dark:#B82820;
+    --red-glow: rgba(232,56,45,.45);
+    --graphite:#6E6E73;
+    --graphite-light:#9A9A9F;
+    --line: rgba(245,244,240,0.10);
+    --line-dark: rgba(11,11,12,0.10);
+    --ok:#2FBE6E;
+    --font-display: 'Anton', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --radius: 14px;
+    --shadow-lg: 0 30px 60px -20px rgba(0,0,0,.5);
+  }
 
-        .loader-bar {
-            width: 200px;
-            height: 2px;
-            background: rgba(255,255,255,0.1);
-            margin-top: 20px;
-            position: relative;
-            overflow: hidden;
-        }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--font-body);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.5;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;}
+  input,select,textarea{font-family:inherit;font-size:16px;}
+  ul{list-style:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  .section{padding:104px 0;}
+  .section-dark{background:var(--ink);color:var(--white);}
+  @media(max-width:768px){ .section{padding:72px 0;} }
 
-        .loader-progress {
-            position: absolute;
-            height: 100%;
-            background: var(--neon-green);
-            width: 0%;
-            transition: width 0.5s ease;
-            box-shadow: 0 0 15px var(--neon-green);
-        }
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--red);
+    display:flex;align-items:center;gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{content:'';width:28px;height:2px;background:var(--red);display:inline-block;}
 
-        /* Glassmorphism */
-        .glass {
-            background: var(--glass-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-        }
+  h1,h2,h3,.display{
+    font-family:var(--font-display);
+    font-weight:400;
+    text-transform:uppercase;
+    line-height:1.02;
+    letter-spacing:.01em;
+  }
+  h2{font-size:clamp(32px,5vw,52px);margin-bottom:16px;}
+  .section-head{max-width:640px;margin-bottom:56px;}
+  .section-head p{color:var(--graphite);font-size:17px;}
+  .section-dark .section-head p{color:var(--graphite-light);}
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-        }
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:17px 32px;border-radius:100px;
+    font-weight:700;font-size:15px;letter-spacing:.02em;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--red);color:#fff;box-shadow:0 12px 30px -8px var(--red-glow);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 36px -8px var(--red-glow);}
+  .btn-ghost{background:transparent;color:var(--white);border:1.5px solid var(--line);}
+  .btn-ghost:hover{border-color:var(--red);color:var(--red);}
+  .btn-dark{background:var(--ink);color:#fff;}
+  .btn-dark:hover{transform:translateY(-2px);}
+  .btn-block{width:100%;}
+  .btn:disabled{opacity:.35;cursor:not-allowed;transform:none !important;}
 
-        .glass-card:hover {
-            border-color: var(--neon-green);
-            background: rgba(57, 255, 20, 0.05);
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(57, 255, 20, 0.1);
-        }
+  /* ================= HEADER ================= */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:500;
+    padding:18px 0;
+    transition:background .3s ease, padding .3s ease, box-shadow .3s ease;
+  }
+  header.scrolled{background:rgba(11,11,12,.92);backdrop-filter:blur(10px);padding:12px 0;box-shadow:0 8px 30px rgba(0,0,0,.3);}
+  header .container{display:flex;align-items:center;justify-content:space-between;}
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo-mark{
+    width:38px;height:38px;border-radius:8px;
+    background:var(--red);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-display);color:#fff;font-size:20px;
+    box-shadow:0 8px 20px -6px var(--red-glow);
+    flex-shrink:0;
+  }
+  .logo-text{font-family:var(--font-display);color:var(--white);font-size:19px;letter-spacing:.02em;text-transform:uppercase;}
+  .logo-text span{color:var(--red);}
+  nav.main-nav{display:flex;align-items:center;gap:36px;}
+  nav.main-nav a{color:var(--white);font-size:14px;font-weight:600;opacity:.85;transition:opacity .2s, color .2s;}
+  nav.main-nav a:hover{opacity:1;color:var(--red);}
+  .nav-actions{display:flex;align-items:center;gap:14px;}
+  .nav-cta{padding:12px 24px;font-size:13px;}
+  .burger{display:none;width:44px;height:44px;border-radius:10px;background:rgba(245,244,240,.08);align-items:center;justify-content:center;flex-direction:column;gap:5px;}
+  .burger span{width:20px;height:2px;background:var(--white);border-radius:2px;}
 
-        /* Neon Effects */
-        .text-neon {
-            color: var(--neon-green);
-            text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
-        }
+  @media(max-width:920px){
+    nav.main-nav{display:none;}
+    .burger{display:flex;}
+  }
+  .mobile-menu{
+    position:fixed;inset:0;background:var(--ink);z-index:600;
+    display:none;flex-direction:column;padding:100px 32px 40px;
+    gap:28px;
+  }
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{font-family:var(--font-display);font-size:26px;color:var(--white);text-transform:uppercase;}
+  .mobile-menu .close-menu{position:absolute;top:24px;right:24px;width:44px;height:44px;background:rgba(245,244,240,.08);border-radius:10px;display:flex;align-items:center;justify-content:center;}
 
-        .bg-neon {
-            background-color: var(--neon-green);
-            box-shadow: 0 0 20px rgba(57, 255, 20, 0.6);
-        }
+  /* ================= HERO ================= */
+  .hero{
+    min-height:100vh;
+    background:
+      radial-gradient(circle at 82% 18%, rgba(232,56,45,.18), transparent 45%),
+      radial-gradient(circle at 10% 90%, rgba(232,56,45,.10), transparent 40%),
+      var(--ink);
+    display:flex;align-items:center;
+    padding-top:140px;padding-bottom:80px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:'';position:absolute;inset:0;
+    background-image:
+      linear-gradient(rgba(245,244,240,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,244,240,.045) 1px, transparent 1px);
+    background-size:44px 44px;
+    mask-image: radial-gradient(circle at 70% 30%, black 0%, transparent 65%);
+    pointer-events:none;
+  }
+  .hero .container{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative;z-index:2;}
+  @media(max-width:960px){ .hero .container{grid-template-columns:1fr;} }
 
-        .btn-premium {
-            background: var(--neon-green);
-            color: black;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
-        }
+  .hero h1{
+    color:var(--white);
+    font-size:clamp(44px,6.4vw,84px);
+    line-height:.94;
+    margin-bottom:24px;
+  }
+  .hero h1 em{font-style:normal;color:var(--red);}
+  .hero-sub{color:var(--graphite-light);font-size:18px;max-width:480px;margin-bottom:36px;}
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px;}
+  .hero-badges{display:flex;gap:28px;flex-wrap:wrap;}
+  .hero-badge{display:flex;flex-direction:column;gap:2px;}
+  .hero-badge b{font-family:var(--font-mono);font-size:26px;color:var(--white);}
+  .hero-badge span{font-size:12px;color:var(--graphite-light);text-transform:uppercase;letter-spacing:.05em;}
 
-        .btn-premium:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(57, 255, 20, 0.6);
-            background: #ffffff;
-        }
+  /* Scoreboard signature element */
+  .scoreboard{
+    background:var(--steel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:28px;
+    box-shadow:var(--shadow-lg);
+  }
+  .scoreboard-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;}
+  .scoreboard-top span{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite-light);}
+  .scoreboard-dot{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red);animation:pulse-dot 1.6s infinite;}
+  @keyframes pulse-dot{0%,100%{opacity:1;}50%{opacity:.3;}}
+  .score-display{
+    background:var(--ink);
+    border-radius:10px;
+    padding:22px 18px;
+    text-align:center;
+    margin-bottom:18px;
+  }
+  .score-number{
+    font-family:var(--font-mono);
+    font-weight:700;
+    font-size:clamp(38px,5vw,54px);
+    color:var(--red);
+    text-shadow:0 0 24px var(--red-glow);
+    line-height:1;
+    letter-spacing:.02em;
+  }
+  .score-label{font-size:11px;color:var(--graphite-light);text-transform:uppercase;letter-spacing:.12em;margin-top:8px;font-family:var(--font-mono);}
+  .score-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .score-mini{background:var(--ink);border-radius:8px;padding:14px;text-align:center;}
+  .score-mini b{font-family:var(--font-mono);color:var(--white);font-size:20px;display:block;}
+  .score-mini span{font-size:10px;color:var(--graphite-light);text-transform:uppercase;letter-spacing:.08em;}
 
-        /* Custom Cursor Glow */
-        #cursor-glow {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(57, 255, 20, 0.08) 0%, rgba(0,0,0,0) 70%);
-            position: fixed;
-            pointer-events: none;
-            z-index: 1;
-            transform: translate(-50%, -50%);
-            transition: opacity 0.3s ease;
-        }
+  /* ================= APRESENTAÇÃO ================= */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+  @media(max-width:900px){ .about-grid{grid-template-columns:1fr;gap:40px;} }
+  .about-text p{color:var(--graphite);font-size:17px;margin-bottom:24px;}
+  .about-facts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px;}
+  .fact{display:flex;gap:14px;align-items:flex-start;padding:18px;background:var(--white);border:1px solid rgba(11,11,12,.08);border-radius:10px;}
+  .fact .ico{width:38px;height:38px;flex-shrink:0;border-radius:9px;background:var(--ink);display:flex;align-items:center;justify-content:center;}
+  .fact b{display:block;font-size:15px;margin-bottom:2px;}
+  .fact span{font-size:13px;color:var(--graphite);}
 
-        /* Hero Background Animation */
-        .bg-grid {
-            background-image: linear-gradient(rgba(57, 255, 20, 0.05) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(57, 255, 20, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
-            mask-image: radial-gradient(circle at center, black, transparent 80%);
-        }
+  .about-panel{
+    background:var(--ink);
+    border-radius:var(--radius);
+    padding:36px 30px;
+    color:var(--white);
+    position:relative;
+    overflow:hidden;
+  }
+  .about-panel::before{
+    content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;
+    background:radial-gradient(circle, var(--red-glow), transparent 70%);
+  }
+  .about-panel h3{color:var(--white);font-size:26px;margin-bottom:6px;position:relative;}
+  .about-panel .yrs{font-family:var(--font-mono);color:var(--red);font-size:15px;margin-bottom:24px;display:block;position:relative;}
+  .plate-row{display:flex;gap:8px;margin-bottom:28px;position:relative;}
+  .plate{height:34px;border-radius:6px;background:var(--steel-2);border:1px solid var(--line);flex:1;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:11px;color:var(--graphite-light);}
+  .plate.active{background:var(--red);color:#fff;border-color:var(--red);}
+  .about-list{display:flex;flex-direction:column;gap:14px;position:relative;}
+  .about-list li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--graphite-light);}
+  .about-list li b{color:var(--white);}
+  .about-list .check{width:20px;height:20px;border-radius:50%;background:rgba(232,56,45,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 
-        /* Floating WhatsApp */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 100;
-            width: 65px;
-            height: 65px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 35px;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
-            animation: pulse-green 2s infinite;
-        }
+  /* ================= SERVIÇOS / MODALIDADES ================= */
+  .mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:900px){ .mod-grid{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:560px){ .mod-grid{grid-template-columns:1fr;} }
+  .mod-card{
+    background:#fff;border:1px solid rgba(11,11,12,.08);border-radius:var(--radius);
+    padding:28px 24px;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .mod-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px -16px rgba(0,0,0,.18);border-color:var(--red);}
+  .mod-icon{width:48px;height:48px;border-radius:12px;background:var(--ink);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+  .mod-card h3{font-family:var(--font-body);font-weight:800;font-size:17px;text-transform:none;margin-bottom:8px;}
+  .mod-card p{font-size:14px;color:var(--graphite);}
 
-        @keyframes pulse-green {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
+  /* ================= COMO FUNCIONA ================= */
+  .steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  @media(max-width:900px){ .steps-row{grid-template-columns:1fr 1fr;} }
+  @media(max-width:560px){ .steps-row{grid-template-columns:1fr;} }
+  .step-card{position:relative;padding:28px 22px;background:var(--steel);border:1px solid var(--line);border-radius:var(--radius);}
+  .step-num{font-family:var(--font-mono);color:var(--red);font-size:13px;margin-bottom:16px;display:block;}
+  .step-card h3{color:var(--white);font-size:17px;font-family:var(--font-body);font-weight:800;text-transform:none;margin-bottom:8px;}
+  .step-card p{font-size:13.5px;color:var(--graphite-light);}
+  .steps-row .step-card:not(:last-child)::after{
+    content:'';position:absolute;top:38px;right:-24px;width:24px;height:1px;background:var(--line);
+  }
+  @media(max-width:900px){ .steps-row .step-card::after{display:none;} }
 
-        /* Typing Effect */
-        .typing::after {
-            content: '|';
-            animation: blink 0.7s infinite;
-        }
+  /* ================= SISTEMA PRINCIPAL (WIZARD) ================= */
+  .wizard-wrap{
+    background:#fff;border-radius:20px;box-shadow:var(--shadow-lg);
+    max-width:720px;margin:0 auto;overflow:hidden;border:1px solid rgba(11,11,12,.06);
+  }
+  .wizard-head{padding:28px 32px 0;}
+  .wizard-progress-labels{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:11px;color:var(--graphite);margin-bottom:10px;}
+  .wizard-progress-track{height:6px;background:rgba(11,11,12,.08);border-radius:6px;overflow:hidden;margin-bottom:24px;}
+  .wizard-progress-fill{height:100%;background:linear-gradient(90deg,var(--red),var(--red-dark));border-radius:6px;transition:width .35s ease;width:0%;}
+  .wizard-body{padding:8px 32px 32px;min-height:340px;}
+  .wizard-step{display:none;animation:fade-in .35s ease;}
+  .wizard-step.active{display:block;}
+  @keyframes fade-in{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+  .wizard-step h3{font-family:var(--font-body);font-weight:800;font-size:22px;text-transform:none;margin-bottom:6px;}
+  .wizard-step .wizard-desc{color:var(--graphite);font-size:14px;margin-bottom:26px;}
 
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
+  .option-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media(max-width:480px){ .option-grid{grid-template-columns:1fr;} }
+  .option-card{
+    border:1.5px solid rgba(11,11,12,.1);border-radius:12px;padding:16px 18px;
+    display:flex;align-items:center;gap:12px;transition:all .2s ease;text-align:left;
+  }
+  .option-card:hover{border-color:var(--red);}
+  .option-card.selected{border-color:var(--red);background:rgba(232,56,45,.06);}
+  .option-card .dot{width:18px;height:18px;border-radius:50%;border:2px solid rgba(11,11,12,.2);flex-shrink:0;position:relative;}
+  .option-card.selected .dot{border-color:var(--red);}
+  .option-card.selected .dot::after{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--red);}
+  .option-card span{font-size:14.5px;font-weight:600;}
 
-        /* Mockup Effects */
-        .mockup-container {
-            position: relative;
-            perspective: 1000px;
-        }
+  .yn-row{display:flex;gap:14px;}
+  .yn-btn{flex:1;padding:22px;border:1.5px solid rgba(11,11,12,.1);border-radius:12px;font-weight:700;font-size:16px;transition:all .2s ease;}
+  .yn-btn:hover{border-color:var(--red);}
+  .yn-btn.selected{border-color:var(--red);background:rgba(232,56,45,.06);color:var(--red-dark);}
 
-        .mockup-img {
-            transform: rotateY(-15deg) rotateX(5deg);
-            transition: transform 0.5s ease;
-        }
+  .field{margin-bottom:18px;}
+  .field label{display:block;font-size:13px;font-weight:700;margin-bottom:8px;color:var(--ink);}
+  .field input, .field textarea{
+    width:100%;padding:15px 16px;border:1.5px solid rgba(11,11,12,.12);border-radius:10px;
+    font-size:15px;transition:border-color .2s ease;background:var(--paper);
+  }
+  .field input:focus, .field textarea:focus{outline:none;border-color:var(--red);}
+  .field textarea{resize:vertical;min-height:90px;}
+  .field-error{font-size:12.5px;color:var(--red);margin-top:6px;display:none;}
+  .field.invalid input, .field.invalid textarea{border-color:var(--red);}
+  .field.invalid .field-error{display:block;}
 
-        .mockup-container:hover .mockup-img {
-            transform: rotateY(0deg) rotateX(0deg);
-        }
+  .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+  .cal-head b{font-family:var(--font-mono);font-size:14px;text-transform:capitalize;}
+  .cal-nav{width:34px;height:34px;border-radius:8px;background:var(--paper);border:1px solid rgba(11,11,12,.1);display:flex;align-items:center;justify-content:center;}
+  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;}
+  .cal-dow{text-align:center;font-size:10.5px;color:var(--graphite);font-family:var(--font-mono);padding-bottom:6px;}
+  .cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:8px;font-size:13.5px;font-weight:600;border:1.5px solid transparent;}
+  .cal-day.avail{background:var(--paper);cursor:pointer;}
+  .cal-day.avail:hover{border-color:var(--red);}
+  .cal-day.selected{background:var(--red);color:#fff;}
+  .cal-day.disabled{color:rgba(11,11,12,.2);}
+  .cal-day.empty{visibility:hidden;}
 
-        .notification-float {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 12px 20px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            animation: float 4s ease-in-out infinite;
-            z-index: 10;
-        }
+  .slots-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-height:280px;overflow-y:auto;padding-right:4px;}
+  @media(max-width:480px){ .slots-grid{grid-template-columns:repeat(2,1fr);} }
+  .slot{padding:13px 8px;border:1.5px solid rgba(11,11,12,.1);border-radius:10px;text-align:center;font-family:var(--font-mono);font-size:13px;font-weight:700;}
+  .slot.avail:hover{border-color:var(--red);}
+  .slot.selected{background:var(--red);color:#fff;border-color:var(--red);}
+  .slot.busy{opacity:.35;text-decoration:line-through;cursor:not-allowed;}
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
+  .summary-list{display:flex;flex-direction:column;gap:0;border:1px solid rgba(11,11,12,.1);border-radius:12px;overflow:hidden;}
+  .summary-row{display:flex;justify-content:space-between;padding:14px 18px;font-size:14px;border-bottom:1px solid rgba(11,11,12,.08);}
+  .summary-row:last-child{border-bottom:none;}
+  .summary-row span:first-child{color:var(--graphite);}
+  .summary-row span:last-child{font-weight:700;text-align:right;}
 
-        /* Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--dark-bg); }
-        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--neon-green); }
-    </style>
+  .wizard-nav{display:flex;gap:12px;padding:20px 32px 30px;border-top:1px solid rgba(11,11,12,.06);}
+  .wizard-nav .btn-back{background:var(--paper);color:var(--ink);border:1.5px solid rgba(11,11,12,.1);}
+  .confirm-box{text-align:center;padding:24px 0 8px;}
+  .confirm-icon{width:76px;height:76px;border-radius:50%;background:rgba(47,190,110,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;}
+  .confirm-box h3{margin-bottom:8px;}
+  .confirm-box p{color:var(--graphite);font-size:14.5px;margin-bottom:26px;}
+  .confirm-actions{display:flex;flex-direction:column;gap:12px;}
+
+  /* ================= BENEFÍCIOS ================= */
+  .benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(11,11,12,.08);border-radius:var(--radius);overflow:hidden;}
+  @media(max-width:900px){ .benefits-grid{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:560px){ .benefits-grid{grid-template-columns:1fr;} }
+  .benefit{background:#fff;padding:32px 26px;}
+  .benefit .ico{width:42px;height:42px;border-radius:10px;background:var(--ink);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+  .benefit h3{font-family:var(--font-body);font-weight:800;font-size:16px;text-transform:none;margin-bottom:6px;}
+  .benefit p{font-size:13.5px;color:var(--graphite);}
+
+  /* ================= AVALIAÇÕES ================= */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media(max-width:900px){ .rev-grid{grid-template-columns:1fr;} }
+  .rev-card{background:var(--steel);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;}
+  .stars{color:var(--red);font-size:15px;letter-spacing:2px;margin-bottom:16px;}
+  .rev-card p{color:var(--graphite-light);font-size:14.5px;margin-bottom:20px;font-style:italic;}
+  .rev-author{display:flex;align-items:center;gap:12px;}
+  .rev-avatar{width:38px;height:38px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);color:#fff;font-size:15px;}
+  .rev-author b{color:var(--white);font-size:14px;display:block;}
+
+  /* ================= FAQ ================= */
+  .faq-list{max-width:760px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid rgba(11,11,12,.1);}
+  .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:22px 4px;text-align:left;font-weight:700;font-size:15.5px;}
+  .faq-q .plus{width:24px;height:24px;flex-shrink:0;position:relative;}
+  .faq-q .plus::before,.faq-q .plus::after{content:'';position:absolute;background:var(--ink);transition:transform .25s ease;}
+  .faq-q .plus::before{width:14px;height:2px;top:11px;left:5px;}
+  .faq-q .plus::after{width:2px;height:14px;top:5px;left:11px;}
+  .faq-item.open .plus::after{transform:rotate(90deg);opacity:0;}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+  .faq-a p{padding:0 4px 22px;color:var(--graphite);font-size:14.5px;}
+
+  /* ================= CONTATO / MAPA ================= */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+  @media(max-width:900px){ .contact-grid{grid-template-columns:1fr;} }
+  .contact-card{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--line);}
+  .contact-card .ico{width:42px;height:42px;border-radius:10px;background:var(--steel);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .contact-card b{display:block;color:var(--white);font-size:15px;margin-bottom:4px;}
+  .contact-card span{color:var(--graphite-light);font-size:14px;}
+  .hours-table{width:100%;margin-top:8px;}
+  .hours-table tr td{padding:6px 0;font-size:14px;color:var(--graphite-light);}
+  .hours-table tr td:last-child{text-align:right;color:var(--white);font-family:var(--font-mono);}
+  .map-frame{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);height:100%;min-height:340px;}
+  .map-frame iframe{width:100%;height:100%;min-height:340px;border:0;filter:grayscale(.3) contrast(1.05);}
+
+  /* ================= RODAPÉ ================= */
+  footer{background:#050506;color:var(--graphite-light);padding:56px 0 28px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+  @media(max-width:768px){ .footer-grid{grid-template-columns:1fr;gap:32px;} }
+  .footer-grid h4{color:var(--white);font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px;font-family:var(--font-mono);}
+  .footer-grid ul li{margin-bottom:10px;font-size:14px;}
+  .footer-grid ul li a:hover{color:var(--red);}
+  .footer-bottom{border-top:1px solid rgba(245,244,240,.08);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;}
+  .social-row{display:flex;gap:10px;}
+  .social-row a{width:36px;height:36px;border-radius:9px;background:rgba(245,244,240,.06);display:flex;align-items:center;justify-content:center;transition:background .2s ease;}
+  .social-row a:hover{background:var(--red);}
+
+  /* ================= WHATSAPP FLOAT ================= */
+  .wa-float{
+    position:fixed;bottom:26px;right:26px;z-index:400;
+    width:60px;height:60px;border-radius:50%;background:#25D366;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 14px 30px -8px rgba(37,211,102,.55);
+    animation:wa-pulse 2.4s infinite;
+  }
+  @keyframes wa-pulse{
+    0%{box-shadow:0 0 0 0 rgba(37,211,102,.5), 0 14px 30px -8px rgba(37,211,102,.55);}
+    70%{box-shadow:0 0 0 14px rgba(37,211,102,0), 0 14px 30px -8px rgba(37,211,102,.55);}
+    100%{box-shadow:0 0 0 0 rgba(37,211,102,0), 0 14px 30px -8px rgba(37,211,102,.55);}
+  }
+
+  ::selection{background:var(--red);color:#fff;}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  @media(prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important;}
+  }
+</style>
 </head>
 <body>
 
-    <!-- Loading Screen -->
-    <div id="loader">
-        <div class="loader-content">
-            <h2 class="text-2xl font-bold tracking-tighter mb-2">CLIENTE <span class="text-neon">WEB SITES</span></h2>
-            <div class="loader-bar">
-                <div class="loader-progress" id="progress"></div>
-            </div>
-        </div>
+<!-- ======================================================= -->
+<!-- CONFIG: edite aqui os dados do negócio                    -->
+<!-- ======================================================= -->
+<script>
+const CONFIG = {
+  nome: "Evolution Fitness Center",
+  telefone: "5511998457632",
+  telefoneDisplay: "(11) 99845-7632",
+  instagram: "@evolutionfitnesscenter",
+  instagramUrl: "https://instagram.com/evolutionfitnesscenter",
+  endereco: "Av. dos Autonomistas, 4120 - Osasco - SP",
+  enderecoMapQuery: "Av. dos Autonomistas, 4120, Osasco, SP",
+  horarios: [
+    {dia:"Segunda a Sexta", horas:"05h às 23h"},
+    {dia:"Sábado", horas:"08h às 18h"},
+    {dia:"Domingo", horas:"08h às 13h"}
+  ],
+  anos: 11,
+  modalidades: [
+    {nome:"Musculação", desc:"Equipamentos de última geração para todos os níveis, com acompanhamento técnico."},
+    {nome:"Funcional", desc:"Treinos dinâmicos que combinam força, resistência e mobilidade."},
+    {nome:"Spinning", desc:"Aulas de ciclismo indoor com música e alta queima calórica."},
+    {nome:"HIIT", desc:"Treino intervalado de alta intensidade para resultados rápidos."},
+    {nome:"Alongamento", desc:"Sessões guiadas para flexibilidade, postura e recuperação muscular."},
+    {nome:"Cross Training", desc:"Treinamento funcional de alta performance para todos os objetivos."},
+    {nome:"Dança", desc:"Aulas ritmadas que unem queima calórica e diversão."},
+    {nome:"Pilates Solo", desc:"Fortalecimento do core, consciência corporal e equilíbrio."},
+    {nome:"Emagrecimento", desc:"Protocolo de treino focado em queima de gordura e definição."}
+  ],
+  objetivos: [
+    "Emagrecimento","Hipertrofia","Condicionamento Físico","Saúde","Reabilitação","Performance"
+  ],
+  planos: ["Mensal","Trimestral","Semestral","Anual","Família","Corporativo"],
+  depoimentos: [
+    {nome:"Lucas Ferreira", texto:"Academia completa, limpa e com excelentes professores."},
+    {nome:"Amanda Ribeiro", texto:"Os equipamentos são novos e o atendimento é sensacional."},
+    {nome:"Diego Martins", texto:"Comecei há seis meses e os resultados superaram minhas expectativas."}
+  ],
+  faq: [
+    {q:"Quais modalidades oferece?", a:"Musculação, Funcional, Spinning, HIIT, Alongamento, Cross Training, Dança, Pilates Solo e Treinamento para Emagrecimento."},
+    {q:"Tem personal trainer?", a:"Sim. Personal Trainers certificados disponíveis para acompanhamento individual."},
+    {q:"Possui aula experimental?", a:"Sim. Primeira aula totalmente gratuita mediante agendamento."},
+    {q:"Quais planos existem?", a:"Plano Mensal, Trimestral, Semestral e Anual, além de Plano Família e Plano Corporativo."},
+    {q:"Tem estacionamento?", a:"Sim. Estacionamento gratuito para alunos."},
+    {q:"Funciona aos domingos?", a:"Sim. Das 08h às 13h."},
+    {q:"Possui avaliação física?", a:"Sim. Avaliação física completa com bioimpedância, medidas corporais e plano inicial de treinamento."},
+    {q:"Qual diferencial da academia?", a:"Estrutura premium com equipamentos modernos, professores presentes em todos os horários, avaliação física gratuita, aplicativo exclusivo para acompanhamento dos treinos e planos flexíveis para todos os objetivos."}
+  ]
+};
+</script>
+
+<!-- ======================================================= -->
+<!-- HEADER -->
+<!-- ======================================================= -->
+<header id="header">
+  <div class="container">
+    <div class="logo">
+      <div class="logo-mark">E</div>
+      <div class="logo-text">EVOLUTION<span>.</span></div>
+    </div>
+    <nav class="main-nav">
+      <a href="#sobre">Sobre</a>
+      <a href="#modalidades">Modalidades</a>
+      <a href="#sistema">Agendar</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#sistema" class="btn btn-primary nav-cta">Avaliação Grátis</a>
+      <button class="burger" id="burgerBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" id="closeMenuBtn" aria-label="Fechar menu">✕</button>
+  <a href="#sobre">Sobre</a>
+  <a href="#modalidades">Modalidades</a>
+  <a href="#sistema">Agendar</a>
+  <a href="#avaliacoes">Avaliações</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contato">Contato</a>
+</div>
+
+<!-- ======================================================= -->
+<!-- HERO -->
+<!-- ======================================================= -->
+<section class="hero" id="topo">
+  <div class="container">
+    <div>
+      <div class="eyebrow">Academia em Osasco · SP</div>
+      <h1>Seu corpo tem <em>potencial</em>. Nós temos o sistema.</h1>
+      <p class="hero-sub">Estrutura premium, professores em todos os horários e avaliação física 100% gratuita. Agende sua aula experimental sem custo em menos de 1 minuto.</p>
+      <div class="hero-ctas">
+        <a href="#sistema" class="btn btn-primary">Agendar Avaliação Grátis</a>
+        <a href="#modalidades" class="btn btn-ghost">Ver Modalidades</a>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge"><b id="badgeAnos">11</b><span>Anos de história</span></div>
+        <div class="hero-badge"><b>9</b><span>Modalidades</span></div>
+        <div class="hero-badge"><b>05–23h</b><span>Seg a Sex</span></div>
+      </div>
     </div>
 
-    <!-- Cursor Glow -->
-    <div id="cursor-glow"></div>
+    <div class="scoreboard">
+      <div class="scoreboard-top">
+        <span>Painel Evolution — ao vivo</span>
+        <div class="scoreboard-dot"></div>
+      </div>
+      <div class="score-display">
+        <div class="score-number" id="scoreCount">0</div>
+        <div class="score-label">Alunos transformados</div>
+      </div>
+      <div class="score-grid">
+        <div class="score-mini"><b>11</b><span>Anos</span></div>
+        <div class="score-mini"><b>+30</b><span>Aulas/semana</span></div>
+        <div class="score-mini"><b>100%</b><span>Avaliação grátis</span></div>
+        <div class="score-mini"><b>7</b><span>Dias por semana</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 glass py-4 px-6 md:px-12 flex justify-between items-center">
-        <div class="text-xl font-extrabold tracking-tighter">
-            CLIENTE <span class="text-neon">WEB SITES</span>
+<!-- ======================================================= -->
+<!-- APRESENTAÇÃO -->
+<!-- ======================================================= -->
+<section class="section" id="sobre">
+  <div class="container about-grid">
+    <div class="about-text reveal">
+      <div class="eyebrow">Sobre a Evolution</div>
+      <h2>11 anos formando<br>corpos e histórias</h2>
+      <p>A Evolution Fitness Center está há mais de 11 anos ajudando pessoas a conquistarem mais saúde, força e qualidade de vida. Contamos com equipamentos de última geração, professores qualificados e uma estrutura completa para atender desde iniciantes até atletas.</p>
+      <div class="about-facts">
+        <div class="fact">
+          <div class="ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <div><b>Personal Trainer</b><span>Acompanhamento certificado e individual</span></div>
         </div>
-        <div class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest">
-            <a href="#pain" class="hover:text-neon transition">O Problema</a>
-            <a href="#benefits" class="hover:text-neon transition">Vantagens</a>
-            <a href="#portfolio" class="hover:text-neon transition">Projetos</a>
-            <a href="#testimonials" class="hover:text-neon transition">Depoimentos</a>
+        <div class="fact">
+          <div class="ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.6 8.9 2.4 5 6 5c2 0 3.3 1 4 2 .7-1 2-2 4-2 3.6 0 5.4 3.9 3.5 7.5C19 16.65 12 21 12 21z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <div><b>Avaliação Física</b><span>Bioimpedância + medidas corporais</span></div>
         </div>
-        <a href="https://wa.me/5511962883599" class="btn-premium px-6 py-2 rounded-full text-xs">
-            Falar no WhatsApp
-        </a>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex flex-col justify-center items-center pt-24 px-6 overflow-hidden">
-        <div class="absolute inset-0 bg-grid -z-10"></div>
-        
-        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right">
-                <span class="inline-block px-4 py-1 rounded-full border border-neon-green/30 text-neon text-[10px] font-bold uppercase tracking-widest mb-6">
-                    Sua empresa merece o topo
-                </span>
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
-                    Seu concorrente está recebendo clientes enquanto sua empresa <span class="text-neon">ainda não tem um site profissional.</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-xl">
-                    Transformamos negócios comuns em <span class="typing text-white font-bold" data-words='["marcas profissionais", "autoridades digitais", "máquinas de vendas"]'></span> que atraem clientes automaticamente pelo WhatsApp.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/5511962883599" class="btn-premium px-10 py-5 rounded-xl text-center">
-                        Quero Mais Clientes
-                    </a>
-                    <a href="#portfolio" class="glass px-10 py-5 rounded-xl text-center font-bold hover:bg-white/10 transition">
-                        Ver Portfólio
-                    </a>
-                </div>
-                
-                <div class="mt-12 flex items-center gap-6">
-                    <div class="flex -space-x-4">
-                        <img src="https://i.pravatar.cc/100?u=1" class="w-12 h-12 rounded-full border-2 border-black" alt="Avatar">
-                        <img src="https://i.pravatar.cc/100?u=2" class="w-12 h-12 rounded-full border-2 border-black" alt="Avatar">
-                        <img src="https://i.pravatar.cc/100?u=3" class="w-12 h-12 rounded-full border-2 border-black" alt="Avatar">
-                    </div>
-                    <p class="text-sm text-gray-400">
-                        <span class="text-white font-bold">+500 empresas</span> já profissionalizaram seu negócio conosco.
-                    </p>
-                </div>
-            </div>
-
-            <div class="relative mockup-container" data-aos="fade-left">
-                <!-- Mockup Visual -->
-                <div class="relative z-10">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000" class="rounded-3xl shadow-2xl mockup-img border border-white/10" alt="Website Mockup">
-                </div>
-                
-                <!-- Floating Elements -->
-                <div class="notification-float top-0 -right-4" style="animation-delay: 0s;">
-                    <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
-                        <i class="fab fa-whatsapp text-white"></i>
-                    </div>
-                    <div>
-                        <p class="text-[10px] text-gray-400 uppercase font-bold">Novo Cliente</p>
-                        <p class="text-sm font-bold">"Quero contratar agora!"</p>
-                    </div>
-                </div>
-
-                <div class="notification-float bottom-10 -left-10" style="animation-delay: 2s;">
-                    <div class="w-10 h-10 bg-neon rounded-full flex items-center justify-center">
-                        <i class="fas fa-dollar-sign text-black"></i>
-                    </div>
-                    <div>
-                        <p class="text-[10px] text-gray-400 uppercase font-bold">Venda Confirmada</p>
-                        <p class="text-sm font-bold">R$ 2.450,00 recebidos</p>
-                    </div>
-                </div>
-
-                <!-- Glow -->
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-neon/20 blur-[120px] -z-10"></div>
-            </div>
+        <div class="fact">
+          <div class="ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="2" stroke="#fff" stroke-width="1.6"/><path d="M7 7V5a2 2 0 012-2h6a2 2 0 012 2v2" stroke="#fff" stroke-width="1.6"/></svg>
+          </div>
+          <div><b>Estacionamento</b><span>Gratuito para todos os alunos</span></div>
         </div>
-    </section>
-
-    <!-- Pain Section -->
-    <section id="pain" class="py-24 px-6 bg-black relative">
-        <div class="container mx-auto">
-            <div class="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-5xl font-extrabold mb-6">A dura realidade: <span class="text-red-500 underline">O invisível não vende.</span></h2>
-                <p class="text-gray-400 text-lg">Se sua empresa não está no Google com um visual de elite, você está apenas entregando dinheiro para o seu concorrente.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-user-slash text-4xl text-neon mb-6"></i>
-                    <h3 class="text-xl font-bold mb-4">Falta de Autoridade</h3>
-                    <p class="text-gray-400">Instagram sozinho não passa confiança. Clientes julgam sua empresa em segundos pelo seu site.</p>
-                </div>
-                <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-chart-line-down text-4xl text-neon mb-6"></i>
-                    <h3 class="text-xl font-bold mb-4">Vendas Perdidas</h3>
-                    <p class="text-gray-400">Enquanto você dorme, seu concorrente que tem um site profissional está fechando contratos.</p>
-                </div>
-                <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-clock text-4xl text-neon mb-6"></i>
-                    <h3 class="text-xl font-bold mb-4">Empresa "Offline"</h3>
-                    <p class="text-gray-400">Sem um site, sua empresa só existe quando você está online. Com um site, você vende 24h por dia.</p>
-                </div>
-            </div>
+        <div class="fact">
+          <div class="ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="4" y="2" width="16" height="20" rx="2" stroke="#fff" stroke-width="1.6"/><path d="M9 6h6M9 18h6" stroke="#fff" stroke-width="1.6"/></svg>
+          </div>
+          <div><b>App Exclusivo</b><span>Acompanhe seus treinos pelo celular</span></div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="py-24 px-6 relative">
-        <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-                <div class="max-w-2xl" data-aos="fade-right">
-                    <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Por que ser <span class="text-neon">Premium?</span></h2>
-                    <p class="text-gray-400">Não fazemos apenas sites. Criamos ativos lucrativos para o seu negócio.</p>
-                </div>
-                <div class="text-right hidden md:block" data-aos="fade-left">
-                    <div class="text-5xl font-black text-neon">97%</div>
-                    <p class="text-xs uppercase tracking-widest text-gray-500">Aumento médio de credibilidade</p>
-                </div>
-            </div>
+    <div class="about-panel reveal">
+      <span class="yrs" id="fundacaoLabel">DESDE 2015</span>
+      <h3>Progressão real,<br>resultado real.</h3>
+      <div class="plate-row">
+        <div class="plate">10kg</div>
+        <div class="plate">20kg</div>
+        <div class="plate active">45kg</div>
+        <div class="plate">20kg</div>
+        <div class="plate">10kg</div>
+      </div>
+      <ul class="about-list">
+        <li><span class="check">✓</span> <span><b>Planos flexíveis</b> — mensal ao anual e família</span></li>
+        <li><span class="check">✓</span> <span><b>Professores</b> presentes em todos os horários</span></li>
+        <li><span class="check">✓</span> <span><b>Equipamentos</b> de última geração</span></li>
+        <li><span class="check">✓</span> <span><b>Aula experimental</b> 100% gratuita</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group" data-aos="zoom-in">
-                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black group-hover:text-neon/10 transition">01</div>
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 bg-neon/10 rounded-2xl flex items-center justify-center mb-6 border border-neon/20">
-                            <i class="fas fa-users text-neon text-2xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Mais Clientes</h3>
-                        <p class="text-gray-400 leading-relaxed">Atraia o público certo que está disposto a pagar o valor que seu serviço realmente vale.</p>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black group-hover:text-neon/10 transition">02</div>
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 bg-neon/10 rounded-2xl flex items-center justify-center mb-6 border border-neon/20">
-                            <i class="fas fa-rocket text-neon text-2xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Mais Vendas</h3>
-                        <p class="text-gray-400 leading-relaxed">Landing pages estruturadas com gatilhos mentais para converter curiosos em compradores.</p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black group-hover:text-neon/10 transition">03</div>
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 bg-neon/10 rounded-2xl flex items-center justify-center mb-6 border border-neon/20">
-                            <i class="fas fa-shield-alt text-neon text-2xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Mais Autoridade</h3>
-                        <p class="text-gray-400 leading-relaxed">Posicione sua marca no mesmo nível das maiores startups do mundo com design cinematográfico.</p>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black group-hover:text-neon/10 transition">04</div>
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 bg-neon/10 rounded-2xl flex items-center justify-center mb-6 border border-neon/20">
-                            <i class="fas fa-check-circle text-neon text-2xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Mais Confiança</h3>
-                        <p class="text-gray-400 leading-relaxed">Um site seguro e profissional elimina as objeções de compra dos seus clientes.</p>
-                    </div>
-                </div>
-                <!-- Card 5 -->
-                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black group-hover:text-neon/10 transition">05</div>
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 bg-neon/10 rounded-2xl flex items-center justify-center mb-6 border border-neon/20">
-                            <i class="fab fa-whatsapp text-neon text-2xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">WhatsApp Lotado</h3>
-                        <p class="text-gray-400 leading-relaxed">Integração direta para que o cliente entre em contato com apenas um clique.</p>
-                    </div>
-                </div>
-                <!-- Card 6 -->
-                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black group-hover:text-neon/10 transition">06</div>
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 bg-neon/10 rounded-2xl flex items-center justify-center mb-6 border border-neon/20">
-                            <i class="fas fa-globe text-neon text-2xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Online 24h</h3>
-                        <p class="text-gray-400 leading-relaxed">Sua empresa nunca fecha. Receba orçamentos e contatos a qualquer hora do dia.</p>
-                    </div>
-                </div>
-            </div>
+<!-- ======================================================= -->
+<!-- MODALIDADES -->
+<!-- ======================================================= -->
+<section class="section" id="modalidades" style="background:var(--white);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Modalidades</div>
+      <h2>Treine do seu jeito</h2>
+      <p>Nove modalidades para todos os objetivos — do primeiro treino à performance de atleta.</p>
+    </div>
+    <div class="mod-grid" id="modGrid"></div>
+  </div>
+</section>
+
+<!-- ======================================================= -->
+<!-- COMO FUNCIONA -->
+<!-- ======================================================= -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Como funciona</div>
+      <h2>Da escolha ao treino,<br>em 4 passos</h2>
+      <p>Um fluxo pensado para você concluir em menos de 1 minuto.</p>
+    </div>
+    <div class="steps-row">
+      <div class="step-card reveal">
+        <span class="step-num">01</span>
+        <h3>Escolha seu objetivo</h3>
+        <p>Selecione a modalidade e o objetivo que fazem sentido para você agora.</p>
+      </div>
+      <div class="step-card reveal">
+        <span class="step-num">02</span>
+        <h3>Escolha data e horário</h3>
+        <p>Veja os horários disponíveis em tempo real e reserve o seu.</p>
+      </div>
+      <div class="step-card reveal">
+        <span class="step-num">03</span>
+        <h3>Confirme pelo WhatsApp</h3>
+        <p>Sua reserva é enviada automaticamente para o nosso time confirmar.</p>
+      </div>
+      <div class="step-card reveal">
+        <span class="step-num">04</span>
+        <h3>Avaliação gratuita</h3>
+        <p>Apareça na Evolution e comece com uma avaliação física sem custo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================= -->
+<!-- SISTEMA PRINCIPAL — WIZARD DE AGENDAMENTO -->
+<!-- ======================================================= -->
+<section class="section" id="sistema" style="background:var(--white);">
+  <div class="container">
+    <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">Agende agora</div>
+      <h2>Sua avaliação física gratuita</h2>
+      <p style="margin:0 auto;">Preencha em poucos passos e receba a confirmação direto no WhatsApp.</p>
+    </div>
+
+    <div class="wizard-wrap reveal">
+      <div class="wizard-head">
+        <div class="wizard-progress-labels">
+          <span id="stepLabel">Passo 1 de 11</span>
+          <span id="stepName">Objetivo</span>
         </div>
-    </section>
+        <div class="wizard-progress-track"><div class="wizard-progress-fill" id="progressFill"></div></div>
+      </div>
 
-    <!-- How it works -->
-    <section class="py-24 px-6 bg-white/5">
-        <div class="container mx-auto">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-extrabold mb-4">Como Funciona?</h2>
-                <p class="text-gray-400">Simples, rápido e extremamente eficiente.</p>
-            </div>
+      <div class="wizard-body">
 
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-20 h-20 bg-neon text-black rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-lg shadow-neon/40">1</div>
-                    <h3 class="text-xl font-bold mb-4">Você chama no WhatsApp</h3>
-                    <p class="text-gray-400">Entendemos seu negócio e suas necessidades em uma conversa rápida.</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-20 h-20 bg-neon text-black rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-lg shadow-neon/40">2</div>
-                    <h3 class="text-xl font-bold mb-4">Criamos seu site</h3>
-                    <p class="text-gray-400">Nossa equipe de elite desenvolve sua presença digital com design premium.</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-20 h-20 bg-neon text-black rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-lg shadow-neon/40">3</div>
-                    <h3 class="text-xl font-bold mb-4">Você atrai clientes</h3>
-                    <p class="text-gray-400">Seu site entra no ar e sua empresa começa a converter visitantes em vendas.</p>
-                </div>
-            </div>
+        <!-- Etapa 1: Objetivo -->
+        <div class="wizard-step active" data-step="1">
+          <h3>Qual seu objetivo?</h3>
+          <p class="wizard-desc">Isso ajuda a montar o treino ideal para você.</p>
+          <div class="option-grid" id="objetivoGrid"></div>
         </div>
-    </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-24 px-6">
-        <div class="container mx-auto">
-            <div class="mb-16" data-aos="fade-right">
-                <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Nosso <span class="text-neon">Portfólio</span></h2>
-                <p class="text-gray-400">Projetos que definem o novo padrão do mercado.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="group relative overflow-hidden rounded-3xl aspect-video cursor-pointer" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Barbearia">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
-                    <div class="absolute bottom-6 left-6">
-                        <p class="text-neon text-xs font-bold uppercase tracking-widest mb-2">Luxury Barber</p>
-                        <h3 class="text-2xl font-bold">Barbearia de Elite</h3>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="group relative overflow-hidden rounded-3xl aspect-video cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Clínica">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
-                    <div class="absolute bottom-6 left-6">
-                        <p class="text-neon text-xs font-bold uppercase tracking-widest mb-2">Health & Care</p>
-                        <h3 class="text-2xl font-bold">Clínica Médica</h3>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="group relative overflow-hidden rounded-3xl aspect-video cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Restaurante">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
-                    <div class="absolute bottom-6 left-6">
-                        <p class="text-neon text-xs font-bold uppercase tracking-widest mb-2">Gourmet Experience</p>
-                        <h3 class="text-2xl font-bold">Restaurante Premium</h3>
-                    </div>
-                </div>
-                <!-- Project 4 -->
-                <div class="group relative overflow-hidden rounded-3xl aspect-video cursor-pointer" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Loja">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
-                    <div class="absolute bottom-6 left-6">
-                        <p class="text-neon text-xs font-bold uppercase tracking-widest mb-2">Fashion Store</p>
-                        <h3 class="text-2xl font-bold">E-commerce de Moda</h3>
-                    </div>
-                </div>
-                <!-- Project 5 -->
-                <div class="group relative overflow-hidden rounded-3xl aspect-video cursor-pointer" data-aos="fade-up" data-aos-delay="400">
-                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Estética">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
-                    <div class="absolute bottom-6 left-6">
-                        <p class="text-neon text-xs font-bold uppercase tracking-widest mb-2">Beauty Center</p>
-                        <h3 class="text-2xl font-bold">Centro de Estética</h3>
-                    </div>
-                </div>
-                <!-- Project 6 -->
-                <div class="group relative overflow-hidden rounded-3xl aspect-video cursor-pointer" data-aos="fade-up" data-aos-delay="500">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Personal Trainer">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
-                    <div class="absolute bottom-6 left-6">
-                        <p class="text-neon text-xs font-bold uppercase tracking-widest mb-2">High Performance</p>
-                        <h3 class="text-2xl font-bold">Personal Trainer</h3>
-                    </div>
-                </div>
-            </div>
+        <!-- Etapa 2: Primeira vez -->
+        <div class="wizard-step" data-step="2">
+          <h3>É sua primeira vez na Evolution?</h3>
+          <p class="wizard-desc">Assim já preparamos sua recepção.</p>
+          <div class="yn-row">
+            <button class="yn-btn" data-yn="Sim">Sim, primeira vez</button>
+            <button class="yn-btn" data-yn="Não">Não, já sou aluno(a)</button>
+          </div>
         </div>
-    </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-24 px-6 relative overflow-hidden">
-        <div class="container mx-auto">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-extrabold mb-4">Quem Confia, <span class="text-neon">Lucra.</span></h2>
-                <p class="text-gray-400">Resultados reais de clientes que decidiram profissionalizar seu negócio.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-neon" data-aos="fade-right">
-                    <div class="flex gap-1 text-neon mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-white italic mb-6">“Depois do site comecei a receber clientes todos os dias. O investimento se pagou na primeira semana.”</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-700 rounded-full"></div>
-                        <div>
-                            <p class="font-bold">Ricardo Silva</p>
-                            <p class="text-xs text-gray-500">Dono de Barbearia</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-neon" data-aos="fade-up">
-                    <div class="flex gap-1 text-neon mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-white italic mb-6">“Minha empresa ficou muito mais profissional. Agora os clientes nem questionam o meu preço.”</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-700 rounded-full"></div>
-                        <div>
-                            <p class="font-bold">Ana Oliveira</p>
-                            <p class="text-xs text-gray-500">Clínica de Estética</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-neon" data-aos="fade-left">
-                    <div class="flex gap-1 text-neon mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-white italic mb-6">“Os clientes chegam direto no WhatsApp já prontos para fechar. O site faz todo o trabalho de venda.”</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-700 rounded-full"></div>
-                        <div>
-                            <p class="font-bold">Marcos Souza</p>
-                            <p class="text-xs text-gray-500">Personal Trainer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Etapa 3: Modalidade -->
+        <div class="wizard-step" data-step="3">
+          <h3>Qual modalidade te interessa?</h3>
+          <p class="wizard-desc">Você pode experimentar outras depois.</p>
+          <div class="option-grid" id="modalidadeGrid"></div>
         </div>
-    </section>
 
-    <!-- Final CTA -->
-    <section class="py-24 px-6 relative">
-        <div class="container mx-auto max-w-5xl">
-            <div class="glass p-12 md:p-20 rounded-[40px] text-center relative overflow-hidden" data-aos="zoom-in">
-                <div class="absolute top-0 left-0 w-full h-full bg-neon/5 -z-10"></div>
-                <div class="absolute -top-24 -right-24 w-64 h-64 bg-neon/20 blur-[100px] rounded-full"></div>
-                
-                <h2 class="text-3xl md:text-6xl font-extrabold mb-8">Se sua empresa não parece profissional, <span class="text-neon">você perde clientes todos os dias.</span></h2>
-                <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">Pare de ser invisível. Entre para o grupo das empresas que dominam o mercado digital.</p>
-                
-                <a href="https://wa.me/5511962883599" class="btn-premium px-12 py-6 rounded-2xl text-lg inline-block">
-                    Quero Meu Site Agora
-                </a>
-                
-                <p class="mt-8 text-sm text-gray-500 uppercase tracking-widest font-bold">
-                    <i class="fas fa-bolt text-neon mr-2"></i> Últimas 3 vagas para este mês
-                </p>
-            </div>
+        <!-- Etapa 4: Data -->
+        <div class="wizard-step" data-step="4">
+          <h3>Escolha a data</h3>
+          <p class="wizard-desc">Mostramos apenas dias disponíveis.</p>
+          <div class="cal-head">
+            <button class="cal-nav" id="calPrev">‹</button>
+            <b id="calMonthLabel"></b>
+            <button class="cal-nav" id="calNext">›</button>
+          </div>
+          <div class="cal-grid" id="calGrid"></div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-white/10">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-center md:text-left">
-                <div class="text-2xl font-black tracking-tighter mb-2">
-                    CLIENTE <span class="text-neon">WEB SITES</span>
-                </div>
-                <p class="text-gray-500 max-w-xs">Sites profissionais que transformam visitantes em clientes reais.</p>
-            </div>
-            
-            <div class="flex gap-6 text-2xl">
-                <a href="#" class="hover:text-neon transition"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-neon transition"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="hover:text-neon transition"><i class="fab fa-linkedin"></i></a>
-            </div>
-
-            <div class="text-center md:text-right">
-                <a href="https://wa.me/5511962883599" class="text-neon font-bold block mb-2 hover:underline">
-                    <i class="fab fa-whatsapp mr-2"></i> (11) 96288-3599
-                </a>
-                <p class="text-xs text-gray-600">&copy; 2024 Cliente Web Sites. Todos os direitos reservados.</p>
-            </div>
+        <!-- Etapa 5: Horário -->
+        <div class="wizard-step" data-step="5">
+          <h3>Escolha o horário</h3>
+          <p class="wizard-desc" id="slotsDesc">Horários livres para o dia selecionado.</p>
+          <div class="slots-grid" id="slotsGrid"></div>
         </div>
-    </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/5511962883599" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+        <!-- Etapa 6: Nome -->
+        <div class="wizard-step" data-step="6">
+          <h3>Como podemos te chamar?</h3>
+          <p class="wizard-desc">Só o seu nome, por enquanto.</p>
+          <div class="field" id="fieldNome">
+            <label>Nome completo</label>
+            <input type="text" id="inputNome" placeholder="Digite seu nome">
+            <div class="field-error">Digite seu nome completo.</div>
+          </div>
+        </div>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
+        <!-- Etapa 7: WhatsApp -->
+        <div class="wizard-step" data-step="7">
+          <h3>Qual seu WhatsApp?</h3>
+          <p class="wizard-desc">Enviaremos a confirmação por lá.</p>
+          <div class="field" id="fieldTelefone">
+            <label>WhatsApp</label>
+            <input type="tel" id="inputTelefone" placeholder="(11) 90000-0000" maxlength="15">
+            <div class="field-error">Digite um número válido com DDD.</div>
+          </div>
+        </div>
+
+        <!-- Etapa 8: Email -->
+        <div class="wizard-step" data-step="8">
+          <h3>Qual seu e-mail?</h3>
+          <p class="wizard-desc">Para enviarmos lembretes e novidades.</p>
+          <div class="field" id="fieldEmail">
+            <label>E-mail</label>
+            <input type="email" id="inputEmail" placeholder="seuemail@exemplo.com">
+            <div class="field-error">Digite um e-mail válido.</div>
+          </div>
+        </div>
+
+        <!-- Etapa 9: Observações -->
+        <div class="wizard-step" data-step="9">
+          <h3>Alguma observação?</h3>
+          <p class="wizard-desc">Opcional — lesões, restrições ou dúvidas.</p>
+          <div class="field">
+            <label>Observações (opcional)</label>
+            <textarea id="inputObs" placeholder="Ex: tenho uma lesão no joelho..."></textarea>
+          </div>
+        </div>
+
+        <!-- Etapa 10: Resumo -->
+        <div class="wizard-step" data-step="10">
+          <h3>Confira seu agendamento</h3>
+          <p class="wizard-desc">Revise antes de confirmar.</p>
+          <div class="summary-list" id="summaryList"></div>
+        </div>
+
+        <!-- Etapa 11: Confirmação -->
+        <div class="wizard-step" data-step="11">
+          <div class="confirm-box">
+            <div class="confirm-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="#2FBE6E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Reserva pronta!</h3>
+            <p>Toque em confirmar para enviar sua reserva pelo WhatsApp e adicionar o lembrete na sua agenda.</p>
+            <div class="confirm-actions">
+              <a href="#" target="_blank" class="btn btn-primary btn-block" id="btnWhatsApp">Confirmar no WhatsApp</a>
+              <a href="#" target="_blank" class="btn btn-dark btn-block" id="btnCalendar">Adicionar ao Google Agenda</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="wizard-nav">
+        <button class="btn btn-back" id="btnBack" style="display:none;">Voltar</button>
+        <button class="btn btn-primary btn-block" id="btnNext">Continuar</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================= -->
+<!-- BENEFÍCIOS -->
+<!-- ======================================================= -->
+<section class="section" style="background:var(--white);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Benefícios</div>
+      <h2>Por que treinar na Evolution</h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit reveal">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.6 6.6L22 9l-5 5 1.5 7L12 17.5 5.5 21 7 14 2 9l7.4-.4L12 2z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <h3>Estrutura premium</h3>
+        <p>Equipamentos modernos e ambiente pensado para o seu desempenho.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#fff" stroke-width="1.5"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6" stroke="#fff" stroke-width="1.5"/></svg></div>
+        <h3>Professores sempre presentes</h3>
+        <p>Acompanhamento em todos os horários de funcionamento.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.5"/></svg></div>
+        <h3>Avaliação física grátis</h3>
+        <p>Bioimpedância, medidas e plano inicial sem nenhum custo.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="#fff" stroke-width="1.5"/><path d="M9 6h6" stroke="#fff" stroke-width="1.5"/></svg></div>
+        <h3>Aplicativo exclusivo</h3>
+        <p>Acompanhe treinos, evolução e agenda pelo celular.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================= -->
+<!-- AVALIAÇÕES -->
+<!-- ======================================================= -->
+<section class="section section-dark" id="avaliacoes">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Avaliações</div>
+      <h2>Quem treina, aprova</h2>
+    </div>
+    <div class="rev-grid" id="revGrid"></div>
+  </div>
+</section>
+
+<!-- ======================================================= -->
+<!-- FAQ -->
+<!-- ======================================================= -->
+<section class="section" id="faq" style="background:var(--white);">
+  <div class="container">
+    <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">Dúvidas frequentes</div>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq-list reveal" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ======================================================= -->
+<!-- CONTATO + MAPA -->
+<!-- ======================================================= -->
+<section class="section section-dark" id="contato">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <div class="eyebrow">Contato</div>
+      <h2>Venha treinar<br>com a gente</h2>
+
+      <div class="contact-card">
+        <div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0118 0z" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="#fff" stroke-width="1.5"/></svg></div>
+        <div><b>Endereço</b><span id="contatoEndereco"></span></div>
+      </div>
+      <div class="contact-card">
+        <div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.5 2.1L8 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z" stroke="#fff" stroke-width="1.5"/></svg></div>
+        <div><b>WhatsApp</b><span id="contatoTelefone"></span></div>
+      </div>
+      <div class="contact-card">
+        <div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></div>
+        <div><b>Instagram</b><span id="contatoInsta"></span></div>
+      </div>
+      <div class="contact-card" style="border-bottom:none;">
+        <div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.5"/><path d="M12 7v5l3 2" stroke="#fff" stroke-width="1.5"/></svg></div>
+        <div>
+          <b>Horário de funcionamento</b>
+          <table class="hours-table" id="horariosTable"></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-frame reveal">
+      <iframe src="https://maps.google.com/maps?q=Av.%20dos%20Autonomistas%2C%204120%2C%20Osasco%2C%20SP&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Evolution Fitness Center"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================= -->
+<!-- RODAPÉ -->
+<!-- ======================================================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:16px;">
+          <div class="logo-mark">E</div>
+          <div class="logo-text" style="color:#fff;">EVOLUTION<span>.</span></div>
+        </div>
+        <p style="font-size:14px;max-width:280px;">Estrutura premium, avaliação física gratuita e um sistema de agendamento feito para poupar seu tempo.</p>
+        <div class="social-row" style="margin-top:20px;">
+          <a href="" id="footerInsta" target="_blank" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="1.5"/></svg></a>
+          <a href="" id="footerWhats" target="_blank" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.5 2.1L8 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z" stroke="#fff" stroke-width="1.5"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#modalidades">Modalidades</a></li>
+          <li><a href="#sistema">Agendar</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li id="footerEndereco"></li>
+          <li id="footerTelefone"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="anoAtual"></span> Evolution Fitness Center. Todos os direitos reservados.</span>
+      <span>Osasco · SP</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFloat" href="#" target="_blank" aria-label="Falar no WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.5 2.1L8 9.7a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z" fill="#fff"/></svg>
+</a>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ============ HEADER / MENU ============ */
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 30);
+  });
+  const mobileMenu = document.getElementById('mobileMenu');
+  document.getElementById('burgerBtn').addEventListener('click', () => mobileMenu.classList.add('open'));
+  document.getElementById('closeMenuBtn').addEventListener('click', () => mobileMenu.classList.remove('open'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+  /* ============ REVEAL ON SCROLL ============ */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* ============ CONFIG-DRIVEN CONTENT ============ */
+  document.getElementById('contatoEndereco').textContent = CONFIG.endereco;
+  document.getElementById('contatoTelefone').textContent = CONFIG.telefoneDisplay;
+  document.getElementById('contatoInsta').textContent = CONFIG.instagram;
+  document.getElementById('footerEndereco').textContent = CONFIG.endereco;
+  document.getElementById('footerTelefone').textContent = CONFIG.telefoneDisplay;
+  document.getElementById('anoAtual').textContent = new Date().getFullYear();
+  document.getElementById('footerInsta').href = CONFIG.instagramUrl;
+  document.getElementById('footerWhats').href = `https://wa.me/${CONFIG.telefone}`;
+  document.getElementById('waFloat').href = `https://wa.me/${CONFIG.telefone}?text=${encodeURIComponent('Olá! Quero saber mais sobre a Evolution Fitness Center.')}`;
+  document.getElementById('badgeAnos').textContent = CONFIG.anos;
+  document.getElementById('fundacaoLabel').textContent = `DESDE ${new Date().getFullYear() - CONFIG.anos}`;
+
+  const horTable = document.getElementById('horariosTable');
+  CONFIG.horarios.forEach(h => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${h.dia}</td><td>${h.horas}</td>`;
+    horTable.appendChild(tr);
+  });
+
+  // Modalidades (services grid)
+  const modIcons = ['M4 21V9m4 12V5m4 16v-9m4 9V7m4 14v-5','M12 2v20M2 12h20','M4 6h16M4 12h16M4 18h16'];
+  const modGrid = document.getElementById('modGrid');
+  CONFIG.modalidades.forEach((m,i) => {
+    const card = document.createElement('div');
+    card.className = 'mod-card reveal';
+    card.innerHTML = `
+      <div class="mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="${modIcons[i % modIcons.length]}" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+      <h3>${m.nome}</h3>
+      <p>${m.desc}</p>`;
+    modGrid.appendChild(card);
+    io.observe(card);
+  });
+
+  // Testimonials
+  const revGrid = document.getElementById('revGrid');
+  CONFIG.depoimentos.forEach(d => {
+    const card = document.createElement('div');
+    card.className = 'rev-card reveal';
+    card.innerHTML = `
+      <div class="stars">★★★★★</div>
+      <p>"${d.texto}"</p>
+      <div class="rev-author">
+        <div class="rev-avatar">${d.nome.charAt(0)}</div>
+        <div><b>${d.nome}</b></div>
+      </div>`;
+    revGrid.appendChild(card);
+    io.observe(card);
+  });
+
+  // FAQ
+  const faqList = document.getElementById('faqList');
+  CONFIG.faq.forEach(f => {
+    const item = document.createElement('div');
+    item.className = 'faq-item';
+    item.innerHTML = `
+      <button class="faq-q"><span>${f.q}</span><span class="plus"></span></button>
+      <div class="faq-a"><p>${f.a}</p></div>`;
+    faqList.appendChild(item);
+  });
+  faqList.addEventListener('click', (e) => {
+    const btn = e.target.closest('.faq-q');
+    if (!btn) return;
+    const item = btn.parentElement;
+    const answer = item.querySelector('.faq-a');
+    const wasOpen = item.classList.contains('open');
+    faqList.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight = null; });
+    if (!wasOpen) { item.classList.add('open'); answer.style.maxHeight = answer.scrollHeight + 'px'; }
+  });
+
+  /* ============ SCOREBOARD COUNTER ============ */
+  const scoreEl = document.getElementById('scoreCount');
+  let scoreTarget = 1247, scoreCurrent = 0;
+  const scoreIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const step = Math.ceil(scoreTarget / 60);
+        const tick = () => {
+          scoreCurrent = Math.min(scoreTarget, scoreCurrent + step);
+          scoreEl.textContent = scoreCurrent.toLocaleString('pt-BR');
+          if (scoreCurrent < scoreTarget) requestAnimationFrame(tick);
+        };
+        tick();
+        scoreIO.disconnect();
+      }
+    });
+  }, {threshold:.4});
+  scoreIO.observe(scoreEl);
+
+  /* ================================================================= */
+  /* WIZARD DE AGENDAMENTO                                              */
+  /* ================================================================= */
+  const TOTAL_STEPS = 11;
+  const stepNames = ['Objetivo','Primeira vez','Modalidade','Data','Horário','Nome','WhatsApp','E-mail','Observações','Resumo','Confirmação'];
+  let currentStep = 1;
+  const state = { objetivo:null, primeiraVez:null, modalidade:null, data:null, dataLabel:null, horario:null, nome:'', telefone:'', email:'', obs:'' };
+
+  const progressFill = document.getElementById('progressFill');
+  const stepLabel = document.getElementById('stepLabel');
+  const stepNameEl = document.getElementById('stepName');
+  const btnNext = document.getElementById('btnNext');
+  const btnBack = document.getElementById('btnBack');
+
+  function renderStep() {
+    document.querySelectorAll('.wizard-step').forEach(s => {
+      s.classList.toggle('active', Number(s.dataset.step) === currentStep);
+    });
+    stepLabel.textContent = `Passo ${currentStep} de ${TOTAL_STEPS}`;
+    stepNameEl.textContent = stepNames[currentStep - 1];
+    progressFill.style.width = `${(currentStep / TOTAL_STEPS) * 100}%`;
+    btnBack.style.display = currentStep === 1 ? 'none' : 'inline-flex';
+    btnNext.textContent = currentStep === TOTAL_STEPS ? 'Concluído' : (currentStep === 10 ? 'Confirmar agendamento' : 'Continuar');
+    btnNext.style.display = currentStep === TOTAL_STEPS ? 'none' : 'flex';
+    window.scrollTo({top: document.querySelector('.wizard-wrap').offsetTop - 110, behavior:'smooth'});
+  }
+
+  // Etapa 1: Objetivo
+  const objetivoGrid = document.getElementById('objetivoGrid');
+  CONFIG.objetivos.forEach(o => {
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'option-card';
+    card.innerHTML = `<span class="dot"></span><span>${o}</span>`;
+    card.addEventListener('click', () => {
+      objetivoGrid.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      state.objetivo = o;
+    });
+    objetivoGrid.appendChild(card);
+  });
+
+  // Etapa 2: Primeira vez
+  document.querySelectorAll('.yn-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.yn-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      state.primeiraVez = btn.dataset.yn;
+    });
+  });
+
+  // Etapa 3: Modalidade
+  const modalidadeGrid = document.getElementById('modalidadeGrid');
+  CONFIG.modalidades.forEach(m => {
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'option-card';
+    card.innerHTML = `<span class="dot"></span><span>${m.nome}</span>`;
+    card.addEventListener('click', () => {
+      modalidadeGrid.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      state.modalidade = m.nome;
+    });
+    modalidadeGrid.appendChild(card);
+  });
+
+  // Etapa 4: Calendário
+  const calMonthLabel = document.getElementById('calMonthLabel');
+  const calGrid = document.getElementById('calGrid');
+  const dows = ['D','S','T','Q','Q','S','S'];
+  let viewDate = new Date(); viewDate.setDate(1);
+  const today = new Date(); today.setHours(0,0,0,0);
+
+  function renderCalendar() {
+    calGrid.innerHTML = '';
+    dows.forEach(d => {
+      const el = document.createElement('div');
+      el.className = 'cal-dow'; el.textContent = d;
+      calGrid.appendChild(el);
+    });
+    const monthNames = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+    calMonthLabel.textContent = `${monthNames[viewDate.getMonth()]} ${viewDate.getFullYear()}`;
+
+    const firstDow = new Date(viewDate.getFullYear(), viewDate.getMonth(), 1).getDay();
+    const daysInMonth = new Date(viewDate.getFullYear(), viewDate.getMonth()+1, 0).getDate();
+
+    for (let i=0;i<firstDow;i++) {
+      const el = document.createElement('div'); el.className = 'cal-day empty';
+      calGrid.appendChild(el);
+    }
+    for (let d=1; d<=daysInMonth; d++) {
+      const thisDate = new Date(viewDate.getFullYear(), viewDate.getMonth(), d);
+      thisDate.setHours(0,0,0,0);
+      const el = document.createElement('div');
+      el.textContent = d;
+      const isPast = thisDate < today;
+      const maxFuture = new Date(today); maxFuture.setDate(today.getDate()+45);
+      const isTooFar = thisDate > maxFuture;
+      if (isPast || isTooFar) {
+        el.className = 'cal-day disabled';
+      } else {
+        el.className = 'cal-day avail';
+        const iso = thisDate.toISOString().slice(0,10);
+        if (state.data === iso) el.classList.add('selected');
+        el.addEventListener('click', () => {
+          state.data = iso;
+          state.dataLabel = thisDate.toLocaleDateString('pt-BR', {weekday:'long', day:'2-digit', month:'long'});
+          renderCalendar();
         });
+      }
+      calGrid.appendChild(el);
+    }
+  }
+  document.getElementById('calPrev').addEventListener('click', () => { viewDate.setMonth(viewDate.getMonth()-1); renderCalendar(); });
+  document.getElementById('calNext').addEventListener('click', () => { viewDate.setMonth(viewDate.getMonth()+1); renderCalendar(); });
+  renderCalendar();
 
-        // Loader
-        window.addEventListener('load', () => {
-            const progress = document.getElementById('progress');
-            let width = 0;
-            const interval = setInterval(() => {
-                if (width >= 100) {
-                    clearInterval(interval);
-                    setTimeout(() => {
-                        document.getElementById('loader').style.opacity = '0';
-                        setTimeout(() => {
-                            document.getElementById('loader').style.display = 'none';
-                        }, 500);
-                    }, 200);
-                } else {
-                    width += 5;
-                    progress.style.width = width + '%';
-                }
-            }, 50);
-        });
+  // Etapa 5: Horários (dependem do dia da semana + ocupação simulada e persistida)
+  const slotsGrid = document.getElementById('slotsGrid');
+  const slotsDesc = document.getElementById('slotsDesc');
 
-        // Cursor Glow
-        const glow = document.getElementById('cursor-glow');
-        document.addEventListener('mousemove', (e) => {
-            glow.style.left = e.clientX + 'px';
-            glow.style.top = e.clientY + 'px';
-        });
+  function getSlotsForDate(iso) {
+    const d = new Date(iso + 'T00:00:00');
+    const dow = d.getDay(); // 0 domingo, 6 sábado
+    let start, end;
+    if (dow === 0) { start = 8; end = 12; }
+    else if (dow === 6) { start = 8; end = 17; }
+    else { start = 6; end = 21; }
+    const slots = [];
+    for (let h=start; h<=end; h++) slots.push(`${String(h).padStart(2,'0')}:00`);
+    return slots;
+  }
 
-        // Typing Effect
-        const typingElement = document.querySelector('.typing');
-        const words = JSON.parse(typingElement.getAttribute('data-words'));
-        let wordIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
+  function seededBusy(iso, slot) {
+    // Pseudo-random determinístico baseado na data+horário, para simular ocupação estável
+    let str = iso + slot;
+    let hash = 0;
+    for (let i=0;i<str.length;i++) { hash = (hash * 31 + str.charCodeAt(i)) >>> 0; }
+    return (hash % 100) < 28;
+  }
 
-        function type() {
-            const currentWord = words[wordIndex];
-            if (isDeleting) {
-                typingElement.textContent = currentWord.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingElement.textContent = currentWord.substring(0, charIndex + 1);
-                charIndex++;
-            }
+  function getStoredBookings() {
+    try { return JSON.parse(localStorage.getItem('evolution_bookings') || '[]'); } catch(e) { return []; }
+  }
 
-            let typeSpeed = isDeleting ? 50 : 100;
+  function renderSlots() {
+    slotsGrid.innerHTML = '';
+    if (!state.data) { slotsDesc.textContent = 'Selecione uma data na etapa anterior.'; return; }
+    slotsDesc.textContent = `Horários livres para ${state.dataLabel}.`;
+    const slots = getSlotsForDate(state.data);
+    const booked = getStoredBookings().filter(b => b.data === state.data).map(b => b.horario);
+    slots.forEach(s => {
+      const busy = seededBusy(state.data, s) || booked.includes(s);
+      const el = document.createElement('button');
+      el.type = 'button';
+      el.className = 'slot ' + (busy ? 'busy' : 'avail');
+      el.textContent = s;
+      if (state.horario === s && !busy) el.classList.add('selected');
+      if (!busy) {
+        el.addEventListener('click', () => { state.horario = s; renderSlots(); });
+      } else {
+        el.disabled = true;
+      }
+      slotsGrid.appendChild(el);
+    });
+  }
 
-            if (!isDeleting && charIndex === currentWord.length) {
-                isDeleting = true;
-                typeSpeed = 2000; // Pause at end
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-                typeSpeed = 500;
-            }
+  // Máscaras
+  const inputTelefone = document.getElementById('inputTelefone');
+  inputTelefone.addEventListener('input', () => {
+    let v = inputTelefone.value.replace(/\D/g,'').slice(0,11);
+    if (v.length > 6) v = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
+    else if (v.length > 2) v = `(${v.slice(0,2)}) ${v.slice(2)}`;
+    inputTelefone.value = v;
+  });
 
-            setTimeout(type, typeSpeed);
-        }
-        type();
+  function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
 
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.padding = '1rem 3rem';
-                nav.style.background = 'rgba(5, 5, 5, 0.8)';
-            } else {
-                nav.style.padding = '1.5rem 3rem';
-                nav.style.background = 'rgba(255, 255, 255, 0.03)';
-            }
-        });
-    </script>
+  function showFieldError(fieldId, show) {
+    document.getElementById(fieldId).classList.toggle('invalid', show);
+  }
+
+  function validateStep(step) {
+    switch(step) {
+      case 1: return !!state.objetivo;
+      case 2: return !!state.primeiraVez;
+      case 3: return !!state.modalidade;
+      case 4: return !!state.data;
+      case 5: return !!state.horario;
+      case 6: {
+        state.nome = document.getElementById('inputNome').value.trim();
+        const ok = state.nome.length >= 3 && state.nome.includes(' ');
+        showFieldError('fieldNome', !ok);
+        return ok;
+      }
+      case 7: {
+        state.telefone = inputTelefone.value.trim();
+        const digits = state.telefone.replace(/\D/g,'');
+        const ok = digits.length === 10 || digits.length === 11;
+        showFieldError('fieldTelefone', !ok);
+        return ok;
+      }
+      case 8: {
+        state.email = document.getElementById('inputEmail').value.trim();
+        const ok = validEmail(state.email);
+        showFieldError('fieldEmail', !ok);
+        return ok;
+      }
+      case 9: state.obs = document.getElementById('inputObs').value.trim(); return true;
+      case 10: return true;
+      default: return true;
+    }
+  }
+
+  function renderSummary() {
+    const list = document.getElementById('summaryList');
+    const rows = [
+      ['Objetivo', state.objetivo],
+      ['Primeira vez', state.primeiraVez],
+      ['Modalidade', state.modalidade],
+      ['Data', state.dataLabel],
+      ['Horário', state.horario],
+      ['Nome', state.nome],
+      ['WhatsApp', state.telefone],
+      ['E-mail', state.email],
+      ['Observações', state.obs || '—']
+    ];
+    list.innerHTML = rows.map(r => `<div class="summary-row"><span>${r[0]}</span><span>${r[1]}</span></div>`).join('');
+  }
+
+  function buildWhatsAppLink() {
+    const msg = `Olá, Evolution! 💪%0A%0AGostaria de agendar minha avaliação física gratuita:%0A%0A🎯 Objetivo: ${state.objetivo}%0A🆕 Primeira vez: ${state.primeiraVez}%0A🏋️ Modalidade: ${state.modalidade}%0A📅 Data: ${state.dataLabel}%0A⏰ Horário: ${state.horario}%0A👤 Nome: ${state.nome}%0A📧 E-mail: ${state.email}%0A📝 Observações: ${state.obs || 'Nenhuma'}`;
+    return `https://wa.me/${CONFIG.telefone}?text=${msg}`;
+  }
+
+  function buildCalendarLink() {
+    const [y,m,d] = state.data.split('-');
+    const [hh,mm] = state.horario.split(':');
+    const start = `${y}${m}${d}T${hh}${mm}00`;
+    const endHour = String(Number(hh)+1).padStart(2,'0');
+    const end = `${y}${m}${d}T${endHour}${mm}00`;
+    const details = `Avaliação física gratuita na Evolution Fitness Center. Modalidade: ${state.modalidade}. Objetivo: ${state.objetivo}.`;
+    const params = new URLSearchParams({
+      action:'TEMPLATE',
+      text:'Avaliação Física — Evolution Fitness Center',
+      dates:`${start}/${end}`,
+      details, location: CONFIG.endereco
+    });
+    return `https://calendar.google.com/calendar/render?${params.toString()}`;
+  }
+
+  function saveBooking() {
+    const bookings = getStoredBookings();
+    bookings.push({data: state.data, horario: state.horario});
+    try { localStorage.setItem('evolution_bookings', JSON.stringify(bookings)); } catch(e) {}
+  }
+
+  btnNext.addEventListener('click', () => {
+    if (!validateStep(currentStep)) return;
+
+    if (currentStep === 4) renderSlots();
+    if (currentStep === 9) renderSummary();
+    if (currentStep === 10) {
+      saveBooking();
+      document.getElementById('btnWhatsApp').href = buildWhatsAppLink();
+      document.getElementById('btnCalendar').href = buildCalendarLink();
+    }
+    if (currentStep < TOTAL_STEPS) {
+      currentStep++;
+      renderStep();
+    }
+  });
+
+  btnBack.addEventListener('click', () => {
+    if (currentStep > 1) { currentStep--; renderStep(); }
+  });
+
+  renderStep();
+
+})();
+</script>
 </body>
 </html>
