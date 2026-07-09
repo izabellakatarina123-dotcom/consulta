@@ -3,46 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Maison Élégance Beauty Studio | Agendamento de Luxo & Gestão</title>
-    <meta name="description" content="Agende seu horário na Maison Élégance Beauty Studio em Alphaville. Especialistas em Morena Iluminada, Mechas, Noivas e estética de alto padrão.">
-    <meta name="keywords" content="salao de beleza alphaville, maison elegance, morena iluminada barueri, mechas de luxo, agendamento salao">
+    <title>Maison Élégance Beauty Studio | Experiência Premium</title>
+    <meta name="description" content="Plataforma de agendamento e concierge digital da Maison Élégance Beauty Studio em Alphaville. Reserve procedimentos de alta performance em menos de 60 segundos.">
+    <meta name="keywords" content="salao de beleza alphaville, maison elegance, agendamento salao de luxo, mechas barueri, morena iluminada alphaville">
     <link rel="canonical" href="https://maisonelegance.com.br">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://maisonelegance.com.br">
-    <meta property="og:title" content="Maison Élégance Beauty Studio | Agendamento Online">
-    <meta property="og:description" content="Experimente o mais alto padrão em cuidados capilares e estética em Alphaville. Agende em menos de 60 segundos.">
-    <meta property="og:image" content="https://maisonelegance.com.br/og-image.jpg">
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Maison Élégance Beauty Studio">
-    <meta name="twitter:description" content="Agendamento inteligente e serviços premium em Barueri/SP.">
+    <meta property="og:title" content="Maison Élégance | Concierge Digital & Agendamento">
+    <meta property="og:description" content="Sistemas exclusivos e atendimento personalizado de alta costura para cabelos e estética em Alphaville.">
 
     <style>
         :root {
-            --bg-base: #FAF8F6;
-            --bg-card: #FFFFFF;
-            --primary: #1C1B1A;
-            --accent: #D4AF37;
-            --accent-muted: #EADCB3;
-            --text-main: #2D2B2A;
-            --text-muted: #736E6A;
-            --border: #EBE6E1;
-            --radius-sm: 6px;
-            --radius-md: 12px;
-            --radius-lg: 20px;
-            --shadow-sm: 0 2px 8px rgba(28,27,26,0.04);
-            --shadow-md: 0 10px 30px rgba(28,27,26,0.08);
-            --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            /* Paleta de Cores: Transição sofisticada de lilás e roxo com toques de ouro fosco e fundos claros e limpos */
+            --bg-base: #FDFBF9;       /* Pérola / Nude sutil */
+            --bg-card: #FFFFFF;       /* Branco Absoluto */
+            --primary: #322645;       /* Roxo Profundo / Berinjela Escuro */
+            --lilac-brand: #6B5B95;   /* Lilás Clássico */
+            --lilac-soft: #8E7AB5;    /* Lavanda Sofisticado */
+            --accent: #D4AF37;        /* Ouro Fosco Premium */
+            --accent-muted: #F5EFE6;  /* Creme Suave */
+            --text-main: #3D3546;     /* Grafite Arroxeado */
+            --text-muted: #8A7E93;    /* Lavanda Acinzentado */
+            --border: #F1E9DF;        /* Borda Suave */
+            
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --shadow-sm: 0 4px 24px rgba(107, 91, 149, 0.03);
+            --shadow-md: 0 20px 50px rgba(50, 38, 69, 0.05);
+            --font: "Times New Roman", Times, Georgia, serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: var(--font);
             -webkit-font-smoothing: antialiased;
             -webkit-tap-highlight-color: transparent;
         }
@@ -50,32 +48,39 @@
         body {
             background-color: var(--bg-base);
             color: var(--text-main);
-            line-height: 1.6;
+            font-family: var(--font-sans);
+            line-height: 1.65;
             overflow-x: hidden;
         }
 
-        /* Layout Utility */
+        h1, h2, h3, h4, h5, h6, .serif-font {
+            font-family: var(--font);
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1140px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* Header */
+        /* Header de Luxo */
         header {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            background: rgba(253, 251, 249, 0.85);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
             border-bottom: 1px solid var(--border);
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            height: 80px;
+            height: 90px;
             display: flex;
             align-items: center;
+            transition: all 0.3s ease;
         }
 
         .header-wrap {
@@ -88,277 +93,279 @@
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
             text-decoration: none;
         }
 
         .logo-box {
-            width: 44px;
-            height: 44px;
-            background: var(--primary);
-            color: #FFF;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 16px;
-            letter-spacing: 1px;
+            font-family: var(--font);
+            font-size: 20px;
+            color: white;
+            background: linear-gradient(135deg, var(--lilac-brand), var(--primary));
+            padding: 6px 12px;
+            letter-spacing: 2px;
+            font-weight: 300;
             border-radius: var(--radius-sm);
-            border: 1px solid var(--accent);
         }
 
         .logo-text h1 {
-            font-size: 18px;
-            font-weight: 700;
+            font-size: 20px;
             color: var(--primary);
-            letter-spacing: 0.5px;
-            line-height: 1.2;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            line-height: 1.1;
         }
 
         .logo-text span {
-            font-size: 11px;
+            font-family: var(--font-sans);
+            font-size: 10px;
             color: var(--text-muted);
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 3px;
             display: block;
+            margin-top: 2px;
         }
 
         nav {
             display: flex;
-            gap: 32px;
+            align-items: center;
+            gap: 40px;
         }
 
         nav a {
             color: var(--text-main);
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
             transition: color 0.2s;
         }
 
         nav a:hover {
-            color: var(--accent);
+            color: var(--lilac-soft);
         }
 
         .cta-nav {
-            background: var(--primary);
+            background: linear-gradient(135deg, var(--lilac-brand), var(--primary));
             color: #FFF;
-            padding: 10px 20px;
-            border-radius: var(--radius-sm);
-            font-size: 13px;
+            padding: 12px 24px;
+            font-size: 11px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.2s;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            border: none;
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            box-shadow: 0 4px 15px rgba(107, 91, 149, 0.2);
         }
 
         .cta-nav:hover {
-            background: #333;
-            color: #FFF;
+            opacity: 0.9;
+            transform: translateY(-1px);
         }
 
         .menu-toggle {
             display: none;
             flex-direction: column;
-            gap: 5px;
+            gap: 6px;
             cursor: pointer;
             background: none;
             border: none;
         }
 
         .menu-toggle span {
-            width: 24px;
-            height: 2px;
+            width: 26px;
+            height: 1px;
             background: var(--primary);
             transition: 0.3s;
         }
 
-        /* Hero */
+        /* Hero Feminino & Elegante */
         .hero {
-            padding-top: 160px;
-            padding-bottom: 80px;
-            background: radial-gradient(circle at 90% 10%, #F5EFEB 0%, var(--bg-base) 60%);
-            position: relative;
+            padding-top: 200px;
+            padding-bottom: 120px;
+            background: linear-gradient(180deg, rgba(245, 239, 248, 0.5) 0%, var(--bg-base) 100%);
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 80px;
             align-items: center;
         }
 
         .hero-tag {
             display: inline-block;
-            background: #FFF;
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
-            color: var(--accent);
-            border: 1px solid var(--border);
-            margin-bottom: 24px;
+            color: var(--lilac-brand);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 3px;
+            margin-bottom: 24px;
         }
 
         .hero h2 {
-            font-size: 48px;
+            font-size: 54px;
             line-height: 1.15;
-            font-weight: 700;
             color: var(--primary);
-            margin-bottom: 24px;
+            margin-bottom: 32px;
         }
 
         .hero p {
-            font-size: 18px;
+            font-size: 16px;
             color: var(--text-muted);
-            margin-bottom: 40px;
-            max-width: 520px;
+            margin-bottom: 48px;
+            max-width: 480px;
+            line-height: 1.8;
         }
 
-        /* Abstract Premium Banner Element */
+        /* Moldura de Galeria Premium */
         .hero-graphic {
             position: relative;
-            height: 440px;
+            height: 520px;
             background: var(--primary);
-            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
             overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding: 40px;
+            padding: 48px;
             box-shadow: var(--shadow-md);
-            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius-md);
         }
 
         .hero-graphic::before {
             content: '';
             position: absolute;
-            top: -20%;
-            right: -20%;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent) 0%, transparent 80%);
-            opacity: 0.15;
-            filter: blur(40px);
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(180deg, rgba(50, 38, 69, 0) 40%, rgba(32, 23, 45, 0.9) 100%);
+            z-index: 1;
+        }
+
+        .hero-graphic-lines {
+            position: absolute;
+            top: 40px; right: 40px; bottom: 40px; left: 40px;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            pointer-events: none;
+            z-index: 1;
         }
 
         .hero-graphic-tag {
             color: var(--accent);
-            font-size: 12px;
-            font-weight: 700;
+            font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+            z-index: 2;
+            position: relative;
         }
 
         .hero-graphic-title {
             color: #FFF;
-            font-size: 28px;
-            font-weight: 600;
+            font-size: 32px;
             line-height: 1.3;
+            z-index: 2;
+            position: relative;
+            font-weight: 300;
         }
 
-        /* Section Layout */
+        /* Sections */
         section {
-            padding: 100px 0;
+            padding: 120px 0;
             border-bottom: 1px solid var(--border);
         }
 
         .section-title {
             text-align: center;
-            max-width: 600px;
-            margin: 0 auto 60px auto;
+            max-width: 650px;
+            margin: 0 auto 80px auto;
         }
 
         .section-title span {
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--accent);
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--lilac-brand);
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
             display: block;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         .section-title h3 {
-            font-size: 32px;
+            font-size: 38px;
             color: var(--primary);
-            font-weight: 700;
         }
 
-        /* Presentation & Brands */
+        /* Chancelas de Luxo */
         .brands-wrap {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 40px;
+            gap: 60px;
             align-items: center;
-            opacity: 0.65;
         }
 
         .brand-item {
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 2px;
+            font-family: var(--font);
+            font-size: 15px;
+            letter-spacing: 3px;
             color: var(--primary);
             text-transform: uppercase;
+            opacity: 0.4;
+            transition: opacity 0.3s;
         }
+        .brand-item:hover { opacity: 0.8; }
 
-        /* Featured Cards / Services Grid */
+        /* Serviços / Menu de Atelier */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 40px;
         }
 
         .service-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            padding: 32px;
-            border-radius: var(--radius-md);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            padding: 48px 40px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: relative;
+            border-radius: var(--radius-md);
         }
 
         .service-card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-md);
-            border-color: var(--accent-muted);
+            border-color: var(--lilac-soft);
         }
 
         .srv-badge {
             align-self: flex-start;
-            background: #F7F3EE;
-            color: var(--text-main);
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: 600;
+            font-size: 10px;
             text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .srv-badge.highlight {
-            background: var(--accent-muted);
-            color: var(--primary);
+            letter-spacing: 2px;
+            color: var(--lilac-brand);
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--lilac-brand);
+            padding-bottom: 4px;
+            font-weight: 600;
         }
 
         .service-card h4 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 12px;
+            font-size: 22px;
+            margin-bottom: 16px;
             color: var(--primary);
         }
 
         .service-card p {
             font-size: 14px;
             color: var(--text-muted);
-            margin-bottom: 24px;
+            margin-bottom: 32px;
+            line-height: 1.7;
             flex-grow: 1;
         }
 
@@ -366,25 +373,29 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 16px;
+            padding-top: 24px;
             border-top: 1px solid var(--border);
             font-size: 13px;
         }
 
         .srv-time {
             color: var(--text-muted);
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
         }
 
         .srv-price {
-            font-weight: 700;
+            font-family: var(--font-sans);
+            font-weight: 600;
             color: var(--primary);
         }
 
-        /* How it works */
+        /* Jornada de Experiência */
         .steps-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            gap: 60px;
         }
 
         .step-item {
@@ -392,27 +403,30 @@
         }
 
         .step-num {
-            font-size: 48px;
-            font-weight: 700;
-            color: var(--accent-muted);
-            line-height: 1;
-            margin-bottom: 16px;
+            font-family: var(--font);
+            font-size: 36px;
+            color: var(--lilac-brand);
+            margin-bottom: 20px;
+            font-weight: 300;
         }
 
         .step-item h4 {
             font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
         }
 
         .step-item p {
             font-size: 14px;
             color: var(--text-muted);
+            line-height: 1.7;
         }
 
-        /* SOFTWARE CORE: CLIENT SYSTEM APPLICATION */
+        /* ENGINE DE AGENDAMENTO EXCLUSIVO (VIOLET LABEL) */
         .system-section {
-            background: #1C1B1A;
+            background: #231932; /* Fundo Arroxeado Ultra Escuro */
             color: #FFF;
             position: relative;
         }
@@ -421,71 +435,75 @@
             color: #FFF;
         }
 
+        .system-section .section-title span {
+            color: var(--lilac-soft);
+        }
+
         .system-container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
-            background: #262423;
-            border: 1px solid #33312F;
+            background: #2C203E;
+            border: 1px solid #3A2C52;
+            box-shadow: 0 40px 100px rgba(18, 12, 27, 0.5);
+            position: relative;
             border-radius: var(--radius-lg);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
             overflow: hidden;
         }
 
-        /* Step Engine Header */
+        /* Header do App Engine */
         .sys-header {
-            padding: 32px 40px;
-            border-bottom: 1px solid #33312F;
-            background: #2B2928;
+            padding: 40px 50px;
+            border-bottom: 1px solid #3A2C52;
+            background: #332549;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .sys-title-area h4 {
-            font-size: 18px;
-            font-weight: 600;
+            font-size: 22px;
             color: #FFF;
         }
 
         .sys-title-area p {
             font-size: 13px;
-            color: #A39E99;
-            margin-top: 4px;
+            color: #B1A6C2;
+            margin-top: 6px;
+            letter-spacing: 0.5px;
         }
 
         .progress-container {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 20px;
         }
 
         .progress-bar-bg {
-            width: 120px;
-            height: 6px;
-            background: #3D3A38;
-            border-radius: 10px;
+            width: 140px;
+            height: 2px;
+            background: #45355E;
             overflow: hidden;
         }
 
         .progress-bar-fill {
             height: 100%;
-            width: 12.5%;
+            width: 20%;
             background: var(--accent);
-            transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .progress-text {
-            font-size: 13px;
-            font-weight: 600;
+            font-size: 12px;
+            font-family: var(--font-sans);
+            font-weight: 500;
             color: var(--accent);
-            min-width: 36px;
-            text-align: right;
+            letter-spacing: 1px;
         }
 
-        /* Step Engine Content viewport */
+        /* Viewport Engine */
         .sys-body {
-            padding: 40px;
-            min-height: 380px;
+            padding: 50px;
+            min-height: 400px;
         }
 
         .step-pane {
@@ -494,110 +512,109 @@
 
         .step-pane.active {
             display: block;
-            animation: fadeIn 0.4s ease forwards;
+            animation: paneFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(4px); }
+        @keyframes paneFadeIn {
+            from { opacity: 0; transform: translateY(8px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Selection Lists (Items, Professionals, Slots) */
+        /* Seletores Customizados Premium */
         .grid-selector {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 16px;
-            max-height: 280px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            max-height: 300px;
             overflow-y: auto;
-            padding-right: 6px;
+            padding-right: 8px;
         }
 
-        /* Custom Scrollbar for Selector */
         .grid-selector::-webkit-scrollbar {
-            width: 4px;
+            width: 2px;
         }
         .grid-selector::-webkit-scrollbar-track {
-            background: #262423;
+            background: #2C203E;
         }
         .grid-selector::-webkit-scrollbar-thumb {
-            background: #4A4643;
-            border-radius: 2px;
+            background: #45355E;
         }
 
         .select-card {
-            background: #2D2B2A;
-            border: 1px solid #3D3A38;
-            padding: 20px;
-            border-radius: var(--radius-sm);
+            background: #332549;
+            border: 1px solid #45355E;
+            padding: 24px;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
             text-align: left;
             position: relative;
+            border-radius: var(--radius-md);
         }
 
         .select-card:hover {
-            border-color: #524E4A;
-            background: #33302F;
+            border-color: var(--lilac-soft);
+            background: #3A2C52;
         }
 
         .select-card.selected {
             border-color: var(--accent);
-            background: linear-gradient(135deg, #33302F 0%, #262423 100%);
+            background: #3D2E57;
         }
 
         .select-card.selected::after {
-            content: '✓';
+            content: '';
             position: absolute;
-            top: 12px;
-            right: 16px;
-            color: var(--accent);
-            font-size: 14px;
-            font-weight: 700;
+            top: 24px; right: 24px;
+            width: 6px; height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
         }
 
         .select-card h5 {
-            font-size: 15px;
-            font-weight: 600;
+            font-size: 16px;
             color: #FFF;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
         .select-card p {
+            font-family: var(--font-sans);
             font-size: 12px;
-            color: #A39E99;
+            color: #B1A6C2;
+            letter-spacing: 0.5px;
         }
 
-        /* Calendar Matrix styling */
+        /* Estrutura do Calendário de Luxo */
         .calendar-widget {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 8px;
+            gap: 10px;
             text-align: center;
         }
 
         .cal-day-head {
             font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #736E6A;
-            padding-bottom: 8px;
-            font-weight: 600;
+            letter-spacing: 2px;
+            color: #8D7F9E;
+            padding-bottom: 12px;
+            font-weight: 500;
         }
 
         .cal-day {
-            padding: 12px 0;
-            background: #2D2B2A;
-            border: 1px solid #3D3A38;
-            border-radius: var(--radius-sm);
-            font-size: 14px;
+            padding: 14px 0;
+            background: #332549;
+            border: 1px solid #45355E;
+            font-size: 13px;
             cursor: pointer;
             color: #FFF;
+            font-family: var(--font-sans);
             transition: all 0.2s;
+            border-radius: var(--radius-sm);
         }
 
         .cal-day:hover:not(.disabled) {
-            border-color: #524E4A;
-            background: #33302F;
+            border-color: var(--lilac-soft);
+            background: #3A2C52;
         }
 
         .cal-day.selected {
@@ -608,57 +625,58 @@
         }
 
         .cal-day.disabled {
-            opacity: 0.25;
+            opacity: 0.15;
             cursor: not-allowed;
             background: transparent;
             border-color: transparent;
         }
 
-        /* Form Controls */
+        /* Elementos de Formulário Lineares */
         .form-group {
-            margin-bottom: 24px;
-            max-width: 480px;
+            margin-bottom: 32px;
+            max-width: 500px;
         }
 
         .form-group label {
             display: block;
-            font-size: 13px;
+            font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #A39E99;
-            margin-bottom: 8px;
-            font-weight: 600;
+            letter-spacing: 2px;
+            color: #B1A6C2;
+            margin-bottom: 12px;
+            font-weight: 500;
         }
 
         .form-input {
             width: 100%;
-            background: #2D2B2A;
-            border: 1px solid #3D3A38;
-            padding: 14px 18px;
-            border-radius: var(--radius-sm);
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #45355E;
+            padding: 12px 4px;
             color: #FFF;
             font-size: 15px;
             outline: none;
-            transition: border-color 0.2s;
+            font-family: var(--font-sans);
+            transition: border-color 0.3s ease;
         }
 
         .form-input:focus {
             border-color: var(--accent);
         }
 
-        /* Summary Preview Panel */
+        /* Quadro Resumo */
         .summary-box {
-            background: #2D2B2A;
-            border: 1px solid #3D3A38;
+            background: #332549;
+            border: 1px solid #45355E;
+            padding: 32px;
             border-radius: var(--radius-md);
-            padding: 24px;
         }
 
         .summary-row {
             display: flex;
             justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid #3D3A38;
+            padding: 16px 0;
+            border-bottom: 1px solid #45355E;
             font-size: 14px;
         }
 
@@ -668,36 +686,39 @@
         }
 
         .summary-label {
-            color: #A39E99;
+            color: #B1A6C2;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
         }
 
         .summary-value {
             color: #FFF;
-            font-weight: 600;
-            text-align: right;
+            font-weight: 400;
+            font-family: var(--font);
+            font-size: 16px;
         }
 
-        /* Step Engine Footer Actions */
+        /* Rodapé de Ações do App */
         .sys-footer {
-            padding: 24px 40px;
-            border-top: 1px solid #33312F;
-            background: #2B2928;
+            padding: 32px 50px;
+            border-top: 1px solid #3A2C52;
+            background: #332549;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .btn-sys {
-            padding: 14px 28px;
-            border-radius: var(--radius-sm);
-            font-size: 14px;
+            padding: 16px 36px;
+            font-size: 11px;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             cursor: pointer;
             border: none;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            transition: all 0.3s ease;
+            border-radius: var(--radius-sm);
         }
 
         .btn-sys-primary {
@@ -705,118 +726,117 @@
             color: var(--primary);
         }
 
-        .btn-sys-primary:hover {
-            background: #EADCB3;
+        .btn-sys-primary:hover:not(:disabled) {
+            background: #EED170;
         }
 
         .btn-sys-secondary {
             background: transparent;
-            color: #A39E99;
+            color: #B1A6C2;
         }
 
-        .btn-sys-secondary:hover {
+        .btn-sys-secondary:hover:not(:disabled) {
             color: #FFF;
         }
 
         .btn-sys:disabled {
-            opacity: 0.3;
+            opacity: 0.2;
             cursor: not-allowed;
         }
 
-        /* Benefits & Features */
+        /* Diferenciais Maison */
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 40px;
         }
 
         .benefit-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            padding: 32px;
+            padding: 40px;
             border-radius: var(--radius-md);
         }
 
         .benefit-icon {
-            width: 40px;
-            height: 40px;
-            background: #F7F3EE;
-            border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent);
-            font-weight: 700;
-            margin-bottom: 20px;
+            font-family: var(--font);
+            font-size: 24px;
+            color: var(--lilac-soft);
+            margin-bottom: 24px;
+            display: block;
         }
 
         .benefit-card h4 {
             font-size: 18px;
-            font-weight: 600;
             margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--primary);
         }
 
         .benefit-card p {
             font-size: 14px;
             color: var(--text-muted);
+            line-height: 1.7;
         }
 
-        /* Reviews / Testimonials */
+        /* Avaliações Editorial */
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+            gap: 40px;
         }
 
         .review-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            padding: 32px;
+            padding: 48px 40px;
             border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
         }
 
         .review-stars {
             color: var(--accent);
-            margin-bottom: 16px;
-            font-size: 14px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            letter-spacing: 2px;
         }
 
         .review-card p {
-            font-size: 14px;
-            font-style: italic;
+            font-family: var(--font);
+            font-size: 16px;
             color: var(--text-main);
-            margin-bottom: 20px;
+            margin-bottom: 28px;
+            line-height: 1.6;
+            font-style: italic;
         }
 
         .review-author {
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             color: var(--text-muted);
         }
 
-        /* FAQ */
+        /* FAQ Sanfona */
         .faq-wrap {
-            max-width: 720px;
+            max-width: 760px;
             margin: 0 auto;
         }
 
         .faq-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            margin-bottom: 16px;
-            border-radius: var(--radius-sm);
+            border-bottom: 1px solid var(--border);
             overflow: hidden;
         }
 
         .faq-trigger {
             width: 100%;
-            padding: 20px 24px;
+            padding: 28px 0;
             background: none;
             border: none;
             text-align: left;
-            font-size: 15px;
-            font-weight: 600;
+            font-family: var(--font);
+            font-size: 18px;
             color: var(--primary);
             cursor: pointer;
             display: flex;
@@ -825,61 +845,65 @@
         }
 
         .faq-content {
-            padding: 0 24px;
+            padding: 0;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             font-size: 14px;
             color: var(--text-muted);
-            background: #FCFBFB;
+            line-height: 1.8;
         }
 
         .faq-item.active .faq-content {
-            padding: 0 24px 20px 24px;
-            max-height: 200px;
+            padding-bottom: 28px;
+            max-height: 150px;
         }
 
-        /* Contact & Map Layout */
+        /* Contato & Localização */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 80px;
         }
 
         .contact-info h4 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 24px;
+            font-size: 24px;
+            margin-bottom: 32px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
         }
 
         .info-row {
-            margin-bottom: 24px;
-            font-size: 15px;
+            margin-bottom: 32px;
         }
 
         .info-row span {
             display: block;
-            font-size: 12px;
+            font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             color: var(--text-muted);
-            margin-bottom: 4px;
+            margin-bottom: 8px;
+            font-weight: 500;
         }
 
         .map-frame {
             width: 100%;
-            height: 340px;
-            background: #EBE6E1;
-            border-radius: var(--radius-md);
+            height: 380px;
+            background: #F4EFF6;
             border: 1px solid var(--border);
-            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-md);
         }
 
-        /* Footer */
+        /* Rodapé Principal */
         footer {
-            background: var(--primary);
+            background: #1C1329; /* Roxo Ultra Profundo */
             color: #FFF;
-            padding: 60px 0;
+            padding: 80px 0;
             font-size: 14px;
         }
 
@@ -887,63 +911,63 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-top: 1px solid #33312F;
+            border-top: 1px solid #2F2342;
             padding-top: 40px;
-            margin-top: 40px;
-            color: #736E6A;
+            margin-top: 60px;
+            color: #8D7F9E;
+            font-size: 12px;
+            letter-spacing: 0.5px;
         }
 
-        /* Floating WhatsApp Button */
+        /* Botão do Concierge Flutuante */
         .whatsapp-float {
             position: fixed;
-            bottom: 32px;
-            right: 32px;
-            background: #25D366;
+            bottom: 40px;
+            right: 40px;
+            background: var(--primary);
             color: white;
-            width: 56px;
-            height: 56px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 16px rgba(37,211,102,0.3);
+            box-shadow: var(--shadow-md);
             z-index: 999;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 22px;
-            transition: transform 0.2s;
+            border: 1px solid var(--accent);
+            transition: transform 0.3s ease;
         }
 
         .whatsapp-float:hover {
             transform: scale(1.05);
         }
 
-        /* Mobile Adjustments (Mobile First Hierarchy validation) */
+        /* Responsividade Avançada */
         @media(max-width: 992px) {
             .hero-grid, .steps-grid, .reviews-grid, .contact-grid {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 50px;
             }
             .hero {
-                padding-top: 120px;
-                padding-bottom: 60px;
+                padding-top: 150px;
+                padding-bottom: 80px;
             }
             .hero h2 {
-                font-size: 36px;
+                font-size: 38px;
             }
             .hero-graphic {
-                height: 280px;
+                height: 340px;
+                padding: 32px;
             }
             nav {
                 display: none;
                 position: absolute;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background: #FFF;
+                top: 90px; left: 0; width: 100%;
+                background: var(--bg-base);
                 flex-direction: column;
-                padding: 24px;
-                gap: 20px;
+                padding: 40px 24px;
+                gap: 28px;
                 border-bottom: 1px solid var(--border);
                 box-shadow: var(--shadow-md);
             }
@@ -954,16 +978,17 @@
                 display: flex;
             }
             .sys-header {
-                padding: 24px;
+                padding: 32px 24px;
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 16px;
+                gap: 20px;
             }
-            .sys-body {
-                padding: 24px;
+            .sys-body, .sys-footer {
+                padding: 32px 24px;
             }
-            .sys-footer {
-                padding: 24px;
+            .datetime-grid {
+                grid-template-columns: 1fr !important;
+                gap: 40px;
             }
         }
     </style>
@@ -971,25 +996,25 @@
 <body>
 
     <!-- Header Module -->
-    <header>
+    <header id="header">
         <div class="container header-wrap">
             <a href="#" class="logo-area">
-                <div class="logo-box">ME</div>
+                <div class="logo-box">MÉ</div>
                 <div class="logo-text">
                     <h1>Maison Élégance</h1>
                     <span>Beauty Studio</span>
                 </div>
             </a>
-            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu Principal">
                 <span></span><span></span><span></span>
             </button>
             <nav id="mainNav">
-                <a href="#servicos">Serviços</a>
-                <a href="#como-funciona">Como Funciona</a>
-                <a href="#agendamento">Agendar Horário</a>
+                <a href="#servicos">Atelier</a>
+                <a href="#como-funciona">Experiência</a>
+                <a href="#agendamento">Agendamento</a>
                 <a href="#beneficios">Diferenciais</a>
                 <a href="#contato">Localização</a>
-                <a href="#agendamento" class="cta-nav">Agendar Agora</a>
+                <a href="#agendamento" class="cta-nav">Agendar Horário</a>
             </nav>
         </div>
     </header>
@@ -997,30 +1022,31 @@
     <!-- Hero Module -->
     <section class="hero">
         <div class="container hero-grid">
-            <div class="hero-left">
-                <div class="hero-tag">Alphaville • SP</div>
-                <h2>A excelência técnica que sua beleza merece.</h2>
-                <p>Agende procedimentos exclusivos de alta performance capilar e estética com os melhores especialistas da região em menos de um minuto.</p>
-                <a href="#agendamento" class="cta-nav" style="padding: 16px 32px; font-size: 14px; display: inline-block;">Iniciar Agendamento Inteligente</a>
+            <div>
+                <div class="hero-tag">Alphaville / Barueri</div>
+                <h2>A harmonia perfeita entre técnica e sofisticação.</h2>
+                <p>Gerencie seus horários e reserve procedimentos de alto padrão com nossa equipe de especialistas através do nosso sistema de concierge inteligente.</p>
+                <a href="#agendamento" class="cta-nav" style="padding: 18px 36px; font-size: 12px; display: inline-block;">Iniciar Reserva Digital</a>
             </div>
-            <div class="hero-right">
+            <div>
                 <div class="hero-graphic">
-                    <div class="hero-graphic-tag">Destaque do Mês</div>
-                    <div class="hero-graphic-title">Morena Iluminada Premium<br>Por Especialistas</div>
+                    <div class="hero-graphic-lines"></div>
+                    <div class="hero-graphic-tag">Procedimento Assinatura</div>
+                    <div class="hero-graphic-title">Iluminação & Design Luxo<br>Maison Élégance</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Presentation Module (Brands) -->
-    <section style="padding: 40px 0; background: #FFF;">
+    <!-- Marcas de Prestígio -->
+    <section style="padding: 60px 0; background: #FFF;">
         <div class="container">
             <div class="brands-wrap">
+                <div class="brand-item">Kérastase Paris</div>
                 <div class="brand-item">L'Oréal Professionnel</div>
-                <div class="brand-item">Kérastase</div>
                 <div class="brand-item">Wella Professionals</div>
                 <div class="brand-item">Schwarzkopf</div>
-                <div class="brand-item">Truss Professional</div>
+                <div class="brand-item">Redken</div>
             </div>
         </div>
     </section>
@@ -1029,99 +1055,88 @@
     <section id="servicos">
         <div class="container">
             <div class="section-title">
-                <span>Procedimentos</span>
-                <h3>Serviços em Destaque</h3>
+                <span>Atelier de Beleza</span>
+                <h3>Serviços Recomendados</h3>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div>
-                        <div class="srv-badge highlight">Mais Procurado</div>
-                        <h4>Morena Iluminada Premium</h4>
-                        <p>Técnica exclusiva de iluminação personalizada respeitando a saúde e integridade do fio.</p>
+                        <div class="srv-badge">Assinatura</div>
+                        <h4>Design de Mechas High-End</h4>
+                        <p>Clareamento sofisticado e milimétrico com proteção e reconstrução imediata da fibra capilar pelas marcas líderes mundiais.</p>
                     </div>
                     <div class="srv-meta">
-                        <span class="srv-time">4h 00min</span>
+                        <span class="srv-time">4 horas</span>
                         <span class="srv-price">Sob Consulta</span>
                     </div>
                 </div>
                 <div class="service-card">
                     <div>
-                        <div class="srv-badge">Alta Performance</div>
-                        <h4>Botox Capilar Orgânico</h4>
-                        <p>Alinhamento e redução de frizz com reposição de massa molecular sem formol.</p>
+                        <div class="srv-badge">Tratamento Avançado</div>
+                        <h4>Cronograma de Reconstrução Consciente</h4>
+                        <p>Alinhamento molecular e reposição lipídica profunda, conferindo brilho espelhado e eliminação completa do frizz.</p>
                     </div>
                     <div class="srv-meta">
-                        <span class="srv-time">2h 00min</span>
+                        <span class="srv-time">2 horas</span>
                         <span class="srv-price">R$ 320,00</span>
                     </div>
                 </div>
                 <div class="service-card">
                     <div>
-                        <div class="srv-badge">Exclusivo</div>
-                        <h4>Dia da Noiva Premium</h4>
-                        <p>Consultoria de imagem, teste de penteado, maquiagem e produção completa luxo.</p>
+                        <div class="srv-badge">Alta Costura</div>
+                        <h4>Dia da Noiva Exclusive</h4>
+                        <p>Consultoria estética avançada, teste de imagem, design de penteado e maquiagem com acompanhamento especializado.</p>
                     </div>
                     <div class="srv-meta">
                         <span class="srv-time">Customizado</span>
                         <span class="srv-price">Sob Medida</span>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div>
-                        <div class="srv-badge">Estética Facial</div>
-                        <h4>Alongamento de Cílios</h4>
-                        <p>Extensão de cílios fio a fio técnica premium com retenção e acabamento natural.</p>
-                    </div>
-                    <div class="srv-meta">
-                        <span class="srv-time">2h 00min</span>
-                        <span class="srv-price">R$ 210,00</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works Module -->
+    <!-- Como Funciona -->
     <section id="como-funciona" style="background: #FFF;">
         <div class="container">
             <div class="section-title">
-                <span>Agilidade</span>
-                <h3>Como Funciona o Agendamento</h3>
+                <span>Conforto & Tempo</span>
+                <h3>A Experiência Digital</h3>
             </div>
             <div class="steps-grid">
                 <div class="step-item">
-                    <div class="step-num">01</div>
-                    <h4>Selecione o Serviço</h4>
-                    <p>Escolha o procedimento principal desejado e o profissional de sua preferência.</p>
+                    <div class="step-num">I</div>
+                    <h4>Seleção Select</h4>
+                    <p>Defina os procedimentos e o profissional que conduzirá seu atendimento exclusivo.</p>
                 </div>
                 <div class="step-item">
-                    <div class="step-num">02</div>
-                    <h4>Escolha o Horário</h4>
-                    <p>Encontre datas e horários disponíveis em tempo real integrados à nossa agenda.</p>
+                    <div class="step-num">II</div>
+                    <h4>Cronograma</h4>
+                    <p>Escolha o dia e horário de sua conveniência em sincronia direta com nossos sistemas.</p>
                 </div>
                 <div class="step-item">
-                    <div class="step-num">03</div>
-                    <h4>Receba a Confirmação</h4>
-                    <p>Pronto! Você receberá os dados de confirmação via WhatsApp e integração automática.</p>
+                    <div class="step-num">III</div>
+                    <h4>Concierge</h4>
+                    <p>Sua vaga é garantida instantaneamente com notificações e lembretes inteligentes via WhatsApp.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Core System Module -->
+    <!-- APP ENGINE CENTRAL (VIOLET LABEL) -->
     <section id="agendamento" class="system-section">
         <div class="container">
             <div class="section-title">
-                <span>SaaS Automation Engine</span>
-                <h3>Plataforma de Agendamento Online</h3>
+                <span>Maison Booking Engine</span>
+                <h3>Concierge de Agendamento Online</h3>
             </div>
             
             <div class="system-container">
-                <!-- System App Header -->
+                <!-- App Header -->
                 <div class="sys-header">
                     <div class="sys-title-area">
                         <h4 id="stepTitle">Selecione o Serviço</h4>
-                        <p id="stepDesc">Escolha o atendimento de luxo que deseja realizar hoje.</p>
+                        <p id="stepDesc">Escolha o procedimento principal desejado.</p>
                     </div>
                     <div class="progress-container">
                         <div class="progress-bar-bg">
@@ -1131,76 +1146,70 @@
                     </div>
                 </div>
 
-                <!-- System App Body (Form Viewports) -->
+                <!-- App Body Viewports -->
                 <div class="sys-body">
                     <form id="appEngineForm" onsubmit="event.preventDefault();">
                         
-                        <!-- STEP 1: SERVICE -->
+                        <!-- STEP 1: SERVICES SELECTION -->
                         <div class="step-pane active" data-step="1">
                             <div class="grid-selector" id="serviceSelector">
-                                <div class="select-card" data-value="Morena Iluminada Premium" data-duration="4h">
-                                    <h5>Morena Iluminada Premium</h5>
-                                    <p>Duração estimada: 4h 00min</p>
+                                <div class="select-card" data-value="Design de Mechas High-End" data-duration="4h">
+                                    <h5>Design de Mechas High-End</h5>
+                                    <p>Procedimento Assinatura • 4h</p>
                                 </div>
-                                <div class="select-card" data-value="Botox Capilar" data-duration="2h">
-                                    <h5>Botox Capilar Orgânico</h5>
-                                    <p>Duração estimada: 2h 00min</p>
+                                <div class="select-card" data-value="Reconstrução Consciente" data-duration="2h">
+                                    <h5>Reconstrução Consciente</h5>
+                                    <p>Alinhamento e Reposição • 2h</p>
                                 </div>
-                                <div class="select-card" data-value="Corte Feminino & Escova" data-duration="1h35">
-                                    <h5>Corte Feminino & Escova</h5>
-                                    <p>Duração estimada: 1h 35min</p>
+                                <div class="select-card" data-value="Corte & Escova Modelada" data-duration="1h35">
+                                    <h5>Corte & Escova Modelada</h5>
+                                    <p>Visagismo Avançado • 1h 35m</p>
                                 </div>
                                 <div class="select-card" data-value="Mechas Personalizadas" data-duration="3h30">
                                     <h5>Mechas Personalizadas</h5>
-                                    <p>Duração estimada: 3h 30min</p>
+                                    <p>Design de Cor Luxo • 3h 30m</p>
                                 </div>
-                                <div class="select-card" data-value="Maquiagem & Penteado" data-duration="2h30">
-                                    <h5>Combo Maquiagem + Penteado</h5>
-                                    <p>Duração estimada: 2h 30min</p>
-                                </div>
-                                <div class="select-card" data-value="Nail Designer Premium" data-duration="50min">
-                                    <h5>Nail Designer Premium</h5>
-                                    <p>Duração estimada: 50min</p>
+                                <div class="select-card" data-value="Alongamento de Cílios Premium" data-duration="2h">
+                                    <h5>Alongamento de Cílios Premium</h5>
+                                    <p>Técnica Fio a Fio Luxo • 2h</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- STEP 2: PROFESSIONAL -->
+                        <!-- STEP 2: PROFESSIONAL SELECTION -->
                         <div class="step-pane" data-step="2">
                             <div class="grid-selector" id="professionalSelector">
-                                <div class="select-card" data-value="Qualquer Profissional Disponível">
-                                    <h5>Próximo Profissional Disponível</h5>
-                                    <p>Indicação automática por especialidade</p>
+                                <div class="select-card" data-value="Próximo Profissional Disponível">
+                                    <h5>Próximo Especialista Disponível</h5>
+                                    <p>Indicação inteligente por especialidade</p>
                                 </div>
-                                <div class="select-card" data-value="Priscila (Master Colorista)">
+                                <div class="select-card" data-value="Priscila Fontana (Master Colorista)">
                                     <h5>Priscila Fontana</h5>
-                                    <p>Especialista em Mechas & Morena Iluminada</p>
+                                    <p>Especialista Master em Mechas e Loiros</p>
                                 </div>
-                                <div class="select-card" data-value="Rodrigo (Corte & Visagismo)">
+                                <div class="select-card" data-value="Rodrigo Mendes (Visagista)">
                                     <h5>Rodrigo Mendes</h5>
-                                    <p>Especialista em Corte Feminino & Escovas</p>
+                                    <p>Especialista em Cortes e Transformações</p>
                                 </div>
-                                <div class="select-card" data-value="Mariana (Estética & Cílios)">
+                                <div class="select-card" data-value="Mariana Costa (Lash Designer)">
                                     <h5>Mariana Costa</h5>
-                                    <p>Lash Designer & Micropigmentação</p>
+                                    <p>Estética Avançada e Extensão de Cílios</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- STEP 3: DATE & TIME -->
+                        <!-- STEP 3: DATETIME MATRIX -->
                         <div class="step-pane" data-step="3">
-                            <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px;" class="datetime-grid">
+                            <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px;" class="datetime-grid">
                                 <div>
-                                    <div style="font-size: 13px; color: #A39E99; margin-bottom: 8px; font-weight:600;">SELECIONE O DIA</div>
-                                    <div class="calendar-widget" id="calendarGrid">
-                                        <!-- Javascript injects current available week -->
-                                    </div>
+                                    <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: #B1A6C2; margin-bottom: 16px;">Cronograma / Escolha o Dia</div>
+                                    <div class="calendar-widget" id="calendarGrid"></div>
                                 </div>
                                 <div>
-                                    <div style="font-size: 13px; color: #A39E99; margin-bottom: 8px; font-weight:600;">HORÁRIOS DISPONÍVEIS</div>
+                                    <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: #B1A6C2; margin-bottom: 16px;">Slots Disponíveis</div>
                                     <div class="grid-selector" id="timeSelector" style="grid-template-columns: 1fr; max-height:220px;">
                                         <div class="select-card" data-value="09:00"><h5>09:00</h5></div>
-                                        <div class="select-card" data-value="11:00"><h5>11:00</h5></div>
+                                        <div class="select-card" data-value="11:30"><h5>11:30</h5></div>
                                         <div class="select-card" data-value="14:00"><h5>14:00</h5></div>
                                         <div class="select-card" data-value="16:30"><h5>16:30</h5></div>
                                     </div>
@@ -1208,35 +1217,35 @@
                             </div>
                         </div>
 
-                        <!-- STEP 4: CLIENT DATA -->
+                        <!-- STEP 4: DATA REGISTRATION -->
                         <div class="step-pane" data-step="4">
                             <div class="form-group">
                                 <label for="clientName">Nome Completo</label>
-                                <input type="text" id="clientName" class="form-input" placeholder="Seu nome completo" required>
+                                <input type="text" id="clientName" class="form-input" placeholder="Insira seu nome completo" autocomplete="off">
                             </div>
                             <div class="form-group">
-                                <label for="clientWhatsapp">WhatsApp</label>
-                                <input type="tel" id="clientWhatsapp" class="form-input" placeholder="(11) 99999-9999" required>
+                                <label for="clientWhatsapp">WhatsApp de Contato</label>
+                                <input type="tel" id="clientWhatsapp" class="form-input" placeholder="(11) 99999-9999" autocomplete="off">
                             </div>
                             <div class="form-group">
-                                <label for="clientNotes">Notas ou Observações Especiais (Opcional)</label>
-                                <input type="text" id="clientNotes" class="form-input" placeholder="Restrições, preferências ou dúvidas">
+                                <label for="clientNotes">Solicitações Especiais / Notas</label>
+                                <input type="text" id="clientNotes" class="form-input" placeholder="Ex: Preferências de atendimento ou restrições">
                             </div>
                         </div>
 
-                        <!-- STEP 5: SUMMARY & CONFIRM -->
+                        <!-- STEP 5: RESUMO LUXO -->
                         <div class="step-pane" data-step="5">
                             <div class="summary-box">
                                 <div class="summary-row">
-                                    <span class="summary-label">Serviço</span>
+                                    <span class="summary-label">Serviço Selecionado</span>
                                     <span class="summary-value" id="sumService">-</span>
                                 </div>
                                 <div class="summary-row">
-                                    <span class="summary-label">Especialista</span>
+                                    <span class="summary-label">Especialista Atribuído</span>
                                     <span class="summary-value" id="sumProfessional">-</span>
                                 </div>
                                 <div class="summary-row">
-                                    <span class="summary-label">Data Escolhida</span>
+                                    <span class="summary-label">Data Reservada</span>
                                     <span class="summary-value" id="sumDate">-</span>
                                 </div>
                                 <div class="summary-row">
@@ -1244,12 +1253,12 @@
                                     <span class="summary-value" id="sumTime">-</span>
                                 </div>
                                 <div class="summary-row">
-                                    <span class="summary-label">Cliente</span>
+                                    <span class="summary-label">Cliente Titular</span>
                                     <span class="summary-value" id="sumClient">-</span>
                                 </div>
                                 <div class="summary-row">
-                                    <span class="summary-label">Unidade</span>
-                                    <span class="summary-value">Alphaville - Barueri/SP</span>
+                                    <span class="summary-label">Localização</span>
+                                    <span class="summary-value">Alameda dos Ipês, 820 — Alphaville</span>
                                 </div>
                             </div>
                         </div>
@@ -1257,64 +1266,64 @@
                     </form>
                 </div>
 
-                <!-- System App Footer (Actions) -->
+                <!-- App Actions Footer -->
                 <div class="sys-footer">
-                    <button type="button" class="btn-sys btn-sys-secondary" id="btnBack" disabled>Voltar</button>
+                    <button type="button" class="btn-sys btn-sys-secondary" id="btnBack" disabled>Retornar</button>
                     <button type="button" class="btn-sys btn-sys-primary" id="btnNext">Avançar</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Module -->
+    <!-- Diferenciais -->
     <section id="beneficios">
         <div class="container">
             <div class="section-title">
-                <span>Diferenciais</span>
-                <h3>Experiência Maison Élégance</h3>
+                <span>Excelência Privada</span>
+                <h3>Diferenciais Maison</h3>
             </div>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="benefit-icon">M</div>
+                    <span class="benefit-icon">Ⅰ</span>
                     <h4>Atendimento Exclusivo</h4>
-                    <p>Sem filas. Tempo dedicado unicamente a você com hora perfeitamente marcada.</p>
+                    <p>Agendas restritas e espaçadas para assegurar privacidade, silêncio e dedicação absoluta de toda a equipe técnica.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">P</div>
-                    <h4>Produtos Importados</h4>
-                    <p>Apenas as maiores marcas mundiais: Kérastase, L'Oréal e Wella Professionals.</p>
+                    <span class="benefit-icon">Ⅱ</span>
+                    <h4>Cosmetologia Avançada</h4>
+                    <p>Uso rigoroso e exclusivo das linhas internacionais de luxo mais reverenciadas do mercado mundial.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">S</div>
-                    <h4>Infraestrutura Luxo</h4>
-                    <p>Ambiente climatizado, sofisticado e seguro no coração de Alphaville.</p>
+                    <span class="benefit-icon">Ⅲ</span>
+                    <h4>Espaço Corporativo</h4>
+                    <p>Ambiente arquitetônico moderno, sofisticado e seguro com estacionamento e manobrista em Alphaville.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Reviews Module -->
+    <!-- Testimonials Module -->
     <section style="background: #FFF;">
         <div class="container">
             <div class="section-title">
-                <span>Opinião</span>
-                <h3>Avaliações de Clientes</h3>
+                <span>Crítica & Opinião</span>
+                <h3>Relatos de Clientes</h3>
             </div>
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="review-stars">★★★★★</div>
-                    <p>"O melhor atendimento de Alphaville. A Priscila é especialista em loiras, acertou perfeitamente o tom do meu cabelo com muita segurança."</p>
-                    <div class="review-author">Beatriz S.</div>
+                    <p>"Um verdadeiro oásis em Alphaville. O atendimento da Priscila Fontana é irretocável, o tom do meu loiro nunca esteve tão elegante e saudável."</p>
+                    <div class="review-author">Heloísa Brandão</div>
                 </div>
                 <div class="review-card">
                     <div class="review-stars">★★★★★</div>
-                    <p>"Sistema de agendamento maravilhoso, fiz tudo pelo celular em segundos. O espaço físico é espetacular e o café é divino."</p>
-                    <div class="review-author">Heloísa M.</div>
+                    <p>"O sistema de concierge digital deles funciona perfeitamente. Agendo tudo em menos de 1 minuto e a confirmação chega imediata. Espaço maravilhoso."</p>
+                    <div class="review-author">Alessandra S.</div>
                 </div>
                 <div class="review-card">
                     <div class="review-stars">★★★★★</div>
-                    <p>"Realizei o serviço de Morena Iluminada Premium e superou minhas expectativas. Cuidado milimétrico com a integridade dos fios."</p>
-                    <div class="review-author">Mariana R.</div>
+                    <p>"Experiência de alto padrão do início ao fim. O ambiente com detalhes em lavanda traz uma paz única, e o atendimento é impecável."</p>
+                    <div class="review-author">Valéria M.</div>
                 </div>
             </div>
         </div>
@@ -1324,56 +1333,55 @@
     <section>
         <div class="container">
             <div class="section-title">
-                <span>Dúvidas</span>
+                <span>Informações Úteis</span>
                 <h3>Perguntas Frequentes</h3>
             </div>
             <div class="faq-wrap">
                 <div class="faq-item">
-                    <button class="faq-trigger">Preciso pagar antecipado pelo agendamento?</button>
+                    <button class="faq-trigger">Como funciona o pagamento dos procedimentos?</button>
                     <div class="faq-content">
-                        <p>Não. O pagamento é realizado diretamente no salão após a execução dos serviços. Aceitamos PIX, Crédito, Débito e parcelamento em até 10x para procedimentos acima de R$ 300,00.</p>
+                        <p>Os pagamentos são liquidados diretamente na recepção do estúdio após a finalização dos atendimentos. Aceitamos PIX, cartões de débito, crédito e disponibilizamos parcelamento em até 10x sem juros.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-trigger">Como funciona a escolha do profissional?</button>
+                    <button class="faq-trigger">Posso alterar o profissional após agendar?</button>
                     <div class="faq-content">
-                        <p>Durante a etapa do fluxo inteligente você pode selecionar o especialista de sua preferência ou optar por 'Próximo Disponível' caso queira maior rapidez.</p>
+                        <p>Sim. Através do canal direto do nosso WhatsApp corporativo enviado na sua mensagem de confirmação, nossa recepção pode gerenciar seus horários e realizar realocações conforme sua preferência de agenda.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-trigger">Como posso cancelar ou reagendar?</button>
+                    <button class="faq-trigger">Trabalham com atendimento sem horário marcado?</button>
                     <div class="faq-content">
-                        <p>Após concluir seu agendamento, você receberá a confirmação no WhatsApp. Qualquer alteração ou cancelamento pode ser solicitada respondendo a mensagem diretamente à nossa recepção.</p>
+                        <p>Não. Para garantir o padrão de exclusividade, conforto e pontualidade, todos os atendimentos da Maison Élégance ocorrem estritamente com agendamento e reserva prévia.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Map Module -->
+    <!-- Localização -->
     <section id="contato" style="background: #FFF;">
         <div class="container contact-grid">
             <div class="contact-info">
-                <h4>Contato & Horários</h4>
+                <h4>Atelier Alphaville</h4>
                 <div class="info-row">
-                    <span>Endereço</span>
+                    <span>Localização Premium</span>
                     Alameda dos Ipês, 820 — Alphaville, Barueri/SP
                 </div>
                 <div class="info-row">
-                    <span>Atendimento</span>
-                    Terça a Sexta: 09h às 20h<br>Sábado: 08h às 19h
+                    <span>Horários de Operação</span>
+                    Terça a Sexta-feira: 09h às 20h<br>Sábados: 08h às 19h
                 </div>
                 <div class="info-row">
-                    <span>Telefones</span>
-                    (11) 99827-5416 (WhatsApp)<br>(11) 4168-7324 (Fixo)
+                    <span>Contatos Oficiais</span>
+                    Central WhatsApp: (11) 99827-5416<br>Telefone Fixo: (11) 4168-7324
                 </div>
             </div>
             <div>
-                <!-- Simulated Google Map Component Premium Visual -->
                 <div class="map-frame">
-                    <div style="padding: 40px; color: var(--text-muted); text-align: center; margin-top: 80px;">
-                        <strong>Maison Élégance Google Maps Actived Location</strong><br>
-                        Alameda dos Ipês, 820 - Alphaville, Barueri - SP, 06454-000
+                    <div style="font-family: var(--font); color: var(--text-muted); text-align: center; font-size:15px; padding: 30px;">
+                        <strong>Maison Élégance Google Maps Interface</strong><br>
+                        <span style="font-family: var(--font-sans); font-size:12px; display:block; margin-top:8px;">Alameda dos Ipês, 820 - Alphaville - SP</span>
                     </div>
                 </div>
             </div>
@@ -1385,27 +1393,28 @@
         <div class="container">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px;">
                 <div>
-                    <h4 style="color: #FFF; margin-bottom: 16px;">Maison Élégance</h4>
-                    <p style="color: #A39E99; max-width: 320px;">Studio de Beleza Premium especializado em técnicas avançadas de coloração, mechas e estética de luxo em Alphaville.</p>
+                    <h4 style="color: #FFF; margin-bottom: 20px; font-size:22px; font-weight:300; letter-spacing:1px;">Maison Élégance</h4>
+                    <p style="color: #8D7F9E; max-width: 350px; font-size: 13px; line-height: 1.8;">Studio especializado em técnicas avançadas de alta costura capilar, mechas exclusivas e estética integrativa de luxo em Alphaville.</p>
                 </div>
                 <div>
-                    <h5 style="color: #FFF; margin-bottom: 16px;">Políticas</h5>
-                    <p style="color: #A39E99;">Atendimento estritamente agendado previamente.</p>
+                    <h5 style="color: #FFF; margin-bottom: 20px; font-size:12px; text-transform:uppercase; letter-spacing:1.5px;">Protocolos</h5>
+                    <p style="color: #8D7F9E; font-size:13px;">Ambiente restrito e monitorado. Vagas limitadas por dia.</p>
                 </div>
             </div>
             <div class="footer-wrap">
                 <div>© 2026 Maison Élégance Beauty Studio. Todos os direitos reservados.</div>
-                <div>Desenvolvido por Cliente Agenda SaaS Engine.</div>
+                <div>Plataforma desenvolvida por Engine SaaS Automations Corporativas.</div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Action -->
-    <a href="https://wa.me/5511998275416" class="whatsapp-float" target="_blank" aria-label="Fale Conosco pelo WhatsApp">➔</a>
+    <!-- Concierge Assistant Floating Link -->
+    <a href="https://wa.me/5511998275416" class="whatsapp-float" target="_blank" aria-label="Acessar Concierge WhatsApp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
 
-    <!-- Core Interactive Client Automation Logic -->
+    <!-- Application Automation Engine Scripts -->
     <script>
-        // State Store Object
         const state = {
             step: 1,
             maxSteps: 5,
@@ -1422,14 +1431,13 @@
         };
 
         const stepMeta = {
-            1: { title: "Selecione o Serviço", desc: "Escolha o atendimento de luxo que deseja realizar hoje." },
-            2: { title: "Escolha o Profissional", desc: "Selecione um de nossos 12 especialistas disponíveis." },
-            3: { title: "Data e Horário", desc: "Selecione o melhor momento em nossa agenda integrada." },
-            4: { title: "Dados de Contato", desc: "Precisamos de suas informações essenciais para o cadastro seguro." },
-            5: { title: "Confirme sua Solicitação", desc: "Revise com atenção as informações do seu agendamento." }
+            1: { title: "Selecione o Serviço", desc: "Escolha o procedimento principal desejado." },
+            2: { title: "Escolha o Profissional", desc: "Selecione um de nossos especialistas em Alphaville." },
+            3: { title: "Data e Horário", desc: "Consulte a disponibilidade de nossa agenda integrada." },
+            4: { title: "Dados da Titular", desc: "Preencha as credenciais para o seu cadastro de segurança." },
+            5: { title: "Confirme os Dados", desc: "Revise atentamente as informações da sua vaga reservada." }
         };
 
-        // DOM elements cache
         const btnBack = document.getElementById('btnBack');
         const btnNext = document.getElementById('btnNext');
         const progressFill = document.getElementById('progressFill');
@@ -1437,106 +1445,103 @@
         const stepTitle = document.getElementById('stepTitle');
         const stepDesc = document.getElementById('stepDesc');
 
-        // Navigation Menu
         document.getElementById('menuToggle').addEventListener('click', () => {
             document.getElementById('mainNav').classList.toggle('active');
         });
 
-        // Initialize Calendar Mock Dates
-        function generateCalendar() {
+        function buildCalendarMatrix() {
             const grid = document.getElementById('calendarGrid');
             grid.innerHTML = '';
             
-            // Add custom day headers
-            const days = ['D','S','T','Q','Q','S','S'];
-            days.forEach(d => {
-                const h = document.createElement('div');
-                h.className = 'cal-day-head';
-                h.innerText = d;
-                grid.appendChild(h);
+            const weekDays = ['D','S','T','Q','Q','S','S'];
+            weekDays.forEach(day => {
+                const headerCell = document.createElement('div');
+                headerCell.className = 'cal-day-head';
+                headerCell.innerText = day;
+                grid.appendChild(headerCell);
             });
 
-            // Injects 14 simulated upcoming days starting from a Tuesday lookandfeel
             for(let i=1; i<=14; i++) {
-                const dayNode = document.createElement('div');
-                dayNode.className = 'cal-day';
-                // Block simulated Sundays/Mondays as business logic rules
+                const dayCell = document.createElement('div');
+                dayCell.className = 'cal-day';
+                
                 if(i === 1 || i === 2 || i === 8 || i === 9) {
-                    dayNode.classList.add('disabled');
+                    dayCell.classList.add('disabled');
                 }
-                dayNode.innerText = i + 10; 
-                dayNode.addEventListener('click', () => {
-                    if(!dayNode.classList.contains('disabled')) {
+                
+                dayCell.innerText = i + 12;
+                dayCell.addEventListener('click', () => {
+                    if(!dayCell.classList.contains('disabled')) {
                         document.querySelectorAll('.cal-day').forEach(d => d.classList.remove('selected'));
-                        dayNode.classList.add('selected');
-                        state.data.date = `${dayNode.innerText}/07/2026`;
-                        validateStepState();
+                        dayCell.classList.add('selected');
+                        state.data.date = `${dayCell.innerText}/07/2026`;
+                        validateStateEngine();
                     }
                 });
-                grid.appendChild(dayNode);
+                grid.appendChild(dayCell);
             }
         }
 
-        // Handle Global Setup Options Selectors
-        function bindSelectors() {
-            // Service Selector logic
+        function initSelectors() {
             document.querySelectorAll('#serviceSelector .select-card').forEach(card => {
                 card.addEventListener('click', () => {
                     document.querySelectorAll('#serviceSelector .select-card').forEach(c => c.classList.remove('selected'));
                     card.classList.add('selected');
                     state.data.service = card.getAttribute('data-value');
                     state.data.duration = card.getAttribute('data-duration');
-                    validateStepState();
+                    validateStateEngine();
                 });
             });
 
-            // Professional Selector logic
             document.querySelectorAll('#professionalSelector .select-card').forEach(card => {
                 card.addEventListener('click', () => {
                     document.querySelectorAll('#professionalSelector .select-card').forEach(c => c.classList.remove('selected'));
                     card.classList.add('selected');
                     state.data.professional = card.getAttribute('data-value');
-                    validateStepState();
+                    validateStateEngine();
                 });
             });
 
-            // Time Selector logic
             document.querySelectorAll('#timeSelector .select-card').forEach(card => {
                 card.addEventListener('click', () => {
                     document.querySelectorAll('#timeSelector .select-card').forEach(c => c.classList.remove('selected'));
                     card.classList.add('selected');
                     state.data.time = card.getAttribute('data-value');
-                    validateStepState();
+                    validateStateEngine();
                 });
             });
 
-            // Sync structural form inputs realtime
-            document.getElementById('clientName').addEventListener('input', (e) => { state.data.name = e.target.value; validateStepState(); });
-            document.getElementById('clientWhatsapp').addEventListener('input', (e) => { 
-                // Phone Masking Logic
-                let v = e.target.value.replace(/\D/g, '');
-                v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
-                v = v.replace(/(\d{5})(\d)/, "$1-$2");
-                e.target.value = v.substring(0, 15);
-                state.data.whatsapp = e.target.value; 
-                validateStepState(); 
+            document.getElementById('clientName').addEventListener('input', (e) => {
+                state.data.name = e.target.value;
+                validateStateEngine();
             });
-            document.getElementById('clientNotes').addEventListener('input', (e) => { state.data.notes = e.target.value; });
+
+            document.getElementById('clientWhatsapp').addEventListener('input', (e) => {
+                let input = e.target.value.replace(/\D/g, '');
+                input = input.replace(/^(\d{2})(\d)/g, "($1) $2");
+                input = input.replace(/(\d{5})(\d)/, "$1-$2");
+                e.target.value = input.substring(0, 15);
+                state.data.whatsapp = e.target.value;
+                validateStateEngine();
+            });
+
+            document.getElementById('clientNotes').addEventListener('input', (e) => {
+                state.data.notes = e.target.value;
+            });
         }
 
-        function validateStepState() {
-            let isValid = false;
-            if(state.step === 1 && state.data.service) isValid = true;
-            if(state.step === 2 && state.data.professional) isValid = true;
-            if(state.step === 3 && state.data.date && state.data.time) isValid = true;
-            if(state.step === 4 && state.data.name.trim().length > 3 && state.data.whatsapp.length >= 14) isValid = true;
-            if(state.step === 5) isValid = true;
+        function validateStateEngine() {
+            let stepValid = false;
+            if(state.step === 1 && state.data.service) stepValid = true;
+            if(state.step === 2 && state.data.professional) stepValid = true;
+            if(state.step === 3 && state.data.date && state.data.time) stepValid = true;
+            if(state.step === 4 && state.data.name.trim().length > 4 && state.data.whatsapp.length >= 14) stepValid = true;
+            if(state.step === 5) stepValid = true;
 
-            btnNext.disabled = !isValid;
+            btnNext.disabled = !stepValid;
         }
 
-        function updateStepView() {
-            // Screen switching mechanism
+        function syncEngineDOM() {
             document.querySelectorAll('.step-pane').forEach(pane => {
                 pane.classList.remove('active');
                 if(parseInt(pane.getAttribute('data-step')) === state.step) {
@@ -1544,21 +1549,17 @@
                 }
             });
 
-            // Meta update
             stepTitle.innerText = stepMeta[state.step].title;
             stepDesc.innerText = stepMeta[state.step].desc;
-            
-            // Progress Bar Engine
-            const pct = (state.step / state.maxSteps) * 100;
-            progressFill.style.width = `${pct}%`;
+
+            const ratio = (state.step / state.maxSteps) * 100;
+            progressFill.style.width = `${ratio}%`;
             progressText.innerText = `${state.step}/${state.maxSteps}`;
 
-            // Button controls
             btnBack.disabled = (state.step === 1);
-            
+
             if(state.step === state.maxSteps) {
-                btnNext.innerText = "Confirmar Agendamento";
-                // Inject Summary data outputs
+                btnNext.innerText = "Confirmar Reserva";
                 document.getElementById('sumService').innerText = state.data.service;
                 document.getElementById('sumProfessional').innerText = state.data.professional;
                 document.getElementById('sumDate').innerText = state.data.date;
@@ -1568,53 +1569,48 @@
                 btnNext.innerText = "Avançar";
             }
 
-            validateStepState();
+            validateStateEngine();
         }
 
-        // Core Event loops execution
         btnNext.addEventListener('click', () => {
             if(state.step < state.maxSteps) {
                 state.step++;
-                updateStepView();
+                syncEngineDOM();
             } else {
-                // Final execution triggers integration pipeline outputs
-                executeFinalSaaSPipeline();
+                dispatchConciergeData();
             }
         });
 
         btnBack.addEventListener('click', () => {
             if(state.step > 1) {
                 state.step--;
-                updateStepView();
+                syncEngineDOM();
             }
         });
 
-        function executeFinalSaaSPipeline() {
-            // Build absolute luxury dynamic conversion WhatsApp text string
-            const waBase = "https://wa.me/5511998275416";
-            const textMsg = `Olá Maison Élégance, gostaria de confirmar meu agendamento premium:\n\n` +
-                            `• *Procedimento*: ${state.data.service}\n` +
-                            `• *Profissional*: ${state.data.professional}\n` +
-                            `• *Data/Horário*: ${state.data.date} às ${state.data.time}\n` +
-                            `• *Cliente*: ${state.data.name}\n` +
-                            `• *WhatsApp*: ${state.data.whatsapp}\n` +
-                            (state.data.notes ? `• *Notas*: ${state.data.notes}\n` : "") +
-                            `\n_Enviado automaticamente via plataforma inteligente Maison Élégance._`;
-            
-            const fullUrl = `${waBase}?text=${encodeURIComponent(textMsg)}`;
-            window.open(fullUrl, '_blank');
+        function dispatchConciergeData() {
+            const waRoot = "https://wa.me/5511998275416";
+            const dispatchMessage = `Solicitação de Reserva - Maison Élégance\n\n` +
+                                    `• *Procedimento*: ${state.data.service}\n` +
+                                    `• *Especialista*: ${state.data.professional}\n` +
+                                    `• *Data e Horário*: ${state.data.date} às ${state.data.time}\n\n` +
+                                    `*Dados de Cadastro*:\n` +
+                                    `• *Cliente*: ${state.data.name}\n` +
+                                    `• *WhatsApp*: ${state.data.whatsapp}\n` +
+                                    (state.data.notes ? `• *Notas Especiais*: ${state.data.notes}\n` : "") +
+                                    `\n_Por favor, confirmar vaga no mapa de agendamentos._`;
+
+            window.open(`${waRoot}?text=${encodeURIComponent(dispatchMessage)}`, '_blank');
         }
 
-        // Init System runtime execution
-        generateCalendar();
-        bindSelectors();
-        validateStepState();
+        buildCalendarMatrix();
+        initSelectors();
+        validateStateEngine();
 
-        // FAQ Accordeon functional execution
         document.querySelectorAll('.faq-trigger').forEach(trigger => {
             trigger.addEventListener('click', () => {
-                const item = trigger.parentElement;
-                item.classList.toggle('active');
+                const parent = trigger.parentElement;
+                parent.classList.toggle('active');
             });
         });
     </script>
