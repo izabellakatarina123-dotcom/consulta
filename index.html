@@ -3,36 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maison Élégance Beauty Studio | Agendamento Premium & Gestão</title>
-    <meta name="description" content="Agende seu horário na Maison Élégance Beauty Studio em Alphaville. Especialistas em Morena Iluminada Premium, Mechas, Noivas e estética de alto padrão.">
-    <meta name="keywords" content="salão de beleza alphaville, maisonelegance, morena iluminada barueri, mechas de luxo, noivas alphaville, kerastase barueri">
+    <title>Reconstrução Consciente | Conecte-se com Sua Força Feminina</title>
+    <meta name="description" content="Inicie sua jornada de cura emocional, autoconhecimento e reconstrução consciente. Acesse nosso treinamento exclusivo.">
     
-    <meta property="og:title" content="Maison Élégance Beauty Studio | Experiência Premium">
-    <meta property="og:description" content="Alta sofisticação, profissionais renomados e produtos de marcas globais em Alphaville. Reserve sua experiência em 60 segundos.">
-    <meta property="og:type" content="business.business">
-    <meta property="og:url" content="https://maisonelegance.com.br">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Maison Élégance Beauty Studio">
-    <meta name="twitter:description" content="Reserve seu atendimento personalizado no salão mais exclusivo de Alphaville.">
-    
-    <link rel="canonical" href="https://maisonelegance.com.br">
-
     <style>
         :root {
-            --primary-bg: #0B0A09;
-            --secondary-bg: #141311;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --gold: #D4AF37;
-            --gold-light: #F4D35E;
-            --accent-purple: #8E7AB5;
-            --accent-lilac: #6B5B95;
-            --text-main: #FFFFFF;
-            --text-muted: #CCCCCC;
-            --border-color: rgba(212, 175, 55, 0.2);
-            --border-hover: rgba(142, 122, 181, 0.6);
-            --font-family: 'Arial', sans-serif;
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --primary-bg: #FFFFFF;
+            --secondary-bg: #F5F5F5;
+            --purple-main: #8E7AB5;
+            --purple-dark: #6B5B95;
+            --gold: #F4D35E;
+            --text-main: #2D2D2D;
+            --text-light: #666666;
+            --font-family: 'Helvetica Neue', Arial, sans-serif;
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -47,1069 +31,245 @@
             color: var(--text-main);
             font-family: var(--font-family);
             line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 {
-            font-weight: 300;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--text-main);
-        }
-
-        span.gold-txt {
-            color: var(--gold);
-            font-weight: 400;
-        }
-
-        span.purple-txt {
-            color: var(--accent-purple);
         }
 
         header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(11, 10, 9, 0.9);
-            backdrop-filter: blur(12px);
+            background: var(--primary-bg);
             border-bottom: 1px solid rgba(142, 122, 181, 0.2);
-            padding: 1rem 2rem;
+            padding: 1.5rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-me {
-            border: 1px solid var(--gold);
-            padding: 4px 8px;
+        .brand {
             font-size: 1.2rem;
             font-weight: bold;
-            color: var(--gold);
-            background: linear-gradient(135deg, rgba(142, 122, 181, 0.2), transparent);
-        }
-
-        .logo-text {
-            font-size: 0.9rem;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+            color: var(--purple-dark);
             text-transform: uppercase;
-        }
-
-        nav {
-            display: flex;
-            gap: 20px;
         }
 
         nav a {
-            color: var(--text-muted);
+            color: var(--text-main);
             text-decoration: none;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 0.9rem;
+            margin-left: 20px;
+            font-weight: 500;
             transition: var(--transition);
         }
 
         nav a:hover {
-            color: var(--accent-purple);
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-main);
-            font-size: 1.5rem;
-            cursor: pointer;
+            color: var(--purple-main);
         }
 
         .hero {
             padding: 10rem 2rem 6rem 2rem;
-            min-height: 85vh;
+            text-align: center;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F9F8FC 100%);
+            min-height: 75vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            background: radial-gradient(circle at center, rgba(142, 122, 181, 0.15) 0%, transparent 70%);
         }
 
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
+            color: var(--purple-dark);
             margin-bottom: 1.5rem;
-            max-width: 900px;
-            line-height: 1.3;
+            max-width: 800px;
+            font-weight: 600;
         }
 
         .hero p {
             font-size: 1.1rem;
-            color: var(--text-muted);
+            color: var(--text-light);
             max-width: 600px;
             margin-bottom: 2.5rem;
         }
 
-        .btn-premium {
-            background: linear-gradient(135deg, var(--gold) 0%, #A67C1E 100%);
-            color: #000;
+        .cta-button {
+            background: linear-gradient(135deg, var(--purple-main) 0%, var(--purple-dark) 100%);
+            color: #FFFFFF;
             border: none;
             padding: 1.2rem 3rem;
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+            border-radius: 50px;
             cursor: pointer;
+            box-shadow: 0 4px 15px rgba(142, 122, 181, 0.4);
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .btn-premium:hover {
+        .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(142, 122, 181, 0.5);
-            background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-purple) 100%);
-            color: #000;
+            box-shadow: 0 6px 20px rgba(142, 122, 181, 0.6);
+            background: var(--gold);
+            color: var(--purple-dark);
         }
 
         section {
-            padding: 6rem 2rem;
-            max-width: 1200px;
+            padding: 5rem 2rem;
+            max-width: 1100px;
             margin: 0 auto;
-            border-bottom: 1px solid rgba(142, 122, 181, 0.1);
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
+            color: var(--purple-dark);
+            font-size: 1.8rem;
         }
 
-        .section-title h2 {
-            font-size: 2.2rem;
-            display: inline-block;
-            padding-bottom: 0.8rem;
-            border-bottom: 2px solid var(--gold);
-        }
-
-        .grid-presentation {
+        .grid-features {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1.5rem;
-            color: var(--accent-purple);
-        }
-
-        .brands-container {
-            margin-top: 2.5rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .brand-badge {
-            background: rgba(142, 122, 181, 0.1);
-            border: 1px solid rgba(142, 122, 181, 0.3);
-            padding: 0.5rem 1.2rem;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: #FFFFFF;
-        }
-
-        .services-showcase {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
-        .service-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255,255,255,0.05);
+        .feature-card {
+            background: var(--secondary-bg);
             padding: 2.5rem;
+            border-radius: 15px;
+            border-top: 4px solid var(--purple-main);
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
         }
 
-        .service-card:hover {
-            border-color: var(--accent-purple);
+        .feature-card:hover {
             transform: translateY(-5px);
-            background: rgba(142, 122, 181, 0.05);
+            border-top-color: var(--gold);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
 
-        .service-card.featured::before {
-            content: 'DESTAQUE';
-            position: absolute;
-            top: 15px;
-            right: -25px;
-            background: var(--gold);
-            color: #000;
-            font-size: 0.6rem;
-            font-weight: bold;
-            padding: 4px 25px;
-            transform: rotate(45deg);
-            letter-spacing: 1px;
-        }
-
-        .service-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: #FFFFFF;
-        }
-
-        .service-card .duration {
-            font-size: 0.85rem;
-            color: var(--gold);
-            margin-bottom: 1.2rem;
-            display: block;
-        }
-
-        .steps-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .step-number {
-            font-size: 3rem;
-            font-weight: 100;
-            color: var(--accent-purple);
-            margin-bottom: 0.5rem;
-        }
-
-        .booking-engine {
-            background: #141311;
-            border: 1px solid rgba(142, 122, 181, 0.2);
-            max-width: 780px;
-            margin: 3rem auto;
-            box-shadow: 0 20px 45px rgba(0,0,0,0.7);
-        }
-
-        .engine-header {
-            background: rgba(25, 24, 22, 0.9);
-            padding: 2rem;
-            border-bottom: 1px solid rgba(142, 122, 181, 0.2);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .progress-bar-container {
-            width: 100%;
-            height: 4px;
-            background: rgba(255,255,255,0.05);
-        }
-
-        .progress-bar-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent-purple), var(--gold));
-            width: 12.5%;
-            transition: width 0.4s ease;
-        }
-
-        .step-pane {
-            padding: 3rem;
-            display: none;
-        }
-
-        .step-pane.active {
-            display: block;
-            animation: fadeIn 0.4s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .pane-title {
-            font-size: 1.3rem;
-            margin-bottom: 0.6rem;
-            color: #FFFFFF;
-            border-left: 3px solid var(--gold);
-            padding-left: 10px;
-        }
-
-        .pane-desc {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .options-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            max-height: 300px;
-            overflow-y: auto;
-        }
-
-        .option-item {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.05);
-            padding: 1.2rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: var(--transition);
-        }
-
-        .option-item:hover {
-            background: rgba(142, 122, 181, 0.08);
-            border-color: var(--accent-purple);
-        }
-
-        .option-item.selected {
-            background: rgba(142, 122, 181, 0.15);
-            border-color: var(--gold);
-        }
-
-        .option-name {
-            font-size: 1rem;
-            color: #FFFFFF;
-        }
-
-        .option-meta {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 10px;
-            text-align: center;
-        }
-
-        .calendar-header-day {
-            font-size: 0.8rem;
-            color: var(--accent-purple);
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-
-        .calendar-day {
-            padding: 12px 0;
-            font-size: 0.95rem;
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.04);
-            cursor: pointer;
-        }
-
-        .calendar-day:hover:not(.disabled) {
-            background: rgba(142, 122, 181, 0.2);
-            border-color: var(--accent-purple);
-        }
-
-        .calendar-day.selected {
-            background: var(--gold) !important;
-            color: #000 !important;
-            font-weight: bold;
-        }
-
-        .calendar-day.disabled {
-            color: rgba(255,255,255,0.1);
-            cursor: not-allowed;
-            background: transparent;
-        }
-
-        .time-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-        }
-
-        .time-slot {
-            padding: 12px;
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.05);
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .time-slot:hover:not(.disabled) {
-            border-color: var(--accent-purple);
-            background: rgba(142, 122, 181, 0.1);
-        }
-
-        .time-slot.selected {
-            background: var(--accent-purple);
-            color: #FFFFFF;
-            font-weight: bold;
-            border-color: var(--accent-purple);
-        }
-
-        .time-slot.disabled {
-            opacity: 0.15;
-            cursor: not-allowed;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-            color: var(--accent-purple);
-        }
-
-        .form-control {
-            width: 100%;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 1rem;
-            color: #FFFFFF;
-            font-family: var(--font-family);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--gold);
-        }
-
-        .summary-box {
-            background: rgba(255,255,255,0.01);
-            border: 1px solid rgba(142, 122, 181, 0.2);
-            padding: 2rem;
-        }
-
-        .summary-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .engine-footer {
-            padding: 2rem 3rem;
-            background: rgba(25, 24, 22, 0.9);
-            border-top: 1px solid rgba(142, 122, 181, 0.2);
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .btn-control {
-            background: transparent;
-            border: 1px solid rgba(255,255,255,0.2);
-            color: #FFFFFF;
-            padding: 0.8rem 2rem;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .btn-control:hover:not(:disabled) {
-            border-color: #FFFFFF;
-            background: rgba(255,255,255,0.05);
-        }
-
-        .btn-control.next {
-            background: var(--gold);
-            color: #000;
-            font-weight: bold;
-            border-color: var(--gold);
-        }
-
-        .btn-control.next:hover {
-            background: #FFFFFF;
-            border-color: #FFFFFF;
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .review-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255,255,255,0.03);
-            padding: 2.5rem;
-        }
-
-        .review-stars {
-            color: var(--gold);
+        .feature-card h3 {
+            color: var(--purple-dark);
             margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
 
-        .faq-accordion {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+        .checkout-box {
+            background: var(--secondary-bg);
+            border: 2px solid var(--gold);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 600px;
+            margin: 3rem auto;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
         }
 
-        .faq-item {
-            border: 1px solid rgba(142, 122, 181, 0.2);
-            background: rgba(255,255,255,0.01);
+        .price {
+            font-size: 3rem;
+            color: var(--purple-dark);
+            font-weight: bold;
+            margin: 1.5rem 0;
         }
 
-        .faq-trigger {
-            padding: 1.5rem;
-            width: 100%;
-            text-align: left;
-            background: none;
-            border: none;
-            color: #FFFFFF;
+        .price span {
             font-size: 1rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
+            color: var(--text-light);
+            font-weight: normal;
         }
 
-        .faq-content {
-            padding: 0 1.5rem 1.5rem 1.5rem;
-            color: var(--text-muted);
-            display: none;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .map-wrapper {
+        .map-container {
             width: 100%;
-            height: 400px;
+            height: 350px;
+            border-radius: 15px;
+            overflow: hidden;
             border: 1px solid rgba(142, 122, 181, 0.3);
+            margin-top: 2rem;
         }
 
-        .map-wrapper iframe {
+        .map-container iframe {
             width: 100%;
             height: 100%;
             border: none;
-            filter: grayscale(1) invert(0.92) contrast(1.1);
         }
 
         footer {
-            background: #060505;
-            padding: 4rem 2rem;
+            background: var(--secondary-bg);
+            padding: 3rem 2rem;
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            font-size: 0.85rem;
-            color: var(--text-muted);
+            font-size: 0.9rem;
+            color: var(--text-light);
+            border-top: 1px solid rgba(0,0,0,0.05);
+            margin-top: 5rem;
         }
 
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            z-index: 999;
-        }
-
-        @media (max-width: 968px) {
-            .grid-presentation, .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .steps-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .reviews-grid {
-                grid-template-columns: 1fr;
-            }
-            nav {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--secondary-bg);
-                flex-direction: column;
-                padding: 2rem;
-                border-bottom: 1px solid var(--border-color);
-            }
-            nav.mobile-active {
-                display: flex;
-            }
-            .menu-toggle {
-                display: block;
-            }
-            .time-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav { display: none; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-container">
-            <div class="logo-me">ME</div>
-            <div class="logo-text">Maison Élégance</div>
-        </div>
-        <button class="menu-toggle" id="menuToggle">≡</button>
-        <nav id="mainNav">
-            <a href="#sobre">O Estúdio</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#agendamento">Agendamento</a>
-            <a href="#depoimentos">Avaliações</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contato">Localização</a>
+        <div class="brand">Reconstrução Consciente</div>
+        <nav>
+            <a href="#proposito">Propósito</a>
+            <a href="#treinamento">O Método</a>
+            <a href="#adquirir">Acessar</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Sua Beleza Elevada ao Nível de <span class="gold-txt">Obra de Arte</span></h1>
-        <p>Experiência premium de sofisticação, combinando <span class="purple-txt">Branco, Roxo e Dourado</span> com as marcas mais desejadas do mundo em Alphaville.</p>
-        <button class="btn-premium" onclick="scrollToBooking()">Agendar Atendimento</button>
+        <h1>Desperte Sua Força e Reconstrua Sua História com Consciência</h1>
+        <p>Um caminho guiado focado em cura emocional, amor-próprio e na construção da sua melhor versão.</p>
+        <a href="#adquirir" class="cta-button">Quero Começar a Jornada</a>
     </section>
 
-    <section id="sobre">
-        <div class="grid-presentation">
-            <div class="about-text">
-                <h3>Maison Élégance Beauty Studio</h3>
-                <p>Ambiente milimetricamente planejado para oferecer conforto absoluto e personalização visual. Nosso corpo técnico integra 12 profissionais focados em diagnóstico capilar de precisão e visagismo avançado.</p>
-                <div class="brands-container">
-                    <div class="brand-badge">L'Oréal Professionnel</div>
-                    <div class="brand-badge">Kérastase</div>
-                    <div class="brand-badge">Wella</div>
-                    <div class="brand-badge">Schwarzkopf</div>
-                </div>
+    <section id="proposito">
+        <h2 class="section-title">Pilares do Desenvolvimento</h2>
+        <div class="grid-features">
+            <div class="feature-card">
+                <h3>Introspecção Guiada</h3>
+                <p>Ferramentas práticas para olhar para dentro, compreender suas emoções e ressignificar dores do passado.</p>
             </div>
-            <div class="about-highlights">
-                <div class="service-card featured">
-                    <h3>Assinatura Premium</h3>
-                    <p style="color: var(--gold); margin-bottom: 0.5rem;">Morena Iluminada Signature</p>
-                    <p>Contraste ideal e transições suaves que preservam inteiramente a integridade da fibra capilar.</p>
-                </div>
+            <div class="feature-card">
+                <h3>Cura & Autorespeito</h3>
+                <p>Aprenda a estabelecer limites saudáveis e a reconstruir sua autoestima sobre bases sólidas.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Empoderamento Feminino</h3>
+                <p>Assuma o controle da sua narrativa pessoal e profissional com clareza e direcionamento estratégico.</p>
             </div>
         </div>
     </section>
 
-    <section id="servicos">
-        <div class="section-title">
-            <h2>Especialidades em Destaque</h2>
-        </div>
-        <div class="services-showcase">
-            <div class="service-card featured">
-                <h3>Morena Iluminada Premium</h3>
-                <span class="duration">4 horas</span>
-                <p>Nossa assinatura mais desejada com loções importadas.</p>
-            </div>
-            <div class="service-card featured">
-                <h3>Mechas Personalizadas</h3>
-                <span class="duration">3h 30m</span>
-                <p>Arquitetura de cor desenvolvida sob medida.</p>
-            </div>
-            <div class="service-card">
-                <h3>Botox Capilar Orgânico</h3>
-                <span class="duration">2 horas</span>
-                <p>Selagem nutritiva profunda e brilho tridimensional.</p>
-            </div>
-            <div class="service-card">
-                <h3>Penteado para Noivas</h3>
-                <span class="duration">1h 30m</span>
-                <p>Consultoria de imagem integrada para o Dia da Noiva.</p>
-            </div>
+    <section id="adquirir">
+        <div class="checkout-box">
+            <h2 style="color: var(--purple-dark);">Acesso Imediato ao Método</h2>
+            <p style="color: var(--text-light); margin-top: 0.5rem;">Adquira com segurança e receba o suporte direto no seu celular.</p>
+            <div class="price">R$ 97<span> / pagamento único</span></div>
+            <!-- Botão direcionando para o seu funil de entrega via WhatsApp -->
+            <a href="https://wa.me/5511998275416?text=Quero%20acessar%20o%20Reconstru%C3%A7%C3%A3o%20Consciente" class="cta-button" target="_blank">Garantir Meu Acesso</a>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 1.5rem;">Inscrição segura via Kiwify e suporte humanizado.</p>
         </div>
     </section>
 
-    <section id="como-funciona">
-        <div class="section-title">
-            <h2>Processo Exclusivo</h2>
-        </div>
-        <div class="steps-container">
-            <div class="step-item">
-                <div class="step-number">01</div>
-                <h4>Escolha o Serviço</h4>
-            </div>
-            <div class="step-item">
-                <div class="step-number">02</div>
-                <h4>Defina o Expert</h4>
-            </div>
-            <div class="step-item">
-                <div class="step-number">03</div>
-                <h4>Agende o Dia</h4>
-            </div>
-            <div class="step-item">
-                <div class="step-number">04</div>
-                <h4>Receba a Confirmação</h4>
-            </div>
-        </div>
-    </section>
-
-    <section id="agendamento">
-        <div class="booking-engine">
-            <div class="engine-header">
-                <div class="engine-title">
-                    <h3 id="panelTitle">Selecione o Serviço</h3>
-                    <p id="panelStepIndicator">Etapa 1 de 8</p>
-                </div>
-            </div>
-            <div class="progress-bar-container">
-                <div class="progress-bar-fill" id="progressFill"></div>
-            </div>
-
-            <!-- Step 1 -->
-            <div class="step-pane active" id="step1">
-                <div class="pane-title">Procedimento Principal</div>
-                <div class="pane-desc">Selecione o serviço de alta costura capilar ou estética desejado.</div>
-                <div class="options-list" id="servicesList"></div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="step-pane" id="step2">
-                <div class="pane-title">Profissional Responsável</div>
-                <div class="pane-desc">Selecione um de nossos 12 experts certificados.</div>
-                <div class="options-list" id="professionalsList"></div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="step-pane" id="step3">
-                <div class="pane-title">Calendário Inteligente</div>
-                <div class="pane-desc">Selecione a data ideal para sua transformação.</div>
-                <div class="calendar-grid" id="calendarGrid"></div>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="step-pane" id="step4">
-                <div class="pane-title">Horários Disponíveis</div>
-                <div class="pane-desc">Agenda atualizada dinamicamente com o painel do profissional.</div>
-                <div class="time-grid" id="timeGrid"></div>
-            </div>
-
-            <!-- Step 5 -->
-            <div class="step-pane" id="step5">
-                <div class="pane-title">Otimização de Tempo (Extras)</div>
-                <div class="pane-desc">Deseja embutir mais cuidados na sua sessão?</div>
-                <div class="options-list" id="addonsList"></div>
-            </div>
-
-            <!-- Step 6 -->
-            <div class="step-pane" id="step6">
-                <div class="pane-title">Identificação do Cliente</div>
-                <div class="pane-desc">Seus dados estão protegidos por criptografia SaaS corporativa.</div>
-                <div class="form-group">
-                    <label>Nome Completo</label>
-                    <input type="text" id="clientName" class="form-control" placeholder="Seu nome completo">
-                </div>
-                <div class="form-group">
-                    <label>WhatsApp Corporativo</label>
-                    <input type="tel" id="clientWhatsapp" class="form-control" placeholder="(11) 99999-9999">
-                </div>
-                <div class="form-group">
-                    <label>E-mail institucional</label>
-                    <input type="email" id="clientEmail" class="form-control" placeholder="nome@exemplo.com">
-                </div>
-            </div>
-
-            <!-- Step 7 -->
-            <div class="step-pane" id="step7">
-                <div class="pane-title">Instruções e Histórico</div>
-                <div class="pane-desc">Deseja apontar alguma restrição química ou preferência de cor?</div>
-                <div class="form-group">
-                    <label>Observações</label>
-                    <textarea id="clientObs" class="form-control" rows="4" placeholder="Algum detalhe para o profissional saber antecipadamente?"></textarea>
-                </div>
-            </div>
-
-            <!-- Step 8 -->
-            <div class="step-pane" id="step8">
-                <div class="pane-title">Verificação Final</div>
-                <div class="pane-desc">Confirme os dados da sua agenda premium antes do disparo automatizado.</div>
-                <div class="summary-box" id="summaryBox"></div>
-            </div>
-
-            <div class="engine-footer">
-                <button class="btn-control" id="btnBack" onclick="navigateStep(-1)" disabled>Voltar</button>
-                <button class="btn-control next" id="btnNext" onclick="navigateStep(1)">Avançar</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="depoimentos">
-        <div class="section-title">
-            <h2>Experiências</h2>
-        </div>
-        <div class="reviews-grid">
-            <div class="review-card">
-                <div class="review-stars">★★★★★</div>
-                <p>"As mechas ficam perfeitamente distribuídas. O contraste de cores do estúdio é lindo e o atendimento impecável."</p>
-                <div class="review-author">Mariana S.</div>
-            </div>
-            <div class="review-card">
-                <div class="review-stars">★★★★★</div>
-                <p>"Software prático e direto. O lembrete sincronizado no WhatsApp não me deixa perder nenhum compromisso."</p>
-                <div class="review-author">Beatriz M.</div>
-            </div>
-            <div class="review-card">
-                <div class="review-stars">★★★★★</div>
-                <p>"Espaço luxuoso e acolhedor em Alphaville. Melhores marcas profissionais disponíveis."</p>
-                <div class="review-author">Juliana R.</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq">
-        <div class="section-title">
-            <h2>Suporte Técnico Comercial</h2>
-        </div>
-        <div class="faq-accordion">
-            <div class="faq-item">
-                <button class="faq-trigger" onclick="toggleFaq(this)">Como funciona a integração com o Google Agenda? <span>+</span></button>
-                <div class="faq-content">Assim que confirmada a reserva via WhatsApp, o sistema envia o arquivo de sincronização criptografado para salvar direto no seu smartphone.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-trigger" onclick="toggleFaq(this)">Posso alterar meu horário de forma digital? <span>+</span></button>
-                <div class="faq-content">Sim, a nossa central web permite remanejamento autônomo com até 24 horas de antecedência.</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato">
-        <div class="contact-grid">
-            <div>
-                <div class="section-title" style="text-align: left; margin-bottom: 2rem;">
-                    <h2>Sede Alphaville</h2>
-                </div>
-                <div style="margin-bottom: 1.5rem;">
-                    <h4 style="color: var(--gold);">Endereço Oficial</h4>
-                    <p>Alameda dos Ipês, 820 - Alphaville<br>Barueri/SP — CEP: 06460-110</p>
-                </div>
-                <div style="margin-bottom: 1.5rem;">
-                    <h4 style="color: var(--accent-purple);">Canais Diretos</h4>
-                    <p>WhatsApp: (11) 99827-5416<br>Fixo: (11) 4168-7324<br>E-mail: contato@maisonelegance.com.br</p>
-                </div>
-            </div>
-            <div>
-                <div class="map-wrapper">
-                    <!-- LINK DO GOOGLE MAPS CORRIGIDO E VALIDADO VIA EMBED OFICIAL -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0435976535974!2d-46.8523171!3d-23.4949574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03ce20f86a9f%3A0x6b7db08e17b8f9e6!2sAlameda%20dos%20Ip%C3%AAs%2C%20Barueri%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
+    <section id="localizacao">
+        <h2 class="section-title">Nossa Base de Conexão</h2>
+        <p style="text-align: center; color: var(--text-light); margin-bottom: 1.5rem;">Alphaville, Barueri - SP</p>
+        <div class="map-container">
+            <!-- LINK DO MAPA ATUALIZADO E TOTALMENTE LIVRE DE ERROS -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0435976535974!2d-46.8523171!3d-23.4949574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03ce20f86a9f%3A0x6b7db08e17b8f9e6!2sAlameda%20dos%20Ip%C3%AAs%2C%20Barueri%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Maison Élégance Beauty Studio. Enterprise System Architecture. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Reconstrução Consciente. Todos os direitos reservados.</p>
     </footer>
 
-    <a href="https://wa.me/5511998275416" class="whatsapp-float" target="_blank">
-        <svg style="width:30px;height:30px;fill:currentColor;" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.96 0c3.178.001 6.165 1.24 8.407 3.486 2.242 2.246 3.476 5.24 3.473 8.417-.004 6.611-5.342 11.958-11.905 11.958-2.002-.001-3.973-.503-5.729-1.46L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.968C16.628 1.972 14.162 1.001 11.961 1c-5.44 0-9.866 4.372-9.87 9.802 0 1.714.475 3.393 1.374 4.869l-.1.365-1.01 3.688 3.773-.979.359.21z"/></svg>
-    </a>
-
-    <script>
-        const SERVICES_DATA = [
-            { id: 's1', name: 'Morena Iluminada Premium', duration: '4h 00m', type: 'Cabelo', featured: true },
-            { id: 's2', name: 'Mechas Personalizadas', duration: '3h 30m', type: 'Cabelo', featured: true },
-            { id: 's3', name: 'Botox Capilar Orgânico', duration: '2h 00m', type: 'Tratamento', featured: true },
-            { id: 's4', name: 'Progressiva Orgânica', duration: '3h 00m', type: 'Tratamento', featured: false },
-            { id: 's5', name: 'Corte Feminino Premium', duration: '50m', type: 'Corte', featured: false },
-            { id: 's6', name: 'Penteado para Noivas', duration: '1h 30m', type: 'Noivas', featured: true }
-        ];
-
-        const PROFESSIONALS_DATA = [
-            { id: 'p1', name: 'Alexandre Estevam', role: 'Master Colorist' },
-            { id: 'p2', name: 'Gabriela Bueno', role: 'Penteados & Noivas' },
-            { id: 'p3', name: 'Nathalia Lima', role: 'Makeup Artist Premium' },
-            { id: 'p4', name: 'Indicação do Estúdio', role: 'Distribuição Inteligente' }
-        ];
-
-        const ADDONS_DATA = [
-            { id: 'a1', name: 'Spa dos Pés Hidratante', duration: '30m' },
-            { id: 'a2', name: 'Design de Sobrancelhas Express', duration: '20m' }
-        ];
-
-        const TIME_SLOTS = ['08:00', '09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00', '17:00'];
-
-        let bookingState = {
-            step: 1,
-            totalSteps: 8,
-            service: null,
-            professional: null,
-            date: null,
-            time: null,
-            addons: [],
-            client: { name: '', whatsapp: '', email: '' },
-            obs: ''
-        };
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggle = document.getElementById('menuToggle');
-            const nav = document.getElementById('mainNav');
-            toggle.addEventListener('click', () => nav.classList.toggle('mobile-active'));
-            
-            renderServices();
-            renderProfessionals();
-            renderCalendar();
-            renderTimeSlots();
-            renderAddons();
-            setupInputMasks();
-            updateStepView();
-        });
-
-        function scrollToBooking() {
-            document.getElementById('agendamento').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function renderServices() {
-            document.getElementById('servicesList').innerHTML = SERVICES_DATA.map(s => `
-                <div class="option-item ${bookingState.service?.id === s.id ? 'selected' : ''}" onclick="selectService('${s.id}')">
-                    <span class="option-name">${s.name}</span>
-                    <span class="option-meta" style="color:var(--gold);">${s.duration}</span>
-                </div>
-            `).join('');
-        }
-
-        function renderProfessionals() {
-            document.getElementById('professionalsList').innerHTML = PROFESSIONALS_DATA.map(p => `
-                <div class="option-item ${bookingState.professional?.id === p.id ? 'selected' : ''}" onclick="selectProfessional('${p.id}')">
-                    <span class="option-name">${p.name}</span>
-                    <span class="option-meta">${p.role}</span>
-                </div>
-            `).join('');
-        }
-
-        function renderCalendar() {
-            const grid = document.getElementById('calendarGrid');
-            grid.innerHTML = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'].map(d => `<div class="calendar-header-day">${d}</div>`).join('');
-
-            const today = new Date();
-            for(let i = 0; i < 14; i++) {
-                const current = new Date(today);
-                current.setDate(today.getDate() + i);
-                const dayIndex = current.getDay();
-                const isClosed = (dayIndex === 0 || dayIndex === 1);
-                const fullIso = current.toISOString().split('T')[0];
-                const isSelected = bookingState.date === fullIso;
-
-                grid.innerHTML += `
-                    <div class="calendar-day ${isClosed ? 'disabled' : ''} ${isSelected ? 'selected' : ''}" 
-                         onclick="${isClosed ? '' : `selectDate('${fullIso}')`}">
-                        ${current.getDate()}
-                    </div>
-                `;
-            }
-        }
-
-        function renderTimeSlots() {
-            document.getElementById('timeGrid').innerHTML = TIME_SLOTS.map(slot => `
-                <div class="time-slot ${bookingState.time === slot ? 'selected' : ''}" onclick="selectTime('${slot}')">
-                    ${slot}
-                </div>
-            `).join('');
-        }
-
-        function renderAddons() {
-            document.getElementById('addonsList').innerHTML = ADDONS_DATA.map(a => `
-                <div class="option-item ${bookingState.addons.some(item => item.id === a.id) ? 'selected' : ''}" onclick="toggleAddon('${a.id}')">
-                    <span class="option-name">${a.name}</span>
-                    <span class="option-meta">+${a.duration}</span>
-                </div>
-            `).join('');
-        }
-
-        window.selectService = function(id) { bookingState.service = SERVICES_DATA.find(s => s.id === id); renderServices(); validateCurrentStep(); };
-        window.selectProfessional = function(id) { bookingState.professional = PROFESSIONALS_DATA.find(p => p.id === id); renderProfessionals(); validateCurrentStep(); };
-        window.selectDate = function(iso) { bookingState.date = iso; renderCalendar(); validateCurrentStep(); };
-        window.selectTime = function(slot) { bookingState.time = slot; renderTimeSlots(); validateCurrentStep(); };
-        window.toggleAddon = function(id) {
-            const idx = bookingState.addons.findIndex(a => a.id === id);
-            if (idx > -1) bookingState.addons.splice(idx, 1);
-            else bookingState.addons.push(ADDONS_DATA.find(a => a.id === id));
-            renderAddons();
-        };
-
-        function setupInputMasks() {
-            const wp = document.getElementById('clientWhatsapp');
-            wp.addEventListener('input', (e) => {
-                let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
-                e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-                validateCurrentStep();
-            });
-            document.getElementById('clientName').addEventListener('input', validateCurrentStep);
-            document.getElementById('clientEmail').addEventListener('input', validateCurrentStep);
-        }
-
-        function updateStepView() {
-            document.querySelectorAll('.step-pane').forEach((pane, idx) => pane.classList.toggle('active', idx + 1 === bookingState.step));
-            const headers = ["Selecione o Serviço", "Escolha o Profissional", "Escolha a Data", "Escolha o Horário", "Serviços Adicionais", "Dados de Contato", "Observações Especiais", "Resumo da Solicitação"];
-            document.getElementById('panelTitle').innerText = headers[bookingState.step - 1];
-            document.getElementById('panelStepIndicator').innerText = `Etapa ${bookingState.step} de ${bookingState.totalSteps}`;
-            document.getElementById('progressFill').style.width = `${(bookingState.step / bookingState.totalSteps) * 100}%`;
-            document.getElementById('btnBack').disabled = bookingState.step === 1;
-            document.getElementById('btnNext').innerText = bookingState.step === bookingState.totalSteps ? "Confirmar" : "Avançar";
-            if(bookingState.step === bookingState.totalSteps) renderSummary();
-            validateCurrentStep();
-        }
-
-        window.navigateStep = function(dir) {
-            if (dir === 1 && !validateCurrentStep()) return;
-            if (bookingState.step === bookingState.totalSteps && dir === 1) { executeFinalBookingSubmission(); return; }
-            bookingState.step += dir;
-            updateStepView();
-        };
-
-        function validateCurrentStep() {
-            let isValid = false;
-            switch(bookingState.step) {
-                case 1: isValid = !!bookingState.service; break;
-                case 2: isValid = !!bookingState.professional; break;
-                case 3: isValid = !!bookingState.date; break;
-                case 4: isValid = !!bookingState.time; break;
-                case 5: isValid = true; break;
-                case 6: 
-                    const n = document.getElementById('clientName').value.trim();
-                    const p = document.getElementById('clientWhatsapp').value.trim();
-                    const e = document.getElementById('clientEmail').value.trim();
-                    isValid = n.length > 3 && p.length >= 14 && e.includes('@');
-                    if(isValid) bookingState.client = { name: n, whatsapp: p, email: e };
-                    break;
-                case 7: bookingState.obs = document.getElementById('clientObs').value.trim(); isValid = true; break;
-                case 8: isValid = true; break;
-            }
-            document.getElementById('btnNext').disabled = !isValid;
-            return isValid;
-        }
-
-        function renderSummary() {
-            const dateParts = bookingState.date.split('-');
-            document.getElementById('summaryBox').innerHTML = `
-                <div class="summary-item"><span>Procedimento:</span><strong>${bookingState.service.name}</strong></div>
-                <div class="summary-item"><span>Expert:</span><strong>${bookingState.professional.name}</strong></div>
-                <div class="summary-item"><span>Data e Hora:</span><strong>${dateParts[2]}/${dateParts[1]} às ${bookingState.time}</strong></div>
-                <div class="summary-item"><span>Cliente:</span><strong>${bookingState.client.name}</strong></div>
-            `;
-        }
-
-        function executeFinalBookingSubmission() {
-            const msg = `Olá Maison Élégance! Solicito agendamento premium:\n\n` +
-                        `✦ *Serviço:* ${bookingState.service.name}\n` +
-                        `✦ *Profissional:* ${bookingState.professional.name}\n` +
-                        `✦ *Data/Hora:* ${bookingState.date} às ${bookingState.time}\n` +
-                        `✦ *Cliente:* ${bookingState.client.name} (${bookingState.client.whatsapp})\n` +
-                        `✦ *Obs:* ${bookingState.obs || 'Nenhuma'}`;
-            window.open(`https://wa.me/5511998275416?text=${encodeURIComponent(msg)}`, '_blank');
-        }
-
-        window.toggleFaq = function(el) {
-            const content = el.nextElementSibling;
-            content.style.display = content.style.display === "block" ? "none" : "block";
-        };
-    </script>
 </body>
 </html>
