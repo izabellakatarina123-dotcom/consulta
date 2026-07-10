@@ -1,9 +1,9 @@
+```
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Oral Prime Odontologia | Sistema de Agendamento">
 <meta property="og:description" content="Tratamentos completos com foco em saúde, estética e bem-estar em Barueri/SP. Agende em menos de 60 segundos.">
 <meta property="og:url" content="[https://oralprimeodonto.com.br](https://oralprimeodonto.com.br)">
-<meta property="og:image" content="[https://oralprimeodonto.com.br/assets/og-image.jpg](https://oralprimeodonto.com.br/assets/og-image.jpg)">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -19,10 +19,10 @@
         --text-main: #F5F5F5;
         --text-muted: #8892B0;
         --bg-main: #020C1B;
-        --bg-card: rgba(23, 42, 69, 0.7);
+        --bg-card: #112240;
         --border: rgba(212, 175, 55, 0.2);
         --success: #28C76F;
-        --font: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+        --font: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
     }
 
     * {
@@ -36,47 +36,47 @@
     body {
         background-color: var(--bg-main);
         color: var(--text-main);
-        line-height: 1.6;
+        line-height: 1.5;
         overflow-x: hidden;
     }
 
-    /* Header */
+    /* Header & Mobile Navigation */
     header {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        background: rgba(2, 12, 27, 0.85);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: rgba(2, 12, 27, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         z-index: 1000;
-        padding: 0 1.5rem;
+        height: 70px;
     }
 
     .nav-container {
         max-width: 1200px;
-        height: 75px;
+        height: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 1.25rem;
     }
 
     .logo {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         text-decoration: none;
         color: var(--text-main);
         font-weight: 700;
-        font-size: 1.3rem;
-        letter-spacing: 0.5px;
+        font-size: 1.2rem;
     }
 
     .logo-svg {
-        width: 38px;
-        height: 38px;
+        width: 32px;
+        height: 32px;
     }
 
     .logo span {
@@ -85,16 +85,16 @@
 
     .nav-menu {
         display: flex;
-        gap: 2rem;
+        gap: 1.5rem;
         list-style: none;
     }
 
     .nav-menu a {
         color: var(--text-muted);
         text-decoration: none;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         font-weight: 500;
-        transition: color 0.3s;
+        transition: color 0.2s;
     }
 
     .nav-menu a:hover {
@@ -106,140 +106,161 @@
         background: none;
         border: none;
         cursor: pointer;
-        padding: 5px;
+        padding: 8px;
+        z-index: 1001;
     }
 
     .nav-toggle span {
         display: block;
-        width: 25px;
+        width: 22px;
         height: 2px;
         background-color: var(--text-main);
-        margin: 5px 0;
+        margin: 4px 0;
         transition: 0.3s;
     }
 
-    /* Hero */
-    .hero {
-        padding: 140px 1.5rem 60px;
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1.2s fr 1fr;
-        gap: 3rem;
-        align-items: center;
-        min-height: 90vh;
-    }
-
+    /* Mobile Layout Optimizations (Mobile-First) */
     @media (max-width: 968px) {
-        .hero {
-            grid-template-columns: 1fr;
-            padding-top: 110px;
-            text-align: center;
-            gap: 2rem;
-        }
-        .nav-menu {
-            display: none;
-            position: absolute;
-            top: 75px;
-            left: 0;
-            width: 100%;
-            background: var(--primary);
-            flex-direction: column;
-            padding: 2rem;
-            border-bottom: 1px solid var(--border);
-            text-align: center;
-        }
-        .nav-menu.active {
-            display: flex;
-        }
         .nav-toggle {
             display: block;
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 70px;
+            left: -100%;
+            width: 100%;
+            height: calc(100vh - 70px);
+            background: var(--primary);
+            flex-direction: column;
+            align-items: center;
+            padding-top: 3rem;
+            gap: 2rem;
+            transition: left 0.3s ease;
+            border-top: 1px solid var(--border);
+        }
+
+        .nav-menu.active {
+            left: 0;
+        }
+
+        .nav-menu a {
+            font-size: 1.2rem;
+            color: #FFF;
+        }
+    }
+
+    /* Hero & Layout Principal */
+    .hero {
+        padding: 100px 1rem 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    @media (min-width: 969px) {
+        .hero {
+            padding: 140px 2rem 60px;
+            display: grid;
+            grid-template-columns: 1.1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+            min-height: 85vh;
+        }
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    @media (min-width: 969px) {
+        .hero-text {
+            text-align: left;
         }
     }
 
     .hero-text h1 {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
         line-height: 1.2;
         color: #FFFFFF;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .hero-text h1 { font-size: 3rem; }
     }
 
     .hero-text h1 span {
         color: var(--accent);
-        display: block;
     }
 
     .hero-text p {
         color: var(--text-muted);
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-        max-width: 540px;
-    }
-
-    @media (max-width: 968px) {
-        .hero-text p { margin: 0 auto 2rem; }
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .badge-container {
         display: flex;
-        gap: 10px;
-        margin-bottom: 1.5rem;
+        gap: 8px;
+        margin-bottom: 1.25rem;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
-    @media (max-width: 968px) { .badge-container { justify-content: center; } }
+    @media (min-width: 969px) {
+        .badge-container { justify-content: flex-start; }
+    }
 
     .badge {
         background: rgba(212, 175, 55, 0.1);
         border: 1px solid var(--border);
         color: var(--accent);
-        padding: 6px 14px;
+        padding: 4px 10px;
         border-radius: 20px;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         font-weight: 600;
-        text-transform: uppercase;
     }
 
     .btn-primary {
         background: linear-gradient(135deg, var(--accent) 0%, #B89324 100%);
         color: var(--primary);
         border: none;
-        padding: 14px 28px;
+        padding: 14px 24px;
         font-size: 1rem;
         font-weight: 700;
-        border-radius: 6px;
+        border-radius: 8px;
         cursor: pointer;
-        transition: transform 0.2s, box-shadow 0.2s;
         display: inline-flex;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         text-decoration: none;
-        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        width: 100%;
+        justify-content: center;
     }
 
-    .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+    @media (min-width: 480px) {
+        .btn-primary { width: auto; }
     }
 
-    /* Módulo de Agendamento Principal (SaaS Style) */
+    /* O SISTEMA SAAS - Otimizado para dedão no Celular */
     .app-card {
         background: var(--bg-card);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 2.5rem;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        position: relative;
+        border: 1px solid rgba(255,255,255,0.05);
+        border-radius: 16px;
+        padding: 1.25rem;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        width: 100%;
     }
 
-    @media (max-width: 480px) {
-        .app-card { padding: 1.5rem 1rem; }
+    @media (min-width: 768px) {
+        .app-card { padding: 2rem; }
     }
 
     .step-header {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.25rem;
     }
 
     .step-title-container {
@@ -250,29 +271,30 @@
     }
 
     .step-title {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         font-weight: 600;
         color: #FFF;
     }
 
     .step-indicator {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         color: var(--accent);
         font-weight: 700;
+        white-space: nowrap;
     }
 
     .progress-bar-bg {
-        height: 6px;
+        height: 4px;
         background: rgba(255,255,255,0.08);
-        border-radius: 3px;
+        border-radius: 2px;
         overflow: hidden;
     }
 
     .progress-bar-fill {
         height: 100%;
         background: linear-gradient(90deg, var(--accent), var(--success));
-        width: 10%;
-        transition: width 0.4s ease;
+        width: 12.5%;
+        transition: width 0.3s ease;
     }
 
     .step-panel {
@@ -281,60 +303,48 @@
 
     .step-panel.active {
         display: block;
-        animation: fadeIn 0.3s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(8px); }
-        to { opacity: 1; transform: translateY(0); }
     }
 
     .step-description {
         color: var(--text-muted);
-        font-size: 0.9rem;
-        margin-bottom: 1.5rem;
+        font-size: 0.85rem;
+        margin-bottom: 1.25rem;
     }
 
-    /* Form Controls */
+    /* Itens de Seleção Toque-Fácil (Zonas de clique aumentadas) */
     .options-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
-        max-height: 280px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        max-height: 260px;
         overflow-y: auto;
-        padding-right: 5px;
+        padding-right: 4px;
     }
 
-    .options-grid::-webkit-scrollbar {
-        width: 4px;
-    }
-    .options-grid::-webkit-scrollbar-thumb {
-        background: var(--border);
-        border-radius: 2px;
-    }
+    /* Custom Scrollbar */
+    .options-grid::-webkit-scrollbar { width: 4px; }
+    .options-grid::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
 
     .option-card {
         background: rgba(255,255,255,0.03);
         border: 1px solid rgba(255,255,255,0.08);
-        padding: 12px 16px;
+        padding: 14px 16px; /* Altura ideal para toque mobile */
         border-radius: 8px;
         cursor: pointer;
-        transition: all 0.2s;
+        transition: background 0.2s, border-color 0.2s;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-weight: 500;
-    }
-
-    .option-card:hover {
-        background: rgba(212, 175, 55, 0.05);
-        border-color: rgba(212, 175, 55, 0.4);
+        font-size: 0.95rem;
+        color: #E2E8F0;
+        min-height: 50px;
     }
 
     .option-card.selected {
-        background: rgba(212, 175, 55, 0.12);
+        background: rgba(212, 175, 55, 0.15);
         border-color: var(--accent);
         color: #FFF;
+        font-weight: 600;
     }
 
     .option-card.selected::after {
@@ -343,59 +353,63 @@
         font-weight: bold;
     }
 
+    /* Form Fields */
     .form-group {
-        margin-bottom: 1.25rem;
+        margin-bottom: 1rem;
     }
 
     .form-group label {
         display: block;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         font-weight: 600;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.4rem;
         color: var(--text-muted);
         text-transform: uppercase;
-        letter-spacing: 0.5px;
     }
 
     .form-control {
         width: 100%;
         background: rgba(0,0,0,0.2);
         border: 1px solid rgba(255,255,255,0.15);
-        padding: 12px 16px;
-        border-radius: 6px;
+        padding: 14px;
+        border-radius: 8px;
         color: #FFF;
         font-size: 1rem;
         transition: border-color 0.2s;
+        -webkit-appearance: none;
     }
 
     .form-control:focus {
         outline: none;
         border-color: var(--accent);
-        background: rgba(0,0,0,0.3);
     }
 
-    /* Calendar UI */
+    /* Calendário Mobile Totalmente Responsivo */
     .calendar-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 0.8rem;
     }
 
     .calendar-nav-btn {
-        background: none;
+        background: rgba(255,255,255,0.05);
         border: 1px solid rgba(255,255,255,0.1);
         color: #FFF;
-        width: 32px;
-        height: 32px;
-        border-radius: 4px;
+        width: 36px;
+        height: 36px;
+        border-radius: 6px;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
     }
 
     .calendar-grid {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        gap: 6px;
+        gap: 4px;
         text-align: center;
     }
 
@@ -403,20 +417,20 @@
         font-size: 0.75rem;
         color: var(--text-muted);
         font-weight: 600;
-        padding-bottom: 5px;
+        padding-bottom: 4px;
     }
 
     .calendar-day {
-        padding: 10px 0;
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 0.9rem;
-        border-radius: 4px;
+        border-radius: 6px;
         cursor: pointer;
         background: rgba(255,255,255,0.02);
-        transition: all 0.2s;
-    }
-
-    .calendar-day:hover:not(.disabled) {
-        background: rgba(212, 175, 55, 0.2);
+        font-weight: 500;
+        min-height: 38px;
     }
 
     .calendar-day.selected {
@@ -426,69 +440,56 @@
     }
 
     .calendar-day.disabled {
-        color: rgba(255,255,255,0.15);
+        color: rgba(255,255,255,0.12);
         cursor: not-allowed;
         background: transparent;
     }
 
-    /* Time Slots */
+    /* Horários em Grade Compacta */
     .slots-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
-        gap: 8px;
-        margin-top: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+    }
+
+    @media (min-width: 400px) {
+        .slots-grid { grid-template-columns: repeat(4, 1fr); }
     }
 
     .slot-card {
         background: rgba(255,255,255,0.04);
         border: 1px solid rgba(255,255,255,0.1);
-        padding: 10px 0;
+        padding: 12px 0;
         text-align: center;
         border-radius: 6px;
         cursor: pointer;
         font-size: 0.85rem;
-        transition: all 0.2s;
-    }
-
-    .slot-card:hover:not(.disabled) {
-        border-color: var(--accent);
-        background: rgba(212, 175, 55, 0.05);
+        font-weight: 500;
     }
 
     .slot-card.selected {
         background: var(--success);
         border-color: var(--success);
         color: #FFF;
-        font-weight: 600;
     }
 
-    .slot-card.disabled {
-        opacity: 0.25;
-        cursor: not-allowed;
-    }
-
-    /* Nav Buttons */
+    /* Ações Fixas/Navegação do Fluxo */
     .flow-actions {
         display: flex;
         justify-content: space-between;
-        margin-top: 2rem;
-        gap: 1rem;
+        margin-top: 1.25rem;
+        gap: 0.75rem;
     }
 
     .btn-secondary {
         background: transparent;
-        border: 1px solid rgba(255,255,255,0.2);
-        color: var(--text-muted);
-        padding: 12px 24px;
-        border-radius: 6px;
+        border: 1px solid rgba(255,255,255,0.15);
+        color: #A0AEC0;
+        padding: 14px 20px;
+        border-radius: 8px;
         cursor: pointer;
         font-weight: 600;
-        transition: all 0.2s;
-    }
-
-    .btn-secondary:hover {
-        color: #FFF;
-        border-color: #FFF;
+        font-size: 0.95rem;
     }
 
     .btn-flow-next {
@@ -496,309 +497,194 @@
         background: var(--accent);
         color: var(--primary);
         border: none;
-        padding: 12px 24px;
-        border-radius: 6px;
+        padding: 14px 20px;
+        border-radius: 8px;
         cursor: pointer;
         font-weight: 700;
-        transition: background 0.2s;
+        font-size: 0.95rem;
         text-align: center;
     }
 
-    .btn-flow-next:hover {
-        background: var(--accent-hover);
+    .btn-flow-next:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
     }
 
-    /* Live Summary Panel */
+    /* Resumo Parcial Flutuante Interno */
     .partial-summary {
-        background: rgba(0,0,0,0.15);
-        border-radius: 6px;
-        padding: 12px;
-        margin-bottom: 1.5rem;
-        font-size: 0.85rem;
+        background: rgba(0,0,0,0.2);
+        border-radius: 8px;
+        padding: 10px 12px;
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
         border-left: 3px solid var(--accent);
     }
 
     .summary-item {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 4px;
     }
 
-    .summary-item:last-child { margin-bottom: 0; }
     .summary-label { color: var(--text-muted); }
     .summary-value { color: #FFF; font-weight: 600; }
 
-    /* Final Confirmation Layout */
+    /* Receipt Final */
     .receipt-card {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid rgba(255,255,255,0.06);
+        background: rgba(0,0,0,0.2);
+        border: 1px solid rgba(255,255,255,0.05);
         border-radius: 8px;
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
     }
 
     .receipt-row {
         display: flex;
         justify-content: space-between;
-        padding: 8px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-        font-size: 0.9rem;
+        padding: 6px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+        font-size: 0.85rem;
     }
 
     .receipt-row:last-child { border-bottom: none; }
 
-    .integration-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 1.5rem;
-    }
-
-    .btn-integration {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 14px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 0.95rem;
-        cursor: pointer;
-    }
-
-    .btn-whatsapp { background: #25D366; color: #FFF; }
-    .btn-google { background: #FFF; color: #000; border: 1px solid #DDD; }
-
-    /* Módulo: Apresentação & Serviços */
+    /* Módulos Institucionais Adjacentes */
     .section-container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 80px 1.5rem;
+        padding: 40px 1.25rem;
     }
 
     .section-header {
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 25px;
     }
 
     .section-header h2 {
-        font-size: 2.2rem;
+        font-size: 1.75rem;
         color: #FFF;
-        margin-bottom: 10px;
     }
 
     .section-header h2 span { color: var(--accent); }
 
     .section-header p {
         color: var(--text-muted);
-        max-width: 600px;
-        margin: 0 auto;
+        font-size: 0.9rem;
+        margin-top: 5px;
     }
 
-    .grid-3 {
+    .grid-layout {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+        .grid-layout { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 969px) {
+        .grid-layout { grid-template-columns: repeat(3, 1fr); }
     }
 
     .service-card {
-        background: rgba(23, 42, 69, 0.4);
-        border: 1px solid rgba(255,255,255,0.05);
-        padding: 2rem;
-        border-radius: 8px;
-        transition: transform 0.3s;
-    }
-
-    .service-card:hover {
-        transform: translateY(-5px);
-        border-color: var(--border);
-    }
-
-    .service-icon {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        display: block;
-    }
-
-    .service-card h3 {
-        color: #FFF;
-        margin-bottom: 10px;
-        font-size: 1.25rem;
-    }
-
-    .service-card p {
-        color: var(--text-muted);
-        font-size: 0.9rem;
-    }
-
-    /* Módulo: Como Funciona */
-    .steps-flow {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 2rem;
-        margin-top: 40px;
-    }
-
-    .flow-step {
-        text-align: center;
-        position: relative;
-    }
-
-    .flow-number {
-        width: 50px;
-        height: 50px;
-        background: rgba(212, 175, 55, 0.1);
-        border: 2px solid var(--accent);
-        color: var(--accent);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 1.2rem;
-        margin: 0 auto 15px;
-    }
-
-    /* Módulo: Benefícios */
-    .benefits-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .benefit-item {
-        display: flex;
-        gap: 15px;
-        background: rgba(255,255,255,0.01);
+        background: var(--primary-light);
         padding: 1.5rem;
-        border-radius: 6px;
-        border-left: 3px solid var(--success);
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.03);
     }
 
-    .benefit-item h4 { color: #FFF; margin-bottom: 5px; }
-    .benefit-item p { color: var(--text-muted); font-size: 0.85rem; }
+    .service-card h3 { font-size: 1.1rem; margin: 8px 0; color: #FFF; }
+    .service-card p { color: var(--text-muted); font-size: 0.85rem; }
 
-    /* Módulo: Avaliações */
-    .reviews-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .review-card {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid rgba(255,255,255,0.05);
-        padding: 1.5rem;
-        border-radius: 8px;
-    }
-
-    .stars { color: var(--accent); margin-bottom: 10px; }
-    .review-text { font-style: italic; font-size: 0.9rem; color: #DDD; margin-bottom: 15px; }
-    .review-author { font-weight: 600; font-size: 0.85rem; color: var(--accent); }
-
-    /* Módulo: FAQ */
-    .faq-container {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
+    /* FAQ Accordion */
     .faq-item {
         background: rgba(255,255,255,0.02);
         border: 1px solid rgba(255,255,255,0.05);
-        margin-bottom: 10px;
-        border-radius: 6px;
-        overflow: hidden;
+        margin-bottom: 8px;
+        border-radius: 8px;
     }
 
     .faq-trigger {
         width: 100%;
-        padding: 16px 20px;
+        padding: 14px 16px;
         background: none;
         border: none;
         text-align: left;
         color: #FFF;
-        font-size: 1rem;
+        font-size: 0.95rem;
         font-weight: 600;
-        cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
     }
 
     .faq-content {
-        padding: 0 20px;
+        padding: 0 16px;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease, padding 0.3s ease;
+        transition: max-height 0.2s ease, padding 0.2s ease;
         color: var(--text-muted);
-        font-size: 0.9rem;
-        background: rgba(0,0,0,0.1);
+        font-size: 0.85rem;
     }
 
     .faq-item.active .faq-content {
-        padding: 16px 20px;
-        max-height: 200px;
+        padding: 0 16px 14px;
+        max-height: 150px;
     }
 
-    /* Módulo: Contato & Mapa */
-    .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr 1.2fr;
-        gap: 2.5rem;
+    /* Contato & Mapa */
+    .contact-box {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
-    @media (max-width: 768px) {
-        .contact-grid { grid-template-columns: 1fr; }
+    @media (min-width: 768px) {
+        .contact-box { grid-template-columns: 1fr 1fr; display: grid; }
     }
 
-    .info-panel p { margin-bottom: 12px; font-size: 0.95rem; }
+    .info-panel { font-size: 0.9rem; }
+    .info-panel p { margin-bottom: 8px; }
     .info-panel strong { color: var(--accent); }
 
     .map-wrapper {
         width: 100%;
-        height: 300px;
-        border-radius: 8px;
+        height: 220px;
+        border-radius: 10px;
         overflow: hidden;
         border: 1px solid var(--border);
     }
 
-    /* Rodapé */
+    /* Footer & Float */
     footer {
         background: #01060E;
-        padding: 40px 1.5rem;
+        padding: 30px 1rem;
         text-align: center;
-        border-top: 1px solid rgba(255,255,255,0.05);
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         color: var(--text-muted);
+        border-top: 1px solid rgba(255,255,255,0.05);
     }
 
-    /* Floating WhatsApp Button */
     .whatsapp-float {
         position: fixed;
-        bottom: 25px;
-        right: 25px;
+        bottom: 20px;
+        right: 20px;
         background-color: #25D366;
         color: #FFF;
-        width: 56px;
-        height: 56px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
         z-index: 999;
-        text-decoration: none;
-        transition: transform 0.2s;
     }
-
-    .whatsapp-float:hover {
-        transform: scale(1.08);
-    }
-
-    /* Utility classes */
-    .text-accent { color: var(--accent); }
 </style>
+
+```
+
+```
 <!-- Header -->
 <header>
     <div class="nav-container">
@@ -806,40 +692,34 @@
             <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
                 <circle cx="50" cy="50" r="45" stroke="#D4AF37" stroke-width="4"/>
                 <path d="M30 45C35 65 65 65 70 45" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
-                <path d="M30 45C40 52 60 52 70 45" stroke="#D4AF37" stroke-width="2"/>
             </svg>
             Oral Prime<span>.</span>
         </a>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <button class="nav-toggle" id="navToggle" aria-label="Menu Aberto">
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-menu" id="navMenu">
             <li><a href="#clinica">A Clínica</a></li>
             <li><a href="#especialidades">Especialidades</a></li>
             <li><a href="#agendamento">Agendamento</a></li>
-            <li><a href="#beneficios">Diferenciais</a></li>
             <li><a href="#faq">Dúvidas</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
     </div>
 </header>
 
-<!-- Hero + Main App Section -->
-<main class="hero" id="home">
+<!-- Main Container -->
+<main class="hero">
     <div class="hero-text">
         <div class="badge-container">
             <span class="badge">Avaliação Digital</span>
-            <span class="badge">Equipe Multidisciplinar</span>
+            <span class="badge">Barueri / SP</span>
         </div>
-        <h1>Sorria com total <span>Confiança e Saúde.</span></h1>
-        <p>A Oral Prime oferece tecnologia de ponta e atendimento humanizado em Barueri/SP. Realize seu agendamento inteligente em instantes.</p>
-        <a href="#agendamento" class="btn-primary">
-            Agendar Consulta Online
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        <h1>Sorria com total <span>Confiança.</span></h1>
+        <p>Atendimento humanizado e tecnologia odontológica premium ao seu alcance.</p>
     </div>
 
-    <!-- SaaS Intake Application -->
+    <!-- SaaS Application Card -->
     <div class="app-card" id="agendamento">
         <div class="step-header">
             <div class="step-title-container">
@@ -851,59 +731,58 @@
             </div>
         </div>
 
-        <!-- Partial Live Summary Card -->
         <div class="partial-summary" id="partialSummary" style="display:none;"></div>
 
-        <!-- STEP 1: Especialidade -->
+        <!-- STEP 1 -->
         <div class="step-panel active" id="step1">
-            <p class="step-description">Selecione o tipo de atendimento que você precisa realizar:</p>
+            <p class="step-description">Selecione a especialidade desejada:</p>
             <div class="options-grid" id="gridEspecialidades"></div>
         </div>
 
-        <!-- STEP 2: Dentista -->
+        <!-- STEP 2 -->
         <div class="step-panel" id="step2">
-            <p class="step-description">Se você tem preferência por um profissional, selecione abaixo:</p>
+            <p class="step-description">Escolha o cirurgião-dentista:</p>
             <div class="options-grid" id="gridDentistas"></div>
         </div>
 
-        <!-- STEP 3: Tipo de Consulta -->
+        <!-- STEP 3 -->
         <div class="step-panel" id="step3">
-            <p class="step-description">É a sua primeira consulta conosco na Oral Prime?</p>
+            <p class="step-description">Já se consultou conosco anteriormente?</p>
             <div class="options-grid">
-                <div class="option-card" data-value="Sim" data-field="primeira">Sim, é minha primeira avaliação</div>
-                <div class="option-card" data-value="Não" data-field="primeira">Não, já sou paciente da clínica</div>
+                <div class="option-card" data-value="Sim" data-field="primeira">Sim, já sou paciente</div>
+                <div class="option-card" data-value="Não" data-field="primeira">Não, primeira avaliação</div>
             </div>
         </div>
 
-        <!-- STEP 4: Calendário / Data -->
+        <!-- STEP 4 -->
         <div class="step-panel" id="step4">
-            <p class="step-description">Escolha o dia ideal para seu atendimento:</p>
+            <p class="step-description">Escolha o dia ideal:</p>
             <div class="calendar-header">
                 <button class="calendar-nav-btn" id="prevMonth">&lt;</button>
-                <span id="calendarMonthYear" style="font-weight:600;"></span>
+                <span id="calendarMonthYear" style="font-weight:600; font-size:0.95rem;"></span>
                 <button class="calendar-nav-btn" id="nextMonth">&gt;</button>
             </div>
             <div class="calendar-grid" id="calendarGrid"></div>
         </div>
 
-        <!-- STEP 5: Horários -->
+        <!-- STEP 5 -->
         <div class="step-panel" id="step5">
-            <p class="step-description">Selecione um horário disponível para a data escolhida:</p>
+            <p class="step-description">Selecione o melhor horário:</p>
             <div class="slots-grid" id="slotsGrid"></div>
         </div>
 
-        <!-- STEP 6: Convênio -->
+        <!-- STEP 6 -->
         <div class="step-panel" id="step6">
-            <p class="step-description">Selecione sua modalidade de atendimento corporativo ou particular:</p>
+            <p class="step-description">Como deseja realizar o atendimento?</p>
             <div class="options-grid" id="gridConvenios"></div>
         </div>
 
-        <!-- STEP 7: Dados do Paciente -->
+        <!-- STEP 7 -->
         <div class="step-panel" id="step7">
-            <p class="step-description">Preencha seus dados para confirmação imediata:</p>
+            <p class="step-description">Insira seus dados para autenticação:</p>
             <div class="form-group">
                 <label>Nome Completo</label>
-                <input type="text" id="inputNome" class="form-control" placeholder="Seu nome completo">
+                <input type="text" id="inputNome" class="form-control" placeholder="Ex: Maria Silva">
             </div>
             <div class="form-group">
                 <label>WhatsApp</label>
@@ -911,25 +790,18 @@
             </div>
             <div class="form-group">
                 <label>E-mail</label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="seu@email.com">
-            </div>
-            <div class="form-group">
-                <label>Observações Clínicas (Opcional)</label>
-                <textarea id="inputObs" class="form-control" rows="2" placeholder="Algum sintoma, dor ou detalhe importante?"></textarea>
+                <input type="email" id="inputEmail" class="form-control" placeholder="exemplo@email.com">
             </div>
         </div>
 
-        <!-- STEP 8: Resumo & Ações Finais -->
+        <!-- STEP 8 -->
         <div class="step-panel" id="step8">
-            <p class="step-description">Confira os detalhes da sua solicitação corporativa:</p>
+            <p class="step-description">Confirme as informações do seu agendamento:</p>
             <div class="receipt-card" id="finalReceipt"></div>
-            
-            <div class="integration-buttons">
-                <button class="btn-flow-next" id="btnFinalizar" style="width:100%;">Confirmar e Sincronizar</button>
-            </div>
+            <button class="btn-flow-next" id="btnFinalizar" style="width:100%;">Finalizar pelo WhatsApp</button>
         </div>
 
-        <!-- Flow Navigation Actions -->
+        <!-- Navigation Actions -->
         <div class="flow-actions" id="flowActions">
             <button class="btn-secondary" id="btnVoltar" style="visibility:hidden;">Voltar</button>
             <button class="btn-flow-next" id="btnAvancar" disabled>Avançar</button>
@@ -937,106 +809,31 @@
     </div>
 </main>
 
-<!-- Apresentação da Clínica -->
+<!-- Clínica Info -->
 <section class="section-container" id="clinica">
     <div class="section-header">
-        <h2>Tecnologia e <span>Cuidado Humanizado</span></h2>
-        <p>A Oral Prime Odontologia Especializada oferece tratamentos completos com foco em saúde, estética e bem-estar. Contamos com uma equipe multidisciplinar e equipamentos de última geração.</p>
+        <h2>A <span>Clínica</span></h2>
+        <p>Infraestrutura moderna projetada para oferecer segurança, previsibilidade e conforto absoluto.</p>
     </div>
 </section>
 
-<!-- Serviços -->
+<!-- Especialidades -->
 <section class="section-container" id="especialidades">
     <div class="section-header">
-        <h2>Nossas <span>Especialidades</span></h2>
-        <p>Soluções modernas e definitivas para todos os tipos de tratamentos bucais.</p>
+        <h2>Nossos <span>Tratamentos</span></h2>
     </div>
-    <div class="grid-3">
+    <div class="grid-layout">
         <div class="service-card">
-            <span class="service-icon">🦷</span>
-            <h3>Implantes Dentários</h3>
-            <p>Planejamento 100% digital, implantes unitários, múltiplos e reabilitação pelo sistema protocolo.</p>
+            <h3>🦷 Implantes Digitais</h3>
+            <p>Reabilitações completas com alta tecnologia e precisão de imagem tridimensional.</p>
         </div>
         <div class="service-card">
-            <span class="service-icon">✨</span>
-            <h3>Estética Avançada</h3>
-            <p>Clareamento dental a laser, facetas em porcelana e lentes de contato de alta durabilidade.</p>
+            <h3>✨ Alinhadores Invisíveis</h3>
+            <p>Ortodontia moderna, transparente, confortável e removível para o seu dia a dia.</p>
         </div>
         <div class="service-card">
-            <span class="service-icon">💎</span>
-            <h3>Ortodontia & Alinhadores</h3>
-            <p>Aparelhos estéticos modernos e alinhadores transparentes sob medida para seu conforto.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Como Funciona -->
-<section class="section-container">
-    <div class="section-header">
-        <h2>Como funciona o <span>Agendamento?</span></h2>
-        <p>Seu atendimento estruturado de forma prática e totalmente digital.</p>
-    </div>
-    <div class="steps-flow">
-        <div class="flow-step">
-            <div class="flow-number">1</div>
-            <h4 style="color:#fff;margin-bottom:5px;">Escolha a Especialidade</h4>
-            <p style="color:var(--text-muted);font-size:0.85rem;">Selecione o tratamento ou tipo de profissional.</p>
-        </div>
-        <div class="flow-step">
-            <div class="flow-number">2</div>
-            <h4 style="color:#fff;margin-bottom:5px;">Defina a Data e Hora</h4>
-            <p style="color:var(--text-muted);font-size:0.85rem;">Encontre janelas livres em tempo real.</p>
-        </div>
-        <div class="flow-step">
-            <div class="flow-number">3</div>
-            <h4 style="color:#fff;margin-bottom:5px;">Confirmação Imediata</h4>
-            <p style="color:var(--text-muted);font-size:0.85rem;">Integração direta com o WhatsApp e Google Agenda.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Benefícios -->
-<section class="section-container" id="beneficios">
-    <div class="section-header">
-        <h2>Por que escolher a <span>Oral Prime?</span></h2>
-    </div>
-    <div class="benefits-list">
-        <div class="benefit-item">
-            <div>
-                <h4>10 Especialistas</h4>
-                <p>Corpo clínico altamente capacitado em todas as frentes odontológicas.</p>
-            </div>
-        </div>
-        <div class="benefit-item">
-            <div>
-                <h4>Urgências e Emergências</h4>
-                <p>Suporte completo para dores intensas, fraturas e traumas imediatos.</p>
-            </div>
-        </div>
-        <div class="benefit-item">
-            <div>
-                <h4>Facilidades de Pagamento</h4>
-                <p>Parcelamento em até 24 vezes para tratamentos complexos de reabilitação.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Avaliações -->
-<section class="section-container">
-    <div class="section-header">
-        <h2>O que dizem nossos <span>Pacientes</span></h2>
-    </div>
-    <div class="reviews-grid">
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p class="review-text">"O planejamento digital do meu implante foi perfeito. Não senti nenhuma dor e o resultado ficou super natural."</p>
-            <p class="review-author">Marcos S. (Alphaville)</p>
-        </div>
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p class="review-text">"Excelente atendimento infantil! Levei meu filho e os profissionais usaram técnicas incríveis que o deixaram super calmo."</p>
-            <p class="review-author">Ana Júlia R.</p>
+            <h3>💎 Estética Avançada</h3>
+            <p>Lentes de contato dentais e clareamento guiado para transformações naturais.</p>
         </div>
     </div>
 </section>
@@ -1044,32 +841,28 @@
 <!-- FAQ -->
 <section class="section-container" id="faq">
     <div class="section-header">
-        <h2>Perguntas <span>Frequentes</span></h2>
+        <h2>Dúvidas <span>Frequentes</span></h2>
     </div>
-    <div class="faq-container">
-        <div class="faq-item">
-            <button class="faq-trigger">Quais convênios vocês aceitam? <span>+</span></button>
-            <div class="faq-content">Atendemos uma ampla variedade de convênios odontológicos e também oferecemos a opção de consultas particulares com emissão de nota para reembolso.</div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-trigger">Como funciona a primeira avaliação? <span>+</span></button>
-            <div class="faq-content">A avaliação inicial dura cerca de 40 minutos e engloba o exame clínico completo, radiografia digital diagnóstica quando recomendada e elaboração do plano de tratamento personalizado.</div>
-        </div>
+    <div class="faq-item">
+        <button class="faq-trigger">Aceitam convênios? <span>+</span></button>
+        <div class="faq-content">Atendemos modalidades particulares, planos corporativos e emitimos documentação completa para sistemas de reembolso.</div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-trigger">Quanto tempo dura a avaliação? <span>+</span></button>
+        <div class="faq-content">A consulta inicial de diagnóstico estruturado leva em média de 40 a 50 minutos.</div>
     </div>
 </section>
 
 <!-- Contato -->
 <section class="section-container" id="contato">
     <div class="section-header">
-        <h2>Fale <span>Conosco</span></h2>
+        <h2>Localização & <span>Contato</span></h2>
     </div>
-    <div class="contact-grid">
+    <div class="contact-box">
         <div class="info-panel">
-            <p><strong>Endereço:</strong> Alameda Rio Negro, 1120 – Sala 508, Barueri/SP</p>
-            <p><strong>E-mail:</strong> contato@oralprimeodonto.com.br</p>
+            <p><strong>Endereço:</strong> Al. Rio Negro, 1120 – Sala 508, Alphaville - Barueri/SP</p>
+            <p><strong>Horários:</strong> Seg a Sex: 08h às 20h | Sáb: 08h às 14h</p>
             <p><strong>Telefone:</strong> (11) 4198-5624</p>
-            <p><strong>WhatsApp:</strong> (11) 99863-4271</p>
-            <p><strong>Funcionamento:</strong> Seg a Sex: 08h às 20h | Sáb: 08h às 14h</p>
         </div>
         <div class="map-wrapper">
             <iframe src="[https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.2173167123963!2d-46.7833!3d-23.5011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMwJzA0LjAiUyA0Nlw0NycwMC4wIlc!5e0!3m2!1spt-BR!2sbr!4v1650000000000!5m2!1spt-BR!2sbr](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.2173167123963!2d-46.7833!3d-23.5011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMwJzA0LjAiUyA0Nlw0NycwMC4wIlc!5e0!3m2!1spt-BR!2sbr!4v1650000000000!5m2!1spt-BR!2sbr)" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -1079,91 +872,60 @@
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2026 Oral Prime Odontologia Especializada. CNPJ: 00.000.000/0001-00. Desenvolvido por Cliente Agenda SaaS.</p>
+    <p>&copy; 2026 Oral Prime Odontologia Especializada. Todos os direitos reservados.</p>
 </footer>
 
-<!-- Floating Elements -->
-<a href="[https://wa.me/5511998634271](https://wa.me/5511998634271)" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
-    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-3.51c1.6.95 3.398 1.451 5.352 1.452 5.514 0 10.002-4.486 10.006-9.997.001-2.669-1.036-5.178-2.92-7.065C17.15 3.012 14.646 1.97 12.01 1.97c-5.519 0-10.01 4.487-10.014 10 .001 2.012.528 3.982 1.528 5.73l-.99 3.614 3.704-.972z"/></svg>
+<!-- Floating WhatsApp -->
+<a href="[https://wa.me/5511998634271](https://wa.me/5511998634271)" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-3.51c1.6.95 3.398 1.451 5.352 1.452 5.514 0 10.002-4.486 10.006-9.997.001-2.669-1.036-5.178-2.92-7.065C17.15 3.012 14.646 1.97 12.01 1.97c-5.519 0-10.01 4.487-10.014 10 .001 2.012.528 3.982 1.528 5.73l-.99 3.614 3.704-.972z"/></svg>
 </a>
 
-<!-- Application Script Logic -->
+<!-- Engine Script JS -->
 <script>
-    // Static Mock Data matching requirements
-    const especialidades = [
-        "Clínica Geral", "Implantes Dentários", "Prótese Dentária", "Ortodontia",
-        "Clareamento Dental", "Facetas em Porcelana", "Lentes de Contacto Dental",
-        "Endodontia (Canal)", "Periodontia", "Odontopediatria", "Harmonização Orofacial", "Emergência"
-    ];
+    const especialidades = ["Clínica Geral", "Implantes Dentários", "Prótese Dentária", "Ortodontia", "Clareamento Dental", "Harmonização Orofacial", "Emergência"];
+    const dentistas = ["Qualquer Profissional (Indicação)", "Dr. Alexandre Silva", "Dra. Beatriz Costa", "Dr. Carlos Eduardo"];
+    const convenios = ["Particular / Reembolso", "Amil Dental", "SulAmérica Odonto", "Bradesco Dental", "Porto Seguro"];
 
-    const dentistas = [
-        "Qualquer Profissional (Indicação)", "Dr. Alexandre Silva (Implante/Prótese)", 
-        "Dra. Beatriz Costa (Ortodontia)", "Dr. Carlos Eduardo (Estética)", 
-        "Dra. Mariana Dias (Odontopediatria)"
-    ];
-
-    const convenios = ["Particular / Reembolso", "Amil Dental", "SulAmérica Odonto", "Bradesco Dental", "MetLife", "Porto Seguro Odonto"];
-
-    const indisponíveis = ['2026-07-12', '2026-07-19', '2026-07-26']; // Domingos de exemplo
-    const horariosBase = ["08:00", "09:00", "10:00", "11:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:30"];
-
-    // State Machine Object
     let currentStep = 1;
     const totalSteps = 8;
-    const formData = {
-        especialidade: '',
-        dentista: '',
-        primeira: '',
-        data: '',
-        horario: '',
-        convenio: '',
-        nome: '',
-        whats: '',
-        email: '',
-        obs: ''
-    };
+    const formData = { especialidade: '', dentista: '', primeira: '', data: '', horario: '', convenio: '', nome: '', whats: '', email: '' };
+    let currentDate = new Date(2026, 6, 10);
 
-    // DOM caching
     const btnAvancar = document.getElementById('btnAvancar');
     const btnVoltar = document.getElementById('btnVoltar');
     const progressFill = document.getElementById('progressFill');
     const partialSummary = document.getElementById('partialSummary');
 
-    let currentDate = new Date(2026, 6, 10); // Baseado na data de referência: Julho/2026
-
-    // Initialize lists
     function initApp() {
         renderOptions('gridEspecialidades', especialidades, 'especialidade');
         renderOptions('gridDentistas', dentistas, 'dentista');
         renderOptions('gridConvenios', convenios, 'convenio');
         renderCalendar();
 
-        // Handle static selection fields
         document.querySelectorAll('#step3 .option-card').forEach(card => {
             card.addEventListener('click', () => {
-                selectOption(card, card.dataset.field, card.dataset.value);
+                document.querySelectorAll('#step3 .option-card').forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+                formData.primeira = card.dataset.value;
+                validateStep();
             });
         });
 
-        // Input Validation Handlers
-        const inputs = ['inputNome', 'inputWhats', 'inputEmail', 'inputObs'];
-        inputs.forEach(id => {
-            document.getElementById(id).addEventListener('input', (e) => {
-                if(id === 'inputWhats') maskPhone(e.target);
-                saveInputs();
+        ['inputNome', 'inputWhats', 'inputEmail'].forEach(id => {
+            document.getElementById(id).addEventListener('input', () => {
+                formData.nome = document.getElementById('inputNome').value;
+                formData.whats = document.getElementById('inputWhats').value;
+                formData.email = document.getElementById('inputEmail').value;
+                validateStep();
             });
         });
 
-        setupFlowNavigation();
-        setupGeneralUI();
+        setupNavigation();
     }
 
     function renderOptions(gridId, dataArray, fieldKey) {
         const container = document.getElementById(gridId);
-        container.innerHTML = dataArray.map(item => `
-            <div class="option-card" data-value="${item}">${item}</div>
-        `).join('');
-
+        container.innerHTML = dataArray.map(item => `<div class="option-card" data-value="${item}">${item}</div>`).join('');
         container.querySelectorAll('.option-card').forEach(card => {
             card.addEventListener('click', () => {
                 container.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
@@ -1174,70 +936,32 @@
         });
     }
 
-    function selectOption(element, field, value) {
-        element.parentElement.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
-        element.classList.add('selected');
-        formData[field] = value;
-        validateStep();
-    }
-
-    function saveInputs() {
-        formData.nome = document.getElementById('inputNome').value.trim();
-        formData.whats = document.getElementById('inputWhats').value.trim();
-        formData.email = document.getElementById('inputEmail').value.trim();
-        formData.obs = document.getElementById('inputObs').value.trim();
-        validateStep();
-    }
-
-    function maskPhone(input) {
-        let v = input.value.replace(/\D/g, "");
-        if (v.length > 11) v = v.substring(0, 11);
-        if (v.length > 10) {
-            input.value = `(${v.substring(0, 2)}) ${v.substring(2, 7)}-${v.substring(7, 11)}`;
-        } else if (v.length > 6) {
-            input.value = `(${v.substring(0, 2)}) ${v.substring(2, 6)}-${v.substring(6, 10)}`;
-        } else if (v.length > 2) {
-            input.value = `(${v.substring(0, 2)}) ${v.substring(2)}`;
-        } else {
-            input.value = v;
-        }
-    }
-
-    // Calendar Implementation
     function renderCalendar() {
         const grid = document.getElementById('calendarGrid');
-        const monthYearLabel = document.getElementById('calendarMonthYear');
         grid.innerHTML = '';
-
         const year = currentDate.getFullYear();
         const month = currentDate.getMonth();
 
         const monthsLabels = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-        monthYearLabel.innerText = `${monthsLabels[month]} de ${year}`;
+        document.getElementById('calendarMonthYear').innerText = `${monthsLabels[month]} ${year}`;
 
-        const weekdays = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
-        weekdays.forEach(wd => grid.insertAdjacentHTML('beforeend', `<div class="weekday-label">${wd}</div>`));
+        ["D", "S", "T", "Q", "Q", "S", "S"].forEach(wd => grid.insertAdjacentHTML('beforeend', `<div class="weekday-label">${wd}</div>`));
 
-        const firstDayIndex = new Date(year, month, 1).getDay();
+        const firstDay = new Date(year, month, 1).getDay();
         const totalDays = new Date(year, month + 1, 0).getDate();
 
-        for(let i = 0; i < firstDayIndex; i++) {
-            grid.insertAdjacentHTML('beforeend', `<div class="calendar-day disabled"></div>`);
-        }
+        for(let i = 0; i < firstDay; i++) grid.insertAdjacentHTML('beforeend', `<div class="calendar-day disabled"></div>`);
 
         for(let day = 1; day <= totalDays; day++) {
             const dateString = `${year}-${String(month+1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-            const dateObj = new Date(year, month, day);
-            const isPast = dateObj < new Date(2026, 6, 9); // Exemplo simples trava retrocesso
-            const isSunday = dateObj.getDay() === 0;
-            const isDisabled = isPast || isSunday || indisponíveis.includes(dateString);
+            const isSunday = new Date(year, month, day).getDay() === 0;
 
             const dayEl = document.createElement('div');
             dayEl.classList.add('calendar-day');
-            if(isDisabled) dayEl.classList.add('disabled');
+            if(isSunday) dayEl.classList.add('disabled');
             dayEl.innerText = day;
 
-            if(!isDisabled) {
+            if(!isSunday) {
                 if(formData.data === dateString) dayEl.classList.add('selected');
                 dayEl.addEventListener('click', () => {
                     document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('selected'));
@@ -1253,24 +977,20 @@
 
     function renderSlots() {
         const container = document.getElementById('slotsGrid');
-        container.innerHTML = '';
-        horariosBase.forEach(h => {
-            const slot = document.createElement('div');
-            slot.classList.add('slot-card');
-            slot.innerText = h;
-            if(formData.horario === h) slot.classList.add('selected');
+        container.innerHTML = ["09:00", "10:00", "11:00", "14:00", "15:00", "16:00", "17:00"].map(h => `
+            <div class="slot-card ${formData.horario === h ? 'selected' : ''}" data-time="${h}">${h}</div>
+        `).join('');
 
+        container.querySelectorAll('.slot-card').forEach(slot => {
             slot.addEventListener('click', () => {
                 container.querySelectorAll('.slot-card').forEach(s => s.classList.remove('selected'));
                 slot.classList.add('selected');
-                formData.horario = h;
+                formData.horario = slot.dataset.time;
                 validateStep();
             });
-            container.appendChild(slot);
         });
     }
 
-    // Stepper Navigation Core
     function validateStep() {
         let valid = false;
         if (currentStep === 1 && formData.especialidade) valid = true;
@@ -1279,121 +999,72 @@
         if (currentStep === 4 && formData.data) valid = true;
         if (currentStep === 5 && formData.horario) valid = true;
         if (currentStep === 6 && formData.convenio) valid = true;
-        if (currentStep === 7) {
-            const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
-            if (formData.nome.length > 3 && formData.whats.length >= 14 && emailValid) valid = true;
-        }
+        if (currentStep === 7 && formData.nome.length > 2 && formData.whats.length > 5) valid = true;
         if (currentStep === 8) valid = true;
 
         btnAvancar.disabled = !valid;
-        updateLiveSummary();
-    }
 
-    function updateLiveSummary() {
-        if (currentStep > 1 && currentStep < 8) {
+        if(currentStep > 1 && currentStep < 8) {
             partialSummary.style.display = 'block';
-            partialSummary.innerHTML = `
-                ${formData.especialidade ? `<div class="summary-item"><span class="summary-label">Especialidade:</span><span class="summary-value">${formData.especialidade}</span></div>` : ''}
-                ${formData.data ? `<div class="summary-item"><span class="summary-label">Data:</span><span class="summary-value">${formData.data.split('-').reverse().join('/')}</span></div>` : ''}
-                ${formData.horario ? `<div class="summary-item"><span class="summary-label">Horário:</span><span class="summary-value">${formData.horario}</span></div>` : ''}
-            `;
+            partialSummary.innerHTML = `<div class="summary-item"><span class="summary-label">Resumo:</span><span class="summary-value">${formData.especialidade} ${formData.horario ? ' - ' + formData.horario : ''}</span></div>`;
         } else {
             partialSummary.style.display = 'none';
         }
     }
 
-    function buildReceipt() {
-        document.getElementById('finalReceipt').innerHTML = `
-            <div class="receipt-row"><span class="summary-label">Paciente:</span><span class="summary-value">${formData.nome}</span></div>
-            <div class="receipt-row"><span class="summary-label">Especialidade:</span><span class="summary-value">${formData.especialidade}</span></div>
-            <div class="receipt-row"><span class="summary-label">Profissional:</span><span class="summary-value">${formData.dentista}</span></div>
-            <div class="receipt-row"><span class="summary-label">Data e Hora:</span><span class="summary-value">${formData.data.split('-').reverse().join('/')} às ${formData.horario}</span></div>
-            <div class="receipt-row"><span class="summary-label">Plano/Convênio:</span><span class="summary-value">${formData.convenio}</span></div>
-        `;
-    }
-
-    function setupFlowNavigation() {
-        const stepTitles = [
-            "", "Especialidade Desejada", "Profissional de Preferência", "Histórico Clínico",
-            "Data da Consulta", "Horário da Consulta", "Modalidade de Entrada", "Dados do Paciente", "Confirmação do Agendamento"
-        ];
+    function setupNavigation() {
+        const stepTitles = ["", "Especialidade", "Profissional", "Histórico", "Data ideal", "Horário ideal", "Convênio", "Seus Dados", "Confirmar"];
 
         btnAvancar.addEventListener('click', () => {
-            if (currentStep < totalSteps) {
-                document.getElementById(`step${currentStep}`).classList.remove('active');
-                currentStep++;
-                document.getElementById(`step${currentStep}`).classList.add('active');
-                
-                document.getElementById('panelTitle').innerText = stepTitles[currentStep];
-                document.getElementById('panelStepInd').innerText = `Etapa ${currentStep} de ${totalSteps}`;
-                progressFill.style.width = `${(currentStep / totalSteps) * 100}%`;
-                
-                btnVoltar.style.visibility = 'visible';
-                if(currentStep === 8) {
-                    buildReceipt();
-                    document.getElementById('flowActions').style.display = 'none';
-                }
-                validateStep();
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep++;
+            document.getElementById(`step${currentStep}`).classList.add('active');
+
+            document.getElementById('panelTitle').innerText = stepTitles[currentStep];
+            document.getElementById('panelStepInd').innerText = `Etapa ${currentStep} de ${totalSteps}`;
+            progressFill.style.width = `${(currentStep / totalSteps) * 100}%`;
+
+            btnVoltar.style.visibility = 'visible';
+            if(currentStep === 8) {
+                document.getElementById('finalReceipt').innerHTML = `
+                    <div class="receipt-row"><span class="summary-label">Paciente:</span><span class="summary-value">${formData.nome}</span></div>
+                    <div class="receipt-row"><span class="summary-label">Procedimento:</span><span class="summary-value">${formData.especialidade}</span></div>
+                    <div class="receipt-row"><span class="summary-label">Horário:</span><span class="summary-value">${formData.data.split('-').reverse().join('/')} às ${formData.horario}</span></div>
+                `;
+                document.getElementById('flowActions').style.display = 'none';
             }
+            validateStep();
         });
 
         btnVoltar.addEventListener('click', () => {
-            if (currentStep > 1) {
-                document.getElementById(`step${currentStep}`).classList.remove('active');
-                currentStep--;
-                document.getElementById(`step${currentStep}`).classList.add('active');
-                
-                document.getElementById('panelTitle').innerText = stepTitles[currentStep];
-                document.getElementById('panelStepInd').innerText = `Etapa ${currentStep} de ${totalSteps}`;
-                progressFill.style.width = `${(currentStep / totalSteps) * 100}%`;
-                
-                if (currentStep === 1) btnVoltar.style.visibility = 'hidden';
-                validateStep();
-            }
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep--;
+            document.getElementById(`step${currentStep}`).classList.add('active');
+
+            document.getElementById('panelTitle').innerText = stepTitles[currentStep];
+            document.getElementById('panelStepInd').innerText = `Etapa ${currentStep} de ${totalSteps}`;
+            progressFill.style.width = `${(currentStep / totalSteps) * 100}%`;
+
+            if(currentStep === 1) btnVoltar.style.visibility = 'hidden';
+            validateStep();
         });
 
         document.getElementById('prevMonth').addEventListener('click', () => { currentDate.setMonth(currentDate.getMonth() - 1); renderCalendar(); });
         document.getElementById('nextMonth').addEventListener('click', () => { currentDate.setMonth(currentDate.getMonth() + 1); renderCalendar(); });
 
-        // Final Executions API Actions
         document.getElementById('btnFinalizar').addEventListener('click', () => {
-            const message = `Olá Oral Prime! Gostaria de confirmar meu agendamento odontológico:\n\n` +
-                            `• Paciente: ${formData.nome}\n` +
-                            `• Especialidade: ${formData.especialidade}\n` +
-                            `• Dentista: ${formData.dentista}\n` +
-                            `• Data: ${formData.data.split('-').reverse().join('/')}\n` +
-                            `• Horário: ${formData.horario}\n` +
-                            `• Convênio: ${formData.convenio}\n` +
-                            `• Obs: ${formData.obs || 'Nenhuma'}`;
-            
-            const encoded = encodeURIComponent(message);
-            window.open(`[https://wa.me/5511998634271?text=$](https://wa.me/5511998634271?text=$){encoded}`, '_blank');
+            const text = encodeURIComponent(`Olá Oral Prime! Solicito agendamento para ${formData.nome}. Procedimento: ${formData.especialidade}, Data: ${formData.data}, Horário: ${formData.horario}.`);
+            window.open(`[https://wa.me/5511998634271?text=$](https://wa.me/5511998634271?text=$){text}`, '_blank');
         });
-    }
 
-    function setupGeneralUI() {
-        // Mobile Menu
+        // Toggle Mobile Navigation Menu
         const toggle = document.getElementById('navToggle');
         const menu = document.getElementById('navMenu');
         toggle.addEventListener('click', () => menu.classList.toggle('active'));
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                menu.classList.remove('active');
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // Accordion FAQ
-        document.querySelectorAll('.faq-trigger').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const item = btn.parentElement;
-                item.classList.toggle('active');
-            });
-        });
+        menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.remove('active')));
     }
 
     window.onload = initApp;
 </script>
+
+```
