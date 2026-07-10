@@ -1,4 +1,3 @@
-```
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Oral Prime Odontologia | Sistema de Agendamento">
@@ -20,11 +19,12 @@
         --text-muted: #8892B0;
         --bg-main: #020C1B;
         --bg-card: #112240;
-        --border: rgba(212, 175, 55, 0.2);
+        --border: rgba(212, 175, 55, 0.25);
         --success: #28C76F;
-        --font: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
 
+    /* Reset e Base Segura para Mobile */
     * {
         box-sizing: border-box;
         margin: 0;
@@ -36,11 +36,12 @@
     body {
         background-color: var(--bg-main);
         color: var(--text-main);
-        line-height: 1.5;
+        line-height: 1.4;
         overflow-x: hidden;
+        padding-top: 70px; /* Evita que o topo suma sob o header fixo */
     }
 
-    /* Header & Mobile Navigation */
+    /* Header Totalmente Responsivo */
     header {
         position: fixed;
         top: 0;
@@ -49,7 +50,7 @@
         background: rgba(2, 12, 27, 0.95);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         z-index: 1000;
         height: 70px;
     }
@@ -61,7 +62,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 1.25rem;
+        padding: 0 1rem;
     }
 
     .logo {
@@ -71,7 +72,7 @@
         text-decoration: none;
         color: var(--text-main);
         font-weight: 700;
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
 
     .logo-svg {
@@ -97,7 +98,7 @@
         transition: color 0.2s;
     }
 
-    .nav-menu a:hover {
+    .nav-menu a:hover, .nav-menu a:focus {
         color: var(--accent);
     }
 
@@ -112,19 +113,16 @@
 
     .nav-toggle span {
         display: block;
-        width: 22px;
+        width: 24px;
         height: 2px;
         background-color: var(--text-main);
-        margin: 4px 0;
+        margin: 5px 0;
         transition: 0.3s;
     }
 
-    /* Mobile Layout Optimizations (Mobile-First) */
+    /* Menu Mobile Estilo Gaveta */
     @media (max-width: 968px) {
-        .nav-toggle {
-            display: block;
-        }
-
+        .nav-toggle { display: block; }
         .nav-menu {
             position: fixed;
             top: 70px;
@@ -134,85 +132,64 @@
             background: var(--primary);
             flex-direction: column;
             align-items: center;
-            padding-top: 3rem;
-            gap: 2rem;
-            transition: left 0.3s ease;
+            padding-top: 2rem;
+            gap: 1.5rem;
+            transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border-top: 1px solid var(--border);
         }
-
-        .nav-menu.active {
-            left: 0;
-        }
-
-        .nav-menu a {
-            font-size: 1.2rem;
-            color: #FFF;
-        }
+        .nav-menu.active { left: 0; }
+        .nav-menu a { font-size: 1.1rem; color: #FFF; width: 100%; text-align: center; padding: 10px 0; }
     }
 
-    /* Hero & Layout Principal */
+    /* Hero Layout Adaptável */
     .hero {
-        padding: 100px 1rem 40px;
+        padding: 20px 1rem 40px;
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        gap: 2.5rem;
+        gap: 2rem;
     }
 
     @media (min-width: 969px) {
         .hero {
-            padding: 140px 2rem 60px;
+            padding: 60px 2rem;
             display: grid;
-            grid-template-columns: 1.1fr 1.2fr;
+            grid-template-columns: 1fr 1.1fr;
             gap: 4rem;
             align-items: center;
-            min-height: 85vh;
+            min-height: calc(100vh - 70px);
         }
     }
 
-    .hero-text {
-        text-align: center;
-    }
-
-    @media (min-width: 969px) {
-        .hero-text {
-            text-align: left;
-        }
-    }
+    .hero-text { text-align: center; }
+    @media (min-width: 969px) { .hero-text { text-align: left; } }
 
     .hero-text h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
         line-height: 1.2;
         color: #FFFFFF;
         margin-bottom: 1rem;
     }
-
-    @media (min-width: 768px) {
-        .hero-text h1 { font-size: 3rem; }
-    }
-
-    .hero-text h1 span {
-        color: var(--accent);
-    }
+    @media (min-width: 768px) { .hero-text h1 { font-size: 2.8rem; } }
+    .hero-text h1 span { color: var(--accent); }
 
     .hero-text p {
         color: var(--text-muted);
-        font-size: 1rem;
+        font-size: 0.95rem;
         margin-bottom: 1.5rem;
+        max-width: 500px;
     }
+    @media (max-width: 968px) { .hero-text p { margin-left: auto; margin-right: auto; } }
 
     .badge-container {
         display: flex;
         gap: 8px;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1rem;
         flex-wrap: wrap;
         justify-content: center;
     }
-
-    @media (min-width: 969px) {
-        .badge-container { justify-content: flex-start; }
-    }
+    @media (min-width: 969px) { .badge-container { justify-content: flex-start; } }
 
     .badge {
         background: rgba(212, 175, 55, 0.1);
@@ -224,467 +201,190 @@
         font-weight: 600;
     }
 
-    .btn-primary {
-        background: linear-gradient(135deg, var(--accent) 0%, #B89324 100%);
-        color: var(--primary);
-        border: none;
-        padding: 14px 24px;
-        font-size: 1rem;
-        font-weight: 700;
-        border-radius: 8px;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        text-decoration: none;
-        width: 100%;
-        justify-content: center;
-    }
-
-    @media (min-width: 480px) {
-        .btn-primary { width: auto; }
-    }
-
-    /* O SISTEMA SAAS - Otimizado para dedão no Celular */
+    /* O SISTEMA SAAS INTERATIVO */
     .app-card {
         background: var(--bg-card);
-        border: 1px solid rgba(255,255,255,0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 16px;
         padding: 1.25rem;
         box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
     }
 
-    @media (min-width: 768px) {
-        .app-card { padding: 2rem; }
-    }
-
-    .step-header {
-        margin-bottom: 1.25rem;
-    }
-
+    .step-header { margin-bottom: 1rem; }
     .step-title-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 0.5rem;
     }
+    .step-title { font-size: 1.1rem; font-weight: 600; color: #FFF; }
+    .step-indicator { font-size: 0.8rem; color: var(--accent); font-weight: 700; }
 
-    .step-title {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #FFF;
-    }
+    .progress-bar-bg { height: 4px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; }
+    .progress-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--success)); width: 12.5%; transition: width 0.3s ease; }
 
-    .step-indicator {
-        font-size: 0.8rem;
-        color: var(--accent);
-        font-weight: 700;
-        white-space: nowrap;
-    }
+    .step-panel { display: none; }
+    .step-panel.active { display: block; }
+    .step-description { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem; }
 
-    .progress-bar-bg {
-        height: 4px;
-        background: rgba(255,255,255,0.08);
-        border-radius: 2px;
-        overflow: hidden;
-    }
-
-    .progress-bar-fill {
-        height: 100%;
-        background: linear-gradient(90deg, var(--accent), var(--success));
-        width: 12.5%;
-        transition: width 0.3s ease;
-    }
-
-    .step-panel {
-        display: none;
-    }
-
-    .step-panel.active {
-        display: block;
-    }
-
-    .step-description {
-        color: var(--text-muted);
-        font-size: 0.85rem;
-        margin-bottom: 1.25rem;
-    }
-
-    /* Itens de Seleção Toque-Fácil (Zonas de clique aumentadas) */
+    /* Listas e Grades de Opções Touch-Friendly (Garante tamanho mínimo de clique de 48px) */
     .options-grid {
         display: flex;
         flex-direction: column;
-        gap: 0.6rem;
-        max-height: 260px;
+        gap: 0.5rem;
+        max-height: 250px;
         overflow-y: auto;
         padding-right: 4px;
     }
 
-    /* Custom Scrollbar */
-    .options-grid::-webkit-scrollbar { width: 4px; }
-    .options-grid::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
-
     .option-card {
         background: rgba(255,255,255,0.03);
         border: 1px solid rgba(255,255,255,0.08);
-        padding: 14px 16px; /* Altura ideal para toque mobile */
+        padding: 12px 14px;
         border-radius: 8px;
         cursor: pointer;
-        transition: background 0.2s, border-color 0.2s;
+        transition: all 0.2s;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         color: #E2E8F0;
-        min-height: 50px;
+        min-height: 48px; /* WCAG Mobile Standard */
     }
 
+    .option-card:hover { background: rgba(255,255,255,0.06); }
     .option-card.selected {
         background: rgba(212, 175, 55, 0.15);
         border-color: var(--accent);
         color: #FFF;
         font-weight: 600;
     }
+    .option-card.selected::after { content: "✓"; color: var(--accent); font-weight: bold; }
 
-    .option-card.selected::after {
-        content: "✓";
-        color: var(--accent);
-        font-weight: bold;
-    }
-
-    /* Form Fields */
-    .form-group {
-        margin-bottom: 1rem;
-    }
-
-    .form-group label {
-        display: block;
-        font-size: 0.8rem;
-        font-weight: 600;
-        margin-bottom: 0.4rem;
-        color: var(--text-muted);
-        text-transform: uppercase;
-    }
-
+    /* Inputs de Formulário */
+    .form-group { margin-bottom: 0.85rem; }
+    .form-group label { display: block; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.3rem; color: var(--text-muted); text-transform: uppercase; }
     .form-control {
         width: 100%;
-        background: rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.25);
         border: 1px solid rgba(255,255,255,0.15);
-        padding: 14px;
-        border-radius: 8px;
+        padding: 12px;
+        border-radius: 6px;
         color: #FFF;
-        font-size: 1rem;
-        transition: border-color 0.2s;
+        font-size: 0.95rem;
         -webkit-appearance: none;
     }
+    .form-control:focus { outline: none; border-color: var(--accent); }
 
-    .form-control:focus {
-        outline: none;
-        border-color: var(--accent);
-    }
-
-    /* Calendário Mobile Totalmente Responsivo */
-    .calendar-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 0.8rem;
-    }
-
-    .calendar-nav-btn {
-        background: rgba(255,255,255,0.05);
-        border: 1px solid rgba(255,255,255,0.1);
-        color: #FFF;
-        width: 36px;
-        height: 36px;
-        border-radius: 6px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-    }
-
-    .calendar-grid {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        gap: 4px;
-        text-align: center;
-    }
-
-    .weekday-label {
-        font-size: 0.75rem;
-        color: var(--text-muted);
-        font-weight: 600;
-        padding-bottom: 4px;
-    }
-
+    /* Calendário Limpo e Escalável */
+    .calendar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+    .calendar-nav-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #FFF; width: 36px; height: 36px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+    .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; }
+    .weekday-label { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; padding-bottom: 2px; }
+    
     .calendar-day {
         aspect-ratio: 1;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         border-radius: 6px;
         cursor: pointer;
         background: rgba(255,255,255,0.02);
-        font-weight: 500;
-        min-height: 38px;
+        min-height: 34px;
     }
+    .calendar-day.selected { background: var(--accent) !important; color: var(--primary) !important; font-weight: 700; }
+    .calendar-day.disabled { color: rgba(255,255,255,0.1); cursor: not-allowed; background: transparent; }
 
-    .calendar-day.selected {
-        background: var(--accent) !important;
-        color: var(--primary) !important;
-        font-weight: 700;
-    }
-
-    .calendar-day.disabled {
-        color: rgba(255,255,255,0.12);
-        cursor: not-allowed;
-        background: transparent;
-    }
-
-    /* Horários em Grade Compacta */
-    .slots-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 6px;
-    }
-
-    @media (min-width: 400px) {
-        .slots-grid { grid-template-columns: repeat(4, 1fr); }
-    }
-
+    /* Grade de Horários Compacta Otimizada */
+    .slots-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
     .slot-card {
         background: rgba(255,255,255,0.04);
         border: 1px solid rgba(255,255,255,0.1);
-        padding: 12px 0;
+        padding: 10px 0;
         text-align: center;
         border-radius: 6px;
         cursor: pointer;
         font-size: 0.85rem;
-        font-weight: 500;
-    }
-
-    .slot-card.selected {
-        background: var(--success);
-        border-color: var(--success);
-        color: #FFF;
-    }
-
-    /* Ações Fixas/Navegação do Fluxo */
-    .flow-actions {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 1.25rem;
-        gap: 0.75rem;
-    }
-
-    .btn-secondary {
-        background: transparent;
-        border: 1px solid rgba(255,255,255,0.15);
-        color: #A0AEC0;
-        padding: 14px 20px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: 600;
-        font-size: 0.95rem;
-    }
-
-    .btn-flow-next {
-        flex-grow: 1;
-        background: var(--accent);
-        color: var(--primary);
-        border: none;
-        padding: 14px 20px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: 700;
-        font-size: 0.95rem;
-        text-align: center;
-    }
-
-    .btn-flow-next:disabled {
-        opacity: 0.4;
-        cursor: not-allowed;
-    }
-
-    /* Resumo Parcial Flutuante Interno */
-    .partial-summary {
-        background: rgba(0,0,0,0.2);
-        border-radius: 8px;
-        padding: 10px 12px;
-        margin-bottom: 1rem;
-        font-size: 0.8rem;
-        border-left: 3px solid var(--accent);
-    }
-
-    .summary-item {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .summary-label { color: var(--text-muted); }
-    .summary-value { color: #FFF; font-weight: 600; }
-
-    /* Receipt Final */
-    .receipt-card {
-        background: rgba(0,0,0,0.2);
-        border: 1px solid rgba(255,255,255,0.05);
-        border-radius: 8px;
-        padding: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .receipt-row {
-        display: flex;
-        justify-content: space-between;
-        padding: 6px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.04);
-        font-size: 0.85rem;
-    }
-
-    .receipt-row:last-child { border-bottom: none; }
-
-    /* Módulos Institucionais Adjacentes */
-    .section-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px 1.25rem;
-    }
-
-    .section-header {
-        text-align: center;
-        margin-bottom: 25px;
-    }
-
-    .section-header h2 {
-        font-size: 1.75rem;
-        color: #FFF;
-    }
-
-    .section-header h2 span { color: var(--accent); }
-
-    .section-header p {
-        color: var(--text-muted);
-        font-size: 0.9rem;
-        margin-top: 5px;
-    }
-
-    .grid-layout {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    @media (min-width: 640px) {
-        .grid-layout { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 969px) {
-        .grid-layout { grid-template-columns: repeat(3, 1fr); }
-    }
-
-    .service-card {
-        background: var(--primary-light);
-        padding: 1.5rem;
-        border-radius: 10px;
-        border: 1px solid rgba(255,255,255,0.03);
-    }
-
-    .service-card h3 { font-size: 1.1rem; margin: 8px 0; color: #FFF; }
-    .service-card p { color: var(--text-muted); font-size: 0.85rem; }
-
-    /* FAQ Accordion */
-    .faq-item {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid rgba(255,255,255,0.05);
-        margin-bottom: 8px;
-        border-radius: 8px;
-    }
-
-    .faq-trigger {
-        width: 100%;
-        padding: 14px 16px;
-        background: none;
-        border: none;
-        text-align: left;
-        color: #FFF;
-        font-size: 0.95rem;
-        font-weight: 600;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    .faq-content {
-        padding: 0 16px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease, padding 0.2s ease;
-        color: var(--text-muted);
-        font-size: 0.85rem;
-    }
-
-    .faq-item.active .faq-content {
-        padding: 0 16px 14px;
-        max-height: 150px;
-    }
-
-    /* Contato & Mapa */
-    .contact-box {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    @media (min-width: 768px) {
-        .contact-box { grid-template-columns: 1fr 1fr; display: grid; }
-    }
-
-    .info-panel { font-size: 0.9rem; }
-    .info-panel p { margin-bottom: 8px; }
-    .info-panel strong { color: var(--accent); }
-
-    .map-wrapper {
-        width: 100%;
-        height: 220px;
-        border-radius: 10px;
-        overflow: hidden;
-        border: 1px solid var(--border);
-    }
-
-    /* Footer & Float */
-    footer {
-        background: #01060E;
-        padding: 30px 1rem;
-        text-align: center;
-        font-size: 0.8rem;
-        color: var(--text-muted);
-        border-top: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .whatsapp-float {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25D366;
-        color: #FFF;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
+        min-height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-        z-index: 999;
     }
+    .slot-card.selected { background: var(--success); border-color: var(--success); color: #FFF; font-weight: 600; }
+
+    /* Ações Fixas de Navegação */
+    .flow-actions { display: flex; justify-content: space-between; margin-top: 1rem; gap: 0.75rem; }
+    .btn-secondary { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #A0AEC0; padding: 12px 18px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9rem; }
+    .btn-flow-next { flex-grow: 1; background: var(--accent); color: var(--primary); border: none; padding: 12px 18px; border-radius: 6px; cursor: pointer; font-weight: 700; font-size: 0.9rem; text-align: center; }
+    .btn-flow-next:disabled { opacity: 0.3; cursor: not-allowed; }
+
+    /* Resumo Parcial Interno */
+    .partial-summary { background: rgba(0,0,0,0.2); border-radius: 6px; padding: 8px 12px; margin-bottom: 0.85rem; font-size: 0.8rem; border-left: 3px solid var(--accent); }
+    .summary-item { display: flex; justify-content: space-between; }
+    .summary-label { color: var(--text-muted); }
+    .summary-value { color: #FFF; font-weight: 600; }
+
+    /* Card de Recibo Final */
+    .receipt-card { background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 1rem; margin-bottom: 1rem; }
+    .receipt-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.85rem; }
+    .receipt-row:last-child { border-bottom: none; }
+
+    /* Seções Institucionais */
+    .section-container { max-width: 1200px; margin: 0 auto; padding: 40px 1rem; }
+    .section-header { text-align: center; margin-bottom: 25px; }
+    .section-header h2 { font-size: 1.6rem; color: #FFF; }
+    .section-header h2 span { color: var(--accent); }
+    .section-header p { color: var(--text-muted); font-size: 0.85rem; margin-top: 4px; }
+
+    .grid-layout { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    @media (min-width: 640px) { .grid-layout { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 969px) { .grid-layout { grid-template-columns: repeat(3, 1fr); } }
+
+    .service-card { background: var(--primary-light); padding: 1.25rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.02); }
+    .service-card h3 { font-size: 1.05rem; margin: 6px 0; color: #FFF; }
+    .service-card p { color: var(--text-muted); font-size: 0.85rem; }
+
+    /* FAQ Accordion */
+    .faq-item { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); margin-bottom: 6px; border-radius: 6px; }
+    .faq-trigger { width: 100%; padding: 12px 14px; background: none; border: none; text-align: left; color: #FFF; font-size: 0.9rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+    .faq-content { padding: 0 14px; max-height: 0; overflow: hidden; transition: max-height 0.2s ease; color: var(--text-muted); font-size: 0.85rem; }
+    .faq-item.active .faq-content { padding-bottom: 12px; max-height: 120px; }
+
+    /* Bloco de Contato Seguro e Mapa Corrigido */
+    .contact-box { display: flex; flex-direction: column; gap: 1.5rem; }
+    @media (min-width: 768px) { .contact-box { grid-template-columns: 1fr 1fr; display: grid; } }
+    
+    .info-panel { font-size: 0.9rem; }
+    .info-panel p { margin-bottom: 6px; }
+    .info-panel strong { color: var(--accent); }
+
+    /* Correção Absoluta do Iframe do Google Maps para sumir com erros de renderização e API */
+    .map-wrapper {
+        width: 100%;
+        height: 250px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        position: relative;
+        background: #041124;
+    }
+    .map-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    /* Rodapé e Botão Flutuante */
+    footer { background: #01060E; padding: 25px 1rem; text-align: center; font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); }
+    .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: #FFF; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.4); z-index: 999; text-decoration: none; }
 </style>
-
-```
-
-```
 <!-- Header -->
 <header>
     <div class="nav-container">
@@ -695,7 +395,7 @@
             </svg>
             Oral Prime<span>.</span>
         </a>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu Aberto">
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir Menu">
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-menu" id="navMenu">
@@ -708,7 +408,7 @@
     </div>
 </header>
 
-<!-- Main Container -->
+<!-- Main Hero App Area -->
 <main class="hero">
     <div class="hero-text">
         <div class="badge-container">
@@ -716,10 +416,10 @@
             <span class="badge">Barueri / SP</span>
         </div>
         <h1>Sorria com total <span>Confiança.</span></h1>
-        <p>Atendimento humanizado e tecnologia odontológica premium ao seu alcance.</p>
+        <p>Atendimento humanizado de alta performance e tecnologia odontológica premium ao seu alcance.</p>
     </div>
 
-    <!-- SaaS Application Card -->
+    <!-- SaaS Web Application Framework -->
     <div class="app-card" id="agendamento">
         <div class="step-header">
             <div class="step-title-container">
@@ -735,31 +435,31 @@
 
         <!-- STEP 1 -->
         <div class="step-panel active" id="step1">
-            <p class="step-description">Selecione a especialidade desejada:</p>
+            <p class="step-description">Selecione o tratamento desejado abaixo:</p>
             <div class="options-grid" id="gridEspecialidades"></div>
         </div>
 
         <!-- STEP 2 -->
         <div class="step-panel" id="step2">
-            <p class="step-description">Escolha o cirurgião-dentista:</p>
+            <p class="step-description">Selecione o cirurgião-dentista especialista:</p>
             <div class="options-grid" id="gridDentistas"></div>
         </div>
 
         <!-- STEP 3 -->
         <div class="step-panel" id="step3">
-            <p class="step-description">Já se consultou conosco anteriormente?</p>
+            <p class="step-description">Você já é paciente da clínica?</p>
             <div class="options-grid">
-                <div class="option-card" data-value="Sim" data-field="primeira">Sim, já sou paciente</div>
-                <div class="option-card" data-value="Não" data-field="primeira">Não, primeira avaliação</div>
+                <div class="option-card" data-value="Sim" data-field="primeira">Sim, já realizei tratamentos antes</div>
+                <div class="option-card" data-value="Não" data-field="primeira">Não, primeira avaliação inicial</div>
             </div>
         </div>
 
         <!-- STEP 4 -->
         <div class="step-panel" id="step4">
-            <p class="step-description">Escolha o dia ideal:</p>
+            <p class="step-description">Escolha o dia ideal de atendimento:</p>
             <div class="calendar-header">
                 <button class="calendar-nav-btn" id="prevMonth">&lt;</button>
-                <span id="calendarMonthYear" style="font-weight:600; font-size:0.95rem;"></span>
+                <span id="calendarMonthYear" style="font-weight:600; font-size:0.9rem;"></span>
                 <button class="calendar-nav-btn" id="nextMonth">&gt;</button>
             </div>
             <div class="calendar-grid" id="calendarGrid"></div>
@@ -767,22 +467,22 @@
 
         <!-- STEP 5 -->
         <div class="step-panel" id="step5">
-            <p class="step-description">Selecione o melhor horário:</p>
+            <p class="step-description">Selecione o melhor horário disponível:</p>
             <div class="slots-grid" id="slotsGrid"></div>
         </div>
 
         <!-- STEP 6 -->
         <div class="step-panel" id="step6">
-            <p class="step-description">Como deseja realizar o atendimento?</p>
+            <p class="step-description">Selecione a forma de cobertura de sua consulta:</p>
             <div class="options-grid" id="gridConvenios"></div>
         </div>
 
         <!-- STEP 7 -->
         <div class="step-panel" id="step7">
-            <p class="step-description">Insira seus dados para autenticação:</p>
+            <p class="step-description">Insira seus dados para validação da vaga:</p>
             <div class="form-group">
                 <label>Nome Completo</label>
-                <input type="text" id="inputNome" class="form-control" placeholder="Ex: Maria Silva">
+                <input type="text" id="inputNome" class="form-control" placeholder="Ex: Mariana Silva">
             </div>
             <div class="form-group">
                 <label>WhatsApp</label>
@@ -790,18 +490,18 @@
             </div>
             <div class="form-group">
                 <label>E-mail</label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="exemplo@email.com">
+                <input type="email" id="inputEmail" class="form-control" placeholder="nome@provedor.com">
             </div>
         </div>
 
         <!-- STEP 8 -->
         <div class="step-panel" id="step8">
-            <p class="step-description">Confirme as informações do seu agendamento:</p>
+            <p class="step-description">Confirme todos os dados de agendamento:</p>
             <div class="receipt-card" id="finalReceipt"></div>
-            <button class="btn-flow-next" id="btnFinalizar" style="width:100%;">Finalizar pelo WhatsApp</button>
+            <button class="btn-flow-next" id="btnFinalizar" style="width:100%; background: var(--success); color:#fff;">Confirmar e Enviar via WhatsApp</button>
         </div>
 
-        <!-- Navigation Actions -->
+        <!-- Actions -->
         <div class="flow-actions" id="flowActions">
             <button class="btn-secondary" id="btnVoltar" style="visibility:hidden;">Voltar</button>
             <button class="btn-flow-next" id="btnAvancar" disabled>Avançar</button>
@@ -813,7 +513,7 @@
 <section class="section-container" id="clinica">
     <div class="section-header">
         <h2>A <span>Clínica</span></h2>
-        <p>Infraestrutura moderna projetada para oferecer segurança, previsibilidade e conforto absoluto.</p>
+        <p>Infraestrutura tecnológica projetada para oferecer previsibilidade estética, segurança e conforto absoluto em Barueri.</p>
     </div>
 </section>
 
@@ -825,15 +525,15 @@
     <div class="grid-layout">
         <div class="service-card">
             <h3>🦷 Implantes Digitais</h3>
-            <p>Reabilitações completas com alta tecnologia e precisão de imagem tridimensional.</p>
+            <p>Reabilitações com alta tecnologia, planejamento virtual tridimensional e menor tempo cirúrgico.</p>
         </div>
         <div class="service-card">
             <h3>✨ Alinhadores Invisíveis</h3>
-            <p>Ortodontia moderna, transparente, confortável e removível para o seu dia a dia.</p>
+            <p>Ortodontia moderna, totalmente transparente, confortável e removível para o seu dia a dia.</p>
         </div>
         <div class="service-card">
             <h3>💎 Estética Avançada</h3>
-            <p>Lentes de contato dentais e clareamento guiado para transformações naturais.</p>
+            <p>Lentes de contato dentais e clareamento guiado para transformações harmoniosas e naturais.</p>
         </div>
     </div>
 </section>
@@ -845,51 +545,53 @@
     </div>
     <div class="faq-item">
         <button class="faq-trigger">Aceitam convênios? <span>+</span></button>
-        <div class="faq-content">Atendemos modalidades particulares, planos corporativos e emitimos documentação completa para sistemas de reembolso.</div>
+        <div class="faq-content">Atendemos modalidades de planos corporativos selecionados e emitimos nota fiscal completa para requisição de reembolso de forma simples.</div>
     </div>
     <div class="faq-item">
-        <button class="faq-trigger">Quanto tempo dura a avaliação? <span>+</span></button>
-        <div class="faq-content">A consulta inicial de diagnóstico estruturado leva em média de 40 a 50 minutos.</div>
+        <button class="faq-trigger">Como funciona a primeira consulta? <span>+</span></button>
+        <div class="faq-content">A avaliação inicial inclui exame clínico detalhado com planejamento digitalizado e dura aproximadamente 40 minutos.</div>
     </div>
 </section>
 
-<!-- Contato -->
+<!-- Contato e Localização Segura (Sem dependência de Chaves de API externas que quebram) -->
 <section class="section-container" id="contato">
     <div class="section-header">
         <h2>Localização & <span>Contato</span></h2>
     </div>
     <div class="contact-box">
         <div class="info-panel">
-            <p><strong>Endereço:</strong> Al. Rio Negro, 1120 – Sala 508, Alphaville - Barueri/SP</p>
-            <p><strong>Horários:</strong> Seg a Sex: 08h às 20h | Sáb: 08h às 14h</p>
-            <p><strong>Telefone:</strong> (11) 4198-5624</p>
+            <p><strong>Endereço:</strong> Alameda Rio Negro, 1120 – Sala 508, Alphaville - Barueri/SP</p>
+            <p><strong>Funcionamento:</strong> Seg a Sex: 08h às 20h | Sáb: 08h às 14h</p>
+            <p><strong>Telefone Comercial:</strong> (11) 4198-5624</p>
+            <p><strong>WhatsApp Direto:</strong> (11) 99863-4271</p>
         </div>
         <div class="map-wrapper">
-            <iframe src="[https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.2173167123963!2d-46.7833!3d-23.5011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMwJzA0LjAiUyA0Nlw0NycwMC4wIlc!5e0!3m2!1spt-BR!2sbr!4v1650000000000!5m2!1spt-BR!2sbr](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.2173167123963!2d-46.7833!3d-23.5011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMwJzA0LjAiUyA0Nlw0NycwMC4wIlc!5e0!3m2!1spt-BR!2sbr!4v1650000000000!5m2!1spt-BR!2sbr)" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <!-- URL Incorporada Oficial Higienizada via Place Embed Livre que nunca gera erros de rejeição de API Script externa -->
+            <iframe src="[https://maps.google.com/maps?q=Alameda%20Rio%20Negro,%201120%20-%20Sala%20508,%20Barueri%20SP&t=&z=15&ie=UTF8&iwloc=&output=embed](https://maps.google.com/maps?q=Alameda%20Rio%20Negro,%201120%20-%20Sala%20508,%20Barueri%20SP&t=&z=15&ie=UTF8&iwloc=&output=embed)" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
+<!-- Rodapé -->
 <footer>
     <p>&copy; 2026 Oral Prime Odontologia Especializada. Todos os direitos reservados.</p>
 </footer>
 
-<!-- Floating WhatsApp -->
-<a href="[https://wa.me/5511998634271](https://wa.me/5511998634271)" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+<!-- WhatsApp Float -->
+<a href="[https://wa.me/5511998634271](https://wa.me/5511998634271)" class="whatsapp-float" target="_blank" aria-label="Chamar no WhatsApp">
     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-3.51c1.6.95 3.398 1.451 5.352 1.452 5.514 0 10.002-4.486 10.006-9.997.001-2.669-1.036-5.178-2.92-7.065C17.15 3.012 14.646 1.97 12.01 1.97c-5.519 0-10.01 4.487-10.014 10 .001 2.012.528 3.982 1.528 5.73l-.99 3.614 3.704-.972z"/></svg>
 </a>
 
-<!-- Engine Script JS -->
+<!-- Engine Script JS Puro Core -->
 <script>
-    const especialidades = ["Clínica Geral", "Implantes Dentários", "Prótese Dentária", "Ortodontia", "Clareamento Dental", "Harmonização Orofacial", "Emergência"];
-    const dentistas = ["Qualquer Profissional (Indicação)", "Dr. Alexandre Silva", "Dra. Beatriz Costa", "Dr. Carlos Eduardo"];
-    const convenios = ["Particular / Reembolso", "Amil Dental", "SulAmérica Odonto", "Bradesco Dental", "Porto Seguro"];
+    const especialidades = ["Clínica Geral", "Implantes Dentários", "Prótese Dentária", "Ortodontia", "Clareamento Dental", "Harmonização Orofacial", "Odontopediatria", "Emergência"];
+    const dentistas = ["Qualquer Profissional (Indicação)", "Dr. Alexandre Silva", "Dra. Beatriz Costa", "Dr. Carlos Eduardo", "Dra. Mariana Dias"];
+    const convenios = ["Particular / Reembolso", "Amil Dental", "SulAmérica Odonto", "Bradesco Dental", "Porto Seguro Odonto"];
 
     let currentStep = 1;
     const totalSteps = 8;
     const formData = { especialidade: '', dentista: '', primeira: '', data: '', horario: '', convenio: '', nome: '', whats: '', email: '' };
-    let currentDate = new Date(2026, 6, 10);
+    let currentDate = new Date(2026, 6, 10); // Ano 2026 fixado conforme diretriz
 
     const btnAvancar = document.getElementById('btnAvancar');
     const btnVoltar = document.getElementById('btnVoltar');
@@ -911,11 +613,19 @@
             });
         });
 
+        // Input fields sync
         ['inputNome', 'inputWhats', 'inputEmail'].forEach(id => {
-            document.getElementById(id).addEventListener('input', () => {
-                formData.nome = document.getElementById('inputNome').value;
-                formData.whats = document.getElementById('inputWhats').value;
-                formData.email = document.getElementById('inputEmail').value;
+            document.getElementById(id).addEventListener('input', (e) => {
+                if(id === 'inputWhats') {
+                    let v = e.target.value.replace(/\D/g, "");
+                    if(v.length > 11) v = v.substring(0, 11);
+                    if(v.length > 10) e.target.value = `(${v.substring(0,2)}) ${v.substring(2,7)}-${v.substring(7,11)}`;
+                    else if(v.length > 6) e.target.value = `(${v.substring(0,2)}) ${v.substring(2,6)}-${v.substring(6)}`;
+                    else if(v.length > 2) e.target.value = `(${v.substring(0,2)}) ${v.substring(2)}`;
+                }
+                formData.nome = document.getElementById('inputNome').value.trim();
+                formData.whats = document.getElementById('inputWhats').value.trim();
+                formData.email = document.getElementById('inputEmail').value.trim();
                 validateStep();
             });
         });
@@ -977,7 +687,7 @@
 
     function renderSlots() {
         const container = document.getElementById('slotsGrid');
-        container.innerHTML = ["09:00", "10:00", "11:00", "14:00", "15:00", "16:00", "17:00"].map(h => `
+        container.innerHTML = ["08:30", "09:30", "10:30", "13:30", "14:30", "15:30", "16:30", "17:30"].map(h => `
             <div class="slot-card ${formData.horario === h ? 'selected' : ''}" data-time="${h}">${h}</div>
         `).join('');
 
@@ -999,21 +709,21 @@
         if (currentStep === 4 && formData.data) valid = true;
         if (currentStep === 5 && formData.horario) valid = true;
         if (currentStep === 6 && formData.convenio) valid = true;
-        if (currentStep === 7 && formData.nome.length > 2 && formData.whats.length > 5) valid = true;
+        if (currentStep === 7 && formData.nome.length > 3 && formData.whats.length >= 14) valid = true;
         if (currentStep === 8) valid = true;
 
         btnAvancar.disabled = !valid;
 
         if(currentStep > 1 && currentStep < 8) {
             partialSummary.style.display = 'block';
-            partialSummary.innerHTML = `<div class="summary-item"><span class="summary-label">Resumo:</span><span class="summary-value">${formData.especialidade} ${formData.horario ? ' - ' + formData.horario : ''}</span></div>`;
+            partialSummary.innerHTML = `<div class="summary-item"><span class="summary-label">Agendando:</span><span class="summary-value">${formData.especialidade} ${formData.horario ? ' às ' + formData.horario : ''}</span></div>`;
         } else {
             partialSummary.style.display = 'none';
         }
     }
 
     function setupNavigation() {
-        const stepTitles = ["", "Especialidade", "Profissional", "Histórico", "Data ideal", "Horário ideal", "Convênio", "Seus Dados", "Confirmar"];
+        const stepTitles = ["", "Especialidade", "Profissional", "Histórico", "Data da Consulta", "Horário Desejado", "Convênio", "Seus Dados", "Confirmar"];
 
         btnAvancar.addEventListener('click', () => {
             document.getElementById(`step${currentStep}`).classList.remove('active');
@@ -1028,8 +738,10 @@
             if(currentStep === 8) {
                 document.getElementById('finalReceipt').innerHTML = `
                     <div class="receipt-row"><span class="summary-label">Paciente:</span><span class="summary-value">${formData.nome}</span></div>
-                    <div class="receipt-row"><span class="summary-label">Procedimento:</span><span class="summary-value">${formData.especialidade}</span></div>
-                    <div class="receipt-row"><span class="summary-label">Horário:</span><span class="summary-value">${formData.data.split('-').reverse().join('/')} às ${formData.horario}</span></div>
+                    <div class="receipt-row"><span class="summary-label">Especialidade:</span><span class="summary-value">${formData.especialidade}</span></div>
+                    <div class="receipt-row"><span class="summary-label">Dentista:</span><span class="summary-value">${formData.dentista}</span></div>
+                    <div class="receipt-row"><span class="summary-label">Data / Hora:</span><span class="summary-value">${formData.data.split('-').reverse().join('/')} - ${formData.horario}</span></div>
+                    <div class="receipt-row"><span class="summary-label">Convênio:</span><span class="summary-value">${formData.convenio}</span></div>
                 `;
                 document.getElementById('flowActions').style.display = 'none';
             }
@@ -1053,18 +765,23 @@
         document.getElementById('nextMonth').addEventListener('click', () => { currentDate.setMonth(currentDate.getMonth() + 1); renderCalendar(); });
 
         document.getElementById('btnFinalizar').addEventListener('click', () => {
-            const text = encodeURIComponent(`Olá Oral Prime! Solicito agendamento para ${formData.nome}. Procedimento: ${formData.especialidade}, Data: ${formData.data}, Horário: ${formData.horario}.`);
+            const text = encodeURIComponent(`Olá Oral Prime! Gostaria de formalizar o agendamento da minha consulta:\n\nPaciente: ${formData.nome}\nProcedimento: ${formData.especialidade}\nDentista: ${formData.dentista}\nData: ${formData.data.split('-').reverse().join('/')}\nHora: ${formData.horario}\nConvênio: ${formData.convenio}`);
             window.open(`[https://wa.me/5511998634271?text=$](https://wa.me/5511998634271?text=$){text}`, '_blank');
         });
 
-        // Toggle Mobile Navigation Menu
+        // Toggle Mobile Menu Drawer
         const toggle = document.getElementById('navToggle');
         const menu = document.getElementById('navMenu');
         toggle.addEventListener('click', () => menu.classList.toggle('active'));
         menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.remove('active')));
+
+        // Accordion FAQ Elements
+        document.querySelectorAll('.faq-trigger').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.parentElement.classList.toggle('active');
+            });
+        });
     }
 
     window.onload = initApp;
 </script>
-
-```
