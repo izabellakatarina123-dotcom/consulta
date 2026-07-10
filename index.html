@@ -1,787 +1,1213 @@
 <!-- Open Graph -->
+<meta property="og:title" content="Oral Prime Odontologia Especializada | Agendamento Premium">
+<meta property="og:description" content="Agende seu atendimento odontológico em menos de 60 segundos com nossos especialistas.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Oral Prime Odontologia | Sistema de Agendamento">
-<meta property="og:description" content="Tratamentos completos com foco em saúde, estética e bem-estar em Barueri/SP. Agende em menos de 60 segundos.">
 <meta property="og:url" content="[https://oralprimeodonto.com.br](https://oralprimeodonto.com.br)">
 
-<!-- Twitter -->
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Oral Prime Odontologia">
-<meta name="twitter:description" content="Agendamento online de consultas e avaliações odontológicas premium.">
+<meta name="twitter:title" content="Oral Prime Odontologia Especializada">
+<meta name="twitter:description" content="Agendamento rápido de avaliações e tratamentos odontológicos em Barueri.">
+
+<link rel="canonical" href="[https://oralprimeodonto.com.br](https://oralprimeodonto.com.br)">
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "[https://schema.org](https://schema.org)",
+  "@type": "MedicalBusiness",
+  "name": "Oral Prime Odontologia Especializada",
+  "image": "",
+  "telePhone": "(11) 4198-5624",
+  "email": "contato@oralprimeodonto.com.br",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Alameda Rio Negro, 1120 – Sala 508",
+    "addressLocality": "Barueri",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "14:00"
+    }
+  ]
+}
+</script>
 
 <style>
     :root {
-        --primary: #0A192F;
-        --primary-light: #172A45;
-        --accent: #D4AF37;
-        --accent-hover: #C5A028;
-        --text-main: #F5F5F5;
-        --text-muted: #8892B0;
-        --bg-main: #020C1B;
-        --bg-card: #112240;
-        --border: rgba(212, 175, 55, 0.25);
-        --success: #28C76F;
-        --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        --primary: #0A1931;
+        --primary-light: #15305B;
+        --accent: #C5A880;
+        --accent-dark: #A38458;
+        --bg-light: #F7F9FC;
+        --surface: #FFFFFF;
+        --text-main: #1E293B;
+        --text-muted: #64748B;
+        --border: #E2E8F0;
+        --radius-lg: 16px;
+        --radius-md: 12px;
+        --radius-sm: 8px;
+        --shadow: 0 4px 20px -2px rgba(10, 25, 49, 0.06), 0 2px 8px -1px rgba(10, 25, 49, 0.04);
+        --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* Reset e Base Segura para Mobile */
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: var(--font);
-        -webkit-tap-highlight-color: transparent;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    html {
+        scroll-behavior: smooth;
     }
 
     body {
-        background-color: var(--bg-main);
+        background-color: var(--bg-light);
         color: var(--text-main);
-        line-height: 1.4;
-        overflow-x: hidden;
-        padding-top: 70px; /* Evita que o topo suma sob o header fixo */
+        line-height: 1.6;
+        font-size: 16px;
     }
 
-    /* Header Totalmente Responsivo */
+    /* Cores de Destaque Internas */
+    .text-accent { color: var(--accent); }
+    .bg-primary { background-color: var(--primary); }
+
+    /* Componentes de Layout */
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    /* Header */
     header {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        background: rgba(2, 12, 27, 0.95);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         z-index: 1000;
-        height: 70px;
+        border-bottom: 1px solid var(--border);
+        height: 72px;
+        display: flex;
+        align-items: center;
     }
 
-    .nav-container {
-        max-width: 1200px;
-        height: 100%;
-        margin: 0 auto;
+    .header-wrap {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 1rem;
+        width: 100%;
     }
 
     .logo {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
         text-decoration: none;
-        color: var(--text-main);
-        font-weight: 700;
-        font-size: 1.25rem;
     }
 
-    .logo-svg {
-        width: 32px;
-        height: 32px;
-    }
-
-    .logo span {
-        color: var(--accent);
-    }
-
-    .nav-menu {
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, var(--primary), var(--primary-light));
+        border-radius: 50%;
         display: flex;
-        gap: 1.5rem;
-        list-style: none;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--accent);
     }
 
-    .nav-menu a {
-        color: var(--text-muted);
-        text-decoration: none;
-        font-size: 0.9rem;
-        font-weight: 500;
-        transition: color 0.2s;
+    .logo-icon svg {
+        width: 20px;
+        height: 20px;
+        fill: #fff;
     }
 
-    .nav-menu a:hover, .nav-menu a:focus {
-        color: var(--accent);
-    }
-
-    .nav-toggle {
-        display: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 8px;
-        z-index: 1001;
-    }
-
-    .nav-toggle span {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background-color: var(--text-main);
-        margin: 5px 0;
-        transition: 0.3s;
-    }
-
-    /* Menu Mobile Estilo Gaveta */
-    @media (max-width: 968px) {
-        .nav-toggle { display: block; }
-        .nav-menu {
-            position: fixed;
-            top: 70px;
-            left: -100%;
-            width: 100%;
-            height: calc(100vh - 70px);
-            background: var(--primary);
-            flex-direction: column;
-            align-items: center;
-            padding-top: 2rem;
-            gap: 1.5rem;
-            transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border-top: 1px solid var(--border);
-        }
-        .nav-menu.active { left: 0; }
-        .nav-menu a { font-size: 1.1rem; color: #FFF; width: 100%; text-align: center; padding: 10px 0; }
-    }
-
-    /* Hero Layout Adaptável */
-    .hero {
-        padding: 20px 1rem 40px;
-        max-width: 1200px;
-        margin: 0 auto;
+    .logo-text {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
     }
 
-    @media (min-width: 969px) {
-        .hero {
-            padding: 60px 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1.1fr;
-            gap: 4rem;
-            align-items: center;
-            min-height: calc(100vh - 70px);
-        }
+    .logo-title {
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--primary);
+        letter-spacing: -0.5px;
+        line-height: 1.1;
     }
 
-    .hero-text { text-align: center; }
-    @media (min-width: 969px) { .hero-text { text-align: left; } }
-
-    .hero-text h1 {
-        font-size: 2rem;
-        line-height: 1.2;
-        color: #FFFFFF;
-        margin-bottom: 1rem;
+    .logo-sub {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--accent-dark);
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
-    @media (min-width: 768px) { .hero-text h1 { font-size: 2.8rem; } }
-    .hero-text h1 span { color: var(--accent); }
 
-    .hero-text p {
-        color: var(--text-muted);
-        font-size: 0.95rem;
-        margin-bottom: 1.5rem;
-        max-width: 500px;
-    }
-    @media (max-width: 968px) { .hero-text p { margin-left: auto; margin-right: auto; } }
-
-    .badge-container {
+    nav {
         display: flex;
-        gap: 8px;
-        margin-bottom: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 24px;
+        align-items: center;
     }
-    @media (min-width: 969px) { .badge-container { justify-content: flex-start; } }
 
-    .badge {
-        background: rgba(212, 175, 55, 0.1);
-        border: 1px solid var(--border);
-        color: var(--accent);
-        padding: 4px 10px;
-        border-radius: 20px;
-        font-size: 0.75rem;
+    nav a {
+        color: var(--text-main);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        transition: var(--transition);
+    }
+
+    nav a:hover {
+        color: var(--accent-dark);
+    }
+
+    .nav-btn {
+        background: var(--primary);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: var(--radius-sm);
         font-weight: 600;
     }
 
-    /* O SISTEMA SAAS INTERATIVO */
-    .app-card {
-        background: var(--bg-card);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        padding: 1.25rem;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-        width: 100%;
-        max-width: 550px;
-        margin: 0 auto;
+    .nav-btn:hover {
+        background: var(--primary-light);
+        color: #fff;
     }
 
-    .step-header { margin-bottom: 1rem; }
-    .step-title-container {
-        display: flex;
-        justify-content: space-between;
+    /* Hero */
+    .hero {
+        padding: 140px 0 60px 0;
+        background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+        text-align: center;
+    }
+
+    .hero-badge {
+        display: inline-flex;
         align-items: center;
-        margin-bottom: 0.5rem;
+        background: rgba(197, 168, 128, 0.15);
+        color: var(--accent-dark);
+        padding: 6px 16px;
+        border-radius: 30px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 24px;
     }
-    .step-title { font-size: 1.1rem; font-weight: 600; color: #FFF; }
-    .step-indicator { font-size: 0.8rem; color: var(--accent); font-weight: 700; }
 
-    .progress-bar-bg { height: 4px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; }
-    .progress-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--success)); width: 12.5%; transition: width 0.3s ease; }
+    .hero h1 {
+        font-size: 42px;
+        font-weight: 800;
+        color: var(--primary);
+        line-height: 1.2;
+        margin-bottom: 16px;
+        letter-spacing: -1px;
+    }
 
-    .step-panel { display: none; }
-    .step-panel.active { display: block; }
-    .step-description { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem; }
+    .hero p {
+        font-size: 18px;
+        color: var(--text-muted);
+        max-width: 600px;
+        margin: 0 auto 32px auto;
+    }
 
-    /* Listas e Grades de Opções Touch-Friendly (Garante tamanho mínimo de clique de 48px) */
+    /* Sistema de Agendamento (Módulo Principal) */
+    .booking-section {
+        padding: 20px 0 80px 0;
+        margin-top: -20px;
+    }
+
+    .booking-container {
+        background: var(--surface);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(10, 25, 49, 0.05);
+        max-width: 760px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .booking-header {
+        background: var(--primary);
+        color: #fff;
+        padding: 28px 32px;
+        position: relative;
+    }
+
+    .booking-header h2 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 4px;
+    }
+
+    .booking-header p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+    }
+
+    .progress-bar-container {
+        width: 100%;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.15);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background: var(--accent);
+        width: 12.5%;
+        transition: width 0.3s ease;
+    }
+
+    .step-panel {
+        padding: 32px;
+        display: none;
+    }
+
+    .step-panel.active {
+        display: block;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .step-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 8px;
+    }
+
+    .step-desc {
+        font-size: 14px;
+        color: var(--text-muted);
+        margin-bottom: 24px;
+    }
+
+    /* Grid de Seleção Inteligente */
     .options-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        max-height: 250px;
-        overflow-y: auto;
-        padding-right: 4px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .option-card {
-        background: rgba(255,255,255,0.03);
-        border: 1px solid rgba(255,255,255,0.08);
-        padding: 12px 14px;
-        border-radius: 8px;
+        background: var(--surface);
+        border: 2px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 16px;
         cursor: pointer;
-        transition: all 0.2s;
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .option-card:hover {
+        border-color: var(--accent);
+        background: rgba(197, 168, 128, 0.02);
+    }
+
+    .option-card.selected {
+        border-color: var(--primary);
+        background: rgba(10, 25, 49, 0.02);
+    }
+
+    .option-card.selected::after {
+        content: "✓";
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        color: var(--primary);
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .option-card h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 4px;
+    }
+
+    .option-card p {
+        font-size: 12px;
+        color: var(--text-muted);
+    }
+
+    /* Inputs de Texto Clássicos */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 8px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 14px 16px;
+        border: 2px solid var(--border);
+        border-radius: var(--radius-sm);
+        font-size: 15px;
+        color: var(--text-main);
+        transition: var(--transition);
+        background-color: var(--bg-light);
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: var(--primary);
+        background-color: #fff;
+    }
+
+    /* Calendário e Horários */
+    .calendar-widget {
+        background: var(--bg-light);
+        border-radius: var(--radius-md);
+        padding: 16px;
+        margin-bottom: 20px;
+    }
+
+    .calendar-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 0.9rem;
-        color: #E2E8F0;
-        min-height: 48px; /* WCAG Mobile Standard */
+        margin-bottom: 16px;
     }
 
-    .option-card:hover { background: rgba(255,255,255,0.06); }
-    .option-card.selected {
-        background: rgba(212, 175, 55, 0.15);
-        border-color: var(--accent);
-        color: #FFF;
+    .calendar-header h4 {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--primary);
+    }
+
+    .calendar-nav-btn {
+        background: #fff;
+        border: 1px solid var(--border);
+        padding: 6px 12px;
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+        font-size: 12px;
         font-weight: 600;
     }
-    .option-card.selected::after { content: "✓"; color: var(--accent); font-weight: bold; }
 
-    /* Inputs de Formulário */
-    .form-group { margin-bottom: 0.85rem; }
-    .form-group label { display: block; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.3rem; color: var(--text-muted); text-transform: uppercase; }
-    .form-control {
-        width: 100%;
-        background: rgba(0,0,0,0.25);
-        border: 1px solid rgba(255,255,255,0.15);
-        padding: 12px;
-        border-radius: 6px;
-        color: #FFF;
-        font-size: 0.95rem;
-        -webkit-appearance: none;
-    }
-    .form-control:focus { outline: none; border-color: var(--accent); }
-
-    /* Calendário Limpo e Escalável */
-    .calendar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
-    .calendar-nav-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #FFF; width: 36px; height: 36px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-    .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; }
-    .weekday-label { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; padding-bottom: 2px; }
-    
-    .calendar-day {
-        aspect-ratio: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.85rem;
-        border-radius: 6px;
-        cursor: pointer;
-        background: rgba(255,255,255,0.02);
-        min-height: 34px;
-    }
-    .calendar-day.selected { background: var(--accent) !important; color: var(--primary) !important; font-weight: 700; }
-    .calendar-day.disabled { color: rgba(255,255,255,0.1); cursor: not-allowed; background: transparent; }
-
-    /* Grade de Horários Compacta Otimizada */
-    .slots-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-    .slot-card {
-        background: rgba(255,255,255,0.04);
-        border: 1px solid rgba(255,255,255,0.1);
-        padding: 10px 0;
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 8px;
         text-align: center;
-        border-radius: 6px;
+    }
+
+    .calendar-day-name {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text-muted);
+        padding-bottom: 8px;
+    }
+
+    .calendar-day {
+        padding: 10px 0;
+        font-size: 14px;
+        font-weight: 500;
+        background: #fff;
+        border-radius: var(--radius-sm);
         cursor: pointer;
-        font-size: 0.85rem;
-        min-height: 40px;
+        transition: var(--transition);
+        border: 1px solid transparent;
+    }
+
+    .calendar-day:hover:not(.disabled) {
+        border-color: var(--accent);
+        color: var(--accent-dark);
+    }
+
+    .calendar-day.selected {
+        background: var(--primary) !important;
+        color: #fff !important;
+    }
+
+    .calendar-day.disabled {
+        background: transparent;
+        color: var(--border);
+        cursor: not-allowed;
+    }
+
+    .time-slots {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .time-slot {
+        padding: 12px;
+        background: #fff;
+        border: 2px solid var(--border);
+        border-radius: var(--radius-sm);
+        text-align: center;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        transition: var(--transition);
+    }
+
+    .time-slot:hover:not(.disabled) {
+        border-color: var(--accent);
+    }
+
+    .time-slot.selected {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: #fff;
+    }
+
+    .time-slot.disabled {
+        background: var(--border);
+        color: var(--text-muted);
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+
+    /* Resumo e Confirmação */
+    .summary-box {
+        background: var(--bg-light);
+        border-radius: var(--radius-md);
+        padding: 20px;
+        border-left: 4px solid var(--accent);
+        margin-bottom: 24px;
+    }
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px dashed var(--border);
+        font-size: 14px;
+    }
+
+    .summary-row:last-child {
+        border-bottom: none;
+    }
+
+    .summary-label {
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .summary-value {
+        color: var(--primary);
+        font-weight: 600;
+    }
+
+    /* Ações do Rodapé do Painel */
+    .panel-actions {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 24px;
+        border-top: 1px solid var(--border);
+        padding-top: 24px;
+    }
+
+    .btn {
+        padding: 14px 28px;
+        border-radius: var(--radius-sm);
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .btn-primary {
+        background: var(--primary);
+        color: #fff;
+    }
+
+    .btn-primary:hover {
+        background: var(--primary-light);
+    }
+
+    .btn-secondary {
+        background: #fff;
+        border: 2px solid var(--border);
+        color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+        border-color: var(--text-muted);
+    }
+
+    /* Apresentação e Diferenciais */
+    .features-section {
+        padding: 80px 0;
+        background: #fff;
+    }
+
+    .section-header {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 48px auto;
+    }
+
+    .section-header h3 {
+        font-size: 28px;
+        font-weight: 800;
+        color: var(--primary);
+        margin-bottom: 12px;
+    }
+
+    .section-header p {
+        color: var(--text-muted);
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .feature-item {
+        padding: 32px;
+        background: var(--bg-light);
+        border-radius: var(--radius-md);
+        transition: var(--transition);
+    }
+
+    .feature-item:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow);
+    }
+
+    .feature-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--primary);
+        border-radius: var(--radius-sm);
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: 20px;
+        color: var(--accent);
+        font-size: 20px;
     }
-    .slot-card.selected { background: var(--success); border-color: var(--success); color: #FFF; font-weight: 600; }
 
-    /* Ações Fixas de Navegação */
-    .flow-actions { display: flex; justify-content: space-between; margin-top: 1rem; gap: 0.75rem; }
-    .btn-secondary { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #A0AEC0; padding: 12px 18px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9rem; }
-    .btn-flow-next { flex-grow: 1; background: var(--accent); color: var(--primary); border: none; padding: 12px 18px; border-radius: 6px; cursor: pointer; font-weight: 700; font-size: 0.9rem; text-align: center; }
-    .btn-flow-next:disabled { opacity: 0.3; cursor: not-allowed; }
+    .feature-item h4 {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 8px;
+    }
 
-    /* Resumo Parcial Interno */
-    .partial-summary { background: rgba(0,0,0,0.2); border-radius: 6px; padding: 8px 12px; margin-bottom: 0.85rem; font-size: 0.8rem; border-left: 3px solid var(--accent); }
-    .summary-item { display: flex; justify-content: space-between; }
-    .summary-label { color: var(--text-muted); }
-    .summary-value { color: #FFF; font-weight: 600; }
+    .feature-item p {
+        font-size: 14px;
+        color: var(--text-muted);
+    }
 
-    /* Card de Recibo Final */
-    .receipt-card { background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 1rem; margin-bottom: 1rem; }
-    .receipt-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.85rem; }
-    .receipt-row:last-child { border-bottom: none; }
+    /* FAQ */
+    .faq-section {
+        padding: 80px 0;
+        background: var(--bg-light);
+    }
 
-    /* Seções Institucionais */
-    .section-container { max-width: 1200px; margin: 0 auto; padding: 40px 1rem; }
-    .section-header { text-align: center; margin-bottom: 25px; }
-    .section-header h2 { font-size: 1.6rem; color: #FFF; }
-    .section-header h2 span { color: var(--accent); }
-    .section-header p { color: var(--text-muted); font-size: 0.85rem; margin-top: 4px; }
+    .faq-container {
+        max-width: 760px;
+        margin: 0 auto;
+    }
 
-    .grid-layout { display: grid; grid-template-columns: 1fr; gap: 1rem; }
-    @media (min-width: 640px) { .grid-layout { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 969px) { .grid-layout { grid-template-columns: repeat(3, 1fr); } }
-
-    .service-card { background: var(--primary-light); padding: 1.25rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.02); }
-    .service-card h3 { font-size: 1.05rem; margin: 6px 0; color: #FFF; }
-    .service-card p { color: var(--text-muted); font-size: 0.85rem; }
-
-    /* FAQ Accordion */
-    .faq-item { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); margin-bottom: 6px; border-radius: 6px; }
-    .faq-trigger { width: 100%; padding: 12px 14px; background: none; border: none; text-align: left; color: #FFF; font-size: 0.9rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
-    .faq-content { padding: 0 14px; max-height: 0; overflow: hidden; transition: max-height 0.2s ease; color: var(--text-muted); font-size: 0.85rem; }
-    .faq-item.active .faq-content { padding-bottom: 12px; max-height: 120px; }
-
-    /* Bloco de Contato Seguro e Mapa Corrigido */
-    .contact-box { display: flex; flex-direction: column; gap: 1.5rem; }
-    @media (min-width: 768px) { .contact-box { grid-template-columns: 1fr 1fr; display: grid; } }
-    
-    .info-panel { font-size: 0.9rem; }
-    .info-panel p { margin-bottom: 6px; }
-    .info-panel strong { color: var(--accent); }
-
-    /* Correção Absoluta do Iframe do Google Maps para sumir com erros de renderização e API */
-    .map-wrapper {
-        width: 100%;
-        height: 250px;
-        border-radius: 12px;
+    .faq-item {
+        background: #fff;
+        border-radius: var(--radius-sm);
+        margin-bottom: 12px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         overflow: hidden;
-        border: 1px solid var(--border);
-        position: relative;
-        background: #041124;
-    }
-    .map-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
     }
 
-    /* Rodapé e Botão Flutuante */
-    footer { background: #01060E; padding: 25px 1rem; text-align: center; font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); }
-    .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: #FFF; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.4); z-index: 999; text-decoration: none; }
+    .faq-trigger {
+        width: 100%;
+        padding: 20px 24px;
+        text-align: left;
+        background: none;
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--primary);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .faq-content {
+        padding: 0 24px;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+        color: var(--text-muted);
+        font-size: 14px;
+    }
+
+    .faq-item.active .faq-content {
+        padding-bottom: 20px;
+        max-height: 200px;
+    }
+
+    /* Footer & Info */
+    footer {
+        background: var(--primary);
+        color: #fff;
+        padding: 60px 0 30px 0;
+        font-size: 14px;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr repeat(2, 1fr);
+        gap: 48px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding-bottom: 40px;
+    }
+
+    .footer-info h4 {
+        font-size: 16px;
+        color: var(--accent);
+        margin-bottom: 16px;
+        font-weight: 700;
+    }
+
+    .footer-info p, .footer-info a {
+        color: rgba(255,255,255,0.7);
+        text-decoration: none;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        color: rgba(255,255,255,0.5);
+        font-size: 12px;
+    }
+
+    /* Widgets Flutuantes */
+    .whatsapp-float {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        background: #25D366;
+        color: #fff;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        z-index: 999;
+        text-decoration: none;
+        font-size: 24px;
+        transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.05);
+    }
+
+    /* Responsividade Mobile First */
+    @media (max-width: 768px) {
+        nav { display: none; }
+        .hero h1 { font-size: 32px; }
+        .options-grid { grid-template-columns: 1fr; }
+        .features-grid { grid-template-columns: 1fr; }
+        .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+        .time-slots { grid-template-columns: repeat(2, 1fr); }
+        .step-panel { padding: 20px; }
+    }
 </style>
 <!-- Header -->
 <header>
-    <div class="nav-container">
-        <a href="#" class="logo">
-            <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
-                <circle cx="50" cy="50" r="45" stroke="#D4AF37" stroke-width="4"/>
-                <path d="M30 45C35 65 65 65 70 45" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
-            </svg>
-            Oral Prime<span>.</span>
+    <div class="container header-wrap">
+        <a href="#" class="logo" aria-label="Oral Prime Home">
+            <div class="logo-icon">
+                <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,11.71 4,11.42 4.05,11.14C4.56,13.92 7,16 10,16C10.55,16 11,15.55 11,15C11,14.45 10.55,14 10,14C7.79,14 6,12.21 6,10C6,9.15 6.26,8.37 6.71,7.73C8.12,9.15 10.1,10 12,10C13.9,10 15.88,9.15 17.29,7.73C17.74,8.37 18,9.15 18,10C18,12.21 16.21,14 14,14C13.45,14 13,14.45 13,15C13,15.55 13.45,16 14,16C17,16 19.44,13.92 19.95,11.14C20,11.42 20,11.71 20,12C20,16.41 16.41,20 12,20Z"/></svg>
+            </div>
+            <div class="logo-text">
+                <span class="logo-title">Oral Prime</span>
+                <span class="logo-sub">Odontologia</span>
+            </div>
         </a>
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir Menu">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="#clinica">A Clínica</a></li>
-            <li><a href="#especialidades">Especialidades</a></li>
-            <li><a href="#agendamento">Agendamento</a></li>
-            <li><a href="#faq">Dúvidas</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
+        <nav>
+            <a href="#diferenciais">Diferenciais</a>
+            <a href="#faq">Dúvidas</a>
+            <a href="#agendar" class="nav-btn">Agendar Agora</a>
+        </nav>
     </div>
 </header>
 
-<!-- Main Hero App Area -->
-<main class="hero">
-    <div class="hero-text">
-        <div class="badge-container">
-            <span class="badge">Avaliação Digital</span>
-            <span class="badge">Barueri / SP</span>
-        </div>
-        <h1>Sorria com total <span>Confiança.</span></h1>
-        <p>Atendimento humanizado de alta performance e tecnologia odontológica premium ao seu alcance.</p>
-    </div>
-
-    <!-- SaaS Web Application Framework -->
-    <div class="app-card" id="agendamento">
-        <div class="step-header">
-            <div class="step-title-container">
-                <h3 class="step-title" id="panelTitle">Especialidade</h3>
-                <span class="step-indicator" id="panelStepInd">Etapa 1 de 8</span>
-            </div>
-            <div class="progress-bar-bg">
-                <div class="progress-bar-fill" id="progressFill"></div>
-            </div>
-        </div>
-
-        <div class="partial-summary" id="partialSummary" style="display:none;"></div>
-
-        <!-- STEP 1 -->
-        <div class="step-panel active" id="step1">
-            <p class="step-description">Selecione o tratamento desejado abaixo:</p>
-            <div class="options-grid" id="gridEspecialidades"></div>
-        </div>
-
-        <!-- STEP 2 -->
-        <div class="step-panel" id="step2">
-            <p class="step-description">Selecione o cirurgião-dentista especialista:</p>
-            <div class="options-grid" id="gridDentistas"></div>
-        </div>
-
-        <!-- STEP 3 -->
-        <div class="step-panel" id="step3">
-            <p class="step-description">Você já é paciente da clínica?</p>
-            <div class="options-grid">
-                <div class="option-card" data-value="Sim" data-field="primeira">Sim, já realizei tratamentos antes</div>
-                <div class="option-card" data-value="Não" data-field="primeira">Não, primeira avaliação inicial</div>
-            </div>
-        </div>
-
-        <!-- STEP 4 -->
-        <div class="step-panel" id="step4">
-            <p class="step-description">Escolha o dia ideal de atendimento:</p>
-            <div class="calendar-header">
-                <button class="calendar-nav-btn" id="prevMonth">&lt;</button>
-                <span id="calendarMonthYear" style="font-weight:600; font-size:0.9rem;"></span>
-                <button class="calendar-nav-btn" id="nextMonth">&gt;</button>
-            </div>
-            <div class="calendar-grid" id="calendarGrid"></div>
-        </div>
-
-        <!-- STEP 5 -->
-        <div class="step-panel" id="step5">
-            <p class="step-description">Selecione o melhor horário disponível:</p>
-            <div class="slots-grid" id="slotsGrid"></div>
-        </div>
-
-        <!-- STEP 6 -->
-        <div class="step-panel" id="step6">
-            <p class="step-description">Selecione a forma de cobertura de sua consulta:</p>
-            <div class="options-grid" id="gridConvenios"></div>
-        </div>
-
-        <!-- STEP 7 -->
-        <div class="step-panel" id="step7">
-            <p class="step-description">Insira seus dados para validação da vaga:</p>
-            <div class="form-group">
-                <label>Nome Completo</label>
-                <input type="text" id="inputNome" class="form-control" placeholder="Ex: Mariana Silva">
-            </div>
-            <div class="form-group">
-                <label>WhatsApp</label>
-                <input type="tel" id="inputWhats" class="form-control" placeholder="(11) 99999-9999">
-            </div>
-            <div class="form-group">
-                <label>E-mail</label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="nome@provedor.com">
-            </div>
-        </div>
-
-        <!-- STEP 8 -->
-        <div class="step-panel" id="step8">
-            <p class="step-description">Confirme todos os dados de agendamento:</p>
-            <div class="receipt-card" id="finalReceipt"></div>
-            <button class="btn-flow-next" id="btnFinalizar" style="width:100%; background: var(--success); color:#fff;">Confirmar e Enviar via WhatsApp</button>
-        </div>
-
-        <!-- Actions -->
-        <div class="flow-actions" id="flowActions">
-            <button class="btn-secondary" id="btnVoltar" style="visibility:hidden;">Voltar</button>
-            <button class="btn-flow-next" id="btnAvancar" disabled>Avançar</button>
-        </div>
-    </div>
-</main>
-
-<!-- Clínica Info -->
-<section class="section-container" id="clinica">
-    <div class="section-header">
-        <h2>A <span>Clínica</span></h2>
-        <p>Infraestrutura tecnológica projetada para oferecer previsibilidade estética, segurança e conforto absoluto em Barueri.</p>
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge">📅 Agendamento Online em 60 Segundos</div>
+        <h1>Sorria com Confiança.<br>Nossos Especialistas Cuidam de Você.</h1>
+        <p>Plataforma inteligente integrada para marcação imediata de avaliações e tratamentos na Oral Prime Barueri.</p>
     </div>
 </section>
 
-<!-- Especialidades -->
-<section class="section-container" id="especialidades">
-    <div class="section-header">
-        <h2>Nossos <span>Tratamentos</span></h2>
-    </div>
-    <div class="grid-layout">
-        <div class="service-card">
-            <h3>🦷 Implantes Digitais</h3>
-            <p>Reabilitações com alta tecnologia, planejamento virtual tridimensional e menor tempo cirúrgico.</p>
-        </div>
-        <div class="service-card">
-            <h3>✨ Alinhadores Invisíveis</h3>
-            <p>Ortodontia moderna, totalmente transparente, confortável e removível para o seu dia a dia.</p>
-        </div>
-        <div class="service-card">
-            <h3>💎 Estética Avançada</h3>
-            <p>Lentes de contato dentais e clareamento guiado para transformações harmoniosas e naturais.</p>
+<!-- Módulo Principal: Fluxo de Agendamento Inteligente -->
+<section class="booking-section" id="agendar">
+    <div class="container">
+        <div class="booking-container">
+            <div class="booking-header">
+                <h2 id="panel-main-title">Solicitação de Consulta</h2>
+                <p id="panel-sub-title">Escolha a especialidade desejada para iniciar.</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress"></div>
+                </div>
+            </div>
+
+            <!-- Etapa 1: Especialidade -->
+            <div class="step-panel active" id="step-1">
+                <div class="step-title">Qual especialidade você procura?</div>
+                <div class="step-desc">Selecione uma de nossas principais frentes de atendimento.</div>
+                <div class="options-grid">
+                    <div class="option-card" onclick="selectOption(1, 'Especialidade', 'Implantes Dentários')">
+                        <h4>Implantes Dentários</h4>
+                        <p>Planejamento digital avançado.</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption(1, 'Especialidade', 'Ortodontia')">
+                        <h4>Ortodontia</h4>
+                        <p>Alinhadores invisíveis e aparelhos.</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption(1, 'Especialidade', 'Clínico Geral')">
+                        <h4>Clínico Geral</h4>
+                        <p>Rotina, limpeza e prevenção.</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption(1, 'Especialidade', 'Estética / Clareamento')">
+                        <h4>Estética Dental</h4>
+                        <p>Clareamentos e facetas premium.</p>
+                    </div>
+                </div>
+                <div class="panel-actions">
+                    <div></div>
+                    <button class="btn btn-primary" onclick="nextStep(2)">Avançar</button>
+                </div>
+            </div>
+
+            <!-- Etapa 2: Dentista -->
+            <div class="step-panel" id="step-2">
+                <div class="step-title">Deseja escolher o profissional?</div>
+                <div class="step-desc">Temos 10 cirurgiões-dentistas seniores prontos para te atender.</div>
+                <div class="options-grid">
+                    <div class="option-card" onclick="selectOption(2, 'Dentista', 'Qualquer Especialista Prontamente Disponível')">
+                        <h4>Próximo Especialista Disponível</h4>
+                        <p>Indicado para agendamentos mais rápidos.</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption(2, 'Dentista', 'Dr. Roberto Silva (Reabilitação/Implantes)')">
+                        <h4>Dr. Roberto Silva</h4>
+                        <p>Especialista em Implantes e Próteses.</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption(2, 'Dentista', 'Dra. Aline Mendes (Ortodontia/Estética)')">
+                        <h4>Dra. Aline Mendes</h4>
+                        <p>Especialista em Alinhadores Modernos.</p>
+                    </div>
+                </div>
+                <div class="panel-actions">
+                    <button class="btn btn-secondary" onclick="prevStep(1)">Voltar</button>
+                    <button class="btn btn-primary" onclick="nextStep(3)">Avançar</button>
+                </div>
+            </div>
+
+            <!-- Etapa 3: Histórico (Primeira Consulta) -->
+            <div class="step-panel" id="step-3">
+                <div class="step-title">É sua primeira vez na Oral Prime?</div>
+                <div class="step-desc">Personalizamos o tempo de atendimento com base no seu histórico.</div>
+                <div class="options-grid">
+                    <div class="option-card" onclick="selectOption(3, 'Primeira Consulta', 'Sim, primeira avaliação')">
+                        <h4>Sim, primeira consulta</h4>
+                        <p>Inclui mapeamento digital e diagnóstico completo.</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption(3, 'Primeira Consulta', 'Não, já sou paciente')">
+                        <h4>Não, já sou paciente</h4>
+                        <p>Direcionado para continuidade de tratamentos.</p>
+                    </div>
+                </div>
+                <div class="panel-actions">
+                    <button class="btn btn-secondary" onclick="prevStep(2)">Voltar</button>
+                    <button class="btn btn-primary" onclick="nextStep(4)">Avançar</button>
+                </div>
+            </div>
+
+            <!-- Etapa 4: Data -->
+            <div class="step-panel" id="step-4">
+                <div class="step-title">Selecione o Dia da Consulta</div>
+                <div class="step-desc">Selecione abaixo o melhor dia do mês.</div>
+                <div class="calendar-widget">
+                    <div class="calendar-header">
+                        <h4 id="calendar-month">Julho 2026</h4>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="calendar-day-name">D</div>
+                        <div class="calendar-day-name">S</div>
+                        <div class="calendar-day-name">T</div>
+                        <div class="calendar-day-name">Q</div>
+                        <div class="calendar-day-name">Q</div>
+                        <div class="calendar-day-name">S</div>
+                        <div class="calendar-day-name">S</div>
+                        
+                        <div class="calendar-day disabled"></div>
+                        <div class="calendar-day disabled"></div>
+                        <div class="calendar-day disabled"></div>
+                        <div class="calendar-day disabled">1</div>
+                        <div class="calendar-day disabled">2</div>
+                        <div class="calendar-day disabled">3</div>
+                        <div class="calendar-day disabled">4</div>
+                        <div class="calendar-day disabled">5</div>
+                        <div class="calendar-day" onclick="selectDate(this, '06/07/2026')">6</div>
+                        <div class="calendar-day" onclick="selectDate(this, '07/07/2026')">7</div>
+                        <div class="calendar-day" onclick="selectDate(this, '08/07/2026')">8</div>
+                        <div class="calendar-day" onclick="selectDate(this, '09/07/2026')">9</div>
+                        <div class="calendar-day" onclick="selectDate(this, '10/07/2026')">10</div>
+                        <div class="calendar-day" onclick="selectDate(this, '11/07/2026')">11</div>
+                        <div class="calendar-day disabled">12</div>
+                        <div class="calendar-day" onclick="selectDate(this, '13/07/2026')">13</div>
+                        <div class="calendar-day" onclick="selectDate(this, '14/07/2026')">14</div>
+                        <div class="calendar-day" onclick="selectDate(this, '15/07/2026')">15</div>
+                    </div>
+                </div>
+                <div class="panel-actions">
+                    <button class="btn btn-secondary" onclick="prevStep(3)">Voltar</button>
+                    <button class="btn btn-primary" onclick="nextStep(5)">Avançar</button>
+                </div>
+            </div>
+
+            <!-- Etapa 5: Horário -->
+            <div class="step-panel" id="step-5">
+                <div class="step-title">Escolha o Horário</div>
+                <div class="step-desc">Horários disponíveis para o dia selecionado.</div>
+                <div class="time-slots">
+                    <div class="time-slot" onclick="selectTime(this, '09:00')">09:00</div>
+                    <div class="time-slot" onclick="selectTime(this, '10:30')">10:30</div>
+                    <div class="time-slot disabled">13:00</div>
+                    <div class="time-slot" onclick="selectTime(this, '14:30')">14:30</div>
+                    <div class="time-slot" onclick="selectTime(this, '16:00')">16:00</div>
+                    <div class="time-slot" onclick="selectTime(this, '17:30')">17:30</div>
+                </div>
+                <div class="panel-actions">
+                    <button class="btn btn-secondary" onclick="prevStep(4)">Voltar</button>
+                    <button class="btn btn-primary" onclick="nextStep(6)">Avançar</button>
+                </div>
+            </div>
+
+            <!-- Etapa 6: Convênio -->
+            <div class="step-panel" id="step-6">
+                <div class="step-title">Forma de Atendimento</div>
+                <div class="step-desc">Atendemos particular (com condições facilitadas) e convênios.</div>
+                <div class="options-grid">
+                    <div class="option-card" onclick="selectOption(6, 'Convenio', 'Particular')">
+                        <h4>Particular / Orçamento</h4>
+                        <p>Condições especiais e parcelamento em 24x.</p>
+                    </div>
+                    <div class="option-card" onclick="selectOption(6, 'Convenio', 'Convênio Odontológico Amil/SulAmérica/Bradesco')">
+                        <h4>Convênio Odontológico</h4>
+                        <p>Aceitamos as principais bandeiras nacionais.</p>
+                    </div>
+                </div>
+                <div class="panel-actions">
+                    <button class="btn btn-secondary" onclick="prevStep(5)">Voltar</button>
+                    <button class="btn btn-primary" onclick="nextStep(7)">Avançar</button>
+                </div>
+            </div>
+
+            <!-- Etapa 7: Dados Pessoais -->
+            <div class="step-panel" id="step-7">
+                <div class="step-title">Informações de Contato</div>
+                <div class="step-desc">Insira seus dados para receber o lembrete de confirmação via SMS e WhatsApp.</div>
+                
+                <div class="form-group">
+                    <label for="user-name">Nome Completo</label>
+                    <input type="text" id="user-name" class="form-control" placeholder="Ex: Maria Oliveira">
+                </div>
+                <div class="form-group">
+                    <label for="user-phone">WhatsApp / Celular</label>
+                    <input type="tel" id="user-phone" class="form-control" placeholder="(11) 99999-9999">
+                </div>
+                <div class="form-group">
+                    <label for="user-email">E-mail</label>
+                    <input type="email" id="user-email" class="form-control" placeholder="seuemail@provedor.com">
+                </div>
+                <div class="form-group">
+                    <label for="user-obs">Alguma observação importante? (Opcional)</label>
+                    <input type="text" id="user-obs" class="form-control" placeholder="Ex: Sinto dor no dente posterior...">
+                </div>
+
+                <div class="panel-actions">
+                    <button class="btn btn-secondary" onclick="prevStep(6)">Voltar</button>
+                    <button class="btn btn-primary" onclick="buildSummary()">Revisar Agendamento</button>
+                </div>
+            </div>
+
+            <!-- Etapa 8: Resumo de Confirmação -->
+            <div class="step-panel" id="step-8">
+                <div class="step-title">Confirme seus Dados</div>
+                <div class="step-desc">Tudo pronto! Verifique abaixo as informações do seu agendamento.</div>
+                
+                <div class="summary-box" id="summary-content">
+                    <!-- Gerado Dinamicamente -->
+                </div>
+
+                <button class="btn btn-primary" style="background:#25D366; margin-bottom: 12px;" onclick="executeFinalActions('whatsapp')">
+                    Finalizar e Enviar via WhatsApp
+                </button>
+                <button class="btn btn-secondary" style="font-size:13px;" onclick="executeFinalActions('calendar')">
+                    📅 Apenas Adicionar ao Meu Google Agenda
+                </button>
+                
+                <div class="panel-actions">
+                    <button class="btn btn-secondary" onclick="prevStep(7)">Corrigir Informações</button>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
-<!-- FAQ -->
-<section class="section-container" id="faq">
-    <div class="section-header">
-        <h2>Dúvidas <span>Frequentes</span></h2>
-    </div>
-    <div class="faq-item">
-        <button class="faq-trigger">Aceitam convênios? <span>+</span></button>
-        <div class="faq-content">Atendemos modalidades de planos corporativos selecionados e emitimos nota fiscal completa para requisição de reembolso de forma simples.</div>
-    </div>
-    <div class="faq-item">
-        <button class="faq-trigger">Como funciona a primeira consulta? <span>+</span></button>
-        <div class="faq-content">A avaliação inicial inclui exame clínico detalhado com planejamento digitalizado e dura aproximadamente 40 minutos.</div>
-    </div>
-</section>
-
-<!-- Contato e Localização Segura (Sem dependência de Chaves de API externas que quebram) -->
-<section class="section-container" id="contato">
-    <div class="section-header">
-        <h2>Localização & <span>Contato</span></h2>
-    </div>
-    <div class="contact-box">
-        <div class="info-panel">
-            <p><strong>Endereço:</strong> Alameda Rio Negro, 1120 – Sala 508, Alphaville - Barueri/SP</p>
-            <p><strong>Funcionamento:</strong> Seg a Sex: 08h às 20h | Sáb: 08h às 14h</p>
-            <p><strong>Telefone Comercial:</strong> (11) 4198-5624</p>
-            <p><strong>WhatsApp Direto:</strong> (11) 99863-4271</p>
+<!-- Apresentação de Diferenciais da Clínica -->
+<section class="features-section" id="diferenciais">
+    <div class="container">
+        <div class="section-header">
+            <h3>Por que escolher a Oral Prime?</h3>
+            <p>Estrutura focada em resolutividade rápida, segurança biológica e alta performance clínica.</p>
         </div>
-        <div class="map-wrapper">
-            <!-- URL Incorporada Oficial Higienizada via Place Embed Livre que nunca gera erros de rejeição de API Script externa -->
-            <iframe src="[https://maps.google.com/maps?q=Alameda%20Rio%20Negro,%201120%20-%20Sala%20508,%20Barueri%20SP&t=&z=15&ie=UTF8&iwloc=&output=embed](https://maps.google.com/maps?q=Alameda%20Rio%20Negro,%201120%20-%20Sala%20508,%20Barueri%20SP&t=&z=15&ie=UTF8&iwloc=&output=embed)" allowfullscreen="" loading="lazy"></iframe>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🦷</div>
+                <h4>Planejamento Digital</h4>
+                <p>Previsibilidade total antes mesmo de iniciar o tratamento de implantes ou lentes de contato.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🛡️</div>
+                <h4>Corpo Clínico Sênior</h4>
+                <p>10 especialistas integrados cobrindo todas as áreas da odontologia moderna.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">⏰</div>
+                <h4>Atendimento Humanizado</h4>
+                <p>Pontualidade rigorosa e acolhimento focado no bem-estar físico do paciente.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Rodapé -->
+<!-- Módulo FAQ -->
+<section class="faq-section" id="faq">
+    <div class="container">
+        <div class="section-header">
+            <h3>Dúvidas Frequentes</h3>
+            <p>Esclarecimentos diretos sobre nossa rotina operacional.</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <button class="faq-trigger">Quais as formas de pagamento aceitas? <span>+</span></button>
+                <div class="faq-content">
+                    <p>Aceitamos PIX, cartões de crédito e débito, dinheiro e boleto bancário. Para tratamentos reabilitadores de alto valor, oferecemos parcelamento em até 24 vezes através de financiamento odontológico parceiro.</p>
+                </div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <button class="faq-trigger">Como funcionam os atendimentos de urgência? <span>+</span></button>
+                <div class="faq-content">
+                    <p>Pacientes com quadros de dor intensa, fraturas expostas, traumas na face ou queda de blocos de restauração recebem triagem prioritária imediata de encaixe direto durante todo o horário comercial.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
 <footer>
-    <p>&copy; 2026 Oral Prime Odontologia Especializada. Todos os direitos reservados.</p>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4 style="color:#fff; margin-bottom:12px;">Oral Prime Odontologia</h4>
+                <p style="font-size:13px; max-width:340px;">Sua clínica de excelência em saúde, bem-estar e reabilitação estética do sorriso na região de Barueri e Alphaville.</p>
+            </div>
+            <div class="footer-info">
+                <h4>Contato</h4>
+                <p>(11) 4198-5624</p>
+                <p>contato@oralprimeodonto.com.br</p>
+                <p>@oralprimeodonto</p>
+            </div>
+            <div class="footer-info">
+                <h4>Localização</h4>
+                <p>Alameda Rio Negro, 1120</p>
+                <p>Sala 508 – Barueri/SP</p>
+                <p style="font-size:11px; color:var(--accent);">Seg a Sex: 08h às 20h | Sáb: 08h às 14h</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Oral Prime Odontologia Especializada. Todos os direitos reservados.</span>
+            <span>Desenvolvido sob padrões SaaS comerciais de Alta Conversão.</span>
+        </div>
+    </div>
 </footer>
 
-<!-- WhatsApp Float -->
-<a href="[https://wa.me/5511998634271](https://wa.me/5511998634271)" class="whatsapp-float" target="_blank" aria-label="Chamar no WhatsApp">
-    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-3.51c1.6.95 3.398 1.451 5.352 1.452 5.514 0 10.002-4.486 10.006-9.997.001-2.669-1.036-5.178-2.92-7.065C17.15 3.012 14.646 1.97 12.01 1.97c-5.519 0-10.01 4.487-10.014 10 .001 2.012.528 3.982 1.528 5.73l-.99 3.614 3.704-.972z"/></svg>
+<!-- Botão Flutuante Direto WhatsApp -->
+<a href="[https://wa.me/5511998634271?text=Olá,%20gostaria%20de%20falar%20com%20a%20recepção%20da%20Oral%20Prime](https://wa.me/5511998634271?text=Olá,%20gostaria%20de%20falar%20com%20a%20recepção%20da%20Oral%20Prime)." class="whatsapp-float" target="_blank" aria-label="Fale direto conosco pelo WhatsApp">
+    <svg style="width:28px;height:28px;fill:#fff;margin-top:14px;margin-left:14px;" viewBox="0 0 24 24"><path d="M12.04 2C6.5 2 2 6.5 2 12c0 2.18.7 4.2 1.9 5.86L2.43 23l5.3-1.4c1.55.85 3.32 1.32 5.2 1.32 5.5 0 10-4.5 10-10S17.54 2 12.04 2zm6.64 14.3c-.27.76-1.35 1.4-1.84 1.48-.48.08-.97.14-3.12-.72-2.75-1.1-4.53-3.9-4.67-4.1-.14-.17-1.12-1.48-1.12-2.8 0-1.35.7-2.02.94-2.3.25-.26.54-.33.72-.33h.5c.17 0 .4.03.6.48.23.53.77 1.9.84 2.04.07.15.12.32.02.5-.1.2-.15.3-.3.47-.14.17-.3.38-.44.5-.16.16-.33.34-.14.67.2.33.84 1.4 1.8 2.27.12.1.25.17.38.22.4.12.75.1 1.03.06.3-.04.95-.4 1.08-.77.13-.37.13-.7 1-.77.13-.03.26-.03.38.03.12.06.77.36 1.5.72.37.18.62.27.7.4.1.15.1.84-.17 1.6z"/></svg>
 </a>
 
-<!-- Engine Script JS Puro Core -->
+<!-- Lógica de Controle do Sistema -->
 <script>
-    const especialidades = ["Clínica Geral", "Implantes Dentários", "Prótese Dentária", "Ortodontia", "Clareamento Dental", "Harmonização Orofacial", "Odontopediatria", "Emergência"];
-    const dentistas = ["Qualquer Profissional (Indicação)", "Dr. Alexandre Silva", "Dra. Beatriz Costa", "Dr. Carlos Eduardo", "Dra. Mariana Dias"];
-    const convenios = ["Particular / Reembolso", "Amil Dental", "SulAmérica Odonto", "Bradesco Dental", "Porto Seguro Odonto"];
+    // Objeto de Estado Global da Aplicação
+    const appointmentData = {
+        Especialidade: '',
+        Dentista: '',
+        'Primeira Consulta': '',
+        Data: '',
+        Horario: '',
+        Convenio: '',
+        Nome: '',
+        WhatsApp: '',
+        Email: '',
+        Observacoes: ''
+    };
 
-    let currentStep = 1;
-    const totalSteps = 8;
-    const formData = { especialidade: '', dentista: '', primeira: '', data: '', horario: '', convenio: '', nome: '', whats: '', email: '' };
-    let currentDate = new Date(2026, 6, 10); // Ano 2026 fixado conforme diretriz
+    // Navegação de Passos Com Validação Parcial Integrada
+    function nextStep(stepNumber) {
+        // Validação simples antes de avançar de certas telas principais
+        if(stepNumber === 5 && !appointmentData.Data) {
+            alert('Por favor, selecione uma data no calendário para prosseguir.');
+            return;
+        }
+        if(stepNumber === 6 && !appointmentData.Horario) {
+            alert('Por favor, escolha um horário disponível para prosseguir.');
+            return;
+        }
 
-    const btnAvancar = document.getElementById('btnAvancar');
-    const btnVoltar = document.getElementById('btnVoltar');
-    const progressFill = document.getElementById('progressFill');
-    const partialSummary = document.getElementById('partialSummary');
+        document.querySelectorAll('.step-panel').forEach(panel => panel.classList.remove('active'));
+        document.getElementById(`step-${stepNumber}`).classList.add('active');
+        
+        // Atualizar Barra de Progresso Comercial de Forma Linear
+        const pct = (stepNumber / 8) * 100;
+        document.getElementById('progress').style.width = `${pct}%`;
 
-    function initApp() {
-        renderOptions('gridEspecialidades', especialidades, 'especialidade');
-        renderOptions('gridDentistas', dentistas, 'dentista');
-        renderOptions('gridConvenios', convenios, 'convenio');
-        renderCalendar();
-
-        document.querySelectorAll('#step3 .option-card').forEach(card => {
-            card.addEventListener('click', () => {
-                document.querySelectorAll('#step3 .option-card').forEach(c => c.classList.remove('selected'));
-                card.classList.add('selected');
-                formData.primeira = card.dataset.value;
-                validateStep();
-            });
-        });
-
-        // Input fields sync
-        ['inputNome', 'inputWhats', 'inputEmail'].forEach(id => {
-            document.getElementById(id).addEventListener('input', (e) => {
-                if(id === 'inputWhats') {
-                    let v = e.target.value.replace(/\D/g, "");
-                    if(v.length > 11) v = v.substring(0, 11);
-                    if(v.length > 10) e.target.value = `(${v.substring(0,2)}) ${v.substring(2,7)}-${v.substring(7,11)}`;
-                    else if(v.length > 6) e.target.value = `(${v.substring(0,2)}) ${v.substring(2,6)}-${v.substring(6)}`;
-                    else if(v.length > 2) e.target.value = `(${v.substring(0,2)}) ${v.substring(2)}`;
-                }
-                formData.nome = document.getElementById('inputNome').value.trim();
-                formData.whats = document.getElementById('inputWhats').value.trim();
-                formData.email = document.getElementById('inputEmail').value.trim();
-                validateStep();
-            });
-        });
-
-        setupNavigation();
+        // Otimização de Títulos Dinâmicos da Aplicação
+        const mainTitle = document.getElementById('panel-main-title');
+        if (stepNumber === 7) mainTitle.innerText = "Identificação de Segurança";
+        if (stepNumber === 8) mainTitle.innerText = "Revisão e Envio";
     }
 
-    function renderOptions(gridId, dataArray, fieldKey) {
-        const container = document.getElementById(gridId);
-        container.innerHTML = dataArray.map(item => `<div class="option-card" data-value="${item}">${item}</div>`).join('');
-        container.querySelectorAll('.option-card').forEach(card => {
-            card.addEventListener('click', () => {
-                container.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
-                card.classList.add('selected');
-                formData[fieldKey] = card.dataset.value;
-                validateStep();
-            });
-        });
+    function prevStep(stepNumber) {
+        document.querySelectorAll('.step-panel').forEach(panel => panel.classList.remove('active'));
+        document.getElementById(`step-${stepNumber}`).classList.add('active');
+        const pct = (stepNumber / 8) * 100;
+        document.getElementById('progress').style.width = `${pct}%`;
     }
 
-    function renderCalendar() {
-        const grid = document.getElementById('calendarGrid');
-        grid.innerHTML = '';
-        const year = currentDate.getFullYear();
-        const month = currentDate.getMonth();
+    // Handlers de Input de Dados do Usuário
+    function selectOption(step, key, value) {
+        appointmentData[key] = value;
+        
+        // Gerenciar feedback visual de seleção nos cards correspondentes do contêiner atual
+        const panel = document.getElementById(`step-${step}`);
+        panel.querySelectorAll('.option-card').forEach(card => card.classList.remove('selected'));
+        
+        // Atribui classe selecionada ao card clicado
+        event.currentTarget.classList.add('selected');
 
-        const monthsLabels = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-        document.getElementById('calendarMonthYear').innerText = `${monthsLabels[month]} ${year}`;
+        // Auto-avanço para simplificação extrema do fluxo UX em cliques rápidos
+        setTimeout(() => { nextStep(step + 1); }, 200);
+    }
 
-        ["D", "S", "T", "Q", "Q", "S", "S"].forEach(wd => grid.insertAdjacentHTML('beforeend', `<div class="weekday-label">${wd}</div>`));
+    function selectDate(element, dateStr) {
+        appointmentData.Data = dateStr;
+        document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('selected'));
+        element.classList.add('selected');
+        setTimeout(() => { nextStep(5); }, 200);
+    }
 
-        const firstDay = new Date(year, month, 1).getDay();
-        const totalDays = new Date(year, month + 1, 0).getDate();
+    function selectTime(element, timeStr) {
+        appointmentData.Horario = timeStr;
+        document.querySelectorAll('.time-slot').forEach(t => t.classList.remove('selected'));
+        element.classList.add('selected');
+        setTimeout(() => { nextStep(6); }, 200);
+    }
 
-        for(let i = 0; i < firstDay; i++) grid.insertAdjacentHTML('beforeend', `<div class="calendar-day disabled"></div>`);
+    // Construtor Estruturado do Painel de Resumo Comercial
+    function buildSummary() {
+        // Captura de valores dos inputs finais obrigatórios de identificação
+        appointmentData.Nome = document.getElementById('user-name').value;
+        appointmentData.WhatsApp = document.getElementById('user-phone').value;
+        appointmentData.Email = document.getElementById('user-email').value;
+        appointmentData.Observacoes = document.getElementById('user-obs').value || 'Nenhuma';
 
-        for(let day = 1; day <= totalDays; day++) {
-            const dateString = `${year}-${String(month+1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-            const isSunday = new Date(year, month, day).getDay() === 0;
+        if(!appointmentData.Nome || !appointmentData.WhatsApp) {
+            alert('Nome e WhatsApp são obrigatórios para a geração do seu protocolo de atendimento.');
+            return;
+        }
 
-            const dayEl = document.createElement('div');
-            dayEl.classList.add('calendar-day');
-            if(isSunday) dayEl.classList.add('disabled');
-            dayEl.innerText = day;
+        const summaryContent = document.getElementById('summary-content');
+        summaryContent.innerHTML = `
+            <div class="summary-row"><span class="summary-label">Paciente:</span> <span class="summary-value">${appointmentData.Nome}</span></div>
+            <div class="summary-row"><span class="summary-label">Especialidade:</span> <span class="summary-value">${appointmentData.Especialidade}</span></div>
+            <div class="summary-row"><span class="summary-label">Profissional:</span> <span class="summary-value">${appointmentData.Dentista}</span></div>
+            <div class="summary-row"><span class="summary-label">Data/Hora:</span> <span class="summary-value">${appointmentData.Data} às ${appointmentData.Horario}</span></div>
+            <div class="summary-row"><span class="summary-label">Cobertura:</span> <span class="summary-value">${appointmentData.Convenio}</span></div>
+        `;
+        nextStep(8);
+    }
 
-            if(!isSunday) {
-                if(formData.data === dateString) dayEl.classList.add('selected');
-                dayEl.addEventListener('click', () => {
-                    document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('selected'));
-                    dayEl.classList.add('selected');
-                    formData.data = dateString;
-                    renderSlots();
-                    validateStep();
-                });
-            }
-            grid.appendChild(dayEl);
+    // Executor das Integrações Finais Estruturadas
+    function executeFinalActions(type) {
+        const message = `Olá Oral Prime! Gostaria de confirmar minha solicitação de agendamento:\n\n` +
+                        `• Paciente: ${appointmentData.Nome}\n` +
+                        `• Especialidade: ${appointmentData.Especialidade}\n` +
+                        `• Médico: ${appointmentData.Dentista}\n` +
+                        `• Data/Hora: ${appointmentData.Data} às ${appointmentData.Horario}\n` +
+                        `• Plano: ${appointmentData.Convenio}\n` +
+                        `• Observações: ${appointmentData.Observacoes}`;
+
+        if(type === 'whatsapp') {
+            const encoded = encodeURIComponent(message);
+            window.open(`[https://wa.me/5511998634271?text=$](https://wa.me/5511998634271?text=$){encoded}`, '_blank');
+        } else if(type === 'calendar') {
+            const googleUrl = `[https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consulta+Oral+Prime+Odonto&dates=20260715T140000Z/20260715T150000Z&details=$](https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consulta+Oral+Prime+Odonto&dates=20260715T140000Z/20260715T150000Z&details=$){encodeURIComponent(message)}&location=Alameda+Rio+Negro,+1120+Sala+508+Barueri`;
+            window.open(googleUrl, '_blank');
         }
     }
 
-    function renderSlots() {
-        const container = document.getElementById('slotsGrid');
-        container.innerHTML = ["08:30", "09:30", "10:30", "13:30", "14:30", "15:30", "16:30", "17:30"].map(h => `
-            <div class="slot-card ${formData.horario === h ? 'selected' : ''}" data-time="${h}">${h}</div>
-        `).join('');
-
-        container.querySelectorAll('.slot-card').forEach(slot => {
-            slot.addEventListener('click', () => {
-                container.querySelectorAll('.slot-card').forEach(s => s.classList.remove('selected'));
-                slot.classList.add('selected');
-                formData.horario = slot.dataset.time;
-                validateStep();
-            });
-        });
+    // Componentes Interativos Secundários (FAQ Accordion)
+    function toggleFaq(element) {
+        element.classList.toggle('active');
     }
-
-    function validateStep() {
-        let valid = false;
-        if (currentStep === 1 && formData.especialidade) valid = true;
-        if (currentStep === 2 && formData.dentista) valid = true;
-        if (currentStep === 3 && formData.primeira) valid = true;
-        if (currentStep === 4 && formData.data) valid = true;
-        if (currentStep === 5 && formData.horario) valid = true;
-        if (currentStep === 6 && formData.convenio) valid = true;
-        if (currentStep === 7 && formData.nome.length > 3 && formData.whats.length >= 14) valid = true;
-        if (currentStep === 8) valid = true;
-
-        btnAvancar.disabled = !valid;
-
-        if(currentStep > 1 && currentStep < 8) {
-            partialSummary.style.display = 'block';
-            partialSummary.innerHTML = `<div class="summary-item"><span class="summary-label">Agendando:</span><span class="summary-value">${formData.especialidade} ${formData.horario ? ' às ' + formData.horario : ''}</span></div>`;
-        } else {
-            partialSummary.style.display = 'none';
-        }
-    }
-
-    function setupNavigation() {
-        const stepTitles = ["", "Especialidade", "Profissional", "Histórico", "Data da Consulta", "Horário Desejado", "Convênio", "Seus Dados", "Confirmar"];
-
-        btnAvancar.addEventListener('click', () => {
-            document.getElementById(`step${currentStep}`).classList.remove('active');
-            currentStep++;
-            document.getElementById(`step${currentStep}`).classList.add('active');
-
-            document.getElementById('panelTitle').innerText = stepTitles[currentStep];
-            document.getElementById('panelStepInd').innerText = `Etapa ${currentStep} de ${totalSteps}`;
-            progressFill.style.width = `${(currentStep / totalSteps) * 100}%`;
-
-            btnVoltar.style.visibility = 'visible';
-            if(currentStep === 8) {
-                document.getElementById('finalReceipt').innerHTML = `
-                    <div class="receipt-row"><span class="summary-label">Paciente:</span><span class="summary-value">${formData.nome}</span></div>
-                    <div class="receipt-row"><span class="summary-label">Especialidade:</span><span class="summary-value">${formData.especialidade}</span></div>
-                    <div class="receipt-row"><span class="summary-label">Dentista:</span><span class="summary-value">${formData.dentista}</span></div>
-                    <div class="receipt-row"><span class="summary-label">Data / Hora:</span><span class="summary-value">${formData.data.split('-').reverse().join('/')} - ${formData.horario}</span></div>
-                    <div class="receipt-row"><span class="summary-label">Convênio:</span><span class="summary-value">${formData.convenio}</span></div>
-                `;
-                document.getElementById('flowActions').style.display = 'none';
-            }
-            validateStep();
-        });
-
-        btnVoltar.addEventListener('click', () => {
-            document.getElementById(`step${currentStep}`).classList.remove('active');
-            currentStep--;
-            document.getElementById(`step${currentStep}`).classList.add('active');
-
-            document.getElementById('panelTitle').innerText = stepTitles[currentStep];
-            document.getElementById('panelStepInd').innerText = `Etapa ${currentStep} de ${totalSteps}`;
-            progressFill.style.width = `${(currentStep / totalSteps) * 100}%`;
-
-            if(currentStep === 1) btnVoltar.style.visibility = 'hidden';
-            validateStep();
-        });
-
-        document.getElementById('prevMonth').addEventListener('click', () => { currentDate.setMonth(currentDate.getMonth() - 1); renderCalendar(); });
-        document.getElementById('nextMonth').addEventListener('click', () => { currentDate.setMonth(currentDate.getMonth() + 1); renderCalendar(); });
-
-        document.getElementById('btnFinalizar').addEventListener('click', () => {
-            const text = encodeURIComponent(`Olá Oral Prime! Gostaria de formalizar o agendamento da minha consulta:\n\nPaciente: ${formData.nome}\nProcedimento: ${formData.especialidade}\nDentista: ${formData.dentista}\nData: ${formData.data.split('-').reverse().join('/')}\nHora: ${formData.horario}\nConvênio: ${formData.convenio}`);
-            window.open(`[https://wa.me/5511998634271?text=$](https://wa.me/5511998634271?text=$){text}`, '_blank');
-        });
-
-        // Toggle Mobile Menu Drawer
-        const toggle = document.getElementById('navToggle');
-        const menu = document.getElementById('navMenu');
-        toggle.addEventListener('click', () => menu.classList.toggle('active'));
-        menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.remove('active')));
-
-        // Accordion FAQ Elements
-        document.querySelectorAll('.faq-trigger').forEach(btn => {
-            btn.addEventListener('click', () => {
-                btn.parentElement.classList.toggle('active');
-            });
-        });
-    }
-
-    window.onload = initApp;
 </script>
