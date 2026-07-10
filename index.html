@@ -7,7 +7,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Oral Prime Odontologia Especializada">
-<meta name="twitter:description" content="Agendamento rápido de avaliações e tratamentos odontológicos em Barueri.">
+<meta name="twitter:description" content="Agendamento rápido de avaliações e tratamentos odontológicos em Feira de Santana.">
 
 <link rel="canonical" href="[https://oralprimeodonto.com.br](https://oralprimeodonto.com.br)">
 
@@ -22,9 +22,9 @@
   "email": "contato@oralprimeodonto.com.br",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Alameda Rio Negro, 1120 – Sala 508",
-    "addressLocality": "Barueri",
-    "addressRegion": "SP",
+    "streetAddress": "Avenida Getúlio Vargas, 254",
+    "addressLocality": "Feira de Santana",
+    "addressRegion": "BA",
     "addressCountry": "BR"
   },
   "openingHoursSpecification": [
@@ -72,6 +72,8 @@
 
     html {
         scroll-behavior: smooth;
+        overflow-x: hidden;
+        width: 100%;
     }
 
     body {
@@ -79,23 +81,23 @@
         color: var(--text-main);
         line-height: 1.6;
         font-size: 16px;
+        overflow-x: hidden;
+        width: 100%;
     }
 
-    /* Cores de Destaque Internas */
     .text-accent { color: var(--accent); }
     .bg-primary { background-color: var(--primary); }
 
-    /* Componentes de Layout */
     .container {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 24px;
+        padding: 0 20px;
     }
 
     /* Header */
     header {
-        background: rgba(255, 255, 255, 0.85);
+        background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         position: fixed;
@@ -121,6 +123,7 @@
         align-items: center;
         gap: 10px;
         text-decoration: none;
+        flex-shrink: 0;
     }
 
     .logo-icon {
@@ -132,6 +135,7 @@
         align-items: center;
         justify-content: center;
         border: 2px solid var(--accent);
+        flex-shrink: 0;
     }
 
     .logo-icon svg {
@@ -173,6 +177,7 @@
         font-weight: 500;
         font-size: 14px;
         transition: var(--transition);
+        white-space: nowrap;
     }
 
     nav a:hover {
@@ -181,7 +186,7 @@
 
     .nav-btn {
         background: var(--primary);
-        color: #fff;
+        color: #fff !important;
         padding: 10px 20px;
         border-radius: var(--radius-sm);
         font-weight: 600;
@@ -189,12 +194,11 @@
 
     .nav-btn:hover {
         background: var(--primary-light);
-        color: #fff;
     }
 
     /* Hero */
     .hero {
-        padding: 140px 0 60px 0;
+        padding: 130px 0 50px 0;
         background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
         text-align: center;
     }
@@ -208,11 +212,11 @@
         border-radius: 30px;
         font-size: 13px;
         font-weight: 600;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
     }
 
     .hero h1 {
-        font-size: 42px;
+        font-size: 40px;
         font-weight: 800;
         color: var(--primary);
         line-height: 1.2;
@@ -221,16 +225,15 @@
     }
 
     .hero p {
-        font-size: 18px;
+        font-size: 17px;
         color: var(--text-muted);
         max-width: 600px;
-        margin: 0 auto 32px auto;
+        margin: 0 auto 24px auto;
     }
 
-    /* Sistema de Agendamento (Módulo Principal) */
+    /* Sistema de Agendamento */
     .booking-section {
-        padding: 20px 0 80px 0;
-        margin-top: -20px;
+        padding: 10px 0 60px 0;
     }
 
     .booking-container {
@@ -241,12 +244,13 @@
         max-width: 760px;
         margin: 0 auto;
         overflow: hidden;
+        width: 100%;
     }
 
     .booking-header {
         background: var(--primary);
         color: #fff;
-        padding: 28px 32px;
+        padding: 24px 24px;
         position: relative;
     }
 
@@ -278,8 +282,9 @@
     }
 
     .step-panel {
-        padding: 32px;
+        padding: 24px;
         display: none;
+        width: 100%;
     }
 
     .step-panel.active {
@@ -288,7 +293,7 @@
     }
 
     @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(8px); }
+        from { opacity: 0; transform: translateY(6px); }
         to { opacity: 1; transform: translateY(0); }
     }
 
@@ -296,20 +301,21 @@
         font-size: 18px;
         font-weight: 700;
         color: var(--primary);
-        margin-bottom: 8px;
+        margin-bottom: 4px;
     }
 
     .step-desc {
         font-size: 14px;
         color: var(--text-muted);
-        margin-bottom: 24px;
+        margin-bottom: 20px;
     }
 
-    /* Grid de Seleção Inteligente */
+    /* Grid de Opções */
     .options-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
+        width: 100%;
     }
 
     .option-card {
@@ -322,6 +328,8 @@
         display: flex;
         flex-direction: column;
         position: relative;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .option-card:hover {
@@ -349,6 +357,7 @@
         font-weight: 600;
         color: var(--primary);
         margin-bottom: 4px;
+        padding-right: 18px;
     }
 
     .option-card p {
@@ -356,9 +365,10 @@
         color: var(--text-muted);
     }
 
-    /* Inputs de Texto Clássicos */
+    /* Inputs */
     .form-group {
-        margin-bottom: 20px;
+        margin-bottom: 16px;
+        width: 100%;
     }
 
     .form-group label {
@@ -366,12 +376,12 @@
         font-size: 14px;
         font-weight: 600;
         color: var(--primary);
-        margin-bottom: 8px;
+        margin-bottom: 6px;
     }
 
     .form-control {
         width: 100%;
-        padding: 14px 16px;
+        padding: 12px 14px;
         border: 2px solid var(--border);
         border-radius: var(--radius-sm);
         font-size: 15px;
@@ -386,19 +396,20 @@
         background-color: #fff;
     }
 
-    /* Calendário e Horários */
+    /* Calendário */
     .calendar-widget {
         background: var(--bg-light);
         border-radius: var(--radius-md);
-        padding: 16px;
-        margin-bottom: 20px;
+        padding: 14px;
+        margin-bottom: 16px;
+        width: 100%;
     }
 
     .calendar-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
     }
 
     .calendar-header h4 {
@@ -407,39 +418,31 @@
         color: var(--primary);
     }
 
-    .calendar-nav-btn {
-        background: #fff;
-        border: 1px solid var(--border);
-        padding: 6px 12px;
-        border-radius: var(--radius-sm);
-        cursor: pointer;
-        font-size: 12px;
-        font-weight: 600;
-    }
-
     .calendar-grid {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        gap: 8px;
+        gap: 6px;
         text-align: center;
+        width: 100%;
     }
 
     .calendar-day-name {
         font-size: 12px;
         font-weight: 600;
         color: var(--text-muted);
-        padding-bottom: 8px;
+        padding-bottom: 4px;
     }
 
     .calendar-day {
         padding: 10px 0;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 500;
         background: #fff;
         border-radius: var(--radius-sm);
         cursor: pointer;
         transition: var(--transition);
         border: 1px solid transparent;
+        user-select: none;
     }
 
     .calendar-day:hover:not(.disabled) {
@@ -458,10 +461,12 @@
         cursor: not-allowed;
     }
 
+    /* Slots de Horários */
     .time-slots {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
+        width: 100%;
     }
 
     .time-slot {
@@ -493,21 +498,24 @@
         cursor: not-allowed;
     }
 
-    /* Resumo e Confirmação */
+    /* Resumo */
     .summary-box {
         background: var(--bg-light);
         border-radius: var(--radius-md);
-        padding: 20px;
+        padding: 16px;
         border-left: 4px solid var(--accent);
-        margin-bottom: 24px;
+        margin-bottom: 20px;
+        width: 100%;
     }
 
     .summary-row {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 8px 0;
         border-bottom: 1px dashed var(--border);
         font-size: 14px;
+        gap: 12px;
     }
 
     .summary-row:last-child {
@@ -517,25 +525,29 @@
     .summary-label {
         color: var(--text-muted);
         font-weight: 500;
+        flex-shrink: 0;
     }
 
     .summary-value {
         color: var(--primary);
         font-weight: 600;
+        text-align: right;
+        word-break: break-word;
     }
 
-    /* Ações do Rodapé do Painel */
+    /* Ações do Fluxo */
     .panel-actions {
         display: flex;
         justify-content: space-between;
-        gap: 16px;
-        margin-top: 24px;
+        gap: 12px;
+        margin-top: 20px;
         border-top: 1px solid var(--border);
-        padding-top: 24px;
+        padding-top: 20px;
+        width: 100%;
     }
 
     .btn {
-        padding: 14px 28px;
+        padding: 12px 24px;
         border-radius: var(--radius-sm);
         font-size: 15px;
         font-weight: 600;
@@ -547,6 +559,7 @@
         justify-content: center;
         gap: 8px;
         width: 100%;
+        min-height: 44px;
     }
 
     .btn-primary {
@@ -568,37 +581,39 @@
         border-color: var(--text-muted);
     }
 
-    /* Apresentação e Diferenciais */
+    /* Diferenciais */
     .features-section {
-        padding: 80px 0;
+        padding: 60px 0;
         background: #fff;
     }
 
     .section-header {
         text-align: center;
         max-width: 600px;
-        margin: 0 auto 48px auto;
+        margin: 0 auto 36px auto;
     }
 
     .section-header h3 {
-        font-size: 28px;
+        font-size: 26px;
         font-weight: 800;
         color: var(--primary);
-        margin-bottom: 12px;
+        margin-bottom: 10px;
     }
 
     .section-header p {
         color: var(--text-muted);
+        font-size: 15px;
     }
 
     .features-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
+        gap: 20px;
+        width: 100%;
     }
 
     .feature-item {
-        padding: 32px;
+        padding: 24px;
         background: var(--bg-light);
         border-radius: var(--radius-md);
         transition: var(--transition);
@@ -610,23 +625,23 @@
     }
 
     .feature-icon {
-        width: 48px;
-        height: 48px;
+        width: 44px;
+        height: 44px;
         background: var(--primary);
         border-radius: var(--radius-sm);
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
         color: var(--accent);
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .feature-item h4 {
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 700;
         color: var(--primary);
-        margin-bottom: 8px;
+        margin-bottom: 6px;
     }
 
     .feature-item p {
@@ -636,40 +651,43 @@
 
     /* FAQ */
     .faq-section {
-        padding: 80px 0;
+        padding: 60px 0;
         background: var(--bg-light);
     }
 
     .faq-container {
         max-width: 760px;
         margin: 0 auto;
+        width: 100%;
     }
 
     .faq-item {
         background: #fff;
         border-radius: var(--radius-sm);
-        margin-bottom: 12px;
+        margin-bottom: 10px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         overflow: hidden;
+        width: 100%;
     }
 
     .faq-trigger {
         width: 100%;
-        padding: 20px 24px;
+        padding: 16px 20px;
         text-align: left;
         background: none;
         border: none;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 600;
         color: var(--primary);
         cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 14px;
     }
 
     .faq-content {
-        padding: 0 24px;
+        padding: 0 20px;
         max-height: 0;
         overflow: hidden;
         transition: all 0.3s ease-out;
@@ -678,39 +696,64 @@
     }
 
     .faq-item.active .faq-content {
-        padding-bottom: 20px;
+        padding-bottom: 16px;
         max-height: 200px;
     }
 
-    /* Footer & Info */
+    /* Módulo Google Maps */
+    .maps-section {
+        padding: 60px 0;
+        background: #fff;
+    }
+
+    .map-wrapper {
+        width: 100%;
+        height: 400px;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+    }
+
+    .map-wrapper iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+    }
+
+    /* Footer */
     footer {
         background: var(--primary);
         color: #fff;
-        padding: 60px 0 30px 0;
+        padding: 50px 0 24px 0;
         font-size: 14px;
+        width: 100%;
     }
 
     .footer-grid {
         display: grid;
         grid-template-columns: 2fr repeat(2, 1fr);
-        gap: 48px;
-        margin-bottom: 40px;
+        gap: 32px;
+        margin-bottom: 32px;
         border-bottom: 1px solid rgba(255,255,255,0.1);
-        padding-bottom: 40px;
+        padding-bottom: 32px;
+        width: 100%;
     }
 
     .footer-info h4 {
-        font-size: 16px;
+        font-size: 15px;
         color: var(--accent);
-        margin-bottom: 16px;
+        margin-bottom: 12px;
         font-weight: 700;
     }
 
     .footer-info p, .footer-info a {
         color: rgba(255,255,255,0.7);
         text-decoration: none;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
         display: block;
+        word-break: break-word;
     }
 
     .footer-bottom {
@@ -718,17 +761,19 @@
         justify-content: space-between;
         color: rgba(255,255,255,0.5);
         font-size: 12px;
+        flex-wrap: wrap;
+        gap: 12px;
     }
 
-    /* Widgets Flutuantes */
+    /* WhatsApp Float */
     .whatsapp-float {
         position: fixed;
-        bottom: 24px;
-        right: 24px;
+        bottom: 20px;
+        right: 20px;
         background: #25D366;
         color: #fff;
-        width: 56px;
-        height: 56px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -736,7 +781,6 @@
         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         z-index: 999;
         text-decoration: none;
-        font-size: 24px;
         transition: var(--transition);
     }
 
@@ -744,15 +788,44 @@
         transform: scale(1.05);
     }
 
-    /* Responsividade Mobile First */
+    .whatsapp-float svg {
+        width: 24px;
+        height: 24px;
+        fill: #fff;
+    }
+
+    /* Media Queries Avançadas para Responsividade Total */
+    @media (max-width: 992px) {
+        .features-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .footer-grid {
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 24px;
+        }
+    }
+
     @media (max-width: 768px) {
         nav { display: none; }
-        .hero h1 { font-size: 32px; }
+        .hero { padding: 110px 0 40px 0; }
+        .hero h1 { font-size: 30px; }
+        .hero p { font-size: 15px; }
         .options-grid { grid-template-columns: 1fr; }
-        .features-grid { grid-template-columns: 1fr; }
-        .footer-grid { grid-template-columns: 1fr; gap: 32px; }
         .time-slots { grid-template-columns: repeat(2, 1fr); }
-        .step-panel { padding: 20px; }
+        .features-grid { grid-template-columns: 1fr; }
+        .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+        .map-wrapper { height: 300px; }
+        .step-panel { padding: 16px; }
+        .booking-header { padding: 20px 16px; }
+    }
+
+    @media (max-width: 480px) {
+        .hero h1 { font-size: 26px; }
+        .time-slots { grid-template-columns: 1fr; }
+        .panel-actions { flex-direction: column-reverse; gap: 10px; }
+        .panel-actions .btn { width: 100%; }
+        .footer-bottom { flex-direction: column; text-align: left; }
+        .calendar-day { padding: 8px 0; font-size: 12px; }
     }
 </style>
 <!-- Header -->
@@ -769,6 +842,7 @@
         </a>
         <nav>
             <a href="#diferenciais">Diferenciais</a>
+            <a href="#localizacao">Localização</a>
             <a href="#faq">Dúvidas</a>
             <a href="#agendar" class="nav-btn">Agendar Agora</a>
         </nav>
@@ -780,11 +854,11 @@
     <div class="container">
         <div class="hero-badge">📅 Agendamento Online em 60 Segundos</div>
         <h1>Sorria com Confiança.<br>Nossos Especialistas Cuidam de Você.</h1>
-        <p>Plataforma inteligente integrada para marcação imediata de avaliações e tratamentos na Oral Prime Barueri.</p>
+        <p>Plataforma inteligente integrada para marcação imediata de avaliações e tratamentos na Oral Prime Feira de Santana.</p>
     </div>
 </section>
 
-<!-- Módulo Principal: Fluxo de Agendamento Inteligente -->
+<!-- Módulo Principal: Agendamento -->
 <section class="booking-section" id="agendar">
     <div class="container">
         <div class="booking-container">
@@ -796,7 +870,7 @@
                 </div>
             </div>
 
-            <!-- Etapa 1: Especialidade -->
+            <!-- Etapa 1 -->
             <div class="step-panel active" id="step-1">
                 <div class="step-title">Qual especialidade você procura?</div>
                 <div class="step-desc">Selecione uma de nossas principais frentes de atendimento.</div>
@@ -824,13 +898,13 @@
                 </div>
             </div>
 
-            <!-- Etapa 2: Dentista -->
+            <!-- Etapa 2 -->
             <div class="step-panel" id="step-2">
                 <div class="step-title">Deseja escolher o profissional?</div>
                 <div class="step-desc">Temos 10 cirurgiões-dentistas seniores prontos para te atender.</div>
                 <div class="options-grid">
                     <div class="option-card" onclick="selectOption(2, 'Dentista', 'Qualquer Especialista Prontamente Disponível')">
-                        <h4>Próximo Especialista Disponível</h4>
+                        <h4>Próximo Especialista</h4>
                         <p>Indicado para agendamentos mais rápidos.</p>
                     </div>
                     <div class="option-card" onclick="selectOption(2, 'Dentista', 'Dr. Roberto Silva (Reabilitação/Implantes)')">
@@ -848,18 +922,18 @@
                 </div>
             </div>
 
-            <!-- Etapa 3: Histórico (Primeira Consulta) -->
+            <!-- Etapa 3 -->
             <div class="step-panel" id="step-3">
                 <div class="step-title">É sua primeira vez na Oral Prime?</div>
                 <div class="step-desc">Personalizamos o tempo de atendimento com base no seu histórico.</div>
                 <div class="options-grid">
                     <div class="option-card" onclick="selectOption(3, 'Primeira Consulta', 'Sim, primeira avaliação')">
                         <h4>Sim, primeira consulta</h4>
-                        <p>Inclui mapeamento digital e diagnóstico completo.</p>
+                        <p>Inclui mapeamento digital e diagnóstico.</p>
                     </div>
                     <div class="option-card" onclick="selectOption(3, 'Primeira Consulta', 'Não, já sou paciente')">
                         <h4>Não, já sou paciente</h4>
-                        <p>Direcionado para continuidade de tratamentos.</p>
+                        <p>Direcionado para continuidade.</p>
                     </div>
                 </div>
                 <div class="panel-actions">
@@ -868,7 +942,7 @@
                 </div>
             </div>
 
-            <!-- Etapa 4: Data -->
+            <!-- Etapa 4 -->
             <div class="step-panel" id="step-4">
                 <div class="step-title">Selecione o Dia da Consulta</div>
                 <div class="step-desc">Selecione abaixo o melhor dia do mês.</div>
@@ -911,7 +985,7 @@
                 </div>
             </div>
 
-            <!-- Etapa 5: Horário -->
+            <!-- Etapa 5 -->
             <div class="step-panel" id="step-5">
                 <div class="step-title">Escolha o Horário</div>
                 <div class="step-desc">Horários disponíveis para o dia selecionado.</div>
@@ -929,16 +1003,16 @@
                 </div>
             </div>
 
-            <!-- Etapa 6: Convênio -->
+            <!-- Etapa 6 -->
             <div class="step-panel" id="step-6">
                 <div class="step-title">Forma de Atendimento</div>
-                <div class="step-desc">Atendemos particular (com condições facilitadas) e convênios.</div>
+                <div class="step-desc">Atendemos particular e convênios.</div>
                 <div class="options-grid">
                     <div class="option-card" onclick="selectOption(6, 'Convenio', 'Particular')">
                         <h4>Particular / Orçamento</h4>
                         <p>Condições especiais e parcelamento em 24x.</p>
                     </div>
-                    <div class="option-card" onclick="selectOption(6, 'Convenio', 'Convênio Odontológico Amil/SulAmérica/Bradesco')">
+                    <div class="option-card" onclick="selectOption(6, 'Convenio', 'Convênio Odontológico')">
                         <h4>Convênio Odontológico</h4>
                         <p>Aceitamos as principais bandeiras nacionais.</p>
                     </div>
@@ -949,10 +1023,10 @@
                 </div>
             </div>
 
-            <!-- Etapa 7: Dados Pessoais -->
+            <!-- Etapa 7 -->
             <div class="step-panel" id="step-7">
                 <div class="step-title">Informações de Contato</div>
-                <div class="step-desc">Insira seus dados para receber o lembrete de confirmação via SMS e WhatsApp.</div>
+                <div class="step-desc">Insira seus dados para receber a confirmação.</div>
                 
                 <div class="form-group">
                     <label for="user-name">Nome Completo</label>
@@ -960,7 +1034,7 @@
                 </div>
                 <div class="form-group">
                     <label for="user-phone">WhatsApp / Celular</label>
-                    <input type="tel" id="user-phone" class="form-control" placeholder="(11) 99999-9999">
+                    <input type="tel" id="user-phone" class="form-control" placeholder="(75) 99999-9999">
                 </div>
                 <div class="form-group">
                     <label for="user-email">E-mail</label>
@@ -968,7 +1042,7 @@
                 </div>
                 <div class="form-group">
                     <label for="user-obs">Alguma observação importante? (Opcional)</label>
-                    <input type="text" id="user-obs" class="form-control" placeholder="Ex: Sinto dor no dente posterior...">
+                    <input type="text" id="user-obs" class="form-control" placeholder="Ex: Sinto dor no dente...">
                 </div>
 
                 <div class="panel-actions">
@@ -977,20 +1051,18 @@
                 </div>
             </div>
 
-            <!-- Etapa 8: Resumo de Confirmação -->
+            <!-- Etapa 8 -->
             <div class="step-panel" id="step-8">
                 <div class="step-title">Confirme seus Dados</div>
-                <div class="step-desc">Tudo pronto! Verifique abaixo as informações do seu agendamento.</div>
+                <div class="step-desc">Tudo pronto! Verifique abaixo as informações.</div>
                 
-                <div class="summary-box" id="summary-content">
-                    <!-- Gerado Dinamicamente -->
-                </div>
+                <div class="summary-box" id="summary-content"></div>
 
                 <button class="btn btn-primary" style="background:#25D366; margin-bottom: 12px;" onclick="executeFinalActions('whatsapp')">
                     Finalizar e Enviar via WhatsApp
                 </button>
                 <button class="btn btn-secondary" style="font-size:13px;" onclick="executeFinalActions('calendar')">
-                    📅 Apenas Adicionar ao Meu Google Agenda
+                    📅 Adicionar ao Meu Google Agenda
                 </button>
                 
                 <div class="panel-actions">
@@ -1002,7 +1074,7 @@
     </div>
 </section>
 
-<!-- Apresentação de Diferenciais da Clínica -->
+<!-- Diferenciais -->
 <section class="features-section" id="diferenciais">
     <div class="container">
         <div class="section-header">
@@ -1029,7 +1101,25 @@
     </div>
 </section>
 
-<!-- Módulo FAQ -->
+<!-- Localização (Google Maps Otimizado e Responsivo) -->
+<section class="maps-section" id="localizacao">
+    <div class="container">
+        <div class="section-header">
+            <h3>Nossa Localização</h3>
+            <p>Avenida Getúlio Vargas, 254 - Feira de Santana, Bahia. Fácil acesso e estacionamento.</p>
+        </div>
+        <div class="map-wrapper">
+            <iframe 
+                src="[https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.191763158913!2d-38.96131102396112!3d-12.235183887997424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x714399723ba5a3b%3A0x63eb1e04db73919e!2sAv.%20Get%C3%BAlio%20Vargas%2C%20254%20-%20Centro%2C%20Feira%20de%20Santana%20-%20BA%2C%2044001-525!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.191763158913!2d-38.96131102396112!3d-12.235183887997424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x714399723ba5a3b%3A0x63eb1e04db73919e!2sAv.%20Get%C3%BAlio%20Vargas%2C%20254%20-%20Centro%2C%20Feira%20de%20Santana%20-%20BA%2C%2044001-525!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr)" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
 <section class="faq-section" id="faq">
     <div class="container">
         <div class="section-header">
@@ -1059,7 +1149,7 @@
         <div class="footer-grid">
             <div>
                 <h4 style="color:#fff; margin-bottom:12px;">Oral Prime Odontologia</h4>
-                <p style="font-size:13px; max-width:340px;">Sua clínica de excelência em saúde, bem-estar e reabilitação estética do sorriso na região de Barueri e Alphaville.</p>
+                <p style="font-size:13px; max-width:340px;">Sua clínica de excelência em saúde, bem-estar e reabilitação estética do sorriso na região de Feira de Santana.</p>
             </div>
             <div class="footer-info">
                 <h4>Contato</h4>
@@ -1069,8 +1159,8 @@
             </div>
             <div class="footer-info">
                 <h4>Localização</h4>
-                <p>Alameda Rio Negro, 1120</p>
-                <p>Sala 508 – Barueri/SP</p>
+                <p>Avenida Getúlio Vargas, 254</p>
+                <p>Centro – Feira de Santana/BA</p>
                 <p style="font-size:11px; color:var(--accent);">Seg a Sex: 08h às 20h | Sáb: 08h às 14h</p>
             </div>
         </div>
@@ -1081,14 +1171,12 @@
     </div>
 </footer>
 
-<!-- Botão Flutuante Direto WhatsApp -->
+<!-- WhatsApp Float -->
 <a href="[https://wa.me/5511998634271?text=Olá,%20gostaria%20de%20falar%20com%20a%20recepção%20da%20Oral%20Prime](https://wa.me/5511998634271?text=Olá,%20gostaria%20de%20falar%20com%20a%20recepção%20da%20Oral%20Prime)." class="whatsapp-float" target="_blank" aria-label="Fale direto conosco pelo WhatsApp">
-    <svg style="width:28px;height:28px;fill:#fff;margin-top:14px;margin-left:14px;" viewBox="0 0 24 24"><path d="M12.04 2C6.5 2 2 6.5 2 12c0 2.18.7 4.2 1.9 5.86L2.43 23l5.3-1.4c1.55.85 3.32 1.32 5.2 1.32 5.5 0 10-4.5 10-10S17.54 2 12.04 2zm6.64 14.3c-.27.76-1.35 1.4-1.84 1.48-.48.08-.97.14-3.12-.72-2.75-1.1-4.53-3.9-4.67-4.1-.14-.17-1.12-1.48-1.12-2.8 0-1.35.7-2.02.94-2.3.25-.26.54-.33.72-.33h.5c.17 0 .4.03.6.48.23.53.77 1.9.84 2.04.07.15.12.32.02.5-.1.2-.15.3-.3.47-.14.17-.3.38-.44.5-.16.16-.33.34-.14.67.2.33.84 1.4 1.8 2.27.12.1.25.17.38.22.4.12.75.1 1.03.06.3-.04.95-.4 1.08-.77.13-.37.13-.7 1-.77.13-.03.26-.03.38.03.12.06.77.36 1.5.72.37.18.62.27.7.4.1.15.1.84-.17 1.6z"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M12.04 2C6.5 2 2 6.5 2 12c0 2.18.7 4.2 1.9 5.86L2.43 23l5.3-1.4c1.55.85 3.32 1.32 5.2 1.32 5.5 0 10-4.5 10-10S17.54 2 12.04 2zm6.64 14.3c-.27.76-1.35 1.4-1.84 1.48-.48.08-.97.14-3.12-.72-2.75-1.1-4.53-3.9-4.67-4.1-.14-.17-1.12-1.48-1.12-2.8 0-1.35.7-2.02.94-2.3.25-.26.54-.33.72-.33h.5c.17 0 .4.03.6.48.23.53.77 1.9.84 2.04.07.15.12.32.02.5-.1.2-.15.3-.3.47-.14.17-.3.38-.44.5-.16.16-.33.34-.14.67.2.33.84 1.4 1.8 2.27.12.1.25.17.38.22.4.12.75.1 1.03.06.3-.04.95-.4 1.08-.77.13-.37.13-.7 1-.77.13-.03.26-.03.38.03.12.06.77.36 1.5.72.37.18.62.27.7.4.1.15.1.84-.17 1.6z"/></svg>
 </a>
 
-<!-- Lógica de Controle do Sistema -->
 <script>
-    // Objeto de Estado Global da Aplicação
     const appointmentData = {
         Especialidade: '',
         Dentista: '',
@@ -1102,9 +1190,7 @@
         Observacoes: ''
     };
 
-    // Navegação de Passos Com Validação Parcial Integrada
     function nextStep(stepNumber) {
-        // Validação simples antes de avançar de certas telas principais
         if(stepNumber === 5 && !appointmentData.Data) {
             alert('Por favor, selecione uma data no calendário para prosseguir.');
             return;
@@ -1117,11 +1203,9 @@
         document.querySelectorAll('.step-panel').forEach(panel => panel.classList.remove('active'));
         document.getElementById(`step-${stepNumber}`).classList.add('active');
         
-        // Atualizar Barra de Progresso Comercial de Forma Linear
         const pct = (stepNumber / 8) * 100;
         document.getElementById('progress').style.width = `${pct}%`;
 
-        // Otimização de Títulos Dinâmicos da Aplicação
         const mainTitle = document.getElementById('panel-main-title');
         if (stepNumber === 7) mainTitle.innerText = "Identificação de Segurança";
         if (stepNumber === 8) mainTitle.innerText = "Revisão e Envio";
@@ -1134,18 +1218,11 @@
         document.getElementById('progress').style.width = `${pct}%`;
     }
 
-    // Handlers de Input de Dados do Usuário
     function selectOption(step, key, value) {
         appointmentData[key] = value;
-        
-        // Gerenciar feedback visual de seleção nos cards correspondentes do contêiner atual
         const panel = document.getElementById(`step-${step}`);
         panel.querySelectorAll('.option-card').forEach(card => card.classList.remove('selected'));
-        
-        // Atribui classe selecionada ao card clicado
         event.currentTarget.classList.add('selected');
-
-        // Auto-avanço para simplificação extrema do fluxo UX em cliques rápidos
         setTimeout(() => { nextStep(step + 1); }, 200);
     }
 
@@ -1163,9 +1240,7 @@
         setTimeout(() => { nextStep(6); }, 200);
     }
 
-    // Construtor Estruturado do Painel de Resumo Comercial
     function buildSummary() {
-        // Captura de valores dos inputs finais obrigatórios de identificação
         appointmentData.Nome = document.getElementById('user-name').value;
         appointmentData.WhatsApp = document.getElementById('user-phone').value;
         appointmentData.Email = document.getElementById('user-email').value;
@@ -1187,7 +1262,6 @@
         nextStep(8);
     }
 
-    // Executor das Integrações Finais Estruturadas
     function executeFinalActions(type) {
         const message = `Olá Oral Prime! Gostaria de confirmar minha solicitação de agendamento:\n\n` +
                         `• Paciente: ${appointmentData.Nome}\n` +
@@ -1201,12 +1275,11 @@
             const encoded = encodeURIComponent(message);
             window.open(`[https://wa.me/5511998634271?text=$](https://wa.me/5511998634271?text=$){encoded}`, '_blank');
         } else if(type === 'calendar') {
-            const googleUrl = `[https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consulta+Oral+Prime+Odonto&dates=20260715T140000Z/20260715T150000Z&details=$](https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consulta+Oral+Prime+Odonto&dates=20260715T140000Z/20260715T150000Z&details=$){encodeURIComponent(message)}&location=Alameda+Rio+Negro,+1120+Sala+508+Barueri`;
+            const googleUrl = `[https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consulta+Oral+Prime+Odonto&dates=20260715T140000Z/20260715T150000Z&details=$](https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consulta+Oral+Prime+Odonto&dates=20260715T140000Z/20260715T150000Z&details=$){encodeURIComponent(message)}&location=Avenida+Getulio+Vargas,+254+Feira+de+Santana+Bahia`;
             window.open(googleUrl, '_blank');
         }
     }
 
-    // Componentes Interativos Secundários (FAQ Accordion)
     function toggleFaq(element) {
         element.classList.toggle('active');
     }
