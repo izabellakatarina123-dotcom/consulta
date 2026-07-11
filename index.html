@@ -1,1306 +1,1756 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BelleVie Estética Avançada - Agendamento Inteligente</title>
-    <meta name="description" content="Agende seu procedimento estético na BelleVie Estética Avançada em Barueri/SP. Botox, Harmonização, Ultraformer e tratamentos personalizados com tecnologia de ponta.">
-    <meta name="keywords" content="estética barueri, botox alphaville, harmonização facial, ultraformer, bioestimulador de colágeno, clínica de estética">
-    <link rel="canonical" href="https://bellevieestetica.com.br">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="BelleVie Estética Avançada - Agendamento">
-    <meta property="og:description" content="Agende sua avaliação gratuita e tratamentos estéticos premium com tecnologia aprovada pela ANVISA.">
-    <meta property="og:url" content="https://bellevieestetica.com.br">
-    <meta property="og:image" content="https://bellevieestetica.com.br/og-image.jpg">
-    
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="BelleVie Estética Avançada">
-    <meta name="twitter:description" content="Agendamento rápido de procedimentos estéticos avançados em Barueri.">
+<!-- Open Graph -->
+<meta property="og:title" content="BelleVie Estética Avançada | Agendamento">
+<meta property="og:description" content="Tratamentos faciais e corporais de alta tecnologia em Osasco. Agende sua avaliação gratuita em menos de 60 segundos.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
 
-    <style>
-        :root {
-            --bg-color: #FAFAFA;
-            --surface-color: #FFFFFF;
-            --primary: #8E7AB5;
-            --primary-light: #B4A5D4;
-            --accent: #F4D35E;
-            --text-main: #2D2D2D;
-            --text-muted: #666666;
-            --border: #EAEAEA;
-            --success: #2ECC71;
-            --radius-lg: 16px;
-            --radius-md: 12px;
-            --radius-sm: 8px;
-            --shadow: 0 10px 30px rgba(142, 122, 181, 0.05);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BelleVie Estética Avançada">
+<meta name="twitter:description" content="Agende sua avaliação e procedimentos estéticos de forma rápida e segura.">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
-        }
+<link rel="canonical" href="[https://bellevieestetica.com.br](https://bellevieestetica.com.br)">
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "[https://schema.org](https://schema.org)",
+  "@type": "BeautySalon",
+  "name": "BelleVie Estética Avançada",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Presidente Castelo Branco, 45",
+    "addressLocality": "Osasco",
+    "addressRegion": "SP",
+    "postalCode": "06016-020",
+    "addressCountry": "BR"
+  },
+  "telephone": "+551142076943",
+  "url": "[https://bellevieestetica.com.br](https://bellevieestetica.com.br)",
+  "priceRange": "$$$",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "16:00"
+    }
+  ]
+}
+</script>
 
-        /* Cores exclusivas da marca BelleVie: Nude, Dourado Rosé e Lilás Sofisticado */
-        header {
-            background-color: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border);
-        }
+<style>
+    :root {
+        --bg-base: #fbf9f6;
+        --bg-surface: #ffffff;
+        --text-main: #2c2520;
+        --text-muted: #6e655f;
+        --primary: #8e7ab5;
+        --primary-light: #bca8de;
+        --accent: #d4af37;
+        --nude: #f4ece1;
+        --border: #e8e1d7;
+        --radius-lg: 16px;
+        --radius-md: 10px;
+        --shadow-sm: 0 2px 8px rgba(44, 37, 32, 0.04);
+        --shadow-md: 0 10px 30px rgba(44, 37, 32, 0.06);
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 16px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            font-size: 1.3rem;
-            letter-spacing: 1px;
-            color: var(--primary);
-            text-transform: uppercase;
-        }
+    body {
+        background-color: var(--bg-base);
+        color: var(--text-main);
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
 
-        .logo-symbol {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #B4A5D4, #F4D35E);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #FFF;
-            font-size: 0.9rem;
-            font-weight: 800;
-            box-shadow: 0 4px 10px rgba(142, 122, 181, 0.2);
-        }
+    /* Utility Components */
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 500;
-            font-size: 0.95rem;
-            margin-left: 24px;
-            transition: var(--transition);
-        }
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 28px;
+        border-radius: var(--radius-md);
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: var(--transition);
+        border: none;
+    }
 
-        nav a:hover {
-            color: var(--primary);
-        }
+    .btn-primary {
+        background: linear-gradient(135deg, var(--primary), #7762a0);
+        color: white;
+        box-shadow: 0 4px 14px rgba(142, 122, 181, 0.3);
+    }
 
-        .cta-header {
-            background-color: var(--primary);
-            color: #FFF;
-            padding: 10px 20px;
-            border-radius: var(--radius-sm);
-            font-weight: 600;
-        }
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(142, 122, 181, 0.4);
+    }
 
-        .cta-header:hover {
-            background-color: #7A679E;
-            color: #FFF;
-        }
+    .btn-secondary {
+        background: var(--nude);
+        color: var(--text-main);
+    }
 
-        /* Hero */
-        .hero {
-            padding: 140px 24px 60px;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    .btn-secondary:hover {
+        background: var(--border);
+    }
 
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            line-height: 1.2;
-            color: #1A1A1A;
-            margin-bottom: 16px;
-        }
+    .section-title {
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 12px;
+        letter-spacing: -0.5px;
+    }
 
-        .hero h1 span {
-            background: linear-gradient(120deg, var(--primary), #B4A5D4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    .section-subtitle {
+        font-size: 16px;
+        color: var(--text-muted);
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 48px auto;
+    }
 
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            margin-bottom: 32px;
-        }
+    /* Header */
+    header {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
 
-        /* Main Container */
-        .main-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px 80px;
-            display: grid;
+    .header-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 1px;
+        color: var(--text-main);
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, var(--nude), var(--border));
+        border: 2px solid var(--accent);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: var(--text-main);
+        font-weight: bold;
+    }
+
+    nav {
+        display: flex;
+        gap: 32px;
+    }
+
+    nav a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: var(--transition);
+    }
+
+    nav a:hover {
+        color: var(--primary);
+    }
+
+    .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 80px 0;
+        background: radial-gradient(circle at 90% 10%, #fcf6ee 0%, var(--bg-base) 60%);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 48px;
+        align-items: center;
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--nude);
+        border: 1px solid var(--border);
+        padding: 6px 14px;
+        border-radius: 100px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-main);
+        margin-bottom: 24px;
+    }
+
+    .hero-badge span {
+        color: var(--accent);
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        line-height: 1.15;
+        font-weight: 800;
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+        background: linear-gradient(120deg, var(--primary), var(--accent));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+        font-size: 18px;
+        color: var(--text-muted);
+        margin-bottom: 36px;
+        max-width: 540px;
+    }
+
+    .hero-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .hero-feat-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: var(--bg-surface);
+        padding: 16px;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        border: 1px solid rgba(232, 225, 215, 0.5);
+    }
+
+    .hero-feat-item svg {
+        width: 24px;
+        height: 24px;
+        color: var(--primary);
+        flex-shrink: 0;
+    }
+
+    .hero-feat-item div h4 {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .hero-feat-item div p {
+        font-size: 12px;
+        margin: 0;
+        color: var(--text-muted);
+    }
+
+    /* Presentational Sections */
+    .section-padding {
+        padding: 90px 0;
+    }
+
+    .bg-white {
+        background-color: var(--bg-surface);
+    }
+
+    /* Services */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .service-card {
+        background: var(--bg-base);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 32px;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--primary);
+        opacity: 0;
+        transition: var(--transition);
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+        border-color: transparent;
+        background: var(--bg-surface);
+    }
+
+    .service-card:hover::before {
+        opacity: 1;
+    }
+
+    .service-badge {
+        background: var(--nude);
+        color: var(--text-main);
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+        color: var(--text-muted);
+        margin-bottom: 20px;
+    }
+
+    .service-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid var(--border);
+        padding-top: 16px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .service-time {
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    /* How it works */
+    .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        position: relative;
+    }
+
+    .step-item {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .step-num {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: var(--nude);
+        border: 2px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--primary);
+        margin: 0 auto 20px auto;
+        transition: var(--transition);
+    }
+
+    .step-item:hover .step-num {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+    }
+
+    .step-item h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .step-item p {
+        font-size: 13px;
+        color: var(--text-muted);
+    }
+
+    /* System Module (The App Core) */
+    .system-section {
+        background: linear-gradient(180deg, var(--bg-base) 0%, #f4ece1 100%);
+        position: relative;
+    }
+
+    .sys-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: var(--bg-surface);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border);
+        overflow: hidden;
+    }
+
+    .sys-header {
+        background: #2c2520;
+        color: white;
+        padding: 32px;
+        text-align: center;
+        position: relative;
+    }
+
+    .sys-header h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        letter-spacing: -0.5px;
+    }
+
+    .sys-header p {
+        color: #bfaea3;
+        font-size: 14px;
+    }
+
+    .progress-bar-container {
+        background: rgba(255, 255, 255, 0.1);
+        height: 6px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .progress-fill {
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        height: 100%;
+        width: 12.5%;
+        transition: width 0.4s ease;
+    }
+
+    .sys-body {
+        padding: 40px;
+        min-height: 420px;
+    }
+
+    .step-pane {
+        display: none;
+    }
+
+    .step-pane.active {
+        display: block;
+        animation: fadeIn 0.3s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(4px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .pane-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 4px;
+    }
+
+    .pane-desc {
+        font-size: 14px;
+        color: var(--text-muted);
+        margin-bottom: 24px;
+    }
+
+    /* Option Grids (Custom Checkboxes/Radios) */
+    .options-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        max-height: 320px;
+        overflow-y: auto;
+        padding-right: 4px;
+    }
+
+    .option-card {
+        background: var(--bg-base);
+        border: 2px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 18px;
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .option-card:hover {
+        border-color: var(--primary-light);
+        background: #fff;
+    }
+
+    .option-card.selected {
+        border-color: var(--primary);
+        background: rgba(142, 122, 181, 0.04);
+    }
+
+    .option-card h4 {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 4px;
+    }
+
+    .option-card p {
+        font-size: 12px;
+        color: var(--text-muted);
+    }
+
+    .option-meta {
+        margin-top: 12px;
+        font-size: 12px;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        color: var(--text-main);
+    }
+
+    /* Split layouts for special stages */
+    .calendar-layout {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 24px;
+    }
+
+    /* Calendar Render engine styles */
+    .calendar-widget {
+        background: var(--bg-base);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 16px;
+    }
+
+    .cal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .cal-title {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .cal-btn {
+        background: white;
+        border: 1px solid var(--border);
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    .cal-days-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 6px;
+        text-align: center;
+    }
+
+    .cal-day-label {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--text-muted);
+        padding-bottom: 8px;
+    }
+
+    .cal-cell {
+        font-size: 13px;
+        font-weight: 500;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        cursor: pointer;
+        background: white;
+        transition: var(--transition);
+    }
+
+    .cal-cell:hover:not(.disabled) {
+        background: var(--primary-light);
+        color: white;
+    }
+
+    .cal-cell.selected {
+        background: var(--primary) !important;
+        color: white !important;
+        font-weight: 700;
+    }
+
+    .cal-cell.disabled {
+        background: transparent;
+        color: #d2cdc6;
+        cursor: not-allowed;
+    }
+
+    .time-slots {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-height: 240px;
+        overflow-y: auto;
+    }
+
+    .time-slot {
+        background: var(--bg-base);
+        border: 1px solid var(--border);
+        padding: 12px;
+        border-radius: var(--radius-md);
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    .time-slot:hover:not(.disabled) {
+        border-color: var(--primary);
+        background: white;
+    }
+
+    .time-slot.selected {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+    }
+
+    .time-slot.disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        background: #eee;
+    }
+
+    /* Form Controls */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 14px;
+        border-radius: var(--radius-md);
+        border: 2px solid var(--border);
+        background: var(--bg-base);
+        font-size: 15px;
+        transition: var(--transition);
+        outline: none;
+    }
+
+    .form-control:focus {
+        border-color: var(--primary);
+        background: white;
+    }
+
+    /* Summary & Review Pane */
+    .summary-box {
+        background: var(--bg-base);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 24px;
+        margin-bottom: 24px;
+    }
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px dashed var(--border);
+        font-size: 14px;
+    }
+
+    .summary-row:last-child {
+        border-bottom: none;
+        font-weight: 700;
+        font-size: 16px;
+        padding-top: 14px;
+    }
+
+    .sys-footer {
+        padding: 24px 40px;
+        background: var(--bg-base);
+        border-top: 1px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Benefits & Proof */
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .benefit-item {
+        background: var(--bg-surface);
+        padding: 32px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .benefit-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--nude);
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        margin-bottom: 20px;
+    }
+
+    /* Reviews */
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .review-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border);
+        padding: 32px;
+        border-radius: var(--radius-lg);
+    }
+
+    .stars {
+        color: var(--accent);
+        margin-bottom: 14px;
+        font-size: 14px;
+    }
+
+    .review-card p {
+        font-size: 14px;
+        color: var(--text-muted);
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+
+    .review-author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        background: var(--border);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    /* FAQ */
+    .faq-max {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .faq-item {
+        background: var(--bg-surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        margin-bottom: 12px;
+        overflow: hidden;
+    }
+
+    .faq-trigger {
+        width: 100%;
+        padding: 20px 24px;
+        text-align: left;
+        background: none;
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .faq-content {
+        padding: 0 24px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        color: var(--text-muted);
+        font-size: 14px;
+    }
+
+    .faq-item.active .faq-content {
+        padding-bottom: 20px;
+        max-height: 200px;
+    }
+
+    /* Contact & Location Map */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 48px;
+    }
+
+    .info-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .info-item {
+        display: flex;
+        gap: 16px;
+    }
+
+    .info-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--nude);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        flex-shrink: 0;
+    }
+
+    .map-wrapper {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--border);
+        height: 350px;
+        background: #eee;
+        position: relative;
+    }
+
+    .map-placeholder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #f3ede4;
+        color: var(--text-main);
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Footer */
+    footer {
+        background: #1c1714;
+        color: #a39891;
+        padding: 60px 0 30px 0;
+        font-size: 14px;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr repeat(2, 1fr);
+        gap: 48px;
+        margin-bottom: 40px;
+    }
+
+    .footer-logo {
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .footer-col h4 {
+        color: white;
+        font-size: 14px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .footer-col ul {
+        list-style: none;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+        color: #a39891;
+        text-decoration: none;
+        transition: var(--transition);
+    }
+
+    .footer-col ul li a:hover {
+        color: white;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #2c2520;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+    }
+
+    /* Floating Components */
+    .whatsapp-float {
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        background-color: #25d366;
+        color: white;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+        z-index: 99;
+        transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+    }
+
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+        fill: currentColor;
+    }
+
+    /* Mobile Adjustments (Mobile First Hierarchy Reversals) */
+    @media (max-width: 992px) {
+        .hero-grid, .contact-grid {
             grid-template-columns: 1fr;
-            gap: 40px;
         }
-
-        @media (min-width: 992px) {
-            .main-wrapper {
-                grid-template-columns: 7fr 5fr;
-                align-items: start;
-            }
+        .steps-grid, .benefits-grid, .reviews-grid {
+            grid-template-columns: 1fr;
         }
-
-        /* Módulo Sistema Principal: Agendador */
-        .booking-card {
-            background-color: var(--surface-color);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-            padding: 32px;
-            position: relative;
-            overflow: hidden;
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 32px;
         }
-
-        .progress-bar-container {
-            width: 100%;
-            height: 6px;
-            background-color: var(--border);
-            border-radius: 3px;
-            margin-bottom: 32px;
-            position: relative;
+        .calendar-layout {
+            grid-template-columns: 1fr;
         }
+    }
 
-        .progress-bar-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--primary-light));
-            width: 12.5%;
-            border-radius: 3px;
-            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .step {
+    @media (max-width: 768px) {
+        nav {
             display: none;
         }
-
-        .step.active {
-            display: block;
-            animation: fadeIn 0.4s ease;
+        .hero h1 {
+            font-size: 34px;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
+        .sys-body {
+            padding: 20px;
         }
-
-        .step-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 6px;
+        .sys-footer {
+            padding: 20px;
         }
-
-        .step-desc {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 24px;
-        }
-
-        /* Opções Selecionáveis */
         .options-grid {
-            display: grid;
             grid-template-columns: 1fr;
-            gap: 12px;
-            max-height: 340px;
-            overflow-y: auto;
-            padding-right: 6px;
         }
-
-        .options-grid::-webkit-scrollbar {
-            width: 6px;
-        }
-        .options-grid::-webkit-scrollbar-thumb {
-            background-color: var(--border);
-            border-radius: 3px;
-        }
-
-        .option-card {
-            border: 2px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 16px;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .option-card:hover {
-            border-color: var(--primary-light);
-            background-color: rgba(142, 122, 181, 0.02);
-        }
-
-        .option-card.selected {
-            border-color: var(--primary);
-            background-color: rgba(142, 122, 181, 0.05);
-        }
-
-        .option-name {
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        .option-meta {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-top: 2px;
-        }
-
-        .badge-premium {
-            background-color: rgba(244, 211, 94, 0.2);
-            color: #B39210;
-            font-size: 0.75rem;
-            padding: 2px 8px;
-            border-radius: 20px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        /* Inputs de Texto */
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--text-main);
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid var(--border);
-            border-radius: var(--radius-sm);
-            font-size: 1rem;
-            transition: var(--transition);
-            background-color: var(--bg-color);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            background-color: #FFF;
-        }
-
-        /* Calendário e Horários */
-        .calendar-wrapper {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 8px;
-            text-align: center;
-            margin-bottom: 16px;
-        }
-
-        .calendar-header-day {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            padding-bottom: 8px;
-        }
-
-        .calendar-day {
-            padding: 12px 0;
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            border: 1px solid transparent;
-        }
-
-        .calendar-day.empty {
-            cursor: default;
-            opacity: 0.2;
-        }
-
-        .calendar-day.disabled {
-            color: #DDD;
-            cursor: not-allowed;
-            text-decoration: line-through;
-        }
-
-        .calendar-day.available {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-        }
-
-        .calendar-day.available:hover {
-            border-color: var(--primary-light);
-            background-color: rgba(142, 122, 181, 0.05);
-        }
-
-        .calendar-day.selected {
-            background-color: var(--primary) !important;
-            color: #FFF !important;
-        }
-
-        .time-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-            gap: 8px;
-            max-height: 180px;
-            overflow-y: auto;
-        }
-
-        .time-slot {
-            padding: 10px;
-            text-align: center;
-            background-color: var(--bg-color);
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
-
-        .time-slot:hover {
-            background-color: rgba(142, 122, 181, 0.1);
-        }
-
-        .time-slot.selected {
-            background-color: var(--primary);
-            color: #FFF;
-        }
-
-        /* Botões de Ação */
-        .step-actions {
-            margin-top: 32px;
-            display: flex;
-            justify-content: space-between;
-            gap: 16px;
-        }
-
-        .btn {
-            padding: 14px 28px;
-            border-radius: var(--radius-sm);
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: #FFF;
-            flex-grow: 1;
-        }
-
-        .btn-primary:hover {
-            background-color: #7A679E;
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            border: 2px solid var(--border);
-            color: var(--text-muted);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--text-muted);
-            color: var(--text-main);
-        }
-
-        .btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        /* Lateral / Apresentação e Info */
-        .info-sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .side-card {
-            background-color: var(--surface-color);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
-            padding: 24px;
-        }
-
-        .side-card h3 {
-            font-size: 1.15rem;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-main);
-        }
-
-        .feature-item {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
-        .feature-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .feature-icon {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background-color: rgba(142, 122, 181, 0.1);
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            flex-shrink: 0;
-        }
-
-        .feature-text h4 {
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-
-        .feature-text p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* Resumo da Solicitação Lateral Dinâmico */
-        .live-summary {
-            background: linear-gradient(135deg, rgba(142, 122, 181, 0.03), rgba(244, 211, 94, 0.03));
-            border: 1px dashed var(--primary);
-        }
-
-        .summary-row {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9rem;
-            padding: 8px 0;
-            border-bottom: 1px dashed var(--border);
-        }
-
-        .summary-row:last-child {
-            border-bottom: none;
-        }
-
-        .summary-label {
-            color: var(--text-muted);
-        }
-
-        .summary-value {
-            font-weight: 600;
-            color: var(--text-main);
-            text-align: right;
-        }
-
-        /* Como Funciona */
-        .section-title {
-            text-align: center;
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin: 60px 0 32px;
-        }
-
-        .steps-horizontal {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 24px;
-            max-width: 1200px;
-            margin: 0 auto 60px;
-            padding: 0 24px;
-        }
-
-        .step-horizontal-card {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border);
-            padding: 24px;
-            border-radius: var(--radius-md);
-            text-align: center;
-            position: relative;
-        }
-
-        .step-number {
-            width: 32px;
-            height: 32px;
-            background-color: var(--primary);
-            color: #FFF;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            margin: 0 auto 16px;
-        }
-
-        /* Avaliações */
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            max-width: 1200px;
-            margin: 0 auto 60px;
-            padding: 0 24px;
-        }
-
-        .review-card {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border);
-            padding: 24px;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow);
-        }
-
-        .review-stars {
-            color: var(--accent);
-            margin-bottom: 12px;
-        }
-
-        .review-author {
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-top: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .review-verified {
-            color: var(--success);
-            font-size: 0.75rem;
-            font-weight: 700;
-        }
-
-        /* FAQ */
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto 60px;
-            padding: 0 24px;
-        }
-
-        .faq-item {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-            margin-bottom: 12px;
-            overflow: hidden;
-        }
-
-        .faq-trigger {
-            padding: 18px 24px;
-            width: 100%;
-            text-align: left;
-            background: none;
-            border: none;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-main);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-content {
-            padding: 0 24px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .faq-item.active .faq-content {
-            padding: 0 24px 18px;
-            max-height: 200px;
-        }
-
-        /* Footer & Contato */
-        footer {
-            background-color: #1A1A1A;
-            color: #FFFFFF;
-            padding: 60px 24px 30px;
-            font-size: 0.9rem;
-        }
-
-        .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 40px;
-        }
-
-        .footer-col h4 {
-            color: #FFF;
-            margin-bottom: 16px;
-            font-size: 1.05rem;
-        }
-
-        .footer-col p, .footer-col a {
-            color: #B3B3B3;
-            text-decoration: none;
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        .footer-col a:hover {
-            color: var(--primary-light);
-        }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 20px auto 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-            color: #666;
-            font-size: 0.8rem;
-        }
-
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            background-color: #25D366;
-            color: white;
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            z-index: 999;
-            text-decoration: none;
-            font-size: 1.5rem;
-            transition: var(--transition);
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.05);
-        }
-
-        /* Utilitários */
-        .text-center { text-align: center; }
-        .mt-4 { margin-top: 16px; }
-
-        /* Estilização Responsiva Avançada Touch */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .booking-card { padding: 20px; }
-            nav { display: none; }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <div class="logo-symbol">B</div>
-                BelleVie
-            </div>
-            <nav>
-                <a href="#como-funciona">Como Funciona</a>
-                <a href="#beneficios">Diferenciais</a>
-                <a href="#avaliacoes">Depoimentos</a>
-                <a href="#sistema" class="cta-header">Agendar Agora</a>
-            </nav>
+    }
+</style>
+<!-- Header -->
+<header>
+    <div class="container header-wrap">
+        <div class="logo">
+            <div class="logo-icon">B</div>
+            BelleVie
         </div>
-    </header>
+        <nav>
+            <a href="#procedimentos">Procedimentos</a>
+            <a href="#como-funciona">Como Funciona</a>
+            <a href="#agendamento">Agendar</a>
+            <a href="#beneficios">Diferenciais</a>
+            <a href="#faq">Dúvidas</a>
+        </nav>
+        <a href="#agendamento" class="btn btn-primary" style="padding: 10px 20px; font-size: 13px;">Agendar Agora</a>
+    </div>
+</header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <h1>Sua beleza cuidada por <span>Especialistas Avançados</span></h1>
-        <p>Agende em menos de 60 segundos seu procedimento ou sua avaliação facial/corporal personalizada na melhor clínica de Barueri.</p>
-    </section>
+<!-- Hero Module -->
+<section class="hero">
+    <div class="container hero-grid">
+        <div>
+            <div class="hero-badge">
+                <span>✦</span> Avaliação Inicial Gratuita Inclusa
+            </div>
+            <h1>Sua beleza natural, realçada por <span>mãos especialistas</span>.</h1>
+            <p>Agende em menos de 60 segundos o seu procedimento na clínica de estética mais sofisticada de Osasco. Protocolos personalizados e alta tecnologia corporal e facial.</p>
+            <div style="display: flex; gap: 16px; margin-bottom: 40px;">
+                <a href="#agendamento" class="btn btn-primary">Iniciar Agendamento</a>
+                <a href="#procedimentos" class="btn btn-secondary">Ver Procedimentos</a>
+            </div>
+            <div class="hero-features">
+                <div class="hero-feat-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <div>
+                        <h4>9 Especialistas</h4>
+                        <p>Corpo clínico altamente qualificado.</p>
+                    </div>
+                </div>
+                <div class="hero-feat-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <div>
+                        <h4>Fluxo Expresso</h4>
+                        <p>Escolha data e hora sem burocracia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="position: relative; display: flex; justify-content: center;">
+            <!-- Abstract graphical element mimicking luxury aesthetic -->
+            <div style="width: 100%; max-width: 380px; height: 420px; background: linear-gradient(135deg, var(--nude), #e3d5c5); border-radius: var(--radius-lg); position: relative; box-shadow: var(--shadow-md); display: flex; align-items: center; justify-content: center; padding: 40px; border: 1px solid var(--border);">
+                <div style="text-align: center;">
+                    <div style="font-size: 64px; margin-bottom: 16px;">✦</div>
+                    <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 8px;">BelleVie</h3>
+                    <p style="font-size: 13px; color: var(--text-muted);">Equipamentos modernos aprovados pela ANVISA e resultados seguros de alto padrão.</p>
+                </div>
+                <div style="position: absolute; bottom: -20px; right: -20px; background: white; padding: 16px; border-radius: var(--radius-md); box-shadow: var(--shadow-md); font-size: 12px; font-weight: 700; border: 1px solid var(--border);">
+                    ⭐ 4.9/5 no Google Business
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Main Section/Workflow -->
-    <main class="main-wrapper" id="sistema">
+<!-- Presentation / Services -->
+<section id="procedimentos" class="section-padding bg-white">
+    <div class="container">
+        <h2 class="section-title">Procedimentos em Destaque</h2>
+        <p class="section-subtitle">Nossos tratamentos mais procurados e desenvolvidos com tecnologia de ponta internacional.</p>
         
-        <!-- Módulo Sistema Principal -->
-        <section class="booking-card">
-            <div class="progress-bar-container">
-                <div class="progress-bar-fill" id="progressBar"></div>
-            </div>
-
-            <form id="flowForm" onsubmit="event.preventDefault();">
-                
-                <!-- Etapa 1: Procedimento -->
-                <div class="step active" data-step="1">
-                    <div class="step-title">Escolha o Procedimento</div>
-                    <div class="step-desc">Selecione o tratamento desejado para continuar.</div>
-                    <div class="options-grid">
-                        <div class="option-card" onclick="selectOption('procedure', 'Botox Premium', '40 min', true)">
-                            <div>
-                                <div class="option-name">Botox Premium <span class="badge-premium">Mais Procurado</span></div>
-                                <div class="option-meta">Planejamento facial individualizado • 40 min</div>
-                            </div>
-                            <span>➔</span>
-                        </div>
-                        <div class="option-card" onclick="selectOption('procedure', 'Harmonização Facial', '1h 30min')">
-                            <div>
-                                <div class="option-name">Harmonização Facial</div>
-                                <div class="option-meta">Alinhamento e preenchimento estratégico • 1h 30min</div>
-                            </div>
-                            <span>➔</span>
-                        </div>
-                        <div class="option-card" onclick="selectOption('procedure', 'Ultraformer', '1h')">
-                            <div>
-                                <div class="option-name">Ultraformer / Ultrassom Microfocado</div>
-                                <div class="option-meta">Lifting facial e contorno corporal firme • 1h</div>
-                            </div>
-                            <span>➔</span>
-                        </div>
-                        <div class="option-card" onclick="selectOption('procedure', 'Bioestimuladores de Colágeno', '1h')">
-                            <div>
-                                <div class="option-name">Bioestimuladores de Colágeno</div>
-                                <div class="option-meta">Tratamento profundo de flacidez e sustentação • 1h</div>
-                            </div>
-                            <span>➔</span>
-                        </div>
-                        <div class="option-card" onclick="selectOption('procedure', 'Limpeza de Pele Premium', '1h')">
-                            <div>
-                                <div class="option-name">Limpeza de Pele Premium</div>
-                                <div class="option-meta">Extração profunda e hidratação celular • 1h</div>
-                            </div>
-                            <span>➔</span>
-                        </div>
-                        <div class="option-card" onclick="selectOption('procedure', 'Depilação a Laser', '45 min')">
-                            <div>
-                                <div class="option-name">Depilação a Laser</div>
-                                <div class="option-meta">Tecnologia avançada e indolor de última geração • 45 min</div>
-                            </div>
-                            <span>➔</span>
-                        </div>
-                    </div>
-                    <div class="step-actions">
-                        <div></div>
-                        <button type="button" class="btn btn-primary" onclick="nextStep()" id="nextBtn1" disabled>Avançar</button>
-                    </div>
-                </div>
-
-                <!-- Etapa 2: Especialista -->
-                <div class="step" data-step="2">
-                    <div class="step-title">Escolha o Especialista</div>
-                    <div class="step-desc">Selecione o profissional de sua preferência.</div>
-                    <div class="options-grid">
-                        <div class="option-card" onclick="selectOption('expert', 'Qualquer Profissional Disponível', 'Recomendado para agendamento rápido')">
-                            <div>
-                                <div class="option-name">Qualquer Profissional Disponível</div>
-                                <div class="option-meta">Menor tempo de espera para sua consulta</div>
-                            </div>
-                            <span>➔</span>
-                        </div>
-                        <div class="option-card" onclick="selectOption('expert', 'Dra. Amanda Rodrigues', 'Biomédica Esteta')">
-                            <div>
-                                <div class="option-name">Dra. Amanda Rodrigues</div>
-                                <div class="option-meta">Especialista em Harmonização e Injetáveis</div>
-                            </div>
-                            <span>➔</span>
-                        </div>
-                        <div class="option-card" onclick="selectOption('expert', 'Dra. Carolina Mello', 'Fisioterapeuta Dermatofuncional')">
-                            <div>
-                                <div class="option-name">Dra. Carolina Mello</div>
-                                <div class="option-meta">Especialista em Alta Tecnologia e Corporal</div>
-                            </div>
-                            <span>➔</span>
-                        </div>
-                    </div>
-                    <div class="step-actions">
-                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
-                        <button type="button" class="btn btn-primary" onclick="nextStep()" id="nextBtn2" disabled>Avançar</button>
-                    </div>
-                </div>
-
-                <!-- Etapa 3: Avaliação Inicial -->
-                <div class="step" data-step="3">
-                    <div class="step-title">É sua primeira vez na BelleVie?</div>
-                    <div class="step-desc">Toda primeira avaliação inclui diagnóstico facial/corporal completo sem custo.</div>
-                    <div class="options-grid">
-                        <div class="option-card" onclick="selectOption('initial_evaluation', 'Sim, quero a Avaliação Gratuita inclusa', 'Inclui plano de tratamento personalizado')">
-                            <div>
-                                <div class="option-name">Sim, quero a Avaliação Gratuita inclusa</div>
-                                <div class="option-meta">+40 minutos inclusos de diagnóstico avançado</div>
-                            </div>
-                            <span>➔</span>
-                        </div>
-                        <div class="option-card" onclick="selectOption('initial_evaluation', 'Não, já sou cliente / quero direto o procedimento', 'Apenas realizar o procedimento escolhido')">
-                            <div>
-                                <div class="option-name">Não, já sou cliente / quero direto o procedimento</div>
-                                <div class="option-meta">Seguir direto com o cronograma regular</div>
-                            </div>
-                            <span>➔</span>
-                        </div>
-                    </div>
-                    <div class="step-actions">
-                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
-                        <button type="button" class="btn btn-primary" onclick="nextStep()" id="nextBtn3" disabled>Avançar</button>
-                    </div>
-                </div>
-
-                <!-- Etapa 4: Data -->
-                <div class="step" data-step="4">
-                    <div class="step-title">Selecione o Dia</div>
-                    <div class="step-desc">Escolha uma data disponível para seu atendimento.</div>
-                    
-                    <div class="calendar-wrapper" id="calendarGrid">
-                        <!-- Gerado Dinamicamente -->
-                    </div>
-
-                    <div class="step-actions">
-                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
-                        <button type="button" class="btn btn-primary" onclick="nextStep()" id="nextBtn4" disabled>Avançar</button>
-                    </div>
-                </div>
-
-                <!-- Etapa 5: Horário -->
-                <div class="step" data-step="5">
-                    <div class="step-title">Selecione o Horário</div>
-                    <div class="step-desc">Horários calculados com base na disponibilidade em tempo real.</div>
-                    
-                    <div class="time-grid" id="timeGrid">
-                        <!-- Gerado Dinamicamente -->
-                    </div>
-
-                    <div class="step-actions">
-                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
-                        <button type="button" class="btn btn-primary" onclick="nextStep()" id="nextBtn5" disabled>Avançar</button>
-                    </div>
-                </div>
-
-                <!-- Etapa 6: Dados Pessoais -->
-                <div class="step" data-step="6">
-                    <div class="step-title">Seus Dados de Contato</div>
-                    <div class="step-desc">Precisamos dessas informações para confirmar e enviar os lembretes automáticos.</div>
-                    
-                    <div class="form-group">
-                        <label for="clientName">Nome Completo</label>
-                        <input type="text" id="clientName" class="form-control" placeholder="Ex: Maria Silva" required oninput="validateContactForm()">
-                    </div>
-                    <div class="form-group">
-                        <label for="clientPhone">WhatsApp</label>
-                        <input type="tel" id="clientPhone" class="form-control" placeholder="(11) 99999-9999" required oninput="maskPhone(this); validateContactForm();">
-                    </div>
-                    <div class="form-group">
-                        <label for="clientEmail">E-mail</label>
-                        <input type="email" id="clientEmail" class="form-control" placeholder="nome@exemplo.com" required oninput="validateContactForm()">
-                    </div>
-
-                    <div class="step-actions">
-                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
-                        <button type="button" class="btn btn-primary" onclick="nextStep()" id="nextBtn6" disabled>Avançar</button>
-                    </div>
-                </div>
-
-                <!-- Etapa 7: Observações -->
-                <div class="step" data-step="7">
-                    <div class="step-title">Alguma observação ou sintoma? (Opcional)</div>
-                    <div class="step-desc">Se houver restrições, alergias ou objetivos específicos, informe-nos.</div>
-                    
-                    <div class="form-group">
-                        <label for="clientObs">Observações Clínicas</label>
-                        <textarea id="clientObs" class="form-control" rows="4" placeholder="Ex: Possuo melasma na bochecha esquerda, alergia a algum componente ou prefiro agendamento discreto..."></textarea>
-                    </div>
-
-                    <div class="step-actions">
-                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
-                        <button type="button" class="btn btn-primary" onclick="nextStep()">Ver Resumo</button>
-                    </div>
-                </div>
-
-                <!-- Etapa 8: Resumo Final & Confirmação -->
-                <div class="step" data-step="8">
-                    <div class="step-title">Confirme seus Dados Premium</div>
-                    <div class="step-desc">Por favor, revise atentamente antes de processar a reserva.</div>
-                    
-                    <div id="finalSummaryContainer" style="background: var(--bg-color); padding: 16px; border-radius: var(--radius-md); margin-bottom: 24px;">
-                        <!-- Inserido dinamicamente -->
-                    </div>
-
-                    <button type="button" class="btn btn-primary" style="width: 100%; background-color: var(--success);" onclick="finishBooking()">
-                        Confirmar e Sincronizar com WhatsApp ➔
-                    </button>
-                    <button type="button" class="btn btn-secondary mt-4" style="width: 100%;" onclick="prevStep()">Corrigir Informações</button>
-                </div>
-
-            </form>
-        </section>
-
-        <!-- Sidebar Informativa Dinâmica -->
-        <aside class="info-sidebar">
-            <div class="side-card live-summary">
-                <h3>Resumo da Solicitação</h3>
-                <div id="summaryContent">
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Nenhum item selecionado.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="service-badge">Mais Procurado</span>
+                <h3>Botox Premium</h3>
+                <p>Planejamento facial inteiramente personalizado para suavizar linhas de expressão preservando sua naturalidade.</p>
+                <div class="service-footer">
+                    <span class="service-time">⏱ 40 min</span>
+                    <a href="#agendamento" style="color: var(--primary); text-decoration: none;">Agendar ➔</a>
                 </div>
             </div>
-
-            <div class="side-card">
-                <h3>Garantia BelleVie</h3>
-                <div class="feature-item">
-                    <div class="feature-icon">✓</div>
-                    <div class="feature-text">
-                        <h4>Aprovado pela ANVISA</h4>
-                        <p>Apenas equipamentos e insumos certificados de alta qualidade.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">✓</div>
-                    <div class="feature-text">
-                        <h4>Equipe Altamente Especializada</h4>
-                        <p>9 profissionais prontos para cuidar do seu plano de beleza único.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">✓</div>
-                    <div class="feature-text">
-                        <h4>Pagamento Facilitado</h4>
-                        <p>Parcelamento em até 12x fixas ou financiamento de pacotes.</p>
-                    </div>
+            <div class="service-card">
+                <span class="service-badge">Alta Tecnologia</span>
+                <h3>Ultraformer</h3>
+                <p>Ultrassom micro e macrofocado atuando diretamente na flacidez e ancoragem muscular facial e corporal.</p>
+                <div class="service-footer">
+                    <span class="service-time">⏱ 1h 00 min</span>
+                    <a href="#agendamento" style="color: var(--primary); text-decoration: none;">Agendar ➔</a>
                 </div>
             </div>
-        </aside>
-    </main>
-
-    <!-- Como Funciona -->
-    <section id="como-funciona">
-        <h2 class="section-title">Experiência Simples e Ágil</h2>
-        <div class="steps-horizontal">
-            <div class="step-horizontal-card">
-                <div class="step-number">1</div>
-                <h4>Escolha Rápida</h4>
-                <p>Selecione seu tratamento ideal e especialista em segundos de forma interativa.</p>
-            </div>
-            <div class="step-horizontal-card">
-                <div class="step-number">2</div>
-                <h4>Confirmação Direta</h4>
-                <p>Nossos sistemas enviam tudo imediatamente para o WhatsApp e geram o alerta de agendamento.</p>
-            </div>
-            <div class="step-horizontal-card">
-                <div class="step-number">3</div>
-                <h4>Atendimento Premium</h4>
-                <p>Aguardamos você na Alameda Araguaia com uma infraestrutura exclusiva e aconchegante.</p>
+            <div class="service-card">
+                <span class="service-badge">Modelagem</span>
+                <h3>Criolipólise</h3>
+                <p>Eliminação de gordura localizada através do resfriamento controlado de última geração.</p>
+                <div class="service-footer">
+                    <span class="service-time">⏱ 1h 20 min</span>
+                    <a href="#agendamento" style="color: var(--primary); text-decoration: none;">Agendar ➔</a>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Avaliações -->
-    <section id="avaliacoes" style="background-color: rgba(142, 122, 181, 0.03); padding: 40px 0;">
+<!-- How It Works -->
+<section id="como-funciona" class="section-padding">
+    <div class="container">
+        <h2 class="section-title">Como Funciona o Agendamento Expresso</h2>
+        <p class="section-subtitle">Conclua sua solicitação em menos de 1 minuto através de nossa plataforma inteligente.</p>
+        
+        <div class="steps-grid">
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <h3>Escolha o Serviço</h3>
+                <p>Selecione o procedimento estético ou sua avaliação inicial.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-num">2</div>
+                <h3>Profissional & Data</h3>
+                <p>Defina o especialista e visualize os horários em tempo real.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <h3>Confirmação Instantânea</h3>
+                <p>Insira seus dados básicos de contato com segurança.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-num">4</div>
+                <h3>Integração Completa</h3>
+                <p>Receba tudo direto no WhatsApp e salve no seu Google Agenda.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main System Section (The SaaS Engine) -->
+<section id="agendamento" class="section-padding system-section">
+    <div class="container">
+        <div class="sys-container">
+            <div class="sys-header">
+                <h2>Plataforma de Agendamento BelleVie</h2>
+                <p>Preencha as etapas dinâmicas abaixo</p>
+                <div class="progress-bar-container">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+            </div>
+
+            <div class="sys-body">
+                <!-- Step 1: Procedure Selection -->
+                <div class="step-pane active" data-step="1">
+                    <h3 class="pane-title">Qual procedimento você deseja realizar?</h3>
+                    <p class="pane-desc">Selecione uma das opções premium abaixo para iniciar.</p>
+                    <div class="options-grid" id="procedureGrid">
+                        <!-- Injected dynamically via JS or kept minimal static for reliability -->
+                        <div class="option-card" data-value="Botox Premium">
+                            <div>
+                                <h4>Botox Premium</h4>
+                                <p>Planejamento facial exclusivo</p>
+                            </div>
+                            <div class="option-meta"><span>40 min</span><span style="color: var(--accent);">★ Destaque</span></div>
+                        </div>
+                        <div class="option-card" data-value="Harmonização Facial">
+                            <div>
+                                <h4>Harmonização Facial</h4>
+                                <p>Equilíbrio e proporções faciais</p>
+                            </div>
+                            <div class="option-meta"><span>1h 30 min</span></div>
+                        </div>
+                        <div class="option-card" data-value="Ultraformer">
+                            <div>
+                                <h4>Ultraformer</h4>
+                                <p>Ultrassom microfocado flacidez</p>
+                            </div>
+                            <div class="option-meta"><span>1h 00 min</span></div>
+                        </div>
+                        <div class="option-card" data-value="Criolipólise">
+                            <div>
+                                <h4>Criolipólise</h4>
+                                <p>Gordura localizada avançado</p>
+                            </div>
+                            <div class="option-meta"><span>1h 20 min</span></div>
+                        </div>
+                        <div class="option-card" data-value="Limpeza de Pele Premium">
+                            <div>
+                                <h4>Limpeza de Pele Premium</h4>
+                                <p>Protocolo profundo de higienização</p>
+                            </div>
+                            <div class="option-meta"><span>1h 00 min</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Specialist Selection -->
+                <div class="step-pane" data-step="2">
+                    <h3 class="pane-title">Escolha o especialista de sua preferência</h3>
+                    <p class="pane-desc">Todos os profissionais são altamente habilitados.</p>
+                    <div class="options-grid" id="specialistGrid">
+                        <div class="option-card" data-value="Qualquer Profissional (Recomendado)">
+                            <div>
+                                <h4>Qualquer Profissional</h4>
+                                <p>Selecione para maior disponibilidade de horários</p>
+                            </div>
+                        </div>
+                        <div class="option-card" data-value="Dra. Mariana Silva (Biomédica)">
+                            <div>
+                                <h4>Dra. Mariana Silva</h4>
+                                <p>Especialista em Harmonização & Botox</p>
+                            </div>
+                        </div>
+                        <div class="option-card" data-value="Dra. Juliana Costa (Fisioterapeuta)">
+                            <div>
+                                <h4>Dra. Juliana Costa</h4>
+                                <p>Dermatofuncional e Protocolos Corporais</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Initial Evaluation Toggle -->
+                <div class="step-pane" data-step="3">
+                    <h3 class="pane-title">É a sua primeira vez na clínica BelleVie?</h3>
+                    <p class="pane-desc">Primeiras visitas ganham uma avaliação facial/corporal diagnóstica 100% gratuita.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div class="option-card text-center" data-value="Sim" id="evalSim">
+                            <div style="text-align: center; padding: 20px 0;">
+                                <span style="font-size: 24px; display:block; margin-bottom: 8px;">✨</span>
+                                <h4>Sim, quero minha Avaliação Gratuita</h4>
+                            </div>
+                        </div>
+                        <div class="option-card text-center" data-value="Não" id="evalNao">
+                            <div style="text-align: center; padding: 20px 0;">
+                                <span style="font-size: 24px; display:block; margin-bottom: 8px;">🔍</span>
+                                <h4>Não, já sou cliente BelleVie</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Date Selection -->
+                <div class="step-pane" data-step="4">
+                    <h3 class="pane-title">Selecione o melhor dia para você</h3>
+                    <p class="pane-desc">Atendimento estendido de Segunda a Sábado.</p>
+                    <div class="calendar-widget">
+                        <div class="cal-header">
+                            <div class="cal-title" id="calMonthTitle">Julho 2026</div>
+                            <div style="display: flex; gap: 6px;">
+                                <button class="cal-btn" id="prevMonthBtn">◀</button>
+                                <button class="cal-btn" id="nextMonthBtn">▶</button>
+                            </div>
+                        </div>
+                        <div class="cal-days-grid" id="calDaysGrid">
+                            <!-- Generated Dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Time Selection -->
+                <div class="step-pane" data-step="5">
+                    <h3 class="pane-title">Escolha o horário de atendimento</h3>
+                    <p class="pane-desc">Exibindo horários livres para o dia selecionado.</p>
+                    <div class="time-slots" id="timeSlotsContainer">
+                        <div class="time-slot" data-value="09:00">09:00</div>
+                        <div class="time-slot" data-value="10:30">10:30</div>
+                        <div class="time-slot" data-value="13:00">13:00</div>
+                        <div class="time-slot" data-value="14:30">14:30</div>
+                        <div class="time-slot" data-value="16:00">16:00</div>
+                        <div class="time-slot" data-value="18:30">18:30</div>
+                    </div>
+                </div>
+
+                <!-- Step 6: Customer Credentials -->
+                <div class="step-pane" data-step="6">
+                    <h3 class="pane-title">Informações de contato e segurança</h3>
+                    <p class="pane-desc">Precisamos destes dados para gerar suas integrações e lembretes automáticos.</p>
+                    <div class="form-group">
+                        <label>Nome Completo</label>
+                        <input type="text" id="custName" class="form-control" placeholder="Digite seu nome completo">
+                    </div>
+                    <div class="form-group">
+                        <label>WhatsApp</label>
+                        <input type="tel" id="custPhone" class="form-control" placeholder="(11) 99999-9999">
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail (Para confirmação digital)</label>
+                        <input type="email" id="custEmail" class="form-control" placeholder="seu-email@provedor.com">
+                    </div>
+                </div>
+
+                <!-- Step 7: Observations -->
+                <div class="step-pane" data-step="7">
+                    <h3 class="pane-title">Alguma observação importante? (Opcional)</h3>
+                    <p class="pane-desc">Informe alergias, restrições médicas ou dúvidas sobre o protocolo escolhido.</p>
+                    <div class="form-group">
+                        <label>Sua mensagem ou queixa estética principal</label>
+                        <textarea id="custNotes" class="form-control" rows="5" placeholder="Ex: Possuo manchas de melasma na região das bochechas..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Step 8: Partial/Final Summary -->
+                <div class="step-pane" data-step="8">
+                    <h3 class="pane-title">Confirme os dados da sua reserva</h3>
+                    <p class="pane-desc">Revise tudo antes do envio definitivo para os sistemas.</p>
+                    <div class="summary-box" id="finalSummaryBox">
+                        <!-- Injected content -->
+                    </div>
+                    <p style="font-size: 12px; color: var(--text-muted); text-align: center;">Ao clicar em Confirmar, abriremos sua automação via WhatsApp.</p>
+                </div>
+            </div>
+
+            <div class="sys-footer">
+                <button class="btn btn-secondary" id="prevBtn" disabled>Voltar</button>
+                <button class="btn btn-primary" id="nextBtn">Avançar ➔</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Module -->
+<section id="beneficios" class="section-padding bg-white">
+    <div class="container">
+        <h2 class="section-title">Por que escolher a BelleVie?</h2>
+        <p class="section-subtitle">Estrutura focada em gerar bem-estar completo com segurança e refinamento.</p>
+        
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon">✦</div>
+                <h3>Equipamentos Próprios ANVISA</h3>
+                <p>Não trabalhamos com locações instáveis. Nossas tecnologias estão calibradas diariamente conforme rigorosos padrões.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <h3>Atendimento Humanizado</h3>
+                <p>O foco nunca é empurrar pacotes padronizados, mas sim entender as transformações que você busca de forma consciente.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">💳</div>
+                <h3>Facilidade de Pagamento</h3>
+                <p>Parcelamento facilitado em até 12 vezes em cartões de crédito e linhas exclusivas de financiamento estético.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews Module -->
+<section class="section-padding">
+    <div class="container">
         <h2 class="section-title">O que dizem nossas clientes</h2>
+        <p class="section-subtitle">Confiança validada por resultados naturais marcantes.</p>
+        
         <div class="reviews-grid">
             <div class="review-card">
-                <div class="review-stars">★★★★★</div>
-                <p>"O sistema de agendamento é perfeito e muito rápido! Fiz a aplicação de Botox com a Dra. Amanda e o resultado superou todas as expectativas."</p>
-                <div class="review-author">Juliana M. <span class="review-verified">✓ Cliente Verificada</span></div>
+                <div class="stars">★★★★★</div>
+                <p>"Fiz o protocolo de Botox Premium e amei o resultado. Ficou super natural, sem aquele aspecto congelado. A Dra. Mariana é maravilhosa."</p>
+                <div class="review-author">
+                    <div class="avatar">AM</div>
+                    <div>
+                        <h4 style="font-size: 14px;">Amanda Mendonça</h4>
+                        <span style="font-size: 12px; color: var(--text-muted);">Cliente recorrente</span>
+                    </div>
+                </div>
             </div>
             <div class="review-card">
-                <div class="review-stars">★★★★★</div>
-                <p>"Adorei a avaliação gratuita que fizeram no meu rosto antes do Ultraformer. Demonstra um profissionalismo e respeito gigantesco."</p>
-                <div class="review-author">Fernanda R. <span class="review-verified">✓ Cliente Verificada</span></div>
+                <div class="stars">★★★★★</div>
+                <p>"Ambiente extremamente limpo, luxuoso e aconchegante. O agendamento online é super prático e as mensagens de lembrete salvam minha rotina."</p>
+                <div class="review-author">
+                    <div class="avatar">BR</div>
+                    <div>
+                        <h4 style="font-size: 14px;">Bruna Ribeiro</h4>
+                        <span style="font-size: 12px; color: var(--text-muted);">Osasco/SP</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"O Ultraformer deu uma firmeza incrível no meu rosto já na primeira sessão. Vale cada centavo investido. Profissionais competentes."</p>
+                <div class="review-author">
+                    <div class="avatar">CC</div>
+                    <div>
+                        <h4 style="font-size: 14px;">Camila Camargo</h4>
+                        <span style="font-size: 12px; color: var(--text-muted);">Cliente BelleVie</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- FAQ -->
-    <section class="faq-container">
+<!-- FAQ Module -->
+<section id="faq" class="section-padding bg-white">
+    <div class="container">
         <h2 class="section-title">Perguntas Frequentes</h2>
-        <div class="faq-item">
-            <button class="faq-trigger" onclick="toggleFaq(this)">A primeira avaliação realmente não tem custos? <span>+</span></button>
-            <div class="faq-content">
-                <p>Sim! Toda primeira avaliação na BelleVie é totalmente gratuita, incluindo o mapeamento facial ou corporal personalizado realizado por um especialista.</p>
+        <p class="section-subtitle">Tudo o que você precisa saber antes da sua primeira visita.</p>
+        
+        <div class="faq-max">
+            <div class="faq-item">
+                <button class="faq-trigger">A avaliação inicial é realmente gratuita? <span>+</span></button>
+                <div class="faq-content">
+                    <p>Sim, sua primeira avaliação diagnóstica não possui nenhum custo. Ela inclui análise facial ou corporal detalhada, montagem de plano personalizado e orçamento sob medida sem compromisso.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-trigger">Quais as formas de pagamento aceitas? <span>+</span></button>
+                <div class="faq-content">
+                    <p>Aceitamos Pix, cartões de débito, dinheiro, links de pagamento online e parcelamento facilitado em até 12x sem juros em cartões elegíveis.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-trigger">Como funciona em caso de reagendamento? <span>+</span></button>
+                <div class="faq-content">
+                    <p>O reagendamento pode ser solicitado diretamente pelo canal oficial do WhatsApp com até 24h de antecedência para mantermos a otimização das salas de aplicação.</p>
+                </div>
             </div>
         </div>
-        <div class="faq-item">
-            <button class="faq-trigger" onclick="toggleFaq(this)">Quais são as formas de pagamento aceitas? <span>+</span></button>
-            <div class="faq-content">
-                <p>Aceitamos Pix, cartões de débito e crédito com parcelamento em até 12 vezes, além de links de pagamento dedicados e opções de financiamentos estéticos estruturados.</p>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
+<!-- Contact & Map -->
+<section class="section-padding">
+    <div class="container contact-grid">
+        <div>
+            <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">Estamos perto de você</h2>
+            <div class="info-list">
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div>
+                        <strong>Endereço</strong>
+                        <p>Rua Presidente Castelo Branco, 45, Osasco - SP, 06016-020</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div>
+                        <strong>Telefones</strong>
+                        <p>(11) 4207-6943 / WhatsApp: (11) 99854-3816</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">✉</div>
+                    <div>
+                        <strong>E-mail institucional</strong>
+                        <p>contato@bellevieestetica.com.br</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="map-wrapper">
+                <!-- Premium Simulated Map UX for flawless compliance with zero libraries rule -->
+                <div class="map-placeholder">
+                    <span style="font-size: 32px; margin-bottom: 12px;">📍</span>
+                    <h4 style="font-weight: 700; margin-bottom: 6px;">BelleVie Estética Avançada</h4>
+                    <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">Rua Presidente Castelo Branco, 45 - Centro, Osasco</p>
+                    <a href="[https://maps.google.com/?q=Rua+Presidente+Castelo+Branco,+45,+Osasco,+São+Paulo](https://maps.google.com/?q=Rua+Presidente+Castelo+Branco,+45,+Osasco,+São+Paulo)" target="_blank" class="btn btn-secondary" style="font-size: 12px; padding: 8px 16px;">Abrir no Google Maps ↗</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>BelleVie Estética Avançada</h4>
-                <p>Oferecendo os melhores tratamentos com segurança, modernidade e cuidado humanizado.</p>
+                <div class="footer-logo">BelleVie</div>
+                <p style="max-width: 320px;">Estética avançada, rejuvenescimento conscious e cuidado sob medida para realçar o que há de melhor em você.</p>
             </div>
             <div class="footer-col">
-                <h4>Contatos Rápidos</h4>
-                <p>📞 (11) 4207-6943</p>
-                <p>📲 (11) 99854-3816</p>
-                <p>✉️ contato@bellevieestetica.com.br</p>
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#procedimentos">Procedimentos</a></li>
+                    <li><a href="#como-funciona">Funcionamento</a></li>
+                    <li><a href="#agendamento">Marcar Consulta</a></li>
+                </ul>
             </div>
             <div class="footer-col">
-                <h4>Localização</h4>
-                <p>Alameda Araguaia, 1432 – Sala 305</p>
-                <p>Barueri/SP</p>
+                <h4>Horários</h4>
+                <p style="margin-bottom: 6px;">Segunda a Sexta: 09h às 20h</p>
+                <p style="margin-bottom: 6px;">Sábado: 09h às 16h</p>
+                <p>Domingo: Fechado</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <div>&copy; 2026 BelleVie Estética Avançada. Todos os direitos reservados.</div>
-            <div>Desenvolvido com Tecnologia SaaS de Alta Conversão.</div>
+            <div>&copy; 2026 BelleVie Estética Avançada LTDA. Todos os direitos reservados.</div>
+            <div>Desenvolvido por Cliente Agenda SaaS Platform.</div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/5511998543816" class="whatsapp-float" target="_blank" aria-label="Fale Conosco pelo WhatsApp">
-        ✉
-    </a>
+<!-- WhatsApp Floating Button -->
+<a href="[https://wa.me/5511998543816?text=Olá,%20gostaria](https://wa.me/5511998543816?text=Olá,%20gostaria) de tirar uma dúvida sobre os procedimentos da BelleVie." class="whatsapp-float" target="_blank" aria-label="Fale Conosco no WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.623-1.023-5.086-2.885-6.948C16.362 2.017 13.9 1.012 12.01 1.011c-5.44 0-9.866 4.372-9.87 9.802 0 1.54.417 3.042 1.208 4.367l-.991 3.613 3.701-.94z"/></svg>
+</a>
 
-    <script>
-        // Dados globais do fluxo
-        const bookingData = {
-            procedure: '',
-            expert: '',
-            initial_evaluation: '',
-            date: '',
-            time: '',
-            name: '',
-            phone: '',
-            email: '',
-            obs: ''
-        };
+<!-- System Core Engine Architecture JavaScript -->
+<script>
+    // State Machine Storage Engine
+    const appointmentData = {
+        procedure: '',
+        specialist: '',
+        needsEvaluation: '',
+        date: '',
+        time: '',
+        name: '',
+        phone: '',
+        email: '',
+        notes: ''
+    };
 
-        let currentStep = 1;
-        const totalSteps = 8;
+    let currentStep = 1;
+    const totalSteps = 8;
 
-        // Inicialização do Calendário Inteligente
-        function initCalendar() {
-            const grid = document.getElementById('calendarGrid');
-            grid.innerHTML = '';
-            
-            // Dias da semana header
-            const daysOfWeek = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
-            daysOfWeek.forEach(d => {
-                const h = document.createElement('div');
-                h.className = 'calendar-header-day';
-                h.innerText = d;
-                grid.appendChild(h);
+    // Dom components hydration
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const progressBar = document.getElementById('progressBar');
+    const calDaysGrid = document.getElementById('calDaysGrid');
+    const timeSlotsContainer = document.getElementById('timeSlotsContainer');
+
+    // Dynamic Interactive Handlers setup
+    function setupOptionSelectors(gridId, dataFieldName) {
+        const grid = document.getElementById(gridId);
+        const cards = grid.querySelectorAll('.option-card');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                cards.forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+                appointmentData[dataFieldName] = card.getAttribute('data-value');
+                validateStepState();
             });
+        });
+    }
 
-            // Gerar dias simulados a partir de hoje (Julho de 2026)
-            // Vamos preencher espaços vazios simulando início na quarta-feira
-            for(let i=0; i<3; i++) {
-                const empty = document.createElement('div');
-                empty.className = 'calendar-day empty';
-                grid.appendChild(empty);
-            }
+    setupOptionSelectors('procedureGrid', 'procedure');
+    setupOptionSelectors('specialistGrid', 'specialist');
 
-            for(let day=1; day<=25; day++) {
-                const dDiv = document.createElement('div');
-                // Simulação de domingos indisponíveis
-                const isSunday = (day + 3) % 7 === 0;
-                
-                if (isSunday) {
-                    dDiv.className = 'calendar-day disabled';
-                    dDiv.innerText = day;
-                } else {
-                    dDiv.className = 'calendar-day available';
-                    dDiv.innerText = day;
-                    dDiv.onclick = () => {
-                        document.querySelectorAll('.calendar-day').forEach(el => el.classList.remove('selected'));
-                        dDiv.classList.add('selected');
-                        bookingData.date = `${day}/07/2026`;
-                        document.getElementById('nextBtn4').disabled = false;
-                        updateLiveSummary();
-                    };
-                }
-                grid.appendChild(dDiv);
-            }
-        }
+    // Evaluation Selection Logic
+    document.getElementById('evalSim').addEventListener('click', () => {
+        document.getElementById('evalSim').classList.add('selected');
+        document.getElementById('evalNao').classList.remove('selected');
+        appointmentData.needsEvaluation = 'Sim';
+        validateStepState();
+    });
+    document.getElementById('evalNao').addEventListener('click', () => {
+        document.getElementById('evalNao').classList.add('selected');
+        document.getElementById('evalSim').classList.remove('selected');
+        appointmentData.needsEvaluation = 'Não';
+        validateStepState();
+    });
 
-        // Inicialização de Horários Disponíveis
-        function initTimeSlots() {
-            const grid = document.getElementById('timeGrid');
-            grid.innerHTML = '';
-            const hours = ['09:00', '10:00', '11:00', '13:00', '14:30', '16:00', '17:30', '19:00'];
+    // Simple input masks & field validations
+    document.getElementById('custPhone').addEventListener('input', function(e) {
+        var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+        e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+        validateStepState();
+    });
+    document.getElementById('custName').addEventListener('input', validateStepState);
+    document.getElementById('custEmail').addEventListener('input', validateStepState);
+
+    // Core Calendar Component rendering engine
+    function renderCalendar() {
+        calDaysGrid.innerHTML = '';
+        
+        // Render basic standard week layout labels for safety
+        const dayLabels = ['D','S','T','Q','Q','S','S'];
+        dayLabels.forEach(lbl => {
+            const el = document.createElement('div');
+            el.className = 'cal-day-label';
+            el.innerText = lbl;
+            calDaysGrid.appendChild(el);
+        });
+
+        // Simulate current premium availability matching active future dates
+        const businessDaysCount = 31;
+        for(let i = 1; i <= businessDaysCount; i++) {
+            const cell = document.createElement('div');
+            cell.className = 'cal-cell';
+            cell.innerText = i;
             
-            hours.forEach(h => {
-                const slot = document.createElement('div');
-                slot.className = 'time-slot';
-                slot.innerText = h;
-                slot.onclick = () => {
-                    document.querySelectorAll('.time-slot').forEach(el => el.classList.remove('selected'));
-                    slot.classList.add('selected');
-                    bookingData.time = h;
-                    document.getElementById('nextBtn5').disabled = false;
-                    updateLiveSummary();
-                };
-                grid.appendChild(slot);
-            });
-        }
-
-        // Seleção de cards genéricos do fluxo inteligente
-        function selectOption(field, value, meta, isSpecial) {
-            bookingData[field] = value;
-            
-            // Atualizar classes visuais nos elementos do passo atual
-            const currentStepEl = document.querySelector(`.step[data-step="${currentStep}"]`);
-            currentStepEl.querySelectorAll('.option-card').forEach(card => {
-                card.classList.remove('selected');
-                if(card.innerText.includes(value)) {
-                    card.classList.add('selected');
-                }
-            });
-
-            // Habilitar botão avançar correspondente
-            const nextBtn = document.getElementById(`nextBtn${currentStep}`);
-            if(nextBtn) nextBtn.disabled = false;
-
-            updateLiveSummary();
-            // Avanço automático suave inteligente para melhor usabilidade em cliques rápidos
-            setTimeout(() => { nextStep(); }, 250);
-        }
-
-        function validateContactForm() {
-            const name = document.getElementById('clientName').value;
-            const phone = document.getElementById('clientPhone').value;
-            const email = document.getElementById('clientEmail').value;
-            
-            bookingData.name = name;
-            bookingData.phone = phone;
-            bookingData.email = email;
-
-            const isValid = name.length > 3 && phone.length >= 14 && email.includes('@');
-            document.getElementById('nextBtn6').disabled = !isValid;
-            updateLiveSummary();
-        }
-
-        // Atualização da barra de progresso e transição de telas
-        function updateStep() {
-            document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
-            const activeStep = document.querySelector(`.step[data-step="${currentStep}"]`);
-            if(activeStep) activeStep.classList.add('active');
-
-            const percent = (currentStep / totalSteps) * 100;
-            document.getElementById('progressBar').style.width = `${percent}%`;
-
-            if(currentStep === 4) initCalendar();
-            if(currentStep === 5) initTimeSlots();
-            if(currentStep === 8) renderFinalSummary();
-        }
-
-        function nextStep() {
-            if(currentStep < totalSteps) {
-                currentStep++;
-                updateStep();
-            }
-        }
-
-        function prevStep() {
-            if(currentStep > 1) {
-                currentStep--;
-                updateStep();
-            }
-        }
-
-        // Atualiza a lateral em tempo real de forma profissional
-        function updateLiveSummary() {
-            const container = document.getElementById('summaryContent');
-            let html = '';
-
-            if(bookingData.procedure) html += `<div class="summary-row"><span class="summary-label">Procedimento</span><span class="summary-value">${bookingData.procedure}</span></div>`;
-            if(bookingData.expert) html += `<div class="summary-row"><span class="summary-label">Especialista</span><span class="summary-value">${bookingData.expert}</span></div>`;
-            if(bookingData.initial_evaluation) html += `<div class="summary-row"><span class="summary-label">Avaliação Inicial</span><span class="summary-value">Sim</span></div>`;
-            if(bookingData.date) html += `<div class="summary-row"><span class="summary-label">Data</span><span class="summary-value">${bookingData.date}</span></div>`;
-            if(bookingData.time) html += `<div class="summary-row"><span class="summary-label">Horário</span><span class="summary-value">${bookingData.time}</span></div>`;
-            if(bookingData.name) html += `<div class="summary-row"><span class="summary-label">Cliente</span><span class="summary-value">${bookingData.name}</span></div>`;
-
-            container.innerHTML = html || '<p style="font-size: 0.9rem; color: var(--text-muted);">Preencha as primeiras etapas para ver o resumo em tempo real.</p>';
-        }
-
-        function renderFinalSummary() {
-            bookingData.obs = document.getElementById('clientObs').value;
-            const container = document.getElementById('finalSummaryContainer');
-            container.innerHTML = `
-                <div class="summary-row"><span class="summary-label">Procedimento:</span><span class="summary-value">${bookingData.procedure}</span></div>
-                <div class="summary-row"><span class="summary-label">Profissional:</span><span class="summary-value">${bookingData.expert}</span></div>
-                <div class="summary-row"><span class="summary-label">Data e Hora:</span><span class="summary-value">${bookingData.date} às ${bookingData.time}</span></div>
-                <div class="summary-row"><span class="summary-label">Nome:</span><span class="summary-value">${bookingData.name}</span></div>
-                <div class="summary-row"><span class="summary-label">WhatsApp:</span><span class="summary-value">${bookingData.phone}</span></div>
-                <div class="summary-row"><span class="summary-label">Observações:</span><span class="summary-value">${bookingData.obs || 'Nenhuma'}</span></div>
-            `;
-        }
-
-        // Geração do Link com Mensagem Customizada WhatsApp
-        function finishBooking() {
-            const text = `Olá BelleVie! Gostaria de confirmar meu agendamento premium:\n\n` +
-                         `• *Procedimento:* ${bookingData.procedure}\n` +
-                         `• *Especialista:* ${bookingData.expert}\n` +
-                         `• *Avaliação inclusa:* ${bookingData.initial_evaluation}\n` +
-                         `• *Data:* ${bookingData.date}\n` +
-                         `• *Horário:* ${bookingData.time}\n\n` +
-                         `*Dados de Contato:*\n` +
-                         `• *Nome:* ${bookingData.name}\n` +
-                         `• *E-mail:* ${bookingData.email}\n` +
-                         `• *Observações:* ${bookingData.obs || 'Sem observações'}`;
-            
-            const encodedText = encodeURIComponent(text);
-            window.open(`https://wa.me/5511998543816?text=${encodedText}`, '_blank');
-        }
-
-        // Funções Auxiliares: Máscaras e FAQ Accordion
-        function maskPhone(input) {
-            let v = input.value.replace(/\D/g, '');
-            if(v.length > 11) v = v.substring(0, 11);
-            if (v.length > 6) {
-                input.value = `(${v.substring(0,2)}) ${v.substring(2,7)}-${v.substring(7)}`;
-            } else if (v.length > 2) {
-                input.value = `(${v.substring(0,2)}) ${v.substring(2)}`;
+            // Block Sundays dynamically for aesthetics matching enterprise spec sheet
+            if(i === 5 || i === 12 || i === 19 || i === 26) {
+                cell.classList.add('disabled');
             } else {
-                input.value = v;
+                cell.addEventListener('click', () => {
+                    calDaysGrid.querySelectorAll('.cal-cell').forEach(c => c.classList.remove('selected'));
+                    cell.classList.add('selected');
+                    appointmentData.date = `${i}/07/2026`;
+                    validateStepState();
+                });
+                if(appointmentData.date === `${i}/07/2026`) {
+                    cell.classList.add('selected');
+                }
+            }
+            calDaysGrid.appendChild(cell);
+        }
+    }
+
+    // Time slots generation
+    const slots = timeSlotsContainer.querySelectorAll('.time-slot');
+    slots.forEach(slot => {
+        slot.addEventListener('click', () => {
+            slots.forEach(s => s.classList.remove('selected'));
+            slot.classList.add('selected');
+            appointmentData.time = slot.getAttribute('data-value');
+            validateStepState();
+        });
+    });
+
+    // Wizard steps workflow router validation engine
+    function validateStepState() {
+        let isValid = false;
+        if (currentStep === 1 && appointmentData.procedure) isValid = true;
+        else if (currentStep === 2 && appointmentData.specialist) isValid = true;
+        else if (currentStep === 3 && appointmentData.needsEvaluation) isValid = true;
+        else if (currentStep === 4 && appointmentData.date) isValid = true;
+        else if (currentStep === 5 && appointmentData.time) isValid = true;
+        else if (currentStep === 6) {
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const email = document.getElementById('custEmail').value.trim();
+            if(name.length > 3 && phone.length >= 14 && email.includes('@')) {
+                appointmentData.name = name;
+                appointmentData.phone = phone;
+                appointmentData.email = email;
+                isValid = true;
             }
         }
-
-        function toggleFaq(button) {
-            const item = button.parentElement;
-            item.classList.toggle('active');
-            button.querySelector('span').innerText = item.classList.contains('active') ? '-' : '+';
+        else if (currentStep === 7) {
+            appointmentData.notes = document.getElementById('custNotes').value.trim();
+            isValid = true; // Optional step
+        }
+        else if (currentStep === 8) {
+            isValid = true;
         }
 
-        // Inicializar aplicação
-        updateStep();
-    </script>
-</body>
-</html>
+        nextBtn.disabled = !isValid;
+    }
+
+    function syncSummaryBox() {
+        const summaryBox = document.getElementById('finalSummaryBox');
+        summaryBox.innerHTML = `
+            <div class="summary-row"><span>Procedimento:</span><span>${appointmentData.procedure}</span></div>
+            <div class="summary-row"><span>Especialista:</span><span>${appointmentData.specialist}</span></div>
+            <div class="summary-row"><span>Avaliação Inicial Grátis:</span><span>${appointmentData.needsEvaluation}</span></div>
+            <div class="summary-row"><span>Data Selecionada:</span><span>${appointmentData.date}</span></div>
+            <div class="summary-row"><span>Horário Agendado:</span><span>${appointmentData.time}</span></div>
+            <div class="summary-row"><span>Cliente:</span><span>${appointmentData.name}</span></div>
+            <div class="summary-row"><span>WhatsApp:</span><span>${appointmentData.phone}</span></div>
+            <div class="summary-row"><span>Observações:</span><span>${appointmentData.notes || 'Nenhuma'}</span></div>
+        `;
+    }
+
+    // Action Buttons Navigation Orchestrator
+    nextBtn.addEventListener('click', () => {
+        if (currentStep < totalSteps) {
+            currentStep++;
+            renderWizardStep();
+        } else {
+            // Execute Enterprise Omnichannel Automations Deep-link
+            const baseText = `Olá BelleVie! Gostaria de confirmar meu agendamento estético:\n\n` +
+                             `• Procedimento: ${appointmentData.procedure}\n` +
+                             `• Especialista: ${appointmentData.specialist}\n` +
+                             `• Primeira vez (Avaliação): ${appointmentData.needsEvaluation}\n` +
+                             `• Horário: ${appointmentData.date} às ${appointmentData.time}\n\n` +
+                             `Dados do Cliente:\n` +
+                             `• Nome: ${appointmentData.name}\n` +
+                             `• Contato: ${appointmentData.phone}\n` +
+                             `• Observações: ${appointmentData.notes || 'Sem observações'}`;
+            
+            const encodedText = encodeURIComponent(baseText);
+            window.open(`[https://wa.me/5511998543816?text=$](https://wa.me/5511998543816?text=$){encodedText}`, '_blank');
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentStep > 1) {
+            currentStep--;
+            renderWizardStep();
+        }
+    });
+
+    function renderWizardStep() {
+        // Adjust progress visualization layout bar percentage 
+        const percentage = (currentStep / totalSteps) * 100;
+        progressBar.style.width = `${percentage}%`;
+
+        // Active/Deactive state switching panes architecture
+        document.querySelectorAll('.step-pane').forEach(pane => {
+            pane.classList.remove('active');
+            if(parseInt(pane.getAttribute('data-step')) === currentStep) {
+                pane.classList.add('active');
+            }
+        });
+
+        // Standard contextual validation update
+        prevBtn.disabled = currentStep === 1;
+        
+        if(currentStep === 4) {
+            renderCalendar();
+        }
+        if(currentStep === 8) {
+            syncSummaryBox();
+            nextBtn.innerText = "Confirmar Vaga e Enviar ➔";
+        } else {
+            nextBtn.innerText = "Avançar ➔";
+        }
+
+        validateStepState();
+    }
+
+    // FAQ Collapse layout helper toggles
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const parent = trigger.parentElement;
+            parent.classList.toggle('active');
+            trigger.querySelector('span').innerText = parent.classList.contains('active') ? '-' : '+';
+        });
+    });
+
+    // Initialize Engine
+    renderWizardStep();
+</script>
