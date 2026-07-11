@@ -1,1879 +1,1306 @@
-<!-- SEO Meta Tags -->
-<meta name="description" content="Agende sua consulta na Oral Prime Odontologia Especializada em Barueri/SP. Tratamentos completos, Implantes, Ortodontia e Estética com planejamento digital.">
-<meta name="keywords" content="dentista barueri, clinica odontologica, implante dentario, ortodontia, clareamento dental, oral prime">
-<link rel="canonical" href="[https://oralprimeodonto.com.br](https://oralprimeodonto.com.br)">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Oral Prime Odontologia Especializada">
-<meta property="og:description" content="Tratamentos odontológicos premium com tecnologia avançada e atendimento humanizado em Barueri.">
-<meta property="og:url" content="[https://oralprimeodonto.com.br](https://oralprimeodonto.com.br)">
-
-<!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Oral Prime Odontologia Especializada">
-<meta name="twitter:description" content="Agende sua avaliação odontológica personalizada em menos de 60 segundos.">
-
-<style>
-    :root {
-        --primary: #0A1931;
-        --secondary: #15305B;
-        --accent: #C5A880;
-        --accent-hover: #B5966D;
-        --text-dark: #1E293B;
-        --text-light: #64748B;
-        --bg-light: #F8FAFC;
-        --white: #FFFFFF;
-        --success: #10B981;
-        --error: #EF4444;
-        --radius-lg: 16px;
-        --radius-md: 12px;
-        --radius-sm: 8px;
-        --shadow-sm: 0 2px 4px rgba(10, 25, 49, 0.05);
-        --shadow-md: 0 10px 25px rgba(10, 25, 49, 0.08);
-        --shadow-lg: 0 20px 40px rgba(10, 25, 49, 0.12);
-        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        background-color: var(--bg-light);
-        color: var(--text-dark);
-        line-height: 1.6;
-        overflow-x: hidden;
-    }
-
-    /* Reusable Components */
-    .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 24px;
-    }
-
-    .section-padding {
-        padding: 100px 0;
-    }
-
-    .section-header {
-        text-align: center;
-        max-width: 700px;
-        margin: 0 auto 60px;
-    }
-
-    .section-header h2 {
-        font-size: 2.5rem;
-        color: var(--primary);
-        font-weight: 700;
-        margin-bottom: 16px;
-        letter-spacing: -0.5px;
-    }
-
-    .section-header p {
-        color: var(--text-light);
-        font-size: 1.125rem;
-    }
-
-    .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 14px 28px;
-        border-radius: var(--radius-sm);
-        font-weight: 600;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: var(--transition);
-        border: none;
-        text-decoration: none;
-        gap: 8px;
-    }
-
-    .btn-primary {
-        background-color: var(--accent);
-        color: var(--primary);
-    }
-
-    .btn-primary:hover {
-        background-color: var(--accent-hover);
-        transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-        background-color: var(--primary);
-        color: var(--white);
-    }
-
-    .btn-secondary:hover {
-        background-color: var(--secondary);
-        transform: translateY(-2px);
-    }
-
-    /* Header Módulo */
-    header {
-        background-color: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        border-bottom: 1px solid rgba(10, 25, 49, 0.08);
-        height: 80px;
-        display: flex;
-        align-items: center;
-    }
-
-    header .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        text-decoration: none;
-    }
-
-    .logo-symbol {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid var(--accent);
-    }
-
-    .logo-symbol svg {
-        width: 22px;
-        height: 22px;
-        fill: var(--accent);
-    }
-
-    .logo-text {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .logo-title {
-        font-size: 1.25rem;
-        font-weight: 800;
-        color: var(--primary);
-        line-height: 1.1;
-        letter-spacing: -0.5px;
-    }
-
-    .logo-subtitle {
-        font-size: 0.75rem;
-        color: var(--accent);
-        text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: 1px;
-    }
-
-    nav {
-        display: flex;
-        align-items: center;
-        gap: 32px;
-    }
-
-    nav a {
-        text-decoration: none;
-        color: var(--primary);
-        font-weight: 500;
-        transition: var(--transition);
-        font-size: 0.95rem;
-    }
-
-    nav a:hover {
-        color: var(--accent);
-    }
-
-    .menu-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 6px;
-        cursor: pointer;
-        border: none;
-        background: none;
-    }
-
-    .menu-toggle span {
-        width: 24px;
-        height: 2px;
-        background-color: var(--primary);
-        transition: var(--transition);
-    }
-
-    /* Hero Módulo */
-    .hero {
-        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-        color: var(--white);
-        padding: 160px 0 100px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 50%;
-        height: 100%;
-        background: radial-gradient(circle at 70% 30%, rgba(197, 168, 128, 0.15) 0%, transparent 60%);
-        pointer-events: none;
-    }
-
-    .hero-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 48px;
-        align-items: center;
-    }
-
-    .hero-content h1 {
-        font-size: 3.5rem;
-        line-height: 1.15;
-        font-weight: 800;
-        margin-bottom: 24px;
-        letter-spacing: -1px;
-    }
-
-    .hero-content h1 span {
-        color: var(--accent);
-    }
-
-    .hero-content p {
-        font-size: 1.25rem;
-        color: rgba(255, 255, 255, 0.85);
-        margin-bottom: 40px;
-        max-width: 600px;
-    }
-
-    .hero-features {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-        margin-top: 60px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 40px;
-    }
-
-    .hero-feature-item {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .hero-feature-icon {
-        width: 44px;
-        height: 44px;
-        border-radius: var(--radius-sm);
-        background: rgba(255, 255, 255, 0.05);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .hero-feature-icon svg {
-        width: 20px;
-        height: 20px;
-        fill: var(--accent);
-    }
-
-    .hero-feature-text h4 {
-        font-size: 1rem;
-        font-weight: 600;
-    }
-
-    .hero-feature-text p {
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.6);
-        margin: 0;
-    }
-
-    /* Apresentação Módulo */
-    .presentation {
-        background-color: var(--white);
-    }
-
-    .presentation-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        align-items: center;
-    }
-
-    .presentation-badge {
-        display: inline-block;
-        padding: 6px 16px;
-        background-color: rgba(197, 168, 128, 0.1);
-        color: var(--primary);
-        font-weight: 700;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border-radius: 50px;
-        margin-bottom: 20px;
-        border: 1px solid rgba(197, 168, 128, 0.2);
-    }
-
-    .presentation-content h3 {
-        font-size: 2.25rem;
-        color: var(--primary);
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 24px;
-    }
-
-    .presentation-content p {
-        color: var(--text-light);
-        font-size: 1.1rem;
-        margin-bottom: 30px;
-    }
-
-    .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-    }
-
-    .stat-card {
-        background-color: var(--bg-light);
-        padding: 24px;
-        border-radius: var(--radius-md);
-        border-bottom: 4px solid var(--accent);
-    }
-
-    .stat-number {
-        font-size: 2rem;
-        font-weight: 800;
-        color: var(--primary);
-        margin-bottom: 4px;
-    }
-
-    .stat-label {
-        font-size: 0.85rem;
-        color: var(--text-light);
-        font-weight: 500;
-    }
-
-    /* Serviços Módulo */
-    .services {
-        background-color: var(--bg-light);
-    }
-
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 24px;
-    }
-
-    .service-card {
-        background-color: var(--white);
-        padding: 32px;
-        border-radius: var(--radius-md);
-        box-shadow: var(--shadow-sm);
-        transition: var(--transition);
-        border: 1px solid rgba(10, 25, 49, 0.02);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .service-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 100%;
-        background-color: var(--accent);
-        transform: scaleY(0);
-        transition: var(--transition);
-        transform-origin: bottom;
-    }
-
-    .service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-md);
-    }
-
-    .service-card:hover::before {
-        transform: scaleY(1);
-    }
-
-    .service-icon {
-        width: 50px;
-        height: 50px;
-        border-radius: var(--radius-sm);
-        background-color: rgba(10, 25, 49, 0.03);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 24px;
-    }
-
-    .service-icon svg {
-        width: 24px;
-        height: 24px;
-        fill: var(--primary);
-    }
-
-    .service-card h3 {
-        font-size: 1.25rem;
-        color: var(--primary);
-        font-weight: 600;
-        margin-bottom: 12px;
-    }
-
-    .service-card p {
-        color: var(--text-light);
-        font-size: 0.95rem;
-    }
-
-    /* Como Funciona Módulo */
-    .how-it-works {
-        background-color: var(--white);
-    }
-
-    .steps-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 32px;
-        position: relative;
-    }
-
-    .step-item {
-        text-align: center;
-        position: relative;
-        z-index: 2;
-    }
-
-    .step-number {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        background-color: var(--primary);
-        color: var(--accent);
-        font-size: 1.5rem;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 24px;
-        box-shadow: var(--shadow-md);
-        border: 4px solid var(--white);
-    }
-
-    .step-item h3 {
-        font-size: 1.2rem;
-        color: var(--primary);
-        margin-bottom: 8px;
-        font-weight: 600;
-    }
-
-    .step-item p {
-        color: var(--text-light);
-        font-size: 0.9rem;
-    }
-
-    /* Sistema Principal (Agendamento Multi-etapas) */
-    .main-system {
-        background: linear-gradient(180deg, var(--bg-light) 0%, var(--white) 100%);
-        position: relative;
-    }
-
-    .system-container {
-        max-width: 850px;
-        margin: 0 auto;
-        background-color: var(--white);
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-lg);
-        border: 1px solid rgba(10, 25, 49, 0.05);
-        overflow: hidden;
-    }
-
-    .system-header {
-        background-color: var(--primary);
-        padding: 32px 40px;
-        color: var(--white);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .system-info h3 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        letter-spacing: -0.5px;
-    }
-
-    .system-info p {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 0.9rem;
-    }
-
-    .progress-container {
-        width: 140px;
-        text-align: right;
-    }
-
-    .progress-text {
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: var(--accent);
-        margin-bottom: 8px;
-        text-transform: uppercase;
-    }
-
-    .progress-bar-bg {
-        width: 100%;
-        height: 6px;
-        background-color: rgba(255, 255, 255, 0.15);
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    .progress-bar-fill {
-        height: 100%;
-        background-color: var(--accent);
-        width: 10%;
-        transition: var(--transition);
-    }
-
-    .system-body {
-        padding: 40px;
-        min-height: 420px;
-    }
-
-    .step-pane {
-        display: none;
-    }
-
-    .step-pane.active {
-        display: block;
-        animation: fadeIn 0.4s ease-out;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    .step-title {
-        font-size: 1.35rem;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 8px;
-    }
-
-    .step-desc {
-        color: var(--text-light);
-        font-size: 0.95rem;
-        margin-bottom: 32px;
-    }
-
-    /* Form Controls */
-    .grid-options {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 16px;
-    }
-
-    .option-card {
-        border: 2px solid #E2E8F0;
-        border-radius: var(--radius-md);
-        padding: 20px;
-        cursor: pointer;
-        transition: var(--transition);
-        position: relative;
-        background-color: var(--white);
-    }
-
-    .option-card:hover {
-        border-color: var(--accent);
-        background-color: rgba(197, 168, 128, 0.02);
-    }
-
-    .option-card.selected {
-        border-color: var(--primary);
-        background-color: rgba(10, 25, 49, 0.02);
-    }
-
-    .option-card.selected::after {
-        content: '✓';
-        position: absolute;
-        top: 12px;
-        right: 16px;
-        color: var(--primary);
-        font-weight: 700;
-        font-size: 1.1rem;
-    }
-
-    .option-title {
-        font-weight: 600;
-        color: var(--primary);
-        font-size: 1.05rem;
-        margin-bottom: 4px;
-    }
-
-    .option-sub {
-        font-size: 0.85rem;
-        color: var(--text-light);
-    }
-
-    .form-group {
-        margin-bottom: 24px;
-    }
-
-    .form-group label {
-        display: block;
-        font-weight: 600;
-        color: var(--primary);
-        margin-bottom: 8px;
-        font-size: 0.95rem;
-    }
-
-    .form-control {
-        width: 100%;
-        padding: 14px 16px;
-        border: 2px solid #E2E8F0;
-        border-radius: var(--radius-sm);
-        font-size: 1rem;
-        transition: var(--transition);
-        color: var(--text-dark);
-        background-color: var(--white);
-    }
-
-    .form-control:focus {
-        outline: none;
-        border-color: var(--primary);
-        box-shadow: 0 0 0 4px rgba(10, 25, 49, 0.05);
-    }
-
-    /* Calendar Styling */
-    .calendar-widget {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 24px;
-        border: 1px solid #E2E8F0;
-        border-radius: var(--radius-md);
-        overflow: hidden;
-        background-color: var(--white);
-    }
-
-    .calendar-days-container {
-        padding: 20px;
-        border-right: 1px solid #E2E8F0;
-    }
-
-    .calendar-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    .calendar-month {
-        font-weight: 700;
-        color: var(--primary);
-    }
-
-    .calendar-nav-btn {
-        background: none;
-        border: 1px solid #E2E8F0;
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-    }
-
-    .calendar-grid {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        gap: 8px;
-        text-align: center;
-    }
-
-    .weekday {
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: var(--text-light);
-        padding-bottom: 8px;
-    }
-
-    .day-cell {
-        padding: 10px 0;
-        font-size: 0.9rem;
-        font-weight: 500;
-        border-radius: var(--radius-sm);
-        cursor: pointer;
-        transition: var(--transition);
-    }
-
-    .day-cell:hover:not(.disabled) {
-        background-color: rgba(197, 168, 128, 0.15);
-    }
-
-    .day-cell.active {
-        background-color: var(--primary) !important;
-        color: var(--white) !important;
-        font-weight: 600;
-    }
-
-    .day-cell.disabled {
-        color: #CBD5E1;
-        cursor: not-allowed;
-    }
-
-    .time-slots-container {
-        padding: 20px;
-        background-color: var(--bg-light);
-        max-height: 340px;
-        overflow-y: auto;
-    }
-
-    .time-slots-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .time-slot {
-        padding: 12px;
-        text-align: center;
-        background-color: var(--white);
-        border: 1px solid #E2E8F0;
-        border-radius: var(--radius-sm);
-        cursor: pointer;
-        font-weight: 600;
-        font-size: 0.9rem;
-        transition: var(--transition);
-    }
-
-    .time-slot:hover {
-        border-color: var(--accent);
-        background-color: rgba(197, 168, 128, 0.05);
-    }
-
-    .time-slot.selected {
-        background-color: var(--accent);
-        color: var(--primary);
-        border-color: var(--accent);
-    }
-
-    /* Summary Panel */
-    .summary-box {
-        background-color: var(--bg-light);
-        border-radius: var(--radius-md);
-        padding: 24px;
-        margin-bottom: 32px;
-        border: 1px solid #E2E8F0;
-    }
-
-    .summary-item {
-        display: flex;
-        justify-content: space-between;
-        padding: 12px 0;
-        border-bottom: 1px solid #E2E8F0;
-    }
-
-    .summary-item:last-child {
-        border-bottom: none;
-    }
-
-    .summary-label {
-        font-weight: 600;
-        color: var(--text-light);
-    }
-
-    .summary-value {
-        font-weight: 700;
-        color: var(--primary);
-        text-align: right;
-    }
-
-    .system-footer {
-        background-color: var(--bg-light);
-        padding: 24px 40px;
-        display: flex;
-        justify-content: space-between;
-        border-top: 1px solid #E2E8F0;
-    }
-
-    /* Benefícios Módulo */
-    .benefits {
-        background-color: var(--white);
-    }
-
-    .benefits-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
-    }
-
-    .benefit-item {
-        background-color: var(--bg-light);
-        padding: 40px 32px;
-        border-radius: var(--radius-lg);
-        text-align: center;
-    }
-
-    .benefit-icon {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: var(--primary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 24px;
-    }
-
-    .benefit-icon svg {
-        width: 26px;
-        height: 26px;
-        fill: var(--accent);
-    }
-
-    .benefit-item h3 {
-        font-size: 1.35rem;
-        color: var(--primary);
-        margin-bottom: 12px;
-        font-weight: 700;
-    }
-
-    .benefit-item p {
-        color: var(--text-light);
-        font-size: 0.95rem;
-    }
-
-    /* Avaliações Módulo */
-    .reviews {
-        background-color: var(--bg-light);
-    }
-
-    .reviews-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
-    }
-
-    .review-card {
-        background-color: var(--white);
-        padding: 32px;
-        border-radius: var(--radius-md);
-        box-shadow: var(--shadow-sm);
-    }
-
-    .stars {
-        color: #FBBF24;
-        font-size: 1.25rem;
-        margin-bottom: 16px;
-    }
-
-    .review-text {
-        color: var(--text-dark);
-        font-style: italic;
-        margin-bottom: 24px;
-        font-size: 0.95rem;
-    }
-
-    .review-author {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .author-avatar {
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        background-color: var(--accent);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        color: var(--primary);
-    }
-
-    .author-info h4 {
-        font-size: 0.95rem;
-        font-weight: 600;
-        color: var(--primary);
-    }
-
-    .author-info p {
-        font-size: 0.8rem;
-        color: var(--text-light);
-    }
-
-    /* FAQ Módulo */
-    .faq {
-        background-color: var(--white);
-    }
-
-    .faq-container {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    .faq-item {
-        border-bottom: 1px solid #E2E8F0;
-        padding: 24px 0;
-    }
-
-    .faq-question {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        font-weight: 600;
-        font-size: 1.125rem;
-        color: var(--primary);
-    }
-
-    .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-        color: var(--text-light);
-        font-size: 0.95rem;
-        margin-top: 0;
-    }
-
-    .faq-item.active .faq-answer {
-        max-height: 200px;
-        margin-top: 12px;
-    }
-
-    .faq-toggle-icon {
-        transition: var(--transition);
-    }
-
-    .faq-item.active .faq-toggle-icon {
-        transform: rotate(45deg);
-    }
-
-    /* Contato Módulo & Mapa */
-    .contact {
-        background-color: var(--bg-light);
-    }
-
-    .contact-grid {
-        display: grid;
-        grid-template-columns: 0.9fr 1.1fr;
-        gap: 48px;
-    }
-
-    .contact-info-panel {
-        background-color: var(--primary);
-        color: var(--white);
-        padding: 48px;
-        border-radius: var(--radius-lg);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .contact-details h3 {
-        font-size: 1.75rem;
-        margin-bottom: 32px;
-        color: var(--accent);
-    }
-
-    .contact-detail-item {
-        display: flex;
-        gap: 16px;
-        margin-bottom: 24px;
-    }
-
-    .contact-icon {
-        width: 24px;
-        height: 24px;
-        fill: var(--accent);
-        flex-shrink: 0;
-    }
-
-    .contact-text h4 {
-        font-size: 1rem;
-        font-weight: 600;
-        margin-bottom: 4px;
-    }
-
-    .contact-text p {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 0.95rem;
-    }
-
-    .map-wrapper {
-        border-radius: var(--radius-lg);
-        overflow: hidden;
-        box-shadow: var(--shadow-md);
-        height: 100%;
-        min-height: 350px;
-        border: 1px solid #E2E8F0;
-    }
-
-    /* Rodapé Módulo */
-    footer {
-        background-color: var(--primary);
-        color: var(--white);
-        padding: 60px 0 30px;
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .footer-grid {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding-bottom: 40px;
-        margin-bottom: 30px;
-    }
-
-    .footer-copy {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.5);
-    }
-
-    /* WhatsApp Floating Button */
-    .whatsapp-float {
-        position: fixed;
-        bottom: 32px;
-        right: 32px;
-        width: 60px;
-        height: 60px;
-        background-color: #25D366;
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-        z-index: 999;
-        transition: var(--transition);
-        text-decoration: none;
-    }
-
-    .whatsapp-float:hover {
-        transform: scale(1.1);
-    }
-
-    .whatsapp-float svg {
-        width: 32px;
-        height: 32px;
-        fill: white;
-    }
-
-    /* Responsive Design Rules */
-    @media (max-width: 1024px) {
-        .hero-grid, .presentation-grid, .contact-grid {
-            grid-template-columns: 1fr;
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BelleVie Estética Avançada - Agendamento Inteligente</title>
+    <meta name="description" content="Agende seu procedimento estético na BelleVie Estética Avançada em Barueri/SP. Botox, Harmonização, Ultraformer e tratamentos personalizados com tecnologia de ponta.">
+    <meta name="keywords" content="estética barueri, botox alphaville, harmonização facial, ultraformer, bioestimulador de colágeno, clínica de estética">
+    <link rel="canonical" href="https://bellevieestetica.com.br">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BelleVie Estética Avançada - Agendamento">
+    <meta property="og:description" content="Agende sua avaliação gratuita e tratamentos estéticos premium com tecnologia aprovada pela ANVISA.">
+    <meta property="og:url" content="https://bellevieestetica.com.br">
+    <meta property="og:image" content="https://bellevieestetica.com.br/og-image.jpg">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BelleVie Estética Avançada">
+    <meta name="twitter:description" content="Agendamento rápido de procedimentos estéticos avançados em Barueri.">
+
+    <style>
+        :root {
+            --bg-color: #FAFAFA;
+            --surface-color: #FFFFFF;
+            --primary: #8E7AB5;
+            --primary-light: #B4A5D4;
+            --accent: #F4D35E;
+            --text-main: #2D2D2D;
+            --text-muted: #666666;
+            --border: #EAEAEA;
+            --success: #2ECC71;
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --shadow: 0 10px 30px rgba(142, 122, 181, 0.05);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .benefits-grid, .reviews-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .steps-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .hero-content h1 {
-            font-size: 2.75rem;
-        }
-    }
 
-    @media (max-width: 768px) {
-        nav {
-            display: none;
-            position: absolute;
-            top: 80px;
-            left: 0;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Cores exclusivas da marca BelleVie: Nude, Dourado Rosé e Lilás Sofisticado */
+        header {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            position: fixed;
+            top: 0;
             width: 100%;
-            background-color: var(--white);
-            flex-direction: column;
-            padding: 24px;
-            box-shadow: var(--shadow-md);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        .logo-symbol {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #B4A5D4, #F4D35E);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFF;
+            font-size: 0.9rem;
+            font-weight: 800;
+            box-shadow: 0 4px 10px rgba(142, 122, 181, 0.2);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-left: 24px;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .cta-header {
+            background-color: var(--primary);
+            color: #FFF;
+            padding: 10px 20px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+        }
+
+        .cta-header:hover {
+            background-color: #7A679E;
+            color: #FFF;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 140px 24px 60px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #1A1A1A;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(120deg, var(--primary), #B4A5D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        /* Main Container */
+        .main-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @media (min-width: 992px) {
+            .main-wrapper {
+                grid-template-columns: 7fr 5fr;
+                align-items: start;
+            }
+        }
+
+        /* Módulo Sistema Principal: Agendador */
+        .booking-card {
+            background-color: var(--surface-color);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            padding: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 6px;
+            background-color: var(--border);
+            border-radius: 3px;
+            margin-bottom: 32px;
+            position: relative;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            width: 12.5%;
+            border-radius: 3px;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+
+        .step-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        /* Opções Selecionáveis */
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            max-height: 340px;
+            overflow-y: auto;
+            padding-right: 6px;
+        }
+
+        .options-grid::-webkit-scrollbar {
+            width: 6px;
+        }
+        .options-grid::-webkit-scrollbar-thumb {
+            background-color: var(--border);
+            border-radius: 3px;
+        }
+
+        .option-card {
+            border: 2px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .option-card:hover {
+            border-color: var(--primary-light);
+            background-color: rgba(142, 122, 181, 0.02);
+        }
+
+        .option-card.selected {
+            border-color: var(--primary);
+            background-color: rgba(142, 122, 181, 0.05);
+        }
+
+        .option-name {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .option-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .badge-premium {
+            background-color: rgba(244, 211, 94, 0.2);
+            color: #B39210;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Inputs de Texto */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: var(--bg-color);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            background-color: #FFF;
+        }
+
+        /* Calendário e Horários */
+        .calendar-wrapper {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .calendar-header-day {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            padding-bottom: 8px;
+        }
+
+        .calendar-day {
+            padding: 12px 0;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .calendar-day.empty {
+            cursor: default;
+            opacity: 0.2;
+        }
+
+        .calendar-day.disabled {
+            color: #DDD;
+            cursor: not-allowed;
+            text-decoration: line-through;
+        }
+
+        .calendar-day.available {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+        }
+
+        .calendar-day.available:hover {
+            border-color: var(--primary-light);
+            background-color: rgba(142, 122, 181, 0.05);
+        }
+
+        .calendar-day.selected {
+            background-color: var(--primary) !important;
+            color: #FFF !important;
+        }
+
+        .time-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 8px;
+            max-height: 180px;
+            overflow-y: auto;
+        }
+
+        .time-slot {
+            padding: 10px;
+            text-align: center;
+            background-color: var(--bg-color);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .time-slot:hover {
+            background-color: rgba(142, 122, 181, 0.1);
+        }
+
+        .time-slot.selected {
+            background-color: var(--primary);
+            color: #FFF;
+        }
+
+        /* Botões de Ação */
+        .step-actions {
+            margin-top: 32px;
+            display: flex;
+            justify-content: space-between;
             gap: 16px;
-            border-bottom: 1px solid #E2E8F0;
         }
-        nav.open {
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #FFF;
+            flex-grow: 1;
+        }
+
+        .btn-primary:hover {
+            background-color: #7A679E;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--border);
+            color: var(--text-muted);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-muted);
+            color: var(--text-main);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Lateral / Apresentação e Info */
+        .info-sidebar {
             display: flex;
+            flex-direction: column;
+            gap: 24px;
         }
-        .menu-toggle {
-            display: flex;
-        }
-        .calendar-widget {
-            grid-template-columns: 1fr;
-        }
-        .calendar-days-container {
-            border-right: none;
-            border-bottom: 1px solid #E2E8F0;
-        }
-        .benefits-grid, .reviews-grid, .steps-grid {
-            grid-template-columns: 1fr;
-        }
-        .system-body {
+
+        .side-card {
+            background-color: var(--surface-color);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
             padding: 24px;
         }
-        .system-header {
-            padding: 20px 24px;
+
+        .side-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-main);
         }
-    }
-</style>
-<!-- Header Módulo -->
-<header>
-    <div class="container">
-        <a href="#" class="logo">
-            <div class="logo-symbol">
-                <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4M12,18C8.67,18 5.75,16.2 4.26,13.5C4.76,12.04 6.13,11 7.75,11C8.57,11 9.31,11.3 9.89,11.81C10.47,12.33 11.2,12.65 12,12.65C12.8,12.65 13.53,12.33 14.11,11.81C14.69,11.3 15.43,11 16.25,11C17.87,11 19.24,12.04 19.74,13.5C18.25,16.2 15.33,18 12,18Z"/></svg>
-            </div>
-            <div class="logo-text">
-                <span class="logo-title">Oral Prime</span>
-                <span class="logo-subtitle">Odontologia</span>
-            </div>
-        </a>
-        <nav id="nav-menu">
-            <a href="#apresentacao">Sobre</a>
-            <a href="#servicos">Especialidades</a>
-            <a href="#agendamento">Agendar Consulta</a>
-            <a href="#beneficios">Diferenciais</a>
-            <a href="#faq">Dúvidas</a>
-            <a href="#agendamento" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.9rem;">Agendar Já</a>
-        </nav>
-        <button class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-</header>
 
-<!-- Hero Módulo -->
-<section class="hero">
-    <div class="container">
-        <div class="hero-grid">
-            <div class="hero-content">
-                <h1>Sorria com a Confiança de quem tem a melhor <span>Tecnologia Digital</span>.</h1>
-                <p>Agende sua avaliação odontológica personalizada na Oral Prime de forma 100% digital e segura em menos de 60 segundos.</p>
-                <a href="#agendamento" class="btn btn-primary">Iniciar Agendamento Inteligente</a>
-                <div class="hero-features">
-                    <div class="hero-feature-item">
-                        <div class="hero-feature-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4M12,18C8.67,18 5.75,16.2 4.26,13.5C4.76,12.04 6.13,11 7.75,11C8.57,11 9.31,11.3 9.89,11.81C10.47,12.33 11.2,12.65 12,12.65C12.8,12.65 13.53,12.33 14.11,11.81C14.69,11.3 15.43,11 16.25,11C17.87,11 19.24,12.04 19.74,13.5C18.25,16.2 15.33,18 12,18Z"/></svg>
-                        </div>
-                        <div class="hero-feature-text">
-                            <h4>10 Especialistas</h4>
-                            <p>Corpo clínico completo</p>
-                        </div>
-                    </div>
-                    <div class="hero-feature-item">
-                        <div class="hero-feature-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12,2C6.5,2 2,6.5 2,12C2,17.5 6.5,22 12,22C17.5,22 22,17.5 22,12C22,6.5 17.5,2 12,2M12,4C16.4,4 20,7.6 20,12C20,16.4 16.4,20 12,20C7.6,20 4,16.4 4,12C4,7.6 7.6,4 12,4M11,6V13L16.5,16.2L17.2,15L12.5,12.2V6H11Z"/></svg>
-                        </div>
-                        <div class="hero-feature-text">
-                            <h4>Rápido e Fluído</h4>
-                            <p>Marque em 1 minuto</p>
-                        </div>
-                    </div>
-                    <div class="hero-feature-item">
-                        <div class="hero-feature-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,6H13V10H17V12H13V16H11V12H7V10H11V6Z"/></svg>
-                        </div>
-                        <div class="hero-feature-text">
-                            <h4>Convênios</h4>
-                            <p>&amp; Particular facilitado</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image" style="display: flex; justify-content: center;">
-                <!-- Premium visual representation without using high-res slow heavy images -->
-                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 40px; border-radius: var(--radius-lg); width: 100%; max-width: 400px; backdrop-filter: blur(20px); box-shadow: var(--shadow-lg);">
-                    <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; margin-bottom: 20px;">
-                        <span style="color: var(--accent); font-size: 0.8rem; font-weight:700; text-transform:uppercase; letter-spacing: 1px;">Disponibilidade de Hoje</span>
-                        <h3 style="font-size: 1.5rem; margin-top: 5px;">Vagas para Avaliação</h3>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <div style="display: flex; justify-content: space-between; background: rgba(255,255,255,0.05); padding: 12px; border-radius: var(--radius-sm);">
-                            <span>Período da Manhã</span>
-                            <span style="color: var(--accent); font-weight: 600;">2 horários</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; background: rgba(255,255,255,0.05); padding: 12px; border-radius: var(--radius-sm);">
-                            <span>Período da Tarde</span>
-                            <span style="color: #10B981; font-weight: 600;">Disponível</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        .feature-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
 
-<!-- Apresentação Módulo -->
-<section id="apresentacao" class="presentation section-padding">
-    <div class="container">
-        <div class="presentation-grid">
-            <div class="presentation-content">
-                <span class="presentation-badge">A Clínica</span>
-                <h3>Excelência, Conforto e Alta Performance em Saúde Bucal.</h3>
-                <p>A Oral Prime Odontologia Especializada oferece tratamentos completos com foco em saúde, estética e bem-estar. Contamos com uma equipe multidisciplinar experiente, equipamentos de última geração e atendimento humanizado para proporcionar segurança absoluta e resultados duradouros.</p>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number">10</div>
-                        <div class="stat-label">Dentistas Especialistas</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Digital Planejado</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">SaaS</div>
-                        <div class="stat-label">Agendamento Ágil</div>
-                    </div>
-                </div>
-            </div>
-            <div class="presentation-graphics" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                <div style="background-color: var(--bg-light); padding: 32px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: center;">
-                    <span style="font-size: 2.5rem; margin-bottom: 10px;">🦷</span>
-                    <h4 style="color: var(--primary); font-weight:700; margin-bottom: 8px;">Implantes Digitais</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-light);">Reabilitação oral completa mapeada por software de alta precisão.</p>
-                </div>
-                <div style="background-color: var(--primary); color: white; padding: 32px; border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: center;">
-                    <span style="font-size: 2.5rem; margin-bottom: 10px; color: var(--accent);">✨</span>
-                    <h4 style="font-weight:700; margin-bottom: 8px;">Estética Premium</h4>
-                    <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">Lentes de contato e clareamento a laser de alta performance.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        .feature-item:last-child {
+            margin-bottom: 0;
+        }
 
-<!-- Serviços Módulo -->
-<section id="servicos" class="services section-padding">
-    <div class="container">
-        <div class="section-header">
-            <h2>Nossas Especialidades</h2>
-            <p>Soluções completas para cuidar do seu sorriso com máxima segurança.</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div>
-                <h3>Implantes Dentários</h3>
-                <p>Unitários, múltiplos e protocolo sobre implantes com planejamento digital avançado.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div>
-                <h3>Ortodontia</h3>
-                <p>Alinhadores transparentes modernos, aparelhos estéticos e metálicos convencionais.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div>
-                <h3>Clareamento Dental</h3>
-                <p>Sessões estruturadas a laser em consultório ou kits supervisionados de moldeiras.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div>
-                <h3>Estética Dental</h3>
-                <p>Facetas de porcelana e lentes de contato dentais para a harmonização do sorriso.</p>
-            </div>
-        </div>
-    </div>
-</section>
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: rgba(142, 122, 181, 0.1);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
 
-<!-- Como Funciona Módulo -->
-<section class="how-it-works section-padding">
-    <div class="container">
-        <div class="section-header">
-            <h2>Como Funciona?</h2>
-            <p>Nossa inteligência comercial agiliza seu atendimento em 4 passos simples.</p>
-        </div>
-        <div class="steps-grid">
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <h3>Selecione</h3>
-                <p>Escolha o tratamento e o dentista especialista de sua preferência.</p>
-            </div>
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <h3>Defina</h3>
-                <p>Escolha o melhor dia e horário em tempo real no nosso calendário.</p>
-            </div>
-            <div class="step-item">
-                <div class="step-number">3</div>
-                <h3>Identifique</h3>
-                <p>Insira seus dados básicos e o método de atendimento (particular/convênio).</p>
-            </div>
-            <div class="step-item">
-                <div class="step-number">4</div>
-                <h3>Confirme</h3>
-                <p>Pronto! Receba sua confirmação imediata e integração com o WhatsApp.</p>
-            </div>
-        </div>
-    </div>
-</section>
+        .feature-text h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
 
-<!-- Sistema Principal Módulo -->
-<section id="agendamento" class="main-system section-padding">
-    <div class="container">
-        <div class="system-container">
-            <!-- Header do Fluxo -->
-            <div class="system-header">
-                <div class="system-info">
-                    <h3>Agendamento Oral Prime</h3>
-                    <p>Preencha os campos para reservar sua vaga</p>
-                </div>
-                <div class="progress-container">
-                    <div class="progress-text" id="progress-text">Etapa 1 de 4</div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+        .feature-text p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Resumo da Solicitação Lateral Dinâmico */
+        .live-summary {
+            background: linear-gradient(135deg, rgba(142, 122, 181, 0.03), rgba(244, 211, 94, 0.03));
+            border: 1px dashed var(--primary);
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .summary-row:last-child {
+            border-bottom: none;
+        }
+
+        .summary-label {
+            color: var(--text-muted);
+        }
+
+        .summary-value {
+            font-weight: 600;
+            color: var(--text-main);
+            text-align: right;
+        }
+
+        /* Como Funciona */
+        .section-title {
+            text-align: center;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 60px 0 32px;
+        }
+
+        .steps-horizontal {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 0 24px;
+        }
+
+        .step-horizontal-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background-color: var(--primary);
+            color: #FFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 16px;
+        }
+
+        /* Avaliações */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 0 24px;
+        }
+
+        .review-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow);
+        }
+
+        .review-stars {
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .review-author {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .review-verified {
+            color: var(--success);
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 0 24px;
+        }
+
+        .faq-item {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-trigger {
+            padding: 18px 24px;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-content {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-content {
+            padding: 0 24px 18px;
+            max-height: 200px;
+        }
+
+        /* Footer & Contato */
+        footer {
+            background-color: #1A1A1A;
+            color: #FFFFFF;
+            padding: 60px 24px 30px;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #FFF;
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #B3B3B3;
+            text-decoration: none;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary-light);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 20px auto 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: #25D366;
+            color: white;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 999;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+        }
+
+        /* Utilitários */
+        .text-center { text-align: center; }
+        .mt-4 { margin-top: 16px; }
+
+        /* Estilização Responsiva Avançada Touch */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .booking-card { padding: 20px; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-symbol">B</div>
+                BelleVie
+            </div>
+            <nav>
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#beneficios">Diferenciais</a>
+                <a href="#avaliacoes">Depoimentos</a>
+                <a href="#sistema" class="cta-header">Agendar Agora</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Sua beleza cuidada por <span>Especialistas Avançados</span></h1>
+        <p>Agende em menos de 60 segundos seu procedimento ou sua avaliação facial/corporal personalizada na melhor clínica de Barueri.</p>
+    </section>
+
+    <!-- Main Section/Workflow -->
+    <main class="main-wrapper" id="sistema">
+        
+        <!-- Módulo Sistema Principal -->
+        <section class="booking-card">
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progressBar"></div>
+            </div>
+
+            <form id="flowForm" onsubmit="event.preventDefault();">
+                
+                <!-- Etapa 1: Procedimento -->
+                <div class="step active" data-step="1">
+                    <div class="step-title">Escolha o Procedimento</div>
+                    <div class="step-desc">Selecione o tratamento desejado para continuar.</div>
+                    <div class="options-grid">
+                        <div class="option-card" onclick="selectOption('procedure', 'Botox Premium', '40 min', true)">
+                            <div>
+                                <div class="option-name">Botox Premium <span class="badge-premium">Mais Procurado</span></div>
+                                <div class="option-meta">Planejamento facial individualizado • 40 min</div>
+                            </div>
+                            <span>➔</span>
+                        </div>
+                        <div class="option-card" onclick="selectOption('procedure', 'Harmonização Facial', '1h 30min')">
+                            <div>
+                                <div class="option-name">Harmonização Facial</div>
+                                <div class="option-meta">Alinhamento e preenchimento estratégico • 1h 30min</div>
+                            </div>
+                            <span>➔</span>
+                        </div>
+                        <div class="option-card" onclick="selectOption('procedure', 'Ultraformer', '1h')">
+                            <div>
+                                <div class="option-name">Ultraformer / Ultrassom Microfocado</div>
+                                <div class="option-meta">Lifting facial e contorno corporal firme • 1h</div>
+                            </div>
+                            <span>➔</span>
+                        </div>
+                        <div class="option-card" onclick="selectOption('procedure', 'Bioestimuladores de Colágeno', '1h')">
+                            <div>
+                                <div class="option-name">Bioestimuladores de Colágeno</div>
+                                <div class="option-meta">Tratamento profundo de flacidez e sustentação • 1h</div>
+                            </div>
+                            <span>➔</span>
+                        </div>
+                        <div class="option-card" onclick="selectOption('procedure', 'Limpeza de Pele Premium', '1h')">
+                            <div>
+                                <div class="option-name">Limpeza de Pele Premium</div>
+                                <div class="option-meta">Extração profunda e hidratação celular • 1h</div>
+                            </div>
+                            <span>➔</span>
+                        </div>
+                        <div class="option-card" onclick="selectOption('procedure', 'Depilação a Laser', '45 min')">
+                            <div>
+                                <div class="option-name">Depilação a Laser</div>
+                                <div class="option-meta">Tecnologia avançada e indolor de última geração • 45 min</div>
+                            </div>
+                            <span>➔</span>
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <div></div>
+                        <button type="button" class="btn btn-primary" onclick="nextStep()" id="nextBtn1" disabled>Avançar</button>
                     </div>
                 </div>
-            </div>
 
-            <!-- Formulário / Corpo do Fluxo -->
-            <form id="appointment-form" onsubmit="handleFormSubmit(event)">
-                <div class="system-body">
+                <!-- Etapa 2: Especialista -->
+                <div class="step" data-step="2">
+                    <div class="step-title">Escolha o Especialista</div>
+                    <div class="step-desc">Selecione o profissional de sua preferência.</div>
+                    <div class="options-grid">
+                        <div class="option-card" onclick="selectOption('expert', 'Qualquer Profissional Disponível', 'Recomendado para agendamento rápido')">
+                            <div>
+                                <div class="option-name">Qualquer Profissional Disponível</div>
+                                <div class="option-meta">Menor tempo de espera para sua consulta</div>
+                            </div>
+                            <span>➔</span>
+                        </div>
+                        <div class="option-card" onclick="selectOption('expert', 'Dra. Amanda Rodrigues', 'Biomédica Esteta')">
+                            <div>
+                                <div class="option-name">Dra. Amanda Rodrigues</div>
+                                <div class="option-meta">Especialista em Harmonização e Injetáveis</div>
+                            </div>
+                            <span>➔</span>
+                        </div>
+                        <div class="option-card" onclick="selectOption('expert', 'Dra. Carolina Mello', 'Fisioterapeuta Dermatofuncional')">
+                            <div>
+                                <div class="option-name">Dra. Carolina Mello</div>
+                                <div class="option-meta">Especialista em Alta Tecnologia e Corporal</div>
+                            </div>
+                            <span>➔</span>
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep()" id="nextBtn2" disabled>Avançar</button>
+                    </div>
+                </div>
+
+                <!-- Etapa 3: Avaliação Inicial -->
+                <div class="step" data-step="3">
+                    <div class="step-title">É sua primeira vez na BelleVie?</div>
+                    <div class="step-desc">Toda primeira avaliação inclui diagnóstico facial/corporal completo sem custo.</div>
+                    <div class="options-grid">
+                        <div class="option-card" onclick="selectOption('initial_evaluation', 'Sim, quero a Avaliação Gratuita inclusa', 'Inclui plano de tratamento personalizado')">
+                            <div>
+                                <div class="option-name">Sim, quero a Avaliação Gratuita inclusa</div>
+                                <div class="option-meta">+40 minutos inclusos de diagnóstico avançado</div>
+                            </div>
+                            <span>➔</span>
+                        </div>
+                        <div class="option-card" onclick="selectOption('initial_evaluation', 'Não, já sou cliente / quero direto o procedimento', 'Apenas realizar o procedimento escolhido')">
+                            <div>
+                                <div class="option-name">Não, já sou cliente / quero direto o procedimento</div>
+                                <div class="option-meta">Seguir direto com o cronograma regular</div>
+                            </div>
+                            <span>➔</span>
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep()" id="nextBtn3" disabled>Avançar</button>
+                    </div>
+                </div>
+
+                <!-- Etapa 4: Data -->
+                <div class="step" data-step="4">
+                    <div class="step-title">Selecione o Dia</div>
+                    <div class="step-desc">Escolha uma data disponível para seu atendimento.</div>
                     
-                    <!-- Etapa 1: Especialidade e Dentista -->
-                    <div class="step-pane active" id="step-1">
-                        <h4 class="step-title">Tratamento e Profissional</h4>
-                        <p class="step-desc">Selecione o serviço que deseja realizar e o cirurgião-dentista.</p>
-                        
-                        <div class="form-group">
-                            <label for="specialty">Qual especialidade você procura?</label>
-                            <select id="specialty" class="form-control" onchange="updateSummary()">
-                                <option value="Clínico Geral">Clínica Geral / Limpeza e Profilaxia</option>
-                                <option value="Implantes Dentários" selected>Implantes Dentários com Planejamento Digital</option>
-                                <option value="Ortodontia">Ortodontia (Aparelhos e Alinhadores)</option>
-                                <option value="Clareamento Dental">Clareamento Dental Estético</option>
-                                <option value="Facetas e Lentes">Lentes de Contato e Facetas em Porcelana</option>
-                                <option value="Endodontia">Endodontia (Tratamento de Canal)</option>
-                                <option value="Odontopediatria">Odontopediatria (Atendimento Infantil)</option>
-                                <option value="Emergência">Urgência e Emergência Odontológica</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="dentist">Deseja escolher um Dentista específico?</label>
-                            <select id="dentist" class="form-control" onchange="updateSummary()">
-                                <option value="Qualquer Profissional">Indicação da clínica (Conforme Especialidade)</option>
-                                <option value="Dr. Roberto Silva">Dr. Roberto Silva - Implantes e Reabilitação</option>
-                                <option value="Dra. Aline Mendes">Dra. Aline Mendes - Ortodontia Estética</option>
-                                <option value="Dr. Carlos Eduardo">Dr. Carlos Eduardo - Endodontia Avançada</option>
-                                <option value="Dra. Juliana Prado">Dra. Juliana Prado - Odontopediatria</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label>É a sua primeira consulta na clínica?</label>
-                            <div style="display:flex; gap: 16px; margin-top: 8px;">
-                                <label style="display:flex; align-items:center; gap:8px; font-weight:500; cursor:pointer;">
-                                    <input type="radio" name="first_visit" value="Sim" checked onchange="updateSummary()"> Sim, é minha primeira avaliação
-                                </label>
-                                <label style="display:flex; align-items:center; gap:8px; font-weight:500; cursor:pointer;">
-                                    <input type="radio" name="first_visit" value="Não" onchange="updateSummary()"> Não, já sou paciente da clínica
-                                </label>
-                            </div>
-                        </div>
+                    <div class="calendar-wrapper" id="calendarGrid">
+                        <!-- Gerado Dinamicamente -->
                     </div>
 
-                    <!-- Etapa 2: Data e Horário -->
-                    <div class="step-pane" id="step-2">
-                        <h4 class="step-title">Data e Horário do Atendimento</h4>
-                        <p class="step-desc">Selecione o melhor dia no calendário e escolha uma vaga disponível.</p>
-                        
-                        <div class="calendar-widget">
-                            <div class="calendar-days-container">
-                                <div class="calendar-header">
-                                    <span class="calendar-month">Julho de 2026</span>
-                                    <div style="display:flex; gap: 8px;">
-                                        <button type="button" class="calendar-nav-btn">&lt;</button>
-                                        <button type="button" class="calendar-nav-btn">&gt;</button>
-                                    </div>
-                                </div>
-                                <div class="calendar-grid" id="calendar-grid">
-                                    <!-- Rendered dynamically by JavaScript -->
-                                </div>
-                            </div>
-                            <div class="time-slots-container">
-                                <div style="font-weight:700; font-size:0.85rem; color:var(--primary); margin-bottom:12px; text-transform:uppercase;">Horários Livres</div>
-                                <div class="time-slots-grid" id="time-slots-grid">
-                                    <!-- Rendered dynamically by JavaScript -->
-                                </div>
-                            </div>
-                        </div>
+                    <div class="step-actions">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep()" id="nextBtn4" disabled>Avançar</button>
                     </div>
-
-                    <!-- Etapa 3: Dados de Identificação e Convênio -->
-                    <div class="step-pane" id="step-3">
-                        <h4 class="step-title">Informações Pessoais</h4>
-                        <p class="step-desc">Preencha os dados de contato para envio dos lembretes e confirmação.</p>
-                        
-                        <div class="form-group">
-                            <label for="client-name">Nome Completo</label>
-                            <input type="text" id="client-name" class="form-control" placeholder="Digite seu nome completo" required oninput="updateSummary()">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="client-whatsapp">WhatsApp</label>
-                            <input type="tel" id="client-whatsapp" class="form-control" placeholder="(11) 99999-9999" required oninput="maskPhone(this); updateSummary();">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="client-email">E-mail para confirmação</label>
-                            <input type="email" id="client-email" class="form-control" placeholder="seu-email@provedor.com" required oninput="updateSummary()">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="coverage">Modalidade de Atendimento</label>
-                            <select id="coverage" class="form-control" onchange="updateSummary()">
-                                <option value="Particular">Particular (Condições especiais em até 24x)</option>
-                                <option value="Amil Dental">Convênio — Amil Dental</option>
-                                <option value="SulAmérica Odonto">Convênio — SulAmérica Odonto</option>
-                                <option value="Bradesco Dental">Convênio — Bradesco Dental</option>
-                                <option value="Porto Seguro Odonto">Convênio — Porto Seguro Odonto</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Etapa 4: Resumo Final -->
-                    <div class="step-pane" id="step-4">
-                        <h4 class="step-title">Confirme seus Dados</h4>
-                        <p class="step-desc">Revise o resumo da sua solicitação antes do envio para a central de atendimento.</p>
-                        
-                        <div class="summary-box">
-                            <div class="summary-item">
-                                <span class="summary-label">Especialidade:</span>
-                                <span class="summary-value" id="sum-specialty">-</span>
-                            </div>
-                            <div class="summary-item">
-                                <span class="summary-label">Dentista:</span>
-                                <span class="summary-value" id="sum-dentist">-</span>
-                            </div>
-                            <div class="summary-item">
-                                <span class="summary-label">Data e Horário:</span>
-                                <span class="summary-value" id="sum-datetime" style="color: var(--accent); font-weight:700;">-</span>
-                            </div>
-                            <div class="summary-item">
-                                <span class="summary-label">Paciente:</span>
-                                <span class="summary-value" id="sum-name">-</span>
-                            </div>
-                            <div class="summary-item">
-                                <span class="summary-label">Modalidade:</span>
-                                <span class="summary-value" id="sum-coverage">-</span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="observations">Alguma observação relevante ou sintoma? (Opcional)</label>
-                            <textarea id="observations" class="form-control" rows="3" placeholder="Ex: Dor na região posterior, agendamento urgente, etc."></textarea>
-                        </div>
-                    </div>
-
                 </div>
 
-                <!-- Rodapé do Fluxo/Ações de Navegação -->
-                <div class="system-footer">
-                    <button type="button" class="btn" id="btn-prev" onclick="changeStep(-1)" style="background-color: #E2E8F0; color: var(--primary); display:none;">Voltar</button>
-                    <span id="spacer" style="flex-grow:1;"></span>
-                    <button type="button" class="btn btn-secondary" id="btn-next" onclick="changeStep(1)">Avançar</button>
-                    <button type="submit" class="btn btn-primary" id="btn-submit" style="display:none;">Confirmar e Integrar</button>
+                <!-- Etapa 5: Horário -->
+                <div class="step" data-step="5">
+                    <div class="step-title">Selecione o Horário</div>
+                    <div class="step-desc">Horários calculados com base na disponibilidade em tempo real.</div>
+                    
+                    <div class="time-grid" id="timeGrid">
+                        <!-- Gerado Dinamicamente -->
+                    </div>
+
+                    <div class="step-actions">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep()" id="nextBtn5" disabled>Avançar</button>
+                    </div>
                 </div>
+
+                <!-- Etapa 6: Dados Pessoais -->
+                <div class="step" data-step="6">
+                    <div class="step-title">Seus Dados de Contato</div>
+                    <div class="step-desc">Precisamos dessas informações para confirmar e enviar os lembretes automáticos.</div>
+                    
+                    <div class="form-group">
+                        <label for="clientName">Nome Completo</label>
+                        <input type="text" id="clientName" class="form-control" placeholder="Ex: Maria Silva" required oninput="validateContactForm()">
+                    </div>
+                    <div class="form-group">
+                        <label for="clientPhone">WhatsApp</label>
+                        <input type="tel" id="clientPhone" class="form-control" placeholder="(11) 99999-9999" required oninput="maskPhone(this); validateContactForm();">
+                    </div>
+                    <div class="form-group">
+                        <label for="clientEmail">E-mail</label>
+                        <input type="email" id="clientEmail" class="form-control" placeholder="nome@exemplo.com" required oninput="validateContactForm()">
+                    </div>
+
+                    <div class="step-actions">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep()" id="nextBtn6" disabled>Avançar</button>
+                    </div>
+                </div>
+
+                <!-- Etapa 7: Observações -->
+                <div class="step" data-step="7">
+                    <div class="step-title">Alguma observação ou sintoma? (Opcional)</div>
+                    <div class="step-desc">Se houver restrições, alergias ou objetivos específicos, informe-nos.</div>
+                    
+                    <div class="form-group">
+                        <label for="clientObs">Observações Clínicas</label>
+                        <textarea id="clientObs" class="form-control" rows="4" placeholder="Ex: Possuo melasma na bochecha esquerda, alergia a algum componente ou prefiro agendamento discreto..."></textarea>
+                    </div>
+
+                    <div class="step-actions">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep()">Ver Resumo</button>
+                    </div>
+                </div>
+
+                <!-- Etapa 8: Resumo Final & Confirmação -->
+                <div class="step" data-step="8">
+                    <div class="step-title">Confirme seus Dados Premium</div>
+                    <div class="step-desc">Por favor, revise atentamente antes de processar a reserva.</div>
+                    
+                    <div id="finalSummaryContainer" style="background: var(--bg-color); padding: 16px; border-radius: var(--radius-md); margin-bottom: 24px;">
+                        <!-- Inserido dinamicamente -->
+                    </div>
+
+                    <button type="button" class="btn btn-primary" style="width: 100%; background-color: var(--success);" onclick="finishBooking()">
+                        Confirmar e Sincronizar com WhatsApp ➔
+                    </button>
+                    <button type="button" class="btn btn-secondary mt-4" style="width: 100%;" onclick="prevStep()">Corrigir Informações</button>
+                </div>
+
             </form>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Benefícios Módulo -->
-<section id="beneficios" class="benefits section-padding">
-    <div class="container">
-        <div class="section-header">
-            <h2>Por que Escolher a Oral Prime?</h2>
-            <p>Estrutura completa focada no seu bem-estar do início ao fim.</p>
-        </div>
-        <div class="benefits-grid">
-            <div class="benefit-item">
-                <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-                <h3>Radiografia Digital</h3>
-                <p>Exames rápidos e precisos feitos diretamente na nossa clínica durante a consulta.</p>
+        <!-- Sidebar Informativa Dinâmica -->
+        <aside class="info-sidebar">
+            <div class="side-card live-summary">
+                <h3>Resumo da Solicitação</h3>
+                <div id="summaryContent">
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Nenhum item selecionado.</p>
+                </div>
             </div>
-            <div class="benefit-item">
-                <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-                <h3>Facilidade no Pagamento</h3>
-                <p>Parcelamento facilitado em até 24x e amplo suporte para convênios.</p>
-            </div>
-            <div class="benefit-item">
-                <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-                <h3>Biossegurança Estrita</h3>
-                <p>Processos rigorosos de esterilização automatizada para sua total proteção.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Avaliações Módulo -->
-<section class="reviews section-padding">
-    <div class="container">
-        <div class="section-header">
-            <h2>O que dizem nossos pacientes</h2>
-            <p>A satisfação de quem transformou o sorriso com o nosso time.</p>
+            <div class="side-card">
+                <h3>Garantia BelleVie</h3>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h4>Aprovado pela ANVISA</h4>
+                        <p>Apenas equipamentos e insumos certificados de alta qualidade.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h4>Equipe Altamente Especializada</h4>
+                        <p>9 profissionais prontos para cuidar do seu plano de beleza único.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h4>Pagamento Facilitado</h4>
+                        <p>Parcelamento em até 12x fixas ou financiamento de pacotes.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Como Funciona -->
+    <section id="como-funciona">
+        <h2 class="section-title">Experiência Simples e Ágil</h2>
+        <div class="steps-horizontal">
+            <div class="step-horizontal-card">
+                <div class="step-number">1</div>
+                <h4>Escolha Rápida</h4>
+                <p>Selecione seu tratamento ideal e especialista em segundos de forma interativa.</p>
+            </div>
+            <div class="step-horizontal-card">
+                <div class="step-number">2</div>
+                <h4>Confirmação Direta</h4>
+                <p>Nossos sistemas enviam tudo imediatamente para o WhatsApp e geram o alerta de agendamento.</p>
+            </div>
+            <div class="step-horizontal-card">
+                <div class="step-number">3</div>
+                <h4>Atendimento Premium</h4>
+                <p>Aguardamos você na Alameda Araguaia com uma infraestrutura exclusiva e aconchegante.</p>
+            </div>
         </div>
+    </section>
+
+    <!-- Avaliações -->
+    <section id="avaliacoes" style="background-color: rgba(142, 122, 181, 0.03); padding: 40px 0;">
+        <h2 class="section-title">O que dizem nossas clientes</h2>
         <div class="reviews-grid">
             <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <p class="review-text">"Excelente atendimento! O agendamento online é extremamente rápido e prático. Fiz meu implante com planejamento digital e o resultado foi perfeito."</p>
-                <div class="review-author">
-                    <div class="author-avatar">MA</div>
-                    <div class="author-info">
-                        <h4>Marcos Andrade</h4>
-                        <p>Paciente de Barueri/SP</p>
-                    </div>
-                </div>
+                <div class="review-stars">★★★★★</div>
+                <p>"O sistema de agendamento é perfeito e muito rápido! Fiz a aplicação de Botox com a Dra. Amanda e o resultado superou todas as expectativas."</p>
+                <div class="review-author">Juliana M. <span class="review-verified">✓ Cliente Verificada</span></div>
             </div>
             <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <p class="review-text">"Equipe nota 10. Levei minha filha para o atendimento com a odontopediatra e ela adorou. Ambiente calmo, limpo e muito acolhedor."</p>
-                <div class="review-author">
-                    <div class="author-avatar">FC</div>
-                    <div class="author-info">
-                        <h4>Fernanda Costa</h4>
-                        <p>Paciente de Alphaville</p>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <p class="review-text">"Uso os alinhadores transparentes indicados pela Dra. Aline e estou amando a evolução. A estrutura tecnológica da clínica é sensacional."</p>
-                <div class="review-author">
-                    <div class="author-avatar">RL</div>
-                    <div class="author-info">
-                        <h4>Ricardo Lima</h4>
-                        <p>Paciente Particular</p>
-                    </div>
-                </div>
+                <div class="review-stars">★★★★★</div>
+                <p>"Adorei a avaliação gratuita que fizeram no meu rosto antes do Ultraformer. Demonstra um profissionalismo e respeito gigantesco."</p>
+                <div class="review-author">Fernanda R. <span class="review-verified">✓ Cliente Verificada</span></div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- FAQ Módulo -->
-<section id="faq" class="faq section-padding">
-    <div class="container">
-        <div class="section-header">
-            <h2>Perguntas Frequentes</h2>
-            <p>Esclareça suas principais dúvidas sobre o atendimento na Oral Prime.</p>
-        </div>
-        <div class="faq-container">
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-question">
-                    <span>A primeira avaliação gera orçamento sem compromisso?</span>
-                    <span class="faq-toggle-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    Sim, a primeira avaliação inclui um exame clínico minucioso, mapeamento das necessidades, radiografia digital diagnóstica caso necessário e a estruturação de um plano de tratamento com valores e prazos claros, sem qualquer compromisso.
-                </div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-question">
-                    <span>Quais convênios são aceitos na clínica?</span>
-                    <span class="faq-toggle-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    Atendemos Amil Dental, SulAmérica Odonto, Bradesco Dental e Porto Seguro Odonto. Recomendamos selecionar sua opção no fluxo de agendamento acima para otimizarmos a liberação da sua guia de consulta.
-                </div>
-            </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-question">
-                    <span>Como funcionam as urgências e emergências?</span>
-                    <span class="faq-toggle-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    Oferecemos acolhimento emergencial prioritário durante nosso horário de funcionamento para casos de dor intensa, fratura dentária, traumas ou queda de coroas. Selecione a opção "Urgência" no formulário inteligente para triagem imediata.
-                </div>
+    <!-- FAQ -->
+    <section class="faq-container">
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <button class="faq-trigger" onclick="toggleFaq(this)">A primeira avaliação realmente não tem custos? <span>+</span></button>
+            <div class="faq-content">
+                <p>Sim! Toda primeira avaliação na BelleVie é totalmente gratuita, incluindo o mapeamento facial ou corporal personalizado realizado por um especialista.</p>
             </div>
         </div>
-    </div>
-</section>
+        <div class="faq-item">
+            <button class="faq-trigger" onclick="toggleFaq(this)">Quais são as formas de pagamento aceitas? <span>+</span></button>
+            <div class="faq-content">
+                <p>Aceitamos Pix, cartões de débito e crédito com parcelamento em até 12 vezes, além de links de pagamento dedicados e opções de financiamentos estéticos estruturados.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- Contato Módulo & Mapa -->
-<section class="contact section-padding">
-    <div class="container">
-        <div class="contact-grid">
-            <div class="contact-info-panel">
-                <div class="contact-details">
-                    <h3>Informações de Contato</h3>
-                    <div class="contact-detail-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12,2C8.13,2 5,5.13 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9C19,5.13 15.87,2 12,2M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5Z"/></svg>
-                        <div class="contact-text">
-                            <h4>Endereço Local</h4>
-                            <p>Alameda Rio Negro, 1120 – Sala 508<br>Barueri/SP</p>
-                        </div>
-                    </div>
-                    <div class="contact-detail-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M20,15.5C18.8,15.5 17.5,15.3 16.4,14.9C16.3,14.9 16.2,14.9 16.1,15L13.9,17.2C11.1,15.8 8.8,13.5 7.4,10.7L9.6,8.5C9.7,8.4 9.7,8.3 9.7,8.2C9.3,7.1 9.1,5.8 9.1,4.5C9.1,4.2 8.8,3.9 8.5,3.9H4.5C4.2,3.9 3.9,4.2 3.9,4.5C3.9,13.6 11.3,21 20.4,21C20.7,21 21,20.7 21,20.4V16.5C21,16.2 20.7,15.5 20,15.5Z"/></svg>
-                        <div class="contact-text">
-                            <h4>Telefones de Atendimento</h4>
-                            <p>WhatsApp: (11) 99863-4271<br>Fixo: (11) 4198-5624</p>
-                        </div>
-                    </div>
-                    <div class="contact-detail-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,6H13V12L17.2,14.5L16.2,16.1L11,13V6Z"/></svg>
-                        <div class="contact-text">
-                            <h4>Horário de Funcionamento</h4>
-                            <p>Segunda a Sexta: 08h às 20h<br>Sábado: 08h às 14h<br>Domingo: Fechado</p>
-                        </div>
-                    </div>
-                </div>
-                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.4); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
-                    E-mail: contato@oralprimeodonto.com.br
-                </div>
-            </div>
-            <div class="map-wrapper">
-                <!-- Otimizado com iframe sem dependências externas -->
-                <iframe src="[https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.1177651030995!2d-46.85250492376918!3d-23.51034455986877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03cd6f6c9d7d%3A0xc07aee3b5736f874!2sAlameda%20Rio%20Negro%2C%201120%20-%20Alphaville%20Centro%20Industrial%20e%20Empresarial%2C%20Barueri%20-%20SP%2C%2006454-000!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.1177651030995!2d-46.85250492376918!3d-23.51034455986877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03cd6f6c9d7d%3A0xc07aee3b5736f874!2sAlameda%20Rio%20Negro%2C%201120%20-%20Alphaville%20Centro%20Industrial%20e%20Empresarial%2C%20Barueri%20-%20SP%2C%2006454-000!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr)" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Rodapé Módulo -->
-<footer>
-    <div class="container">
+    <!-- Footer -->
+    <footer>
         <div class="footer-grid">
-            <div style="display:flex; flex-direction:column; gap:8px;">
-                <div class="logo">
-                    <div class="logo-symbol" style="background: white; border-color: var(--accent);">
-                        <svg viewBox="0 0 24 24" style="fill: var(--primary);"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4M12,18C8.67,18 5.75,16.2 4.26,13.5C4.76,12.04 6.13,11 7.75,11C8.57,11 9.31,11.3 9.89,11.81C10.47,12.33 11.2,12.65 12,12.65C12.8,12.65 13.53,12.33 14.11,11.81C14.69,11.3 15.43,11 16.25,11C17.87,11 19.24,12.04 19.74,13.5C18.25,16.2 15.33,18 12,18Z"/></svg>
-                    </div>
-                    <div class="logo-text">
-                        <span class="logo-title" style="color: white;">Oral Prime</span>
-                        <span class="logo-subtitle">Odontologia</span>
-                    </div>
-                </div>
+            <div class="footer-col">
+                <h4>BelleVie Estética Avançada</h4>
+                <p>Oferecendo os melhores tratamentos com segurança, modernidade e cuidado humanizado.</p>
             </div>
-            <div style="display:flex; gap: 24px; font-size: 0.9rem;">
-                <a href="#apresentacao" style="color: rgba(255,255,255,0.7); text-decoration:none;">Sobre</a>
-                <a href="#servicos" style="color: rgba(255,255,255,0.7); text-decoration:none;">Especialidades</a>
-                <a href="#agendamento" style="color: rgba(255,255,255,0.7); text-decoration:none;">Agendar</a>
+            <div class="footer-col">
+                <h4>Contatos Rápidos</h4>
+                <p>📞 (11) 4207-6943</p>
+                <p>📲 (11) 99854-3816</p>
+                <p>✉️ contato@bellevieestetica.com.br</p>
+            </div>
+            <div class="footer-col">
+                <h4>Localização</h4>
+                <p>Alameda Araguaia, 1432 – Sala 305</p>
+                <p>Barueri/SP</p>
             </div>
         </div>
-        <div class="footer-copy">
-            <span>&copy; 2026 Oral Prime Odontologia Especializada. Todos os direitos reservados. CRO/SP 11.432.</span>
-            <span>Desenvolvido por Cliente Agenda SaaS Corp.</span>
+        <div class="footer-bottom">
+            <div>&copy; 2026 BelleVie Estética Avançada. Todos os direitos reservados.</div>
+            <div>Desenvolvido com Tecnologia SaaS de Alta Conversão.</div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<!-- Botão Flutuante do WhatsApp Comercial -->
-<a href="[https://wa.me/5511998634271?text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+as+consultas+na+Oral+Prime](https://wa.me/5511998634271?text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+as+consultas+na+Oral+Prime)." class="whatsapp-float" target="_blank" aria-label="Fale conosco pelo WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.47 16.86L2 22L7.3 20.61C8.74 21.39 10.37 21.81 12.04 21.81C17.5 21.81 21.95 17.36 21.95 11.91C21.95 9.26 20.92 6.78 19.05 4.91C17.18 3.04 14.7 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.71 20.28 11.91C20.28 16.46 16.58 20.15 12.04 20.15C10.66 20.15 9.31 19.79 8.12 19.1L7.84 18.93L4.69 19.76L5.53 16.69L5.34 16.39C4.6 15.2 4.21 13.58 4.21 11.91C4.21 7.36 7.91 3.67 12.05 3.67M9.27 7.49C9.09 7.49 8.8 7.56 8.55 7.83C8.3 8.1 7.6 8.79 7.6 10.2C7.6 11.61 8.62 12.97 8.76 13.16C8.9 13.35 10.74 16.2 13.57 17.41C14.24 17.7 14.76 17.87 15.17 18C15.84 18.22 16.45 18.19 16.93 18.12C17.47 18.04 18.59 17.44 18.82 16.8C19.05 16.16 19.05 15.61 18.98 15.5C18.91 15.39 18.73 15.32 18.45 15.18C18.17 15.04 16.79 14.36 16.53 14.27C16.28 14.17 16.1 14.13 15.92 14.39C15.73 14.65 15.2 15.27 15.04 15.46C14.88 15.65 14.72 15.67 14.44 15.53C14.16 15.39 13.26 15.1 12.2 14.15C11.37 13.41 10.81 12.5 10.65 12.22C10.49 11.94 10.63 11.79 10.77 11.65C10.9 11.5 11.06 11.29 11.2 11.12C11.34 10.95 11.39 10.83 11.48 10.65C11.57 10.47 11.53 10.31 11.46 10.17C11.39 10.03 10.83 8.64 10.59 8.08C10.36 7.53 10.12 7.6 10.04 7.6C10 7.6 9.8 7.49 9.27 7.49Z"/></svg>
-</a>
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5511998543816" class="whatsapp-float" target="_blank" aria-label="Fale Conosco pelo WhatsApp">
+        ✉
+    </a>
 
-<script>
-    // Gerenciamento de Navegação & Menu Responsivo
-    function toggleMenu() {
-        document.getElementById('nav-menu').classList.toggle('open');
-    }
+    <script>
+        // Dados globais do fluxo
+        const bookingData = {
+            procedure: '',
+            expert: '',
+            initial_evaluation: '',
+            date: '',
+            time: '',
+            name: '',
+            phone: '',
+            email: '',
+            obs: ''
+        };
 
-    // Sistema Principal - Gerenciamento de Etapas (Wizard)
-    let currentStep = 1;
-    const totalSteps = 4;
-    
-    let selectedDate = "14/07/2026";
-    let selectedTime = "10:00";
+        let currentStep = 1;
+        const totalSteps = 8;
 
-    function changeStep(direction) {
-        // Validações simples por etapa antes de avançar
-        if (direction === 1) {
-            if (currentStep === 3) {
-                const name = document.getElementById('client-name').value;
-                const whatsapp = document.getElementById('client-whatsapp').value;
-                const email = document.getElementById('client-email').value;
-                if (!name || !whatsapp || !email) {
-                    alert('Por favor, preencha todos os dados de contato obrigatórios.');
-                    return;
-                }
-            }
-        }
-
-        currentStep += direction;
-        if (currentStep < 1) currentStep = 1;
-        if (currentStep > totalSteps) currentStep = totalSteps;
-
-        // Update UI Panes
-        document.querySelectorAll('.step-pane').forEach((pane, idx) => {
-            pane.classList.toggle('active', idx + 1 === currentStep);
-        });
-
-        // Update Footer Buttons
-        document.getElementById('btn-prev').style.display = currentStep === 1 ? 'none' : 'block';
-        document.getElementById('btn-next').style.display = currentStep === totalSteps ? 'none' : 'block';
-        document.getElementById('btn-submit').style.display = currentStep === totalSteps ? 'block' : 'none';
-
-        // Update Progress Bar
-        document.getElementById('progress-text').innerText = `Etapa ${currentStep} de ${totalSteps}`;
-        document.getElementById('progress-bar-fill').style.width = `${(currentStep / totalSteps) * 100}%`;
-
-        if (currentStep === 4) {
-            updateSummary();
-        }
-    }
-
-    function maskPhone(input) {
-        let val = input.value.replace(/\D/g, "");
-        if (val.length > 11) val = val.substring(0, 11);
-        if (val.length > 6) {
-            input.value = `(${val.substring(0,2)}) ${val.substring(2,7)}-${val.substring(7)}`;
-        } else if (val.length > 2) {
-            input.value = `(${val.substring(0,2)}) ${val.substring(2)}`;
-        } else if (val.length > 0) {
-            input.value = `(${val}`;
-        }
-    }
-
-    function updateSummary() {
-        const spec = document.getElementById('specialty').value;
-        const dent = document.getElementById('dentist').value;
-        const name = document.getElementById('client-name').value || '-';
-        const cov = document.getElementById('coverage').value;
-
-        document.getElementById('sum-specialty').innerText = spec;
-        document.getElementById('sum-dentist').innerText = dent;
-        document.getElementById('sum-datetime').innerText = `${selectedDate} às ${selectedTime}`;
-        document.getElementById('sum-name').innerText = name;
-        document.getElementById('sum-coverage').innerText = cov;
-    }
-
-    // Renderização do Calendário e Horários Dinâmicos
-    function initCalendar() {
-        const grid = document.getElementById('calendar-grid');
-        grid.innerHTML = '';
-        
-        const weekdays = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
-        weekdays.forEach(wd => {
-            const el = document.createElement('div');
-            el.className = 'weekday';
-            el.innerText = wd;
-            grid.appendChild(el);
-        });
-
-        // Gerar dias fictícios para o mês corrente (Ex: Julho 2026)
-        for (let i = 1; i <= 31; i++) {
-            const dayCell = document.createElement('div');
-            dayCell.className = 'day-cell';
-            if (i < 13) dayCell.className += ' disabled'; // Passado ou Bloqueado
-            if (i === 14) {
-                dayCell.className += ' active';
-            }
-            dayCell.innerText = i;
+        // Inicialização do Calendário Inteligente
+        function initCalendar() {
+            const grid = document.getElementById('calendarGrid');
+            grid.innerHTML = '';
             
-            if (i >= 13) {
-                dayCell.onclick = function() {
-                    document.querySelectorAll('.day-cell').forEach(c => c.classList.remove('active'));
-                    dayCell.classList.add('active');
-                    selectedDate = `${i < 10 ? '0'+i : i}/07/2026`;
-                    updateSummary();
-                };
+            // Dias da semana header
+            const daysOfWeek = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+            daysOfWeek.forEach(d => {
+                const h = document.createElement('div');
+                h.className = 'calendar-header-day';
+                h.innerText = d;
+                grid.appendChild(h);
+            });
+
+            // Gerar dias simulados a partir de hoje (Julho de 2026)
+            // Vamos preencher espaços vazios simulando início na quarta-feira
+            for(let i=0; i<3; i++) {
+                const empty = document.createElement('div');
+                empty.className = 'calendar-day empty';
+                grid.appendChild(empty);
             }
-            grid.appendChild(dayCell);
+
+            for(let day=1; day<=25; day++) {
+                const dDiv = document.createElement('div');
+                // Simulação de domingos indisponíveis
+                const isSunday = (day + 3) % 7 === 0;
+                
+                if (isSunday) {
+                    dDiv.className = 'calendar-day disabled';
+                    dDiv.innerText = day;
+                } else {
+                    dDiv.className = 'calendar-day available';
+                    dDiv.innerText = day;
+                    dDiv.onclick = () => {
+                        document.querySelectorAll('.calendar-day').forEach(el => el.classList.remove('selected'));
+                        dDiv.classList.add('selected');
+                        bookingData.date = `${day}/07/2026`;
+                        document.getElementById('nextBtn4').disabled = false;
+                        updateLiveSummary();
+                    };
+                }
+                grid.appendChild(dDiv);
+            }
         }
 
-        // Renderizar slots de horário livres
-        const slotsGrid = document.getElementById('time-slots-grid');
-        slotsGrid.innerHTML = '';
-        const times = ['08:30', '09:15', '10:00', '11:00', '13:30', '14:15', '15:00', '16:30', '17:10'];
-        
-        times.forEach(t => {
-            const slot = document.createElement('div');
-            slot.className = 'time-slot';
-            if (t === '10:00') slot.className += ' selected';
-            slot.innerText = t;
-            slot.onclick = function() {
-                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
-                slot.classList.add('selected');
-                selectedTime = t;
-                updateSummary();
-            };
-            slotsGrid.appendChild(slot);
-        });
-    }
+        // Inicialização de Horários Disponíveis
+        function initTimeSlots() {
+            const grid = document.getElementById('timeGrid');
+            grid.innerHTML = '';
+            const hours = ['09:00', '10:00', '11:00', '13:00', '14:30', '16:00', '17:30', '19:00'];
+            
+            hours.forEach(h => {
+                const slot = document.createElement('div');
+                slot.className = 'time-slot';
+                slot.innerText = h;
+                slot.onclick = () => {
+                    document.querySelectorAll('.time-slot').forEach(el => el.classList.remove('selected'));
+                    slot.classList.add('selected');
+                    bookingData.time = h;
+                    document.getElementById('nextBtn5').disabled = false;
+                    updateLiveSummary();
+                };
+                grid.appendChild(slot);
+            });
+        }
 
-    // FAQ Toggle
-    function toggleFaq(element) {
-        element.classList.toggle('active');
-    }
+        // Seleção de cards genéricos do fluxo inteligente
+        function selectOption(field, value, meta, isSpecial) {
+            bookingData[field] = value;
+            
+            // Atualizar classes visuais nos elementos do passo atual
+            const currentStepEl = document.querySelector(`.step[data-step="${currentStep}"]`);
+            currentStepEl.querySelectorAll('.option-card').forEach(card => {
+                card.classList.remove('selected');
+                if(card.innerText.includes(value)) {
+                    card.classList.add('selected');
+                }
+            });
 
-    // Submissão Comercial Inteligente & Fluxo de Redirecionamento Duplo (WhatsApp + Google Agenda)
-    function handleFormSubmit(event) {
-        event.preventDefault();
-        
-        const spec = document.getElementById('specialty').value;
-        const dent = document.getElementById('dentist').value;
-        const name = document.getElementById('client-name').value;
-        const whatsapp = document.getElementById('client-whatsapp').value;
-        const email = document.getElementById('client-email').value;
-        const cov = document.getElementById('coverage').value;
-        const obs = document.getElementById('observations').value || 'Nenhuma';
-        const visit = document.querySelector('input[name="first_visit"]:checked').value;
+            // Habilitar botão avançar correspondente
+            const nextBtn = document.getElementById(`nextBtn${currentStep}`);
+            if(nextBtn) nextBtn.disabled = false;
 
-        // Estrutura de mensagem altamente persuasiva para conversão imediata no WhatsApp da clínica
-        const message = `Olá Oral Prime! Gostaria de confirmar meu agendamento comercial:%0A%0A` +
-                        `• Paciente: ${encodeURIComponent(name)}%0A` +
-                        `• WhatsApp: ${encodeURIComponent(whatsapp)}%0A` +
-                        `• E-mail: ${encodeURIComponent(email)}%0A` +
-                        `• Especialidade: ${encodeURIComponent(spec)}%0A` +
-                        `• Profissional: ${encodeURIComponent(dent)}%0A` +
-                        `• Data/Hora: ${encodeURIComponent(selectedDate)} às ${encodeURIComponent(selectedTime)}%0A` +
-                        `• Primeira consulta: ${encodeURIComponent(visit)}%0A` +
-                        `• Modalidade: ${encodeURIComponent(cov)}%0A` +
-                        `• Observações: ${encodeURIComponent(obs)}`;
+            updateLiveSummary();
+            // Avanço automático suave inteligente para melhor usabilidade em cliques rápidos
+            setTimeout(() => { nextStep(); }, 250);
+        }
 
-        const whatsappUrl = `[https://wa.me/5511998634271?text=$](https://wa.me/5511998634271?text=$){message}`;
+        function validateContactForm() {
+            const name = document.getElementById('clientName').value;
+            const phone = document.getElementById('clientPhone').value;
+            const email = document.getElementById('clientEmail').value;
+            
+            bookingData.name = name;
+            bookingData.phone = phone;
+            bookingData.email = email;
 
-        // Geração de link dinâmico para o Google Agenda do usuário adicionar o lembrete automaticamente
-        const googleAgendaUrl = `[https://calendar.google.com/calendar/render?action=TEMPLATE](https://calendar.google.com/calendar/render?action=TEMPLATE)` +
-                               `&text=${encodeURIComponent('Consulta Oral Prime - ' + spec)}` +
-                               `&dates=20260714T130000Z/20260714T140000Z` +
-                               `&details=${encodeURIComponent('Dentista: ' + dent + ' | Modalidade: ' + cov)}` +
-                               `&location=${encodeURIComponent('Alameda Rio Negro, 1120 – Sala 508, Barueri/SP')}`;
+            const isValid = name.length > 3 && phone.length >= 14 && email.includes('@');
+            document.getElementById('nextBtn6').disabled = !isValid;
+            updateLiveSummary();
+        }
 
-        // Abre o WhatsApp para envio imediato dos dados estruturados
-        window.open(whatsappUrl, '_blank');
-        
-        // Redireciona de forma secundária e fluída para o Google Agenda facilitando a retenção e reduzindo as faltas
-        setTimeout(() => {
-            window.location.href = googleAgendaUrl;
-        }, 1000);
-    }
+        // Atualização da barra de progresso e transição de telas
+        function updateStep() {
+            document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
+            const activeStep = document.querySelector(`.step[data-step="${currentStep}"]`);
+            if(activeStep) activeStep.classList.add('active');
 
-    // Inicialização global da aplicação
-    window.onload = function() {
-        initCalendar();
-        updateSummary();
-    };
-</script>
+            const percent = (currentStep / totalSteps) * 100;
+            document.getElementById('progressBar').style.width = `${percent}%`;
+
+            if(currentStep === 4) initCalendar();
+            if(currentStep === 5) initTimeSlots();
+            if(currentStep === 8) renderFinalSummary();
+        }
+
+        function nextStep() {
+            if(currentStep < totalSteps) {
+                currentStep++;
+                updateStep();
+            }
+        }
+
+        function prevStep() {
+            if(currentStep > 1) {
+                currentStep--;
+                updateStep();
+            }
+        }
+
+        // Atualiza a lateral em tempo real de forma profissional
+        function updateLiveSummary() {
+            const container = document.getElementById('summaryContent');
+            let html = '';
+
+            if(bookingData.procedure) html += `<div class="summary-row"><span class="summary-label">Procedimento</span><span class="summary-value">${bookingData.procedure}</span></div>`;
+            if(bookingData.expert) html += `<div class="summary-row"><span class="summary-label">Especialista</span><span class="summary-value">${bookingData.expert}</span></div>`;
+            if(bookingData.initial_evaluation) html += `<div class="summary-row"><span class="summary-label">Avaliação Inicial</span><span class="summary-value">Sim</span></div>`;
+            if(bookingData.date) html += `<div class="summary-row"><span class="summary-label">Data</span><span class="summary-value">${bookingData.date}</span></div>`;
+            if(bookingData.time) html += `<div class="summary-row"><span class="summary-label">Horário</span><span class="summary-value">${bookingData.time}</span></div>`;
+            if(bookingData.name) html += `<div class="summary-row"><span class="summary-label">Cliente</span><span class="summary-value">${bookingData.name}</span></div>`;
+
+            container.innerHTML = html || '<p style="font-size: 0.9rem; color: var(--text-muted);">Preencha as primeiras etapas para ver o resumo em tempo real.</p>';
+        }
+
+        function renderFinalSummary() {
+            bookingData.obs = document.getElementById('clientObs').value;
+            const container = document.getElementById('finalSummaryContainer');
+            container.innerHTML = `
+                <div class="summary-row"><span class="summary-label">Procedimento:</span><span class="summary-value">${bookingData.procedure}</span></div>
+                <div class="summary-row"><span class="summary-label">Profissional:</span><span class="summary-value">${bookingData.expert}</span></div>
+                <div class="summary-row"><span class="summary-label">Data e Hora:</span><span class="summary-value">${bookingData.date} às ${bookingData.time}</span></div>
+                <div class="summary-row"><span class="summary-label">Nome:</span><span class="summary-value">${bookingData.name}</span></div>
+                <div class="summary-row"><span class="summary-label">WhatsApp:</span><span class="summary-value">${bookingData.phone}</span></div>
+                <div class="summary-row"><span class="summary-label">Observações:</span><span class="summary-value">${bookingData.obs || 'Nenhuma'}</span></div>
+            `;
+        }
+
+        // Geração do Link com Mensagem Customizada WhatsApp
+        function finishBooking() {
+            const text = `Olá BelleVie! Gostaria de confirmar meu agendamento premium:\n\n` +
+                         `• *Procedimento:* ${bookingData.procedure}\n` +
+                         `• *Especialista:* ${bookingData.expert}\n` +
+                         `• *Avaliação inclusa:* ${bookingData.initial_evaluation}\n` +
+                         `• *Data:* ${bookingData.date}\n` +
+                         `• *Horário:* ${bookingData.time}\n\n` +
+                         `*Dados de Contato:*\n` +
+                         `• *Nome:* ${bookingData.name}\n` +
+                         `• *E-mail:* ${bookingData.email}\n` +
+                         `• *Observações:* ${bookingData.obs || 'Sem observações'}`;
+            
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/5511998543816?text=${encodedText}`, '_blank');
+        }
+
+        // Funções Auxiliares: Máscaras e FAQ Accordion
+        function maskPhone(input) {
+            let v = input.value.replace(/\D/g, '');
+            if(v.length > 11) v = v.substring(0, 11);
+            if (v.length > 6) {
+                input.value = `(${v.substring(0,2)}) ${v.substring(2,7)}-${v.substring(7)}`;
+            } else if (v.length > 2) {
+                input.value = `(${v.substring(0,2)}) ${v.substring(2)}`;
+            } else {
+                input.value = v;
+            }
+        }
+
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            item.classList.toggle('active');
+            button.querySelector('span').innerText = item.classList.contains('active') ? '-' : '+';
+        }
+
+        // Inicializar aplicação
+        updateStep();
+    </script>
+</body>
+</html>
