@@ -3,634 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Torque One | Centro Automotivo Integrado - Agendamento & Orçamento</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Agende sua revisão ou solicite um orçamento na Torque One Centro Automotivo em Osasco. Especialistas em mecânica, injeção eletrônica, freios, suspensão e diagnóstico computadorizado de alta tecnologia.">
-    <meta name="keywords" content="oficina mecanica osasco, torque one, revisao preventiva, troca de oleo, freios suspensao osasco, scanner automotivo, alinhamento balanceamento">
-    <link rel="canonical" href="https://www.torqueoneauto.com.br">
+    <title>Torque One | Agendamento & Orçamento Online - Centro Automotivo Osasco</title>
+    <meta name="description" content="Agende sua revisão preventiva, troca de óleo, freios ou diagnóstico eletrônico na Torque One em Osasco. Atendimento rápido, transparente e com garantia.">
+    <meta name="keywords" content="oficina mecanica osasco, agendamento mecanico, revisao automotiva, troca de oleo, freios, suspensao, torque one osasco">
+    <link rel="canonical" href="https://torqueoneauto.com.br">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Torque One Centro Automotivo | Agendamento Inteligente">
-    <meta property="og:description" content="Agende sua revisão preventiva ou corretiva online de forma rápida e segura na Torque One Osasco.">
-    <meta property="og:url" content="https://www.torqueoneauto.com.br">
-    <meta property="og:image" content="https://www.torqueoneauto.com.br/assets/og-image.jpg">
-    
-    <!-- Twitter Cards -->
+    <meta property="og:description" content="Manutenção preventiva e corretiva com tecnologia de diagnóstico de ponta em Osasco. Solicite seu orçamento online agora mesmo.">
+    <meta property="og:url" content="https://torqueoneauto.com.br">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80">
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Torque One Centro Automotivo">
-    <meta name="twitter:description" content="Agendamento online e orçamentos rápidos para manutenção preventiva e corretiva de veículos nacionais e importados.">
-    
-    <!-- LocalBusiness & Service Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoRepair",
-      "name": "Torque One Centro Automotivo",
-      "image": "https://www.torqueoneauto.com.br/assets/logo.png",
-      "@id": "https://www.torqueoneauto.com.br",
-      "url": "https://www.torqueoneauto.com.br",
-      "telephone": "+551141752863",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Avenida dos Autonomistas, 5248",
-        "addressLocality": "Osasco",
-        "addressRegion": "SP",
-        "postalCode": "06194-010",
-        "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -23.5329,
-        "longitude": -46.7915
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "08:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "08:00",
-          "closes": "13:00"
-        }
-      ],
-      "sameAs": [
-        "https://www.instagram.com/torqueoneauto"
-      ]
-    }
-    </script>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="twitter:description" content="Agende sua manutenção preventiva na Torque One em Osasco. Tecnologia, transparência e confiança.">
 
     <style>
-        /* CSS Reset & Variáveis */
         :root {
-            --bg-primary: #0B0C10;
-            --bg-secondary: #12141C;
-            --bg-tertiary: #1A1D28;
-            --text-primary: #FFFFFF;
-            --text-secondary: #A0AEC0;
-            --accent-red: #E50914;
-            --accent-silver: #8E9AAF;
-            --accent-green: #25D366;
-            --border-color: #2D3748;
-            --font-display: 'Montserrat', sans-serif;
-            --font-body: 'Inter', sans-serif;
-            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --shadow-premium: 0 10px 30px rgba(0, 0, 0, 0.5);
+            --primary: #E50914;
+            --primary-hover: #b8070f;
+            --dark-bg: #0d0d0d;
+            --dark-surface: #171717;
+            --dark-card: #222222;
+            --text-main: #FFFFFF;
+            --text-secondary: #B3B3B3;
+            --border-color: #333333;
+            --success: #22C55E;
+            --font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
         }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            outline: none;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        html {
             scroll-behavior: smooth;
-            font-size: 16px;
         }
 
         body {
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            font-family: var(--font-body);
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            font-family: var(--font-family);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* Utilidades de Grid & Container */
+        /* UTILS & GRAPHICS */
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
 
-        .section-padding {
-            padding: 80px 0;
+        .highlight {
+            color: var(--primary);
         }
 
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-display);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        .badge {
-            display: inline-block;
-            background: rgba(229, 9, 20, 0.1);
-            color: var(--accent-red);
-            border: 1px solid rgba(229, 9, 20, 0.2);
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 16px;
-        }
-
-        /* Header / Navbar */
+        /* HEADER */
         header {
-            position: fixed;
+            position: sticky;
             top: 0;
-            left: 0;
-            width: 100%;
             z-index: 1000;
-            background: rgba(11, 12, 16, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            transition: var(--transition-smooth);
+            background-color: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .nav-container {
+        .header-container {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            height: 80px;
+            justify-content: space-between;
+            height: 70px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: var(--text-primary);
-        }
-
-        .logo-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(135deg, var(--accent-red), #990000);
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .logo-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: #FFF;
-        }
-
-        .logo-text {
-            font-size: 1.4rem;
+            gap: 10px;
             font-weight: 800;
-            letter-spacing: -0.03em;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: var(--text-main);
         }
 
-        .logo-text span {
-            color: var(--accent-red);
+        .logo svg {
+            fill: var(--primary);
+            animation: spin 8s linear infinite;
         }
 
-        .nav-links {
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+        nav {
             display: flex;
-            gap: 32px;
-            list-style: none;
+            gap: 20px;
         }
 
-        .nav-links a {
+        nav a {
             color: var(--text-secondary);
             text-decoration: none;
             font-size: 0.95rem;
+            transition: color 0.3s;
             font-weight: 500;
-            transition: var(--transition-smooth);
         }
 
-        .nav-links a:hover {
-            color: var(--text-primary);
+        nav a:hover {
+            color: var(--primary);
         }
 
-        .nav-btn {
-            background: var(--accent-red);
-            color: #FFF;
+        .btn-header {
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
             text-decoration: none;
-            padding: 10px 24px;
-            border-radius: 8px;
             font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition-smooth);
-            box-shadow: 0 4px 15px rgba(229, 9, 20, 0.25);
+            font-size: 0.85rem;
+            transition: background 0.3s;
         }
 
-        .nav-btn:hover {
-            background: #FF1A24;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(229, 9, 20, 0.4);
+        .btn-header:hover {
+            background: var(--primary-hover);
         }
 
-        .mobile-menu-toggle {
+        /* MOBILE MENU TRIGGER */
+        .menu-toggle {
             display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
             background: none;
             border: none;
-            color: var(--text-primary);
-            font-size: 1.8rem;
-            cursor: pointer;
         }
 
-        /* Hero Section */
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-main);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* HERO SECTION */
         .hero {
             position: relative;
-            padding: 180px 0 100px;
-            overflow: hidden;
-            background: radial-gradient(circle at 80% 20%, rgba(229, 9, 20, 0.08) 0%, transparent 60%);
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(0deg, var(--bg-primary) 0%, transparent 100%);
-            z-index: 1;
+            padding: 80px 0 60px 0;
+            background: radial-gradient(circle at 80% 20%, rgba(229, 9, 20, 0.15) 0%, rgba(13, 13, 13, 0) 60%);
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 48px;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
             align-items: center;
-            position: relative;
-            z-index: 2;
         }
 
-        .hero-title {
-            font-size: 3.5rem;
-            line-height: 1.1;
-            margin-bottom: 24px;
+        .hero-info h1 {
+            font-size: 2.8rem;
             font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
         }
 
-        .hero-title span {
-            color: var(--accent-red);
-            background: linear-gradient(135deg, #FFF 0%, var(--accent-silver) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-description {
-            font-size: 1.2rem;
+        .hero-info p {
             color: var(--text-secondary);
-            margin-bottom: 40px;
-            max-width: 600px;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
         }
 
-        .hero-benefits {
+        .features-badge-list {
             display: flex;
-            gap: 24px;
-            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
         }
 
-        .hero-benefit-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .hero-benefit-item svg {
-            width: 20px;
-            height: 20px;
-            color: var(--accent-red);
-        }
-
-        .hero-graphics {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .speedometer-card {
-            background: rgba(18, 20, 28, 0.6);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+        .badge {
+            background: var(--dark-surface);
             border: 1px solid var(--border-color);
-            padding: 32px;
-            border-radius: 24px;
-            width: 100%;
-            max-width: 380px;
-            position: relative;
-            box-shadow: var(--shadow-premium);
-        }
-
-        .speedometer-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 24px;
-        }
-
-        .speedometer-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            background: rgba(229, 9, 20, 0.1);
-            color: var(--accent-red);
-        }
-
-        .speedometer-status {
+            padding: 6px 14px;
+            border-radius: 50px;
             font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--accent-green);
             display: flex;
             align-items: center;
             gap: 6px;
+            color: var(--text-secondary);
         }
 
-        .speedometer-status::before {
-            content: '';
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: var(--accent-green);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--accent-green);
+        .badge svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--primary);
         }
 
-        .speed-bar {
-            height: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-            margin: 16px 0;
-        }
-
-        .speed-fill {
-            height: 100%;
-            width: 85%;
-            background: linear-gradient(90deg, var(--accent-red), #FF5E62);
-            border-radius: 10px;
-            box-shadow: 0 0 10px var(--accent-red);
-        }
-
-        /* Apresentação (Quem Somos) */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-        }
-
-        .stat-card {
-            background: var(--bg-secondary);
+        /* SISTEMA PRINCIPAL (FLUXO INTELIGENTE) */
+        .app-card {
+            background-color: var(--dark-surface);
             border: 1px solid var(--border-color);
-            padding: 32px;
-            border-radius: 16px;
-            transition: var(--transition-smooth);
-        }
-
-        .stat-card:hover {
-            border-color: var(--accent-red);
-            transform: translateY(-5px);
-        }
-
-        .stat-num {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: var(--accent-red);
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-
-        .stat-label {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            font-weight: 600;
-        }
-
-        .about-content h2 {
-            font-size: 2.5rem;
-            line-height: 1.2;
-            margin-bottom: 24px;
-        }
-
-        .about-content p {
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-            font-size: 1.05rem;
-        }
-
-        /* Serviços */
-        .section-header {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 60px;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
-        }
-
-        .section-header p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
-        }
-
-        .service-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 32px;
-            transition: var(--transition-smooth);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(229, 9, 20, 0.4);
-            box-shadow: 0 12px 30px rgba(229, 9, 20, 0.1);
-        }
-
-        .service-icon {
-            width: 56px;
-            height: 56px;
-            background: rgba(229, 9, 20, 0.08);
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            color: var(--accent-red);
-        }
-
-        .service-icon svg {
-            width: 28px;
-            height: 28px;
-        }
-
-        .service-title {
-            font-size: 1.25rem;
-            margin-bottom: 12px;
-            color: var(--text-primary);
-        }
-
-        .service-description {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 24px;
-        }
-
-        .service-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
-            color: var(--accent-silver);
-            font-weight: 600;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding-top: 16px;
-        }
-
-        /* Como Funciona */
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-
-        .step-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 40px 32px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             position: relative;
+            overflow: hidden;
         }
 
-        .step-num {
+        .app-card::before {
+            content: '';
             position: absolute;
-            top: 24px;
-            right: 32px;
-            font-size: 3rem;
-            font-weight: 800;
-            color: rgba(229, 9, 20, 0.1);
-            line-height: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), #FF5252);
         }
 
-        .step-title {
-            font-size: 1.3rem;
-            margin-bottom: 16px;
-            margin-top: 16px;
+        .app-header {
+            margin-bottom: 20px;
         }
 
-        .step-desc {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        /* Sistema Principal: Agendamento Multi-Etapa */
-        .system-section {
-            background: radial-gradient(circle at 10% 90%, rgba(229, 9, 20, 0.05) 0%, transparent 50%), var(--bg-secondary);
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .system-wrapper {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            box-shadow: var(--shadow-premium);
-        }
-
-        .system-main {
-            padding: 56px;
-            position: relative;
-        }
-
-        .system-summary-pane {
-            background: var(--bg-secondary);
-            border-left: 1px solid var(--border-color);
-            padding: 56px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        /* Progress Bar */
-        .progress-container {
-            margin-bottom: 40px;
-        }
-
-        .progress-stats {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--text-secondary);
-            margin-bottom: 10px;
-        }
-
-        .progress-track {
+        .progress-bar-container {
+            width: 100%;
+            background-color: var(--dark-card);
             height: 6px;
-            background: rgba(255, 255, 255, 0.08);
             border-radius: 10px;
+            margin-bottom: 12px;
             overflow: hidden;
         }
 
-        .progress-bar-fill {
+        .progress-bar {
             height: 100%;
-            width: 15%;
-            background: var(--accent-red);
-            border-radius: 10px;
-            transition: var(--transition-smooth);
+            background: linear-gradient(90deg, var(--primary), #FF5252);
+            width: 8.33%; /* Inicial */
+            transition: width 0.3s ease;
         }
 
-        /* Step Engine Controls */
-        .step-engine-content {
-            min-height: 380px;
+        .step-indicator {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
         }
 
-        .step-view {
+        /* FLUXO STEPS */
+        .step {
             display: none;
+            animation: fadeIn 0.4s ease forwards;
         }
 
-        .step-view.active {
+        .step.active {
             display: block;
-            animation: fadeIn 0.4s ease-out;
         }
 
         @keyframes fadeIn {
@@ -638,540 +266,733 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .step-view h3 {
-            font-size: 1.8rem;
-            margin-bottom: 8px;
+        .step-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 6px;
         }
 
-        .step-view .step-subtitle {
+        .step-desc {
+            font-size: 0.9rem;
             color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 32px;
+            margin-bottom: 20px;
         }
 
-        /* Form Controls */
+        /* ELEMENTOS DE FORMULÁRIO */
         .form-group {
-            margin-bottom: 24px;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            margin-bottom: 15px;
         }
 
         .form-label {
             display: block;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 8px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
         }
 
-        .form-input, .form-select, .form-textarea {
+        .text-input, .select-input {
             width: 100%;
-            background: var(--bg-secondary);
+            background-color: var(--dark-card);
             border: 1px solid var(--border-color);
-            padding: 14px 18px;
-            border-radius: 10px;
-            color: var(--text-primary);
-            font-family: var(--font-body);
-            font-size: 1rem;
-            transition: var(--transition-smooth);
+            color: var(--text-main);
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-family: var(--font-family);
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
         }
 
-        .form-input:focus, .form-select:focus, .form-textarea:focus {
-            border-color: var(--accent-red);
-            box-shadow: 0 0 10px rgba(229, 9, 20, 0.15);
+        .text-input:focus, .select-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.2);
         }
 
+        /* GRID SELECAO DE SERVICO & MARCA */
         .options-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 12px;
-            max-height: 280px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            max-height: 240px;
             overflow-y: auto;
-            padding-right: 8px;
+            padding-right: 5px;
+        }
+
+        /* Custom Scrollbar para os containers */
+        .options-grid::-webkit-scrollbar, .calendar-body::-webkit-scrollbar {
+            width: 6px;
+        }
+        .options-grid::-webkit-scrollbar-thumb, .calendar-body::-webkit-scrollbar-thumb {
+            background-color: var(--border-color);
+            border-radius: 4px;
         }
 
         .option-card {
-            background: var(--bg-secondary);
+            background-color: var(--dark-card);
             border: 1px solid var(--border-color);
-            padding: 16px;
-            border-radius: 12px;
+            padding: 12px;
+            border-radius: 6px;
             cursor: pointer;
-            transition: var(--transition-smooth);
             text-align: center;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .option-card svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--text-secondary);
+            transition: fill 0.2s;
         }
 
         .option-card:hover {
-            border-color: rgba(229, 9, 20, 0.5);
-            background: rgba(229, 9, 20, 0.02);
+            border-color: var(--primary);
+            background-color: rgba(229, 9, 20, 0.05);
         }
 
         .option-card.selected {
-            background: rgba(229, 9, 20, 0.1);
-            border-color: var(--accent-red);
-            color: #FFF;
+            border-color: var(--primary);
+            background: linear-gradient(135deg, rgba(229, 9, 20, 0.15) 0%, rgba(13, 13, 13, 0.2) 100%);
+            color: var(--text-main);
         }
 
-        /* Custom Modern Calendar styling inside grid */
-        .calendar-widget {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 20px;
+        .option-card.selected svg {
+            fill: var(--primary);
         }
 
-        .calendar-header {
+        /* CALENDÁRIO */
+        .calendar-nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
-        .calendar-days {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 8px;
-            text-align: center;
-        }
-
-        .calendar-day-label {
-            font-size: 0.8rem;
+        .calendar-nav span {
             font-weight: 700;
-            color: var(--accent-silver);
-            text-transform: uppercase;
+            font-size: 0.95rem;
         }
 
-        .calendar-grid-cells {
+        .calendar-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 4px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 8px;
-            margin-top: 8px;
-        }
-
-        .calendar-cell {
-            padding: 10px 0;
+            gap: 5px;
             text-align: center;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            font-weight: 600;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid transparent;
+            font-size: 0.8rem;
         }
 
-        .calendar-cell:hover:not(.disabled) {
-            background: rgba(229, 9, 20, 0.1);
-            color: var(--accent-red);
+        .calendar-day-header {
+            color: var(--text-secondary);
+            font-weight: bold;
+            padding: 4px 0;
         }
 
-        .calendar-cell.selected {
-            background: var(--accent-red) !important;
-            color: white !important;
-        }
-
-        .calendar-cell.disabled {
-            opacity: 0.25;
-            cursor: not-allowed;
-            background: transparent;
-        }
-
-        /* Time grid selection */
-        .times-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin-top: 16px;
-        }
-
-        .time-cell {
-            background: var(--bg-secondary);
+        .calendar-day {
+            background-color: var(--dark-card);
             border: 1px solid var(--border-color);
-            padding: 12px;
-            border-radius: 8px;
-            text-align: center;
+            padding: 10px 0;
+            border-radius: 4px;
             cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition-smooth);
+            transition: 0.2s;
         }
 
-        .time-cell:hover:not(.disabled) {
-            border-color: var(--accent-red);
-            color: var(--accent-red);
+        .calendar-day:hover:not(.disabled) {
+            border-color: var(--primary);
+            background-color: rgba(229, 9, 20, 0.1);
         }
 
-        .time-cell.selected {
-            background: var(--accent-red);
-            border-color: var(--accent-red);
-            color: white;
-        }
-
-        .time-cell.disabled {
-            opacity: 0.25;
+        .calendar-day.disabled {
+            opacity: 0.3;
             cursor: not-allowed;
         }
 
-        /* Buttons & Footer of Step Form */
-        .step-footer {
+        .calendar-day.selected {
+            background-color: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* HORÁRIOS */
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .time-slot {
+            background-color: var(--dark-card);
+            border: 1px solid var(--border-color);
+            padding: 8px 0;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .time-slot:hover:not(.disabled) {
+            border-color: var(--primary);
+            background-color: rgba(229, 9, 20, 0.1);
+        }
+
+        .time-slot.disabled {
+            opacity: 0.25;
+            cursor: not-allowed;
+            text-decoration: line-through;
+        }
+
+        .time-slot.selected {
+            background-color: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* RESUMO FINAL */
+        .summary-card {
+            background-color: var(--dark-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .summary-row {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding-top: 24px;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        .btn {
-            display: inline-flex;
+        .summary-row:last-child {
+            border-bottom: none;
+        }
+
+        .summary-label {
+            color: var(--text-secondary);
+        }
+
+        .summary-val {
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* BOTÕES DE NAVEGAÇÃO DO FLUXO */
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn-nav {
+            flex: 1;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            font-weight: bold;
+            font-family: var(--font-family);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            padding: 14px 28px;
-            border-radius: 10px;
-            font-weight: 600;
-            font-family: var(--font-body);
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            border: none;
         }
 
-        .btn-primary {
-            background: var(--accent-red);
-            color: white;
-            box-shadow: 0 4px 15px rgba(229, 9, 20, 0.25);
-        }
-
-        .btn-primary:hover {
-            background: #FF1A24;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
+        .btn-prev {
+            background-color: var(--dark-card);
             border: 1px solid var(--border-color);
             color: var(--text-secondary);
         }
 
-        .btn-secondary:hover {
-            color: var(--text-primary);
+        .btn-prev:hover {
+            color: var(--text-main);
             border-color: var(--text-secondary);
         }
 
-        /* Resumo Side-Pane Styles */
-        .summary-title {
-            font-size: 1.4rem;
-            margin-bottom: 24px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 16px;
+        .btn-next {
+            background-color: var(--primary);
+            color: #fff;
         }
 
-        .summary-item {
+        .btn-next:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* SEÇÃO APRESENTAÇÃO & DIFERENCIAIS */
+        .about-section {
+            padding: 80px 0;
+            background-color: var(--dark-surface);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-title-wrapper {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-tag {
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-top: 5px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: grayscale(40%) contrast(110%);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .stat-card {
+            background-color: var(--dark-bg);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        /* SERVIÇOS */
+        .services-section {
+            padding: 80px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: var(--dark-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .service-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(229, 9, 20, 0.1);
+            border-radius: 6px;
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 16px;
-            font-size: 0.95rem;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
         }
 
-        .summary-item-label {
+        .service-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--primary);
+        }
+
+        .service-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* COMO FUNCIONA */
+        .how-section {
+            padding: 80px 0;
+            background-color: var(--dark-surface);
+        }
+
+        .steps-flow {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .flow-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .flow-num {
+            width: 45px;
+            height: 45px;
+            background-color: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin: 0 auto 15px auto;
+            font-size: 1.1rem;
+        }
+
+        .flow-step h4 {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        .flow-step p {
+            font-size: 0.85rem;
             color: var(--text-secondary);
         }
 
-        .summary-item-value {
-            font-weight: 600;
-            color: var(--text-primary);
-            text-align: right;
-            max-width: 60%;
+        /* BENEFICIOS */
+        .benefits-section {
+            padding: 80px 0;
         }
 
-        .summary-card {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 16px;
-            margin-top: 24px;
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
         }
 
-        .summary-card-row {
+        .benefit-item {
+            display: flex;
+            gap: 15px;
+        }
+
+        .benefit-check {
+            width: 24px;
+            height: 24px;
+            background-color: rgba(34, 197, 94, 0.1);
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 12px;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .benefit-check svg {
+            width: 12px;
+            height: 12px;
+            fill: var(--success);
+        }
+
+        .benefit-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .benefit-item p {
             font-size: 0.9rem;
             color: var(--text-secondary);
         }
 
-        .summary-card-row svg {
-            color: var(--accent-red);
-            width: 20px;
-            height: 20px;
+        /* AVALIAÇÕES */
+        .reviews-section {
+            padding: 80px 0;
+            background-color: var(--dark-surface);
         }
 
-        /* Benefícios Section */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-
-        .benefit-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            padding: 40px 32px;
-            border-radius: 16px;
-            transition: var(--transition-smooth);
-        }
-
-        .benefit-card:hover {
-            border-color: rgba(229, 9, 20, 0.3);
-            transform: translateY(-4px);
-        }
-
-        .benefit-icon {
-            color: var(--accent-red);
-            margin-bottom: 24px;
-        }
-
-        .benefit-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 16px;
-        }
-
-        .benefit-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        /* Testimonials / Avaliações */
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+            gap: 20px;
         }
 
         .review-card {
-            background: var(--bg-secondary);
+            background-color: var(--dark-bg);
             border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 32px;
+            padding: 25px;
+            border-radius: 8px;
         }
 
         .review-stars {
             color: #FFC107;
-            margin-bottom: 16px;
-            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
         }
 
         .review-text {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
             font-style: italic;
-            margin-bottom: 24px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
         }
 
         .review-author {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .review-avatar {
-            width: 44px;
-            height: 44px;
+            width: 36px;
+            height: 36px;
+            background-color: var(--border-color);
             border-radius: 50%;
-            background: var(--bg-tertiary);
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            color: var(--accent-red);
-            border: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--primary);
         }
 
-        .review-author-info h4 {
-            font-size: 1rem;
-            margin-bottom: 2px;
+        .review-info h5 {
+            font-size: 0.9rem;
+            font-weight: 700;
         }
 
-        .review-author-info span {
-            font-size: 0.8rem;
-            color: var(--accent-silver);
+        .review-info span {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
         }
 
         /* FAQ */
-        .faq-grid {
+        .faq-section {
+            padding: 80px 0;
+        }
+
+        .faq-list {
             max-width: 800px;
             margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
         }
 
         .faq-item {
-            background: var(--bg-secondary);
+            background-color: var(--dark-surface);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
             overflow: hidden;
-            transition: var(--transition-smooth);
         }
 
-        .faq-header {
-            padding: 24px;
+        .faq-question {
+            padding: 18px 20px;
+            font-weight: 700;
+            cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            cursor: pointer;
             user-select: none;
+            font-size: 0.95rem;
         }
 
-        .faq-title {
-            font-size: 1.1rem;
-            font-weight: 600;
+        .faq-question svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--text-main);
+            transition: transform 0.3s;
         }
 
-        .faq-icon {
-            font-size: 1.2rem;
-            transition: var(--transition-smooth);
-        }
-
-        .faq-content {
+        .faq-answer {
+            padding: 0 20px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            padding: 0 24px;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
             color: var(--text-secondary);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            border-top: 1px solid transparent;
         }
 
-        .faq-item.active {
-            border-color: rgba(229, 9, 20, 0.4);
+        .faq-item.active .faq-answer {
+            padding: 15px 20px;
+            border-top-color: var(--border-color);
         }
 
-        .faq-item.active .faq-content {
-            padding-bottom: 24px;
+        .faq-item.active .faq-question svg {
+            transform: rotate(180deg);
         }
 
-        .faq-item.active .faq-icon {
-            transform: rotate(45deg);
-            color: var(--accent-red);
+        /* MAPA & CONTATO */
+        .contact-section {
+            padding: 80px 0;
+            background-color: var(--dark-surface);
         }
 
-        /* Contato & Localização */
         .contact-grid {
             display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 48px;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
         }
 
-        .contact-info {
+        .contact-info-list {
             display: flex;
             flex-direction: column;
-            gap: 32px;
+            gap: 20px;
         }
 
-        .contact-card {
+        .contact-info-item {
             display: flex;
-            gap: 16px;
+            gap: 15px;
+            align-items: flex-start;
         }
 
-        .contact-card-icon {
-            color: var(--accent-red);
+        .contact-icon {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(229, 9, 20, 0.1);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
         }
 
-        .contact-card h4 {
-            font-size: 1.1rem;
-            margin-bottom: 4px;
+        .contact-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--primary);
         }
 
-        .contact-card p, .contact-card a {
-            color: var(--text-secondary);
-            text-decoration: none;
+        .contact-text h5 {
             font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .contact-text p, .contact-text a {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-decoration: none;
         }
 
         .map-wrapper {
-            border-radius: 20px;
+            border-radius: 8px;
             overflow: hidden;
             border: 1px solid var(--border-color);
-            height: 380px;
+            height: 300px;
         }
 
-        /* Footer */
+        /* RODAPÉ */
         footer {
-            background: var(--bg-secondary);
+            background-color: var(--dark-bg);
             border-top: 1px solid var(--border-color);
-            padding: 60px 0 30px;
+            padding: 40px 0 20px 0;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
-            gap: 48px;
-            margin-bottom: 48px;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
         }
 
-        .footer-brand p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-top: 16px;
+        .footer-brand h4 {
+            color: #fff;
+            margin-bottom: 10px;
         }
 
-        .footer-col h4 {
-            font-size: 1rem;
-            margin-bottom: 24px;
+        .footer-links h5 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 1px;
         }
 
-        .footer-links {
+        .footer-links ul {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
         }
 
         .footer-links a {
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.95rem;
-            transition: var(--transition-smooth);
+            transition: color 0.2s;
         }
 
         .footer-links a:hover {
-            color: var(--accent-red);
+            color: var(--primary);
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding-top: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.8rem;
         }
 
-        /* WhatsApp Button */
+        /* BOTÃO FLUTUANTE WHATSAPP */
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--accent-green);
-            color: white;
-            width: 60px;
-            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: #fff;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 999;
-            transition: var(--transition-smooth);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-decoration: none;
+            transition: transform 0.3s;
         }
 
         .whatsapp-float:hover {
@@ -1179,525 +1000,423 @@
         }
 
         .whatsapp-float svg {
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
+            fill: #fff;
         }
 
-        /* Alert Toast */
-        .toast {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            background: #FF2E2E;
-            color: white;
-            padding: 16px 24px;
-            border-radius: 10px;
-            box-shadow: var(--shadow-premium);
-            z-index: 1001;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            transform: translateY(150px);
-            opacity: 0;
-            transition: var(--transition-smooth);
-        }
-
-        .toast.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        /* Responsividade Extrema */
-        @media (max-width: 1024px) {
-            .hero-grid, .about-grid, .system-wrapper, .contact-grid {
+        /* RESPONSIVIDADE */
+        @media (max-width: 992px) {
+            .hero-grid, .about-grid, .contact-grid {
                 grid-template-columns: 1fr;
             }
 
-            .system-summary-pane {
-                border-left: none;
-                border-top: 1px solid var(--border-color);
-                padding: 40px;
+            .hero {
+                padding-top: 40px;
             }
 
-            .steps-grid, .benefits-grid, .reviews-grid {
+            .steps-flow {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .reviews-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
             }
         }
 
         @media (max-width: 768px) {
-            html {
-                font-size: 14px;
+            .menu-toggle {
+                display: flex;
             }
 
-            .hero-title {
-                font-size: 2.8rem;
-            }
-
-            .nav-links, .nav-btn-container {
+            nav {
                 display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--dark-surface);
+                padding: 20px;
+                border-bottom: 1px solid var(--border-color);
+                box-shadow: 0 5px 10px rgba(0,0,0,0.3);
             }
 
-            .mobile-menu-toggle {
-                display: block;
-            }
-
-            .system-main {
-                padding: 32px;
+            nav.active {
+                display: flex;
             }
 
             .footer-grid {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
 
-            .footer-bottom {
-                flex-direction: column;
-                gap: 16px;
-                text-align: center;
+            .hero-info h1 {
+                font-size: 2.1rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header / Nav -->
+    <!-- HEADER -->
     <header>
-        <div class="container nav-container">
+        <div class="container header-container">
             <a href="#" class="logo">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                </div>
-                <div class="logo-text">TORQUE<span>ONE</span></div>
+                <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                Torque One
             </a>
-            <ul class="nav-links">
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#sobre">Quem Somos</a></li>
-                <li><a href="#beneficios">Diferenciais</a></li>
-                <li><a href="#agendar">Agendamento</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
-            <div class="nav-btn-container">
-                <a href="#agendar" class="nav-btn">Agendar Agora</a>
-            </div>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
+            <nav id="navMenu">
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#beneficios">Diferenciais</a>
+                <a href="#agendamento" class="btn-header">Agendar Agora</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="container hero-grid">
-            <div>
-                <span class="badge">SaaS & Automação Inteligente</span>
-                <h1 class="hero-title">Manutenção de Performance para seu <span>Veículo</span></h1>
-                <p class="hero-description">Agende sua revisão completa, diagnóstico eletrônico ou corretiva de forma autônoma em menos de 1 minuto na Torque One.</p>
-                <div class="hero-benefits">
-                    <div class="hero-benefit-item">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Inspeção Rápida
+            <div class="hero-info">
+                <div class="badge">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    Revisão Preventiva Premium em Osasco
+                </div>
+                <h1>Cuidamos do seu carro com <span class="highlight">tecnologia</span> e precisão.</h1>
+                <p>Mais de 18 anos de experiência em diagnósticos e manutenções de veículos nacionais e importados. Qualidade premium, sem surpresas no orçamento.</p>
+                <div class="features-badge-list">
+                    <div class="badge">⚙️ Scanner Eletrônico</div>
+                    <div class="badge">⏱️ Agendamento Rápido</div>
+                    <div class="badge">🛡️ Até 12 meses de Garantia</div>
+                </div>
+            </div>
+
+            <!-- FORMULÁRIO / SISTEMA PRINCIPAL -->
+            <div class="app-card" id="agendamento">
+                <div class="app-header">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar"></div>
                     </div>
-                    <div class="hero-benefit-item">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Garantia de 12 Meses
-                    </div>
-                    <div class="hero-benefit-item">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Equipe Especialista
+                    <div class="step-indicator">
+                        <span id="stepCounter">Etapa 1 de 11</span>
+                        <span id="percentCounter">8%</span>
                     </div>
                 </div>
-                <a href="#agendar" class="btn btn-primary">Iniciar Agendamento</a>
-            </div>
-            <div class="hero-graphics">
-                <div class="speedometer-card">
-                    <div class="speedometer-header">
-                        <h4>MÓDULO DE DIAGNÓSTICO</h4>
-                        <span class="speedometer-status">Ativo</span>
+
+                <!-- ETAPA 1: SERVIÇO -->
+                <div class="step active" id="step1">
+                    <h3 class="step-title">Qual o serviço desejado?</h3>
+                    <p class="step-desc">Selecione o serviço principal que seu veículo necessita.</p>
+                    <div class="options-grid" id="servicesGrid">
+                        <div class="option-card" data-val="Revisão Preventiva Completa">🛠️ Revisão Preventiva</div>
+                        <div class="option-card" data-val="Troca de Óleo e Filtros">🛢️ Troca de Óleo</div>
+                        <div class="option-card" data-val="Alinhamento e Balanceamento">🚗 Alinhamento/Bal.</div>
+                        <div class="option-card" data-val="Manutenção de Freios">🛑 Freios</div>
+                        <div class="option-card" data-val="Manutenção de Suspensão">🔩 Suspensão</div>
+                        <div class="option-card" data-val="Injeção Eletrônica / Scanner">💻 Scanner/Injeção</div>
+                        <div class="option-card" data-val="Motor / Câmbio">⚙️ Motor/Câmbio</div>
+                        <div class="option-card" data-val="Ar Condicionado">❄️ Ar-Condicionado</div>
                     </div>
-                    <div style="font-size: 2rem; font-weight: 800;">100%</div>
-                    <div style="color: var(--text-secondary); font-size: 0.85rem;">Status do Scanner de Injeção Eletrônica</div>
-                    <div class="speed-bar">
-                        <div class="speed-fill"></div>
+                </div>
+
+                <!-- ETAPA 2: MARCA DO VEÍCULO -->
+                <div class="step" id="step2">
+                    <h3 class="step-title">Qual a marca do veículo?</h3>
+                    <p class="step-desc">Selecione a fabricante do seu automóvel.</p>
+                    <div class="options-grid" id="brandGrid">
+                        <div class="option-card" data-val="Chevrolet">Chevrolet</div>
+                        <div class="option-card" data-val="Volkswagen">Volkswagen</div>
+                        <div class="option-card" data-val="Fiat">Fiat</div>
+                        <div class="option-card" data-val="Toyota">Toyota</div>
+                        <div class="option-card" data-val="Honda">Honda</div>
+                        <div class="option-card" data-val="Hyundai">Hyundai</div>
+                        <div class="option-card" data-val="Jeep">Jeep</div>
+                        <div class="option-card" data-val="Outra">Outra Marca</div>
                     </div>
-                    <div style="font-size: 0.8rem; color: var(--accent-silver); margin-top: 10px;">Diagnósticos em Tempo Real habilitados.</div>
+                </div>
+
+                <!-- ETAPA 3: ANO -->
+                <div class="step" id="step3">
+                    <h3 class="step-title">Qual o ano de fabricação?</h3>
+                    <p class="step-desc">Informe o ano do seu modelo.</p>
+                    <div class="form-group">
+                        <input type="number" id="inputAno" class="text-input" placeholder="Ex: 2018" min="1980" max="2027">
+                    </div>
+                </div>
+
+                <!-- ETAPA 4: MODELO -->
+                <div class="step" id="step4">
+                    <h3 class="step-title">Qual o modelo do carro?</h3>
+                    <p class="step-desc">Digite a versão / modelo exato do veículo.</p>
+                    <div class="form-group">
+                        <input type="text" id="inputModelo" class="text-input" placeholder="Ex: Onix 1.0 LTZ">
+                    </div>
+                </div>
+
+                <!-- ETAPA 5: PROBLEMA APRESENTADO -->
+                <div class="step" id="step5">
+                    <h3 class="step-title">Relate o problema ou sintoma</h3>
+                    <p class="step-desc">Explique de forma resumida o que o veículo está apresentando.</p>
+                    <div class="form-group">
+                        <input type="text" id="inputProblema" class="text-input" placeholder="Ex: Barulho ao frear, luz da injeção acesa">
+                    </div>
+                </div>
+
+                <!-- ETAPA 6: DATA DESEJADA -->
+                <div class="step" id="step6">
+                    <h3 class="step-title">Selecione a data</h3>
+                    <p class="step-desc">Selecione o dia mais conveniente para o atendimento.</p>
+                    <div class="calendar-nav">
+                        <button type="button" class="calendar-btn" id="calPrev">&lt;</button>
+                        <span id="calMonthYear">Julho 2026</span>
+                        <button type="button" class="calendar-btn" id="calNext">&gt;</button>
+                    </div>
+                    <div class="calendar-grid" id="calendarDays">
+                        <!-- Gerado dinamicamente via JS -->
+                    </div>
+                </div>
+
+                <!-- ETAPA 7: HORÁRIO -->
+                <div class="step" id="step7">
+                    <h3 class="step-title">Escolha o horário</h3>
+                    <p class="step-desc">Selecione um horário disponível.</p>
+                    <div class="time-slots" id="timeSlotsContainer">
+                        <!-- Gerado dinamicamente via JS -->
+                    </div>
+                </div>
+
+                <!-- ETAPA 8: NOME -->
+                <div class="step" id="step8">
+                    <h3 class="step-title">Como podemos te chamar?</h3>
+                    <p class="step-desc">Informe seu nome completo.</p>
+                    <div class="form-group">
+                        <input type="text" id="inputNome" class="text-input" placeholder="Seu nome">
+                    </div>
+                </div>
+
+                <!-- ETAPA 9: WHATSAPP -->
+                <div class="step" id="step9">
+                    <h3 class="step-title">Qual o seu WhatsApp?</h3>
+                    <p class="step-desc">Enviaremos a confirmação e lembretes por aqui.</p>
+                    <div class="form-group">
+                        <input type="tel" id="inputWhatsapp" class="text-input" placeholder="(11) 99999-9999">
+                    </div>
+                </div>
+
+                <!-- ETAPA 10: OBSERVAÇÕES -->
+                <div class="step" id="step10">
+                    <h3 class="step-title">Informações Adicionais (Opcional)</h3>
+                    <p class="step-desc">Tem alguma observação extra sobre o carro ou necessidade de placa/km?</p>
+                    <div class="form-group">
+                        <input type="text" id="inputObs" class="text-input" placeholder="Placa, KM atual ou observações">
+                    </div>
+                </div>
+
+                <!-- ETAPA 11: RESUMO -->
+                <div class="step" id="step11">
+                    <h3 class="step-title">Confirme os Dados</h3>
+                    <p class="step-desc">Verifique as informações antes do envio.</p>
+                    <div class="summary-card" id="summaryCard">
+                        <!-- Preenchido via JS -->
+                    </div>
+                </div>
+
+                <!-- NAVEGAÇÃO -->
+                <div class="nav-buttons">
+                    <button class="btn-nav btn-prev" id="btnPrev" style="display:none;">Voltar</button>
+                    <button class="btn-nav btn-next" id="btnNext">Avançar</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Apresentação / Quem Somos -->
-    <section id="sobre" class="section-padding">
+    <!-- APRESENTAÇÃO -->
+    <section class="about-section" id="sobre">
         <div class="container about-grid">
-            <div class="about-stats">
-                <div class="stat-card">
-                    <div class="stat-num">18+</div>
-                    <div class="stat-label">Anos de Experiência</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-num">12k+</div>
-                    <div class="stat-label">Carros Atendidos</div>
+            <div class="about-info">
+                <span class="section-tag">Tradição & Confiança</span>
+                <h2 class="section-title">Torque One Centro Automotivo</h2>
+                <p style="color: var(--text-secondary); margin-top: 15px;">
+                    Com mais de 18 anos de mercado, investimos em engenharia de diagnóstico automotivo, permitindo resolver de forma exata e rápida falhas complexas em motores, transmissões eletrônicas e sistemas de injeção direta. 
+                </p>
+                <p style="color: var(--text-secondary); margin-top: 10px;">
+                    Nosso compromisso é com a transparência total. Você acompanha todas as fases do diagnóstico do seu veículo por meio de relatórios claros enviados diretamente no celular.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">18+</div>
+                        <div class="stat-label">Anos de Histórico</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10k+</div>
+                        <div class="stat-label">Veículos Atendidos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">De Aprovação</div>
+                    </div>
                 </div>
             </div>
-            <div class="about-content">
-                <span class="badge">Nossa história</span>
-                <h2>Qualidade, Tecnologia e Confiança na Manutenção</h2>
-                <p>Com quase duas décadas de dedicação ao setor automotivo, a Torque One investe constantemente nos mais sofisticados softwares de diagnóstico eletrônico do mercado para garantir que seu carro tenha o desempenho e a segurança ideal.</p>
-                <p>Nossos processos são focados na transparência técnica. Cada peça trocada é demonstrada e todo procedimento é validado digitalmente com o proprietário.</p>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80" alt="Equipamentos de Oficina Mecânica Torque One">
             </div>
         </div>
     </section>
 
-    <!-- Serviços -->
-    <section id="servicos" class="section-padding" style="background-color: var(--bg-secondary);">
+    <!-- SERVIÇOS -->
+    <section class="services-section" id="servicos">
         <div class="container">
-            <div class="section-header">
-                <span class="badge">Especialidades</span>
-                <h2>Sistemas de Alta Precisão</h2>
-                <p>Manutenções executadas seguindo o padrão recomendado por cada montadora.</p>
+            <div class="section-title-wrapper">
+                <span class="section-tag">O que fazemos</span>
+                <h2 class="section-title">Nossas Especialidades</h2>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-                        </div>
-                        <h3 class="service-title">Revisão Preventiva Completa</h3>
-                        <p class="service-description">Varredura eletrônica via scanner + check-up em 50 itens de desgaste.</p>
-                    </div>
-                    <div class="service-meta">
-                        <span>Tempo Estimado</span>
-                        <span>2 a 3 horas</span>
-                    </div>
+                    <div class="service-icon">🛠️</div>
+                    <h3>Revisão Preventiva</h3>
+                    <p>Substituição de correias, verificação de fluidos e freios conforme recomendação de fábrica.</p>
                 </div>
                 <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-                        </div>
-                        <h3 class="service-title">Injeção Eletrônica & Scanner</h3>
-                        <p class="service-description">Leitura avançada do barramento de dados do veículo com relatório completo.</p>
-                    </div>
-                    <div class="service-meta">
-                        <span>Tempo Estimado</span>
-                        <span>30 minutos</span>
-                    </div>
+                    <div class="service-icon">💻</div>
+                    <h3>Scanner Automotivo</h3>
+                    <p>Diagnóstico computadorizado de injeção eletrônica e sensores para apontar falhas exatas.</p>
                 </div>
                 <div class="service-card">
-                    <div>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-                        </div>
-                        <h3 class="service-title">Suspensão & Freios</h3>
-                        <p class="service-description">Inspeção detalhada de amortecedores, buchas, pivôs, pastilhas e discos.</p>
-                    </div>
-                    <div class="service-meta">
-                        <span>Tempo Estimado</span>
-                        <span>2 a 3 horas</span>
-                    </div>
+                    <div class="service-icon">🛑</div>
+                    <h3>Sistema de Freios</h3>
+                    <p>Instalação de pastilhas, discos, fluido de freio e teste eletrônico em sistemas ABS.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Alinhamento 3D</h3>
+                    <p>Alinhamento de precisão computadorizada e balanceamento de alta estabilidade.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Como Funciona -->
-    <section class="section-padding">
+    <!-- COMO FUNCIONA -->
+    <section class="how-section" id="como-funciona">
         <div class="container">
-            <div class="section-header">
-                <span class="badge">Agilidade</span>
-                <h2>Sua Jornada em 3 Passos</h2>
-                <p>Nossa plataforma acelera seu processo de atendimento sem burocracias.</p>
+            <div class="section-title-wrapper">
+                <span class="section-tag">Agilidade</span>
+                <h2 class="section-title">Como Funciona Nosso Agendamento</h2>
             </div>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-num">01</div>
-                    <h3 class="step-title">Insira os Dados do Carro</h3>
-                    <p class="step-desc">Selecione o fabricante, ano e tipo de serviço desejado no assistente dinâmico.</p>
+            <div class="steps-flow">
+                <div class="flow-step">
+                    <div class="flow-num">1</div>
+                    <h4>Escolha os Detalhes</h4>
+                    <p>Preencha nosso sistema rápido com os dados do seu veículo em menos de 1 minuto.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-num">02</div>
-                    <h3 class="step-title">Escolha o Horário</h3>
-                    <p class="step-desc">Utilize nosso calendário em tempo real integrado com a oficina oficial.</p>
+                <div class="flow-step">
+                    <div class="flow-num">2</div>
+                    <h4>Defina o Horário</h4>
+                    <p>Nosso calendário exibe slots atualizados em tempo real.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-num">03</div>
-                    <h3 class="step-title">Validação Rápida</h3>
-                    <p class="step-desc">Um link de confirmação será enviado via WhatsApp para o início das vistorias.</p>
+                <div class="flow-step">
+                    <div class="flow-num">3</div>
+                    <h4>Envio Seguro</h4>
+                    <p>O agendamento é sincronizado direto no WhatsApp e no nosso sistema da oficina.</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-num">4</div>
+                    <h4>Entrega Rápida</h4>
+                    <p>Traga o carro na hora marcada e receba atendimento exclusivo e preferencial.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sistema Principal (Agendamento & Orçamento) -->
-    <section id="agendar" class="section-padding system-section">
+    <!-- DIFERENCIAIS/BENEFICIOS -->
+    <section class="benefits-section" id="beneficios">
         <div class="container">
-            <div class="section-header">
-                <span class="badge">Agendador 2.0</span>
-                <h2>Reserve sua vaga e faça Orçamento</h2>
-                <p>Sistema inteligente automatizado com inteligência de agendamento em tempo real.</p>
-            </div>
-
-            <div class="system-wrapper">
-                <!-- Painel de entrada dos dados (Esquerda) -->
-                <div class="system-main">
-                    <div class="progress-container">
-                        <div class="progress-stats">
-                            <span id="progress-text">ETAPA 1 DE 5</span>
-                            <span id="progress-percentage">20%</span>
-                        </div>
-                        <div class="progress-track">
-                            <div class="progress-bar-fill" id="progress-fill"></div>
-                        </div>
-                    </div>
-
-                    <form id="agendamento-form" onsubmit="handleSubmit(event)">
-                        <div class="step-engine-content">
-                            
-                            <!-- ETAPA 1: Escolha do Serviço -->
-                            <div class="step-view active" id="step-1">
-                                <h3>Selecione o Serviço</h3>
-                                <p class="step-subtitle">Selecione a categoria de serviço prioritária para a inspeção.</p>
-                                <div class="options-grid">
-                                    <div class="option-card" onclick="selectService('Revisão Preventiva Completa')">Revisão Preventiva</div>
-                                    <div class="option-card" onclick="selectService('Troca de Óleo')">Troca de Óleo</div>
-                                    <div class="option-card" onclick="selectService('Freios')">Freios</div>
-                                    <div class="option-card" onclick="selectService('Suspensão')">Suspensão</div>
-                                    <div class="option-card" onclick="selectService('Motor')">Motor</div>
-                                    <div class="option-card" onclick="selectService('Injeção Eletrônica')">Injeção Eletrônica</div>
-                                    <div class="option-card" onclick="selectService('Ar Condicionado')">Ar Condicionado</div>
-                                    <div class="option-card" onclick="selectService('Alinhamento')">Alinhamento & Balan.</div>
-                                </div>
-                            </div>
-
-                            <!-- ETAPA 2: Dados do Veículo -->
-                            <div class="step-view" id="step-2">
-                                <h3>Dados do Veículo</h3>
-                                <p class="step-subtitle">Esses dados nos auxiliam a reservar as peças corretas para seu modelo.</p>
-                                <div class="grid-2">
-                                    <div class="form-group">
-                                        <label class="form-label">Marca</label>
-                                        <select class="form-select" id="car-brand" onchange="updateBrandSummary()">
-                                            <option value="">Selecione...</option>
-                                            <option value="Chevrolet">Chevrolet</option>
-                                            <option value="Volkswagen">Volkswagen</option>
-                                            <option value="Fiat">Fiat</option>
-                                            <option value="Toyota">Toyota</option>
-                                            <option value="Honda">Honda</option>
-                                            <option value="Hyundai">Hyundai</option>
-                                            <option value="Nissan">Nissan</option>
-                                            <option value="Renault">Renault</option>
-                                            <option value="Ford">Ford</option>
-                                            <option value="Outros">Outros</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label">Modelo</label>
-                                        <input type="text" class="form-input" id="car-model" placeholder="Ex: Onix, Gol..." oninput="updateModelSummary()">
-                                    </div>
-                                </div>
-                                <div class="grid-2">
-                                    <div class="form-group">
-                                        <label class="form-label">Ano</label>
-                                        <input type="number" class="form-input" id="car-year" placeholder="Ex: 2020" oninput="updateYearSummary()">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="form-label">KM Estimada</label>
-                                        <input type="number" class="form-input" id="car-km" placeholder="Ex: 45000">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ETAPA 3: Sintomas e Problema -->
-                            <div class="step-view" id="step-3">
-                                <h3>O que o veículo apresenta?</h3>
-                                <p class="step-subtitle">Descreva brevemente barulhos ou sintomas incomuns.</p>
-                                <div class="form-group">
-                                    <label class="form-label">Descrição do Problema</label>
-                                    <textarea class="form-textarea" id="car-problem" rows="4" placeholder="Ex: Pedal do freio vibrando muito ou barulho na dianteira ao passar por valetas..."></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Deseja anexar fotos? (Opcional)</label>
-                                    <input type="file" class="form-input" id="car-photo" accept="image/*">
-                                </div>
-                            </div>
-
-                            <!-- ETAPA 4: Data e Hora -->
-                            <div class="step-view" id="step-4">
-                                <h3>Data e Horário Desejados</h3>
-                                <p class="step-subtitle">Insira uma previsão para recepção técnica em nossa sede.</p>
-                                <div class="grid-2">
-                                    <div class="calendar-widget">
-                                        <div class="calendar-header">
-                                            <button type="button" class="btn btn-secondary" style="padding: 6px 12px;" onclick="prevMonth()">&lt;</button>
-                                            <span id="calendar-month-year" style="font-weight: 700;">Julho 2026</span>
-                                            <button type="button" class="btn btn-secondary" style="padding: 6px 12px;" onclick="nextMonth()">&gt;</button>
-                                        </div>
-                                        <div class="calendar-days">
-                                            <div class="calendar-day-label">D</div>
-                                            <div class="calendar-day-label">S</div>
-                                            <div class="calendar-day-label">T</div>
-                                            <div class="calendar-day-label">Q</div>
-                                            <div class="calendar-day-label">Q</div>
-                                            <div class="calendar-day-label">S</div>
-                                            <div class="calendar-day-label">S</div>
-                                        </div>
-                                        <div class="calendar-grid-cells" id="calendar-cells"></div>
-                                    </div>
-                                    <div>
-                                        <label class="form-label">Horários Disponíveis</label>
-                                        <div class="times-grid" id="times-grid">
-                                            <div class="time-cell" onclick="selectTime('08:30')">08:30</div>
-                                            <div class="time-cell" onclick="selectTime('09:30')">09:30</div>
-                                            <div class="time-cell" onclick="selectTime('11:00')">11:00</div>
-                                            <div class="time-cell" onclick="selectTime('14:00')">14:00</div>
-                                            <div class="time-cell" onclick="selectTime('15:30')">15:30</div>
-                                            <div class="time-cell" onclick="selectTime('16:30')">16:30</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ETAPA 5: Dados de Contato -->
-                            <div class="step-view" id="step-5">
-                                <h3>Seus Dados de Contato</h3>
-                                <p class="step-subtitle">Precisamos para registrar o agendamento e sincronizar com seu WhatsApp.</p>
-                                <div class="form-group">
-                                    <label class="form-label">Nome Completo</label>
-                                    <input type="text" class="form-input" id="client-name" placeholder="Ex: Roberto Silva">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Seu WhatsApp</label>
-                                    <input type="tel" class="form-input" id="client-phone" placeholder="Ex: (11) 99999-9999" oninput="applyPhoneMask(this)">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">E-mail</label>
-                                    <input type="email" class="form-input" id="client-email" placeholder="Ex: roberto@exemplo.com">
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Footer do Formulário -->
-                        <div class="step-footer">
-                            <button type="button" class="btn btn-secondary" id="btn-prev" onclick="prevStep()" style="visibility: hidden;">Voltar</button>
-                            <button type="button" class="btn btn-primary" id="btn-next" onclick="nextStep()">Continuar</button>
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Painel Resumo (Direita) -->
-                <div class="system-summary-pane">
-                    <div>
-                        <h3 class="summary-title">Resumo do Pedido</h3>
-                        <div class="summary-item">
-                            <span class="summary-item-label">Serviço:</span>
-                            <span class="summary-item-value" id="summary-service">Não selecionado</span>
-                        </div>
-                        <div class="summary-item">
-                            <span class="summary-item-label">Veículo:</span>
-                            <span class="summary-item-value" id="summary-car">Selecione na etapa 2</span>
-                        </div>
-                        <div class="summary-item">
-                            <span class="summary-item-label">Ano:</span>
-                            <span class="summary-item-value" id="summary-year">-</span>
-                        </div>
-                        <div class="summary-item">
-                            <span class="summary-item-label">Data Reservada:</span>
-                            <span class="summary-item-value" id="summary-date">Definir data</span>
-                        </div>
-                        <div class="summary-item">
-                            <span class="summary-item-label">Hora Reservada:</span>
-                            <span class="summary-item-value" id="summary-time">Definir horário</span>
-                        </div>
-                    </div>
-
-                    <div class="summary-card">
-                        <div class="summary-card-row">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                            <div>Sincronização imediata via API WhatsApp Business ativa.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefícios do Software -->
-    <section id="beneficios" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <span class="badge">Vantagens</span>
-                <h2>Por que agendar na Torque One?</h2>
-                <p>Nossa mecânica e sistema operacional garantem tranquilidade em sua jornada.</p>
+            <div class="section-title-wrapper">
+                <span class="section-tag">Por que escolher</span>
+                <h2 class="section-title">Vantagens da Torque One</h2>
             </div>
             <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <div class="benefit-item">
+                    <div class="benefit-check">✓</div>
+                    <div>
+                        <h4>Peças Genuínas e Homologadas</h4>
+                        <p>Trabalhamos com marcas originais e líderes de mercado para assegurar durabilidade extra ao reparo.</p>
                     </div>
-                    <h3>Google Agenda Sync</h3>
-                    <p>O agendamento é sincronizado direto em seu calendário pessoal do Google.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon><line x1="12" y1="22" x2="12" y2="15.5"></line><polyline points="22 8.5 12 15.5 2 8.5"></polyline><polyline points="2 15.5 12 8.5 22 15.5"></polyline><line x1="12" y1="2" x2="12" y2="8.5"></line></svg>
+                <div class="benefit-item">
+                    <div class="benefit-check">✓</div>
+                    <div>
+                        <h4>Garantia Total do Serviço</h4>
+                        <p>Cobrimos nossos consertos com políticas de garantia estendida de até 1 ano.</p>
                     </div>
-                    <h3>Garantia Unificada</h3>
-                    <p>Todas as peças aplicadas possuem laudo eletrônico de integridade com garantia de até 1 ano.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <div class="benefit-item">
+                    <div class="benefit-check">✓</div>
+                    <div>
+                        <h4>Diagnóstico Sem Chute</h4>
+                        <p>Temos osciloscópios e scanners profissionais que encontram o real problema, poupando custos desnecessários.</p>
                     </div>
-                    <h3>Suporte Rápido</h3>
-                    <p>Abertura de canal via WhatsApp direto com o mecânico responsável pela inspeção.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-check">✓</div>
+                    <div>
+                        <h4>Facilidade de Pagamento</h4>
+                        <p>Dividimos as despesas no cartão de crédito em até 12x para você cuidar do carro com tranquilidade.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Avaliações -->
-    <section class="section-padding" style="background-color: var(--bg-secondary);">
+    <!-- AVALIAÇÕES -->
+    <section class="reviews-section">
         <div class="container">
-            <div class="section-header">
-                <span class="badge">Depoimentos</span>
-                <h2>Quem já utilizou recomenda</h2>
-                <p>Nossa reputação foi construída em cima de avaliações 5 estrelas.</p>
+            <div class="section-title-wrapper">
+                <span class="section-tag">Opinião de Clientes</span>
+                <h2 class="section-title">Quem Confia, Recomenda</h2>
             </div>
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Excelente atendimento. O agendamento online funcionou perfeitamente e o relatório do scanner foi enviado pelo celular de forma prática."</p>
+                    <p class="review-text">"Excelente atendimento! Fiz a revisão preventiva e o carro ficou excelente. Tudo claro, sem surpresas no valor final."</p>
                     <div class="review-author">
-                        <div class="review-avatar">MA</div>
-                        <div class="review-author-info">
-                            <h4>Maurício de Almeida</h4>
+                        <div class="review-avatar">RC</div>
+                        <div class="review-info">
+                            <h5>Rodrigo Camargo</h5>
+                            <span>Dono de Chevrolet Cruze</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Tenho um carro importado e sempre tive receio de oficinas. Na Torque One me mostraram tudo no scanner, com transparência rara de se ver."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">AM</div>
+                        <div class="review-info">
+                            <h5>Aline Mendes</h5>
+                            <span>Dona de Audi A3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"O sistema de agendamento é maravilhoso. Marquei para quarta-feira cedo, deixei o carro e em 1 hora estava com o óleo trocado."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">JS</div>
+                        <div class="review-info">
+                            <h5>Jeferson Souza</h5>
                             <span>Dono de Honda Civic</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Recomendo! Fizeram a revisão preventiva do meu Onix e encontraram folgas na suspensão que outra oficina não viu. Transparência nota 10."</p>
-                    <div class="review-author">
-                        <div class="review-avatar">PR</div>
-                        <div class="review-author-info">
-                            <h4>Patricia Rocha</h4>
-                            <span>Dona de Chevrolet Onix</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Troca de óleo rápida e sem empurrar serviços desnecessários. Profissionais super éticos e atenciosos com o cliente."</p>
-                    <div class="review-author">
-                        <div class="review-avatar">GL</div>
-                        <div class="review-author-info">
-                            <h4>Guilherme Leme</h4>
-                            <span>Dono de Toyota Corolla</span>
                         </div>
                     </div>
                 </div>
@@ -1706,405 +1425,387 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="section-padding">
+    <section class="faq-section">
         <div class="container">
-            <div class="section-header">
-                <span class="badge">FAQ</span>
-                <h2>Dúvidas Frequentes</h2>
-                <p>Principais respostas sobre agendamento, orçamentos e garantias.</p>
+            <div class="section-title-wrapper">
+                <span class="section-tag">Tire Dúvidas</span>
+                <h2 class="section-title">Perguntas Frequentes</h2>
             </div>
-            <div class="faq-grid">
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-header">
-                        <span class="faq-title">Preciso pagar alguma coisa ao agendar pelo site?</span>
-                        <span class="faq-icon">+</span>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Preciso deixar o carro o dia todo?
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
                     </div>
-                    <div class="faq-content">
-                        Não. O agendamento é totalmente gratuito e visa apenas garantir o seu horário de atendimento prioritário em nossa oficina.
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-header">
-                        <span class="faq-title">Quais peças são utilizadas nos reparos?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-content">
-                        Utilizamos exclusivamente componentes originais de montadora ou marcas homologadas que atendem as rígidas especificações técnicas do fabricante do veículo.
+                    <div class="faq-answer">
+                        Depende do serviço. Troca de óleo leva em média 40 minutos, já uma Revisão Preventiva Completa varia de 2 a 3 horas. Informaremos o prazo exato no agendamento.
                     </div>
                 </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-header">
-                        <span class="faq-title">Como funciona a garantia dos serviços prestados?</span>
-                        <span class="faq-icon">+</span>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Trabalham com peças fornecidas pelo cliente?
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
                     </div>
-                    <div class="faq-content">
-                        Oferecemos até 12 meses de garantia dependendo do serviço efetuado e componentes substituídos, todos devidamente discriminados no certificado digital enviado.
+                    <div class="faq-answer">
+                        Para manter o padrão de qualidade e a nossa garantia de serviço de até 12 meses, preferimos aplicar nossos componentes de marcas homologadas e com procedência rastreada.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como funciona o pagamento?
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        Aceitamos Pix, cartões de crédito em até 12x, débito e oferecemos condições especiais para faturamento de frotas comerciais.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contato / Mapa -->
-    <section class="section-padding" style="background-color: var(--bg-secondary);">
+    <!-- CONTATO / MAPA -->
+    <section class="contact-section">
         <div class="container contact-grid">
-            <div class="contact-info">
-                <div>
-                    <span class="badge">Atendimento</span>
-                    <h2>Fale Conosco</h2>
-                    <p style="color: var(--text-secondary); margin-bottom: 24px;">Ficou com alguma dúvida? Entre em contato por telefone ou visite nossa matriz em Osasco/SP.</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-card-icon">
-                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div>
+                <span class="section-tag">Contato</span>
+                <h2 class="section-title" style="margin-bottom: 25px;">Fale Conosco</h2>
+                <div class="contact-info-list">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <h5>Endereço</h5>
+                            <p>Avenida dos Autonomistas, 5248 - Osasco/SP</p>
+                        </div>
                     </div>
-                    <div>
-                        <h4>Endereço</h4>
-                        <p>Avenida dos Autonomistas, 5248 - Osasco/SP</p>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-text">
+                            <h5>Fixo & Whatsapp</h5>
+                            <p>(11) 4175-2863 / (11) 99872-4518</p>
+                        </div>
                     </div>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-card-icon">
-                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    </div>
-                    <div>
-                        <h4>Contatos Oficiais</h4>
-                        <p>Tel: (11) 4175-2863<br>E-mail: contato@torqueoneauto.com.br</p>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-text">
+                            <h5>Horário</h5>
+                            <p>Segunda a Sexta: 08h às 18h | Sábado: 08h às 13h</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="map-wrapper">
-                <!-- Google Maps Osasco mock / Embed Simplificado para estabilidade -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.91572914101!2d-46.7915!3d-23.5329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMxJzU4LjQiUyA0NsKwNDcnMjkuNCJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <!-- Google Maps em modo escuro integrado -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.0776518774787!2d-46.7937375!3d-23.5303722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceff1592ee9bb1%3A0x633fa3ff9f976fd1!2sAv.%20dos%20Autonomistas%2C%205248%20-%20Osasco%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- Rodapé -->
+    <!-- FOOTER -->
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="logo">
-                    <div class="logo-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                    </div>
-                    <div class="logo-text">TORQUE<span>ONE</span></div>
-                </a>
-                <p>Centro de engenharia automotiva especializado em mecânica fina, diagnósticos integrados e manutenção técnica.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>⚙️ Torque One</h4>
+                    <p>Alta tecnologia e transparência para seu automóvel rodar com total segurança.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Navegação</h5>
+                    <ul>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#agendamento">Agendamento</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>Contato</h5>
+                    <p>contato@torqueoneauto.com.br</p>
+                    <p>Av. dos Autonomistas, 5248</p>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Links</h4>
-                <ul class="footer-links">
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#sobre">Quem Somos</a></li>
-                    <li><a href="#agendar">Reservar Vaga</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Torque One Centro Automotivo. Todos os direitos reservados.</p>
             </div>
-            <div class="footer-col">
-                <h4>Suporte</h4>
-                <ul class="footer-links">
-                    <li><a href="#faq">Dúvidas</a></li>
-                    <li><a href="#contato">Fale Conosco</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Funcionamento</h4>
-                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8;">
-                    Segunda a Sexta: 08h às 18h<br>
-                    Sábado: 08h às 13h<br>
-                    Domingo: Fechado
-                </p>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <div>&copy; 2026 Torque One Centro Automotivo. Todos os direitos reservados. CNPJ: 00.000.000/0001-00</div>
-            <div>Desenvolvido com tecnologia inteligente.</div>
         </div>
     </footer>
 
-    <!-- Toast de erro/validação -->
-    <div id="toast" class="toast">Aviso: Selecione as opções corretas.</div>
-
-    <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/5511998724518?text=Ol%C3%A1%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20manuten%C3%A7%C3%A3o." target="_blank" class="whatsapp-float">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.742.002-2.596-1.01-5.036-2.85-6.876C16.644 2.148 14.213 1.13 11.818 1.13c-5.441 0-9.863 4.372-9.867 9.743-.001 1.73.475 3.42 1.378 4.912l-.938 3.425 3.656-.949z"/></svg>
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/5511998724518?text=Olá! Gostaria de falar com a Torque One." class="whatsapp-float" target="_blank" aria-label="Fale conosco pelo Whatsapp">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 2.01 14.069.99 11.513.99c-5.442 0-9.87 4.372-9.874 9.802-.001 1.73.488 3.41 1.417 4.869l-.392 1.432.392-.392zm11.378-4.811c-.302-.15-1.785-.88-2.063-.981-.277-.1-.479-.15-.679.15-.201.3-.778.981-.954 1.182-.176.201-.353.226-.655.075-1.205-.6-2.101-1.102-2.923-2.51-.21-.36.21-.334.6-.112.35.199.3.3.45.45.15.15.075.385-.038.614-.112.228-.979 2.357-1.34 3.23-.353.849-.706.734-.954.722-.2-.009-.429-.011-.655-.011-.226 0-.594.085-.904.425-.311.34-1.183 1.157-1.183 2.82 0 1.663 1.21 3.268 1.378 3.493.168.226 2.38 3.633 5.766 5.088.805.347 1.433.554 1.923.71.808.257 1.545.221 2.128.134.65-.097 1.785-.73 2.038-1.436.252-.706.252-1.313.176-1.436-.075-.123-.277-.199-.579-.349z"/></svg>
     </a>
 
-    <!-- Lógica Principal -->
+    <!-- JAVASCRIPT: FLUXO E FUNCIONALIDADES -->
     <script>
-        let currentStep = 1;
-        const totalSteps = 5;
+        // MENU MOBILE
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
 
-        // Dados coletados
-        let selectedService = '';
-        let carBrand = '';
-        let carModel = '';
-        let carYear = '';
-        let carKm = '';
-        let carProblem = '';
-        let selectedDate = '';
-        let selectedTimeSlot = '';
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
 
-        // Objeto de Data Atualizado para controle do calendário
-        let currentMonth = 6; // Julho (index 6)
+        // FAQ INTERATIVO
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-answer').style.maxHeight = null;
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                    const answer = item.querySelector('.faq-answer');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+
+        // SISTEMA DE AGENDAMENTO
+        const state = {
+            step: 1,
+            totalSteps: 11,
+            servico: '',
+            marca: '',
+            ano: '',
+            modelo: '',
+            problema: '',
+            data: '',
+            horario: '',
+            nome: '',
+            whatsapp: '',
+            observacoes: ''
+        };
+
+        const steps = document.querySelectorAll('.step');
+        const btnPrev = document.getElementById('btnPrev');
+        const btnNext = document.getElementById('btnNext');
+        const progressBar = document.getElementById('progressBar');
+        const stepCounter = document.getElementById('stepCounter');
+        const percentCounter = document.getElementById('percentCounter');
+
+        // Seletor de Serviço e Marcas
+        const servicesGrid = document.getElementById('servicesGrid');
+        const brandGrid = document.getElementById('brandGrid');
+
+        function setupOptionGrid(grid, stateKey) {
+            grid.addEventListener('click', (e) => {
+                const card = e.target.closest('.option-card');
+                if (!card) return;
+                grid.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+                state[stateKey] = card.dataset.val;
+                setTimeout(() => { nextStep(); }, 300); // Avanço rápido de 300ms para UX fluida
+            });
+        }
+
+        setupOptionGrid(servicesGrid, 'servico');
+        setupOptionGrid(brandGrid, 'marca');
+
+        // CALENDÁRIO INTELIGENTE (JULHO/AGOSTO 2026)
         let currentYear = 2026;
+        let currentMonth = 6; // Julho (0-indexed)
+        const calendarMonthYear = document.getElementById('calMonthYear');
+        const calendarDays = document.getElementById('calendarDays');
 
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
-        }
+        const mesesStr = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
-        function toggleMobileMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '80px';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.background = 'var(--bg-primary)';
-                navLinks.style.padding = '24px';
-                navLinks.style.borderBottom = '1px solid var(--border-color)';
+        function renderCalendar() {
+            calendarMonthYear.textContent = `${mesesStr[currentMonth]} ${currentYear}`;
+            calendarDays.innerHTML = '';
+
+            const diasSemana = ["D", "S", "T", "Q", "Q", "S", "S"];
+            diasSemana.forEach(d => {
+                const div = document.createElement('div');
+                div.className = 'calendar-day-header';
+                div.textContent = d;
+                calendarDays.appendChild(div);
+            });
+
+            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+            const totalDays = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+            for (let i = 0; i < firstDay; i++) {
+                const empty = document.createElement('div');
+                calendarDays.appendChild(empty);
+            }
+
+            for (let day = 1; day <= totalDays; day++) {
+                const dayDiv = document.createElement('div');
+                dayDiv.className = 'calendar-day';
+                dayDiv.textContent = day;
+
+                const dateObj = new Date(currentYear, currentMonth, day);
+                const isSunday = dateObj.getDay() === 0;
+                
+                // Bloqueia domingos e datas passadas a Julho de 2026 (fictício para o ano corrente)
+                if (isSunday) {
+                    dayDiv.classList.add('disabled');
+                } else {
+                    dayDiv.addEventListener('click', () => {
+                        calendarDays.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('selected'));
+                        dayDiv.classList.add('selected');
+                        state.data = `${day.toString().padStart(2, '0')}/${(currentMonth + 1).toString().padStart(2, '0')}/${currentYear}`;
+                        renderTimeSlots();
+                        setTimeout(() => { nextStep(); }, 300);
+                    });
+                }
+                calendarDays.appendChild(dayDiv);
             }
         }
 
-        function toggleFaq(element) {
-            const isActive = element.classList.contains('active');
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
-                item.querySelector('.faq-content').style.maxHeight = null;
-            });
-            if (!isActive) {
-                element.classList.add('active');
-                const content = element.querySelector('.faq-content');
-                content.style.maxHeight = content.scrollHeight + 'px';
-            }
-        }
+        document.getElementById('calPrev').addEventListener('click', () => {
+            if (currentMonth > 6) { currentMonth--; renderCalendar(); }
+        });
+        document.getElementById('calNext').addEventListener('click', () => {
+            if (currentMonth < 7) { currentMonth++; renderCalendar(); }
+        });
 
-        function selectService(service) {
-            selectedService = service;
-            document.querySelectorAll('.option-card').forEach(card => {
-                card.classList.remove('selected');
-                if (card.textContent.includes(service) || (service === 'Revisão Preventiva Completa' && card.textContent.includes('Preventiva'))) {
-                    card.classList.add('selected');
+        // HORÁRIOS DISPONÍVEIS (SÁBADO DAS 8H ÀS 13H E SEMANA ATÉ ÀS 18H)
+        const timeSlotsContainer = document.getElementById('timeSlotsContainer');
+        const slotsSugeridos = ["08:00", "09:00", "10:00", "11:00", "13:30", "14:30", "15:30", "16:30"];
+
+        function renderTimeSlots() {
+            timeSlotsContainer.innerHTML = '';
+            slotsSugeridos.forEach(time => {
+                const div = document.createElement('div');
+                div.className = 'time-slot';
+                div.textContent = time;
+
+                // Fictício: Bloqueia 10:00 para simular agendamento existente
+                if (time === "10:00") {
+                    div.classList.add('disabled');
+                } else {
+                    div.addEventListener('click', () => {
+                        timeSlotsContainer.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+                        div.classList.add('selected');
+                        state.horario = time;
+                        setTimeout(() => { nextStep(); }, 300);
+                    });
                 }
+                timeSlotsContainer.appendChild(div);
             });
-            document.getElementById('summary-service').textContent = service;
-            nextStep();
         }
 
-        function updateBrandSummary() {
-            carBrand = document.getElementById('car-brand').value;
-            updateCarString();
-        }
+        // MÁSCARA TELEFONE WHATSAPP
+        const inputWhatsapp = document.getElementById('inputWhatsapp');
+        inputWhatsapp.addEventListener('input', (e) => {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+        });
 
-        function updateModelSummary() {
-            carModel = document.getElementById('car-model').value;
-            updateCarString();
-        }
-
-        function updateYearSummary() {
-            carYear = document.getElementById('car-year').value;
-            document.getElementById('summary-year').textContent = carYear || '-';
-        }
-
-        function updateCarString() {
-            const brand = carBrand || '';
-            const model = carModel || '';
-            const combined = `${brand} ${model}`.trim();
-            document.getElementById('summary-car').textContent = combined || 'Selecione na etapa 2';
-        }
-
-        function selectTime(time) {
-            selectedTimeSlot = time;
-            document.querySelectorAll('.time-cell').forEach(cell => {
-                cell.classList.remove('selected');
-                if (cell.textContent === time) {
-                    cell.classList.add('selected');
-                }
+        // NAVEGAÇÃO DE FLUXO E VALIDAÇÃO
+        function updateUI() {
+            steps.forEach((s, idx) => {
+                s.classList.toggle('active', idx + 1 === state.step);
             });
-            document.getElementById('summary-time').textContent = time;
-        }
 
-        function applyPhoneMask(input) {
-            let value = input.value.replace(/\D/g, "");
-            if (value.length > 11) value = value.slice(0, 11);
-            if (value.length > 10) {
-                input.value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
-            } else if (value.length > 5) {
-                input.value = `(${value.slice(0, 2)}) ${value.slice(2, 6)}-${value.slice(6)}`;
-            } else if (value.length > 2) {
-                input.value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
-            } else if (value.length > 0) {
-                input.value = `(${value}`;
+            btnPrev.style.display = state.step > 1 ? 'flex' : 'none';
+            if (state.step === state.totalSteps) {
+                btnNext.textContent = 'Enviar no WhatsApp';
+                renderSummary();
             } else {
-                input.value = "";
+                btnNext.textContent = 'Avançar';
+            }
+
+            const pct = Math.round((state.step / state.totalSteps) * 100);
+            progressBar.style.width = `${pct}%`;
+            stepCounter.textContent = `Etapa ${state.step} de ${state.totalSteps}`;
+            percentCounter.textContent = `${pct}%`;
+        }
+
+        function validateStep() {
+            if (state.step === 1 && !state.servico) return alert('Selecione o serviço!');
+            if (state.step === 2 && !state.marca) return alert('Selecione a fabricante!');
+            if (state.step === 3) {
+                const val = document.getElementById('inputAno').value;
+                if (!val) return alert('Digite o ano!');
+                state.ano = val;
+            }
+            if (state.step === 4) {
+                const val = document.getElementById('inputModelo').value;
+                if (!val) return alert('Insira o modelo do carro!');
+                state.modelo = val;
+            }
+            if (state.step === 5) {
+                const val = document.getElementById('inputProblema').value;
+                if (!val) return alert('Conte brevemente o problema!');
+                state.problema = val;
+            }
+            if (state.step === 6 && !state.data) return alert('Escolha o dia no calendário!');
+            if (state.step === 7 && !state.horario) return alert('Selecione o horário!');
+            if (state.step === 8) {
+                const val = document.getElementById('inputNome').value;
+                if (!val) return alert('Informe seu nome!');
+                state.nome = val;
+            }
+            if (state.step === 9) {
+                const val = document.getElementById('inputWhatsapp').value;
+                if (val.length < 14) return alert('Telefone inválido!');
+                state.whatsapp = val;
+            }
+            if (state.step === 10) {
+                state.observacoes = document.getElementById('inputObs').value || 'Sem observações';
+            }
+            return true;
+        }
+
+        function nextStep() {
+            if (!validateStep()) return;
+            if (state.step < state.totalSteps) {
+                state.step++;
+                updateUI();
+            } else {
+                sendToWhatsapp();
             }
         }
 
         function prevStep() {
-            if (currentStep > 1) {
-                changeStep(currentStep - 1);
+            if (state.step > 1) {
+                state.step--;
+                updateUI();
             }
         }
 
-        function nextStep() {
-            // Validações por etapa
-            if (currentStep === 1 && !selectedService) {
-                showToast("Por favor, selecione um serviço para avançar.");
-                return;
-            }
-            if (currentStep === 2) {
-                carBrand = document.getElementById('car-brand').value;
-                carModel = document.getElementById('car-model').value;
-                carYear = document.getElementById('car-year').value;
-                carKm = document.getElementById('car-km').value;
-                if (!carBrand || !carModel || !carYear) {
-                    showToast("Preencha a Marca, Modelo e Ano do Veículo.");
-                    return;
-                }
-            }
-            if (currentStep === 3) {
-                carProblem = document.getElementById('car-problem').value;
-                if (!carProblem) {
-                    showToast("Escreva brevemente o sintoma do problema.");
-                    return;
-                }
-            }
-            if (currentStep === 4) {
-                if (!selectedDate) {
-                    showToast("Por favor, escolha uma data no calendário.");
-                    return;
-                }
-                if (!selectedTimeSlot) {
-                    showToast("Por favor, selecione um horário disponível.");
-                    return;
-                }
-            }
-            if (currentStep === 5) {
-                const name = document.getElementById('client-name').value;
-                const phone = document.getElementById('client-phone').value;
-                const email = document.getElementById('client-email').value;
-                if (!name || !phone || !email) {
-                    showToast("Preencha todos os dados de contato obrigatórios.");
-                    return;
-                }
-                triggerSubmit();
-                return;
-            }
+        btnNext.addEventListener('click', nextStep);
+        btnPrev.addEventListener('click', prevStep);
 
-            if (currentStep < totalSteps) {
-                changeStep(currentStep + 1);
-            }
+        function renderSummary() {
+            const summaryCard = document.getElementById('summaryCard');
+            summaryCard.innerHTML = `
+                <div class="summary-row"><span class="summary-label">Serviço:</span><span class="summary-val">${state.servico}</span></div>
+                <div class="summary-row"><span class="summary-label">Marca/Modelo:</span><span class="summary-val">${state.marca} ${state.modelo} (${state.ano})</span></div>
+                <div class="summary-row"><span class="summary-label">Problema:</span><span class="summary-val">${state.problema}</span></div>
+                <div class="summary-row"><span class="summary-label">Agendado para:</span><span class="summary-val">${state.data} às ${state.horario}</span></div>
+                <div class="summary-row"><span class="summary-label">Nome:</span><span class="summary-val">${state.nome}</span></div>
+                <div class="summary-row"><span class="summary-label">WhatsApp:</span><span class="summary-val">${state.whatsapp}</span></div>
+                <div class="summary-row"><span class="summary-label">Observações:</span><span class="summary-val">${state.observacoes}</span></div>
+            `;
         }
 
-        function changeStep(targetStep) {
-            document.getElementById(`step-${currentStep}`).classList.remove('active');
-            currentStep = targetStep;
-            document.getElementById(`step-${currentStep}`).classList.add('active');
+        function sendToWhatsapp() {
+            const num = "5511998724518";
+            const text = `⚙️ *AGENDAMENTO DE REVISÃO / SOLICITAÇÃO ORÇAMENTO*
+*Torque One Centro Automotivo*
 
-            // Ajuste dos botões do formulário
-            document.getElementById('btn-prev').style.visibility = currentStep === 1 ? 'hidden' : 'visible';
-            document.getElementById('btn-next').textContent = currentStep === totalSteps ? 'Finalizar e Enviar' : 'Continuar';
+🔧 *Serviço:* ${state.servico}
+🚗 *Veículo:* ${state.marca} ${state.modelo} (${state.ano})
+💡 *Sintoma/Problema:* ${state.problema}
 
-            // Atualização do Indicador de Progresso
-            const percentage = Math.round((currentStep / totalSteps) * 100);
-            document.getElementById('progress-text').textContent = `ETAPA ${currentStep} DE ${totalSteps}`;
-            document.getElementById('progress-percentage').textContent = `${percentage}%`;
-            document.getElementById('progress-fill').style.width = `${percentage}%`;
+📅 *Data:* ${state.data}
+⏰ *Horário:* ${state.horario}
+
+👤 *Cliente:* ${state.nome}
+📱 *WhatsApp:* ${state.whatsapp}
+📝 *Notas Extras:* ${state.observacoes}`;
+
+            const url = `https://api.whatsapp.com/send?phone=${num}&text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
         }
 
-        // Sistema Calendário Integrado Avançado
-        const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-
-        function buildCalendar() {
-            const container = document.getElementById('calendar-cells');
-            container.innerHTML = '';
-            document.getElementById('calendar-month-year').textContent = `${monthNames[currentMonth]} ${currentYear}`;
-
-            const firstDayIndex = new Date(currentYear, currentMonth, 1).getDay();
-            const totalDays = new Date(currentYear, currentMonth + 1, 0).getDate();
-
-            // Espaços vazios antes do primeiro dia
-            for (let i = 0; i < firstDayIndex; i++) {
-                const emptyCell = document.createElement('div');
-                emptyCell.classList.add('calendar-cell', 'disabled');
-                container.appendChild(emptyCell);
-            }
-
-            // Geração dos dias do mês corrente
-            for (let day = 1; day <= totalDays; day++) {
-                const cell = document.createElement('div');
-                cell.classList.add('calendar-cell');
-                cell.textContent = day;
-
-                // Bloqueia domingos de exemplo (domingo é dia 0 na Date standard)
-                const dateObj = new Date(currentYear, currentMonth, day);
-                const dayOfWeek = dateObj.getDay();
-
-                if (dayOfWeek === 0) {
-                    cell.classList.add('disabled');
-                } else {
-                    cell.onclick = () => {
-                        document.querySelectorAll('.calendar-cell').forEach(c => c.classList.remove('selected'));
-                        cell.classList.add('selected');
-                        selectedDate = `${day.toString().padStart(2, '0')}/${(currentMonth + 1).toString().padStart(2, '0')}/${currentYear}`;
-                        document.getElementById('summary-date').textContent = selectedDate;
-                    };
-                }
-
-                container.appendChild(cell);
-            }
-        }
-
-        function prevMonth() {
-            if (currentMonth > 0) {
-                currentMonth--;
-                buildCalendar();
-            }
-        }
-
-        function nextMonth() {
-            if (currentMonth < 11) {
-                currentMonth++;
-                buildCalendar();
-            }
-        }
-
-        function triggerSubmit() {
-            const name = document.getElementById('client-name').value;
-            const phone = document.getElementById('client-phone').value;
-            const email = document.getElementById('client-email').value;
-
-            // Formatação do payload estruturado para WhatsApp Business API
-            const textMessage = `*Torque One Centro Automotivo* - Agendamento Efetuado!\n\n` +
-                                `*Cliente:* ${name}\n` +
-                                `*WhatsApp:* ${phone}\n` +
-                                `*E-mail:* ${email}\n` +
-                                `*Serviço:* ${selectedService}\n` +
-                                `*Veículo:* ${carBrand} ${carModel} (${carYear}) - KM: ${carKm}\n` +
-                                `*Descrição do Sintoma:* ${carProblem}\n` +
-                                `*Data Reservada:* ${selectedDate}\n` +
-                                `*Horário:* ${selectedTimeSlot}\n\n` +
-                                `_Aguardando validação de entrada técnica na oficina._`;
-
-            const encoded = encodeURIComponent(textMessage);
-            const whatsappURL = `https://wa.me/5511998724518?text=${encoded}`;
-            window.open(whatsappURL, '_blank');
-        }
-
-        // Inicialização
-        window.onload = () => {
-            buildCalendar();
-        };
+        // START
+        renderCalendar();
+        updateUI();
     </script>
 </body>
 </html>
-                    <
