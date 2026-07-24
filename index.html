@@ -1,34 +1,43 @@
-```
-<meta property="og:title" content="Studio Axis Arquitetura | Projetos Exclusivos">
-<meta property="og:description" content="Projetos arquitetônicos de alto padrão. Agende sua consultoria conosco.">
+<!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="[https://www.studioaxis.com.br](https://www.studioaxis.com.br)">
+<meta property="og:url" content="[https://www.studioaxis.com.br/](https://www.studioaxis.com.br/)">
+<meta property="og:title" content="Studio Axis Arquitetura | Projetos de Alto Padrão">
+<meta property="og:description" content="Transforme suas ideias em ambientes modernos e funcionais. Agende sua consultoria técnica online ou presencial.">
+<meta property="og:image" content="[https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80](https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80)">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Studio Axis Arquitetura">
-<meta name="twitter:description" content="Projetos arquitetônicos de alto padrão. Agende sua consultoria.">
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Studio Axis Arquitetura">
+<meta property="twitter:description" content="Projetos arquitetônicos de alto padrão e consultoria técnica especializada.">
 
+<!-- Google Fonts -->
 <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
 <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-<link href="[https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+<link href="[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
 
+<!-- Schema.org Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "[https://schema.org](https://schema.org)",
-  "@type": "LocalBusiness",
+  "@type": "ArchitecturalFirm",
   "name": "Studio Axis Arquitetura",
-  "image": "",
-  "@id": "",
+  "image": "[https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80)",
+  "@id": "[https://www.studioaxis.com.br](https://www.studioaxis.com.br)",
   "url": "[https://www.studioaxis.com.br](https://www.studioaxis.com.br)",
-  "telephone": "+5511967024809",
-  "email": "contato@studioaxis.com.br",
+  "telephone": "+551135095210",
+  "priceRange": "$$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Rua Damasco, 380",
-    "addressLocality": "Cotia",
+    "streetAddress": "Alameda dos Jurupis, 842 – Conjunto 71",
+    "addressLocality": "São Paulo",
     "addressRegion": "SP",
-    "postalCode": "06709-340",
+    "postalCode": "04088-002",
     "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -23.6083,
+    "longitude": -46.6622
   },
   "openingHoursSpecification": [
     {
@@ -44,923 +53,1878 @@
       "closes": "13:00"
     }
   ],
-  "priceRange": "$$$$"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "[https://schema.org](https://schema.org)",
-  "@type": "Service",
-  "serviceType": "Consultoria Arquitetônica",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Studio Axis Arquitetura"
-  }
+  "sameAs": [
+    "[https://instagram.com/studioaxis.arq](https://instagram.com/studioaxis.arq)"
+  ]
 }
 </script>
 
 <style>
     :root {
-        --primary: #B87333; /* Cobre */
-        --primary-hover: #9c602a;
-        --dark: #121212;
-        --dark-light: #1e1e1e;
-        --gray: #f4f4f4;
-        --gray-dark: #888888;
-        --light: #ffffff;
-        --danger: #e74c3c;
-        --success: #2ecc71;
-        --radius: 8px;
-        --transition: 0.3s ease;
-        --shadow: 0 10px 30px rgba(0,0,0,0.1);
+        --bg-main: #0F0F11;
+        --bg-card: #18181C;
+        --bg-glass: rgba(24, 24, 28, 0.75);
+        --border-color: rgba(255, 255, 255, 0.08);
+        --border-focus: #C5A059;
+        --copper-accent: #C5A059;
+        --copper-hover: #D4AF37;
+        --copper-glow: rgba(197, 160, 89, 0.15);
+        --text-primary: #F5F5F7;
+        --text-secondary: #9A9A9E;
+        --text-muted: #6E6E73;
+        --danger: #FF453A;
+        --success: #30D158;
+        --radius-sm: 8px;
+        --radius-md: 14px;
+        --radius-lg: 20px;
+        --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-    
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body { background-color: var(--gray); color: var(--dark); line-height: 1.6; }
-    
-    h1, h2, h3, h4 { font-weight: 600; line-height: 1.2; }
-    a { text-decoration: none; color: inherit; transition: var(--transition); }
-    ul { list-style: none; }
-    img { max-width: 100%; height: auto; display: block; }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
 
-    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    .section-title { font-size: 2rem; text-align: center; margin-bottom: 3rem; text-transform: uppercase; letter-spacing: 2px; }
-    .section-title span { color: var(--primary); }
+    body {
+        background-color: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+
+    /* Utility Components */
+    .container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    .section-title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 12px;
+        color: var(--text-primary);
+    }
+
+    .section-subtitle {
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+        margin-bottom: 48px;
+        max-width: 600px;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 28px;
+        border-radius: var(--radius-sm);
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: var(--transition);
+        border: 1px solid transparent;
+        text-decoration: none;
+    }
+
+    .btn-primary {
+        background-color: var(--copper-accent);
+        color: #000;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--copper-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px var(--copper-glow);
+    }
+
+    .btn-outline {
+        background-color: transparent;
+        border-color: var(--border-color);
+        color: var(--text-primary);
+    }
+
+    .btn-outline:hover {
+        border-color: var(--copper-accent);
+        color: var(--copper-accent);
+        background-color: rgba(197, 160, 89, 0.05);
+    }
 
     /* Header */
-    header { background: var(--dark); padding: 15px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: var(--shadow); }
-    .header-content { display: flex; justify-content: space-between; align-items: center; }
-    .logo { color: var(--light); font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; display: flex; align-items: center; gap: 10px;}
-    .logo span { color: var(--primary); }
-    .logo svg { width: 30px; height: 30px; fill: var(--primary); }
-    .nav-links { display: flex; gap: 20px; }
-    .nav-links a { color: var(--light); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; }
-    .nav-links a:hover { color: var(--primary); }
-    .mobile-menu-btn { display: none; background: none; border: none; color: var(--light); font-size: 1.5rem; cursor: pointer; }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(15, 15, 17, 0.8);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border-color);
+        transition: var(--transition);
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+    }
+
+    .logo-icon {
+        width: 38px;
+        height: 38px;
+        border: 2px solid var(--copper-accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--copper-accent);
+        position: relative;
+    }
+
+    .logo-text {
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    .logo-sub {
+        font-size: 0.65rem;
+        color: var(--copper-accent);
+        display: block;
+        letter-spacing: 0.2em;
+        font-weight: 400;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+        color: var(--copper-accent);
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-primary);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
 
     /* Hero */
-    .hero { height: 100vh; background: linear-gradient(rgba(18,18,18,0.8), rgba(18,18,18,0.9)), url('data:image/svg+xml;utf8,<svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="1000" height="600"><rect width="100%" height="100%" fill="%231e1e1e"/></svg>') center/cover; display: flex; align-items: center; text-align: center; color: var(--light); padding-top: 60px; }
-    .hero h1 { font-size: 3rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
-    .hero h1 span { color: var(--primary); }
-    .hero p { font-size: 1.2rem; margin-bottom: 40px; font-weight: 300; max-width: 700px; margin-left: auto; margin-right: auto; }
-    .btn-primary { background: var(--primary); color: var(--light); padding: 15px 30px; border-radius: var(--radius); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: none; cursor: pointer; display: inline-block; transition: var(--transition); }
-    .btn-primary:hover { background: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(184, 115, 51, 0.4); }
+    .hero {
+        padding: 180px 0 100px;
+        position: relative;
+        background: radial-gradient(circle at 80% 20%, rgba(197, 160, 89, 0.08) 0%, rgba(15, 15, 17, 0) 50%);
+    }
 
-    /* Apresentação (Sobre) */
-    .sobre { padding: 5rem 0; background: var(--light); }
-    .sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-    .sobre-text p { margin-bottom: 1.5rem; font-size: 1.1rem; color: #555; }
-    .sobre-img { background: var(--dark-light); height: 400px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-    .sobre-img::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, var(--primary) 0%, transparent 100%); opacity: 0.2; }
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
 
-    /* Serviços */
-    .servicos { padding: 5rem 0; background: var(--gray); }
-    .servicos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-    .card-servico { background: var(--light); padding: 2.5rem 1.5rem; border-radius: var(--radius); text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: var(--transition); border-bottom: 3px solid transparent; }
-    .card-servico:hover { transform: translateY(-10px); border-bottom-color: var(--primary); box-shadow: var(--shadow); }
-    .card-servico svg { width: 50px; height: 50px; fill: var(--primary); margin-bottom: 1.5rem; }
-    .card-servico h3 { margin-bottom: 1rem; font-size: 1.2rem; }
+    .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 16px;
+        border-radius: 30px;
+        background: rgba(197, 160, 89, 0.1);
+        border: 1px solid rgba(197, 160, 89, 0.3);
+        color: var(--copper-accent);
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 24px;
+    }
 
-    /* Como Funciona */
-    .como-funciona { padding: 5rem 0; background: var(--dark); color: var(--light); }
-    .passos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center; }
-    .passo { position: relative; }
-    .passo-numero { width: 60px; height: 60px; background: var(--primary); color: var(--light); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1.5rem; z-index: 2; position: relative; }
-    .passo h3 { margin-bottom: 1rem; }
-    .passo p { color: #aaa; font-size: 0.9rem; }
+    .hero-title {
+        font-size: 3.5rem;
+        line-height: 1.1;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        margin-bottom: 24px;
+    }
 
-    /* Sistema Principal (App SPA) */
-    .sistema { padding: 5rem 0; background: var(--light); }
-    .app-container { background: var(--light); max-width: 800px; margin: 0 auto; border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; border: 1px solid #eaeaea; }
-    .app-header { background: var(--dark); color: var(--light); padding: 20px; text-align: center; }
-    .app-header h2 { font-size: 1.5rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-    .app-header p { font-size: 0.9rem; color: #aaa; margin-top: 5px; }
-    .progress-container { width: 100%; background: #333; height: 5px; }
-    .progress-bar { height: 100%; background: var(--primary); width: 0%; transition: 0.4s ease; }
-    
-    .app-body { padding: 40px 30px; min-height: 400px; position: relative; }
-    .step { display: none; animation: fadeIn 0.4s ease forwards; }
-    .step.active { display: block; }
-    
-    .step-title { font-size: 1.3rem; margin-bottom: 10px; color: var(--dark); }
-    .step-desc { font-size: 0.9rem; color: var(--gray-dark); margin-bottom: 25px; }
-    
-    .options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
-    .option-card { border: 2px solid #eaeaea; border-radius: var(--radius); padding: 20px 15px; text-align: center; cursor: pointer; transition: var(--transition); background: var(--light); }
-    .option-card:hover { border-color: var(--primary); background: #fdfbf9; }
-    .option-card.selected { border-color: var(--primary); background: #fdfbf9; box-shadow: 0 4px 10px rgba(184, 115, 51, 0.15); }
-    .option-card svg { width: 30px; height: 30px; fill: var(--dark); margin-bottom: 10px; transition: var(--transition); }
-    .option-card.selected svg { fill: var(--primary); }
-    .option-card span { display: block; font-weight: 500; font-size: 0.95rem; }
+    .hero-title span {
+        color: var(--copper-accent);
+    }
 
-    .form-group { margin-bottom: 20px; text-align: left; }
-    .form-group label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 0.95rem; }
-    .form-control { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: var(--radius); font-size: 1rem; transition: var(--transition); font-family: inherit; }
-    .form-control:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(184, 115, 51, 0.1); }
-    textarea.form-control { resize: vertical; min-height: 100px; }
-    .error-msg { color: var(--danger); font-size: 0.85rem; margin-top: 5px; display: none; }
-    .has-error .form-control { border-color: var(--danger); }
-    .has-error .error-msg { display: block; }
+    .hero-desc {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin-bottom: 40px;
+        max-width: 520px;
+    }
 
-    .file-upload-wrapper { position: relative; width: 100%; height: 150px; border: 2px dashed #ddd; border-radius: var(--radius); display: flex; flex-direction: column; justify-content: center; align-items: center; cursor: pointer; transition: var(--transition); background: #fafafa; }
-    .file-upload-wrapper:hover { border-color: var(--primary); background: #fdfbf9; }
-    .file-upload-wrapper input[type="file"] { position: absolute; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
-    .file-upload-wrapper svg { width: 40px; height: 40px; fill: var(--gray-dark); margin-bottom: 10px; }
-    .file-upload-text { font-size: 0.9rem; color: var(--gray-dark); }
-    .file-name { margin-top: 10px; font-weight: 500; color: var(--primary); font-size: 0.9rem; }
+    .hero-cta-group {
+        display: flex;
+        gap: 16px;
+    }
 
-    /* Calendar */
-    .calendar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-    .calendar-btn { background: none; border: 1px solid #ddd; padding: 5px 15px; border-radius: var(--radius); cursor: pointer; transition: var(--transition); }
-    .calendar-btn:hover { background: var(--primary); color: var(--light); border-color: var(--primary); }
-    .calendar-month { font-weight: 600; font-size: 1.1rem; text-transform: capitalize; }
-    .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; text-align: center; }
-    .calendar-day-name { font-weight: 600; font-size: 0.8rem; color: var(--gray-dark); margin-bottom: 10px; }
-    .calendar-day { padding: 10px 0; border-radius: var(--radius); cursor: pointer; transition: var(--transition); font-size: 0.95rem; }
-    .calendar-day:hover:not(.disabled) { background: #fdfbf9; color: var(--primary); font-weight: 600; }
-    .calendar-day.selected { background: var(--primary); color: var(--light); font-weight: 600; box-shadow: 0 4px 10px rgba(184, 115, 51, 0.3); }
-    .calendar-day.disabled { color: #ccc; cursor: not-allowed; background: #f9f9f9; }
-    
-    .time-slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 10px; margin-top: 20px; }
-    .time-slot { padding: 10px; text-align: center; border: 1px solid #ddd; border-radius: var(--radius); cursor: pointer; transition: var(--transition); font-size: 0.9rem; }
-    .time-slot:hover { border-color: var(--primary); color: var(--primary); }
-    .time-slot.selected { background: var(--primary); color: var(--light); border-color: var(--primary); }
-    .time-slot.disabled { background: #f9f9f9; color: #ccc; cursor: not-allowed; border-color: #eee; }
+    .hero-stats {
+        display: flex;
+        gap: 40px;
+        margin-top: 60px;
+        padding-top: 40px;
+        border-top: 1px solid var(--border-color);
+    }
 
-    /* Resumo */
-    .summary-box { background: #fafafa; border: 1px solid #eaeaea; border-radius: var(--radius); padding: 20px; margin-bottom: 20px; }
-    .summary-item { display: flex; justify-content: space-between; border-bottom: 1px solid #eaeaea; padding: 12px 0; }
-    .summary-item:last-child { border-bottom: none; }
-    .summary-label { font-weight: 600; color: var(--dark-light); font-size: 0.9rem; }
-    .summary-value { color: var(--gray-dark); font-size: 0.9rem; text-align: right; max-width: 60%; word-break: break-word;}
+    .stat-num {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        display: block;
+    }
 
-    .app-footer { padding: 20px 30px; border-top: 1px solid #eaeaea; display: flex; justify-content: space-between; align-items: center; background: #fafafa; }
-    .btn-outline { background: transparent; color: var(--dark); border: 1px solid #ddd; padding: 12px 25px; border-radius: var(--radius); font-weight: 600; cursor: pointer; transition: var(--transition); }
-    .btn-outline:hover { background: #eee; }
-    .btn-next { background: var(--primary); color: var(--light); border: none; padding: 12px 30px; border-radius: var(--radius); font-weight: 600; cursor: pointer; transition: var(--transition); display: flex; align-items: center; gap: 10px; }
-    .btn-next:hover { background: var(--primary-hover); }
-    
-    /* Benefícios */
-    .beneficios { padding: 5rem 0; background: var(--gray); }
-    .beneficios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-    .beneficio-item { display: flex; gap: 1rem; align-items: flex-start; }
-    .beneficio-icon { background: var(--primary); color: var(--light); width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; flex-shrink: 0; }
-    
-    /* Avaliações */
-    .avaliacoes { padding: 5rem 0; background: var(--light); }
-    .av-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-    .av-card { padding: 2rem; border: 1px solid #eaeaea; border-radius: var(--radius); position: relative; }
-    .av-stars { color: #f1c40f; margin-bottom: 1rem; }
-    .av-text { font-style: italic; color: #555; margin-bottom: 1.5rem; font-size: 0.95rem; }
-    .av-author { font-weight: 600; }
+    .stat-label {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
 
-    /* FAQ */
-    .faq { padding: 5rem 0; background: var(--gray); }
-    .faq-item { background: var(--light); margin-bottom: 1rem; border-radius: var(--radius); overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    .faq-question { padding: 1.5rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .faq-answer { padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: #555; font-size: 0.95rem; }
-    .faq-item.active .faq-answer { padding-bottom: 1.5rem; max-height: 500px; }
-    .faq-item.active .faq-question { color: var(--primary); }
+    .hero-visual {
+        position: relative;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--border-color);
+        background: var(--bg-card);
+    }
 
-    /* Contato / Mapa */
-    .contato-secao { padding: 5rem 0; background: var(--dark); color: var(--light); }
-    .contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-    .contato-info li { display: flex; align-items: center; gap: 15px; margin-bottom: 1.5rem; font-size: 1rem; }
-    .contato-info svg { width: 24px; height: 24px; fill: var(--primary); }
-    .mapa-container { height: 300px; background: #333; border-radius: var(--radius); overflow: hidden; }
-    .mapa-container iframe { width: 100%; height: 100%; border: none; }
+    .hero-visual img {
+        width: 100%;
+        height: 520px;
+        object-fit: cover;
+        display: block;
+        filter: brightness(0.85) contrast(1.1);
+    }
 
-    /* Footer */
-    footer { background: var(--dark-light); color: #aaa; text-align: center; padding: 2rem 0; font-size: 0.9rem; }
-    footer span { color: var(--primary); font-weight: 600; }
+    .hero-badge {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        background: rgba(24, 24, 28, 0.9);
+        backdrop-filter: blur(12px);
+        border: 1px solid var(--border-color);
+        padding: 16px 20px;
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
 
-    /* Floating WhatsApp */
-    .float-wpp { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 1000; transition: var(--transition); }
-    .float-wpp:hover { transform: scale(1.1); }
-    .float-wpp svg { width: 35px; height: 35px; fill: white; }
+    .hero-badge-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--copper-accent);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        font-weight: bold;
+    }
 
-    /* Animations */
+    /* Presentation */
+    .presentation {
+        padding: 100px 0;
+        background: #131316;
+        border-y: 1px solid var(--border-color);
+    }
+
+    .presentation-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .presentation-content p {
+        color: var(--text-secondary);
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+    }
+
+    .feature-list {
+        list-style: none;
+        margin-top: 30px;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+        color: var(--text-primary);
+        font-weight: 500;
+    }
+
+    .feature-icon {
+        color: var(--copper-accent);
+        font-weight: bold;
+    }
+
+    /* Services Section */
+    .services {
+        padding: 120px 0;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .service-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        padding: 32px;
+        transition: var(--transition);
+        position: relative;
+        top: 0;
+    }
+
+    .service-card:hover {
+        top: -6px;
+        border-color: var(--copper-accent);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    }
+
+    .service-icon {
+        width: 48px;
+        height: 48px;
+        background: rgba(197, 160, 89, 0.1);
+        color: var(--copper-accent);
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        margin-bottom: 24px;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+
+    .service-card p {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* How it works */
+    .how-it-works {
+        padding: 100px 0;
+        background: #131316;
+    }
+
+    .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        position: relative;
+    }
+
+    .step-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        padding: 28px;
+        border-radius: var(--radius-md);
+        position: relative;
+    }
+
+    .step-num {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: rgba(197, 160, 89, 0.25);
+        margin-bottom: 16px;
+        line-height: 1;
+    }
+
+    .step-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+
+    .step-card p {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+    }
+
+    /* SYSTEM MAIN - SAAS ENGINE */
+    .system-section {
+        padding: 120px 0;
+        background: radial-gradient(circle at 50% 0%, rgba(197, 160, 89, 0.05) 0%, rgba(15, 15, 17, 0) 70%);
+        scroll-margin-top: 80px;
+    }
+
+    .system-wrapper {
+        max-width: 860px;
+        margin: 0 auto;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        overflow: hidden;
+    }
+
+    .system-header {
+        padding: 28px 36px;
+        background: rgba(255, 255, 255, 0.02);
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .system-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .system-title-dot {
+        width: 10px;
+        height: 10px;
+        background: var(--copper-accent);
+        border-radius: 50%;
+    }
+
+    /* Progress Bar */
+    .progress-container {
+        padding: 20px 36px;
+        background: rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .progress-bar-bg {
+        height: 6px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 3px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    .progress-bar-fill {
+        height: 100%;
+        background: var(--copper-accent);
+        width: 8.33%; /* 1/12 */
+        transition: width 0.4s ease;
+    }
+
+    .progress-text {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .system-body {
+        padding: 36px;
+        min-height: 420px;
+    }
+
+    .step-pane {
+        display: none;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .step-pane.active {
+        display: block;
+    }
+
     @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
+        from { opacity: 0; transform: translateY(8px); }
         to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Responsive */
+    .pane-title {
+        font-size: 1.35rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .pane-desc {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        margin-bottom: 28px;
+    }
+
+    /* Form Controls */
+    .grid-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+    }
+
+    .option-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        padding: 20px;
+        cursor: pointer;
+        transition: var(--transition);
+        text-align: center;
+        user-select: none;
+    }
+
+    .option-card:hover {
+        border-color: rgba(197, 160, 89, 0.5);
+        background: rgba(197, 160, 89, 0.02);
+    }
+
+    .option-card.selected {
+        border-color: var(--copper-accent);
+        background: var(--copper-glow);
+        color: var(--copper-accent);
+        font-weight: 600;
+    }
+
+    .option-card-icon {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: var(--text-secondary);
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 14px 16px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-sm);
+        color: var(--text-primary);
+        font-size: 0.95rem;
+        transition: var(--transition);
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: var(--copper-accent);
+        background: rgba(255, 255, 255, 0.06);
+        box-shadow: 0 0 0 3px var(--copper-glow);
+    }
+
+    /* Custom File Upload */
+    .file-upload-zone {
+        border: 2px dashed var(--border-color);
+        border-radius: var(--radius-md);
+        padding: 32px;
+        text-align: center;
+        cursor: pointer;
+        transition: var(--transition);
+        background: rgba(255, 255, 255, 0.01);
+    }
+
+    .file-upload-zone:hover {
+        border-color: var(--copper-accent);
+        background: var(--copper-glow);
+    }
+
+    /* Calendar Picker */
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 8px;
+        margin-top: 16px;
+        text-align: center;
+    }
+
+    .calendar-day-head {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        font-weight: 600;
+        padding: 8px 0;
+    }
+
+    .calendar-day {
+        padding: 12px 0;
+        border-radius: var(--radius-sm);
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--border-color);
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    .calendar-day:hover:not(.disabled) {
+        border-color: var(--copper-accent);
+        color: var(--copper-accent);
+    }
+
+    .calendar-day.selected {
+        background: var(--copper-accent);
+        color: #000;
+        font-weight: 700;
+        border-color: var(--copper-accent);
+    }
+
+    .calendar-day.disabled {
+        opacity: 0.25;
+        cursor: not-allowed;
+        border-color: transparent;
+    }
+
+    .time-slots {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 12px;
+        margin-top: 16px;
+    }
+
+    .time-slot {
+        padding: 10px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: var(--transition);
+    }
+
+    .time-slot:hover:not(.disabled) {
+        border-color: var(--copper-accent);
+        color: var(--copper-accent);
+    }
+
+    .time-slot.selected {
+        background: var(--copper-accent);
+        color: #000;
+        font-weight: 700;
+        border-color: var(--copper-accent);
+    }
+
+    .time-slot.disabled {
+        opacity: 0.25;
+        cursor: not-allowed;
+        text-decoration: line-through;
+    }
+
+    /* Summary Box */
+    .summary-box {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        padding: 24px;
+        margin-bottom: 24px;
+    }
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 0.9rem;
+    }
+
+    .summary-row:last-child {
+        border-bottom: none;
+    }
+
+    .summary-label {
+        color: var(--text-secondary);
+    }
+
+    .summary-val {
+        font-weight: 600;
+        color: var(--text-primary);
+        text-align: right;
+    }
+
+    .system-footer {
+        padding: 20px 36px;
+        background: rgba(0, 0, 0, 0.2);
+        border-top: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Benefits Section */
+    .benefits {
+        padding: 100px 0;
+        background: var(--bg-main);
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .benefit-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        padding: 32px;
+        border-radius: var(--radius-md);
+    }
+
+    .benefit-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+        color: var(--copper-accent);
+    }
+
+    /* Reviews */
+    .reviews {
+        padding: 100px 0;
+        background: #131316;
+    }
+
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .review-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        padding: 28px;
+        border-radius: var(--radius-md);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .review-text {
+        font-style: italic;
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .review-author {
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    .review-role {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+    }
+
+    /* FAQ */
+    .faq {
+        padding: 100px 0;
+    }
+
+    .faq-accordion {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .faq-item {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-sm);
+        margin-bottom: 16px;
+        overflow: hidden;
+    }
+
+    .faq-header {
+        padding: 20px 24px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+    }
+
+    .faq-content {
+        padding: 0 24px 20px;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        display: none;
+    }
+
+    .faq-item.active .faq-content {
+        display: block;
+    }
+
+    .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+    }
+
+    .faq-icon {
+        transition: var(--transition);
+        color: var(--copper-accent);
+    }
+
+    /* Contact & Map */
+    .contact-map {
+        padding: 100px 0;
+        background: #131316;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .contact-info-item {
+        margin-bottom: 24px;
+    }
+
+    .contact-info-label {
+        font-size: 0.8rem;
+        color: var(--copper-accent);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+
+    .contact-info-val {
+        font-size: 1.05rem;
+        color: var(--text-primary);
+    }
+
+    .map-container {
+        width: 100%;
+        height: 380px;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        border: 1px solid var(--border-color);
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        filter: grayscale(0.9) invert(0.9) contrast(1.2);
+    }
+
+    /* Footer */
+    footer {
+        background: #0B0B0C;
+        border-top: 1px solid var(--border-color);
+        padding: 60px 0 30px;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .footer-logo {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 16px;
+    }
+
+    .footer-links {
+        list-style: none;
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+
+    .footer-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+        color: var(--copper-accent);
+    }
+
+    .footer-bottom {
+        padding-top: 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background-color: #25D366;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+        z-index: 999;
+        text-decoration: none;
+        transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 12px 28px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Responsiveness */
+    @media (max-width: 992px) {
+        .hero-grid, .presentation-grid, .contact-grid {
+            grid-template-columns: 1fr;
+        }
+        .steps-grid, .benefits-grid, .reviews-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        .footer-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        .hero-title {
+            font-size: 2.5rem;
+        }
+    }
+
     @media (max-width: 768px) {
-        .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background: var(--dark); padding: 20px; text-align: center; }
-        .nav-links.active { display: flex; }
-        .mobile-menu-btn { display: block; }
-        .hero h1 { font-size: 2rem; }
-        .sobre-grid, .contato-grid { grid-template-columns: 1fr; }
-        .app-footer { flex-direction: column-reverse; gap: 15px; }
-        .btn-outline, .btn-next { width: 100%; justify-content: center; }
-        .calendar-grid { font-size: 0.8rem; }
+        .nav-links {
+            display: none;
+        }
+        .mobile-menu-btn {
+            display: block;
+        }
+        .steps-grid, .benefits-grid, .reviews-grid {
+            grid-template-columns: 1fr;
+        }
+        .hero {
+            padding: 120px 0 60px;
+        }
+        .system-body {
+            padding: 20px;
+        }
+        .system-header, .system-footer, .progress-container {
+            padding: 16px 20px;
+        }
+        .footer-grid {
+            grid-template-columns: 1fr;
+        }
+        .hero-badge {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            margin-top: -40px;
+            margin-left: 16px;
+            margin-right: 16px;
+        }
     }
 </style>
-
-```
-
-```
+<!-- Header -->
 <header>
     <div class="container header-content">
-        <div class="logo">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.3l6.5 13.7H5.5L12 6.3zM12 10l-3 6h6l-3-6z"/></svg>
-            STUDIO <span>AXIS</span>
-        </div>
-        <button class="mobile-menu-btn" id="menuBtn">☰</button>
-        <nav class="nav-links" id="navLinks">
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#como-funciona">Como Funciona</a>
-            <a href="#sistema">Agendar</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contato">Contato</a>
-        </nav>
+        <a href="#" class="logo">
+            <div class="logo-icon">AX</div>
+            <div>
+                <span class="logo-text">Studio Axis</span>
+                <span class="logo-sub">ARQUITETURA</span>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#apresentacao">O Escritório</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#como-funciona">Metodologia</a></li>
+            <li><a href="#sistema">Agendamento</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <a href="#sistema" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">Agendar Reunião</a>
     </div>
 </header>
 
-<section class="hero" id="inicio">
-    <div class="container">
-        <h1>Arquitetura com <span>Propósito</span> e Sofisticação</h1>
-        <p>Transformamos ideias em ambientes modernos, funcionais e exclusivos. Especialistas em projetos residenciais e comerciais de alto padrão.</p>
-        <a href="#sistema" class="btn-primary">Agendar Consultoria</a>
-    </div>
-</section>
-
-<section class="sobre" id="sobre">
-    <div class="container sobre-grid">
-        <div class="sobre-text">
-            <h2 class="section-title" style="text-align: left;">O <span>Studio</span></h2>
-            <p>Há mais de 14 anos, o Studio Axis Arquitetura desenvolve projetos arquitetônicos exclusivos para residências, empresas e espaços comerciais.</p>
-            <p>Nossa missão é unir funcionalidade, sofisticação e soluções inteligentes. Valorizamos cada detalhe do seu projeto, acompanhando rigorosamente todas as etapas da execução para garantir resultados surpreendentes.</p>
-            <ul style="margin-top: 20px;">
-                <li style="margin-bottom: 10px;">✓ Projetos Residenciais de Alto Padrão</li>
-                <li style="margin-bottom: 10px;">✓ Design de Interiores e Paisagismo</li>
-                <li style="margin-bottom: 10px;">✓ Acompanhamento Técnico Completo</li>
-            </ul>
-        </div>
-        <div class="sobre-img">
-            <svg viewBox="0 0 24 24" style="width: 150px; height: 150px; fill: var(--primary); opacity: 0.5;"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 2.7l5 4.5V18h-2v-6H9v6H7v-7.8l5-4.5z"/></svg>
-        </div>
-    </div>
-</section>
-
-<section class="servicos" id="servicos">
-    <div class="container">
-        <h2 class="section-title">Nossos <span>Serviços</span></h2>
-        <div class="servicos-grid">
-            <div class="card-servico">
-                <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                <h3>Projetos Residenciais</h3>
-                <p>Casas de alto padrão com design contemporâneo e máxima funcionalidade para sua família.</p>
-            </div>
-            <div class="card-servico">
-                <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
-                <h3>Arquitetura Comercial</h3>
-                <p>Espaços corporativos e comerciais otimizados para atrair clientes e melhorar a produtividade.</p>
-            </div>
-            <div class="card-servico">
-                <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-9 16.51V13H5.48C6.67 10.08 9.53 8 13 8c3.87 0 7 3.13 7 7 0 1.5-.47 2.89-1.28 4.03l-7.72-2.52z"/></svg>
-                <h3>Design de Interiores</h3>
-                <p>Personalização completa dos ambientes, equilibrando estética, conforto e usabilidade.</p>
-            </div>
-            <div class="card-servico">
-                <svg viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9zM12 4.15L5.4 7.86l6.6 3.71 6.6-3.71L12 4.15zm6.6 5.1l-6.03 3.39v7.16l6.03-3.39V9.25zm-13.2 0v7.16l6.03 3.39v-7.16L5.4 9.25z"/></svg>
-                <h3>Projeto 3D</h3>
-                <p>Visualização realista com modelagem 3D, imagens fotorrealistas e passeios virtuais imersivos.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="como-funciona" id="como-funciona">
-    <div class="container">
-        <h2 class="section-title">Como <span>Funciona</span></h2>
-        <div class="passos-grid">
-            <div class="passo">
-                <div class="passo-numero">1</div>
-                <h3>Agendamento</h3>
-                <p>Preencha nosso formulário inteligente em menos de 60 segundos.</p>
-            </div>
-            <div class="passo">
-                <div class="passo-numero">2</div>
-                <h3>Envio de Dados</h3>
-                <p>Forneça detalhes e envie plantas do imóvel diretamente pelo sistema.</p>
-            </div>
-            <div class="passo">
-                <div class="passo-numero">3</div>
-                <h3>Consultoria</h3>
-                <p>Reunião de 60 minutos (online ou presencial) com nossos especialistas.</p>
-            </div>
-            <div class="passo">
-                <div class="passo-numero">4</div>
-                <h3>Proposta</h3>
-                <p>Receba um orçamento detalhado e o plano de ação para seu projeto.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="sistema" id="sistema">
-    <div class="container">
-        <div class="app-container">
-            <div class="app-header">
-                <h2>Consultoria Arquitetônica</h2>
-                <p>Agende seu atendimento e inicie seu projeto</p>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" id="progressBar"></div>
-            </div>
-            
-            <div class="app-body">
-                
-                <!-- Passo 1: Tipo de Projeto -->
-                <div class="step active" id="step-1" data-step="1">
-                    <h3 class="step-title">Qual é o tipo de projeto?</h3>
-                    <p class="step-desc">Selecione a opção que melhor descreve sua necessidade.</p>
-                    <div class="options-grid">
-                        <div class="option-card" data-val="Projeto Residencial"><span>Residencial</span></div>
-                        <div class="option-card" data-val="Projeto Comercial"><span>Comercial</span></div>
-                        <div class="option-card" data-val="Design de Interiores"><span>Interiores</span></div>
-                        <div class="option-card" data-val="Reforma"><span>Reforma</span></div>
-                        <div class="option-card" data-val="Ampliação"><span>Ampliação</span></div>
-                        <div class="option-card" data-val="Paisagismo"><span>Paisagismo</span></div>
-                        <div class="option-card" data-val="Regularização"><span>Regularização</span></div>
-                        <div class="option-card" data-val="Consultoria"><span>Consultoria</span></div>
-                    </div>
-                </div>
-
-                <!-- Passo 2: Tipo de Imóvel -->
-                <div class="step" id="step-2" data-step="2">
-                    <h3 class="step-title">Qual é o tipo de imóvel?</h3>
-                    <p class="step-desc">Indique a categoria do local do projeto.</p>
-                    <div class="options-grid">
-                        <div class="option-card" data-val="Casa"><span>Casa</span></div>
-                        <div class="option-card" data-val="Apartamento"><span>Apartamento</span></div>
-                        <div class="option-card" data-val="Sala Comercial"><span>Sala Comercial</span></div>
-                        <div class="option-card" data-val="Lote/Terreno"><span>Lote / Terreno</span></div>
-                        <div class="option-card" data-val="Galpão"><span>Galpão</span></div>
-                        <div class="option-card" data-val="Outro"><span>Outro</span></div>
-                    </div>
-                </div>
-
-                <!-- Passo 3: Área e Cidade -->
-                <div class="step" id="step-3" data-step="3">
-                    <h3 class="step-title">Detalhes da Localização</h3>
-                    <p class="step-desc">Informe a área aproximada e a cidade do imóvel.</p>
-                    <div class="form-group" id="fg-area">
-                        <label>Área Aproximada (m²)</label>
-                        <input type="number" id="input-area" class="form-control" placeholder="Ex: 150">
-                        <div class="error-msg">Por favor, informe uma área válida.</div>
-                    </div>
-                    <div class="form-group" id="fg-cidade">
-                        <label>Cidade e Estado</label>
-                        <input type="text" id="input-cidade" class="form-control" placeholder="Ex: Cotia - SP">
-                        <div class="error-msg">Por favor, informe a cidade.</div>
-                    </div>
-                </div>
-
-                <!-- Passo 4: Planta -->
-                <div class="step" id="step-4" data-step="4">
-                    <h3 class="step-title">Você possui a planta do imóvel?</h3>
-                    <p class="step-desc">Anexe arquivos ou fotos para adiantar nossa análise.</p>
-                    <div class="options-grid" style="margin-bottom: 20px;">
-                        <div class="option-card" data-val="Sim, vou anexar"><span>Sim, possuo</span></div>
-                        <div class="option-card" data-val="Não possuo"><span>Não possuo</span></div>
-                    </div>
-                    <div id="upload-area" style="display: none;">
-                        <div class="file-upload-wrapper">
-                            <svg viewBox="0 0 24 24"><path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></svg>
-                            <span class="file-upload-text">Clique para selecionar arquivos</span>
-                            <input type="file" id="file-input" multiple accept=".pdf,.jpg,.jpeg,.png,.dwg">
-                            <div class="file-name" id="file-name-display">Nenhum arquivo selecionado</div>
-                        </div>
-                        <p style="font-size: 0.8rem; color: #888; margin-top: 5px; text-align: center;">Formatos: PDF, JPG, PNG, DWG.</p>
-                    </div>
-                </div>
-
-                <!-- Passo 5: Objetivo -->
-                <div class="step" id="step-5" data-step="5">
-                    <h3 class="step-title">Objetivo do Projeto</h3>
-                    <p class="step-desc">Descreva brevemente o que você imagina para este espaço.</p>
-                    <div class="form-group" id="fg-objetivo">
-                        <textarea id="input-objetivo" class="form-control" placeholder="Ex: Gostaria de integrar a sala com a cozinha e criar uma área gourmet..."></textarea>
-                        <div class="error-msg">Por favor, descreva brevemente seu objetivo.</div>
-                    </div>
-                </div>
-
-                <!-- Passo 6: Data -->
-                <div class="step" id="step-6" data-step="6">
-                    <h3 class="step-title">Data da Consultoria</h3>
-                    <p class="step-desc">Escolha o melhor dia para nossa reunião.</p>
-                    <div class="calendar-header">
-                        <button class="calendar-btn" id="prev-month">&lt;</button>
-                        <div class="calendar-month" id="month-display">Agosto 2026</div>
-                        <button class="calendar-btn" id="next-month">&gt;</button>
-                    </div>
-                    <div class="calendar-grid">
-                        <div class="calendar-day-name">Dom</div>
-                        <div class="calendar-day-name">Seg</div>
-                        <div class="calendar-day-name">Ter</div>
-                        <div class="calendar-day-name">Qua</div>
-                        <div class="calendar-day-name">Qui</div>
-                        <div class="calendar-day-name">Sex</div>
-                        <div class="calendar-day-name">Sáb</div>
-                    </div>
-                    <div class="calendar-grid" id="calendar-days">
-                        <!-- JS Fills -->
-                    </div>
-                    <div class="error-msg" id="err-date" style="text-align:center; margin-top:10px;">Selecione uma data.</div>
-                </div>
-
-                <!-- Passo 7: Horário -->
-                <div class="step" id="step-7" data-step="7">
-                    <h3 class="step-title">Horário da Consultoria</h3>
-                    <p class="step-desc">Escolha um horário disponível para a data selecionada.</p>
-                    <p style="font-weight: 500; color: var(--primary);" id="selected-date-display"></p>
-                    <div class="time-slots" id="time-slots">
-                        <!-- JS Fills -->
-                    </div>
-                    <div class="error-msg" id="err-time" style="text-align:center; margin-top:10px;">Selecione um horário.</div>
-                </div>
-
-                <!-- Passo 8: Contato -->
-                <div class="step" id="step-8" data-step="8">
-                    <h3 class="step-title">Seus Dados</h3>
-                    <p class="step-desc">Para onde enviaremos a confirmação?</p>
-                    <div class="form-group" id="fg-nome">
-                        <label>Nome Completo</label>
-                        <input type="text" id="input-nome" class="form-control" placeholder="Seu nome">
-                        <div class="error-msg">Informe seu nome completo.</div>
-                    </div>
-                    <div class="form-group" id="fg-whatsapp">
-                        <label>WhatsApp</label>
-                        <input type="tel" id="input-whatsapp" class="form-control" placeholder="(11) 90000-0000">
-                        <div class="error-msg">Informe um WhatsApp válido.</div>
-                    </div>
-                    <div class="form-group" id="fg-email">
-                        <label>E-mail</label>
-                        <input type="email" id="input-email" class="form-control" placeholder="seu@email.com">
-                        <div class="error-msg">Informe um e-mail válido.</div>
-                    </div>
-                </div>
-
-                <!-- Passo 9: Resumo -->
-                <div class="step" id="step-9" data-step="9">
-                    <h3 class="step-title">Confirme sua Solicitação</h3>
-                    <p class="step-desc">Revise os dados antes de finalizar o agendamento.</p>
-                    <div class="summary-box" id="summary-box">
-                        <!-- JS Fills -->
-                    </div>
-                    <p style="font-size: 0.85rem; color: #888; text-align: center;">Ao confirmar, você será redirecionado ao WhatsApp para envio da solicitação e o evento será gerado no seu Google Agenda.</p>
-                </div>
-
-            </div>
-            
-            <div class="app-footer">
-                <button class="btn-outline" id="btn-prev" style="display: none;">Voltar</button>
-                <button class="btn-next" id="btn-next">
-                    Continuar
-                    <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: white;"><path d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6a.996.996 0 1 0-1.41 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-                </button>
-                <button class="btn-next" id="btn-submit" style="display: none; background: #25D366;">
-                    Confirmar Agendamento
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="beneficios">
-    <div class="container">
-        <h2 class="section-title">Por que o <span>Studio Axis</span>?</h2>
-        <div class="beneficios-grid">
-            <div class="beneficio-item">
-                <div class="beneficio-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
-                <div>
-                    <h4 style="margin-bottom: 5px;">Experiência Comprovada</h4>
-                    <p style="font-size: 0.9rem; color: #666;">Mais de 14 anos transformando espaços e concretizando sonhos com excelência.</p>
-                </div>
-            </div>
-            <div class="beneficio-item">
-                <div class="beneficio-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zM12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
-                <div>
-                    <h4 style="margin-bottom: 5px;">Atendimento Ágil</h4>
-                    <p style="font-size: 0.9rem; color: #666;">Fluxo otimizado e reuniões objetivas respeitando o seu tempo.</p>
-                </div>
-            </div>
-            <div class="beneficio-item">
-                <div class="beneficio-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22 10l-6-5v3H9v4h7v3l6-5zM4 19h10v-2H4V7h10V5H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2z"/></svg></div>
-                <div>
-                    <h4 style="margin-bottom: 5px;">Soluções Completas</h4>
-                    <p style="font-size: 0.9rem; color: #666;">Do projeto arquitetônico à regularização, oferecemos gestão ponta a ponta.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="avaliacoes">
-    <div class="container">
-        <h2 class="section-title">O que dizem <span>nossos clientes</span></h2>
-        <div class="av-grid">
-            <div class="av-card">
-                <div class="av-stars">★★★★★</div>
-                <p class="av-text">"O Studio Axis entendeu perfeitamente o que queríamos para nossa casa. O projeto 3D ficou idêntico à realidade. Excelente acompanhamento de obra."</p>
-                <p class="av-author">- Mariana S., Projeto Residencial</p>
-            </div>
-            <div class="av-card">
-                <div class="av-stars">★★★★★</div>
-                <p class="av-text">"Profissionalismo do início ao fim. O sistema de agendamento é prático e a consultoria foi essencial para clarear nossas ideias para o novo escritório."</p>
-                <p class="av-author">- Roberto F., Arquitetura Corporativa</p>
-            </div>
-            <div class="av-card">
-                <div class="av-stars">★★★★★</div>
-                <p class="av-text">"Superaram as expectativas no design de interiores do meu apartamento. Soluções inteligentes de marcenaria e iluminação. Recomendo muito!"</p>
-                <p class="av-author">- Camila T., Design de Interiores</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="faq" id="faq">
-    <div class="container" style="max-width: 800px;">
-        <h2 class="section-title">Perguntas <span>Frequentes</span></h2>
-        
-        <div class="faq-item">
-            <div class="faq-question">Atendem projetos fora de São Paulo? <span>+</span></div>
-            <div class="faq-answer">Sim! Realizamos consultorias e elaboramos projetos de forma online para todo o Brasil, com reuniões por videoconferência.</div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">Quais formas de pagamento são aceitas? <span>+</span></div>
-            <div class="faq-answer">Trabalhamos com flexibilidade. Aceitamos pagamentos via PIX, cartões de crédito, débito e boleto bancário.</div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">Como funciona a visita técnica? <span>+</span></div>
-            <div class="faq-answer">A visita técnica é agendada após nossa primeira consultoria. Nela, faremos o levantamento físico do local, medições precisas e análise das condições estruturais.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">Preciso ter a planta do imóvel para a primeira reunião? <span>+</span></div>
-            <div class="faq-answer">Não é obrigatório, mas ajuda bastante. Caso você tenha a planta ou fotos, pode anexá-las diretamente no formulário de agendamento acima.</div>
-        </div>
-    </div>
-</section>
-
-<section class="contato-secao" id="contato">
-    <div class="container contato-grid">
+<!-- Hero -->
+<section class="hero">
+    <div class="container hero-grid">
         <div>
-            <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Fale <span>Conosco</span></h2>
-            <ul class="contato-info">
-                <li><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Rua Damasco, 380, Cotia - SP, 06709-340</li>
-                <li><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> (11) 96702-4809 / (11) 3509-5210</li>
-                <li><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> contato@studioaxis.com.br</li>
-                <li><svg viewBox="0 0 24 24"><path d="M11.99 1.5c-5.8 0-10.49 4.69-10.49 10.5 0 5.8 4.69 10.5 10.49 10.5 5.8 0 10.49-4.69 10.49-10.5 0-5.8-4.69-10.5-10.49-10.5zm5.77 15.22c-1.02.58-3.08 1.4-5.77 1.4-2.67 0-4.73-.81-5.75-1.39v-4.14l3.1 1.77 2.65-1.52 2.65 1.52 3.12-1.77v4.13zM17.76 10l-5.77 3.28L6.22 10l5.77-3.28L17.76 10z"/></svg> @studioaxis.arq</li>
-            </ul>
-            <p style="color: #aaa; margin-top: 2rem;">Segunda a Sexta: 08h00 às 18h30<br>Sábado: 09h00 às 13h00</p>
+            <div class="hero-tag">Sistemas de Projetos & Consultoria</div>
+            <h1 class="hero-title">Arquitetura de alto padrão <span>concebida para o extraordinário.</span></h1>
+            <p class="hero-desc">Unimos sofisticação, funcionalidade e tecnologia para transformar sua visão em um projeto arquitetônico impecável. Agende sua consultoria técnica em menos de 1 minuto.</p>
+            <div class="hero-cta-group">
+                <a href="#sistema" class="btn btn-primary">Iniciar Agendamento</a>
+                <a href="#servicos" class="btn btn-outline">Conhecer Serviços</a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <span class="stat-num">14+</span>
+                    <span class="stat-label">Anos de Mercado</span>
+                </div>
+                <div>
+                    <span class="stat-num">350+</span>
+                    <span class="stat-label">Projetos Executados</span>
+                </div>
+                <div>
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Acompanhamento</span>
+                </div>
+            </div>
         </div>
-        <div class="mapa-container">
-            <!-- Fallback genérico para Maps com HTML/CSS -->
-            <iframe src="[https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3268800045437!2d-46.8407!3d-23.5937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDM1JzM3LjMiUyA0NsKwNTAnMjYuNSJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3268800045437!2d-46.8407!3d-23.5937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDM1JzM3LjMiUyA0NsKwNTAnMjYuNSJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr)" allowfullscreen="" loading="lazy"></iframe>
+        <div class="hero-visual">
+            <img src="[https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80)" alt="Projeto Arquitetônico Studio Axis">
+            <div class="hero-badge">
+                <div class="hero-badge-icon">✓</div>
+                <div>
+                    <strong style="display:block; font-size: 0.9rem;">Consultoria Presencial ou Online</strong>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">Atendimento nacional via videoconferência</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- Presentation -->
+<section class="presentation" id="apresentacao">
+    <div class="container presentation-grid">
+        <div>
+            <h2 class="section-title">Design atemporal com precisão técnica refinada.</h2>
+            <p class="section-subtitle" style="margin-bottom: 24px;">Há mais de 14 anos desenvolvendo soluções exclusivas para residências, empresas e espaços comerciais sofisticados.</p>
+        </div>
+        <div class="presentation-content">
+            <p>O <strong>Studio Axis Arquitetura</strong> une funcionalidade, sofisticação e inteligência espacial. Acompanhamos todas as etapas da execução, garantindo que o resultado final corresponda exatamente ao projetado.</p>
+            <ul class="feature-list">
+                <li class="feature-item"><span class="feature-icon">✓</span> Imagens fotorrealistas em 3D e Passeio Virtual</li>
+                <li class="feature-item"><span class="feature-icon">✓</span> Compatibilização completa de engenharia e estrutura</li>
+                <li class="feature-item"><span class="feature-icon">✓</span> Gestão e acompanhamento técnico rigoroso de obras</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="servicos">
+    <div class="container">
+        <h2 class="section-title">Nossas Especialidades</h2>
+        <p class="section-subtitle">Soluções arquitetônicas sob medida estruturadas para atender aos mais altos padrões de exigência.</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏛️</div>
+                <h3>Projetos Residenciais</h3>
+                <p>Residências unifamiliares de alto padrão com foco na eficiência espacial, iluminação natural e estética sofisticada.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Projetos Comerciais</h3>
+                <p>Espaços corporativos e comerciais otimizados para potencializar a presença da marca e a produtividade.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛋️</div>
+                <h3>Design de Interiores</h3>
+                <p>Detalhamento minucioso de marcenaria, iluminação, acabamentos e curadoria de mobiliário exclusivo.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔨</div>
+                <h3>Projetos de Reforma</h3>
+                <p>Reestruturação completa de ambientes existentes maximizando o potencial arquitetônico do imóvel.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📐</div>
+                <h3>Projeto 3D Fotorrealista</h3>
+                <p>Visualização hiper-realista do espaço antes da execução, permitindo ajustes precisos em tempo real.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>Regularização & Laudos</h3>
+                <p>Aprovação de projetos nos órgãos competentes, prefeitura e condomínios com agilidade técnica.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="how-it-works" id="como-funciona">
+    <div class="container">
+        <h2 class="section-title">Sua Jornada Conosco</h2>
+        <p class="section-subtitle">Processo claro e fluido desenvolvido para garantir segurança e excelência a cada etapa.</p>
+        
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-num">01</div>
+                <h4>Agendamento Através do Sistema</h4>
+                <p>Envie os dados do seu imóvel e selecione o melhor horário no nosso sistema automatizado.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">02</div>
+                <h4>Reunião de Diagnóstico</h4>
+                <p>Alinhamento de briefing, levantamento das necessidades do projeto e viabilidade financeira.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">03</div>
+                <h4>Estudo Preliminar & 3D</h4>
+                <p>Apresentação das plantas layoutadas, maquetes 3D e passeios virtuais imersivos.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">04</div>
+                <h4>Execução & Detalhamento</h4>
+                <p>Entrega do projeto executivo completo com acompanhamento presencial da obra.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- System Main -->
+<section class="system-section" id="sistema">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 class="section-title">Agendamento & Análise de Projeto</h2>
+            <p class="section-subtitle" style="margin: 0 auto;">Preencha os detalhes do seu imóvel abaixo para liberar os horários de consultoria com nossos arquitetos.</p>
+        </div>
+
+        <div class="system-wrapper">
+            <div class="system-header">
+                <div class="system-title">
+                    <div class="system-title-dot"></div>
+                    <span>Plataforma de Consultoria Arquitetônica</span>
+                </div>
+                <span style="font-size: 0.8rem; color: var(--text-muted);" id="current-step-label">Etapa 1 de 12</span>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text">
+                    <span>Progresso do Formulário</span>
+                    <span id="progress-percent">8%</span>
+                </div>
+            </div>
+
+            <form id="architect-system-form" onsubmit="return false;">
+                <div class="system-body">
+                    
+                    <!-- Step 1: Tipo de Serviço -->
+                    <div class="step-pane active" data-step="1">
+                        <h3 class="pane-title">Qual é o serviço desejado?</h3>
+                        <p class="pane-desc">Selecione a categoria principal que melhor descreve sua necessidade atual.</p>
+                        <div class="grid-options">
+                            <div class="option-card" data-field="tipoServico" data-value="Projeto Residencial">
+                                <span class="option-card-icon">🏡</span>
+                                Projeto Residencial
+                            </div>
+                            <div class="option-card" data-field="tipoServico" data-value="Projeto Comercial">
+                                <span class="option-card-icon">🏢</span>
+                                Projeto Comercial
+                            </div>
+                            <div class="option-card" data-field="tipoServico" data-value="Design de Interiores">
+                                <span class="option-card-icon">🛋️</span>
+                                Design de Interiores
+                            </div>
+                            <div class="option-card" data-field="tipoServico" data-value="Reforma / Ampliação">
+                                <span class="option-card-icon">🔨</span>
+                                Reforma / Ampliação
+                            </div>
+                            <div class="option-card" data-field="tipoServico" data-value="Consultoria Arquitetônica">
+                                <span class="option-card-icon">📐</span>
+                                Consultoria
+                            </div>
+                            <div class="option-card" data-field="tipoServico" data-value="Regularização de Imóvel">
+                                <span class="option-card-icon">📄</span>
+                                Regularização
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Tipo de Imóvel -->
+                    <div class="step-pane" data-step="2">
+                        <h3 class="pane-title">Qual o tipo do imóvel?</h3>
+                        <p class="pane-desc">Isso ajuda a determinar a regulamentação técnica aplicável.</p>
+                        <div class="grid-options">
+                            <div class="option-card" data-field="tipoImovel" data-value="Casa / Condomínio">
+                                <span class="option-card-icon">🏠</span>
+                                Casa em Condomínio
+                            </div>
+                            <div class="option-card" data-field="tipoImovel" data-value="Apartamento">
+                                <span class="option-card-icon">🏢</span>
+                                Apartamento
+                            </div>
+                            <div class="option-card" data-field="tipoImovel" data-value="Comercial / Sala">
+                                <span class="option-card-icon">💼</span>
+                                Sala Comercial / Loja
+                            </div>
+                            <div class="option-card" data-field="tipoImovel" data-value="Terreno / Lote">
+                                <span class="option-card-icon">🏞️</span>
+                                Terreno Zero
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Área Aproximada -->
+                    <div class="step-pane" data-step="3">
+                        <h3 class="pane-title">Qual a área aproximada do projeto (m²)?</h3>
+                        <p class="pane-desc">Uma estimativa geral é suficiente nesta etapa inicial.</p>
+                        <div class="grid-options">
+                            <div class="option-card" data-field="areaAproximada" data-value="Até 80m²">Até 80 m²</div>
+                            <div class="option-card" data-field="areaAproximada" data-value="80m² a 200m²">80 m² a 200 m²</div>
+                            <div class="option-card" data-field="areaAproximada" data-value="200m² a 500m²">200 m² a 500 m²</div>
+                            <div class="option-card" data-field="areaAproximada" data-value="Acima de 500m²">Acima de 500 m²</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Cidade e Estado -->
+                    <div class="step-pane" data-step="4">
+                        <h3 class="pane-title">Onde está localizado o imóvel ou terreno?</h3>
+                        <p class="pane-desc">Atendemos presencialmente na Grande SP e online em todo o Brasil.</p>
+                        <div class="form-group">
+                            <label class="form-label">Cidade e Estado</label>
+                            <input type="text" id="inputCidade" class="form-control" placeholder="Ex: São Paulo - SP" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Possui Planta? -->
+                    <div class="step-pane" data-step="5">
+                        <h3 class="pane-title">Você já possui a planta do imóvel?</h3>
+                        <p class="pane-desc">Arquivos em PDF, DWG, imagem ou croqui simples.</p>
+                        <div class="grid-options">
+                            <div class="option-card" data-field="possuiPlanta" data-value="Sim, possuo planta técnica">
+                                <span class="option-card-icon">📐</span>
+                                Sim, possuo
+                            </div>
+                            <div class="option-card" data-field="possuiPlanta" data-value="Apenas rascunho / fotos">
+                                <span class="option-card-icon">✏️</span>
+                                Apenas Rascunho/Fotos
+                            </div>
+                            <div class="option-card" data-field="possuiPlanta" data-value="Não possuo planta">
+                                <span class="option-card-icon">❌</span>
+                                Não possuo
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6: Objetivo Principal -->
+                    <div class="step-pane" data-step="6">
+                        <h3 class="pane-title">Qual é o objetivo principal do projeto?</h3>
+                        <p class="pane-desc">Sua principal prioridade neste investimento.</p>
+                        <div class="grid-options">
+                            <div class="option-card" data-field="objetivoProjeto" data-value="Construir do Zero">Construir do Zero</div>
+                            <div class="option-card" data-field="objetivoProjeto" data-value="Reformar Totalmente">Reformar Totalmente</div>
+                            <div class="option-card" data-field="objetivoProjeto" data-value="Modernizar Interiores">Modernizar Interiores</div>
+                            <div class="option-card" data-field="objetivoProjeto" data-value="Valorização Comercial">Valorização p/ Venda</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 7: Anexo de Arquivos (Opcional) -->
+                    <div class="step-pane" data-step="7">
+                        <h3 class="pane-title">Anexo de Projetos / Referências</h3>
+                        <p class="pane-desc">Envie plantas, fotos ou referências visuais caso possua (Opcional).</p>
+                        <div class="file-upload-zone" onclick="document.getElementById('fileInput').click()">
+                            <div style="font-size: 2rem; margin-bottom: 8px;">📁</div>
+                            <strong>Clique para selecionar arquivos</strong>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Suporta PDF, JPG, PNG ou DWG até 25MB</p>
+                            <input type="file" id="fileInput" style="display:none;" onchange="handleFileSelect(event)">
+                        </div>
+                        <div id="file-name-display" style="margin-top: 12px; font-size: 0.85rem; color: var(--copper-accent); font-weight: 600;"></div>
+                    </div>
+
+                    <!-- Step 8: Data da Consultoria -->
+                    <div class="step-pane" data-step="8">
+                        <h3 class="pane-title">Selecione a data para a reunião/consultoria</h3>
+                        <p class="pane-desc">Atendimento de Segunda a Sábado. Selecione uma data disponível.</p>
+                        <div class="calendar-grid" id="calendar-container">
+                            <!-- Calendar Generated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Step 9: Horário -->
+                    <div class="step-pane" data-step="9">
+                        <h3 class="pane-title">Selecione o horário desejado</h3>
+                        <p class="pane-desc">Duração média da sessão técnica: 60 minutos.</p>
+                        <div class="time-slots" id="time-slots-container">
+                            <!-- Slots Generated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Step 10: Informações Pessoais -->
+                    <div class="step-pane" data-step="10">
+                        <h3 class="pane-title">Seus Dados de Contato</h3>
+                        <p class="pane-desc">Para envio da confirmação do agendamento e link da reunião.</p>
+                        <div class="form-group">
+                            <label class="form-label">Nome Completo</label>
+                            <input type="text" id="inputNome" class="form-control" placeholder="Seu nome completo">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">WhatsApp com DDD</label>
+                            <input type="tel" id="inputWhatsApp" class="form-control" placeholder="(11) 99999-9999" oninput="maskPhone(this)">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">E-mail corporativo / pessoal</label>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="seu@email.com">
+                        </div>
+                    </div>
+
+                    <!-- Step 11: Observações -->
+                    <div class="step-pane" data-step="11">
+                        <h3 class="pane-title">Observações adicionais (Opcional)</h3>
+                        <p class="pane-desc">Algum detalhe específico que deveríamos saber antes da reunião?</p>
+                        <div class="form-group">
+                            <textarea id="inputObs" class="form-control" rows="4" placeholder="Detalhes sobre orçamento previsto, prazos ou expectativas..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Step 12: Resumo e Confirmação -->
+                    <div class="step-pane" data-step="12">
+                        <h3 class="pane-title">Resumo do Agendamento</h3>
+                        <p class="pane-desc">Confira as informações prestadas antes de finalizar o registro.</p>
+                        
+                        <div class="summary-box">
+                            <div class="summary-row"><span class="summary-label">Serviço:</span><span class="summary-val" id="sum-servico">-</span></div>
+                            <div class="summary-row"><span class="summary-label">Imóvel:</span><span class="summary-val" id="sum-imovel">-</span></div>
+                            <div class="summary-row"><span class="summary-label">Área / Local:</span><span class="summary-val" id="sum-area-local">-</span></div>
+                            <div class="summary-row"><span class="summary-label">Data e Hora:</span><span class="summary-val" id="sum-datetime" style="color:var(--copper-accent);">-</span></div>
+                            <div class="summary-row"><span class="summary-label">Cliente:</span><span class="summary-val" id="sum-cliente">-</span></div>
+                            <div class="summary-row"><span class="summary-label">Contato:</span><span class="summary-val" id="sum-contato">-</span></div>
+                            <div class="summary-row"><span class="summary-label">Arquivo:</span><span class="summary-val" id="sum-arquivo">Nenhum</span></div>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center;">Ao confirmar, os dados serão encaminhados para nosso WhatsApp oficial e agenda técnica.</p>
+                    </div>
+
+                </div>
+
+                <div class="system-footer">
+                    <button type="button" class="btn btn-outline" id="btn-back" onclick="navigateStep(-1)" style="visibility: hidden;">← Voltar</button>
+                    <button type="button" class="btn btn-primary" id="btn-next" onclick="navigateStep(1)">Avançar →</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits -->
+<section class="benefits">
+    <div class="container">
+        <h2 class="section-title">Por que escolher o Studio Axis?</h2>
+        <p class="section-subtitle">A excelência técnica combinada à gestão inteligente de cada etapa do projeto.</p>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Atendimento Ágil</h3>
+                <p>Agendamento direto na agenda técnica com confirmação via WhatsApp e e-mail sem burocracias.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Precisão Orçamentária</h3>
+                <p>Projetos desenvolvidos rigorosamente dentro do orçamento estipulado pelo cliente, evitando surpresas em obra.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Acompanhamento Integral</h3>
+                <p>Supervisão técnica de obra presencial assegurando fidelidade absoluta ao projeto original executivo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews">
+    <div class="container">
+        <h2 class="section-title">Depoimentos de Clientes</h2>
+        <p class="section-subtitle">A opinião de quem já transformou seus ambientes conosco.</p>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <p class="review-text">"O Studio Axis conseguiu captar exatamente o conceito que queríamos para nossa residência em Alphaville. O modelo 3D fotorrealista foi decisivo."</p>
+                <div>
+                    <div class="review-author">Roberto & Camila S.</div>
+                    <div class="review-role">Projeto Residencial 450m²</div>
+                </div>
+            </div>
+            <div class="review-card">
+                <p class="review-text">"A agilidade no agendamento e o profissionalismo na entrega técnica da reforma da nossa sede corporativa superaram as expectativas."</p>
+                <div>
+                    <div class="review-author">Marcio Andrade</div>
+                    <div class="review-role">Diretor da Vértice Capital</div>
+                </div>
+            </div>
+            <div class="review-card">
+                <p class="review-text">"Regularização e projeto de interiores executados de forma impecável. Atendimento técnico pontual e transparente do início ao fim."</p>
+                <div>
+                    <div class="review-author">Fernanda Lima</div>
+                    <div class="review-role">Reforma de Apartamento Moema</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+    <div class="container">
+        <h2 class="section-title" style="text-align: center;">Perguntas Frequentes</h2>
+        <p class="section-subtitle" style="text-align: center; margin-bottom: 40px;">Esclareça suas dúvidas técnicas sobre o nosso processo de trabalho.</p>
+        
+        <div class="faq-accordion">
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-header">
+                    <span>Como funciona a consultoria técnica inicial?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-content">
+                    A consultoria possui duração aproximada de 60 minutos (presencial ou online). Nela, analisamos a viabilidade técnica do seu imóvel, plantas, prazos e direcionamento de estilo.
+                </div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-header">
+                    <span>Posso enviar minhas referências e plantas do imóvel?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-content">
+                    Sim! Nosso sistema integrado permite o envio de arquivos em PDF, imagens ou plantas técnicas diretamente durante o processo de agendamento.
+                </div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-header">
+                    <span>O escritório atende em outras cidades além de São Paulo?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-content">
+                    Sim. Desenvolvemos projetos online para todo o Brasil e exterior, além de atendimentos presenciais na Região Metropolitana de São Paulo.
+                </div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-header">
+                    <span>Quais as formas de pagamento aceitas?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-content">
+                    Aceitamos transferências via PIX, cartões de crédito/débito e boleto bancário parcelado conforme etapas do projeto.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact & Map -->
+<section class="contact-map" id="contato">
+    <div class="container">
+        <div class="contact-grid">
+            <div>
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle" style="margin-bottom: 30px;">Nosso escritório está estrategicamente localizado em Moema, São Paulo.</p>
+                
+                <div class="contact-info-item">
+                    <div class="contact-info-label">Endereço</div>
+                    <div class="contact-info-val">Alameda dos Jurupis, 842 – Conjunto 71, São Paulo – SP</div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-label">Telefone / WhatsApp</div>
+                    <div class="contact-info-val">(11) 3509-5210 / (11) 96702-4809</div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-label">E-mail</div>
+                    <div class="contact-info-val">contato@studioaxis.com.br</div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-label">Horário de Atendimento</div>
+                    <div class="contact-info-val">Seg. a Sex.: 08h00 às 18h30 | Sáb.: 09h00 às 13h00</div>
+                </div>
+            </div>
+            <div>
+                <div class="map-container">
+                    <iframe src="[https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.027003023253!2d-46.66442122375836!3d-23.60338786448166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a07be060001%3A0xb5b736798083a21a!2sAlameda%20dos%20Jurupis%2C%20842%20-%20Moema%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.027003023253!2d-46.66442122375836!3d-23.60338786448166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a07be060001%3A0xb5b736798083a21a!2sAlameda%20dos%20Jurupis%2C%20842%20-%20Moema%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr)" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
 <footer>
     <div class="container">
-        <p>&copy; 2026 <span>Studio Axis Arquitetura</span>. Todos os direitos reservados.</p>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">STUDIO AXIS ARQUITETURA</div>
+                <p style="max-width: 300px; font-size: 0.8rem;">Desenvolvimento de projetos arquitetônicos exclusivos, comerciais e interiores de alto padrão.</p>
+            </div>
+            <div>
+                <strong style="color:#fff; display:block; margin-bottom:12px;">Navegação</strong>
+                <ul class="footer-links">
+                    <li><a href="#apresentacao">O Escritório</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#como-funciona">Metodologia</a></li>
+                </ul>
+            </div>
+            <div>
+                <strong style="color:#fff; display:block; margin-bottom:12px;">Serviços</strong>
+                <ul class="footer-links">
+                    <li><a href="#servicos">Projetos Residenciais</a></li>
+                    <li><a href="#servicos">Interiores</a></li>
+                    <li><a href="#servicos">Reformas</a></li>
+                </ul>
+            </div>
+            <div>
+                <strong style="color:#fff; display:block; margin-bottom:12px;">Redes Sociais</strong>
+                <ul class="footer-links">
+                    <li><a href="[https://instagram.com/studioaxis.arq](https://instagram.com/studioaxis.arq)" target="_blank">Instagram</a></li>
+                    <li><a href="[https://wa.me/5511967024809](https://wa.me/5511967024809)" target="_blank">WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>© 2026 Studio Axis Arquitetura. Todos os direitos reservados.</div>
+            <div>Desenvolvido por Cliente Web</div>
+        </div>
     </div>
 </footer>
 
-<a href="#" class="float-wpp" id="floatWpp">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.8 5.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<!-- WhatsApp Floating Button -->
+<a href="[https://wa.me/5511967024809?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20projetos](https://wa.me/5511967024809?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20projetos)." class="whatsapp-float" target="_blank" title="Falar no WhatsApp">
+    📲
 </a>
 
+<!-- JavaScript Engine -->
 <script>
-    // --- Mobile Menu ---
-    document.getElementById('menuBtn').addEventListener('click', function() {
-        document.getElementById('navLinks').classList.toggle('active');
-    });
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.getElementById('navLinks').classList.remove('active');
-        });
-    });
-
-    // --- FAQ ---
-    document.querySelectorAll('.faq-question').forEach(item => {
-        item.addEventListener('click', () => {
-            const parent = item.parentElement;
-            parent.classList.toggle('active');
-            const span = item.querySelector('span');
-            span.textContent = parent.classList.contains('active') ? '-' : '+';
-        });
-    });
-
-    // --- Sistema SPA Flow ---
-    const state = {
-        projeto: '',
-        imovel: '',
-        area: '',
-        cidade: '',
-        planta: '',
-        arquivo: 'Nenhum arquivo',
-        objetivo: '',
-        data: null,
-        horario: '',
-        nome: '',
-        whatsapp: '',
-        email: ''
+    // System State
+    const systemState = {
+        currentStep: 1,
+        totalSteps: 12,
+        formData: {
+            tipoServico: '',
+            tipoImovel: '',
+            areaAproximada: '',
+            cidade: '',
+            possuiPlanta: '',
+            objetivoProjeto: '',
+            arquivoNome: '',
+            dataAgendamento: '',
+            horarioAgendamento: '',
+            nome: '',
+            whatsapp: '',
+            email: '',
+            observacoes: ''
+        }
     };
 
-    let currentStep = 1;
-    const totalSteps = 9;
+    // Initialize Engine
+    document.addEventListener('DOMContentLoaded', () => {
+        initOptionCards();
+        renderCalendar();
+        renderTimeSlots();
+        updateProgress();
+    });
 
-    const btnNext = document.getElementById('btn-next');
-    const btnPrev = document.getElementById('btn-prev');
-    const btnSubmit = document.getElementById('btn-submit');
-    const progressBar = document.getElementById('progressBar');
+    function initOptionCards() {
+        const cards = document.querySelectorAll('.option-card');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const field = card.getAttribute('data-field');
+                const val = card.getAttribute('data-value');
+                
+                // Clear sibling selections
+                const siblings = card.parentElement.querySelectorAll('.option-card');
+                siblings.forEach(s => s.classList.remove('selected'));
+                
+                card.classList.add('selected');
+                systemState.formData[field] = val;
+            });
+        });
+    }
+
+    function navigateStep(direction) {
+        // Validation before advancing
+        if (direction === 1 && !validateCurrentStep()) {
+            return;
+        }
+
+        const newStep = systemState.currentStep + direction;
+        if (newStep >= 1 && newStep <= systemState.totalSteps) {
+            // Hide current pane
+            document.querySelector(`.step-pane[data-step="${systemState.currentStep}"]`).classList.remove('active');
+            
+            systemState.currentStep = newStep;
+            
+            // Show new pane
+            document.querySelector(`.step-pane[data-step="${systemState.currentStep}"]`).classList.add('active');
+            
+            // Update Summary if step 12
+            if (systemState.currentStep === 12) {
+                populateSummary();
+            }
+
+            updateProgress();
+        }
+    }
+
+    function validateCurrentStep() {
+        const step = systemState.currentStep;
+
+        if (step === 1 && !systemState.formData.tipoServico) {
+            alert('Por favor, selecione um tipo de serviço.');
+            return false;
+        }
+        if (step === 2 && !systemState.formData.tipoImovel) {
+            alert('Por favor, selecione o tipo do imóvel.');
+            return false;
+        }
+        if (step === 3 && !systemState.formData.areaAproximada) {
+            alert('Por favor, selecione a área aproximada.');
+            return false;
+        }
+        if (step === 4) {
+            const val = document.getElementById('inputCidade').value.trim();
+            if (!val) {
+                alert('Por favor, informe a Cidade e Estado.');
+                return false;
+            }
+            systemState.formData.cidade = val;
+        }
+        if (step === 5 && !systemState.formData.possuiPlanta) {
+            alert('Por favor, informe se possui a planta.');
+            return false;
+        }
+        if (step === 6 && !systemState.formData.objetivoProjeto) {
+            alert('Por favor, selecione o objetivo do projeto.');
+            return false;
+        }
+        if (step === 8 && !systemState.formData.dataAgendamento) {
+            alert('Por favor, selecione uma data para a reunião.');
+            return false;
+        }
+        if (step === 9 && !systemState.formData.horarioAgendamento) {
+            alert('Por favor, selecione um horário.');
+            return false;
+        }
+        if (step === 10) {
+            const nome = document.getElementById('inputNome').value.trim();
+            const phone = document.getElementById('inputWhatsApp').value.trim();
+            const email = document.getElementById('inputEmail').value.trim();
+
+            if (!nome) {
+                alert('Por favor, preencha seu nome completo.');
+                return false;
+            }
+            if (phone.length < 14) {
+                alert('Por favor, informe um WhatsApp válido.');
+                return false;
+            }
+            if (!email.includes('@') || !email.includes('.')) {
+                alert('Por favor, informe um e-mail válido.');
+                return false;
+            }
+
+            systemState.formData.nome = nome;
+            systemState.formData.whatsapp = phone;
+            systemState.formData.email = email;
+        }
+        if (step === 11) {
+            systemState.formData.observacoes = document.getElementById('inputObs').value.trim();
+        }
+
+        return true;
+    }
 
     function updateProgress() {
-        const percent = ((currentStep - 1) / (totalSteps - 1)) * 100;
-        progressBar.style.width = percent + '%';
-    }
+        const step = systemState.currentStep;
+        const total = systemState.totalSteps;
+        const percent = Math.round((step / total) * 100);
 
-    function showStep(step) {
-        document.querySelectorAll('.step').forEach(el => el.classList.remove('active'));
-        document.getElementById(`step-${step}`).classList.add('active');
-        
-        btnPrev.style.display = step > 1 ? 'block' : 'none';
-        
-        if (step === totalSteps) {
-            btnNext.style.display = 'none';
-            btnSubmit.style.display = 'flex';
-            buildSummary();
+        document.getElementById('progress-fill').style.width = percent + '%';
+        document.getElementById('progress-percent').innerText = percent + '%';
+        document.getElementById('current-step-label').innerText = `Etapa ${step} de ${total}`;
+
+        // Back button visibility
+        const backBtn = document.getElementById('btn-back');
+        if (step === 1) {
+            backBtn.style.visibility = 'hidden';
         } else {
-            btnNext.style.display = 'flex';
-            btnSubmit.style.display = 'none';
-        }
-        updateProgress();
-    }
-
-    // Option cards selection logic
-    document.querySelectorAll('.step').forEach(stepEl => {
-        const stepNum = parseInt(stepEl.dataset.step);
-        const options = stepEl.querySelectorAll('.option-card');
-        
-        options.forEach(opt => {
-            opt.addEventListener('click', () => {
-                // Remove selected from siblings
-                options.forEach(o => o.classList.remove('selected'));
-                opt.classList.add('selected');
-                
-                const val = opt.dataset.val;
-                if (stepNum === 1) state.projeto = val;
-                if (stepNum === 2) state.imovel = val;
-                if (stepNum === 4) {
-                    state.planta = val;
-                    const uploadArea = document.getElementById('upload-area');
-                    if (val === 'Sim, vou anexar') {
-                        uploadArea.style.display = 'block';
-                    } else {
-                        uploadArea.style.display = 'none';
-                        state.arquivo = 'Nenhum arquivo';
-                        document.getElementById('file-name-display').innerText = 'Nenhum arquivo selecionado';
-                        document.getElementById('file-input').value = '';
-                    }
-                }
-                
-                // Auto advance for steps 1 and 2
-                if (stepNum === 1 || stepNum === 2) {
-                    setTimeout(() => handleNext(), 300);
-                }
-            });
-        });
-    });
-
-    // File Input
-    document.getElementById('file-input').addEventListener('change', function(e) {
-        if(this.files && this.files.length > 0) {
-            let names = Array.from(this.files).map(f => f.name).join(', ');
-            document.getElementById('file-name-display').innerText = names;
-            state.arquivo = names;
-        }
-    });
-
-    // Masks
-    const phoneInput = document.getElementById('input-whatsapp');
-    phoneInput.addEventListener('input', function (e) {
-        let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
-        e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-    });
-
-    // Validation logic
-    function validateStep() {
-        let valid = true;
-        
-        const clearErrors = (id) => document.getElementById(id).classList.remove('has-error');
-        const showError = (id) => { document.getElementById(id).classList.add('has-error'); valid = false; };
-
-        if (currentStep === 1 && !state.projeto) valid = false;
-        if (currentStep === 2 && !state.imovel) valid = false;
-        
-        if (currentStep === 3) {
-            clearErrors('fg-area'); clearErrors('fg-cidade');
-            const a = document.getElementById('input-area').value;
-            const c = document.getElementById('input-cidade').value;
-            if (!a) showError('fg-area'); else state.area = a;
-            if (!c) showError('fg-cidade'); else state.cidade = c;
-        }
-        
-        if (currentStep === 4 && !state.planta) valid = false;
-        
-        if (currentStep === 5) {
-            clearErrors('fg-objetivo');
-            const o = document.getElementById('input-objetivo').value;
-            if (!o || o.length < 10) showError('fg-objetivo'); else state.objetivo = o;
+            backBtn.style.visibility = 'visible';
         }
 
-        if (currentStep === 6) {
-            const err = document.getElementById('err-date');
-            if (!state.data) { err.style.display = 'block'; valid = false; }
-            else { err.style.display = 'none'; }
-        }
-
-        if (currentStep === 7) {
-            const err = document.getElementById('err-time');
-            if (!state.horario) { err.style.display = 'block'; valid = false; }
-            else { err.style.display = 'none'; }
-        }
-
-        if (currentStep === 8) {
-            clearErrors('fg-nome'); clearErrors('fg-whatsapp'); clearErrors('fg-email');
-            const n = document.getElementById('input-nome').value;
-            const w = document.getElementById('input-whatsapp').value;
-            const e = document.getElementById('input-email').value;
-            
-            if (n.length < 3) showError('fg-nome'); else state.nome = n;
-            if (w.length < 14) showError('fg-whatsapp'); else state.whatsapp = w;
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)) showError('fg-email'); else state.email = e;
-        }
-
-        return valid;
-    }
-
-    function handleNext() {
-        if (validateStep() && currentStep < totalSteps) {
-            currentStep++;
-            showStep(currentStep);
-        } else if (!validateStep()) {
-            // Shake effect or simple alert could be added, visual errors are handled in validate
+        // Next button text
+        const nextBtn = document.getElementById('btn-next');
+        if (step === total) {
+            nextBtn.innerText = 'Confirmar Agendamento no WhatsApp 📲';
+            nextBtn.onclick = finishSystem;
+        } else {
+            nextBtn.innerText = 'Avançar →';
+            nextBtn.onclick = () => navigateStep(1);
         }
     }
 
-    btnNext.addEventListener('click', handleNext);
-    btnPrev.addEventListener('click', () => {
-        if (currentStep > 1) {
-            currentStep--;
-            showStep(currentStep);
+    function handleFileSelect(evt) {
+        const file = evt.target.files[0];
+        if (file) {
+            systemState.formData.arquivoNome = file.name;
+            document.getElementById('file-name-display').innerText = 'Arquivo selecionado: ' + file.name;
         }
-    });
+    }
 
-    // --- Calendar Logic ---
-    let currentDate = new Date(2026, 6, 24); // Start at mock current date July 2026
-    const realCurrentDate = new Date(2026, 6, 24);
-    
+    // Render Calendar UI
     function renderCalendar() {
-        const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-        document.getElementById('month-display').innerText = `${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
-        
-        const daysContainer = document.getElementById('calendar-days');
-        daysContainer.innerHTML = '';
-        
-        const firstDayIndex = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
-        const lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
-        
-        for (let i = 0; i < firstDayIndex; i++) {
-            daysContainer.innerHTML += `<div></div>`;
-        }
-        
-        for (let i = 1; i <= lastDay; i++) {
-            const cellDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
-            const isPast = cellDate < new Date(realCurrentDate.getFullYear(), realCurrentDate.getMonth(), realCurrentDate.getDate());
-            const isSunday = cellDate.getDay() === 0;
+        const container = document.getElementById('calendar-container');
+        container.innerHTML = '';
+
+        const daysHead = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+        daysHead.forEach(d => {
+            const el = document.createElement('div');
+            el.className = 'calendar-day-head';
+            el.innerText = d;
+            container.appendChild(el);
+        });
+
+        // Generate Next 14 Days
+        const today = new Date();
+        for (let i = 0; i < 14; i++) {
+            const d = new Date();
+            d.setDate(today.getDate() + i);
+
+            const dayEl = document.createElement('div');
+            dayEl.className = 'calendar-day';
             
-            const div = document.createElement('div');
-            div.className = `calendar-day ${isPast || isSunday ? 'disabled' : ''}`;
-            div.innerText = i;
-            
-            if (state.data && state.data.getTime() === cellDate.getTime()) {
-                div.classList.add('selected');
+            const isSunday = d.getDay() === 0;
+            if (isSunday) {
+                dayEl.classList.add('disabled');
             }
 
-            if (!isPast && !isSunday) {
-                div.addEventListener('click', () => {
-                    state.data = cellDate;
-                    state.horario = ''; // reset time
-                    renderCalendar();
-                    generateTimeSlots();
-                    document.getElementById('err-date').style.display = 'none';
-                    setTimeout(() => handleNext(), 300);
-                });
+            const dayNum = d.getDate();
+            const monthNum = d.getMonth() + 1;
+            const formattedDate = `${dayNum < 10 ? '0' + dayNum : dayNum}/${monthNum < 10 ? '0' + monthNum : monthNum}/${d.getFullYear()}`;
+
+            dayEl.innerText = dayNum;
+
+            if (!isSunday) {
+                dayEl.onclick = () => {
+                    document.querySelectorAll('.calendar-day').forEach(el => el.classList.remove('selected'));
+                    dayEl.classList.add('selected');
+                    systemState.formData.dataAgendamento = formattedDate;
+                };
             }
-            daysContainer.appendChild(div);
+
+            container.appendChild(dayEl);
         }
     }
 
-    document.getElementById('prev-month').addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar();
-    });
-    document.getElementById('next-month').addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar();
-    });
-
-    function generateTimeSlots() {
-        const container = document.getElementById('time-slots');
+    // Render Time Slots
+    function renderTimeSlots() {
+        const container = document.getElementById('time-slots-container');
         container.innerHTML = '';
-        
-        if(!state.data) return;
-        
-        const isSaturday = state.data.getDay() === 6;
-        const slots = isSaturday ? ['09:00', '10:00', '11:00', '12:00'] : ['08:00', '09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00', '17:00'];
-        
-        document.getElementById('selected-date-display').innerText = `Data selecionada: ${state.data.toLocaleDateString('pt-BR')}`;
 
-        slots.forEach(time => {
-            const div = document.createElement('div');
-            div.className = 'time-slot';
-            div.innerText = time;
-            
-            if(state.horario === time) div.classList.add('selected');
+        const slots = ['08:30', '10:00', '11:30', '14:00', '15:30', '17:00'];
+        slots.forEach(slot => {
+            const el = document.createElement('div');
+            el.className = 'time-slot';
+            el.innerText = slot;
 
-            div.addEventListener('click', () => {
-                document.querySelectorAll('.time-slot').forEach(el => el.classList.remove('selected'));
-                div.classList.add('selected');
-                state.horario = time;
-                document.getElementById('err-time').style.display = 'none';
-                setTimeout(() => handleNext(), 300);
-            });
+            el.onclick = () => {
+                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+                el.classList.add('selected');
+                systemState.formData.horarioAgendamento = slot;
+            };
 
-            container.appendChild(div);
+            container.appendChild(el);
         });
     }
 
-    renderCalendar();
-
-    // --- Summary & Submission ---
-    function buildSummary() {
-        const box = document.getElementById('summary-box');
-        box.innerHTML = `
-            <div class="summary-item"><span class="summary-label">Nome:</span> <span class="summary-value">${state.nome}</span></div>
-            <div class="summary-item"><span class="summary-label">WhatsApp:</span> <span class="summary-value">${state.whatsapp}</span></div>
-            <div class="summary-item"><span class="summary-label">Projeto:</span> <span class="summary-value">${state.projeto} - ${state.imovel}</span></div>
-            <div class="summary-item"><span class="summary-label">Área:</span> <span class="summary-value">${state.area} m² (${state.cidade})</span></div>
-            <div class="summary-item"><span class="summary-label">Data:</span> <span class="summary-value">${state.data.toLocaleDateString('pt-BR')} às ${state.horario}</span></div>
-        `;
+    function populateSummary() {
+        const data = systemState.formData;
+        document.getElementById('sum-servico').innerText = data.tipoServico || '-';
+        document.getElementById('sum-imovel').innerText = data.tipoImovel || '-';
+        document.getElementById('sum-area-local').innerText = `${data.areaAproximada} | ${data.cidade}`;
+        document.getElementById('sum-datetime').innerText = `${data.dataAgendamento} às ${data.horarioAgendamento}`;
+        document.getElementById('sum-cliente').innerText = data.nome || '-';
+        document.getElementById('sum-contato').innerText = `${data.whatsapp} | ${data.email}`;
+        document.getElementById('sum-arquivo').innerText = data.arquivoNome || 'Nenhum arquivo';
     }
 
-    function createGoogleCalendarLink() {
-        // YYYYMMDDTHHmmssZ
-        const d = state.data;
-        const t = state.horario.split(':');
-        const start = new Date(d.getFullYear(), d.getMonth(), d.getDate(), parseInt(t[0]), parseInt(t[1]));
-        const end = new Date(start.getTime() + 60 * 60 * 1000); // +1 hour
-
-        const formatGCalDate = (date) => {
-            return date.toISOString().replace(/-|:|\.\d+/g, '');
-        };
-
-        const details = `Consultoria Arquitetônica - Studio Axis\nCliente: ${state.nome}\nTelefone: ${state.whatsapp}\nProjeto: ${state.projeto}\nÁrea: ${state.area}m²`;
+    function finishSystem() {
+        const data = systemState.formData;
         
-        return `[https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consultoria+Studio+Axis+-+$](https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consultoria+Studio+Axis+-+$){encodeURIComponent(state.nome)}&dates=${formatGCalDate(start)}/${formatGCalDate(end)}&details=${encodeURIComponent(details)}&location=Studio+Axis+Arquitetura`;
+        // Build WhatsApp Message
+        let msg = `*NOVO AGENDAMENTO DE CONSULTORIA - STUDIO AXIS*\n\n`;
+        msg += `*Serviço:* ${data.tipoServico}\n`;
+        msg += `*Tipo de Imóvel:* ${data.tipoImovel}\n`;
+        msg += `*Área Aproximada:* ${data.areaAproximada}\n`;
+        msg += `*Cidade/UF:* ${data.cidade}\n`;
+        msg += `*Possui Planta:* ${data.possuiPlanta}\n`;
+        msg += `*Objetivo:* ${data.objetivoProjeto}\n`;
+        msg += `*Data Preferencial:* ${data.dataAgendamento}\n`;
+        msg += `*Horário:* ${data.horarioAgendamento}\n\n`;
+        msg += `*DADOS DO CLIENTE*\n`;
+        msg += `*Nome:* ${data.nome}\n`;
+        msg += `*WhatsApp:* ${data.whatsapp}\n`;
+        msg += `*E-mail:* ${data.email}\n`;
+        if (data.observacoes) {
+            msg += `*Observações:* ${data.observacoes}\n`;
+        }
+        if (data.arquivoNome) {
+            msg += `*Anexo informado:* ${data.arquivoNome}\n`;
+        }
+
+        const phone = "5511967024809";
+        const encodedMsg = encodeURIComponent(msg);
+        const whatsappUrl = `[https://wa.me/$](https://wa.me/$){phone}?text=${encodedMsg}`;
+
+        // Trigger WhatsApp Redirect
+        window.open(whatsappUrl, '_blank');
     }
 
-    btnSubmit.addEventListener('click', () => {
-        const phone = '5511967024809';
-        const text = `Olá, Studio Axis! Meu nome é *${state.nome}* e gostaria de confirmar minha consultoria.\n\n*Resumo da Solicitação:*\n- Projeto: ${state.projeto}\n- Imóvel: ${state.imovel}\n- Área: ${state.area} m²\n- Local: ${state.cidade}\n- Data: ${state.data.toLocaleDateString('pt-BR')} às ${state.horario}\n- E-mail: ${state.email}\n- Objetivo: ${state.objetivo}`;
-        
-        const waUrl = `[https://wa.me/$](https://wa.me/$){phone}?text=${encodeURIComponent(text)}`;
-        const gCalUrl = createGoogleCalendarLink();
+    // Phone Mask Functionality
+    function maskPhone(input) {
+        let v = input.value.replace(/\D/g, '');
+        if (v.length > 11) v = v.slice(0, 11);
+        if (v.length > 6) {
+            input.value = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
+        } else if (v.length > 2) {
+            input.value = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+        } else if (v.length > 0) {
+            input.value = `(${v}`;
+        }
+    }
 
-        // Open WhatsApp
-        window.open(waUrl, '_blank');
-        // Open Google Calendar
-        setTimeout(() => { window.open(gCalUrl, '_blank'); }, 500);
-
-        // Reset UI
-        alert('Redirecionando para o WhatsApp e Google Agenda!');
-        setTimeout(() => { location.reload(); }, 2000);
-    });
-
-    // Floating WPP
-    document.getElementById('floatWpp').href = `[https://wa.me/5511967024809?text=Olá](https://wa.me/5511967024809?text=Olá), gostaria de falar sobre um projeto arquitetônico.`;
-    
+    // FAQ Toggle
+    function toggleFaq(element) {
+        element.classList.toggle('active');
+    }
 </script>
-
-```
