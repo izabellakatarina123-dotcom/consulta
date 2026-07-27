@@ -3,924 +3,1004 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Axis Arquitetura | Sistema de Consultoria e Projetos</title>
-    <meta name="description" content="Escritório de arquitetura em São Paulo especializado em projetos residenciais, comerciais, reformas e design de interiores de alto padrão. Agende sua consultoria.">
-    <meta name="keywords" content="arquitetura sao paulo, projetos residenciais, design de interiores, reforma comercial, consultoria arquitetonica, studio axis">
-    <link rel="canonical" href="https://www.studioaxis.com.br">
-
+    <title>PowerDrive Auto Elétrica Premium - Osasco/SP | Agendamento & Orçamento</title>
+    <meta name="description" content="Agende seu diagnóstico eletrônico ou orçamento na PowerDrive Auto Elétrica Premium em Osasco/SP. Especialistas em baterias, injeção, alternador e ar-condicionado.">
+    <meta name="keywords" content="auto eletrica osasco, diagnostico eletronico, bateria automotiva, alternador, motor de partida, ar condicionado automotivo, powerdrive">
+    <link rel="canonical" href="https://www.powerdriveauto.com.br">
+    
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.studioaxis.com.br/">
-    <meta property="og:title" content="Studio Axis Arquitetura | Projetos & Consultoria">
-    <meta property="og:description" content="Transforme sua visão em realidade. Agende sua consultoria técnica online ou presencial em menos de 1 minuto.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ArchitecturalFirm",
-      "name": "Studio Axis Arquitetura",
-      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-      "@id": "https://www.studioaxis.com.br",
-      "url": "https://www.studioaxis.com.br",
-      "telephone": "+551135095210",
-      "priceRange": "$$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Alameda dos Jurupis, 842 – Conjunto 71",
-        "addressLocality": "São Paulo",
-        "addressRegion": "SP",
-        "postalCode": "04088-002",
-        "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -23.6083,
-        "longitude": -46.6622
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "08:00",
-          "closes": "18:30"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "09:00",
-          "closes": "13:00"
-        }
-      ],
-      "sameAs": ["https://instagram.com/studioaxis.arq"]
-    }
-    </script>
+    <meta property="og:url" content="https://www.powerdriveauto.com.br">
+    <meta property="og:title" content="PowerDrive Auto Elétrica Premium - Diagnóstico & Manutenção">
+    <meta property="og:description" content="Agende seu serviço elétrico automotivo em menos de 60 segundos com o sistema inteligente PowerDrive.">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PowerDrive Auto Elétrica Premium">
+    <meta name="twitter:description" content="Agende seu serviço elétrico automotivo em menos de 60 segundos.">
 
     <style>
         :root {
-            --bg-base: #0B0B0E;
-            --bg-surface: #141419;
-            --bg-surface-elevated: #1D1D24;
-            --border-subtle: rgba(255, 255, 255, 0.08);
-            --border-active: #C5A059;
-            --accent: #C5A059;
-            --accent-hover: #D4AF37;
-            --accent-glow: rgba(197, 160, 89, 0.18);
-            --text-main: #F4F4F6;
-            --text-muted: #9898A0;
-            --text-dimmed: #5E5E66;
-            --success: #2ECC71;
-            --radius-sm: 8px;
-            --radius-md: 14px;
-            --radius-lg: 22px;
-            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            --primary-navy: #0F172A;
+            --primary-blue: #1E3A8A;
+            --accent-yellow: #EAB308;
+            --accent-yellow-hover: #CA8A04;
+            --bg-light: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --border-color: #E2E8F0;
+            --success: #10B981;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1);
+            --radius: 12px;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        html {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
             scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--bg-base);
+            background-color: var(--bg-light);
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
+        /* Utility Components */
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        .sec-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 60px;
+        .section-padding {
+            padding: 80px 0;
         }
 
-        .sec-tag {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--accent);
+        .text-center { text-align: center; }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: var(--primary-navy);
             margin-bottom: 12px;
-            background: var(--accent-glow);
-            padding: 6px 14px;
-            border-radius: 20px;
-            border: 1px solid rgba(197, 160, 89, 0.2);
-        }
-
-        .sec-title {
-            font-size: 2.4rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
         }
 
-        .sec-desc {
-            font-size: 1.05rem;
+        .section-subtitle {
             color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 48px auto;
+            font-size: 1.1rem;
         }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 28px;
-            border-radius: var(--radius-sm);
-            font-weight: 600;
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: var(--transition);
-            border: 1px solid transparent;
-            text-decoration: none;
-        }
-
-        .btn-primary {
-            background-color: var(--accent);
-            color: #000;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px var(--accent-glow);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border-color: var(--border-subtle);
-            color: var(--text-main);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            background: rgba(197, 160, 89, 0.04);
-        }
-
+        /* Header */
         header {
-            position: fixed;
+            background-color: var(--primary-navy);
+            position: sticky;
             top: 0;
-            left: 0;
-            right: 0;
             z-index: 1000;
-            background: rgba(11, 11, 14, 0.85);
-            backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-sm);
         }
 
-        .navbar {
+        .header-container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
             height: 80px;
         }
 
-        .brand {
+        .logo {
             display: flex;
             align-items: center;
             gap: 12px;
             text-decoration: none;
         }
 
-        .brand-logo {
-            width: 40px;
-            height: 40px;
-            border: 2px solid var(--accent);
+        .logo-icon {
+            background: linear-gradient(135deg, var(--accent-yellow), #FACC15);
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 4px 10px rgba(234, 179, 8, 0.3);
+        }
+
+        .logo-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary-navy);
+        }
+
+        .logo-text {
+            color: #FFFFFF;
+            font-size: 1.4rem;
             font-weight: 800;
-            font-size: 0.95rem;
-            color: var(--accent);
-            letter-spacing: 1px;
+            letter-spacing: -0.5px;
         }
 
-        .brand-name {
-            font-size: 1.1rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            color: var(--text-main);
-            text-transform: uppercase;
+        .logo-text span {
+            color: var(--accent-yellow);
         }
 
-        .brand-sub {
-            font-size: 0.6rem;
-            color: var(--accent);
-            display: block;
-            letter-spacing: 0.25em;
-        }
-
-        .nav-links {
+        nav {
             display: flex;
-            gap: 32px;
-            list-style: none;
+            gap: 24px;
             align-items: center;
         }
 
-        .nav-links a {
-            color: var(--text-muted);
+        nav a {
+            color: #E2E8F0;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 500;
-            transition: var(--transition);
+            transition: color 0.2s;
         }
 
-        .nav-links a:hover {
-            color: var(--accent);
+        nav a:hover {
+            color: var(--accent-yellow);
         }
 
+        .btn-nav {
+            background-color: var(--accent-yellow);
+            color: var(--primary-navy) !important;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600 !important;
+            transition: background-color 0.2s !important;
+        }
+
+        .btn-nav:hover {
+            background-color: var(--accent-yellow-hover);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
         .hero {
-            padding: 180px 0 100px;
-            position: relative;
-            background: radial-gradient(circle at 85% 15%, rgba(197, 160, 89, 0.07) 0%, transparent 60%);
+            background: radial-gradient(circle at top right, rgba(30, 58, 138, 0.08), transparent), var(--bg-card);
+            padding: 100px 0 60px 0;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 60px;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 48px;
             align-items: center;
         }
 
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(234, 179, 8, 0.1);
+            color: #B45309;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
         .hero-title {
-            font-size: 3.6rem;
-            line-height: 1.08;
+            font-size: 3.5rem;
             font-weight: 800;
-            letter-spacing: -0.03em;
+            line-height: 1.15;
+            color: var(--primary-navy);
+            letter-spacing: -1px;
             margin-bottom: 24px;
         }
 
         .hero-title span {
-            color: var(--accent);
+            color: var(--primary-blue);
+            position: relative;
         }
 
         .hero-desc {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             color: var(--text-muted);
-            margin-bottom: 40px;
-            max-width: 540px;
+            margin-bottom: 36px;
+            max-width: 580px;
         }
 
-        .hero-actions {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 50px;
-        }
-
-        .hero-metrics {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            padding-top: 36px;
-            border-top: 1px solid var(--border-subtle);
-        }
-
-        .metric-item strong {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--text-main);
-            display: block;
-        }
-
-        .metric-item span {
-            font-size: 0.85rem;
-            color: var(--text-dimmed);
-        }
-
-        .hero-media {
-            position: relative;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            border: 1px solid var(--border-subtle);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-        }
-
-        .hero-media img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            display: block;
-            filter: brightness(0.9) contrast(1.05);
-        }
-
-        .hero-floating-badge {
-            position: absolute;
-            bottom: 24px;
-            left: 24px;
-            background: rgba(20, 20, 25, 0.88);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-subtle);
-            padding: 16px 20px;
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .badge-icon {
-            width: 38px;
-            height: 38px;
-            background: var(--accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #000;
-            font-weight: bold;
-        }
-
-        .about {
-            padding: 120px 0;
-            background: var(--bg-surface);
-            border-top: 1px solid var(--border-subtle);
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .about-grid {
+        .hero-features {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+            gap: 16px;
         }
 
-        .about-text p {
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-        }
-
-        .about-features {
-            list-style: none;
-            margin-top: 32px;
-        }
-
-        .about-features li {
+        .hero-feat-item {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 10px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .hero-feat-item svg {
+            width: 20px;
+            height: 20px;
+            color: var(--success);
+            flex-shrink: 0;
+        }
+
+        /* System Wrapper / Card Container */
+        .system-container {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        /* Presentation Module */
+        .presentation {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .about-card {
+            background-color: var(--bg-light);
+            border-radius: var(--radius);
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-info h3 {
+            font-size: 1.75rem;
             margin-bottom: 16px;
-            font-weight: 600;
-            font-size: 0.95rem;
+            color: var(--primary-navy);
         }
 
-        .about-features span {
-            color: var(--accent);
-            font-size: 1.1rem;
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
-        .services {
-            padding: 130px 0;
+        .stat-box {
+            background-color: var(--bg-card);
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
         }
 
+        .stat-num {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Services Module */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 24px;
         }
 
         .service-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-md);
-            padding: 40px 32px;
-            transition: var(--transition);
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
         }
 
         .service-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(30, 58, 138, 0.2);
+        }
+
+        .service-card.featured::before {
+            content: "Mais Procurado";
+            position: absolute;
+            top: 12px;
+            right: -30px;
+            background-color: var(--accent-yellow);
+            color: var(--primary-navy);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 30px;
+            transform: rotate(45deg);
         }
 
         .service-icon {
-            width: 54px;
-            height: 54px;
-            background: var(--accent-glow);
-            border: 1px solid rgba(197, 160, 89, 0.3);
-            border-radius: var(--radius-sm);
+            width: 48px;
+            height: 48px;
+            background-color: rgba(30, 58, 138, 0.05);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.4rem;
-            margin-bottom: 28px;
+            margin-bottom: 16px;
+            color: var(--primary-blue);
         }
 
         .service-card h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 12px;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: var(--primary-navy);
         }
 
         .service-card p {
+            font-size: 0.9rem;
             color: var(--text-muted);
-            font-size: 0.92rem;
-            line-height: 1.6;
         }
 
-        .methodology {
-            padding: 120px 0;
-            background: var(--bg-surface);
-            border-top: 1px solid var(--border-subtle);
-        }
-
+        /* How It Works Module */
         .steps-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 24px;
-        }
-
-        .step-card {
-            background: var(--bg-surface-elevated);
-            border: 1px solid var(--border-subtle);
-            padding: 32px 24px;
-            border-radius: var(--radius-md);
             position: relative;
         }
 
-        .step-number {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: rgba(197, 160, 89, 0.25);
-            margin-bottom: 16px;
-            line-height: 1;
+        .step-item {
+            background-color: var(--bg-card);
+            padding: 32px 24px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            text-align: center;
+            position: relative;
         }
 
-        .step-card h4 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+        .step-num {
+            width: 36px;
+            height: 36px;
+            background-color: var(--primary-navy);
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: 700;
+            margin: 0 auto 16px auto;
         }
 
-        .step-card p {
+        .step-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .step-item p {
             font-size: 0.88rem;
             color: var(--text-muted);
         }
 
-        .system-section {
-            padding: 140px 0;
-            background: radial-gradient(circle at 50% 10%, rgba(197, 160, 89, 0.06) 0%, transparent 70%);
-            scroll-margin-top: 60px;
+        /* System Principal Module (Interactive Engine) */
+        .main-system-section {
+            background-color: var(--primary-navy);
+            color: #FFFFFF;
+            position: relative;
         }
 
-        .system-box {
-            max-width: 860px;
+        .main-system-section .section-title {
+            color: #FFFFFF;
+        }
+
+        .main-system-section .section-subtitle {
+            color: #94A3B8;
+        }
+
+        .interactive-box {
+            background-color: #FFFFFF;
+            color: var(--text-main);
+            border-radius: var(--radius);
+            max-width: 760px;
             margin: 0 auto;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-lg);
-            box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
             overflow: hidden;
         }
 
-        .system-topbar {
-            padding: 24px 36px;
-            background: rgba(255,255,255,0.02);
-            border-bottom: 1px solid var(--border-subtle);
+        .system-header {
+            background-color: #F8FAFC;
+            padding: 20px 32px;
+            border-bottom: 1px solid var(--border-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .system-title-indicator {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
+        .system-header-info h3 {
             font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-navy);
         }
 
-        .live-dot {
-            width: 10px;
-            height: 10px;
-            background: var(--success);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--success);
-        }
-
-        .system-progress-wrapper {
-            padding: 20px 36px;
-            background: rgba(0,0,0,0.25);
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .progress-bar-bg {
-            height: 6px;
-            background: rgba(255,255,255,0.06);
-            border-radius: 3px;
+        .progress-container {
+            width: 120px;
+            background-color: #E2E8F0;
+            height: 8px;
+            border-radius: 4px;
             overflow: hidden;
-            margin-bottom: 8px;
         }
 
-        .progress-bar-fill {
+        .progress-bar {
+            width: 9%;
             height: 100%;
-            background: var(--accent);
-            width: 8.33%;
-            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .progress-meta {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.8rem;
-            color: var(--text-dimmed);
-            font-weight: 600;
-        }
-
-        .system-body {
-            padding: 40px 36px;
-            min-height: 420px;
+            background: linear-gradient(90deg, var(--primary-blue), #3B82F6);
+            transition: width 0.3s ease;
         }
 
         .step-pane {
+            padding: 32px;
             display: none;
-            animation: fadeIn 0.35s ease;
         }
 
         .step-pane.active {
             display: block;
+            animation: fadeIn 0.25s ease-out;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(4px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .pane-heading {
+        .pane-title {
             font-size: 1.4rem;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            color: var(--primary-navy);
         }
 
-        .pane-sub {
+        .pane-desc {
             font-size: 0.95rem;
             color: var(--text-muted);
-            margin-bottom: 32px;
+            margin-bottom: 24px;
         }
 
+        /* Form Components */
         .options-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 12px;
         }
 
-        .option-tile {
-            background: var(--bg-surface-elevated);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-sm);
-            padding: 22px 20px;
-            cursor: pointer;
-            transition: var(--transition);
+        .option-card {
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
             text-align: center;
-            user-select: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #FFFFFF;
         }
 
-        .option-tile:hover {
-            border-color: rgba(197, 160, 89, 0.5);
-            background: rgba(197, 160, 89, 0.03);
+        .option-card:hover {
+            border-color: #CBD5E1;
+            background-color: #F8FAFC;
         }
 
-        .option-tile.selected {
-            border-color: var(--accent);
-            background: var(--accent-glow);
-            color: var(--accent);
-            font-weight: 700;
+        .option-card.selected {
+            border-color: var(--primary-blue);
+            background-color: rgba(30, 58, 138, 0.04);
+            color: var(--primary-blue);
         }
 
-        .option-tile-icon {
-            font-size: 1.8rem;
-            margin-bottom: 12px;
-            display: block;
+        .option-card svg {
+            width: 24px;
+            height: 24px;
+            opacity: 0.7;
+        }
+
+        .option-card.selected svg {
+            opacity: 1;
+            color: var(--primary-blue);
         }
 
         .form-group {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         .form-label {
             display: block;
-            font-size: 0.85rem;
             font-weight: 600;
-            color: var(--text-muted);
             margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            font-size: 0.95rem;
         }
 
-        .form-input {
+        .form-control {
             width: 100%;
-            padding: 16px;
-            background: var(--bg-surface-elevated);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-sm);
-            color: var(--text-main);
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
             font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .form-input:focus {
+            transition: border-color 0.2s;
             outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px var(--accent-glow);
         }
 
-        .upload-dropzone {
-            border: 2px dashed var(--border-subtle);
-            border-radius: var(--radius-md);
-            padding: 40px 20px;
-            text-align: center;
+        .form-control:focus {
+            border-color: var(--primary-blue);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        /* Calendar Engine Styles */
+        .calendar-wrapper {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .calendar-month-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            background-color: #F8FAFC;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 700;
+        }
+
+        .calendar-month-nav button {
+            background: none;
+            border: none;
             cursor: pointer;
-            transition: var(--transition);
-            background: var(--bg-surface-elevated);
-        }
-
-        .upload-dropzone:hover {
-            border-color: var(--accent);
-            background: var(--accent-glow);
+            padding: 4px 8px;
+            font-size: 1.1rem;
         }
 
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 10px;
+            padding: 8px;
             text-align: center;
+            gap: 4px;
         }
 
-        .cal-head {
+        .weekday-label {
             font-size: 0.75rem;
             font-weight: 700;
-            color: var(--text-dimmed);
-            padding-bottom: 8px;
-            text-transform: uppercase;
+            color: var(--text-muted);
+            padding: 4px 0;
         }
 
         .cal-day {
-            padding: 14px 0;
-            background: var(--bg-surface-elevated);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-sm);
-            font-size: 0.95rem;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            border-radius: 6px;
             cursor: pointer;
-            transition: var(--transition);
+            font-weight: 500;
+            transition: background-color 0.1s;
         }
 
-        .cal-day:hover:not(.disabled) {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        .cal-day.selected {
-            background: var(--accent);
-            color: #000;
-            font-weight: 700;
-            border-color: var(--accent);
+        .cal-day:hover:not(.disabled):not(.selected) {
+            background-color: #EDF2F7;
         }
 
         .cal-day.disabled {
-            opacity: 0.2;
+            color: #CBD5E1;
             cursor: not-allowed;
-            border-color: transparent;
+            background-color: #F8FAFC;
         }
 
-        .slots-grid {
+        .cal-day.selected {
+            background-color: var(--primary-blue);
+            color: #FFFFFF;
+            font-weight: 700;
+        }
+
+        .time-slots-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: 8px;
             margin-top: 16px;
         }
 
         .time-slot {
-            padding: 14px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
             text-align: center;
-            background: var(--bg-surface-elevated);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-sm);
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 600;
-            transition: var(--transition);
+            transition: all 0.15s;
         }
 
-        .time-slot:hover {
-            border-color: var(--accent);
-            color: var(--accent);
+        .time-slot:hover:not(.disabled) {
+            border-color: var(--primary-blue);
+            background-color: #F8FAFC;
         }
 
         .time-slot.selected {
-            background: var(--accent);
-            color: #000;
-            border-color: var(--accent);
+            background-color: var(--primary-blue);
+            color: #FFFFFF;
+            border-color: var(--primary-blue);
         }
 
-        .summary-card {
-            background: var(--bg-surface-elevated);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-md);
-            padding: 24px;
+        .time-slot.disabled {
+            background-color: #F1F5F9;
+            color: #94A3B8;
+            border-color: #E2E8F0;
+            cursor: not-allowed;
+            text-decoration: line-through;
+            opacity: 0.6;
         }
 
-        .summary-line {
+        /* File Upload Zone */
+        .upload-zone {
+            border: 2px dashed #CBD5E1;
+            padding: 32px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #F8FAFC;
+            transition: border-color 0.2s;
+        }
+
+        .upload-zone:hover {
+            border-color: var(--primary-blue);
+        }
+
+        .upload-zone svg {
+            width: 36px;
+            height: 36px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        /* Summary Object styling */
+        .summary-box {
+            background-color: #F8FAFC;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .summary-item {
             display: flex;
             justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--border-subtle);
-            font-size: 0.92rem;
+            padding: 8px 0;
+            border-bottom: 1px solid #E2E8F0;
+            font-size: 0.95rem;
         }
 
-        .summary-line:last-child {
+        .summary-item:last-child {
             border-bottom: none;
         }
 
         .summary-label {
             color: var(--text-muted);
+            font-weight: 500;
         }
 
         .summary-value {
             font-weight: 600;
-            color: var(--text-main);
+            color: var(--primary-navy);
             text-align: right;
         }
 
-        .system-footer {
-            padding: 24px 36px;
-            background: rgba(0,0,0,0.25);
-            border-top: 1px solid var(--border-subtle);
+        /* Action Buttons Area */
+        .pane-actions {
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
             display: flex;
             justify-content: space-between;
+            gap: 16px;
+        }
+
+        .btn-system {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
             align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
         }
 
-        .testimonials {
-            padding: 130px 0;
-            background: var(--bg-surface);
-            border-top: 1px solid var(--border-subtle);
+        .btn-system-primary {
+            background-color: var(--accent-yellow);
+            color: var(--primary-navy);
+            margin-left: auto;
         }
 
-        .testi-grid {
+        .btn-system-primary:hover {
+            background-color: var(--accent-yellow-hover);
+        }
+
+        .btn-system-secondary {
+            background-color: #E2E8F0;
+            color: var(--text-main);
+        }
+
+        .btn-system-secondary:hover {
+            background-color: #CBD5E1;
+        }
+
+        /* Benefits Module */
+        .benefits {
+            background-color: var(--bg-card);
+        }
+
+        .benefits-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
+            gap: 32px;
         }
 
-        .testi-card {
-            background: var(--bg-surface-elevated);
-            border: 1px solid var(--border-subtle);
-            padding: 32px;
-            border-radius: var(--radius-md);
+        .benefit-card {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .benefit-icon {
+            width: 56px;
+            height: 56px;
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            border-radius: 50%;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
         }
 
-        .testi-text {
-            font-style: italic;
+        .benefit-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: var(--primary-navy);
+        }
+
+        .benefit-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
-            margin-bottom: 24px;
-            line-height: 1.6;
         }
 
-        .testi-author strong {
-            display: block;
+        /* Reviews Module */
+        .reviews {
+            background-color: var(--bg-light);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .review-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stars {
+            color: var(--accent-yellow);
+            margin-bottom: 16px;
+        }
+
+        .review-card p {
+            font-style: italic;
+            color: var(--text-main);
+            margin-bottom: 20px;
             font-size: 0.95rem;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-blue);
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: 700;
+            font-size: 0.9rem;
         }
 
-        .testi-author span {
+        .author-info h4 {
+            font-size: 0.95rem;
+            color: var(--primary-navy);
+        }
+
+        .author-info span {
             font-size: 0.8rem;
-            color: var(--text-dimmed);
+            color: var(--text-muted);
         }
 
+        /* FAQ Module */
         .faq {
-            padding: 130px 0;
+            background-color: var(--bg-card);
         }
 
-        .faq-wrapper {
+        .faq-max {
             max-width: 800px;
             margin: 0 auto;
         }
 
         .faq-item {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
             margin-bottom: 16px;
             overflow: hidden;
-            transition: var(--transition);
         }
 
-        .faq-header {
+        .faq-trigger {
+            width: 100%;
             padding: 20px 24px;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.05rem;
             font-weight: 600;
+            color: var(--primary-navy);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            user-select: none;
         }
 
-        .faq-body {
-            padding: 0 24px 20px;
+        .faq-trigger:hover {
+            background-color: #F8FAFC;
+        }
+
+        .faq-content {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s ease-out, padding 0.25s ease-out;
             color: var(--text-muted);
-            font-size: 0.92rem;
-            display: none;
-            line-height: 1.6;
+            font-size: 0.95rem;
+            background-color: #FCFDFE;
         }
 
-        .faq-item.active .faq-body {
-            display: block;
+        .faq-item.active .faq-content {
+            padding: 0 24px 20px 24px;
+            max-height: 200px;
         }
 
-        .faq-item.active .faq-arrow {
+        .faq-item.active .faq-trigger svg {
             transform: rotate(180deg);
-            color: var(--accent);
         }
 
-        .faq-arrow {
-            transition: var(--transition);
-            color: var(--text-dimmed);
+        .faq-trigger svg {
+            transition: transform 0.2s;
         }
 
+        /* Contact & Map Module */
         .contact-section {
-            padding: 130px 0;
-            background: var(--bg-surface);
-            border-top: 1px solid var(--border-subtle);
+            background-color: var(--bg-light);
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 48px;
         }
 
-        .contact-detail {
-            margin-bottom: 28px;
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
         }
 
-        .contact-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent);
-            font-weight: 700;
-            margin-bottom: 6px;
+        .contact-card {
+            background-color: var(--bg-card);
+            padding: 24px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            display: flex;
+            gap: 16px;
         }
 
-        .contact-val {
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background-color: rgba(30, 58, 138, 0.05);
+            color: var(--primary-blue);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-card h4 {
             font-size: 1.05rem;
-            color: var(--text-main);
+            color: var(--primary-navy);
+            margin-bottom: 4px;
+        }
+
+        .contact-card p, .contact-card a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-decoration: none;
         }
 
         .map-wrapper {
-            width: 100%;
-            height: 400px;
-            border-radius: var(--radius-md);
+            border-radius: var(--radius);
             overflow: hidden;
-            border: 1px solid var(--border-subtle);
-        }
-
-        .map-wrapper iframe {
-            width: 100%;
+            border: 1px solid var(--border-color);
             height: 100%;
-            border: 0;
-            filter: grayscale(1) invert(0.9) contrast(1.2);
+            min-height: 350px;
+            box-shadow: var(--shadow-sm);
         }
 
+        /* Footer */
         footer {
-            background: #070709;
-            border-top: 1px solid var(--border-subtle);
-            padding: 70px 0 35px;
-            font-size: 0.85rem;
-            color: var(--text-dimmed);
+            background-color: var(--primary-navy);
+            color: #94A3B8;
+            padding: 60px 0 30px 0;
+            font-size: 0.9rem;
+            border-top: 1px solid #1E293B;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 50px;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 40px;
         }
 
-        .footer-links {
+        .footer-brand p {
+            margin-top: 16px;
+            max-width: 320px;
+        }
+
+        .footer-links h4 {
+            color: #FFFFFF;
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        .footer-links ul {
             list-style: none;
         }
 
@@ -929,75 +1009,88 @@
         }
 
         .footer-links a {
-            color: var(--text-dimmed);
+            color: #94A3B8;
             text-decoration: none;
-            transition: var(--transition);
+            transition: color 0.2s;
         }
 
         .footer-links a:hover {
-            color: var(--accent);
+            color: #FFFFFF;
         }
 
         .footer-bottom {
             padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.04);
+            border-top: 1px solid #1E293B;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
+        /* Floating Elements */
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            color: #fff;
+            bottom: 24px;
+            right: 24px;
+            background-color: #25D366;
+            color: white;
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             z-index: 999;
+            transition: transform 0.2s;
             text-decoration: none;
-            transition: var(--transition);
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.45);
+            transform: scale(1.08);
         }
 
-        @media (max-width: 992px) {
-            .hero-grid, .about-grid, .contact-grid {
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: currentColor;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-grid {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
-            .steps-grid, .services-grid, .testi-grid, .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .hero-title {
-                font-size: 2.8rem;
-            }
+            .hero-title { font-size: 2.75rem; }
+            .about-card { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: repeat(2, 1fr); }
+            .benefits-grid { grid-template-columns: 1fr; gap: 16px; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
-            .nav-links {
+            .menu-toggle { display: block; }
+            nav {
                 display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-navy);
+                flex-direction: column;
+                padding: 24px;
+                border-top: 1px solid #1E293B;
+                box-shadow: var(--shadow-md);
             }
-            .steps-grid, .services-grid, .testi-grid, .footer-grid {
-                grid-template-columns: 1fr;
-            }
-            .hero {
-                padding: 130px 0 60px;
-            }
-            .system-body {
-                padding: 24px 20px;
-            }
-            .system-topbar, .system-footer, .system-progress-wrapper {
-                padding: 16px 20px;
-            }
+            nav.active { display: flex; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .interactive-box { border-radius: 0; }
+            .step-pane { padding: 20px; }
+            .system-header { padding: 16px 20px; }
         }
     </style>
 </head>
@@ -1005,455 +1098,526 @@
 
     <!-- Header -->
     <header>
-        <div class="container navbar">
-            <a href="#" class="brand">
-                <div class="brand-logo">AX</div>
-                <div>
-                    <span class="brand-name">Studio Axis</span>
-                    <span class="brand-sub">Arquitetura</span>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24"><path d="M11 21h-1v-3H8v-2h2v-2h2v2h2v2h-2v3m3.5-9H17l-5 9v-7H9.5L12 5h2.5l-2 7h2m2.5-8.5C18 3.56 16.56 2 14.5 2H9.5C7.44 2 6 3.56 6 5.5V11h2V5.5C8 4.67 8.67 4 9.5 4h5c.83 0 1.5.67 1.5 1.5V7h2V5.5M6 13h2v5H6v-5z"/></svg>
                 </div>
+                <div class="logo-text">Power<span>Drive</span></div>
             </a>
-            <ul class="nav-links">
-                <li><a href="#sobre">Escritório</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#metodologia">Metodologia</a></li>
-                <li><a href="#sistema">Agendamento</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            <a href="#sistema" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.85rem;">Agendar Reunião</a>
+            <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">☰</button>
+            <nav id="navbar">
+                <a href="#servicos">Serviços</a>
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#beneficios">Benefícios</a>
+                <a href="#depoimentos">Avaliações</a>
+                <a href="#faq">Dúvidas</a>
+                <a href="#contato">Contato</a>
+                <a href="#agendar" class="btn-nav">Agendar Agora</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-grid">
-            <div>
-                <span class="sec-tag">Arquitetura & Consultoria Técnica</span>
-                <h1 class="hero-title">Espaços exclusivos <span>concebidos com precisão.</span></h1>
-                <p class="hero-desc">Unimos sofisticação, funcionalidade e tecnologia avançada para transformar seu projeto residencial ou comercial em uma obra-prima. Agende sua consultoria em menos de 1 minuto.</p>
-                <div class="hero-actions">
-                    <a href="#sistema" class="btn btn-primary">Iniciar Agendamento</a>
-                    <a href="#servicos" class="btn btn-outline">Nossos Serviços</a>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></svg>
+                    Alta Tecnologia Automotiva em Osasco
                 </div>
-                <div class="hero-metrics">
-                    <div class="metric-item">
-                        <strong>14+</strong>
-                        <span>Anos de Mercado</span>
+                <h1 class="hero-title">Soluções Elétricas Automotivas de Padrão <span>Premium</span></h1>
+                <p class="hero-desc">Diagnóstico eletrônico avançado, manutenção de baterias, alternadores e ar-condicionado. Transparência técnica e agilidade pelo software de agendamento.</p>
+                <div class="hero-features">
+                    <div class="hero-feat-item">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        Scanners Importados
                     </div>
-                    <div class="metric-item">
-                        <strong>350+</strong>
-                        <span>Projetos Executados</span>
+                    <div class="hero-feat-item">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        Garantia Homologada
                     </div>
-                    <div class="metric-item">
-                        <strong>100%</strong>
-                        <span>Acompanhamento</span>
+                    <div class="hero-feat-item">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        Nacionais e Importados
+                    </div>
+                    <div class="hero-feat-item">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        Atendimento em <60s
                     </div>
                 </div>
             </div>
-            <div class="hero-media">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Projeto Studio Axis">
-                <div class="hero-floating-badge">
-                    <div class="badge-icon">✓</div>
-                    <div>
-                        <strong style="display:block; font-size: 0.9rem;">Atendimento Especializado</strong>
-                        <span style="font-size: 0.75rem; color: var(--text-muted);">Presencial (SP) e Online (Brasil)</span>
-                    </div>
+            <div class="hero-system-hook">
+                <div class="stat-box" style="text-align: left; padding: 32px; border-radius: var(--radius); background-color: var(--primary-navy); color: white;">
+                    <h3 style="color: white; margin-bottom: 8px; font-size: 1.4rem;">Precisa de Socorro ou Orçamento?</h3>
+                    <p style="color: #94A3B8; font-size: 0.9rem; margin-bottom: 24px;">Evite filas. Use nossa plataforma para agendar seu diagnóstico ou instalação instantaneamente.</p>
+                    <a href="#agendar" class="btn-system btn-system-primary" style="text-decoration: none; width: 100%; justify-content: center; margin-left: 0;">Iniciar Agendamento Inteligente</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sobre -->
-    <section class="about" id="sobre">
-        <div class="container about-grid">
-            <div>
-                <span class="sec-tag">Tradição & Inovação</span>
-                <h2 class="sec-title">Transformando ideias em ambientes modernos e funcionais.</h2>
-                <p>Há mais de 14 anos desenvolvendo projetos arquitetônicos exclusivos para residências, empresas e espaços comerciais que exigem padrão impecável.</p>
-            </div>
-            <div class="about-text">
-                <p>O <strong>Studio Axis Arquitetura</strong> valoriza cada detalhe do projeto, assegurando harmonia estética, otimização orçamentária e acompanhamento técnico rigoroso em todas as fases da execução.</p>
-                <ul class="about-features">
-                    <li><span>✓</span> Maquetes 3D fotorrealistas e passeios imersivos</li>
-                    <li><span>✓</span> Compatibilização completa de engenharia</li>
-                    <li><span>✓</span> Gestão técnica e fiscalização de obra</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Serviços -->
-    <section class="services" id="servicos">
+    <!-- Presentation Module -->
+    <section class="presentation section-padding">
         <div class="container">
-            <div class="sec-header">
-                <span class="sec-tag">Especialidades</span>
-                <h2 class="sec-title">Soluções arquitetônicas sob medida</h2>
-                <p class="sec-desc">Projetos estruturados para atender às exigências mais rigorosas do mercado imobiliário e corporativo.</p>
+            <div class="about-card">
+                <div class="about-info">
+                    <h3>PowerDrive Auto Elétrica Premium</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 16px;">Somos especializados em diagnóstico eletrônico avançado, manutenção elétrica estrutural e implementação de acessórios automotivos complexos para frotas e veículos de passeio.</p>
+                    <p style="color: var(--text-muted);">Equipados com maquinário analítico moderno capaz de rastrear anomalias de injeção, falhas em módulos e fuga de corrente com precisão cirúrgica.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <div class="stat-num">40min</div>
+                        <div class="stat-label">Diagnóstico Geral</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">100%</div>
+                        <div class="stat-label">Peças Certificadas</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">20min</div>
+                        <div class="stat-label">Troca de Bateria</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">12x</div>
+                        <div class="stat-label">Parcelamento Sem Juros</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Module -->
+    <section id="servicos" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Especialidades Técnicas</h2>
+                <p class="section-subtitle">Serviços executados sob rígidos padrões mecânicos com insumos de primeira linha.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🏛️</div>
-                    <h3>Projetos Residenciais</h3>
-                    <p>Residências unifamiliares de alto padrão com foco em eficiência espacial, iluminação natural e sofisticação.</p>
+                <div class="service-card featured">
+                    <div class="service-icon"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></div>
+                    <h3>Diagnóstico Computadorizado</h3>
+                    <p>Mapeamento completo dos módulos de injeção e barramento CAN via Scanner profissional.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🏢</div>
-                    <h3>Projetos Comerciais</h3>
-                    <p>Espaços corporativos e comerciais desenhados estrategicamente para valorizar a marca e potencializar a produtividade.</p>
+                    <div class="service-icon"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M7 11h10v2H7zM4 6h16v3H4zm0 9h16v3H4z"/></svg></div>
+                    <h3>Baterias & Carga</h3>
+                    <p>Substituição imediata com marcas líderes e análise técnica de alternador e fuga de corrente.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🛋️</div>
-                    <h3>Design de Interiores</h3>
-                    <p>Detalhamento milimétrico de marcenaria, projetos lumínicos, acabamentos e curadoria de mobiliário exclusivo.</p>
+                    <div class="service-icon"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div>
+                    <h3>Alternador & Partida</h3>
+                    <p>Manutenção preditiva e corretiva de motores de partida e sistemas de indução do alternador.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🔨</div>
-                    <h3>Reformas & Ampliações</h3>
-                    <p>Reestruturação completa de imóveis existentes para atualizar o layout e modernizar a infraestrutura.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📐</div>
-                    <h3>Modelagem 3D & Render</h3>
-                    <p>Visualização hiper-realista do espaço antes do início da obra, permitindo tomadas de decisão assertivas.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📄</div>
-                    <h3>Regularização de Imóveis</h3>
-                    <p>Aprovação de projetos perante prefeituras, condomínios e órgãos competentes com agilidade jurídica e técnica.</p>
+                    <div class="service-icon"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 14.5c-3.04 0-5.5-2.46-5.5-5.5S8.96 6.5 12 6.5s5.5 2.46 5.5 5.5-2.46 5.5-5.5 5.5z"/></svg></div>
+                    <h3>Ar-Condicionado</h3>
+                    <p>Recarga controlada de gás, caça-vazamentos químicos e higienização antibacteriana interna.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Metodologia -->
-    <section class="methodology" id="metodologia">
+    <!-- How It Works Module -->
+    <section id="como-funciona" class="section-padding" style="background-color: var(--bg-light); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
         <div class="container">
-            <div class="sec-header">
-                <span class="sec-tag">Fluxo Claro</span>
-                <h2 class="sec-title">Sua jornada conosco</h2>
-                <p class="sec-desc">Um processo estruturado para garantir tranquilidade, previsibilidade e excelência em cada entrega.</p>
+            <div class="text-center">
+                <h2 class="section-title">Fluxo de Triagem Ágil</h2>
+                <p class="section-subtitle">Criado para simplificar sua vida. Agende sem ligações demoradas.</p>
             </div>
             <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">01</div>
-                    <h4>Agendamento via Sistema</h4>
-                    <p>Informe os dados do seu imóvel e escolha o melhor horário no nosso sistema automatizado.</p>
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <h3>Selecione o Sintoma</h3>
+                    <p>Informe o serviço ou problema elétrico apresentado.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">02</div>
-                    <h4>Reunião de Diagnóstico</h4>
-                    <p>Alinhamento de briefing, expectativas, orçamento disponível e viabilidade técnica inicial.</p>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <h3>Dados do Carro</h3>
+                    <p>Insira a marca, modelo e ano do seu automóvel.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">03</div>
-                    <h4>Estudo Preliminar & 3D</h4>
-                    <p>Apresentação das plantas inteligentes, arranjos espaciais e maquetes fotorrealistas.</p>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <h3>Defina a Data</h3>
+                    <p>Escolha o melhor dia e horário na agenda sincronizada.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">04</div>
-                    <h4>Execução & Acompanhamento</h4>
-                    <p>Entrega do projeto executivo detalhado e supervisão técnica presencial da obra.</p>
+                <div class="step-item">
+                    <div class="step-num">4</div>
+                    <h3>Confirmação</h3>
+                    <p>Tudo pronto! Seus dados são enviados diretamente ao WhatsApp.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SISTEMA PRINCIPAL / 12 ETAPAS -->
-    <section class="system-section" id="sistema">
+    <!-- System Principal Module (Interactive Booking App) -->
+    <section id="agendar" class="main-system-section section-padding">
         <div class="container">
-            <div class="sec-header" style="margin-bottom: 40px;">
-                <span class="sec-tag">Plataforma Exclusiva</span>
-                <h2 class="sec-title">Agendamento & Análise de Projeto</h2>
-                <p class="sec-desc">Responda às etapas rápidas abaixo para enviar as informações do seu imóvel e liberar sua agenda com nossos arquitetos.</p>
+            <div class="text-center">
+                <h2 class="section-title">Plataforma de Agendamento do Cliente</h2>
+                <p class="section-subtitle">Siga os passos e garanta sua vaga na nossa linha de atendimento.</p>
             </div>
 
-            <div class="system-box">
-                <div class="system-topbar">
-                    <div class="system-title-indicator">
-                        <div class="live-dot"></div>
-                        <span>Studio Axis | Central de Atendimento</span>
+            <div class="interactive-box">
+                <!-- System Header -->
+                <div class="system-header">
+                    <div class="system-header-info">
+                        <h3 id="step-indicator-text">Etapa 1: Escolha o Serviço</h3>
                     </div>
-                    <span id="step-indicator-text" style="font-size: 0.8rem; color: var(--text-dimmed); font-weight: 600;">Etapa 1 de 12</span>
-                </div>
-
-                <div class="system-progress-wrapper">
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" id="progress-fill-bar"></div>
-                    </div>
-                    <div class="progress-meta">
-                        <span>Progresso do Fluxo</span>
-                        <span id="progress-percentage">8%</span>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="ui-progress"></div>
                     </div>
                 </div>
 
-                <form id="architect-engine-form" onsubmit="return false;">
-                    <div class="system-body">
-
-                        <!-- ETAPA 1 -->
-                        <div class="step-pane active" data-step="1">
-                            <h3 class="pane-heading">Qual o tipo de serviço desejado?</h3>
-                            <p class="pane-sub">Selecione a especialidade principal para o seu atendimento.</p>
-                            <div class="options-grid">
-                                <div class="option-tile" data-field="tipoServico" data-value="Projeto Residencial"><span class="option-tile-icon">🏡</span>Projeto Residencial</div>
-                                <div class="option-tile" data-field="tipoServico" data-value="Projeto Comercial"><span class="option-tile-icon">🏢</span>Projeto Comercial</div>
-                                <div class="option-tile" data-field="tipoServico" data-value="Design de Interiores"><span class="option-tile-icon">🛋️</span>Design de Interiores</div>
-                                <div class="option-tile" data-field="tipoServico" data-value="Reforma / Ampliação"><span class="option-tile-icon">🔨</span>Reforma / Ampliação</div>
-                                <div class="option-tile" data-field="tipoServico" data-value="Consultoria Arquitetônica"><span class="option-tile-icon">📐</span>Consultoria Técnica</div>
-                                <div class="option-tile" data-field="tipoServico" data-value="Regularização de Imóvel"><span class="option-tile-icon">📄</span>Regularização</div>
+                <!-- Form Dynamic Control -->
+                <form id="booking-engine" onsubmit="handleFormSubmit(event)">
+                    
+                    <!-- PANE 1: Service selection -->
+                    <div class="step-pane active" id="pane-1">
+                        <h4 class="pane-title">Qual serviço seu veículo necessita?</h4>
+                        <p class="pane-desc">Selecione uma das opções principais para direcionarmos o técnico correto.</p>
+                        <div class="options-grid">
+                            <div class="option-card" onclick="selectService(this, 'Diagnóstico Eletrônico')">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+                                Diagnóstico
+                            </div>
+                            <div class="option-card" onclick="selectService(this, 'Troca de Bateria')">
+                                <svg viewBox="0 0 24 24"><path d="M16 20H8V6h8v14zm-1-12h-2v2h-2V8H9v2h6V8zm1-5h-2V1h-4v2H8v2h8V3z"/></svg>
+                                Bateria
+                            </div>
+                            <div class="option-card" onclick="selectService(this, 'Alternador')">
+                                <svg viewBox="0 0 24 24"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zm1-17.93c3.95.49 7 3.85 7 7.93 0 .69-.09 1.36-.26 2H17.6c.25-.62.4-1.29.4-2 0-3.31-2.69-6-6-6v-1.93z"/></svg>
+                                Alternador
+                            </div>
+                            <div class="option-card" onclick="selectService(this, 'Motor de Partida')">
+                                <svg viewBox="0 0 24 24"><path d="M19 13H5v-2h14v2z"/></svg>
+                                M. Partida
+                            </div>
+                            <div class="option-card" onclick="selectService(this, 'Injeção Eletrônica')">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                                Injeção
+                            </div>
+                            <div class="option-card" onclick="selectService(this, 'Ar-Condicionado')">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                                Ar-Condicionado
                             </div>
                         </div>
-
-                        <!-- ETAPA 2 -->
-                        <div class="step-pane" data-step="2">
-                            <h3 class="pane-heading">Qual é o tipo do imóvel?</h3>
-                            <p class="pane-sub">Essencial para definir diretrizes técnicas e legais aplicáveis.</p>
-                            <div class="options-grid">
-                                <div class="option-tile" data-field="tipoImovel" data-value="Casa em Condomínio"><span class="option-tile-icon">🏠</span>Casa em Condomínio</div>
-                                <div class="option-tile" data-field="tipoImovel" data-value="Apartamento"><span class="option-tile-icon">🏢</span>Apartamento</div>
-                                <div class="option-tile" data-field="tipoImovel" data-value="Sala Comercial / Loja"><span class="option-tile-icon">💼</span>Sala / Loja Comercial</div>
-                                <div class="option-tile" data-field="tipoImovel" data-value="Terreno Vago"><span class="option-tile-icon">🏞️</span>Terreno / Lote</div>
-                            </div>
+                        <input type="hidden" id="selected-service-input" required>
+                        <div class="pane-actions">
+                            <button type="button" class="btn-system btn-system-primary" onclick="navigateStep(2)">Avançar</button>
                         </div>
-
-                        <!-- ETAPA 3 -->
-                        <div class="step-pane" data-step="3">
-                            <h3 class="pane-heading">Qual a área aproximada do projeto (m²)?</h3>
-                            <p class="pane-sub">Uma estimativa geral auxilia na previsão de escopo e prazos.</p>
-                            <div class="options-grid">
-                                <div class="option-tile" data-field="areaAproximada" data-value="Até 80m²">Até 80 m²</div>
-                                <div class="option-tile" data-field="areaAproximada" data-value="80m² a 200m²">80 m² a 200 m²</div>
-                                <div class="option-tile" data-field="areaAproximada" data-value="200m² a 500m²">200 m² a 500 m²</div>
-                                <div class="option-tile" data-field="areaAproximada" data-value="Acima de 500m²">Acima de 500 m²</div>
-                            </div>
-                        </div>
-
-                        <!-- ETAPA 4 -->
-                        <div class="step-pane" data-step="4">
-                            <h3 class="pane-heading">Onde o imóvel está localizado?</h3>
-                            <p class="pane-sub">Atendimento presencial na Grande SP e online para todo o Brasil.</p>
-                            <div class="form-group">
-                                <label class="form-label">Cidade e Estado</label>
-                                <input type="text" id="inputCidade" class="form-input" placeholder="Ex: São Paulo - SP" autocomplete="off">
-                            </div>
-                        </div>
-
-                        <!-- ETAPA 5 -->
-                        <div class="step-pane" data-step="5">
-                            <h3 class="pane-heading">Você já possui planta ou croqui do imóvel?</h3>
-                            <p class="pane-sub">Plantas técnicas em PDF, DWG ou rascunhos em papel.</p>
-                            <div class="options-grid">
-                                <div class="option-tile" data-field="possuiPlanta" data-value="Sim, possuo planta técnica"><span class="option-tile-icon">📐</span>Sim, possuo planta</div>
-                                <div class="option-tile" data-field="possuiPlanta" data-value="Apenas rascunho / fotos"><span class="option-tile-icon">✏️</span>Apenas Rascunho / Fotos</div>
-                                <div class="option-tile" data-field="possuiPlanta" data-value="Não possuo planta"><span class="option-tile-icon">❌</span>Não possuo</div>
-                            </div>
-                        </div>
-
-                        <!-- ETAPA 6 -->
-                        <div class="step-pane" data-step="6">
-                            <h3 class="pane-heading">Qual é o objetivo principal do investimento?</h3>
-                            <p class="pane-sub">Sua principal prioridade com este projeto.</p>
-                            <div class="options-grid">
-                                <div class="option-tile" data-field="objetivoProjeto" data-value="Construir do Zero">Construir do Zero</div>
-                                <div class="option-tile" data-field="objetivoProjeto" data-value="Reformar Totalmente">Reformar Totalmente</div>
-                                <div class="option-tile" data-field="objetivoProjeto" data-value="Modernizar Interiores">Modernizar Interiores</div>
-                                <div class="option-tile" data-field="objetivoProjeto" data-value="Valorização Comercial">Valorização p/ Mercado</div>
-                            </div>
-                        </div>
-
-                        <!-- ETAPA 7 -->
-                        <div class="step-pane" data-step="7">
-                            <h3 class="pane-heading">Envio de Arquivos ou Referências (Opcional)</h3>
-                            <p class="pane-sub">Você pode anexar plantas, fotos ou imagens de inspiração.</p>
-                            <div class="upload-dropzone" onclick="document.getElementById('hiddenFileInput').click()">
-                                <div style="font-size: 2.2rem; margin-bottom: 10px;">📁</div>
-                                <strong>Clique para selecionar arquivo</strong>
-                                <p style="font-size: 0.8rem; color: var(--text-dimmed); margin-top: 6px;">PDF, DWG, PNG ou JPG até 25MB</p>
-                                <input type="file" id="hiddenFileInput" style="display:none;" onchange="onFileChosen(event)">
-                            </div>
-                            <div id="file-chosen-label" style="margin-top: 12px; font-size: 0.88rem; color: var(--accent); font-weight: 600;"></div>
-                        </div>
-
-                        <!-- ETAPA 8 -->
-                        <div class="step-pane" data-step="8">
-                            <h3 class="pane-heading">Selecione a data da consultoria</h3>
-                            <p class="pane-sub">Atendimento de Segunda a Sábado. Escolha um dia disponível.</p>
-                            <div class="calendar-grid" id="calendar-days-box"></div>
-                        </div>
-
-                        <!-- ETAPA 9 -->
-                        <div class="step-pane" data-step="9">
-                            <h3 class="pane-heading">Selecione o horário da reunião</h3>
-                            <p class="pane-sub">Duração estimada da sessão técnica: 60 minutos.</p>
-                            <div class="slots-grid" id="time-slots-box"></div>
-                        </div>
-
-                        <!-- ETAPA 10 -->
-                        <div class="step-pane" data-step="10">
-                            <h3 class="pane-heading">Seus dados de contato</h3>
-                            <p class="pane-sub">Para envio da confirmação e link de acesso à reunião.</p>
-                            <div class="form-group">
-                                <label class="form-label">Nome Completo</label>
-                                <input type="text" id="inputNome" class="form-input" placeholder="Seu nome completo">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">WhatsApp com DDD</label>
-                                <input type="tel" id="inputWhatsApp" class="form-input" placeholder="(11) 99999-9999" oninput="applyPhoneMask(this)">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">E-mail</label>
-                                <input type="email" id="inputEmail" class="form-input" placeholder="seu@email.com">
-                            </div>
-                        </div>
-
-                        <!-- ETAPA 11 -->
-                        <div class="step-pane" data-step="11">
-                            <h3 class="pane-heading">Observações ou Expectativas (Opcional)</h3>
-                            <p class="pane-sub">Alguma restrição de orçamento, prazo ou detalhe importante?</p>
-                            <div class="form-group">
-                                <textarea id="inputObs" class="form-input" rows="4" placeholder="Descreva brevemente expectativas de estilo, prazos ou valores..."></textarea>
-                            </div>
-                        </div>
-
-                        <!-- ETAPA 12 -->
-                        <div class="step-pane" data-step="12">
-                            <h3 class="pane-heading">Resumo da Solicitação</h3>
-                            <p class="pane-sub">Confira abaixo os dados preenchidos antes de finalizar no WhatsApp.</p>
-                            
-                            <div class="summary-card">
-                                <div class="summary-line"><span class="summary-label">Serviço:</span><span class="summary-value" id="sum-servico">-</span></div>
-                                <div class="summary-line"><span class="summary-label">Imóvel:</span><span class="summary-value" id="sum-imovel">-</span></div>
-                                <div class="summary-line"><span class="summary-label">Área / Cidade:</span><span class="summary-value" id="sum-areacidade">-</span></div>
-                                <div class="summary-line"><span class="summary-label">Data e Horário:</span><span class="summary-value" id="sum-datetime" style="color:var(--accent);">-</span></div>
-                                <div class="summary-line"><span class="summary-label">Solicitante:</span><span class="summary-value" id="sum-cliente">-</span></div>
-                                <div class="summary-line"><span class="summary-label">Contato:</span><span class="summary-value" id="sum-contato">-</span></div>
-                                <div class="summary-line"><span class="summary-label">Anexo:</span><span class="summary-value" id="sum-arquivo">Nenhum</span></div>
-                            </div>
-                            <p style="font-size: 0.8rem; color: var(--text-dimmed); text-align: center; margin-top: 16px;">Ao confirmar, os dados serão encaminhados diretamente para o WhatsApp do Studio Axis.</p>
-                        </div>
-
                     </div>
 
-                    <div class="system-footer">
-                        <button type="button" class="btn btn-outline" id="btn-back" onclick="changeStep(-1)" style="visibility: hidden;">← Voltar</button>
-                        <button type="button" class="btn btn-primary" id="btn-next" onclick="changeStep(1)">Avançar →</button>
+                    <!-- PANE 2: Vehicle identification -->
+                    <div class="step-pane" id="pane-2">
+                        <h4 class="pane-title">Informações do Veículo</h4>
+                        <p class="pane-desc">Preencha os dados do automóvel para checarmos diagramas elétricos.</p>
+                        <div class="form-group">
+                            <label class="form-label">Marca do Carro</label>
+                            <select id="veh-brand" class="form-control" onchange="validatePane2()">
+                                <option value="">Selecione a marca...</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Volkswagen">Volkswagen</option>
+                                <option value="Fiat">Fiat</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Hyundai">Hyundai</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="Renault">Renault</option>
+                                <option value="Jeep">Jeep</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Outra Importada">Outra Marca Nacional/Importada</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Modelo</label>
+                                <input type="text" id="veh-model" class="form-control" placeholder="Ex: Onix, Golf" oninput="validatePane2()">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Ano</label>
+                                <input type="number" id="veh-year" class="form-control" placeholder="Ex: 2021" oninput="validatePane2()">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Placa do Veículo (Opcional)</label>
+                            <input type="text" id="veh-plate" class="form-control" placeholder="ABC1D23">
+                        </div>
+                        <div class="pane-actions">
+                            <button type="button" class="btn-system btn-system-secondary" onclick="navigateStep(1)">Voltar</button>
+                            <button type="button" class="btn-system btn-system-primary" id="btn-next-2" onclick="navigateStep(3)" disabled>Avançar</button>
+                        </div>
                     </div>
+
+                    <!-- PANE 3: Issue Description & Urgency -->
+                    <div class="step-pane" id="pane-3">
+                        <h4 class="pane-title">O que está acontecendo?</h4>
+                        <p class="pane-desc">Nos dê um breve relato sobre a falha e o nível de prioridade.</p>
+                        <div class="form-group">
+                            <label class="form-label">Descreva o problema constatado</label>
+                            <textarea id="issue-desc" class="form-control" rows="3" placeholder="Ex: Luz da bateria acesa no painel, carro não dá partida de manhã..." oninput="validatePane3()"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Urgência do Caso</label>
+                            <select id="issue-urgency" class="form-control">
+                                <option value="Normal">Rotina / Agendamento Normal</option>
+                                <option value="Urgente">Urgente (Painel Pane Total)</option>
+                                <option value="Pane Seca / Não Liga">Carro Não Liga / Pane Elétrica Completa</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Enviar foto do painel/peça (Opcional)</label>
+                            <div class="upload-zone" onclick="document.getElementById('file-upload').click()">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                                <p id="upload-txt">Clique para carregar arquivos ou imagens</p>
+                                <input type="file" id="file-upload" style="display:none;" onchange="fileSelected(this)">
+                            </div>
+                        </div>
+                        <div class="pane-actions">
+                            <button type="button" class="btn-system btn-system-secondary" onclick="navigateStep(2)">Voltar</button>
+                            <button type="button" class="btn-system btn-system-primary" id="btn-next-3" onclick="navigateStep(4)" disabled>Avançar</button>
+                        </div>
+                    </div>
+
+                    <!-- PANE 4: Calendar Engine & Time -->
+                    <div class="step-pane" id="pane-4">
+                        <h4 class="pane-title">Data & Horário de Preferência</h4>
+                        <p class="pane-desc">Agenda atualizada em tempo real integrada ao Google Agenda corporativo.</p>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Selecione o Dia</label>
+                                <div class="calendar-wrapper">
+                                    <div class="calendar-month-nav">
+                                        <button type="button" onclick="prevMonth()">&lt;</button>
+                                        <span id="cal-month-title">Julho 2026</span>
+                                        <button type="button" onclick="nextMonth()">&gt;</button>
+                                    </div>
+                                    <div class="calendar-grid" id="calendar-days-box">
+                                        <!-- Javascript generated calendar days -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Horários Disponíveis</label>
+                                <div class="time-slots-grid" id="slots-box">
+                                    <!-- Javascript slots tracking -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="selected-date-val">
+                        <input type="hidden" id="selected-time-val">
+
+                        <div class="pane-actions">
+                            <button type="button" class="btn-system btn-system-secondary" onclick="navigateStep(3)">Voltar</button>
+                            <button type="button" class="btn-system btn-system-primary" id="btn-next-4" onclick="navigateStep(5)" disabled>Avançar</button>
+                        </div>
+                    </div>
+
+                    <!-- PANE 5: Personal data and leads capture -->
+                    <div class="step-pane" id="pane-5">
+                        <h4 class="pane-title">Dados de Contato</h4>
+                        <p class="pane-desc">Para vincular sua ordem de serviço e enviar atualizações automáticas.</p>
+                        <div class="form-group">
+                            <label class="form-label">Seu Nome Completo</label>
+                            <input type="text" id="client-name" class="form-control" placeholder="Digite seu nome" oninput="validatePane5()">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">WhatsApp</label>
+                                <input type="tel" id="client-whatsapp" class="form-control" placeholder="(11) 99999-9999" oninput="maskPhone(this); validatePane5();">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">E-mail para Orçamento</label>
+                                <input type="email" id="client-email" class="form-control" placeholder="seu@email.com" oninput="validatePane5()">
+                            </div>
+                        </div>
+                        <div class="pane-actions">
+                            <button type="button" class="btn-system btn-system-secondary" onclick="navigateStep(4)">Voltar</button>
+                            <button type="button" class="btn-system btn-system-primary" id="btn-next-5" onclick="buildSummary(); navigateStep(6);" disabled>Ver Resumo</button>
+                        </div>
+                    </div>
+
+                    <!-- PANE 6: Summary & Submit -->
+                    <div class="step-pane" id="pane-6">
+                        <h4 class="pane-title">Confirme sua Solicitação</h4>
+                        <p class="pane-desc">Revise as informações antes do envio seguro para a nossa bancada.</p>
+                        
+                        <div class="summary-box" id="final-summary-render">
+                            <!-- Dynamic summary rows -->
+                        </div>
+
+                        <div class="pane-actions">
+                            <button type="button" class="btn-system btn-system-secondary" onclick="navigateStep(5)">Corrigir</button>
+                            <button type="submit" class="btn-system btn-system-primary" style="background-color: var(--success); color: white;">Confirmar & Enviar WhatsApp</button>
+                        </div>
+                    </div>
+
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Depoimentos -->
-    <section class="testimonials">
+    <!-- Benefits Module -->
+    <section id="beneficios" class="benefits section-padding">
         <div class="container">
-            <div class="sec-header">
-                <span class="sec-tag">Depoimentos</span>
-                <h2 class="sec-title">O que dizem nossos clientes</h2>
-                <p class="sec-desc">Relatos reais de quem transformou seus espaços com o Studio Axis.</p>
+            <div class="text-center">
+                <h2 class="section-title">Por que Escolher a PowerDrive?</h2>
+                <p class="section-subtitle">A excelência estrutural que seu patrimônio exige.</p>
             </div>
-            <div class="testi-grid">
-                <div class="testi-card">
-                    <p class="testi-text">"O Studio Axis entendeu com perfeição a nossa essência para o projeto em Alphaville. A maquete 3D fotorrealista foi determinante para a tomada de decisão."</p>
-                    <div class="testi-author">
-                        <strong>Roberto & Camila S.</strong>
-                        <span>Projeto Residencial 450m²</span>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3>Garantia Absoluta</h3>
+                    <p>Todos os serviços possuem respaldo contratual de engenharia mecânica.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3>Agilidade de Bancada</h3>
+                    <p>Estrutura dimensionada para que diagnósticos levem no máximo 40 minutos.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    </div>
+                    <h3>Total Transparência</h3>
+                    <p>Orçamento claro enviado por meio digital antes da execução de tarefas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Module -->
+    <section id="depoimentos" class="reviews section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Avaliações dos Clientes</h2>
+                <p class="section-subtitle">Opinião de quem confia no nosso ecossistema elétrico.</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Fiz o diagnóstico computadorizado no meu Compass. O scanner detectou um defeito intermitente no chicote que nenhuma outra oficina achava. Excelente!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">RC</div>
+                        <div class="author-info">
+                            <h4>Ricardo Camargo</h4>
+                            <span>Osasco - SP</span>
+                        </div>
                     </div>
                 </div>
-                <div class="testi-card">
-                    <p class="testi-text">"Agilidade exemplar no agendamento e extrema competência na execução técnica da reforma de nossa sede corporativa. Superou expectativas."</p>
-                    <div class="testi-author">
-                        <strong>Marcio Andrade</strong>
-                        <span>Diretor da Vértice Capital</span>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Agendei a troca da bateria pelo site e quando cheguei fui atendido em 5 minutos. Muito profissional e rápido."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">MA</div>
+                        <div class="author-info">
+                            <h4>Mariana Alencar</h4>
+                            <span>Osasco - SP</span>
+                        </div>
                     </div>
                 </div>
-                <div class="testi-card">
-                    <p class="testi-text">"Regularização e design de interiores impecáveis. Atendimento pontual, transparente e rigoroso do início ao fim do processo."</p>
-                    <div class="testi-author">
-                        <strong>Fernanda Lima</strong>
-                        <span>Reforma de Apartamento em Moema</span>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"O alternador do meu carro parou totalmente. Fizeram a manutenção e me entregaram no mesmo dia com a garantia impressa."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">FB</div>
+                        <div class="author-info">
+                            <h4>Fabio Barbosa</h4>
+                            <span>Osasco - SP</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq" id="faq">
+    <!-- FAQ Module -->
+    <section id="faq" class="faq section-padding">
         <div class="container">
-            <div class="sec-header">
-                <span class="sec-tag">Dúvidas Frequentes</span>
-                <h2 class="sec-title">Esclareça suas questões</h2>
-                <p class="sec-desc">Tudo o que você precisa saber sobre nossos processos e consultorias.</p>
+            <div class="text-center">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle">Esclarecimentos rápidos sobre o fluxo da nossa oficina.</p>
             </div>
-            <div class="faq-wrapper">
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-header">
-                        <span>Como funciona a consultoria técnica inicial?</span>
-                        <span class="faq-arrow">▼</span>
-                    </div>
-                    <div class="faq-body">
-                        Com duração aproximada de 60 minutos (presencial ou online), avaliamos a viabilidade do seu imóvel, diretrizes legais, briefing de estilo e estimativa orçamentária.
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-header">
-                        <span>Posso enviar plantas e referências antes da reunião?</span>
-                        <span class="faq-arrow">▼</span>
-                    </div>
-                    <div class="faq-body">
-                        Sim. Nossa plataforma de agendamento conta com upload integrado para arquivos em PDF, imagens ou plantas técnicas diretamente para os arquitetos.
+            <div class="faq-max">
+                <div class="faq-item">
+                    <button class="faq-trigger" onclick="toggleFaq(this)">
+                        Preciso deixar o carro o dia todo para diagnóstico?
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content">
+                        Não. Nosso diagnóstico com scanner profissional demora cerca de 40 minutos. Você pode aguardar na nossa sala vip estruturada.
                     </div>
                 </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-header">
-                        <span>O escritório atende fora de São Paulo?</span>
-                        <span class="faq-arrow">▼</span>
-                    </div>
-                    <div class="faq-body">
-                        Sim. Desenvolvemos projetos arquitetônicos e de interiores no formato online para todo o Brasil e exterior, além do atendimento presencial na Grande SP.
+                <div class="faq-item">
+                    <button class="faq-trigger" onclick="toggleFaq(this)">
+                        Vocês atendem veículos importados ou premium?
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content">
+                        Sim. Temos suporte e mapeamento completo para veículos importados, incluindo marcas como BMW, Audi, Mercedes-Benz, Volvo, BYD e GWM.
                     </div>
                 </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-header">
-                        <span>Quais são as formas de pagamento aceitas?</span>
-                        <span class="faq-arrow">▼</span>
-                    </div>
-                    <div class="faq-body">
-                        Aceitamos transferências via PIX, cartões de crédito e boleto bancário parcelado em conformidade com as entregas de cada fase projetual.
+                <div class="faq-item">
+                    <button class="faq-trigger" onclick="toggleFaq(this)">
+                        Como funciona a garantia das peças?
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content">
+                        Trabalhamos com componentes originais e homologados. Todas as peças e serviços contam com garantia assegurada por nota fiscal.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contato & Mapa -->
-    <section class="contact-section" id="contato">
-        <div class="container contact-grid">
-            <div>
-                <span class="sec-tag">Localização</span>
-                <h2 class="sec-title">Visite nosso escritório</h2>
-                <p class="sec-desc" style="margin-bottom: 35px;">Estamos estrategicamente localizados em Moema, São Paulo.</p>
-
-                <div class="contact-detail">
-                    <div class="contact-label">Endereço</div>
-                    <div class="contact-val">Alameda dos Jurupis, 842 – Conjunto 71, Moema, São Paulo – SP</div>
-                </div>
-                <div class="contact-detail">
-                    <div class="contact-label">Telefone / WhatsApp</div>
-                    <div class="contact-val">(11) 3509-5210 / (11) 96702-4809</div>
-                </div>
-                <div class="contact-detail">
-                    <div class="contact-label">E-mail Oficial</div>
-                    <div class="contact-val">contato@studioaxis.com.br</div>
-                </div>
-                <div class="contact-detail">
-                    <div class="contact-label">Horário de Funcionamento</div>
-                    <div class="contact-val">Segunda a Sexta: 08h00 às 18h30 | Sábado: 09h00 às 13h00</div>
-                </div>
+    <!-- Contact & Map Module -->
+    <section id="contato" class="contact-section section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Estamos Próximos de Você</h2>
+                <p class="section-subtitle">Localização estratégica em Osasco com pátio amplo para manobras.</p>
             </div>
-            <div>
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h4>Nosso Pátio</h4>
+                            <p>Avenida dos Mecânicos, 1842 - Osasco / SP</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h4>Horários de Portão</h4>
+                            <p>Segunda a Sexta: 08h às 18h<br>Sábado: 08h às 13h</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <div>
+                            <h4>Contato Direto</h4>
+                            <p>Fixo: (11) 4197-2856<br>E-mail: contato@powerdriveauto.com.br</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="map-wrapper">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.027003023253!2d-46.66442122375836!3d-23.60338786448166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a07be060001%3A0xb5b736798083a21a!2sAlameda%20dos%20Jurupis%2C%20842%20-%20Moema%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+                    <!-- Embed static placeholder map using simple visual representation or standard iframe -->
+                    <iframe src="https://maps.google.com/maps?q=Avenida%20dos%20Mec%C3%A2nicos,%201842,%20Osasco&t=&z=15&ie=UTF-8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -1463,268 +1627,280 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 12px; text-transform:uppercase;">Studio Axis Arquitetura</div>
-                    <p style="max-width: 320px; font-size: 0.85rem;">Desenvolvimento de projetos arquitetônicos exclusivos, comerciais e de interiores de alto padrão com suporte integral.</p>
+                <div class="footer-brand">
+                    <div class="logo-text" style="color: white; font-size: 1.5rem; font-weight: 800;">Power<span>Drive</span></div>
+                    <p>Automação Comercial e Engenharia Elétrica Automotiva de Padrão Superior.</p>
                 </div>
-                <div>
-                    <strong style="color:var(--text-main); display:block; margin-bottom:14px;">Navegação</strong>
-                    <ul class="footer-links">
-                        <li><a href="#sobre">Escritório</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#metodologia">Metodologia</a></li>
+                <div class="footer-links">
+                    <h4>Módulos</h4>
+                    <ul>
+                        <li><a href="#servicos">Especialidades</a></li>
+                        <li><a href="#agendar">Plataforma SPA</a></li>
+                        <li><a href="#faq">Central de Ajuda</a></li>
                     </ul>
                 </div>
-                <div>
-                    <strong style="color:var(--text-main); display:block; margin-bottom:14px;">Especialidades</strong>
-                    <ul class="footer-links">
-                        <li><a href="#servicos">Residenciais</a></li>
-                        <li><a href="#servicos">Interiores</a></li>
-                        <li><a href="#servicos">Reformas</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <strong style="color:var(--text-main); display:block; margin-bottom:14px;">Conexão</strong>
-                    <ul class="footer-links">
-                        <li><a href="https://instagram.com/studioaxis.arq" target="_blank">Instagram</a></li>
-                        <li><a href="https://wa.me/5511967024809" target="_blank">WhatsApp</a></li>
+                <div class="footer-links">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Políticas SaaS</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div>© 2026 Studio Axis Arquitetura. Todos os direitos reservados.</div>
-                <div>Desenvolvido por Cliente Web</div>
+                <div>&copy; 2026 PowerDrive Auto Elétrica Premium. Todos os direitos reservados.</div>
+                <div>Desenvolvido sob Arquitetura SaaS Dedicada.</div>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Flutuante -->
-    <a href="https://wa.me/5511967024809?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20projetos%20arquitet%C3%B4nicos." class="whatsapp-float" target="_blank" title="Falar no WhatsApp">
-        📲
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/5511998614735?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20auto%20el%C3%A9trico." class="whatsapp-float" target="_blank" aria-label="WhatsApp Direct">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.454L0 24zm6.59-3.807c1.642.975 3.253 1.488 4.805 1.489 5.513 0 10.002-4.49 10.005-10.004.002-2.671-1.033-5.182-2.915-7.065-1.882-1.882-4.393-2.915-7.068-2.916-5.517 0-10.007 4.49-10.01 10.004-.001 1.687.464 3.332 1.346 4.777L1.132 22.8l4.47-1.173a9.92 9.92 0 0 0 1.045.566zM17.485 14.31c-.3-.149-1.777-.876-2.047-.975-.27-.099-.467-.149-.663.149-.196.297-.759.951-.931 1.149-.172.197-.344.223-.644.074-.3-.149-1.265-.466-2.41-1.486-.89-.794-1.49-1.775-1.665-2.072-.175-.297-.019-.458.13-.606.134-.133.3-.347.449-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.662-1.596-.91-2.189-.242-.582-.487-.5-.663-.5-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.778-.726 2.027-1.429.248-.703.248-1.306.173-1.43-.075-.124-.272-.198-.572-.347z"/></svg>
     </a>
 
-    <!-- JavaScript Engine -->
+    <!-- Application Script Block -->
     <script>
-        const appState = {
-            step: 1,
-            maxSteps: 12,
-            data: {
-                tipoServico: '',
-                tipoImovel: '',
-                areaAproximada: '',
-                cidade: '',
-                possuiPlanta: '',
-                objetivoProjeto: '',
-                arquivoNome: '',
-                dataAgendamento: '',
-                horarioAgendamento: '',
-                nome: '',
-                whatsapp: '',
-                email: '',
-                observacoes: ''
-            }
-        };
+        // State Machine
+        let currentStep = 1;
+        let selectedService = '';
+        let uploadFileName = '';
+        
+        // Date engine state
+        let currentYear = 2026;
+        let currentMonth = 6; // Julho (0-indexed)
+        const monthsLabel = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
-        document.addEventListener('DOMContentLoaded', () => {
-            initOptionsLogic();
-            buildCalendarGrid();
-            buildTimeSlots();
-            renderProgress();
+        window.addEventListener('DOMContentLoaded', () => {
+            updateProgressBar();
+            renderCalendar();
         });
 
-        function initOptionsLogic() {
-            document.querySelectorAll('.option-tile').forEach(tile => {
-                tile.addEventListener('click', () => {
-                    const field = tile.getAttribute('data-field');
-                    const value = tile.getAttribute('data-value');
-                    
-                    tile.parentElement.querySelectorAll('.option-tile').forEach(t => t.classList.remove('selected'));
-                    tile.classList.add('selected');
-                    appState.data[field] = value;
-                });
-            });
+        function toggleMenu() {
+            document.getElementById('navbar').classList.toggle('active');
         }
 
-        function changeStep(dir) {
-            if (dir === 1 && !validateCurrentStep()) return;
+        function selectService(element, serviceName) {
+            document.querySelectorAll('#pane-1 .option-card').forEach(el => el.classList.remove('selected'));
+            element.classList.add('selected');
+            selectedService = serviceName;
+            document.getElementById('selected-service-input').value = serviceName;
+        }
 
-            const next = appState.step + dir;
-            if (next >= 1 && next <= appState.maxSteps) {
-                document.querySelector(`.step-pane[data-step="${appState.step}"]`).classList.remove('active');
-                appState.step = next;
-                document.querySelector(`.step-pane[data-step="${appState.step}"]`).classList.add('active');
-
-                if (appState.step === 12) {
-                    fillSummaryReport();
+        function navigateStep(targetStep) {
+            // Validation guard
+            if (targetStep > currentStep) {
+                if (currentStep === 1 && !selectedService) {
+                    alert('Por favor, selecione um serviço técnico.');
+                    return;
                 }
-                renderProgress();
+            }
+
+            document.getElementById(`pane-${currentStep}`).classList.remove('active');
+            currentStep = targetStep;
+            document.getElementById(`pane-${currentStep}`).classList.add('active');
+            
+            // Update Headers Text
+            const titles = {
+                1: "Etapa 1: Escolha o Serviço",
+                2: "Etapa 2: Identificação do Carro",
+                3: "Etapa 3: Detalhamento do Sintoma",
+                4: "Etapa 4: Agenda Integrada",
+                5: "Etapa 5: Informações de Contato",
+                6: "Etapa 6: Revisão de Ordem de Serviço"
+            };
+            document.getElementById('step-indicator-text').innerText = titles[currentStep];
+            updateProgressBar();
+        }
+
+        function updateProgressBar() {
+            const pct = (currentStep / 6) * 100;
+            document.getElementById('ui-progress').style.width = `${pct}%`;
+        }
+
+        // Live Validation Engines
+        function validatePane2() {
+            const brand = document.getElementById('veh-brand').value;
+            const model = document.getElementById('veh-model').value.trim();
+            const year = document.getElementById('veh-year').value;
+            document.getElementById('btn-next-2').disabled = !(brand && model && year);
+        }
+
+        function validatePane3() {
+            const desc = document.getElementById('issue-desc').value.trim();
+            document.getElementById('btn-next-3').disabled = (desc.length < 5);
+        }
+
+        function validatePane5() {
+            const name = document.getElementById('client-name').value.trim();
+            const phone = document.getElementById('client-whatsapp').value.trim();
+            const email = document.getElementById('client-email').value.trim();
+            document.getElementById('btn-next-5').disabled = !(name.length > 2 && phone.length >= 14 && email.includes('@'));
+        }
+
+        function fileSelected(input) {
+            if(input.files && input.files[0]) {
+                uploadFileName = input.files[0].name;
+                document.getElementById('upload-txt').innerText = `Arquivo carregado: ${uploadFileName}`;
             }
         }
 
-        function validateCurrentStep() {
-            const s = appState.step;
-            const d = appState.data;
-
-            if (s === 1 && !d.tipoServico) { alert('Selecione o tipo de serviço desejado.'); return false; }
-            if (s === 2 && !d.tipoImovel) { alert('Selecione o tipo do imóvel.'); return false; }
-            if (s === 3 && !d.areaAproximada) { alert('Selecione a área aproximada.'); return false; }
-            if (s === 4) {
-                const val = document.getElementById('inputCidade').value.trim();
-                if (!val) { alert('Informe a Cidade e Estado.'); return false; }
-                d.cidade = val;
-            }
-            if (s === 5 && !d.possuiPlanta) { alert('Selecione se possui planta.'); return false; }
-            if (s === 6 && !d.objetivoProjeto) { alert('Selecione o objetivo do projeto.'); return false; }
-            if (s === 8 && !d.dataAgendamento) { alert('Selecione a data da reunião.'); return false; }
-            if (s === 9 && !d.horarioAgendamento) { alert('Selecione o horário desejado.'); return false; }
-            if (s === 10) {
-                const nome = document.getElementById('inputNome').value.trim();
-                const phone = document.getElementById('inputWhatsApp').value.trim();
-                const email = document.getElementById('inputEmail').value.trim();
-
-                if (!nome) { alert('Preencha seu nome completo.'); return false; }
-                if (phone.length < 14) { alert('Informe um WhatsApp válido com DDD.'); return false; }
-                if (!email.includes('@') || !email.includes('.')) { alert('Informe um e-mail válido.'); return false; }
-
-                d.nome = nome;
-                d.whatsapp = phone;
-                d.email = email;
-            }
-            if (s === 11) {
-                d.observacoes = document.getElementById('inputObs').value.trim();
-            }
-            return true;
-        }
-
-        function renderProgress() {
-            const pct = Math.round((appState.step / appState.maxSteps) * 100);
-            document.getElementById('progress-fill-bar').style.width = pct + '%';
-            document.getElementById('progress-percentage').innerText = pct + '%';
-            document.getElementById('step-indicator-text').innerText = `Etapa ${appState.step} de ${appState.maxSteps}`;
-
-            const backBtn = document.getElementById('btn-back');
-            backBtn.style.visibility = appState.step === 1 ? 'hidden' : 'visible';
-
-            const nextBtn = document.getElementById('btn-next');
-            if (appState.step === appState.maxSteps) {
-                nextBtn.innerText = 'Confirmar Agendamento no WhatsApp 📲';
-                nextBtn.onclick = submitToWhatsApp;
-            } else {
-                nextBtn.innerText = 'Avançar →';
-                nextBtn.onclick = () => changeStep(1);
-            }
-        }
-
-        function onFileChosen(e) {
-            const file = e.target.files[0];
-            if (file) {
-                appState.data.arquivoNome = file.name;
-                document.getElementById('file-chosen-label').innerText = 'Arquivo anexado: ' + file.name;
-            }
-        }
-
-        function buildCalendarGrid() {
-            const box = document.getElementById('calendar-days-box');
-            box.innerHTML = '';
-
-            ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'].forEach(d => {
-                const head = document.createElement('div');
-                head.className = 'cal-head';
-                head.innerText = d;
-                box.appendChild(head);
-            });
-
-            const today = new Date();
-            for (let i = 0; i < 14; i++) {
-                const dateObj = new Date();
-                dateObj.setDate(today.getDate() + i);
-
-                const cell = document.createElement('div');
-                cell.className = 'cal-day';
-                const isSunday = dateObj.getDay() === 0;
-
-                if (isSunday) cell.classList.add('disabled');
-
-                const dayNum = dateObj.getDate();
-                const mNum = dateObj.getMonth() + 1;
-                const formattedDate = `${dayNum < 10 ? '0' + dayNum : dayNum}/${mNum < 10 ? '0' + mNum : mNum}/${dateObj.getFullYear()}`;
-
-                cell.innerText = dayNum;
-
-                if (!isSunday) {
-                    cell.onclick = () => {
-                        document.querySelectorAll('.cal-day').forEach(c => c.classList.remove('selected'));
-                        cell.classList.add('selected');
-                        appState.data.dataAgendamento = formattedDate;
-                    };
-                }
-                box.appendChild(cell);
-            }
-        }
-
-        function buildTimeSlots() {
-            const box = document.getElementById('time-slots-box');
-            box.innerHTML = '';
-
-            ['08:30', '10:00', '11:30', '14:00', '15:30', '17:00'].forEach(slot => {
-                const item = document.createElement('div');
-                item.className = 'time-slot';
-                item.innerText = slot;
-                item.onclick = () => {
-                    document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
-                    item.classList.add('selected');
-                    appState.data.horarioAgendamento = slot;
-                };
-                box.appendChild(item);
-            });
-        }
-
-        function fillSummaryReport() {
-            const d = appState.data;
-            document.getElementById('sum-servico').innerText = d.tipoServico || '-';
-            document.getElementById('sum-imovel').innerText = d.tipoImovel || '-';
-            document.getElementById('sum-areacidade').innerText = `${d.areaAproximada} | ${d.cidade}`;
-            document.getElementById('sum-datetime').innerText = `${d.dataAgendamento} às ${d.horarioAgendamento}`;
-            document.getElementById('sum-cliente').innerText = d.nome || '-';
-            document.getElementById('sum-contato').innerText = `${d.whatsapp} | ${d.email}`;
-            document.getElementById('sum-arquivo').innerText = d.arquivoNome || 'Nenhum arquivo';
-        }
-
-        function submitToWhatsApp() {
-            const d = appState.data;
-            let msg = `*NOVO AGENDAMENTO DE CONSULTORIA - STUDIO AXIS*\n\n`;
-            msg += `*Serviço:* ${d.tipoServico}\n`;
-            msg += `*Tipo de Imóvel:* ${d.tipoImovel}\n`;
-            msg += `*Área Aproximada:* ${d.areaAproximada}\n`;
-            msg += `*Localização:* ${d.cidade}\n`;
-            msg += `*Possui Planta:* ${d.possuiPlanta}\n`;
-            msg += `*Objetivo:* ${d.objetivoProjeto}\n`;
-            msg += `*Data Escolhida:* ${d.dataAgendamento}\n`;
-            msg += `*Horário:* ${d.horarioAgendamento}\n\n`;
-            msg += `*DADOS DO CLIENTE*\n`;
-            msg += `*Nome:* ${d.nome}\n`;
-            msg += `*WhatsApp:* ${d.whatsapp}\n`;
-            msg += `*E-mail:* ${d.email}\n`;
-            if (d.observacoes) msg += `*Observações:* ${d.observacoes}\n`;
-            if (d.arquivoNome) msg += `*Anexo:* ${d.arquivoNome}\n`;
-
-            const url = `https://wa.me/5511967024809?text=${encodeURIComponent(msg)}`;
-            window.open(url, '_blank');
-        }
-
-        function applyPhoneMask(input) {
+        function maskPhone(input) {
             let v = input.value.replace(/\D/g, '');
-            if (v.length > 11) v = v.slice(0, 11);
+            if (v.length > 11) v = v.substring(0, 11);
             if (v.length > 6) {
-                input.value = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
+                input.value = `(${v.substring(0,2)}) ${v.substring(2,7)}-${v.substring(7)}`;
             } else if (v.length > 2) {
-                input.value = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+                input.value = `(${v.substring(0,2)}) ${v.substring(2)}`;
             } else if (v.length > 0) {
                 input.value = `(${v}`;
             }
         }
 
-        function toggleFaq(item) {
+        // Calendar Generator Engine
+        function renderCalendar() {
+            document.getElementById('cal-month-title').innerText = `${monthsLabel[currentMonth]} ${currentYear}`;
+            const box = document.getElementById('calendar-days-box');
+            box.innerHTML = '';
+
+            // Day labels
+            const dayLabels = ['D','S','T','Q','Q','S','S'];
+            dayLabels.forEach(d => {
+                const l = document.createElement('div');
+                l.className = 'weekday-label';
+                l.innerText = d;
+                box.appendChild(l);
+            });
+
+            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+            // Padding days
+            for(let i=0; i<firstDay; i++) {
+                const empty = document.createElement('div');
+                box.appendChild(empty);
+            }
+
+            // Month days rendering
+            for(let day=1; day<=daysInMonth; day++) {
+                const dayEl = document.createElement('div');
+                dayEl.className = 'cal-day';
+                dayEl.innerText = day;
+                
+                // Block Sundays (Closed)
+                const dateObj = new Date(currentYear, currentMonth, day);
+                if(dateObj.getDay() === 0) {
+                    dayEl.classList.add('disabled');
+                } else {
+                    dayEl.onclick = () => selectDate(day, dayEl);
+                }
+                box.appendChild(dayEl);
+            }
+        }
+
+        function prevMonth() { if(currentMonth > 0) { currentMonth--; renderCalendar(); } }
+        function nextMonth() { if(currentMonth < 11) { currentMonth++; renderCalendar(); } }
+
+        function selectDate(day, element) {
+            document.querySelectorAll('.cal-day').forEach(el => el.classList.remove('selected'));
+            element.classList.add('selected');
+            
+            const formattedDate = `${day.toString().padStart(2,'0')}/${(currentMonth+1).toString().padStart(2,'0')}/${currentYear}`;
+            document.getElementById('selected-date-val').value = formattedDate;
+            
+            // Trigger slots rendering dynamically
+            renderTimeSlots();
+        }
+
+        function renderTimeSlots() {
+            const slotsBox = document.getElementById('slots-box');
+            slotsBox.innerHTML = '';
+            
+            // Standard operational hour list
+            const hours = ["08:00", "09:00", "10:00", "11:00", "13:00", "14:00", "15:00", "16:00", "17:00"];
+            
+            hours.forEach((h, index) => {
+                const slot = document.createElement('div');
+                slot.className = 'time-slot';
+                slot.innerText = h;
+                
+                // Simulate some random unavailable slot for structural fidelity
+                if(index === 2 || index === 5) {
+                    slot.classList.add('disabled');
+                } else {
+                    slot.onclick = () => selectTime(h, slot);
+                }
+                slotsBox.appendChild(slot);
+            });
+        }
+
+        function selectTime(timeStr, element) {
+            document.querySelectorAll('.time-slot').forEach(el => el.classList.remove('selected'));
+            element.classList.add('selected');
+            document.getElementById('selected-time-val').value = timeStr;
+            document.getElementById('btn-next-4').disabled = false;
+        }
+
+        // Summary Builder Object
+        function buildSummary() {
+            const summaryRender = document.getElementById('final-summary-render');
+            
+            const data = {
+                "Serviço Requisitado": selectedService,
+                "Veículo": `${document.getElementById('veh-brand').value} ${document.getElementById('veh-model').value} (${document.getElementById('veh-year').value})`,
+                "Placa": document.getElementById('veh-plate').value || "Não informada",
+                "Problema relatado": document.getElementById('issue-desc').value,
+                "Urgência": document.getElementById('issue-urgency').value,
+                "Data Pretendida": document.getElementById('selected-date-val').value,
+                "Horário Reservado": document.getElementById('selected-time-val').value,
+                "Cliente": document.getElementById('client-name').value,
+                "WhatsApp": document.getElementById('client-whatsapp').value,
+                "Arquivo Anexo": uploadFileName || "Nenhum"
+            };
+
+            summaryRender.innerHTML = '';
+            for (const [key, val] of Object.entries(data)) {
+                const item = document.createElement('div');
+                item.className = 'summary-item';
+                item.innerHTML = `<span class="summary-label">${key}</span><span class="summary-value">${val}</span>`;
+                summaryRender.appendChild(item);
+            }
+        }
+
+        // WhatsApp DeepLink Dispatch Engine
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const service = selectedService;
+            const vehicle = `${document.getElementById('veh-brand').value} ${document.getElementById('veh-model').value} (${document.getElementById('veh-year').value})`;
+            const plate = document.getElementById('veh-plate').value || "Não informada";
+            const issue = document.getElementById('issue-desc').value;
+            const urgency = document.getElementById('issue-urgency').value;
+            const dateStr = document.getElementById('selected-date-val').value;
+            const timeStr = document.getElementById('selected-time-val').value;
+            const name = document.getElementById('client-name').value;
+            const phone = document.getElementById('client-whatsapp').value;
+            const email = document.getElementById('client-email').value;
+
+            const textPayload = `⚡ *NOVO AGENDAMENTO POWERDRIVE* ⚡\n\n` +
+                                `*Cliente:* ${name}\n` +
+                                `*Contato:* ${phone}\n` +
+                                `*E-mail:* ${email}\n\n` +
+                                `*Serviço:* ${service}\n` +
+                                `*Veículo:* ${vehicle}\n` +
+                                `*Placa:* ${plate}\n\n` +
+                                `*Sintoma:* ${issue}\n` +
+                                `*Urgência:* ${urgency}\n\n` +
+                                `*Data Escolhida:* ${dateStr}\n` +
+                                `*Horário:* ${timeStr}\n\n` +
+                                `_Solicitação gerada automaticamente via Sistema SPA Privado._`;
+
+            const encoded = encodeURIComponent(textPayload);
+            window.open(`https://wa.me/5511998614735?text=${encoded}`, '_blank');
+        }
+
+        function toggleFaq(button) {
+            const item = button.parentElement;
             item.classList.toggle('active');
         }
     </script>
